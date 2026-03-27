@@ -49,7 +49,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 relative">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -62,8 +62,8 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Nav — absolutely centered */}
+          <nav className="hidden lg:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
             <button
               onClick={() => scrollToSection("about")}
               className="text-gray-300 hover:text-yellow-400 transition-colors font-medium text-sm"
@@ -83,16 +83,18 @@ export default function Header() {
               </button>
 
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-black border border-gray-700 rounded-xl shadow-2xl py-2 z-50">
-                  {services.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      className="block px-4 py-3 text-gray-300 hover:text-yellow-400 hover:bg-gray-800 transition-colors text-sm"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-2 w-64 z-50">
+                  <div className="bg-black border border-gray-700 rounded-xl shadow-2xl py-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="block px-4 py-3 text-gray-300 hover:text-yellow-400 hover:bg-gray-800 transition-colors text-sm"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -115,6 +117,10 @@ export default function Header() {
             >
               Contact
             </Link>
+          </nav>
+
+          {/* Book a Demo — right side */}
+          <div className="hidden lg:flex items-center">
             <button
               onClick={() =>
                 window.open(
@@ -126,7 +132,7 @@ export default function Header() {
             >
               Book a Demo
             </button>
-          </nav>
+          </div>
 
           {/* Mobile hamburger */}
           <button
