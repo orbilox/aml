@@ -46,8 +46,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link
           href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
           rel="stylesheet"
