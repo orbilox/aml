@@ -69,7 +69,7 @@ export default function DroneShootsClient() {
               <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
                 <i className="ri-flight-takeoff-line text-3xl text-black"></i>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">Location AVs & Drone Shoots</h1>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">Drone Shoots & Location AV for Real Estate India</h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">Professional aerial cinematography and location AV services that showcase your property&apos;s surroundings with breathtaking drone footage.</p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer">Get Quote</Link>

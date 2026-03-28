@@ -66,7 +66,7 @@ export default function VirtualRealityToursClient() {
               <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
                 <img src="/images/services/virtual-reality-tours/2.png" alt="VR" className="w-10 h-10" />
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">Virtual Reality Tours (360°)</h1>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">Virtual Reality Tours for Real Estate India</h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
                 Interactive VR experiences allowing clients to explore properties before construction with complete immersion.
               </p>

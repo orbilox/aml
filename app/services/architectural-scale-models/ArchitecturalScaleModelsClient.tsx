@@ -158,7 +158,7 @@ export default function ArchitecturalScaleModelsClient() {
               <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
                 <i className="ri-building-2-line text-3xl text-black"></i>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">Architectural Scale Models</h1>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">Architectural Scale Models India</h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
                 Detailed video presentations of physical and digital architectural scale models with professional cinematography.
               </p>

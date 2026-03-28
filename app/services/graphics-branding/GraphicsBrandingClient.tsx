@@ -73,8 +73,8 @@ export default function GraphicsBrandingClient() {
                 <i className="ri-palette-line text-3xl text-black"></i>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-                Graphics & Branding Content
-              </h1>
+                Real Estate Graphics & Branding Design India
+</h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
                 Professional graphic design and branding solutions to establish
                 strong visual identity for real estate projects.
