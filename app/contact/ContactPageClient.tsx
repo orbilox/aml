@@ -17,7 +17,9 @@ export default function ContactPageClient() {
     timeline: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const services = [
     "3D Walkthrough Videos",
@@ -32,17 +34,19 @@ export default function ContactPageClient() {
   ];
 
   const budgetRanges = [
-    "Under ₹5,000",
-    "₹5,000 - ₹15,000",
-    "₹15,000 - ₹30,000",
-    "₹30,000 - ₹50,000",
-    "₹50,000+",
+    "₹50,000 - ₹1,00,000",
+    "₹1,00,000 - ₹5,00,000",
+    "₹5,00,000 - ₹10,00,000",
+    "₹10,00,000 - ₹20,00,000",
+    "₹20,00,000+",
   ];
 
   const timelines = ["ASAP", "1-2 weeks", "1 month", "2-3 months", "3+ months"];
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -126,8 +130,9 @@ ${formData.message || "No additional details provided"}
               <span className="block text-yellow-400">Something Amazing</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Ready to transform your vision into reality? We&apos;re here to bring your ideas to
-              life with cutting-edge technology and creative excellence.
+              Ready to transform your vision into reality? We&apos;re here to
+              bring your ideas to life with cutting-edge technology and creative
+              excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-white">
               <div className="flex items-center space-x-2">
@@ -157,16 +162,21 @@ ${formData.message || "No additional details provided"}
             {/* Contact Form */}
             <div className="bg-black/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Start Your Project</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  Start Your Project
+                </h2>
                 <p className="text-gray-400">
-                  Fill out the form below and we&apos;ll get back to you within 24 hours.
+                  Fill out the form below and we&apos;ll get back to you within
+                  24 hours.
                 </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white font-medium mb-2">Full Name *</label>
+                    <label className="block text-white font-medium mb-2">
+                      Full Name *
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -178,7 +188,9 @@ ${formData.message || "No additional details provided"}
                     />
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">Email Address *</label>
+                    <label className="block text-white font-medium mb-2">
+                      Email Address *
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -193,7 +205,9 @@ ${formData.message || "No additional details provided"}
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white font-medium mb-2">Phone Number *</label>
+                    <label className="block text-white font-medium mb-2">
+                      Phone Number *
+                    </label>
                     <input
                       type="tel"
                       name="phone"
@@ -201,11 +215,13 @@ ${formData.message || "No additional details provided"}
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:border-yellow-400 transition-colors"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 1234567890"
                     />
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">Company</label>
+                    <label className="block text-white font-medium mb-2">
+                      Company
+                    </label>
                     <input
                       type="text"
                       name="company"
@@ -218,7 +234,9 @@ ${formData.message || "No additional details provided"}
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-2">Service Interested In</label>
+                  <label className="block text-white font-medium mb-2">
+                    Service Interested In
+                  </label>
                   <div className="relative">
                     <select
                       name="service"
@@ -228,7 +246,9 @@ ${formData.message || "No additional details provided"}
                     >
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
-                        <option key={index} value={service}>{service}</option>
+                        <option key={index} value={service}>
+                          {service}
+                        </option>
                       ))}
                     </select>
                     <i className="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
@@ -237,7 +257,9 @@ ${formData.message || "No additional details provided"}
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white font-medium mb-2">Budget Range</label>
+                    <label className="block text-white font-medium mb-2">
+                      Budget Range
+                    </label>
                     <div className="relative">
                       <select
                         name="budget"
@@ -247,14 +269,18 @@ ${formData.message || "No additional details provided"}
                       >
                         <option value="">Select budget</option>
                         {budgetRanges.map((budget, index) => (
-                          <option key={index} value={budget}>{budget}</option>
+                          <option key={index} value={budget}>
+                            {budget}
+                          </option>
                         ))}
                       </select>
                       <i className="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
                     </div>
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">Timeline</label>
+                    <label className="block text-white font-medium mb-2">
+                      Timeline
+                    </label>
                     <div className="relative">
                       <select
                         name="timeline"
@@ -264,7 +290,9 @@ ${formData.message || "No additional details provided"}
                       >
                         <option value="">Select timeline</option>
                         {timelines.map((timeline, index) => (
-                          <option key={index} value={timeline}>{timeline}</option>
+                          <option key={index} value={timeline}>
+                            {timeline}
+                          </option>
                         ))}
                       </select>
                       <i className="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
@@ -273,7 +301,9 @@ ${formData.message || "No additional details provided"}
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-2">Project Details *</label>
+                  <label className="block text-white font-medium mb-2">
+                    Project Details *
+                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -328,11 +358,13 @@ ${formData.message || "No additional details provided"}
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Get In Touch</h2>
+                <h2 className="text-3xl font-bold text-white mb-6">
+                  Get In Touch
+                </h2>
                 <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                  Ready to elevate your real estate marketing? Our team of experts is here to help
-                  you create stunning visual content that sells properties faster and at better
-                  prices.
+                  Ready to elevate your real estate marketing? Our team of
+                  experts is here to help you create stunning visual content
+                  that sells properties faster and at better prices.
                 </p>
               </div>
 
@@ -369,7 +401,9 @@ ${formData.message || "No additional details provided"}
                       <i className="ri-mail-line text-white text-xl"></i>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold mb-1">Email Us</h3>
+                      <h3 className="text-white font-semibold mb-1">
+                        Email Us
+                      </h3>
                       <a
                         href="mailto:info@alliancemedialabs.com"
                         className="text-gray-300 hover:text-blue-400 transition-colors"
@@ -386,7 +420,9 @@ ${formData.message || "No additional details provided"}
                       <i className="ri-map-pin-line text-white text-xl"></i>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold mb-1">Visit Us</h3>
+                      <h3 className="text-white font-semibold mb-1">
+                        Visit Us
+                      </h3>
                       <a
                         href="https://maps.google.com/?q=D-244,+Sector+74,+Chandigarh,+Mohali"
                         target="_blank"
@@ -441,7 +477,9 @@ ${formData.message || "No additional details provided"}
 
               {/* Quick Demo */}
               <div className="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30 rounded-xl p-6 text-center">
-                <h3 className="text-white font-semibold mb-2">Need a Quick Demo?</h3>
+                <h3 className="text-white font-semibold mb-2">
+                  Need a Quick Demo?
+                </h3>
                 <p className="text-gray-300 mb-4 text-sm">
                   Book a 30-minute call to see our work in action
                 </p>
@@ -451,7 +489,7 @@ ${formData.message || "No additional details provided"}
                   onClick={() =>
                     window.open(
                       "https://calendly.com/lakshay-alliancemedialabs/30min?month=2025-10",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -469,7 +507,9 @@ ${formData.message || "No additional details provided"}
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Find Us</h2>
-            <p className="text-gray-400">Located in the heart of Chandigarh&apos;s tech hub</p>
+            <p className="text-gray-400">
+              Located in the heart of Chandigarh&apos;s tech hub
+            </p>
           </div>
 
           <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
