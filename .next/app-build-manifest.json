@@ -1,25 +1,233 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+    "/not-found": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/app/not-found-e405b007a1786c48.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/app/_not-found/page-3fb1e6d314c2d9fd.js"
     ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/css/141d7c2f51091332.css",
+      "static/chunks/app/layout-b7e1593a6961704f.js"
     ],
-    "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+    "/blog/[slug]/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/blog/[slug]/page-f03859ca2dfbbb1f.js"
+    ],
+    "/city-services/3d-walkthrough-videos-bangalore/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/city-services/3d-walkthrough-videos-bangalore/page-946acd5a7f8d2b27.js"
+    ],
+    "/city-services/3d-walkthrough-videos-delhi/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/city-services/3d-walkthrough-videos-delhi/page-5306ea8c89575156.js"
+    ],
+    "/blog/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/blog/page-0f236256f6bc8588.js"
+    ],
+    "/city-services/3d-walkthrough-videos-mumbai/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/city-services/3d-walkthrough-videos-mumbai/page-096369be05f53f44.js"
+    ],
+    "/city-services/3d-renders-mumbai/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/city-services/3d-renders-mumbai/page-e3228023d7b218d3.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/app/page-740dd39b70125998.js"
+    ],
+    "/city-services/real-estate-video-production-gurugram/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/city-services/real-estate-video-production-gurugram/page-75bddf9159cd8a65.js"
+    ],
+    "/city-services/drone-shoots-bangalore/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/city-services/drone-shoots-bangalore/page-ee761c9e60ced0cf.js"
+    ],
+    "/services/3d-renders-isometrics/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/3d-renders-isometrics/page-0d6bbd84f9ad15c8.js"
+    ],
+    "/services/3d-isometrics/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/3d-isometrics/page-176f6c1f128bb0a7.js"
+    ],
+    "/portfolio/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/portfolio/page-2a110fae8d00b298.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/contact/page-9274e19c00704a57.js"
     ],
     "/services/3d-walkthrough-videos/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/3d-walkthrough-videos/page.js"
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/3d-walkthrough-videos/page-738cd92ad5ce1aa9.js"
+    ],
+    "/services/architectural-scale-models/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/architectural-scale-models/page-fa92bb78a924b7fe.js"
+    ],
+    "/services/construction-update-videos/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/construction-update-videos/page-ec0065686070e246.js"
+    ],
+    "/services/drone-shoots/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/drone-shoots/page-2bc85f7828ccd42a.js"
+    ],
+    "/services/digital-marketing/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/digital-marketing/page-b2f15a291966aa75.js"
+    ],
+    "/services/graphics-branding/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/graphics-branding/page-02b89d3982a8ed74.js"
+    ],
+    "/services/interactive-3d-tools/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/interactive-3d-tools/page-2a9a4dfcb9b2d05a.js"
+    ],
+    "/services/virtual-reality-tours/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/virtual-reality-tours/page-f71cf7e830012d7c.js"
+    ],
+    "/services/route-videos/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/route-videos/page-a45747954f2b06e2.js"
+    ],
+    "/services/interior-cinematic-walkthrough/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
+      "static/chunks/23-da24ab361cae6f03.js",
+      "static/chunks/main-app-c4e8ed7a0b009ac8.js",
+      "static/chunks/288-7cdd546310dcec4b.js",
+      "static/chunks/493-6bdb243442233f43.js",
+      "static/chunks/app/services/interior-cinematic-walkthrough/page-58e1e058cf6620b6.js"
     ]
   }
 }

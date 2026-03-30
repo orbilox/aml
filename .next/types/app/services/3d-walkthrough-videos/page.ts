@@ -1,4 +1,4 @@
-// File: /Users/apple/Desktop/aml/aml-next/app/services/3d-walkthrough-videos/page.tsx
+// File: D:\source\aml\app\services\3d-walkthrough-videos\page.tsx
 import * as entry from '../../../../../app/services/3d-walkthrough-videos/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
