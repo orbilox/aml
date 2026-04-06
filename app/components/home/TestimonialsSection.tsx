@@ -1,3 +1,13 @@
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+// @ts-ignore
+import "swiper/css";
+// @ts-ignore
+import "swiper/css/pagination";
+
 const testimonials = [
   {
     name: "Sherin Rajan",
@@ -106,29 +116,30 @@ export default function TestimonialsSection() {
   return (
     <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
+
         {/* Client Logos */}
         <div className="text-center mb-16">
           <h3 className="text-2xl font-bold text-black mb-8">
             Trusted by Leading Developers
           </h3>
+
           <div className="flex flex-wrap justify-center items-center gap-8">
             {clientLogos.map((client, index) => (
               <div
                 key={index}
                 className="hover:scale-105 transition-transform duration-300 flex items-center justify-center w-36 h-20"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-h-16 max-w-32 w-auto h-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="max-h-16 max-w-32 object-contain opacity-70 hover:opacity-100 transition"
                 />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Testimonials */}
+        {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Client Testimonials
@@ -136,42 +147,56 @@ export default function TestimonialsSection() {
           <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Swiper */}
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+          className="!pb-12"
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-center mb-6">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                {/* <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover object-top mr-4"
-                /> */}
+            <SwiperSlide key={index} className="!h-auto flex">
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col w-full h-full">
+                {/* Top */}
                 <div>
-                  <h4 className="font-bold text-black">{testimonial.name}</h4>
+                  <h4 className="font-bold text-black">
+                    {testimonial.name}
+                  </h4>
                   <p className="text-sm text-gray-600">
                     {testimonial.position}
                   </p>
-                  <p className="text-sm text-yellow-600 font-medium">
+                  <p className="text-sm text-yellow-600 font-medium mb-4">
                     {testimonial.company}
                   </p>
+
+                  <div className="flex text-yellow-400 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className="ri-star-fill text-sm"></i>
+                    ))}
+                  </div>
+
+                  <p className="text-gray-700 leading-relaxed italic">
+                    &ldquo;{testimonial.content}&rdquo;
+                  </p>
                 </div>
+
               </div>
-              <div className="mb-4">
-                <div className="flex text-yellow-400 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <i key={i} className="ri-star-fill text-sm"></i>
-                  ))}
-                </div>
-                <p className="text-gray-700 leading-relaxed italic">
-                  &ldquo;{testimonial.content}&rdquo;
-                </p>
-              </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
