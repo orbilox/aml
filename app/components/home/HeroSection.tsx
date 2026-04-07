@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
         <div className="space-y-8">
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-            Where Real Estate 
+            Where Real Estate Prerna
             <span className="block text-yellow-400">Meets Innovation</span>
           </h1>
 
