@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   images: {
     unoptimized: true, // ✅ THIS FIXES THE ERROR
     formats: ["image/avif", "image/webp"],
