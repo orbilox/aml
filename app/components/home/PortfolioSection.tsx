@@ -910,7 +910,7 @@ export default function PortfolioSection() {
                       {selectedItem.galleryImages?.map((image, index) => (
                         <div
                           key={index}
-                          className="w-full h-full flex-shrink-0 relative flex"
+                          className="w-full h-full flex-shrink-0 relative justify-center items-center flex"
                         >
                           {/* Split layout for portrait images */}
                           <div className="w-1/2 h-full">
@@ -920,13 +920,13 @@ export default function PortfolioSection() {
                               className="w-full h-full object-cover"
                             />
                           </div>
-                          <div className="w-1/2 h-full">
+                          {/* <div className="w-1/2 h-full">
                             <img
                               src={image.url}
                               alt={image.title}
                               className="w-full h-full object-cover"
                             />
-                          </div>
+                          </div> */}
                         </div>
                       ))}
                     </div>

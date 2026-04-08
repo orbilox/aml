@@ -141,18 +141,23 @@ const portfolioItems: PortfolioItem[] = [
     hasGallery: true,
     galleryImages: [
       {
-        url: "/images/portfolio/16.jpeg",
+        url: "/images/services/3d-renders-isometrics/etereo/1.jpg",
         title: "Master Plan Isometric",
         description:
           "Complete site layout with residential blocks and amenities",
       },
       {
-        url: "/images/portfolio/17.jpg",
+        url: "/images/services/3d-renders-isometrics/etereo/2.jpg",
         title: "Building Isometric View",
         description: "Detailed residential building with floor plan layouts",
       },
       {
-        url: "/images/portfolio/18.jpg",
+        url: "/images/services/3d-renders-isometrics/etereo/3.jpg",
+        title: "Complex Layout Isometric",
+        description: "Multi-tower residential development with amenities",
+      },
+      {
+        url: "/images/services/3d-renders-isometrics/etereo/4.jpg",
         title: "Complex Layout Isometric",
         description: "Multi-tower residential development with amenities",
       },
@@ -944,7 +949,7 @@ export default function PortfolioPageClient() {
                       {selectedItem.galleryImages?.map((image, index) => (
                         <div
                           key={index}
-                          className="w-full h-full flex-shrink-0 relative flex"
+                          className="w-full h-full flex-shrink-0 relative justify-center items-center flex"
                         >
                           {/* Split layout for portrait images */}
                           <div className="w-1/2 h-full">
@@ -954,13 +959,13 @@ export default function PortfolioPageClient() {
                               className="w-full h-full object-cover"
                             />
                           </div>
-                          <div className="w-1/2 h-full">
+                          {/* <div className="w-1/2 h-full">
                             <img
                               src={image.url}
                               alt={image.title}
                               className="w-full h-full object-cover"
                             />
-                          </div>
+                          </div> */}
                         </div>
                       ))}
                     </div>
