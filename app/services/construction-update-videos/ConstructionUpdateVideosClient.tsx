@@ -28,6 +28,37 @@ export default function ConstructionUpdateVideosClient() {
     { id: 4, title: "The Kutumb", category: "Construction Update", image: "/images/portfolio/Kutumb-Thumbnail.png", description: "Detailed construction documentation with drone and time-lapse footage.", videoUrl: "https://www.youtube.com/embed/ZLblD-AEilk?autoplay=1", duration: "3:22" },
   ];
 
+  const testimonials = [
+  {
+    name: "Abhishek Patel",
+    position: "Marketing Manager",
+    company: "Smart World Developers",
+    content:
+      "Working with Alliance Media Labs on the construction update videos for The Edition has been a smooth experience throughout our yearly engagement. The consistency, timelines, and overall real estate construction progress video production have been well maintained across deliverables.",
+  },
+  {
+    name: "Pooran Tomar",
+    position: "Head of Marketing",
+    company: "Aditya Builders",
+    content:
+      "Alliance Media Labs handled the construction update videos for Aditya Builders’ project The Kutumb with a clear and consistent approach. The overall real estate construction progress video came out clean, timely, and easy to follow.",
+  },
+  {
+    name: "Shresth",
+    position: "Digital Marketing",
+    company: "Pyramid Infratech",
+    content:
+      "For the past year, Alliance Media Labs has been delivering construction update videos for our project Alban in Gurugram with great consistency every time.",
+  },
+  {
+    name: "Kapil Sharma",
+    position: "Marketing Head",
+    company: "GMI Infra",
+    content:
+      "GMI Infra partnered with Alliance Media Labs for the construction update videos of GMI Elite Homes, and the whole process felt well-managed from start to finish. The updates were presented clearly, and the overall real estate construction progress video maintained a professional flow.",
+  },
+];
+
   const features = [
     { icon: "ri-flight-takeoff-line", title: "Drone Cinematography", desc: "Professional aerial footage capturing construction progress from unique perspectives and heights." },
     { icon: "ri-calendar-line", title: "Regular Updates", desc: "Scheduled monthly or quarterly shoots to document every milestone of your construction journey." },
@@ -199,6 +230,52 @@ export default function ConstructionUpdateVideosClient() {
             </div>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+<section className="py-24 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        Client Testimonials
+      </h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          {/* User Info */}
+          <div className="mb-6">
+            <h4 className="font-bold text-black text-lg">
+              {testimonial.name}
+            </h4>
+            <p className="text-sm text-gray-600">
+              {testimonial.position}
+            </p>
+            <p className="text-sm text-yellow-600 font-medium">
+              {testimonial.company}
+            </p>
+          </div>
+
+          {/* Stars */}
+          <div className="flex text-yellow-400 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <i key={i} className="ri-star-fill text-sm"></i>
+            ))}
+          </div>
+
+          {/* Content */}
+          <p className="text-gray-700 leading-relaxed italic">
+            &ldquo;{testimonial.content}&rdquo;
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">

@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    unoptimized: true, // ✅ THIS FIXES THE ERROR
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
@@ -9,6 +10,7 @@ const nextConfig = {
       },
     ],
   },
+
   async redirects() {
     return [
       {

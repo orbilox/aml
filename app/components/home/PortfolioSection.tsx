@@ -7,17 +7,19 @@ const portfolioItems = [
     title: "Etereo 1, Goa",
     category: "3D Walkthrough",
     image: "/images/portfolio/1.png",
-    description: "A stunning 3D walkthrough video showcasing the luxury villas and amenities of Etereo 1 in Goa.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description:
+      "Cinematic 3D walkthrough showcasing luxury residential units with panoramic city views.",
+    videoUrl: "https://www.youtube.com/embed/BiCCdx0fDik?autoplay=1&t",
     isExternal: false,
   },
   {
     id: 2,
-    title: "Shree Radha Gopal Residency",
+    title: "Shree Radha Gopal Residency, Kosi",
     category: "VR Experience",
     image: "/images/portfolio/2.png",
-    description: "An immersive VR experience of the Shree Radha Gopal Residency, allowing buyers to explore the property virtually.",
-    videoUrl: "https://amlabs.cloud/Shree_Radha_Gopal/",
+    description:
+      "Interactive VR tour of a residential plotted development with modern amenities and green spaces.",
+    videoUrl: "https://amlabs.cloud/SRMG_V06/",
     isExternal: true,
   },
   {
@@ -25,23 +27,47 @@ const portfolioItems = [
     title: "Province D Olympia, Noida",
     category: "Location AV",
     image: "/images/portfolio/3.png",
-    description: "A compelling location AV video highlighting the strategic location and connectivity of Province D Olympia in Noida.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Professional location showcase highlighting the prime Noida location and premium real estate development with excellent connectivity and modern infrastructure.",
+    videoUrl:
+      "https://www.youtube.com/embed/VPTirPc5a1I?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 4,
     title: "Multiple Projects",
     category: "3D Rendering",
     image: "/images/portfolio/4.png",
-    description: "A showcase of high-quality 3D renderings across multiple real estate projects, demonstrating our rendering expertise.",
+    description:
+      "Comprehensive collection of 3D still renders showcasing various residential developments with detailed architectural visualization",
+    videoUrl:
+      "https://www.youtube.com/embed/BiCCdx0fDik?si=y4M05nZkVgJPmB9U&autoplay=1",
     hasSlider: true,
     sliderImages: [
-      { url: "/images/portfolio/5.png", title: "Project Render 1", description: "High-quality 3D render showcasing architectural details" },
-      { url: "/images/portfolio/6.png", title: "Project Render 2", description: "Photorealistic exterior rendering with landscape" },
-      { url: "/images/portfolio/7.png", title: "Project Render 3", description: "Interior rendering highlighting premium finishes" },
-      { url: "/images/portfolio/8.png", title: "Project Render 4", description: "Aerial perspective render of the development" },
-      { url: "/images/portfolio/9.png", title: "Project Render 5", description: "Night-time render showcasing lighting design" },
+      {
+        url: "/images/portfolio/5.png",
+        title: "Luxury Residential Complex",
+        description: "Modern residential development with premium amenities",
+      },
+      {
+        url: "/images/portfolio/6.png",
+        title: "Premium Interior Design",
+        description: "Sophisticated interior spaces with modern finishes",
+      },
+      {
+        url: "/images/portfolio/7.png",
+        title: "High-Rise Development",
+        description: "Urban residential tower with panoramic city views",
+      },
+      {
+        url: "/images/portfolio/8.png",
+        title: "Premium Villa Project",
+        description: "Exclusive villa development with luxury amenities",
+      },
+      {
+        url: "/images/portfolio/9.png",
+        title: "Master Plan Visualization",
+        description: "Complete residential development master planning",
+      },
     ],
   },
   {
@@ -49,16 +75,18 @@ const portfolioItems = [
     title: "Pyramid Alban, Gurugram",
     category: "Construction Updates",
     image: "/images/portfolio/10.png",
-    description: "Regular construction update videos for Pyramid Alban in Gurugram, keeping investors informed about project progress.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Comprehensive construction progress documentation of premium residential project with detailed milestone markers and progress tracking.",
+    videoUrl:
+      "https://www.youtube.com/embed/QDJxopvP4Ro?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 6,
     title: "Yuu by Nahar, Mumbai",
     category: "Interactive 3D",
     image: "/images/portfolio/13.png",
-    description: "An interactive 3D tool for Yuu by Nahar in Mumbai, allowing prospects to explore floor plans and configurations.",
+    description:
+      "Interactive residential apartment configurator allowing buyers to customize layouts, finishes, and amenities in real-time for premium Mumbai living.",
     videoUrl: "https://amlabs.cloud/Nahar_VR/",
     isExternal: true,
   },
@@ -67,21 +95,38 @@ const portfolioItems = [
     title: "Hero Homes-The Palatial, Gurugram",
     category: "Route Videos",
     image: "/images/portfolio/14.png",
-    description: "A dynamic route video showcasing the connectivity and accessibility of Hero Homes-The Palatial in Gurugram.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Dynamic route visualization showcasing different approach routes to reach the project site highlighting nearby landmarks and markers for easy navigation.",
+    videoUrl:
+      "https://www.youtube.com/embed/ENlsfe7wQRs?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 8,
     title: "Etereo 1, Goa",
     category: "3D Isometrics",
     image: "/images/portfolio/15.jpg",
-    description: "Beautiful 3D isometric views of Etereo 1 in Goa, showcasing the layout and design from unique perspectives.",
+    description:
+      "Premium residential project featuring contemporary design and luxury amenities in the heart of Goa with comprehensive isometric visualization.",
+    // videoUrl:
+    //   "https://www.youtube.com/embed/BiCKdx0fDik?si=y4M05nZkVgJPmB9U&autoplay=1",
     hasGallery: true,
     galleryImages: [
-      { url: "/images/portfolio/16.jpeg", title: "Isometric View 1", description: "Top-down isometric perspective of the villa layout" },
-      { url: "/images/portfolio/17.jpg", title: "Isometric View 2", description: "Side isometric view highlighting the building profile" },
-      { url: "/images/portfolio/18.jpg", title: "Isometric View 3", description: "Detailed isometric view of amenities and landscaping" },
+      {
+        url: "/images/portfolio/16.jpeg",
+        title: "Master Plan Isometric",
+        description:
+          "Complete site layout with residential blocks and amenities",
+      },
+      {
+        url: "/images/portfolio/17.jpg",
+        title: "Building Isometric View",
+        description: "Detailed residential building with floor plan layouts",
+      },
+      {
+        url: "/images/portfolio/18.jpg",
+        title: "Complex Layout Isometric",
+        description: "Multi-tower residential development with amenities",
+      },
     ],
   },
   {
@@ -89,16 +134,18 @@ const portfolioItems = [
     title: "Hero Homes, Ludhiana",
     category: "Interior Cinematic Walkthrough",
     image: "/images/portfolio/19.jpg",
-    description: "A cinematic interior walkthrough of Hero Homes in Ludhiana, showcasing premium interiors and lifestyle.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Immersive interior walkthrough highlighting the sophisticated apartment interiors with premium finishes, modern amenities, and elegant design elements.",
+    videoUrl:
+      "https://www.youtube.com/embed/dPJRyTFkX-g?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 11,
     title: "House of Hiranandani, Mumbai",
     category: "VR Experience",
     image: "/images/portfolio/23.png",
-    description: "An immersive VR experience for House of Hiranandani in Mumbai, allowing buyers to virtually tour the property.",
+    description:
+      "Immersive VR tour of premium shopping mall featuring interactive retail spaces and modern commercial architecture.",
     videoUrl: "https://amlabs.cloud/HOH-V2/",
     isExternal: true,
   },
@@ -107,7 +154,7 @@ const portfolioItems = [
     title: "Province D Olympia, Noida",
     category: "VR Experience",
     image: "/images/portfolio/24.png",
-    description: "A comprehensive VR experience for Province D Olympia in Noida, providing an immersive property tour.",
+    description: "Residential plotted development",
     videoUrl: "https://amlabs.cloud/ATS_PDO/",
     isExternal: true,
   },
@@ -116,98 +163,99 @@ const portfolioItems = [
     title: "Altura DXP 92, Gurugram",
     category: "Location AV",
     image: "/images/portfolio/26.png",
-    description: "A professional location AV for Altura DXP 92 in Gurugram, highlighting its prime location and surroundings.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Infographical location AV showcasing Altura DXP 92 development in Gurugram with comprehensive visual presentation and detailed project information.",
+    videoUrl:
+      "https://www.youtube.com/embed/z6RclcDFWAA?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 15,
-    title: "Shree Radha Gopal Residency",
+    title: "Shree Radha Gopal Residency, Kosi",
     category: "Location AV",
     image: "/images/portfolio/27.png",
-    description: "A compelling location AV for Shree Radha Gopal Residency, showcasing the neighborhood and connectivity.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Highlighting spiritual location of Kosi along with project highlights showcasing the serene environment and premium residential development features.",
+    videoUrl:
+      "https://www.youtube.com/embed/nl1xegGywlc?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 16,
-    title: "Smart World-The Edition",
+    title: "Smart World- The Edition, Gurugram",
     category: "Construction Updates",
     image: "/images/portfolio/11.png",
-    description: "Comprehensive construction update videos for Smart World-The Edition, documenting project milestones.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Comprehensive construction progress documentation highlighting the development of multi-tower residential project with premium amenities and modern architectural design.",
+    videoUrl:
+      "https://www.youtube.com/embed/4RebMEfQr3Y?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 18,
     title: "Rising Homes, Gurugram",
     category: "Interior Cinematic Walkthrough",
     image: "/images/portfolio/20.png",
-    description: "A cinematic interior walkthrough of Rising Homes in Gurugram, presenting the project's luxury interiors.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
-  },
-  {
-    id: 19,
-    title: "Modern Apartment Lifestyle",
-    category: "Interior Cinematic Walkthrough",
-    image: "/images/portfolio/21.jpg",
-    description: "A lifestyle-focused interior cinematic walkthrough of a modern apartment, highlighting contemporary design.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Immersive interior walkthrough highlighting the sophisticated apartment interiors with premium finishes, modern amenities, and elegant design elements.",
+    videoUrl:
+      "https://www.youtube.com/embed/ExZlpEoGIBc?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 20,
-    title: "Aura, Sector 79",
+    title: "Aura, Sector 79, Gurugram",
     category: "Location AV",
     image: "/images/portfolio/34.png",
-    description: "A strategic location AV for Aura in Sector 79, showcasing the project's connectivity and surroundings.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "A high-impact location walkthrough for Aura – Sector 79, Gurugram, designed to showcase premium connectivity and attract qualified property leads.",
+    videoUrl:
+      "https://www.youtube.com/embed/-6icu6ALbr4?si=0H-4fGbiNLi3y0fG&autoplay=1",
   },
   {
     id: 21,
     title: "GMI Elite Homes, Mohali",
     category: "Construction Updates",
     image: "/images/portfolio/GMI.png",
-    description: "Regular construction update videos for GMI Elite Homes in Mohali, keeping stakeholders updated.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Visual documentation of GMI Elite Homes, capturing the construction journey of a modern multi-tower residential project designed for refined, upscale living.",
+    videoUrl:
+      "https://www.youtube.com/embed/cCE1QRmeIRU?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 22,
-    title: "Prime Residences, Gurugram",
+    title: "Prime Residences, Gurugram ",
     category: "Construction Updates",
     image: "/images/portfolio/Prime-Residences.png",
-    description: "Detailed construction update videos for Prime Residences in Gurugram, documenting project progress.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Construction progress documentation capturing the development of Prime Residences — a contemporary residential project defined by modern architecture and thoughtfully curated amenities.",
+    videoUrl:
+      "https://www.youtube.com/embed/ZLblD-AEilk?si=y4M05nZkVgJPmB9U&autoplay=1",
   },
   {
     id: 23,
-    title: "SAP Experience Center",
+    title: "SAP Experience Center, Bengaluru",
     category: "VR Experience",
     image: "/images/portfolio/SAP-Experience-Center.png",
-    description: "An immersive VR experience for the SAP Experience Center, showcasing the corporate facility virtually.",
-    videoUrl: "https://my.matterport.com/show/?m=SAP_Experience",
+    description:
+      "Matterport-powered virtual tour created for the SAP Experience Center, delivering an immersive and interactive walkthrough.",
+    videoUrl: "https://my.matterport.com/show/?m=ceeiCLowE6C",
     isExternal: true,
   },
   {
     id: 24,
-    title: "SAP S Market",
+    title: "SAP S Market, Bengaluru",
     category: "VR Experience",
     image: "/images/portfolio/SAP-S-Market.png",
-    description: "A virtual reality tour of SAP S Market, enabling remote exploration of the commercial space.",
-    videoUrl: "https://my.matterport.com/show/?m=SAP_S_Market",
+    description:
+      "High-fidelity Matterport virtual walkthrough developed for the SAP S Market.",
+    videoUrl: "https://my.matterport.com/show/?m=R5jPFcjQaeh",
     isExternal: true,
   },
   {
     id: 25,
-    title: "Sanfran Sarovar Heights",
+    title: "Sanfran Sarovar Heights, Jhansi",
     category: "VR Experience",
     image: "/images/portfolio/Sanfran-VR-Thumbnail.png",
-    description: "An immersive VR tour of Sanfran Sarovar Heights, providing prospective buyers with a virtual property experience.",
-    videoUrl: "https://amlabs.cloud/Sanfran/",
+    description:
+      "Immersive virtual tour showcasing high-rise towers of Sanfran Sarovar Heights, highlighting advanced functionalities and modern residential design.",
+    videoUrl: "https://amlabs.cloud/SSH_V3/",
     isExternal: true,
   },
   {
@@ -215,35 +263,37 @@ const portfolioItems = [
     title: "Central Ikon, Noida",
     category: "Construction Updates",
     image: "/images/portfolio/Central-Ikon-Thumbnail.png",
-    description: "Construction update videos for Central Ikon in Noida, keeping investors informed about development progress.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Visual documentation of Central Ikon, showcasing the progressive development of a contemporary commercial and retail project crafted to reflect sophistication, scale, and premium positioning.",
+    videoUrl: "https://www.youtube.com/embed/k2jFPH49J0U?autoplay=1",
   },
   {
     id: 27,
     title: "The Kutumb, Ghaziabad",
     category: "Construction Updates",
     image: "/images/portfolio/Kutumb-Thumbnail.png",
-    description: "Comprehensive construction documentation for The Kutumb in Ghaziabad, tracking project milestones.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    isExternal: false,
+    description:
+      "Construction update video capturing the evolution of The Kutumb — a contemporary residential development distinguished by modern architectural design and carefully planned lifestyle amenities.",
+    videoUrl: "https://www.youtube.com/embed/ZLblD-AEilk?autoplay=1",
   },
   {
     id: 28,
     title: "Mauli Housing, Mumbai",
     category: "VR Experience",
     image: "/images/portfolio/Mauli-VR-Thumbnail.png",
-    description: "A virtual reality experience for Mauli Housing in Mumbai, enabling buyers to explore the property remotely.",
-    videoUrl: "https://amlabs.cloud/Mauli/",
+    description:
+      "An immersive 360° Virtual Reality tour for Mauli Housing, showcasing landmark views and multi-height outside perspectives for a complete spatial experience.",
+    videoUrl: "https://amlabs.cloud/Mauli_V06/",
     isExternal: true,
   },
   {
     id: 29,
-    title: "Dosti Greater Thane",
+    title: "Dosti Greater Thane, Thane",
     category: "VR Experience",
     image: "/images/portfolio/Dosti-VR-Thumbnail.png",
-    description: "An immersive VR tour of Dosti Greater Thane, allowing prospective buyers to virtually experience the development.",
-    videoUrl: "https://amlabs.cloud/Dosti/",
+    description:
+      "A 360° VR real estate tour for Dosti Group, featuring a superimposed 3D building for a realistic virtual property walkthrough experience.",
+    videoUrl: "https://amlabs.cloud/Dosti_Mumbai_V01/",
     isExternal: true,
   },
   {
@@ -251,13 +301,34 @@ const portfolioItems = [
     title: "Centonic, Pune",
     category: "Architectural Scale Models",
     image: "/images/services/architectural-scale-models/1.jpg",
-    description: "A detailed architectural scale model of Centonic in Pune, showcasing the residential development's layout and design.",
+    description:
+      "Precision architectural scale model showcasing Centonic's contemporary residential development in Pune, featuring detailed landscaping, modern tower structures, and comprehensive amenity planning.",
     hasGallery: true,
     galleryImages: [
-      { url: "/images/services/architectural-scale-models/centonic/1.jpeg", title: "Centonic Overview", description: "Complete scale model showing the full development layout" },
-      { url: "/images/services/architectural-scale-models/centonic/2.jpeg", title: "Tower Detail", description: "Close-up view of the residential towers" },
-      { url: "/images/services/architectural-scale-models/centonic/3.jpeg", title: "Amenities Zone", description: "Scale model of amenity areas and landscaping" },
-      { url: "/images/services/architectural-scale-models/centonic/4.jpeg", title: "Master Plan View", description: "Bird's eye view of the complete site plan" },
+      {
+        url: "/images/services/architectural-scale-models/centonic/1.jpeg",
+        title: "Centonic Main Tower Complex",
+        description:
+          "Detailed scale model of the primary residential towers with surrounding landscape elements and pedestrian pathways",
+      },
+      {
+        url: "/images/services/architectural-scale-models/centonic/2.jpeg",
+        title: "Amenity Zone Layout",
+        description:
+          "Miniature representation of recreational facilities including clubhouse, pool area, and community spaces",
+      },
+      {
+        url: "/images/services/architectural-scale-models/centonic/3.jpeg",
+        title: "Tower Elevation Detail",
+        description:
+          "Close-up view showcasing architectural facade details, balcony arrangements, and building proportion accuracy",
+      },
+      {
+        url: "/images/services/architectural-scale-models/centonic/4.jpeg",
+        title: "Master Plan Overview",
+        description:
+          "Complete aerial perspective of the Centonic development showing site planning and spatial organization",
+      },
     ],
   },
   {
@@ -265,14 +336,40 @@ const portfolioItems = [
     title: "Indian Railways",
     category: "Architectural Scale Models",
     image: "/images/services/architectural-scale-models/2.jpg",
-    description: "A comprehensive architectural scale model for Indian Railways, depicting station infrastructure and rail network planning.",
+    description:
+      "Intricate scale model for Indian Railways infrastructure project, demonstrating station layouts, platform configurations, and surrounding urban integration with meticulous attention to operational details.",
     hasGallery: true,
     galleryImages: [
-      { url: "/images/services/architectural-scale-models/railways/1.jpeg", title: "Railway Station Model", description: "Detailed scale model of the railway station complex" },
-      { url: "/images/services/architectural-scale-models/railways/2.jpeg", title: "Platform Layout", description: "Scale representation of platform configuration and tracks" },
-      { url: "/images/services/architectural-scale-models/railways/3.jpeg", title: "Terminal Building", description: "Architectural model of the main terminal building" },
-      { url: "/images/services/architectural-scale-models/railways/4.jpeg", title: "Infrastructure Details", description: "Detailed model of rail infrastructure components" },
-      { url: "/images/services/architectural-scale-models/railways/5.jpeg", title: "Station Master Plan", description: "Bird's eye view of the complete railway infrastructure showcasing track layouts and station positioning" },
+      {
+        url: "/images/services/architectural-scale-models/railways/1.jpeg",
+        title: "Railway Station Complex",
+        description:
+          "Comprehensive model showing station building architecture, platform arrangements, and passenger circulation areas",
+      },
+      {
+        url: "/images/services/architectural-scale-models/railways/2.jpeg",
+        title: "Platform Infrastructure",
+        description:
+          "Detailed representation of railway tracks, platform edges, overhead structures, and signaling systems",
+      },
+      {
+        url: "/images/services/architectural-scale-models/railways/3.jpeg",
+        title: "Terminal Building Facade",
+        description:
+          "Architectural elevation model highlighting the station's main entrance, roof design, and structural elements",
+      },
+      {
+        url: "/images/services/architectural-scale-models/railways/4.jpeg",
+        title: "Transit Integration Hub",
+        description:
+          "Scale model depicting connectivity between railway platforms and surrounding transportation networks",
+      },
+      {
+        url: "/images/services/architectural-scale-models/railways/5.jpeg",
+        title: "Station Master Plan",
+        description:
+          "Bird's eye view of the complete railway infrastructure showcasing track layouts and station positioning",
+      },
     ],
   },
   {
@@ -280,14 +377,40 @@ const portfolioItems = [
     title: "Hiranandani Meadows, Thane",
     category: "Architectural Scale Models",
     image: "/images/services/architectural-scale-models/3.jpg",
-    description: "Elaborate architectural scale model of Hiranandani Meadows in Thane, capturing the sprawling residential township with multi-story buildings, green corridors, and integrated community facilities.",
+    description:
+      "Elaborate architectural scale model of Hiranandani Meadows in Thane, capturing the sprawling residential township with multi-story buildings, green corridors, and integrated community facilities.",
     hasGallery: true,
     galleryImages: [
-      { url: "/images/services/architectural-scale-models/hiranandani/1.jpeg", title: "Township Residential Clusters", description: "Multiple residential tower models arranged to show the planned neighborhood layout and density distribution" },
-      { url: "/images/services/architectural-scale-models/hiranandani/2.jpeg", title: "Central Landscaped Gardens", description: "Miniature green spaces featuring walking paths, water features, and recreational zones within the township" },
-      { url: "/images/services/architectural-scale-models/hiranandani/3.jpeg", title: "High-Rise Tower Detail", description: "Individual tower model showcasing architectural style, floor-to-floor heights, and facade treatment" },
-      { url: "/images/services/architectural-scale-models/hiranandani/4.jpeg", title: "Community Center Complex", description: "Scale representation of shared facilities including clubhouse, sports areas, and social gathering spaces" },
-      { url: "/images/services/architectural-scale-models/hiranandani/5.jpeg", title: "Master Township Layout", description: "Complete site model displaying road networks, building clusters, and open space distribution across the development" },
+      {
+        url: "/images/services/architectural-scale-models/hiranandani/1.jpeg",
+        title: "Township Residential Clusters",
+        description:
+          "Multiple residential tower models arranged to show the planned neighborhood layout and density distribution",
+      },
+      {
+        url: "/images/services/architectural-scale-models/hiranandani/2.jpeg",
+        title: "Central Landscaped Gardens",
+        description:
+          "Miniature green spaces featuring walking paths, water features, and recreational zones within the township",
+      },
+      {
+        url: "/images/services/architectural-scale-models/hiranandani/3.jpeg",
+        title: "High-Rise Tower Detail",
+        description:
+          "Individual tower model showcasing architectural style, floor-to-floor heights, and facade treatment",
+      },
+      {
+        url: "/images/services/architectural-scale-models/hiranandani/4.jpeg",
+        title: "Community Center Complex",
+        description:
+          "Scale representation of shared facilities including clubhouse, sports areas, and social gathering spaces",
+      },
+      {
+        url: "/images/services/architectural-scale-models/hiranandani/5.jpeg",
+        title: "Master Township Layout",
+        description:
+          "Complete site model displaying road networks, building clusters, and open space distribution across the development",
+      },
     ],
   },
   {
@@ -295,11 +418,22 @@ const portfolioItems = [
     title: "Venkatesh Skydale, Pune",
     category: "Architectural Scale Models",
     image: "/images/services/architectural-scale-models/4.jpg",
-    description: "Sophisticated scale model of Venkatesh Skydale residential project in Pune, highlighting the twin-tower configuration, podium-level amenities, and contextual urban setting with accurate proportions.",
+    description:
+      "Sophisticated scale model of Venkatesh Skydale residential project in Pune, highlighting the twin-tower configuration, podium-level amenities, and contextual urban setting with accurate proportions.",
     hasGallery: true,
     galleryImages: [
-      { url: "/images/services/architectural-scale-models/venkatesh/1.jpeg", title: "Twin Tower Configuration", description: "Architectural model showing both residential towers with connecting podium and vertical circulation cores" },
-      { url: "/images/services/architectural-scale-models/venkatesh/2.jpeg", title: "Podium Level Amenities", description: "Ground and podium floor model featuring entrance lobbies, parking areas, and resident facilities" },
+      {
+        url: "/images/services/architectural-scale-models/venkatesh/1.jpeg",
+        title: "Twin Tower Configuration",
+        description:
+          "Architectural model showing both residential towers with connecting podium and vertical circulation cores",
+      },
+      {
+        url: "/images/services/architectural-scale-models/venkatesh/2.jpeg",
+        title: "Podium Level Amenities",
+        description:
+          "Ground and podium floor model featuring entrance lobbies, parking areas, and resident facilities",
+      },
     ],
   },
   {
@@ -307,14 +441,40 @@ const portfolioItems = [
     title: "Spree City, Sonipat",
     category: "Architectural Scale Models",
     image: "/images/services/architectural-scale-models/5.jpg",
-    description: "Comprehensive architectural scale model for Spree City in Sonipat, representing a mixed-use development with residential zones, commercial areas, and extensive landscaping across multiple phases.",
+    description:
+      "Comprehensive architectural scale model for Spree City in Sonipat, representing a mixed-use development with residential zones, commercial areas, and extensive landscaping across multiple phases.",
     hasGallery: true,
     galleryImages: [
-      { url: "/images/services/architectural-scale-models/spree/1.jpeg", title: "Mixed-Use Development Core", description: "Central area model showing integration of residential, retail, and commercial components" },
-      { url: "/images/services/architectural-scale-models/spree/2.jpeg", title: "Residential Phase Clusters", description: "Housing sector models depicting apartment buildings, row houses, and supporting infrastructure" },
-      { url: "/images/services/architectural-scale-models/spree/3.jpeg", title: "Commercial District Zone", description: "Scale model of business and retail areas with office buildings and shopping complexes" },
-      { url: "/images/services/architectural-scale-models/spree/4.jpeg", title: "Green Corridor Network", description: "Landscape model showing interconnected parks, tree-lined avenues, and pedestrian-friendly pathways" },
-      { url: "/images/services/architectural-scale-models/spree/5.jpeg", title: "Complete City Master Plan", description: "Expansive overview model presenting all development phases, infrastructure, and land use distribution" },
+      {
+        url: "/images/services/architectural-scale-models/spree/1.jpeg",
+        title: "Mixed-Use Development Core",
+        description:
+          "Central area model showing integration of residential, retail, and commercial components",
+      },
+      {
+        url: "/images/services/architectural-scale-models/spree/2.jpeg",
+        title: "Residential Phase Clusters",
+        description:
+          "Housing sector models depicting apartment buildings, row houses, and supporting infrastructure",
+      },
+      {
+        url: "/images/services/architectural-scale-models/spree/3.jpeg",
+        title: "Commercial District Zone",
+        description:
+          "Scale model of business and retail areas with office buildings and shopping complexes",
+      },
+      {
+        url: "/images/services/architectural-scale-models/spree/4.jpeg",
+        title: "Green Corridor Network",
+        description:
+          "Landscape model showing interconnected parks, tree-lined avenues, and pedestrian-friendly pathways",
+      },
+      {
+        url: "/images/services/architectural-scale-models/spree/5.jpeg",
+        title: "Complete City Master Plan",
+        description:
+          "Expansive overview model presenting all development phases, infrastructure, and land use distribution",
+      },
     ],
   },
   {
@@ -322,13 +482,34 @@ const portfolioItems = [
     title: "Skyline Realty, Hyderabad",
     category: "Architectural Scale Models",
     image: "/images/services/architectural-scale-models/6.jpg",
-    description: "Detailed architectural scale model for Skyline Realty's premium development in Hyderabad, showcasing contemporary high-rise design, rooftop amenities, and sophisticated urban living spaces.",
+    description:
+      "Detailed architectural scale model for Skyline Realty's premium development in Hyderabad, showcasing contemporary high-rise design, rooftop amenities, and sophisticated urban living spaces.",
     hasGallery: true,
     galleryImages: [
-      { url: "/images/services/architectural-scale-models/skyline/1.jpeg", title: "Premium Tower Elevation", description: "High-rise residential tower model with detailed facade articulation and balcony projections" },
-      { url: "/images/services/architectural-scale-models/skyline/2.jpeg", title: "Rooftop Amenity Deck", description: "Top-floor amenity level showcasing swimming pool, gym facilities, and sky lounge areas" },
-      { url: "/images/services/architectural-scale-models/skyline/3.jpeg", title: "Entrance Plaza Design", description: "Ground level model featuring grand entrance, drop-off area, and landscaped arrival court" },
-      { url: "/images/services/architectural-scale-models/skyline/4.jpeg", title: "Site Context Integration", description: "Complete development model showing relationship with surrounding roads, neighboring buildings, and urban fabric" },
+      {
+        url: "/images/services/architectural-scale-models/skyline/1.jpeg",
+        title: "Premium Tower Elevation",
+        description:
+          "High-rise residential tower model with detailed facade articulation and balcony projections",
+      },
+      {
+        url: "/images/services/architectural-scale-models/skyline/2.jpeg",
+        title: "Rooftop Amenity Deck",
+        description:
+          "Top-floor amenity level showcasing swimming pool, gym facilities, and sky lounge areas",
+      },
+      {
+        url: "/images/services/architectural-scale-models/skyline/3.jpeg",
+        title: "Entrance Plaza Design",
+        description:
+          "Ground level model featuring grand entrance, drop-off area, and landscaped arrival court",
+      },
+      {
+        url: "/images/services/architectural-scale-models/skyline/4.jpeg",
+        title: "Site Context Integration",
+        description:
+          "Complete development model showing relationship with surrounding roads, neighboring buildings, and urban fabric",
+      },
     ],
   },
   {
@@ -336,16 +517,54 @@ const portfolioItems = [
     title: "Island City Centre, Mumbai",
     category: "Architectural Scale Models",
     image: "/images/services/architectural-scale-models/7.jpg",
-    description: "Premium architectural scale model of Island City Centre in Mumbai, depicting a landmark mixed-use development with commercial towers, retail podiums, and waterfront promenade integration.",
+    description:
+      "Premium architectural scale model of Island City Centre in Mumbai, depicting a landmark mixed-use development with commercial towers, retail podiums, and waterfront promenade integration.",
     hasGallery: true,
     galleryImages: [
-      { url: "/images/services/architectural-scale-models/island/1.jpeg", title: "Commercial Tower Complex", description: "Multi-tower model showing office buildings, retail podium, and multi-level parking structures" },
-      { url: "/images/services/architectural-scale-models/island/2.jpeg", title: "Waterfront Promenade", description: "Detailed model of public realm areas with pedestrian walkways, seating zones, and waterfront landscaping" },
+      {
+        url: "/images/services/architectural-scale-models/island/1.jpeg",
+        title: "Commercial Tower Complex",
+        description:
+          "Multi-tower model showing office buildings, retail podium, and multi-level parking structures",
+      },
+      {
+        url: "/images/services/architectural-scale-models/island/2.jpeg",
+        title: "Waterfront Promenade",
+        description:
+          "Detailed model of public realm areas with pedestrian walkways, seating zones, and waterfront landscaping",
+      },
     ],
   },
-] as const;
-
-type PortfolioItem = (typeof portfolioItems)[number];
+  {
+    id: 37,
+    title: "Tata La Vida, Gurugram",
+    category: "Interactive 3D",
+    image: "/images/portfolio/Tata-La-vida-Thumbnail.png",
+    description:
+      "An immersive 3D interactive virtual tour designed for a 3BHK residential project, allowing users to explore the space with ease and clarity.",
+    videoUrl: "https://amlabs.cloud/Interior_VR/",
+    isExternal: true,
+  },
+  {
+    id: 38,
+    title: "TVS Emerald Luxor, Chennai",
+    category: "Interactive 3D",
+    image: "/images/portfolio/TVS-thumbnail.png",
+    description:
+      "Crafted a high-end 3D interactive virtual tour for a luxury villa, highlighting spacious layouts, design details, and overall flow of the home. The experience delivers a refined real estate villa virtual walkthrough, with smooth transitions and a true-to-space feel.",
+    videoUrl: "https://amlabs.cloud/Villa_VR_Tour/",
+    isExternal: true,
+  },
+  {
+    id: 39,
+    title: "Aura Vantaje, Gurugram",
+    category: "3D Walkthrough",
+    image: "/images/portfolio/Aura-Vantaje-Thumbnail.png",
+    description:
+      "Developed an AI-powered 3D walkthrough for a commercial project, bringing out the scale, layout, and usability of the spaces in a smart way. Delivered at record speed of 7 days.",
+    videoUrl: "https://www.youtube.com/embed/YGaAU9B37nc?autoplay=1",
+  },
+];
 
 const categories = [
   "All",
@@ -363,7 +582,9 @@ const categories = [
 
 export default function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
+  const [selectedItem, setSelectedItem] = useState<
+    (typeof portfolioItems)[0] | null
+  >(null);
   const [showVideo, setShowVideo] = useState(false);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
@@ -372,40 +593,57 @@ export default function PortfolioSection() {
       ? portfolioItems
       : portfolioItems.filter((item) => item.category === activeCategory);
 
-  const handleItemClick = (item: PortfolioItem) => {
+  const handleItemClick = (item: (typeof portfolioItems)[0]) => {
+    // Specific handling for known external or video items
     if (item.title === "Yuu by Nahar, Mumbai") {
+      // Open external link in a new tab
       window.open("https://amlabs.cloud/Nahar_VR/", "_blank");
       return;
     }
+
     if (item.title === "House of Hiranandani, Mumbai") {
+      // Open external link in a new tab
       window.open("https://amlabs.cloud/HOH-V2/", "_blank");
       return;
     }
-    if (item.title === "Province D Olympia, Noida" && item.category === "VR Experience") {
+
+    if (
+      item.title === "Province D Olympia, Noida" &&
+      item.category === "VR Experience"
+    ) {
+      // Open external link in a new tab
       window.open("https://amlabs.cloud/ATS_PDO/", "_blank");
       return;
     }
+
     if (item.title === "Etereo 1, Goa" && item.category === "3D Walkthrough") {
+      // Play video in modal
       setSelectedItem(item);
       setShowVideo(true);
       return;
     }
+
     if (item.title === "Etereo 1, Goa" && item.category === "3D Isometrics") {
+      // Show gallery in modal
       setSelectedItem(item);
       setShowVideo(false);
       setCurrentSlideIndex(0);
       return;
     }
-    if ("isExternal" in item && item.isExternal) {
+
+    // Generic external link handling
+    if (item.isExternal) {
       window.open(item.videoUrl, "_blank");
       return;
     }
+
+    // Default: open regular modal (image or slider)
     setSelectedItem(item);
     setCurrentSlideIndex(0);
   };
 
-  const handleVideoPlay = (item: PortfolioItem) => {
-    if ("isExternal" in item && item.isExternal) {
+  const handleVideoPlay = (item: (typeof portfolioItems)[0]) => {
+    if (item.isExternal) {
       window.open(item.videoUrl, "_blank");
       return;
     }
@@ -420,42 +658,46 @@ export default function PortfolioSection() {
   };
 
   const nextSlide = () => {
-    if (selectedItem && "sliderImages" in selectedItem && selectedItem.sliderImages) {
+    if (selectedItem?.sliderImages) {
       setCurrentSlideIndex((prev) =>
-        prev === selectedItem.sliderImages!.length - 1 ? 0 : prev + 1
+        prev === selectedItem.sliderImages!.length - 1 ? 0 : prev + 1,
       );
     }
-    if (selectedItem && "galleryImages" in selectedItem && selectedItem.galleryImages) {
+    if (selectedItem?.galleryImages) {
       setCurrentSlideIndex((prev) =>
-        prev === selectedItem.galleryImages!.length - 1 ? 0 : prev + 1
+        prev === selectedItem.galleryImages!.length - 1 ? 0 : prev + 1,
       );
     }
   };
 
   const prevSlide = () => {
-    if (selectedItem && "sliderImages" in selectedItem && selectedItem.sliderImages) {
+    if (selectedItem?.sliderImages) {
       setCurrentSlideIndex((prev) =>
-        prev === 0 ? selectedItem.sliderImages!.length - 1 : prev - 1
+        prev === 0 ? selectedItem.sliderImages!.length - 1 : prev - 1,
       );
     }
-    if (selectedItem && "galleryImages" in selectedItem && selectedItem.galleryImages) {
+    if (selectedItem?.galleryImages) {
       setCurrentSlideIndex((prev) =>
-        prev === 0 ? selectedItem.galleryImages!.length - 1 : prev - 1
+        prev === 0 ? selectedItem.galleryImages!.length - 1 : prev - 1,
       );
     }
   };
 
-  const hasSlider = selectedItem && "sliderImages" in selectedItem && selectedItem.sliderImages;
-  const hasGallery = selectedItem && "hasGallery" in selectedItem && selectedItem.hasGallery && "galleryImages" in selectedItem && selectedItem.galleryImages;
+  const goToSlide = (index: number) => {
+    setCurrentSlideIndex(index);
+  };
 
   return (
     <section id="portfolio" className="py-24 bg-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Portfolio Showcase</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Portfolio Showcase
+          </h2>
           <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our latest projects and see how we transform visions into immersive experiences
+            Explore our latest projects and see how we transform visions into
+            immersive experiences
           </p>
         </div>
 
@@ -485,7 +727,6 @@ export default function PortfolioSection() {
               onClick={() => handleItemClick(item)}
             >
               <div className="relative overflow-hidden rounded-2xl bg-gray-900">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.image}
                   alt={item.title}
@@ -496,21 +737,36 @@ export default function PortfolioSection() {
                     className="text-center text-white cursor-pointer"
                     onClick={(e) => {
                       e.stopPropagation();
-                      if ("hasSlider" in item || "hasGallery" in item) {
+                      if (item.hasSlider || item.hasGallery) {
                         handleItemClick(item);
                       } else {
                         handleVideoPlay(item);
                       }
                     }}
                   >
-                    <i className={`${"hasSlider" in item || "hasGallery" in item ? "ri-image-line" : "ri-play-circle-line"} text-4xl mb-2`}></i>
-                    <p className="text-sm">{"hasSlider" in item || "hasGallery" in item ? "View Gallery" : "View Project"}</p>
+                    <i
+                      className={`${
+                        item.hasSlider || item.hasGallery
+                          ? "ri-image-line"
+                          : "ri-play-circle-line"
+                      } text-4xl mb-2`}
+                    ></i>
+                    <p className="text-sm">
+                      {item.hasSlider || item.hasGallery
+                        ? "View Gallery"
+                        : "View Project"}
+                    </p>
                   </div>
                 </div>
               </div>
+
               <div className="pt-6">
-                <div className="text-yellow-400 text-sm font-medium mb-2">{item.category}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                <div className="text-yellow-400 text-sm font-medium mb-2">
+                  {item.category}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {item.title}
+                </h3>
                 <p className="text-gray-400 text-sm">{item.description}</p>
               </div>
             </div>
@@ -519,13 +775,13 @@ export default function PortfolioSection() {
 
         {/* Modal */}
         {selectedItem && (
-          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-            <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6">
+            <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">
               {showVideo ? (
                 <div className="relative">
                   <div className="aspect-video">
                     <iframe
-                      src={"videoUrl" in selectedItem ? selectedItem.videoUrl : ""}
+                      src={selectedItem.videoUrl}
                       title={selectedItem.title}
                       className="w-full h-full rounded-t-2xl"
                       frameBorder="0"
@@ -533,107 +789,248 @@ export default function PortfolioSection() {
                       allowFullScreen
                     ></iframe>
                   </div>
-                  <button onClick={closeModal} className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10">
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                  >
                     <i className="ri-close-line text-xl"></i>
                   </button>
                   <div className="p-8">
-                    <div className="text-yellow-400 text-sm font-medium mb-2">{selectedItem.category}</div>
-                    <h3 className="text-3xl font-bold text-black mb-4">{selectedItem.title}</h3>
-                    <p className="text-gray-700 text-lg leading-relaxed">{selectedItem.description}</p>
+                    <div className="text-yellow-400 text-sm font-medium mb-2">
+                      {selectedItem.category}
+                    </div>
+                    <h3 className="text-3xl font-bold text-black mb-4">
+                      {selectedItem.title}
+                    </h3>
+                    <p className="text-gray-700 text-lg leading-relaxed">
+                      {selectedItem.description}
+                    </p>
                   </div>
                 </div>
-              ) : hasSlider ? (
+              ) : selectedItem.hasSlider ? (
+                // Slider Modal for Multiple Projects
                 <div className="relative">
-                  <button onClick={closeModal} className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-20">
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-20"
+                  >
                     <i className="ri-close-line text-xl"></i>
                   </button>
+
+                  {/* Slider Container */}
                   <div className="relative h-96 md:h-[500px] overflow-hidden rounded-t-2xl">
-                    <div className="flex transition-transform duration-500 ease-in-out h-full" style={{ transform: `translateX(-${currentSlideIndex * 100}%)` }}>
-                      {hasSlider && (selectedItem as typeof portfolioItems[3]).sliderImages.map((slide, index) => (
-                        <div key={index} className="w-full h-full flex-shrink-0 relative">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src={slide.url} alt={slide.title} className="w-full h-full object-cover" />
+                    <div
+                      className="flex transition-transform duration-500 ease-in-out h-full"
+                      style={{
+                        transform: `translateX(-${currentSlideIndex * 100}%)`,
+                      }}
+                    >
+                      {selectedItem.sliderImages?.map((slide, index) => (
+                        <div
+                          key={index}
+                          className="w-full h-full flex-shrink-0 relative"
+                        >
+                          <img
+                            src={slide.url}
+                            alt={slide.title}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                       ))}
                     </div>
-                    <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10">
-                      <i className="ri-arrow-left-line text-xl"></i>
-                    </button>
-                    <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10">
-                      <i className="ri-arrow-right-line text-xl"></i>
-                    </button>
+
+                    {/* Navigation Arrows */}
+                    {selectedItem.sliderImages &&
+                      selectedItem.sliderImages.length > 1 && (
+                        <>
+                          <button
+                            onClick={prevSlide}
+                            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                          >
+                            <i className="ri-arrow-left-line text-xl"></i>
+                          </button>
+                          <button
+                            onClick={nextSlide}
+                            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                          >
+                            <i className="ri-arrow-right-line text-xl"></i>
+                          </button>
+                        </>
+                      )}
                   </div>
-                  <div className="flex justify-center space-x-2 py-4 bg-gray-100">
-                    {hasSlider && (selectedItem as typeof portfolioItems[3]).sliderImages.map((_, index) => (
-                      <button key={index} onClick={() => setCurrentSlideIndex(index)} className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${index === currentSlideIndex ? "bg-yellow-400" : "bg-gray-400"}`}></button>
-                    ))}
-                  </div>
-                  <div className="p-8">
-                    <div className="text-yellow-400 text-sm font-medium mb-2">{selectedItem.category}</div>
-                    <h3 className="text-3xl font-bold text-black mb-4">{selectedItem.title}</h3>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-6">{selectedItem.description}</p>
-                  </div>
-                </div>
-              ) : hasGallery ? (
-                <div className="relative">
-                  <button onClick={closeModal} className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-20">
-                    <i className="ri-close-line text-xl"></i>
-                  </button>
-                  <div className="relative h-96 md:h-[500px] overflow-hidden rounded-t-2xl">
-                    <div className="flex transition-transform duration-500 ease-in-out h-full" style={{ transform: `translateX(-${currentSlideIndex * 100}%)` }}>
-                      {hasGallery && (selectedItem as typeof portfolioItems[7]).galleryImages.map((image, index) => (
-                        <div key={index} className="w-full h-full flex-shrink-0 relative flex">
-                          <div className="w-1/2 h-full">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={image.url} alt={image.title} className="w-full h-full object-cover" />
-                          </div>
-                          <div className="w-1/2 h-full">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={image.url} alt={image.title} className="w-full h-full object-cover" />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10">
-                      <i className="ri-arrow-left-line text-xl"></i>
-                    </button>
-                    <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10">
-                      <i className="ri-arrow-right-line text-xl"></i>
-                    </button>
-                  </div>
-                  <div className="flex justify-center space-x-2 py-4 bg-gray-100">
-                    {hasGallery && (selectedItem as typeof portfolioItems[7]).galleryImages.map((_, index) => (
-                      <button key={index} onClick={() => setCurrentSlideIndex(index)} className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${index === currentSlideIndex ? "bg-yellow-400" : "bg-gray-400"}`}></button>
-                    ))}
-                  </div>
-                  <div className="p-8">
-                    <div className="text-yellow-400 text-sm font-medium mb-2">{selectedItem.category}</div>
-                    <h3 className="text-3xl font-bold text-black mb-4">{selectedItem.title}</h3>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-6">{selectedItem.description}</p>
-                    {hasGallery && (selectedItem as typeof portfolioItems[7]).galleryImages[currentSlideIndex] && (
-                      <div className="bg-gray-50 rounded-lg p-4">
-                        <h4 className="font-semibold text-black mb-2">{(selectedItem as typeof portfolioItems[7]).galleryImages[currentSlideIndex].title}</h4>
-                        <p className="text-gray-600 text-sm">{(selectedItem as typeof portfolioItems[7]).galleryImages[currentSlideIndex].description}</p>
+
+                  {/* Slide Indicators */}
+                  {selectedItem.sliderImages &&
+                    selectedItem.sliderImages.length > 1 && (
+                      <div className="flex justify-center space-x-2 py-4 bg-gray-100">
+                        {selectedItem.sliderImages.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
+                              index === currentSlideIndex
+                                ? "bg-yellow-400"
+                                : "bg-gray-400"
+                            }`}
+                          ></button>
+                        ))}
                       </div>
                     )}
+
+                  <div className="p-8">
+                    <div className="text-yellow-400 text-sm font-medium mb-2">
+                      {selectedItem.category}
+                    </div>
+                    <h3 className="text-3xl font-bold text-black mb-4">
+                      {selectedItem.title}
+                    </h3>
+                    <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                      {selectedItem.description}
+                    </p>
+                  </div>
+                </div>
+              ) : selectedItem.hasGallery ? (
+                // Gallery Modal for Etereo 1, Goa (3D Isometrics)
+                <div className="relative">
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-20"
+                  >
+                    <i className="ri-close-line text-xl"></i>
+                  </button>
+
+                  {/* Gallery Container with Split Layout */}
+                  <div className="relative h-96 md:h-[500px] overflow-hidden rounded-t-2xl">
+                    <div
+                      className="flex transition-transform duration-500 ease-in-out h-full"
+                      style={{
+                        transform: `translateX(-${currentSlideIndex * 100}%)`,
+                      }}
+                    >
+                      {selectedItem.galleryImages?.map((image, index) => (
+                        <div
+                          key={index}
+                          className="w-full h-full flex-shrink-0 relative justify-center items-center flex"
+                        >
+                          {/* Split layout for portrait images */}
+                          <div className="w-1/2 h-full">
+                            <img
+                              src={image.url}
+                              alt={image.title}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          {/* <div className="w-1/2 h-full">
+                            <img
+                              src={image.url}
+                              alt={image.title}
+                              className="w-full h-full object-cover"
+                            />
+                          </div> */}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Navigation Arrows */}
+                    {selectedItem.galleryImages &&
+                      selectedItem.galleryImages.length > 1 && (
+                        <>
+                          <button
+                            onClick={prevSlide}
+                            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                          >
+                            <i className="ri-arrow-left-line text-xl"></i>
+                          </button>
+                          <button
+                            onClick={nextSlide}
+                            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                          >
+                            <i className="ri-arrow-right-line text-xl"></i>
+                          </button>
+                        </>
+                      )}
+                  </div>
+
+                  {/* Gallery Indicators */}
+                  {selectedItem.galleryImages &&
+                    selectedItem.galleryImages.length > 1 && (
+                      <div className="flex justify-center space-x-2 py-4 bg-gray-100">
+                        {selectedItem.galleryImages.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
+                              index === currentSlideIndex
+                                ? "bg-yellow-400"
+                                : "bg-gray-400"
+                            }`}
+                          ></button>
+                        ))}
+                      </div>
+                    )}
+
+                  <div className="p-8">
+                    <div className="text-yellow-400 text-sm font-medium mb-2">
+                      {selectedItem.category}
+                    </div>
+                    <h3 className="text-3xl font-bold text-black mb-4">
+                      {selectedItem.title}
+                    </h3>
+                    <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                      {selectedItem.description}
+                    </p>
+                    {selectedItem.galleryImages &&
+                      selectedItem.galleryImages[currentSlideIndex] && (
+                        <div className="bg-gray-50 rounded-lg p-4">
+                          <h4 className="font-semibold text-black mb-2">
+                            {
+                              selectedItem.galleryImages[currentSlideIndex]
+                                .title
+                            }
+                          </h4>
+                          <p className="text-gray-600 text-sm">
+                            {
+                              selectedItem.galleryImages[currentSlideIndex]
+                                .description
+                            }
+                          </p>
+                        </div>
+                      )}
                   </div>
                 </div>
               ) : (
+                // Regular Image Modal
                 <div className="relative">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={selectedItem.image} alt={selectedItem.title} className="w-full h-96 object-cover object-top rounded-t-2xl" />
-                  <button onClick={closeModal} className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer">
+                  <img
+                    src={selectedItem.image}
+                    alt={selectedItem.title}
+                    className="w-full h-96 object-cover object-top"
+                  />
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer"
+                  >
                     <i className="ri-close-line text-xl"></i>
                   </button>
-                  <div className="absolute inset-0 bg-black/40 rounded-t-2xl flex items-center justify-center">
-                    <button onClick={() => setShowVideo(true)} className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-300 transition-colors cursor-pointer">
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <button
+                      onClick={() => setShowVideo(true)}
+                      className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-300 transition-colors cursor-pointer"
+                    >
                       <i className="ri-play-fill text-3xl text-black"></i>
                     </button>
                   </div>
+
                   <div className="p-8">
-                    <div className="text-yellow-400 text-sm font-medium mb-2">{selectedItem.category}</div>
-                    <h3 className="text-3xl font-bold text-black mb-4">{selectedItem.title}</h3>
-                    <p className="text-gray-700 text-lg leading-relaxed">{selectedItem.description}</p>
+                    <div className="text-yellow-400 text-sm font-medium mb-2">
+                      {selectedItem.category}
+                    </div>
+                    <h3 className="text-3xl font-bold text-black mb-4">
+                      {selectedItem.title}
+                    </h3>
+                    <p className="text-gray-700 text-lg leading-relaxed">
+                      {selectedItem.description}
+                    </p>
                   </div>
                 </div>
               )}

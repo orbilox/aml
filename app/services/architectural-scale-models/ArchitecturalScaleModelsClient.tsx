@@ -97,6 +97,29 @@ const portfolioItems: PortfolioItem[] = [
   },
 ];
 
+const testimonials = [
+  {
+    name: "Ajeet Mehta",
+    position: "Director",
+    company: "SRM Group",
+    content:
+      "For Shree Radha Gopal Residency, Kosi, Alliance Media Labs delivered architectural scale models, 3D walkthroughs, renders, a 360 interactive virtual tour, and a location AV exactly the way we had envisioned. Everything felt well thought-through, and the overall real estate visualisation and virtual tour execution came out clean and impactful.",
+  },
+  {
+    name: "Saurabh Dalvi",
+    position: "COO",
+    company: "Shree Venkatesh Buildcon",
+    content:
+      "Detailing is the key in architectural scale models, and Alliance Media Labs delivered that precision perfectly. Their team was very creative and responsive throughout the project. Highly recommendable.",
+  },
+  {
+    name: "Rajesh Channa",
+    position: "Marketing Head",
+    company: "Spree City",
+    content:
+      "Alliance Media Labs did a great job delivering a precise miniature model for our recent plotted development project in Sonipat. They ensured everything was well placed and even provided post-delivery support. Kudos to the team.",
+  },
+];
 export default function ArchitecturalScaleModelsClient() {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -378,6 +401,52 @@ export default function ArchitecturalScaleModelsClient() {
             </div>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+<section className="py-24 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        Client Testimonials
+      </h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          {/* User Info */}
+          <div className="mb-6">
+            <h4 className="font-bold text-black text-lg">
+              {testimonial.name}
+            </h4>
+            <p className="text-sm text-gray-600">
+              {testimonial.position}
+            </p>
+            <p className="text-sm text-yellow-600 font-medium">
+              {testimonial.company}
+            </p>
+          </div>
+
+          {/* Stars */}
+          <div className="flex text-yellow-400 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <i key={i} className="ri-star-fill text-sm"></i>
+            ))}
+          </div>
+
+          {/* Content */}
+          <p className="text-gray-700 leading-relaxed italic">
+            &ldquo;{testimonial.content}&rdquo;
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">

@@ -18,7 +18,7 @@ interface Project {
 
 const portfolioProjects: Project[] = [
   {
-    id: 6,
+    id: 1,
     title: "Yuu by Nahar, Mumbai",
     category: "Interactive 3D",
     image: "/images/portfolio/13.png",
@@ -26,6 +26,43 @@ const portfolioProjects: Project[] = [
       "Interactive residential apartment configurator allowing buyers to customize layouts, finishes, and amenities in real-time for premium Mumbai living.",
     videoUrl: "https://amlabs.cloud/Nahar_VR/",
     isExternal: true,
+  },
+  {
+    id: 2,
+    title: "Tata La Vida, Gurugram",
+    category: "Interactive 3D",
+    image: "/images/portfolio/Tata-La-vida-Thumbnail.png",
+    description:
+      "An immersive 3D interactive virtual tour designed for a 3BHK residential project, allowing users to explore the space with ease and clarity.",
+    videoUrl: "https://amlabs.cloud/Interior_VR/",
+    isExternal: true,
+  },
+  {
+    id: 3,
+    title: "TVS Emerald Luxor, Chennai",
+    category: "Interactive 3D",
+    image: "/images/portfolio/TVS-thumbnail.png",
+    description:
+      "Crafted a high-end 3D interactive virtual tour for a luxury villa, highlighting spacious layouts, design details, and overall flow of the home. The experience delivers a refined real estate villa virtual walkthrough, with smooth transitions and a true-to-space feel.",
+    videoUrl: "https://amlabs.cloud/Villa_VR_Tour/",
+    isExternal: true,
+  },
+];
+
+const testimonials = [
+  {
+    name: "Madhul Rajgore",
+    position: "Head of Marketing",
+    company: "Nahar Group",
+    content:
+      "Alliance Media Labs worked on the interiors of YUU, Mumbai, delivering a detailed 3D interactive virtual tour that really brought the space together. The overall real estate interior virtual tour felt smooth, well-finished, and true to what we had in mind.",
+  },
+  {
+    name: "Kunal Patel",
+    position: "Director",
+    company: "Pragati Group",
+    content:
+      "Alliance Media Labs developed a seamless 3D interactive virtual tour tool for Pragati Group’s Pune project, making the overall presentation more dynamic and sales-ready. The real estate interactive virtual tour solution fit well with our project requirements.",
   },
 ];
 
@@ -38,10 +75,14 @@ export default function Interactive3DToolsClient() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -79,7 +120,13 @@ ${formData.message || "No additional details provided"}
       if (data.success) {
         setSubmitStatus("success");
         setTimeout(() => {
-          setFormData({ name: "", email: "", phone: "", project_type: "", message: "" });
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            project_type: "",
+            message: "",
+          });
           setSubmitStatus("idle");
         }, 3000);
       } else {
@@ -113,7 +160,7 @@ ${formData.message || "No additional details provided"}
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
                 Interactive 3D Tools for Real Estate India
-</h1>
+              </h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
                 Custom web-based 3D configurators and interactive visualization
                 platforms that engage and convert prospects.
@@ -426,6 +473,52 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Client Testimonials
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  {/* User Info */}
+                  <div className="mb-6">
+                    <h4 className="font-bold text-black text-lg">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      {testimonial.position}
+                    </p>
+                    <p className="text-sm text-yellow-600 font-medium">
+                      {testimonial.company}
+                    </p>
+                  </div>
+
+                  {/* Stars */}
+                  <div className="flex text-yellow-400 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className="ri-star-fill text-sm"></i>
+                    ))}
+                  </div>
+
+                  {/* Content */}
+                  <p className="text-gray-700 leading-relaxed italic">
+                    &ldquo;{testimonial.content}&rdquo;
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">
           <div className="container mx-auto px-6">
@@ -505,12 +598,20 @@ ${formData.message || "No additional details provided"}
                         className="w-full px-4 py-3 pr-8 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                       >
                         <option value="">Select project type</option>
-                        <option value="configurator">Product Configurator</option>
-                        <option value="virtual-showroom">Virtual Showroom</option>
-                        <option value="interactive-floor-plan">Interactive Floor Plan</option>
+                        <option value="configurator">
+                          Product Configurator
+                        </option>
+                        <option value="virtual-showroom">
+                          Virtual Showroom
+                        </option>
+                        <option value="interactive-floor-plan">
+                          Interactive Floor Plan
+                        </option>
                         <option value="3d-viewer">3D Model Viewer</option>
                         <option value="ar-experience">AR Experience</option>
-                        <option value="custom-tool">Custom Interactive Tool</option>
+                        <option value="custom-tool">
+                          Custom Interactive Tool
+                        </option>
                         <option value="other">Other</option>
                       </select>
                     </div>

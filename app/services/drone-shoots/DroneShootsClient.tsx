@@ -27,6 +27,29 @@ export default function DroneShootsClient() {
     { id: 3, title: "Shree Radha Gopal Residency, Kosi", category: "Location AV", image: "/images/portfolio/27.png", description: "Comprehensive aerial tour showcasing the residency's peaceful location and surroundings.", videoUrl: "nl1xegGywlc?si=y4M05nZkVgJPmB9U&autoplay=1", duration: "4:54" },
     { id: 4, title: "Aura, Sector 79, Gurugram", category: "Location AV", image: "/images/portfolio/34.png", description: "Dynamic aerial footage highlighting Aura's premium location in Sector 79, Gurugram.", videoUrl: "-6icu6ALbr4?si=0H-4fGbiNLi3y0fG&autoplay=1", duration: "3:18" },
   ];
+  const testimonials = [
+  {
+    name: "Aqil Khan",
+    position: "Marketing Manager",
+    company: "ATS Homekraft",
+    content:
+      "ATS Homekraft associated with Alliance Media Labs for Location AV across Province D’olympia, Bonheur Hub, and The Grove, and the experience has been consistently reliable. Handling multiple projects together, their team maintained strong quality, creative storytelling, and smooth delivery across all real estate visualisation and marketing content.",
+  },
+  {
+    name: "Nishant Jha",
+    position: "Marketing Manager",
+    company: "Eka Life & Dhoot Group",
+    content:
+      "Alliance Media Labs worked on the infographical location AV for our project Altura, and the way they broke down the location details was really well done. It came out clean, informative, and worked perfectly as a real estate location video.",
+  },
+  {
+    name: "Sherin Rajan",
+    position: "Marketing Manager",
+    company: "Hero Realty",
+    content:
+      "We recently collaborated with Alliance Media for a location video of The Palatial, and they delivered exceptional work. Their attention to detail, creative approach, and seamless execution truly elevated the showcase. Highly recommend them for premium real estate visual storytelling.",
+  },
+];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -175,6 +198,51 @@ export default function DroneShootsClient() {
             </div>
           </div>
         </section>
+        {/* Testimonials Section */}
+<section className="py-24 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        Client Testimonials
+      </h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          {/* User Info */}
+          <div className="mb-6">
+            <h4 className="font-bold text-black text-lg">
+              {testimonial.name}
+            </h4>
+            <p className="text-sm text-gray-600">
+              {testimonial.position}
+            </p>
+            <p className="text-sm text-yellow-600 font-medium">
+              {testimonial.company}
+            </p>
+          </div>
+
+          {/* Stars */}
+          <div className="flex text-yellow-400 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <i key={i} className="ri-star-fill text-sm"></i>
+            ))}
+          </div>
+
+          {/* Content */}
+          <p className="text-gray-700 leading-relaxed italic">
+            &ldquo;{testimonial.content}&rdquo;
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* Form */}
         <section className="py-24 bg-yellow-400">
