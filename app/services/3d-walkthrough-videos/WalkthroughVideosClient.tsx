@@ -384,6 +384,96 @@ export default function WalkthroughVideosClient() {
         </div>
       </section>
 
+      {/* Trusted By */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-gray-500 text-sm font-semibold uppercase tracking-widest mb-8">Trusted by Leading Real Estate Developers</p>
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            {["Godrej Properties", "Prestige Group", "Brigade Group", "Sobha Realty", "Mahindra Lifespaces", "Tata Housing"].map((brand) => (
+              <div key={brand} className="px-6 py-3 bg-white rounded-xl shadow-sm border border-gray-100">
+                <span className="text-gray-700 font-semibold text-sm">{brand}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600">Everything you need to know about 3D walkthrough videos</p>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              { q: "How long does it take to deliver a 3D walkthrough video?", a: "Typically 3–5 weeks depending on project size. A standard 2–3 BHK residential walkthrough takes about 3 weeks; large township projects with multiple typologies and amenities take 6–8 weeks. We share milestone previews throughout production." },
+              { q: "What files or inputs do you need to start?", a: "We work from architectural drawings, CAD files, floor plans, elevations, and site plans. Even rough sketches or PDF drawings are sufficient to begin modelling. Our team handles all 3D modelling, texturing, lighting, and animation in-house." },
+              { q: "How many revision rounds are included?", a: "Every project includes 2 rounds of revisions at the grey-structure stage and 2 rounds after final render — so 4 structured feedback cycles in total. Additional revisions are available at a nominal cost." },
+              { q: "What video formats and resolutions do you deliver?", a: "We deliver in Full HD (1080p) and 4K resolution as MP4 files. We also provide editable formats for further use in ads or presentations upon request." },
+              { q: "Can the walkthrough be used for RERA registration or project approvals?", a: "Yes. Our 3D walkthroughs are accepted for RERA project marketing submissions across states. We ensure all visuals include mandatory RERA disclaimer overlays." },
+              { q: "How much does a 3D walkthrough video cost?", a: "Every project is unique. Pricing depends on number of typologies, amenity areas, and output requirements. Contact our experts for a tailored quote." },
+            ].map((faq, i) => (
+              <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* City Coverage */}
+      <section className="py-16 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Pan-India 3D Walkthrough Services</h2>
+          <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
+          <p className="text-gray-400 mb-10">We serve real estate developers across India with fast turnarounds and remote collaboration</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { city: "Mumbai", href: "/city-services/3d-walkthrough-videos-mumbai" },
+              { city: "Delhi NCR", href: "/city-services/3d-walkthrough-videos-delhi" },
+              { city: "Bangalore", href: "/city-services/3d-walkthrough-videos-bangalore" },
+              { city: "Gurugram", href: "/city-services/real-estate-video-production-gurugram" },
+              { city: "Pune", href: "/contact" },
+              { city: "Hyderabad", href: "/contact" },
+              { city: "Chennai", href: "/contact" },
+            ].map(({ city, href }) => (
+              <a key={city} href={href} className="px-6 py-3 bg-gray-900 border border-gray-700 rounded-full text-white font-medium hover:border-yellow-400 hover:text-yellow-400 transition-colors">
+                {city}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-black mb-4">Related Services</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: "Virtual Reality Tours", desc: "Immersive VR experiences for NRI buyers and sales offices.", href: "/services/virtual-reality-tours", icon: "ri-vr-goggles-line" },
+              { name: "Interior Cinematic Walkthrough", desc: "Cinematic-grade interior animations with photorealistic lighting.", href: "/services/interior-cinematic-walkthrough", icon: "ri-film-line" },
+              { name: "3D Renders & Isometrics", desc: "Photorealistic exterior and interior renders for marketing.", href: "/services/3d-renders-isometrics", icon: "ri-image-3d-line" },
+            ].map((s) => (
+              <a key={s.href} href={s.href} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <i className={`${s.icon} text-2xl text-black`}></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-3">{s.name}</h3>
+                <p className="text-gray-600 mb-4">{s.desc}</p>
+                <span className="text-yellow-600 font-semibold text-sm">Learn more →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form Section */}
       <section className="py-24 bg-yellow-400">
         <div className="container mx-auto px-6">

@@ -228,6 +228,124 @@ export default function InteriorCinematicClient() {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Our Production Process</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              { num: "01", title: "Floor Plan Input", desc: "Share your floor plans, elevation drawings, and material finishes palette." },
+              { num: "02", title: "3D Modelling", desc: "We build photorealistic 3D interiors — furniture, lighting, materials, and accessories." },
+              { num: "03", title: "Lighting Setup", desc: "Cinematic lighting rigs simulate natural and artificial light at different times of day." },
+              { num: "04", title: "Render & Grade", desc: "High-resolution frames rendered and colour-graded to cinematic quality." },
+              { num: "05", title: "Final Delivery", desc: "4K walkthrough video with music, brand overlays, and all requested cut-downs." },
+            ].map((step) => (
+              <div key={step.num} className="text-center">
+                <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl font-bold text-black">{step.num}</span>
+                </div>
+                <h3 className="text-lg font-bold text-black mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-sm">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Specs */}
+      <section className="py-16 bg-black">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Production Specifications</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {[
+              { icon: "ri-4k-line", title: "4K Resolution", desc: "3840×2160 cinema-grade output" },
+              { icon: "ri-music-2-line", title: "Sound Design", desc: "Professional music & ambient audio" },
+              { icon: "ri-palette-line", title: "Colour Grading", desc: "Cinematic LUT-graded colour" },
+              { icon: "ri-film-line", title: "Multiple Cut-downs", desc: "30s, 60s & 90s social edits included" },
+            ].map((item) => (
+              <div key={item.title} className="bg-gray-900 rounded-2xl p-6 border border-gray-800 text-center hover:border-yellow-400 transition-colors">
+                <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <i className={`${item.icon} text-xl text-black`}></i>
+                </div>
+                <h3 className="text-base font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              { q: "What is the difference between a 3D walkthrough and an interior cinematic walkthrough?", a: "A standard 3D walkthrough covers the entire project — exteriors, amenities, and multiple unit types — at a high level. An interior cinematic walkthrough focuses exclusively on the interior of a single typology, with cinematic lighting, rich material detail, and a film-grade look." },
+              { q: "How many typologies can be covered in one project?", a: "Each typology (e.g. 2BHK, 3BHK, penthouse) is treated as a separate production. We offer package discounts for multiple typologies in a single project." },
+              { q: "What inputs do you need from us?", a: "Floor plans, interior design intent (mood board or reference images), material specifications (flooring, wall finish, furniture style), and any specific camera angles or lifestyle moments you want highlighted." },
+              { q: "How long is the delivery timeline?", a: "A single typology cinematic walkthrough takes 4–6 weeks from brief to final delivery. Multiple typologies are delivered in phased milestones." },
+              { q: "Can we use the video for Instagram and social media ads?", a: "Yes. We deliver the full 2–3 minute cinematic alongside 30-second and 60-second social cuts optimised for Instagram Reels, YouTube Shorts, and Meta ads." },
+              { q: "How much does an interior cinematic walkthrough cost?", a: "Pricing depends on the level of interior detail, number of typologies, and output requirements. Contact our experts for a tailored quote." },
+            ].map((faq, i) => (
+              <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
+            <h2 className="text-3xl font-bold text-black mb-4">Interior Cinematic Pricing</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-gray-600 mb-8">Pricing is based on the number of typologies, level of interior detail, and output deliverables. Contact our experts for a package tailored to your project.</p>
+            <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              <i className="ri-phone-line mr-2"></i>Contact Our Experts
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-24 bg-black">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Related Services</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: "3D Walkthrough Videos", desc: "Full project walkthroughs covering exteriors, amenities, and multiple unit types.", href: "/services/3d-walkthrough-videos", icon: "ri-video-line" },
+              { name: "Virtual Reality Tours", desc: "Interactive VR experiences letting buyers explore spaces at their own pace.", href: "/services/virtual-reality-tours", icon: "ri-vr-goggles-line" },
+              { name: "3D Renders & Isometrics", desc: "Photorealistic still images for brochures, hoardings, and digital ads.", href: "/services/3d-renders-isometrics", icon: "ri-image-3d-line" },
+            ].map((s) => (
+              <a key={s.href} href={s.href} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors group">
+                <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <i className={`${s.icon} text-2xl text-black`}></i>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{s.name}</h3>
+                <p className="text-gray-400 mb-4">{s.desc}</p>
+                <span className="text-yellow-400 font-semibold text-sm">Learn more →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-6 text-center">

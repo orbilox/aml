@@ -97,6 +97,35 @@ export default function GraphicsBrandingClient() {
           </div>
         </section>
 
+        {/* What We Deliver */}
+<section className="py-24 bg-white">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">What We Deliver</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+      <p className="text-xl text-gray-600">A complete real estate brand toolkit — from logo to launch campaign</p>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        { icon: "ri-pen-nib-line", title: "Brand Identity & Logo", desc: "Custom logo design, brand guidelines, colour palette, typography, and brand voice documentation." },
+        { icon: "ri-file-text-line", title: "Sales Brochure & E-Brochure", desc: "Print-ready and digital brochures that convert — from 8-page teasers to 60-page project catalogues." },
+        { icon: "ri-megaphone-line", title: "Hoardings & Site Signage", desc: "Large-format hoarding designs, site signage, entrance banners, and OOH creatives in any dimension." },
+        { icon: "ri-instagram-line", title: "Social Media Kit", desc: "Branded social media templates for Instagram, Facebook, YouTube thumbnails, and WhatsApp campaigns." },
+        { icon: "ri-mail-line", title: "Email & WhatsApp Templates", desc: "Branded communication templates for launch mailers, construction updates, and festival creatives." },
+        { icon: "ri-building-4-line", title: "Sales Office Branding", desc: "Backlit panels, wall graphics, directional signage, and touchpoint branding for your experience centre." },
+      ].map((item) => (
+        <div key={item.title} className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+          <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+            <i className={`${item.icon} text-2xl text-black`}></i>
+          </div>
+          <h3 className="text-xl font-bold text-black mb-3">{item.title}</h3>
+          <p className="text-gray-600">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
         {/* Services Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
@@ -262,6 +291,73 @@ export default function GraphicsBrandingClient() {
             </div>
           </div>
         </section>
+
+        {/* Why Choose */}
+<section className="py-24 bg-black">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-white mb-4">Real Estate Design Experts — Not a Generic Agency</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+    </div>
+    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {[
+        { icon: "ri-building-4-line", title: "Real Estate Specialists", desc: "We work exclusively with real estate developers. We understand RERA disclaimers, buyer psychology, and what sells at a site visit." },
+        { icon: "ri-palette-line", title: "Design + Strategy", desc: "We don't just make things look good — we design for conversion. Every brochure, hoarding, and social post is built to generate enquiries." },
+        { icon: "ri-time-line", title: "Fast Turnarounds", desc: "Launch deadline approaching? We deliver high-quality branding in days, not weeks. Our team works across time zones to meet your schedule." },
+        { icon: "ri-refresh-line", title: "One Creative Partner", desc: "From brand identity to launch campaign — one team handles everything. No briefing multiple agencies. No inconsistency in brand language." },
+      ].map((item) => (
+        <div key={item.title} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors flex gap-6">
+          <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i className={`${item.icon} text-xl text-black`}></i>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+            <p className="text-gray-400">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* FAQ Section */}
+<section className="py-24 bg-white">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+    </div>
+    <div className="max-w-3xl mx-auto space-y-4">
+      {[
+        { q: "How long does a real estate brochure take to design?", a: "A standard 16-page sales brochure takes 7–10 working days from brief to final files. We share concept layouts for approval before proceeding to detailed design." },
+        { q: "What formats do you deliver design files in?", a: "We deliver print-ready PDF files (CMYK, 300 DPI) for physical production and web-optimised PDF/JPG versions for digital use. Source files (AI, PSD, InDesign) are available on request." },
+        { q: "How many revision rounds are included?", a: "Every project includes 2 rounds of revisions. Additional rounds are available. We present concepts clearly and work collaboratively to get the design right." },
+        { q: "Can you design hoardings in custom sizes?", a: "Yes. We design hoardings in any dimension — from 10x20 ft site boards to 40x80 ft highway hoardings. We provide files formatted for your printer's specifications." },
+        { q: "Do you also handle brand identity from scratch?", a: "Yes. We offer complete brand identity packages — logo, colour palette, typography, brand guidelines, and usage documentation. Ideal for new project launches or rebranding existing ones." },
+        { q: "How much does real estate branding and design cost?", a: "Pricing varies by scope — a single brochure is priced differently from a full brand identity + launch campaign. Contact our experts for a tailored quote." },
+      ].map((faq, i) => (
+        <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+          <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+          <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* Pricing */}
+<section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
+      <h2 className="text-3xl font-bold text-black mb-4">Branding & Design Pricing</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+      <p className="text-gray-600 mb-8">Whether you need a single brochure or a complete brand launch package, our experts will tailor a scope and budget that works for your project timeline.</p>
+      <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+        <i className="ri-phone-line mr-2"></i>Contact Our Experts
+      </a>
+    </div>
+  </div>
+</section>
 
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">

@@ -519,6 +519,96 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
+        {/* Tech Specs */}
+        <section className="py-24 bg-black">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Works Everywhere Your Buyers Are</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { icon: "ri-tablet-line", title: "iPad & Tablet", desc: "Touch-optimised for sales office kiosks and on-the-go presentations." },
+                { icon: "ri-computer-line", title: "Touch Screens", desc: "Large-format touch screens at experience centres and site offices." },
+                { icon: "ri-global-line", title: "Web Browser", desc: "Embed directly on your project website — no app or download needed." },
+                { icon: "ri-vr-goggles-line", title: "VR Headsets", desc: "Compatible with Oculus, HTC Vive, and Meta Quest for premium experiences." },
+              ].map((item) => (
+                <div key={item.title} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors text-center">
+                  <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <i className={`${item.icon} text-2xl text-black`}></i>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-gray-400 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-black mb-4">Where It Works Best</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { icon: "ri-building-2-line", title: "Sales Office Kiosk", desc: "A large touch screen in your sales office lets buyers browse all unit types, floor plans, and views interactively — reducing sales staff dependency." },
+                { icon: "ri-global-line", title: "Project Website Embed", desc: "Embed the interactive configurator on your project website so buyers can explore online before visiting. Generates 3x more qualified leads." },
+                { icon: "ri-flight-takeoff-line", title: "NRI Buyer Portal", desc: "Share a personalised web link with NRI buyers so they can explore and shortlist units from anywhere in the world." },
+              ].map((item) => (
+                <div key={item.title} className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                  <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                    <i className={`${item.icon} text-2xl text-black`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-3">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                { q: "How does the interactive 3D unit selector work?", a: "The tool displays a 3D model of your building. Buyers click on any floor or unit to see the floor plan, view direction, area, and pricing. It runs in a browser or on a touch screen — no app required." },
+                { q: "Can it be embedded on our project website?", a: "Yes. We deliver a web embed code that can be placed on any website or microsite. Buyers can interact with the tool directly from your site without downloading anything." },
+                { q: "Can the content be updated if floor plans or prices change?", a: "Yes. We build the tools with a simple CMS panel so your team can update availability, pricing, and floor plan documents without needing a developer." },
+                { q: "Does it work at trade shows or off-site presentations?", a: "Yes. We provide an offline version that runs on a dedicated laptop or tablet — perfect for trade shows, roadshows, and channel partner meetings." },
+                { q: "How long does it take to build an interactive 3D tool?", a: "Typically 4–6 weeks depending on the number of towers, unit types, and features required. We provide a preview for approval before final delivery." },
+                { q: "What does an interactive 3D tool cost?", a: "Pricing depends on the scope of the project — number of units, towers, and interactive features. Contact our experts for a custom quote." },
+              ].map((faq, i) => (
+                <div key={i} className="bg-white rounded-2xl p-8 hover:shadow-md transition-shadow">
+                  <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-2xl mx-auto text-center bg-gray-50 rounded-2xl p-12 shadow-lg">
+              <h2 className="text-3xl font-bold text-black mb-4">Interactive 3D Tool Pricing</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-gray-600 mb-8">Every project is custom-built. Pricing depends on the number of units, towers, and interactive features. Contact our experts for a detailed proposal.</p>
+              <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+                <i className="ri-phone-line mr-2"></i>Contact Our Experts
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">
           <div className="container mx-auto px-6">

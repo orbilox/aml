@@ -304,6 +304,124 @@ ${formData.message || "No additional details provided"}
         </div>
       </section>
 
+      {/* Process */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">How We Produce Your Route Video</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { num: "01", title: "Route Planning", desc: "We map all connectivity highlights — metro stations, schools, hospitals, highways, and landmarks." },
+              { num: "02", title: "Shoot Day", desc: "Drone and ground footage of all key routes and landmark destinations around your project." },
+              { num: "03", title: "Motion Graphics", desc: "Animated map overlays, distance callouts, proximity labels, and route highlights added in post." },
+              { num: "04", title: "Final Delivery", desc: "Branded route video delivered in full HD — with social cuts for Instagram, YouTube, and WhatsApp." },
+            ].map((step) => (
+              <div key={step.num} className="text-center">
+                <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-black">{step.num}</span>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-3">{step.title}</h3>
+                <p className="text-gray-600">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What's Included */}
+      <section className="py-24 bg-black">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">What&apos;s Included in a Route Video</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { icon: "ri-flight-takeoff-line", title: "Drone Aerial B-Roll", desc: "Cinematic overhead shots of the project site, arterial roads, and key landmarks." },
+              { icon: "ri-map-2-line", title: "Animated Map Overlays", desc: "Motion graphics showing routes, distances, and travel times to major destinations." },
+              { icon: "ri-road-map-line", title: "Proximity Text Labels", desc: "On-screen callouts like '5 mins to Metro', '10 mins to Airport' during the relevant shots." },
+              { icon: "ri-music-2-line", title: "Professional Music & VO", desc: "Licensed background music and optional professional voiceover narration." },
+              { icon: "ri-scissors-cut-line", title: "Social Media Cut-downs", desc: "30s and 60s versions optimised for Instagram Reels, YouTube Shorts, and WhatsApp." },
+              { icon: "ri-building-4-line", title: "Brand Overlays", desc: "Your project logo, brand colours, and developer identity integrated throughout." },
+            ].map((item) => (
+              <div key={item.title} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors">
+                <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className={`${item.icon} text-2xl text-black`}></i>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                <p className="text-gray-400">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-black mb-4">Where Route Videos Work Best</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: "ri-presentation-line", title: "Pre-Launch Buyer Decks", desc: "Show investors and early buyers why the location is a sound investment before the project is even launched." },
+              { icon: "ri-user-star-line", title: "Channel Partner Presentations", desc: "Equip your channel partners with a compelling location story they can present at every client meeting." },
+              { icon: "ri-advertisement-line", title: "Digital Ads", desc: "Location-focused ads on Meta and Google targeting buyers searching for properties in the area." },
+            ].map((item) => (
+              <div key={item.title} className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className={`${item.icon} text-2xl text-black`}></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-3">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              { q: "What is included in a route video?", a: "A route video includes drone aerial footage, ground-level shots of key routes, animated map overlays showing distances and travel times, proximity text callouts, professional music, and branded delivery in full HD. Social media cuts are included." },
+              { q: "Can you add animated map graphics showing the route?", a: "Yes. Animated map overlays are a standard feature of every route video — showing the path from key landmarks to your project with travel time callouts and landmark labels." },
+              { q: "Can we cover multiple routes in a single video?", a: "Yes. A standard route video typically covers 3–5 key routes (airport, metro, schools, hospitals, malls). Additional routes can be added as extensions." },
+              { q: "How long does a route video take to produce?", a: "Typically 2–3 weeks from shoot date to final delivery. Rush timelines in 1 week are available for launch events." },
+              { q: "Can we use it for highway connectivity videos near metro projects?", a: "Yes. Route videos are especially impactful for projects near metro stations, expressways, and upcoming infrastructure. We highlight under-construction infrastructure with motion graphics and future-ready overlays." },
+              { q: "How much does a route video cost?", a: "Pricing depends on the number of routes, aerial footage requirements, and animation complexity. Contact our experts for a custom quote." },
+            ].map((faq, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mx-auto text-center bg-gray-50 rounded-2xl p-12 shadow-lg">
+            <h2 className="text-3xl font-bold text-black mb-4">Route Video Pricing</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-gray-600 mb-8">Pricing depends on the number of routes covered, aerial footage, animation complexity, and delivery timeline. Contact our experts for a custom quote.</p>
+            <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              <i className="ri-phone-line mr-2"></i>Contact Our Experts
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form Section */}
       <section className="py-24 bg-yellow-400">
         <div className="container mx-auto px-6">

@@ -448,6 +448,74 @@ export default function ArchitecturalScaleModelsClient() {
   </div>
 </section>
 
+        {/* Materials Showcase */}
+<section className="py-24 bg-black">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-white mb-4">Materials We Work With</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+      <p className="text-gray-400 max-w-2xl mx-auto">Every material is chosen for its durability, visual accuracy, and ability to represent your design intent at scale.</p>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        { icon: "ri-settings-3-line", title: "ABS Plastic", desc: "Precision CNC-cut ABS for crisp architectural details and structural elements." },
+        { icon: "ri-water-flash-line", title: "Acrylic & Glass", desc: "Clear and frosted acrylic for glazing, water features, and feature facades." },
+        { icon: "ri-lightbulb-flash-line", title: "LED Lighting", desc: "Integrated LED systems for unit illumination, landscape lighting, and lobby displays." },
+        { icon: "ri-tree-line", title: "Laser-Cut Wood", desc: "MDF and balsa wood for landscape elements, podium levels, and organic forms." },
+        { icon: "ri-paint-fill", title: "Powder Coating", desc: "Durable powder-coated finishes matching your brand colour palette precisely." },
+        { icon: "ri-map-pin-line", title: "Landscaping Elements", desc: "Handcrafted trees, water bodies, roads, and site boundaries for complete site context." },
+      ].map((item) => (
+        <div key={item.title} className="bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-yellow-400 transition-colors">
+          <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center mb-4">
+            <i className={`${item.icon} text-xl text-black`}></i>
+          </div>
+          <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+          <p className="text-gray-400 text-sm">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* FAQ Section */}
+<section className="py-24 bg-white">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+    </div>
+    <div className="max-w-3xl mx-auto space-y-4">
+      {[
+        { q: "What materials are used in architectural scale models?", a: "We use ABS plastic, acrylic, MDF, balsa wood, powder-coated metal, and integrated LED lighting depending on the model type and display requirements. All materials are selected for durability and visual accuracy." },
+        { q: "How long does it take to build a scale model?", a: "A standard residential project model (1:200 scale) takes 4–6 weeks. Large township or commercial models take 8–12 weeks. Rush timelines are possible for specific requirements." },
+        { q: "How is the model packaged and delivered?", a: "Models are custom-packaged in foam-lined wooden crates for safe transport. We handle delivery across India and internationally. White-glove installation at your sales office is available." },
+        { q: "Can the model be updated if the design changes?", a: "Yes. We offer modification services for existing models — adding new towers, updating landscaping, or changing unit configurations without rebuilding the entire model." },
+        { q: "What scale is typically used for real estate models?", a: "1:100 for individual villas and apartments, 1:200 for mid-size residential projects, and 1:500 to 1:1000 for large townships. We recommend the best scale based on your display space and level of detail required." },
+        { q: "How much does an architectural scale model cost?", a: "Pricing depends on the scale, size, complexity, materials, and LED integration. Contact our experts for a detailed quote based on your project drawings." },
+      ].map((faq, i) => (
+        <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+          <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+          <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* Pricing */}
+<section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
+      <h2 className="text-3xl font-bold text-black mb-4">Scale Model Pricing</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+      <p className="text-gray-600 mb-8">Every scale model is handcrafted to your specifications. Pricing depends on scale, size, materials, LED integration, and delivery requirements. Contact our experts for a custom quote.</p>
+      <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+        <i className="ri-phone-line mr-2"></i>Contact Our Experts
+      </a>
+    </div>
+  </div>
+</section>
+
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">
           <div className="container mx-auto px-6">

@@ -244,6 +244,112 @@ export default function DroneShootsClient() {
   </div>
 </section>
 
+        {/* DGCA Credentials */}
+<section className="py-16 bg-black">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold text-white mb-4">Fully Compliant & Certified Operations</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
+    </div>
+    <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+      {[
+        { icon: "ri-government-line", title: "DGCA Certified", desc: "All pilots hold valid DGCA Remote Pilot Licences (RPL) as mandated by Indian aviation law." },
+        { icon: "ri-shield-check-line", title: "Insured Operations", desc: "Full liability insurance on every shoot — protecting your project and our crew." },
+        { icon: "ri-moon-line", title: "Night & Golden Hour", desc: "Equipped for twilight and golden hour shoots with low-light optimised drones and lenses." },
+      ].map((item) => (
+        <div key={item.title} className="bg-gray-900 rounded-2xl p-8 border border-yellow-400 text-center">
+          <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i className={`${item.icon} text-2xl text-black`}></i>
+          </div>
+          <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+          <p className="text-gray-400">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* Process */}
+<section className="py-24 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-black mb-4">Our Drone Shoot Process</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { num: "01", title: "Permissions", desc: "We handle all DGCA permissions, local authority approvals, and airspace clearances before the shoot." },
+        { num: "02", title: "Shoot Day", desc: "Our pilots execute the shot list at optimal lighting — dawn, golden hour, or day as planned." },
+        { num: "03", title: "Edit & Grade", desc: "Raw 4K footage is colour-graded, stabilised, and edited with music and motion graphics." },
+        { num: "04", title: "Delivery", desc: "Final edit delivered in broadcast-quality MP4 and optimised versions for digital ads and social." },
+      ].map((step) => (
+        <div key={step.num} className="text-center">
+          <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span className="text-2xl font-bold text-black">{step.num}</span>
+          </div>
+          <h3 className="text-xl font-bold text-black mb-3">{step.title}</h3>
+          <p className="text-gray-600">{step.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* FAQ Section */}
+<section className="py-24 bg-white">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+    </div>
+    <div className="max-w-3xl mx-auto space-y-4">
+      {[
+        { q: "Are your drone operators DGCA certified?", a: "Yes. Every Alliance Media Labs drone pilot holds a valid DGCA Remote Pilot Licence (RPL). We handle all regulatory permissions and airspace clearances for every shoot." },
+        { q: "What happens if it rains or the weather is bad on shoot day?", a: "We monitor weather 48 hours in advance and reschedule if conditions are unsuitable. Our retainer clients get priority rescheduling at no extra cost." },
+        { q: "Can you shoot near airports or in restricted areas?", a: "We apply for special airspace permissions through DGCA's Digital Sky platform. Approvals depend on the specific zone — we advise on feasibility before confirming bookings in sensitive areas." },
+        { q: "What resolution is the footage shot in?", a: "We shoot in 4K (3840×2160) using DJI Mavic 3 and Inspire series drones with gimbal stabilisation. We also offer 6K and higher on request for broadcast-quality deliverables." },
+        { q: "Do you also produce the edit and post-production?", a: "Yes. Every shoot package includes professional colour grading, music, and editing. We deliver broadcast-quality MP4 files ready for TV, YouTube, and digital ads." },
+        { q: "How much does a drone shoot cost in India?", a: "Pricing depends on shoot duration, location, number of deliverables, and aerial complexity. Contact our experts for a custom quote." },
+      ].map((faq, i) => (
+        <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+          <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+          <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* City Coverage */}
+<section className="py-16 bg-black">
+  <div className="container mx-auto px-6 text-center">
+    <h2 className="text-3xl font-bold text-white mb-4">Pan-India Drone Shoot Coverage</h2>
+    <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
+    <p className="text-gray-400 mb-10">We operate across India with DGCA-compliant shoots in every major real estate market</p>
+    <div className="flex flex-wrap justify-center gap-4">
+      {["Mumbai", "Delhi NCR", "Bangalore", "Gurugram", "Pune", "Hyderabad", "Chennai", "Kolkata", "Ahmedabad"].map((city) => (
+        <span key={city} className="px-6 py-3 bg-gray-900 border border-gray-700 rounded-full text-white font-medium hover:border-yellow-400 hover:text-yellow-400 transition-colors cursor-pointer">
+          {city}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* Pricing */}
+<section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
+      <h2 className="text-3xl font-bold text-black mb-4">Drone Shoot Pricing</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+      <p className="text-gray-600 mb-8">Pricing depends on shoot duration, location, number of deliverables, and post-production requirements. Contact our experts for a custom quote.</p>
+      <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+        <i className="ri-phone-line mr-2"></i>Contact Our Experts
+      </a>
+    </div>
+  </div>
+</section>
+
         {/* Form */}
         <section className="py-24 bg-yellow-400">
           <div className="container mx-auto px-6">

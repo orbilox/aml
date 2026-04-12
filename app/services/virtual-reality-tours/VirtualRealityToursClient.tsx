@@ -437,6 +437,122 @@ export default function VirtualRealityToursClient() {
           </div>
         </section>
 
+        {/* Process Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">How We Build Your VR Tour</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { num: "01", title: "Input & Brief", desc: "Share floor plans, CAD files, or drawings. We discuss style, materials, and target audience." },
+                { num: "02", title: "3D Build", desc: "Our team models the space in full 3D — architecture, interiors, lighting, and landscaping." },
+                { num: "03", title: "Review & Refine", desc: "You get a preview link for feedback. We refine materials, camera paths, and interactions." },
+                { num: "04", title: "Deploy", desc: "Final VR tour delivered as a web link, iPad app, or VR headset package ready for launch." },
+              ].map((step) => (
+                <div key={step.num} className="text-center">
+                  <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-2xl font-bold text-black">{step.num}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-3">{step.title}</h3>
+                  <p className="text-gray-600">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases */}
+        <section className="py-24 bg-black">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Ideal For</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { icon: "ri-building-4-line", title: "Pre-Launch Sales", desc: "Let buyers explore your project before a single brick is laid. Convert inquiries into bookings with immersive virtual tours at your sales office." },
+                { icon: "ri-flight-takeoff-line", title: "NRI Buyers", desc: "Give overseas investors a real sense of the property without flying in. Our VR tours are shareable via link — no headset needed." },
+                { icon: "ri-group-line", title: "Channel Partner Training", desc: "Equip your channel partners with an interactive demo they can carry on iPad to every client meeting." },
+              ].map((item) => (
+                <div key={item.title} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors">
+                  <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                    <i className={`${item.icon} text-2xl text-black`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-gray-400">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                { q: "What is the difference between a VR tour and a 3D walkthrough video?", a: "A 3D walkthrough is a pre-rendered video — like a movie of your property. A VR tour is interactive: users can look around freely, move through rooms, and explore at their own pace using a browser, iPad, or VR headset." },
+                { q: "Do buyers need a VR headset to experience the tour?", a: "No. Our VR tours are built to work on any device — mobile, tablet, desktop, or VR headset. Buyers can explore via a simple web link with no app or download required." },
+                { q: "Can the VR tour work offline at a sales office?", a: "Yes. We provide a fully offline-capable version of the VR tour that runs on a dedicated iPad or laptop at your sales office without requiring internet connectivity." },
+                { q: "How long does a VR tour take to build?", a: "Typically 4–6 weeks depending on the size and complexity of the project. We share progress previews at key milestones for your feedback." },
+                { q: "Can we update the VR tour if the design changes?", a: "Yes. We offer revision rounds during production. Post-delivery updates are available as a separate service, especially useful if floor plans or material specifications change." },
+                { q: "How much does a VR tour cost?", a: "Pricing depends on the number of unit types, amenity areas, and interactive features required. Contact our experts for a custom quote." },
+              ].map((faq, i) => (
+                <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                  <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
+              <h2 className="text-3xl font-bold text-black mb-4">VR Tour Pricing</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-gray-600 mb-8">Every project is unique. Our experts will assess your floor plans, number of unit types, and interactive requirements to give you the most accurate quote.</p>
+              <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+                <i className="ri-phone-line mr-2"></i>Contact Our Experts
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Services */}
+        <section className="py-24 bg-black">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Related Services</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { name: "3D Walkthrough Videos", desc: "Cinematic pre-rendered property tours for marketing and RERA.", href: "/services/3d-walkthrough-videos", icon: "ri-video-line" },
+                { name: "Interactive 3D Tools", desc: "Touch-screen unit selectors and configurators for sales offices.", href: "/services/interactive-3d-tools", icon: "ri-cursor-line" },
+                { name: "3D Renders & Isometrics", desc: "Photorealistic stills for brochures, hoardings, and digital ads.", href: "/services/3d-renders-isometrics", icon: "ri-image-3d-line" },
+              ].map((s) => (
+                <a key={s.href} href={s.href} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors group">
+                  <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i className={`${s.icon} text-2xl text-black`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{s.name}</h3>
+                  <p className="text-gray-400 mb-4">{s.desc}</p>
+                  <span className="text-yellow-400 font-semibold text-sm">Learn more →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">
           <div className="container mx-auto px-6">

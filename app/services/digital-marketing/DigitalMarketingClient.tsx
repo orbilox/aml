@@ -569,6 +569,93 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
+        {/* Results & Metrics */}
+        <section className="py-24 bg-black">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Performance Benchmarks We Target</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-gray-400 max-w-2xl mx-auto">Real estate digital marketing is performance-driven. Here are the benchmarks we consistently achieve for our developer clients.</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { metric: "₹600–₹1,200", label: "Cost Per Lead (CPL)", sub: "Metro real estate campaigns" },
+                { metric: "3–5x", label: "Return on Ad Spend", sub: "Across Meta & Google campaigns" },
+                { metric: "48 hrs", label: "Campaign Go-Live", sub: "From brief to live ads" },
+                { metric: "Weekly", label: "Performance Reports", sub: "Full transparency, always" },
+              ].map((item) => (
+                <div key={item.label} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 text-center hover:border-yellow-400 transition-colors">
+                  <div className="text-4xl font-bold text-yellow-400 mb-3">{item.metric}</div>
+                  <div className="text-white font-semibold mb-2">{item.label}</div>
+                  <div className="text-gray-500 text-sm">{item.sub}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Platforms */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-2xl font-bold text-black mb-4">Platforms We Run Campaigns On</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10"></div>
+            <div className="flex flex-wrap justify-center items-center gap-6">
+              {[
+                { name: "Meta (Facebook & Instagram)", icon: "ri-meta-line" },
+                { name: "Google Ads", icon: "ri-google-line" },
+                { name: "YouTube", icon: "ri-youtube-line" },
+                { name: "MagicBricks", icon: "ri-home-4-line" },
+                { name: "99acres", icon: "ri-building-line" },
+                { name: "Housing.com", icon: "ri-community-line" },
+              ].map((p) => (
+                <div key={p.name} className="flex items-center gap-3 bg-white px-6 py-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  <i className={`${p.icon} text-2xl text-gray-700`}></i>
+                  <span className="font-semibold text-gray-800">{p.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                { q: "Is Meta or Google better for real estate leads?", a: "Both serve different purposes. Meta (Facebook/Instagram) is best for awareness and remarketing — reaching buyers at an early research stage. Google Search captures high-intent buyers actively searching for projects. We recommend running both for best results." },
+                { q: "What CPL (cost per lead) should I expect for real estate?", a: "For metro luxury projects, CPL typically ranges from ₹800–₹2,000. Affordable housing can achieve ₹400–₹800 CPL. Actual CPL depends on location, project pricing, and campaign maturity. We share realistic benchmarks before starting." },
+                { q: "How often do you share campaign performance reports?", a: "We share weekly performance dashboards with all key metrics — impressions, CPL, leads, and spend. Monthly strategy reviews are included in all retainer packages." },
+                { q: "How long is the contract period?", a: "We recommend a minimum 3-month engagement to see meaningful results and campaign optimisation. Month-to-month options are available for specific launch campaigns." },
+                { q: "Do you manage the creative production as well?", a: "Yes. Our team handles everything — ad copy, creatives, video ads, landing pages, and campaign management. You don't need a separate creative agency." },
+                { q: "How much does real estate digital marketing cost?", a: "Our management fees are separate from your ad spend budget. Pricing depends on the number of platforms, campaigns, and creatives required. Contact our experts for a custom proposal." },
+              ].map((faq, i) => (
+                <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                  <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
+              <h2 className="text-3xl font-bold text-black mb-4">Digital Marketing Pricing</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-gray-600 mb-8">Management fees are based on number of platforms, campaigns, and creative deliverables. Ad spend budget is separate and controlled by you. Contact our experts for a custom proposal.</p>
+              <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+                <i className="ri-phone-line mr-2"></i>Contact Our Experts
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">
           <div className="container mx-auto px-6">

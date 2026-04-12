@@ -274,6 +274,103 @@ export default function IsometricsClient() {
         </div>
       </section>
 
+      {/* Use Cases */}
+      <section className="py-24 bg-black">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Where 3D Isometrics Make the Most Impact</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: "ri-flag-2-line", title: "Township Launches", desc: "Show the entire master plan — roads, towers, amenities, and green spaces — in one compelling visual." },
+              { icon: "ri-megaphone-line", title: "Hoarding Creatives", desc: "Large-format isometrics on highway hoardings that stop traffic and communicate scale instantly." },
+              { icon: "ri-book-open-line", title: "Brochure Centrepiece", desc: "A full-bleed isometric across the brochure spread — the most-shared page in any real estate booklet." },
+              { icon: "ri-advertisement-line", title: "Social & Digital Ads", desc: "Animated isometric flyovers drive 4–5x better engagement than static images on Instagram and YouTube." },
+            ].map((item) => (
+              <div key={item.title} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors">
+                <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className={`${item.icon} text-2xl text-black`}></i>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                <p className="text-gray-400 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison: 2D Master Plan vs 3D Isometric */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">2D Master Plan vs 3D Isometric View</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Flat plans tell. 3D isometrics sell.</p>
+          </div>
+          <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
+            <div className="grid grid-cols-3 bg-black text-white">
+              <div className="p-6 font-bold text-lg">Feature</div>
+              <div className="p-6 font-bold text-lg text-center border-l border-gray-700">2D Master Plan</div>
+              <div className="p-6 font-bold text-lg text-center border-l border-gray-700 bg-yellow-400 text-black">3D Isometric View</div>
+            </div>
+            {[
+              ["Buyer comprehension", "Requires expertise to read", "Instantly understood by anyone"],
+              ["Shows building height & massing", "✗ Flat view only", "✓ Full 3D depth visible"],
+              ["Suitable for hoardings & ads", "✗ Too technical", "✓ Visually impactful"],
+              ["Differentiates from competition", "✗ Generic", "✓ Premium & distinctive"],
+              ["Can be animated", "✗ Limited", "✓ Flyover animations available"],
+              ["RERA map substitute", "✓ Yes", "✓ Yes — with better buyer appeal"],
+            ].map(([feature, plan2d, iso3d], i) => (
+              <div key={i} className={`grid grid-cols-3 ${i % 2 === 0 ? "bg-white" : "bg-gray-50"}`}>
+                <div className="p-5 font-medium text-gray-800 border-t border-gray-200">{feature}</div>
+                <div className="p-5 text-center text-gray-600 border-t border-l border-gray-200">{plan2d}</div>
+                <div className="p-5 text-center font-semibold text-black border-t border-l border-gray-200 bg-yellow-50">{iso3d}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              { q: "What is the difference between a 3D isometric and a master plan?", a: "A master plan is a flat 2D site layout showing roads, towers, and zones. A 3D isometric is an elevated perspective rendering of the same site in full 3D — showing building heights, landscaping, and design in a way any buyer can understand instantly." },
+              { q: "Can a 3D isometric be animated?", a: "Yes. We produce animated isometric flyovers — the camera slowly rotates around the master plan, revealing towers, amenities, and the site in full. These perform exceptionally well as social ads and launch films." },
+              { q: "How long does a 3D isometric take to produce?", a: "A static isometric illustration takes 10–15 working days. An animated flyover takes 3–4 weeks depending on site complexity and animation length." },
+              { q: "What inputs do you need to start?", a: "We work from master plan drawings, AutoCAD files, or even rough site layouts. Elevation drawings and a list of tower names/amenities help us produce the most accurate result." },
+              { q: "Can the isometric be used for RERA submissions?", a: "Yes. 3D isometric views are widely used as marketing materials for RERA project registrations across India." },
+              { q: "How much does a 3D isometric illustration cost?", a: "Pricing depends on site size, number of towers, level of landscaping detail, and whether animation is required. Contact our experts for a custom quote." },
+            ].map((faq, i) => (
+              <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
+            <h2 className="text-3xl font-bold text-black mb-4">3D Isometric Pricing</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-gray-600 mb-8">Pricing varies based on site size, complexity, level of detail, and animation requirements. Contact our experts for a tailored quote.</p>
+            <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              <i className="ri-phone-line mr-2"></i>Contact Our Experts
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-6 text-center">

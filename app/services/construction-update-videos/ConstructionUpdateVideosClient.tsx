@@ -277,6 +277,86 @@ export default function ConstructionUpdateVideosClient() {
   </div>
 </section>
 
+        {/* RERA Compliance Highlight */}
+<section className="py-16 bg-yellow-400">
+  <div className="container mx-auto px-6">
+    <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+      <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+        <i className="ri-shield-check-line text-3xl text-yellow-400"></i>
+      </div>
+      <div>
+        <h2 className="text-3xl font-bold text-black mb-3">RERA Compliant Construction Documentation</h2>
+        <p className="text-gray-800 text-lg leading-relaxed">Under RERA regulations, developers must update buyers on construction progress at regular intervals. Our monthly construction update videos serve as verified visual evidence — keeping you compliant while building buyer confidence throughout the construction period.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        {/* Process Section */}
+<section className="py-24 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">How It Works</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { num: "01", title: "Site Visit", desc: "Our crew visits the site on a scheduled date — monthly, bi-monthly, or per milestone." },
+        { num: "02", title: "Shoot", desc: "We capture all construction zones, floors, and key structural milestones with ground and aerial footage." },
+        { num: "03", title: "Edit & Grade", desc: "Footage is colour-graded, branded with your project identity, and edited to a crisp 2–3 minute update." },
+        { num: "04", title: "Deliver", desc: "Final video delivered within 5 working days — ready for WhatsApp broadcast, email, and RERA submission." },
+      ].map((step) => (
+        <div key={step.num} className="text-center">
+          <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span className="text-2xl font-bold text-black">{step.num}</span>
+          </div>
+          <h3 className="text-xl font-bold text-black mb-3">{step.title}</h3>
+          <p className="text-gray-600">{step.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* FAQ Section */}
+<section className="py-24 bg-white">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+    </div>
+    <div className="max-w-3xl mx-auto space-y-4">
+      {[
+        { q: "How frequently should construction update videos be done?", a: "We recommend monthly shoots for active construction phases and quarterly for foundation or finishing stages. Many developers align shoots with RERA reporting cycles." },
+        { q: "Are construction update videos useful for RERA compliance?", a: "Yes. RERA requires developers to provide regular construction updates to buyers. Our branded videos serve as verified visual documentation that you can share with buyers and regulatory authorities." },
+        { q: "Do you handle drone permissions for construction sites?", a: "Yes. Our DGCA-licensed drone pilots manage all permissions and compliance for aerial footage at construction sites across India." },
+        { q: "Can we get a subscription or retainer plan?", a: "Yes. We offer monthly retainer packages for ongoing documentation — ideal for projects with 12–36 month construction timelines. Contact our experts for retainer pricing." },
+        { q: "How quickly do we receive the edited video after the shoot?", a: "Edited videos are delivered within 5–7 working days of the shoot date. Rush delivery in 3 days is available for urgent requirements." },
+        { q: "How much does a construction update video cost?", a: "Pricing depends on frequency, site size, and whether aerial footage is included. Contact our experts for a customised retainer package." },
+      ].map((faq, i) => (
+        <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+          <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+          <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* Pricing */}
+<section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
+      <h2 className="text-3xl font-bold text-black mb-4">Construction Video Pricing</h2>
+      <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+      <p className="text-gray-600 mb-8">Monthly retainer packages and per-shoot pricing available. Pricing depends on frequency, site size, and aerial footage requirements. Contact our experts for a custom package.</p>
+      <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+        <i className="ri-phone-line mr-2"></i>Contact Our Experts
+      </a>
+    </div>
+  </div>
+</section>
+
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">
           <div className="container mx-auto px-6">

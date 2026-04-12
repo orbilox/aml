@@ -750,6 +750,77 @@ ${formData.message || "No additional details provided"}
   </div>
 </section>
 
+        {/* Comparison: Photography vs 3D Render */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why 3D Renders Beat Photography</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">For under-construction projects, photography is impossible. 3D renders let you market before the first brick is laid.</p>
+            </div>
+            <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
+              <div className="grid grid-cols-3 bg-black text-white">
+                <div className="p-6 font-bold text-lg">Feature</div>
+                <div className="p-6 font-bold text-lg text-center border-l border-gray-700">Photography</div>
+                <div className="p-6 font-bold text-lg text-center border-l border-gray-700 bg-yellow-400 text-black">3D Rendering</div>
+              </div>
+              {[
+                ["Available before construction", "✗ Not possible", "✓ Yes"],
+                ["Show multiple design options", "✗ Fixed shot", "✓ Unlimited variants"],
+                ["Control lighting & weather", "✗ Depends on conditions", "✓ Perfect every time"],
+                ["Suitable for RERA submission", "✗ Limited", "✓ Widely accepted"],
+                ["Modify post-delivery", "✗ Requires reshoot", "✓ Easy updates"],
+                ["Used in hoardings & brochures", "✓ Yes", "✓ Yes — higher quality"],
+              ].map(([feature, photo, render], i) => (
+                <div key={i} className={`grid grid-cols-3 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                  <div className="p-5 font-medium text-gray-800 border-t border-gray-200">{feature}</div>
+                  <div className="p-5 text-center text-gray-600 border-t border-l border-gray-200">{photo}</div>
+                  <div className="p-5 text-center font-semibold text-black border-t border-l border-gray-200 bg-yellow-50">{render}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                { q: "How long does a 3D render take to produce?", a: "A standard exterior render takes 5–7 working days. Interior renders take 7–10 days. Large sets (10+ views) or isometric master plans are scoped individually. Rush delivery is available." },
+                { q: "How many revision rounds are included?", a: "2 revision rounds are included in every project. The first after the grey-structure review, the second after final texturing and lighting. Additional revisions are billed separately." },
+                { q: "Can renders be used for RERA registration?", a: "Yes. Our renders are accepted for RERA project marketing submissions across Maharashtra, Karnataka, Delhi NCR, and other states. We include RERA disclaimer overlays as required." },
+                { q: "What file formats do you deliver?", a: "We deliver high-resolution JPG/PNG files (300 DPI print-ready) and web-optimised versions. PSD layered files and video turntables are available on request." },
+                { q: "What is the difference between a 3D render and a 3D isometric?", a: "A 3D render is a photorealistic still image of a building or interior — like a photograph. A 3D isometric is an aerial bird's-eye illustration showing the entire site or township layout, used for master plan marketing." },
+                { q: "How much do 3D renders cost in India?", a: "Pricing depends on the number of views, complexity of the structure, and output requirements. Contact our experts for a tailored quote." },
+              ].map((faq, i) => (
+                <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                  <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
+              <h2 className="text-3xl font-bold text-black mb-4">Pricing for 3D Renders & Isometrics</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-gray-600 mb-8">Pricing varies based on the number of views, level of detail, and delivery timeline. Contact our experts for a custom quote tailored to your project.</p>
+              <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+                <i className="ri-phone-line mr-2"></i>Contact Our Experts
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Form Section */}
         <section className="py-24 bg-yellow-400">
           <div className="container mx-auto px-6">
