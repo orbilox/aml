@@ -24,9 +24,10 @@ export const metadata: Metadata = {
     siteName: "Alliance Media Labs",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/services/3d-walkthrough-videos/1.jpg",
         width: 1200,
         height: 630,
+        alt: "Alliance Media Labs — Real Estate Visualization Company India",
       },
     ],
     type: "website",
@@ -36,7 +37,10 @@ export const metadata: Metadata = {
     title: "Alliance Media Labs | Creative Tech & Branding Company for Real Estate",
     description:
       "Alliance Media Labs partners with real estate brands to design immersive visuals, digital ecosystems, and impactful brand experiences.",
-    images: ["/og-image.jpg"],
+    images: ["/images/services/3d-walkthrough-videos/1.jpg"],
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
   },
 };
 

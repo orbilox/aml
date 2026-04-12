@@ -81,7 +81,12 @@ export default function Footer() {
                   name: "Interactive 3D Tools",
                   href: "/services/interactive-3d-tools",
                 },
-                { name: "Location AV", href: "/services/drone-shoots" },
+                { name: "Drone Shoots & Location AV", href: "/services/drone-shoots" },
+                { name: "Route Videos", href: "/services/route-videos" },
+                { name: "Construction Update Videos", href: "/services/construction-update-videos" },
+                { name: "3D Isometric Views", href: "/services/3d-isometrics" },
+                { name: "Interior Cinematic Walkthrough", href: "/services/interior-cinematic-walkthrough" },
+                { name: "Architectural Scale Models", href: "/services/architectural-scale-models" },
                 {
                   name: "Graphics & Branding",
                   href: "/services/graphics-branding",
