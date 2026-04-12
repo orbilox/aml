@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+
+export const revalidate = 86400; // Revalidate every 24 hours
 import ContactPageClient from "./ContactPageClient";
 
 const BASE = "https://www.alliancemedialabs.com";
