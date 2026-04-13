@@ -23,6 +23,18 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/images/services/3d-walkthrough-videos/1.jpg",
     tags: ["3D Walkthrough", "Real Estate", "Visualization", "Marketing"],
   },
+  {
+    slug: "architectural-scale-models-india-real-estate",
+    title: "The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can't",
+    excerpt:
+      "In an era of VR tours and CGI renders, why do India's top real estate developers still commission handcrafted architectural scale models? The answer lies in neuroscience, trust, and one undeniable truth about how buyers make decisions.",
+    category: "Real Estate Marketing",
+    date: "April 13, 2025",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/architectural-scale-models/1.jpg",
+    tags: ["Scale Models", "Architectural Models", "Real Estate", "Sales Strategy", "Pre-Launch"],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
