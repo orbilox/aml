@@ -12,10 +12,14 @@ export default function ContactSection() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -40,7 +44,14 @@ export default function ContactSection() {
       if (data.success) {
         setSubmitStatus("success");
         setTimeout(() => {
-          setFormData({ name: "", email: "", company: "", project_type: "", budget: "", message: "" });
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            project_type: "",
+            budget: "",
+            message: "",
+          });
           setSubmitStatus("idle");
         }, 6000);
       } else {
@@ -67,8 +78,9 @@ export default function ContactSection() {
               <div className="w-20 h-1 bg-black"></div>
             </div>
             <p className="text-lg text-black/80 leading-relaxed">
-              Ready to transform your real estate marketing with cutting-edge visualization?
-              Let&apos;s discuss your project and create something extraordinary together.
+              Ready to transform your real estate marketing with cutting-edge
+              visualization? Let&apos;s discuss your project and create
+              something extraordinary together.
             </p>
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
@@ -96,7 +108,12 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="font-semibold text-black">Location</p>
-                  <p className="text-black/80">D-244, 3rd Floor, Unit-4, Sector 74, Mohali, Chandigarh</p>
+                  <ul className="text-black/80 list-disc ml-5">
+                    <li>
+                      D-244, 3rd Floor, Unit-4, Sector 74, Mohali, Chandigarh
+                    </li>
+                    <li>Unit No. 1456, 14th Floor, Gaur City Mall, Noida</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -104,10 +121,16 @@ export default function ContactSection() {
 
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-2xl">
-            <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
+            <form
+              id="contact-form"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Name *
+                  </label>
                   <input
                     type="text"
                     name="name"
@@ -119,7 +142,9 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email *
+                  </label>
                   <input
                     type="email"
                     name="email"
@@ -132,7 +157,9 @@ export default function ContactSection() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Company
+                </label>
                 <input
                   type="text"
                   name="company"
@@ -144,7 +171,9 @@ export default function ContactSection() {
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Project Type
+                  </label>
                   <select
                     name="project_type"
                     value={formData.project_type}
@@ -152,19 +181,35 @@ export default function ContactSection() {
                     className="w-full px-4 py-3 pr-8 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                   >
                     <option value="">Select project type</option>
-                    <option value="3d-walkthrough">3D Walkthrough Videos</option>
-                    <option value="vr-tour">Virtual Reality Tours (360°)</option>
-                    <option value="construction-updates">Construction Update Videos</option>
-                    <option value="drone-cinematography">Location AVs & Drone Shoots</option>
-                    <option value="architectural-models">Architectural Scale Models</option>
+                    <option value="3d-walkthrough">
+                      3D Walkthrough Videos
+                    </option>
+                    <option value="vr-tour">
+                      Virtual Reality Tours (360°)
+                    </option>
+                    <option value="construction-updates">
+                      Construction Update Videos
+                    </option>
+                    <option value="drone-cinematography">
+                      Location AVs & Drone Shoots
+                    </option>
+                    <option value="architectural-models">
+                      Architectural Scale Models
+                    </option>
                     <option value="3d-renders">3D Renders & Isometrics</option>
                     <option value="interactive-3d">Interactive 3D Tools</option>
-                    <option value="digital-marketing">Real Estate Digital Marketing</option>
-                    <option value="graphics-branding">Graphics & Branding Content</option>
+                    <option value="digital-marketing">
+                      Real Estate Digital Marketing
+                    </option>
+                    <option value="graphics-branding">
+                      Graphics & Branding Content
+                    </option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Budget Range</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Budget Range
+                  </label>
                   <select
                     name="budget"
                     value={formData.budget}
@@ -174,13 +219,17 @@ export default function ContactSection() {
                     <option value="">Select budget range</option>
                     <option value="50k-1lakh">INR 50,000 - 1,00,000</option>
                     <option value="1lakh-5lakh">INR 1,00,000 - 5,00,000</option>
-                    <option value="5lakh-10lakh">INR 5,00,000 - 10,00,000</option>
+                    <option value="5lakh-10lakh">
+                      INR 5,00,000 - 10,00,000
+                    </option>
                     <option value="over-10lakh">Over INR 10,00,000</option>
                   </select>
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Project Details
+                </label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -194,7 +243,13 @@ export default function ContactSection() {
                   {formData.message.length}/500 characters
                 </div>
               </div>
-              <Button variant="primary" size="lg" className="w-full" type="submit" disabled={isSubmitting}>
+              <Button
+                variant="primary"
+                size="lg"
+                className="w-full"
+                type="submit"
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center space-x-2">
                     <i className="ri-loader-4-line animate-spin"></i>
@@ -209,12 +264,14 @@ export default function ContactSection() {
               </Button>
               {submitStatus === "success" && (
                 <div className="text-green-600 text-center font-medium">
-                  Thank you! We&apos;ll get back to you with a custom quote within 24 hours.
+                  Thank you! We&apos;ll get back to you with a custom quote
+                  within 24 hours.
                 </div>
               )}
               {submitStatus === "error" && (
                 <div className="text-red-600 text-center font-medium">
-                  Sorry, there was an error. Please email us directly at info@alliancemedialabs.com
+                  Sorry, there was an error. Please email us directly at
+                  info@alliancemedialabs.com
                 </div>
               )}
             </form>

@@ -423,14 +423,31 @@ ${formData.message || "No additional details provided"}
                       <h3 className="text-white font-semibold mb-1">
                         Visit Us
                       </h3>
-                      <a
-                        href="https://maps.google.com/?q=D-244,+Sector+74,+Chandigarh,+Mohali"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-300 hover:text-green-400 transition-colors"
-                      >
-                        D-244, 3rd Floor, Unit-4, Sector 74, Mohali, Chandigarh
-                      </a>
+
+                      <ul className="list-disc ml-5 space-y-1 marker:text-white">
+                        <li>
+                          <a
+                            href="https://maps.google.com/?q=D-244,+Sector+74,+Chandigarh,+Mohali"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-300 hover:text-green-400 transition-colors"
+                          >
+                            D-244, 3rd Floor, Unit-4, Sector 74, Mohali,
+                            Chandigarh
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="https://maps.google.com/?q=Gaur+City+Mall,+Noida"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-300 hover:text-green-400 transition-colors"
+                          >
+                            Unit No. 1456, 14th Floor, Gaur City Mall, Noida
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
