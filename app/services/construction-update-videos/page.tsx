@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Professional construction update videos for real estate developers. Transparent site progress documentation with drone + ground-level footage. Builds buyer confidence across Mumbai, Delhi NCR, Bangalore, Gurugram.",
   keywords:
-    "construction update videos India, RERA compliance video real estate, RERA construction update India, site progress videos real estate, construction documentation video, real estate progress videos, builder update videos India, construction timelapse India, project progress documentation, real estate construction video Mumbai Delhi Bangalore, construction update video service India",
+    "construction update videos India, drone timelapse construction, construction time lapse company, construction time lapse video, time lapse for construction sites, RERA compliance video real estate, RERA construction update India, site progress videos real estate, construction documentation video, real estate progress videos, builder update videos India, construction timelapse India, project progress documentation, real estate construction video Mumbai Delhi Bangalore, construction update video service India",
   alternates: {
     canonical: `${BASE}/services/construction-update-videos`,
   },

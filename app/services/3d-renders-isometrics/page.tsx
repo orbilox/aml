@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Photorealistic 3D exterior renders, interior renders, isometric illustrations, and aerial views for real estate developers in India. Stunning property visualizations that close sales. Mumbai, Delhi, Bangalore. Get a free quote.",
   keywords:
-    "3D renders real estate India, photorealistic architectural rendering India, CGI rendering real estate India, architectural CGI India, 3D exterior render property, interior 3D render real estate, architectural visualization company India, isometric illustration real estate, aerial view 3D render India, CGI renders property marketing, 3D architectural visualization Mumbai Delhi Bangalore, photorealistic property renders India",
+    "3D renders real estate India, 3d house rendering, 3d floor plan, 3d floor plan design, 3d floor plan designer, 3d rendering companies, 3d rendering services, rendering services, 3d render, 3d rendering of house plans, 3d rendering services near me, 3d visualisation, ai 3d rendering, photorealistic architectural rendering India, CGI rendering real estate India, architectural CGI India, 3D exterior render property, interior 3D render real estate, architectural visualization company India, architectural rendering companies, isometric illustration real estate, aerial view 3D render India, CGI renders property marketing, 3D architectural visualization Mumbai Delhi Bangalore, photorealistic property renders India, architectural visualization services in india",
   alternates: { canonical: `${BASE}/services/3d-renders-isometrics` },
   openGraph: {
     title: "3D Renders & Isometrics | Photorealistic Architectural Visualization India",

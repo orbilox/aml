@@ -750,6 +750,61 @@ ${formData.message || "No additional details provided"}
   </div>
 </section>
 
+        {/* Types of 3D Rendering Services */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Types of 3D Rendering & Visualisation Services</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                From a single 3D house rendering to full township visualisation packages — we cover every output a real estate developer needs.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: "ri-home-4-line",
+                  title: "3D House Rendering",
+                  desc: "Photorealistic exterior renders of residential villas, bungalows, and independent houses. The most searched 3D rendering service in India — showing facade materials, landscaping, and natural lighting at their best.",
+                },
+                {
+                  icon: "ri-layout-grid-line",
+                  title: "3D Floor Plan Design",
+                  desc: "Detailed 3D floor plans and 3D floor plan designer services that go beyond basic 2D layouts — showing furniture placement, room proportions, and traffic flow in an easy-to-understand top-down 3D view.",
+                },
+                {
+                  icon: "ri-building-2-line",
+                  title: "Architectural 3D Rendering",
+                  desc: "Full exterior and interior architectural renders for mid-rise and high-rise residential, commercial, and mixed-use projects. We are one of India's most trusted architectural rendering companies for real estate marketing.",
+                },
+                {
+                  icon: "ri-palette-line",
+                  title: "3D Interior Visualisation",
+                  desc: "Photorealistic interior 3D visualisation for living rooms, kitchens, bedrooms, and commercial spaces. Accurate material representation, custom furniture staging, and mood lighting for brochures and digital campaigns.",
+                },
+                {
+                  icon: "ri-map-2-line",
+                  title: "Isometric & Aerial Views",
+                  desc: "Bird's-eye isometric renders of entire townships, podium layouts, and amenity zones. These 3D rendering of house plans at a master-plan scale are essential for township launch brochures and hoarding creatives.",
+                },
+                {
+                  icon: "ri-cpu-line",
+                  title: "AI-Assisted 3D Rendering",
+                  desc: "We combine traditional 3D rendering with AI 3D rendering acceleration tools to deliver faster turnarounds on large projects without compromising photorealistic quality — ideal for launches with tight marketing deadlines.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                  <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                    <i className={`${item.icon} text-2xl text-black`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-3">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Comparison: Photography vs 3D Render */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-6">

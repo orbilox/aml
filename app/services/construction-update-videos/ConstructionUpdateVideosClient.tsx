@@ -329,9 +329,10 @@ export default function ConstructionUpdateVideosClient() {
       {[
         { q: "How frequently should construction update videos be done?", a: "We recommend monthly shoots for active construction phases and quarterly for foundation or finishing stages. Many developers align shoots with RERA reporting cycles." },
         { q: "Are construction update videos useful for RERA compliance?", a: "Yes. RERA requires developers to provide regular construction updates to buyers. Our branded videos serve as verified visual documentation that you can share with buyers and regulatory authorities." },
-        { q: "Do you handle drone permissions for construction sites?", a: "Yes. Our DGCA-licensed drone pilots manage all permissions and compliance for aerial footage at construction sites across India." },
+        { q: "Do you handle drone permissions for construction sites?", a: "Yes. Our DGCA-licensed drone pilots manage all permissions and compliance for aerial footage at construction sites across India. We also specialise in drone timelapse construction sequences — capturing months of progress in a single compelling clip." },
         { q: "Can we get a subscription or retainer plan?", a: "Yes. We offer monthly retainer packages for ongoing documentation — ideal for projects with 12–36 month construction timelines. Contact our experts for retainer pricing." },
         { q: "How quickly do we receive the edited video after the shoot?", a: "Edited videos are delivered within 5–7 working days of the shoot date. Rush delivery in 3 days is available for urgent requirements." },
+        { q: "Are you a construction time lapse company?", a: "Yes. In addition to regular site progress documentation, we are a specialist construction time lapse company offering drone timelapse construction sequences and ground-level time lapse for construction sites — edited into branded videos for developer communications and social media." },
         { q: "How much does a construction update video cost?", a: "Pricing depends on frequency, site size, and whether aerial footage is included. Contact our experts for a customised retainer package." },
       ].map((faq, i) => (
         <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Immersive 360° Virtual Reality tours for real estate developers in India. Interactive VR property walkthroughs with hotspots, multi-device support, browser-based — no headset required. Mumbai, Delhi NCR, Bangalore. Get a free demo.",
   keywords:
-    "virtual reality tours real estate India, 360 degree VR tour property, VR property tour India, immersive real estate tour, interactive 360 property walkthrough, VR tour for apartment buyers, browser-based VR tour real estate, 360 virtual tour real estate Mumbai Delhi Bangalore, VR showroom real estate India",
+    "virtual reality tours real estate India, 3d virtual home tour, 360 virtual photography, best virtual reality tours, 360 degree VR tour property, VR property tour India, immersive real estate tour, interactive 360 property walkthrough, 3d virtual reality tours, VR tour for apartment buyers, browser-based VR tour real estate, 360 virtual tour real estate Mumbai Delhi Bangalore, VR showroom real estate India, real estate virtual tours service in india",
   alternates: { canonical: `${BASE}/services/virtual-reality-tours` },
   openGraph: {
     title: "Virtual Reality Tours for Real Estate | 360° VR Property Tours India",

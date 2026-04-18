@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Complete graphic design and branding solutions for real estate developers in India. Logo design, brochures, hoardings, sales kit, digital assets, signage, and brand identity for property launches. Mumbai, Delhi NCR, Bangalore.",
   keywords:
-    "real estate branding design India, property marketing collaterals India, real estate logo design, brochure design real estate India, real estate graphic design agency, property launch branding India, sales kit design real estate, real estate hoarding design, brand identity for builder India, real estate marketing material design",
+    "real estate branding design India, property brochure design, brochure design online, brochure design agency, construction hoarding design, commercial real estate graphics, property marketing collaterals India, real estate logo design, brochure design real estate India, real estate graphic design agency, property launch branding India, sales kit design real estate, real estate hoarding design, brand identity for builder India, real estate marketing material design, real estate graphics design, brochure design company, brochure design service",
   alternates: { canonical: `${BASE}/services/graphics-branding` },
   openGraph: {
     title: "Real Estate Graphics & Branding Design India | Alliance Media Labs",

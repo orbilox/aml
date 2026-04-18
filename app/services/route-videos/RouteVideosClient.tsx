@@ -383,6 +383,34 @@ ${formData.message || "No additional details provided"}
         </div>
       </section>
 
+      {/* Real Estate Videography Info */}
+      <section className="py-20 bg-black text-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">India&apos;s Specialist Real Estate Videography Company</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              Alliance Media Labs is one of India&apos;s leading <strong className="text-white">real estate videography</strong> and <strong className="text-white">property videography</strong> companies, specialising exclusively in the real estate sector. Our <strong className="text-white">real estate videography services</strong> go beyond simple filming — we plan every shot to tell the location story that sells your project.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 text-left">
+              {[
+                { icon: "ri-video-line", title: "Real Estate Video Packages", desc: "Comprehensive real estate video packages combining route videos, drone aerials, and location AV — available as standalone or bundled with your full launch campaign." },
+                { icon: "ri-team-line", title: "Dedicated Video Company", desc: "As a specialist real estate video company, every crew member understands property marketing — from scripting the right location narrative to choosing golden-hour shoot windows." },
+                { icon: "ri-film-line", title: "Property Videography Services", desc: "Full-service property videography covering connectivity routes, nearby landmarks, aerial overviews, and ground-level lifestyle shots — everything your brochure and digital ads need." },
+              ].map((item) => (
+                <div key={item.title} className="bg-white/10 rounded-xl p-6">
+                  <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                    <i className={`${item.icon} text-black`}></i>
+                  </div>
+                  <h3 className="font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">

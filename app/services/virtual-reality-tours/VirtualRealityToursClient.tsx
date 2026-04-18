@@ -488,6 +488,51 @@ export default function VirtualRealityToursClient() {
           </div>
         </section>
 
+        {/* 360 Virtual Photography & 3D Virtual Home Tour */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">360° Virtual Photography & 3D Virtual Home Tours</h2>
+                <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+                <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                  We offer two distinct formats of immersive property experiences — choose based on your project stage, budget, and target buyer.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                  <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                    <i className="ri-camera-3-line text-2xl text-black"></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-3">360° Virtual Photography</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    <strong>360 virtual photography</strong> captures completed or show-flat spaces using professional 360° cameras, stitched into an interactive panorama. Ideal for ready-to-move projects, furnished showflats, and experience centres — giving buyers a photorealistic, navigable view of the actual space.
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Works for completed / furnished spaces</li>
+                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Faster turnaround — 3–5 days</li>
+                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Photorealistic real-world accuracy</li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                  <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                    <i className="ri-3d-glasses-line text-2xl text-black"></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-3">3D Virtual Home Tour</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    A <strong>3D virtual home tour</strong> is fully computer-generated — built from architectural drawings before the property is constructed. Buyers can walk through every room, explore amenities, and experience the layout of their future home from any device. Best for under-construction pre-launch marketing.
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> No construction required — pre-launch ready</li>
+                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Fully interactive with hotspots</li>
+                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Multi-device: browser, iPad, VR headset</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">

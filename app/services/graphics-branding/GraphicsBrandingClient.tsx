@@ -108,8 +108,8 @@ export default function GraphicsBrandingClient() {
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {[
         { icon: "ri-pen-nib-line", title: "Brand Identity & Logo", desc: "Custom logo design, brand guidelines, colour palette, typography, and brand voice documentation." },
-        { icon: "ri-file-text-line", title: "Sales Brochure & E-Brochure", desc: "Print-ready and digital brochures that convert — from 8-page teasers to 60-page project catalogues." },
-        { icon: "ri-megaphone-line", title: "Hoardings & Site Signage", desc: "Large-format hoarding designs, site signage, entrance banners, and OOH creatives in any dimension." },
+        { icon: "ri-file-text-line", title: "Property Brochure Design", desc: "Print-ready and digital property brochure design — from 8-page teasers to 60-page project catalogues. Available as brochure design online or via full design agency engagement." },
+        { icon: "ri-megaphone-line", title: "Construction Hoarding Design", desc: "Large-format construction hoarding design, site signage, entrance banners, and OOH creatives in any dimension — built for maximum roadside impact." },
         { icon: "ri-instagram-line", title: "Social Media Kit", desc: "Branded social media templates for Instagram, Facebook, YouTube thumbnails, and WhatsApp campaigns." },
         { icon: "ri-mail-line", title: "Email & WhatsApp Templates", desc: "Branded communication templates for launch mailers, construction updates, and festival creatives." },
         { icon: "ri-building-4-line", title: "Sales Office Branding", desc: "Backlit panels, wall graphics, directional signage, and touchpoint branding for your experience centre." },

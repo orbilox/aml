@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Professional route videos and location AV for real estate developers. Showcase project connectivity, nearby infrastructure, and location advantages with cinematic driving route videos. Mumbai, Delhi NCR, Bangalore.",
   keywords:
-    "route videos real estate India, location AV real estate, connectivity video property India, driving route video real estate, location advantage video developer, highway connectivity video real estate, metro connectivity real estate video, real estate location video Mumbai Delhi Bangalore, project connectivity video India, neighbourhood walkthrough video, proximity video real estate",
+    "route videos real estate India, real estate videography, property videography, real estate videography services, real estate video company, real estate video packages, real estate videos, location AV real estate, connectivity video property India, driving route video real estate, location advantage video developer, highway connectivity video real estate, metro connectivity real estate video, real estate location video Mumbai Delhi Bangalore, project connectivity video India, neighbourhood walkthrough video, proximity video real estate",
   alternates: {
     canonical: `${BASE}/services/route-videos`,
   },

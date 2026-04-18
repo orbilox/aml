@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Professional architectural scale models and miniature model making for real estate developers. Precision craftsmanship, LED lighting integration, and premium materials for stunning property launch presentations. Mumbai, Delhi NCR, Bangalore.",
   keywords:
-    "architectural scale models India, miniature model making India, real estate scale model, 3D scale model builder India, physical scale model real estate, model making company India, architectural model for property launch, LED scale model real estate, township scale model India, scale model making Mumbai Delhi Bangalore, professional scale model builders",
+    "architectural scale models India, 3d model making service, miniature model making India, real estate scale model, scale model makers, scale model making company, 3D scale model builder India, physical scale model real estate, model making company India, architectural model for property launch, LED scale model real estate, township scale model India, scale model making Mumbai Delhi Bangalore, professional scale model builders, miniature model, scale models",
   alternates: {
     canonical: `${BASE}/services/architectural-scale-models`,
   },
