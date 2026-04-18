@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/ping-indexnow.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ping": "node scripts/ping-indexnow.mjs"
   },
   "dependencies": {
     "next": "14.2.5",
