@@ -386,7 +386,7 @@ export default function ArchitecturalScaleModelsClient() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {[
-                { title: "Professional Scale Model Builders", desc: "Our team consists of experienced and skilled scale model builders specializing in architectural scale models and precision miniature model making. Every model is crafted with strict attention to accuracy, proportion, and detailing to represent the architect's vision perfectly." },
+                { title: "Expert Scale Model Makers & Builders", desc: "Our team of professional scale model makers and scale model builders specialises in architectural scale models and precision miniature model making. Every model is crafted with strict attention to accuracy, proportion, and detailing to represent the architect's vision perfectly." },
                 { title: "High-Realism Miniature Models", desc: "We create high-realism miniature models using premium materials, advanced 3D model making techniques, and fine finishing. From textures and landscaping to elevations and lighting, our models deliver a lifelike visual experience that boosts client confidence." },
                 { title: "Real Estate Scale Model Expertise", desc: "With deep expertise in real estate scale models, we help developers present projects effectively at sales offices, exhibitions, and investor meetings. Our models simplify complex layouts, enhance buyer understanding, and support faster decision-making and higher conversions." },
               ].map((item) => (

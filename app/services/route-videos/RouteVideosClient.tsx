@@ -162,9 +162,7 @@ ${formData.message || "No additional details provided"}
 </h1>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Dynamic route visualizations that showcase accessibility,
-              connectivity, and the journey experience to your developments with
-              professional cinematography and strategic storytelling.
+              India&apos;s specialist <strong className="text-yellow-400">real estate location video</strong> and <strong className="text-yellow-400">location AV</strong> production company. We create dynamic <strong className="text-yellow-400">route videos</strong> that showcase your project&apos;s accessibility, connectivity, and location advantage — combining drone aerials, ground-level cinematography, and animated maps into a single compelling <strong className="text-yellow-400">location video</strong>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

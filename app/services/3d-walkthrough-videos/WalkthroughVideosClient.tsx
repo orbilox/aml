@@ -167,11 +167,7 @@ export default function WalkthroughVideosClient() {
             </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
             <p className="text-lg text-black/80 leading-relaxed">
-              Transform your architectural designs into stunning cinematic
-              experiences. Our 3D walkthrough videos provide photorealistic
-              visualizations that help clients experience spaces before
-              they&apos;re built, making it easier to secure approvals, attract
-              investors, and drive sales.
+              Transform your architectural designs into stunning cinematic experiences. Our <strong>3D walkthrough video service</strong> delivers photorealistic <strong>architectural walkthrough</strong> animations — also called <strong>3D virtual house tours</strong> — that let buyers experience your property before a single brick is laid. Whether you need a <strong>3D walkthrough real estate</strong> presentation for a pre-launch campaign, a <strong>3D architectural walkthrough</strong> for RERA submissions, or a cinematic fly-through for investor decks, we handle it all in-house.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
