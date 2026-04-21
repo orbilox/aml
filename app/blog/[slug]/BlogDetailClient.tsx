@@ -14,6 +14,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <WalkthroughArticle post={post} />;
   }
 
+  if (slug === "3d-house-rendering-guide-india") {
+    return <HouseRenderingArticle post={post} />;
+  }
+
   if (slug === "architectural-scale-models-india-real-estate") {
     return <ScaleModelsArticle post={post} />;
   }
@@ -469,6 +473,338 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
             >
               View Our Walkthrough Work
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  const faqs = [
+    {
+      q: "What is 3D house rendering and how is it different from a photograph?",
+      a: "3D house rendering is a computer-generated image of a building that looks like a photograph — but is produced entirely from architectural drawings, before the building exists. Unlike photography, a 3D render can be created during the design stage, giving you complete control over lighting, weather, season, materials, and viewpoint.",
+    },
+    {
+      q: "How much does 3D house rendering cost in India?",
+      a: "A standard exterior 3D house rendering starts from ₹8,000–₹15,000 per view for residential projects. Luxury villas and high-rise towers with detailed facade work range from ₹20,000–₹50,000 per view. Interior renders are priced similarly. 3D floor plan design starts from ₹3,000 per unit. Contact Alliance Media Labs for a project-specific quote.",
+    },
+    {
+      q: "How long does architectural rendering take to deliver?",
+      a: "A standard exterior render takes 5–7 working days. Interior renders and 3D floor plan designs take 7–10 days. Full sets of 10+ views or township isometrics are scoped individually. Rush delivery in 3 days is available for launch deadlines.",
+    },
+    {
+      q: "What inputs do 3D rendering companies need from developers?",
+      a: "Most professional 3D rendering companies need: AutoCAD DWG drawings or PDF floor plans, elevation drawings, a site plan, material/finish specifications or reference images, and your brand colour palette. Even rough sketch drawings are sufficient to begin — our team handles all 3D modelling in-house.",
+    },
+    {
+      q: "Can a 3D floor plan replace a traditional 2D floor plan for marketing?",
+      a: "For marketing purposes, yes — a 3D floor plan design consistently outperforms a 2D plan. Buyers understand room proportions, furniture placement, and natural light far better from a 3D floor plan. Many developers use both: a 2D plan for technical reference and a 3D floor plan for brochures and digital ads.",
+    },
+    {
+      q: "What is AI 3D rendering and should I use it?",
+      a: "AI 3D rendering uses machine learning tools to accelerate specific parts of the rendering pipeline — particularly lighting and texture generation. It does not replace the 3D modelling and creative work that goes into a quality render. At Alliance Media Labs, we use AI-assisted 3D rendering tools selectively to improve turnaround on large sets without sacrificing photorealistic quality.",
+    },
+    {
+      q: "Can 3D renders be used for RERA registration?",
+      a: "Yes. Architectural renders are accepted for RERA project marketing submissions across Maharashtra, Karnataka, Delhi NCR, Telangana, and other states. Our renders include mandatory RERA disclaimer overlays and are built from approved architectural drawings — making them the safest possible visual for compliance.",
+    },
+    {
+      q: "What is the difference between a 3D render and a 3D walkthrough video?",
+      a: "A 3D render is a still image — like a photograph of your building. A 3D walkthrough video is an animated film that takes the viewer on a guided tour through the property. Renders are used in brochures, hoardings, and print materials. Walkthroughs are used for digital campaigns, YouTube, and sales office screens. Most developers use both.",
+    },
+    {
+      q: "How do I find reliable 3D rendering services near me in India?",
+      a: "Look for a company with a dedicated real estate rendering portfolio — not a generic product or game studio. Key things to verify: do they have in-house modellers or outsource? Do they have experience with RERA submissions? Can they show before-and-after comparisons? Alliance Media Labs operates from India with an in-house team serving developers nationwide.",
+    },
+    {
+      q: "What is the difference between a 3D render and an isometric view?",
+      a: "A 3D render is a photorealistic perspective image of one building or interior — like a camera shot. An isometric view is a top-down bird's-eye illustration of the entire site — showing how multiple buildings, roads, landscaping, and amenities relate to each other. Isometrics are used for master plan marketing, township brochures, and launch hoardings.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <div className="relative h-[480px] overflow-hidden mt-20">
+        <img src={post.thumbnail} alt={post.title} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 flex items-end">
+          <div className="container mx-auto px-6 pb-12">
+            <span className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">
+              {post.category}
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold text-white max-w-4xl leading-tight">{post.title}</h1>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 py-16 max-w-4xl">
+
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
+          <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
+          <i className="ri-arrow-right-s-line"></i>
+          <Link href="/blog" className="hover:text-yellow-500 transition-colors">Blog</Link>
+          <i className="ri-arrow-right-s-line"></i>
+          <span className="text-gray-400 truncate max-w-xs">{post.title}</span>
+        </nav>
+
+        {/* Meta */}
+        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-10 pb-8 border-b border-gray-200">
+          <div className="flex items-center gap-2"><i className="ri-user-line text-yellow-500"></i><span>{post.author}</span></div>
+          <div className="flex items-center gap-2"><i className="ri-calendar-line text-yellow-500"></i><span>{post.date}</span></div>
+          <div className="flex items-center gap-2"><i className="ri-time-line text-yellow-500"></i><span>{post.readTime}</span></div>
+        </div>
+
+        <div className="prose prose-lg max-w-none">
+
+          {/* Intro */}
+          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            If you search for any real estate visualization service in India, one term comes up more than any other: <strong>3D house rendering</strong>. With over 10,000 monthly searches, it is the single most sought-after architectural visualization service among Indian property buyers, developers, and architects. Yet despite its popularity, there is a lot of confusion about what 3D house rendering actually involves, how it differs from related services, and how to choose the right company.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            This guide covers everything — from the types of <strong>3D renders</strong> available, to <strong>3D floor plan design</strong>, to AI-assisted rendering, to choosing between <strong>architectural rendering companies</strong> in India. By the end, you will know exactly what to brief, what to expect, and what to pay.
+          </p>
+
+          {/* Section 1 */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">What Is 3D House Rendering?</h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            <strong>3D house rendering</strong> is the process of generating a photorealistic image of a building from architectural drawings using specialist 3D software. The result looks indistinguishable from a professional photograph — except that the building does not need to exist yet.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The process involves three stages: <strong>3D modelling</strong> (building a digital replica of the structure from drawings), <strong>texturing and lighting</strong> (applying realistic materials, shadows, and time-of-day lighting), and <strong>rendering</strong> (calculating the final photorealistic output). Professional <strong>3D rendering services</strong> handle all three stages in-house, delivering images at 300 DPI print resolution.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-8">
+            For Indian real estate developers, <strong>architectural rendering</strong> solves a fundamental problem: under-construction projects cannot be photographed. A developer launching a project two years before completion needs visual assets for hoardings, brochures, digital ads, and RERA registration — all before the first floor is built. 3D rendering makes this possible.
+          </p>
+
+          {/* Inline image 1 */}
+          <div className="rounded-2xl overflow-hidden mb-12">
+            <img src="/images/services/3d-renders-isometrics/2.jpg" alt="Photorealistic 3D house rendering exterior — Alliance Media Labs" className="w-full h-72 md:h-96 object-cover" />
+            <p className="text-xs text-gray-400 text-center mt-2 italic">Photorealistic exterior 3D house rendering — Alliance Media Labs</p>
+          </div>
+
+          {/* Section 2 */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Types of 3D Rendering Services for Real Estate</h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Not all <strong>rendering services</strong> are the same. Here are the six main types that Indian real estate developers commission, and what each one is used for:
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
+            {[
+              { icon: "ri-home-4-line", title: "Exterior 3D House Rendering", desc: "The most common type — a photorealistic front, side, or aerial perspective of the building facade. Used for hoardings, brochures, launch campaigns, and RERA submissions. Can show any time of day, season, or weather condition." },
+              { icon: "ri-sofa-line", title: "Interior 3D Rendering", desc: "Photorealistic images of living rooms, kitchens, bedrooms, lobbies, and amenity areas. Used to showcase finishes, furniture layout, lighting moods, and material quality. Particularly powerful for luxury apartments and villas." },
+              { icon: "ri-layout-grid-line", title: "3D Floor Plan Design", desc: "A top-down three-dimensional view of a unit showing room layout, furniture placement, and proportions. Far more readable than a 2D plan for buyers. Used in brochures, on websites, and at sales offices. The 3D floor plan designer role involves translating raw CAD plans into client-ready visuals." },
+              { icon: "ri-earth-line", title: "Isometric & Aerial View", desc: "A bird's-eye 3D illustration of the entire project — showing multiple towers, roads, landscaping, amenities, and the surrounding context. Essential for township launches and master plan brochures. Also used as a hoarding creative." },
+              { icon: "ri-building-line", title: "3D Architectural Rendering", desc: "Full architectural rendering services covering both the building exterior and contextual surroundings — including neighbouring streets, greenery, and sky. Used by architects for client presentations and by developers for investor decks." },
+              { icon: "ri-cpu-line", title: "AI-Assisted 3D Rendering", desc: "AI 3D rendering uses machine learning to accelerate the lighting and denoising stages of production, reducing turnaround time on large sets without compromising quality. Best used for bulk orders of 10+ views with tight launch deadlines." },
+            ].map((item) => (
+              <div key={item.title} className="flex gap-4 p-5 bg-gray-50 rounded-xl">
+                <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i className={`${item.icon} text-black`}></i>
+                </div>
+                <div>
+                  <h3 className="font-bold text-black text-sm mb-1">{item.title}</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Section 3 */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">3D House Rendering vs 3D Walkthrough vs VR Tour: Which Do You Need?</h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            This is the most common question developers ask. All three are produced from the same 3D model — but they serve completely different purposes:
+          </p>
+
+          <div className="overflow-x-auto mb-10">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-black text-white">
+                  <th className="px-4 py-3 text-left font-semibold">Feature</th>
+                  <th className="px-4 py-3 text-left font-semibold">3D House Rendering</th>
+                  <th className="px-4 py-3 text-left font-semibold">3D Walkthrough Video</th>
+                  <th className="px-4 py-3 text-left font-semibold">VR Tour</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Output format", "Still image (JPG/PNG)", "Video (MP4)", "Interactive web link"],
+                  ["Used in", "Hoardings, brochures, print, RERA", "YouTube, social media, screens", "Sales office, website, NRI"],
+                  ["Buyer experience", "Passive — views image", "Passive — watches video", "Active — explores freely"],
+                  ["Production time", "5–7 days per view", "3–6 weeks", "4–6 weeks"],
+                  ["Best for", "Launch marketing collateral", "Pre-launch digital campaigns", "NRI buyers, premium launches"],
+                  ["Can show 3D floor plan", "✓ As a separate render", "✓ As a section in video", "✓ As an interactive overlay"],
+                ].map(([feature, render, walkthrough, vr], i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                    <td className="px-4 py-3 font-medium text-gray-800 border-b border-gray-100">{feature}</td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{render}</td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{walkthrough}</td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{vr}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-gray-700 leading-relaxed mb-8">
+            Most successful launch campaigns use all three: <strong>3D renders</strong> for print and hoardings, a <strong>3D walkthrough video</strong> for digital ads and social media, and a <strong>VR tour</strong> for the sales office and NRI portal. The renders are produced first, since the walkthrough video and VR tour are built from the same 3D model.
+          </p>
+
+          {/* Inline image 2 */}
+          <div className="rounded-2xl overflow-hidden mb-12">
+            <img src="/images/services/3d-renders-isometrics/4.jpg" alt="3D floor plan design and architectural rendering for real estate brochure" className="w-full h-72 md:h-96 object-cover" />
+            <p className="text-xs text-gray-400 text-center mt-2 italic">3D floor plan design + exterior render for a residential launch — Alliance Media Labs</p>
+          </div>
+
+          {/* Section 4 */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">How to Choose Between Architectural Rendering Companies in India</h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            There are hundreds of <strong>3D rendering companies</strong> and freelancers in India. The quality difference between the best and worst is enormous. Here are the five criteria that separate professional <strong>architectural rendering companies</strong> from generic studios:
+          </p>
+
+          <div className="space-y-4 mb-10">
+            {[
+              { num: "01", title: "Real Estate Portfolio Depth", desc: "Look for 3D rendering services that have delivered work specifically for real estate developers — not product renders, game assets, or animations. Real estate rendering requires understanding of RERA requirements, sales office context, and what actually converts buyers." },
+              { num: "02", title: "In-House Modelling Team", desc: "Many companies outsource 3D modelling to third parties. This creates quality gaps and delays. Choose architectural rendering services with an in-house team — it means faster communication, better quality control, and more accountability." },
+              { num: "03", title: "RERA-Ready Output", desc: "If you are in Maharashtra, Karnataka, Delhi NCR, or any RERA-active state, your renders must include specific disclaimer overlays and be produced from approved drawings. A specialist real estate rendering company will know this without being told." },
+              { num: "04", title: "Transparent Revision Policy", desc: "Professional architectural visualization services include structured revision rounds — typically 2 rounds during modelling and 2 rounds after final render. Avoid companies that charge per change or provide no revision policy upfront." },
+              { num: "05", title: "3D Floor Plan Design Capability", desc: "The best 3D rendering services near you should also offer 3D floor plan design as a standalone or bundled service. A dedicated 3D floor plan designer on the team means your brochure layouts and unit floor plans are consistent with your exterior renders." },
+            ].map((item) => (
+              <div key={item.num} className="flex gap-4 p-5 border border-gray-200 rounded-xl">
+                <span className="text-3xl font-black text-yellow-400 leading-none flex-shrink-0">{item.num}</span>
+                <div>
+                  <h3 className="font-bold text-black mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Section 5 */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Architectural Visualization Services in India — Timeline & What to Expect</h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A typical <strong>architectural visualization services</strong> project in India follows this timeline once drawings are shared:
+          </p>
+
+          <div className="grid md:grid-cols-4 gap-4 mb-10">
+            {[
+              { step: "Day 1–2", title: "Brief & Modelling Start", desc: "Drawings reviewed, camera angles agreed, 3D modelling begins" },
+              { step: "Day 3–5", title: "Grey Structure Review", desc: "Raw 3D model shared for proportion and accuracy feedback before texturing" },
+              { step: "Day 5–7", title: "Texturing & Lighting", desc: "Materials applied, lighting set up, environment built around the structure" },
+              { step: "Day 6–8", title: "Final Render Delivery", desc: "High-resolution JPG/PNG files delivered at 300 DPI print-ready quality" },
+            ].map((item) => (
+              <div key={item.step} className="bg-gray-50 rounded-xl p-5 text-center">
+                <div className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full mb-3">{item.step}</div>
+                <h3 className="font-bold text-black text-sm mb-2">{item.title}</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Inline image 3 */}
+          <div className="rounded-2xl overflow-hidden mb-12">
+            <img src="/images/services/3d-renders-isometrics/6.jpg" alt="Architectural rendering of residential township with isometric view India" className="w-full h-72 md:h-96 object-cover" />
+            <p className="text-xs text-gray-400 text-center mt-2 italic">Township aerial 3D render — Alliance Media Labs</p>
+          </div>
+
+          {/* Section 6 */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">3D Rendering Services Near Me — Why Location Doesn&apos;t Matter Anymore</h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Many developers search for <strong>3D rendering services near me</strong> assuming they need a local vendor for in-person meetings. In reality, 100% of the 3D rendering workflow happens digitally — drawings are shared electronically, renders are reviewed on screen, and feedback is given via video call or email.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-8">
+            Alliance Media Labs provides <strong>3D architectural rendering services</strong> for developers across Mumbai, Delhi NCR, Pune, Bangalore, Hyderabad, Chennai, Kolkata, and tier-2 cities — all managed remotely with the same quality standards. Your project&apos;s location determines the architectural context of the render; your proximity to our studio determines nothing.
+          </p>
+
+          {/* FAQ */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Frequently Asked Questions</h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-8"></div>
+          <div className="space-y-4 mb-12">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border border-gray-200 rounded-xl p-6">
+                <h3 className="font-bold text-black mb-3 flex items-start gap-3">
+                  <span className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-xs font-black text-black flex-shrink-0 mt-0.5">{i + 1}</span>
+                  {faq.q}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm pl-9">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Conclusion */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Conclusion</h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            <strong>3D house rendering</strong> is not just a marketing tool — it is the foundation of every successful real estate launch in India today. From the hoarding that stops traffic on the highway, to the brochure a buyer takes home, to the RERA registration package submitted to the authority — photorealistic <strong>architectural rendering</strong> is everywhere.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-8">
+            Whether you need a single exterior <strong>3D render</strong>, a complete set of interior and exterior views, a <strong>3D floor plan design</strong> for your brochure, or a full campaign covering renders, walkthrough videos, and VR tours — Alliance Media Labs handles it all with one brief, one team, and one point of accountability.
+          </p>
+
+          {/* Internal links */}
+          <div className="bg-gray-50 rounded-2xl p-8 mb-8">
+            <h3 className="font-bold text-black mb-4">Explore Related Services</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              {[
+                { href: "/services/3d-renders-isometrics", label: "3D Renders & Isometrics", icon: "ri-image-line" },
+                { href: "/services/3d-walkthrough-videos", label: "3D Walkthrough Videos", icon: "ri-movie-line" },
+                { href: "/services/virtual-reality-tours", label: "VR Tours", icon: "ri-3d-glasses-line" },
+              ].map((s) => (
+                <Link key={s.href} href={s.href} className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 hover:shadow-md transition-shadow border border-gray-200">
+                  <div className="w-8 h-8 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className={`${s.icon} text-black text-sm`}></i>
+                  </div>
+                  <span className="font-semibold text-black text-sm">{s.label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 pt-8 border-t border-gray-200 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full">
+              #{tag.replace(/ /g, "")}
+            </span>
+          ))}
+        </div>
+
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get a Quote for Your 3D Rendering Project</h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Share your drawings with our team and get a detailed quote within 24 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              Get Free Quote
+            </Link>
+            <Link href="/services/3d-renders-isometrics" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View Our Render Portfolio
             </Link>
           </div>
         </div>

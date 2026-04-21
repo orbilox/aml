@@ -24,6 +24,18 @@ export const blogPosts: BlogPost[] = [
     tags: ["3D Walkthrough", "Real Estate", "Visualization", "Marketing"],
   },
   {
+    slug: "3d-house-rendering-guide-india",
+    title: "3D House Rendering in India: The Complete Guide for Real Estate Developers (2025)",
+    excerpt:
+      "Everything Indian real estate developers need to know about 3D house rendering — types of renders, how to choose between 3D rendering companies, costs, timelines, AI rendering, and when to use a 3D floor plan vs a walkthrough video.",
+    category: "Real Estate Marketing",
+    date: "April 20, 2025",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/3d-renders-isometrics/1.jpg",
+    tags: ["3D House Rendering", "Architectural Rendering", "3D Floor Plan", "3D Renders", "Real Estate Visualization"],
+  },
+  {
     slug: "architectural-scale-models-india-real-estate",
     title: "The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can't",
     excerpt:

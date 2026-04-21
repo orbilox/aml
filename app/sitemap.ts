@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/blog/3d-walkthrough-video-service",
     "/blog/architectural-scale-models-india-real-estate",
+    "/blog/3d-house-rendering-guide-india",
   ];
 
   const cityRoutes = [
