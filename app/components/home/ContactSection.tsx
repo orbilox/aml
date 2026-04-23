@@ -89,8 +89,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="font-semibold text-black">Phone</p>
-                  <p className="text-black/80">+91 9988931093</p>
                   <p className="text-black/80">+91 9999916744</p>
+                  <p className="text-black/80">+91 9988931093</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">

@@ -41,7 +41,7 @@ const localBusinessSchema = {
   description: "Professional 3D walkthrough video service for real estate developers in Bangalore.",
   url: `${BASE}/city-services/3d-walkthrough-videos-bangalore`,
   priceRange: "₹₹₹",
-  telephone: "+91-9988931093",
+  telephone: "+91-9999916744",
   email: "info@alliancemedialabs.com",
   areaServed: [
     { "@type": "City", name: "Bangalore" },

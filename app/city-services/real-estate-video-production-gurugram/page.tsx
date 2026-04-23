@@ -41,7 +41,7 @@ const localBusinessSchema = {
   description: "Professional real estate video production service in Gurugram including 3D walkthroughs, drone shoots, and marketing films.",
   url: `${BASE}/city-services/real-estate-video-production-gurugram`,
   priceRange: "₹₹₹",
-  telephone: "+91-9988931093",
+  telephone: "+91-9999916744",
   email: "info@alliancemedialabs.com",
   areaServed: [
     { "@type": "City", name: "Gurugram" },

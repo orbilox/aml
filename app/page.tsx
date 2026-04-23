@@ -68,12 +68,12 @@ const structuredData = [
       height: 88,
     },
     image: "https://www.alliancemedialabs.com/images/home/1.jpg",
-    telephone: "+91-9988931093",
+    telephone: "+91-9999916744",
     email: "info@alliancemedialabs.com",
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+91-9988931093",
+        telephone: "+91-9999916744",
         contactType: "customer service",
         email: "info@alliancemedialabs.com",
         availableLanguage: ["English", "Hindi"],
