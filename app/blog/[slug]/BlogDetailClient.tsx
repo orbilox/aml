@@ -18,6 +18,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <HouseRenderingArticle post={post} />;
   }
 
+  if (slug === "real-estate-drone-photography-india") {
+    return <DronePhotographyArticle post={post} />;
+  }
+
   if (slug === "architectural-scale-models-india-real-estate") {
     return <ScaleModelsArticle post={post} />;
   }
@@ -805,6 +809,536 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
             </Link>
             <Link href="/services/3d-renders-isometrics" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Our Render Portfolio
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  const faqs = [
+    {
+      q: "What is real estate drone photography and why do developers use it?",
+      a: "Real estate drone photography uses DGCA-licensed unmanned aerial vehicles to capture aerial images and video of a property, its surroundings, and access routes. Developers use it to showcase location advantages, scale, and connectivity that ground-level cameras cannot convey. A single aerial reveal shot can communicate what takes minutes to explain in words.",
+    },
+    {
+      q: "Is drone photography legal for real estate in India?",
+      a: "Yes, provided the operator holds a DGCA Remote Pilot License (RPL), the drone is registered on the Digital Sky platform, and the shoot zone is approved for drone operations. Restricted zones (near airports, defence areas, and certain government buildings) require additional clearance. Alliance Media Labs handles all DGCA compliance and permissions for every shoot.",
+    },
+    {
+      q: "What resolution does a professional real estate drone video use?",
+      a: "Professional real estate drone video is shot in 4K (3840×2160) resolution using DJI Inspire or Zenmuse series cameras with 3-axis gimbal stabilisation. Footage is colour-graded in post-production, delivering broadcast-quality output suitable for TV commercials, YouTube, Instagram Reels, and property portal listings.",
+    },
+    {
+      q: "What is a location AV video for real estate?",
+      a: "A location AV (audio-visual) video is a cinematic film showcasing the project's surrounding environment — nearby schools, hospitals, metro stations, malls, highways, and scenic features. Unlike a drone shoot that focuses on the project itself, a location AV tells the story of the neighbourhood, making it a powerful tool for buyers evaluating connectivity and lifestyle.",
+    },
+    {
+      q: "How long does a real estate drone shoot take?",
+      a: "A standard drone shoot covering a project site with 8–12 aerial angles takes half a day (3–4 hours). A full location AV with drone footage, ground-level B-roll, and route videography typically requires one full day. Post-production editing and colour grading adds 5–10 working days depending on the output length and complexity.",
+    },
+    {
+      q: "Can you shoot during golden hour or twilight for a premium look?",
+      a: "Yes. We plan shoots around the golden hour (30–60 minutes after sunrise or before sunset) and blue-hour twilight for maximum cinematic impact. These lighting conditions are especially valuable for luxury and ultra-luxury projects where premium lifestyle is the core sales message. Low-light drone footage is available with appropriate sensor equipment.",
+    },
+    {
+      q: "How much does a real estate drone shoot cost in India?",
+      a: "Real estate drone photography pricing in India starts from ₹15,000 for a standard half-day aerial shoot. Full-day packages with golden hour sessions, location AV production, and post-production editing start from ₹30,000. Township or multi-location shoots covering 50+ acres with multiple angles and a 3–5 minute edited video are priced on request.",
+    },
+    {
+      q: "Can drones be used for construction progress monitoring?",
+      a: "Absolutely. Construction progress drone monitoring — scheduled aerial shoots at regular intervals (weekly, fortnightly, or monthly) — provides developers with accurate visual records of construction milestones. This aerial documentation is invaluable for RERA compliance reporting, investor updates, and pre-launch marketing content when the project reaches a visually impressive stage.",
+    },
+    {
+      q: "What is the difference between aerial photography and aerial videography for real estate?",
+      a: "Aerial photography produces high-resolution still images used for brochures, billboards, and press materials. Aerial videography captures moving footage for promotional films, social media, and property portals. Most real estate projects commission both in a single shoot — stills for print and video for digital channels — to maximise the ROI of each drone session.",
+    },
+    {
+      q: "How do I brief a drone photography company for a real estate project?",
+      a: "A good brief includes: project address and site layout (share DWG or Google Maps pin), the number of aerial angles needed, whether a location AV route is required, the target output platforms (TV, YouTube, Instagram, property portal), the preferred time of day (golden hour vs midday), and the delivery deadline. Alliance Media Labs provides a standardised brief template to every client before shoot planning begins.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero Image */}
+      <div className="relative h-[480px] overflow-hidden mt-20">
+        <img
+          src={post.thumbnail}
+          alt={post.title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/55"></div>
+        <div className="absolute inset-0 flex items-end">
+          <div className="container mx-auto px-6 pb-12">
+            <span className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">
+              {post.category}
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold text-white max-w-4xl leading-tight">
+              {post.title}
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      {/* Article Body */}
+      <div className="container mx-auto px-6 py-16 max-w-4xl">
+
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
+          <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
+          <i className="ri-arrow-right-s-line"></i>
+          <Link href="/blog" className="hover:text-yellow-500 transition-colors">Blog</Link>
+          <i className="ri-arrow-right-s-line"></i>
+          <span className="text-gray-400 truncate max-w-xs">{post.title}</span>
+        </nav>
+
+        {/* Meta */}
+        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-10 pb-8 border-b border-gray-200">
+          <div className="flex items-center gap-2">
+            <i className="ri-user-line text-yellow-500"></i>
+            <span>{post.author}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="ri-calendar-line text-yellow-500"></i>
+            <span>{post.date}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="ri-time-line text-yellow-500"></i>
+            <span>{post.readTime}</span>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="prose prose-lg max-w-none">
+
+          {/* Introduction */}
+          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            The most powerful sales tool in modern real estate marketing is not a brochure, a VR headset,
+            or a CGI render — it is a 4K drone shot that reveals your project from 200 feet above the
+            earth, showing the full sweep of land, the connectivity to the city, and the lifestyle
+            promise of the location in a single cinematic frame. <strong>Real estate drone photography</strong> has
+            become the non-negotiable opening act of every premium property launch in India. This
+            guide tells you exactly how to plan, commission, and get the most from a professional
+            drone shoot for your project.
+          </p>
+
+          {/* Section 1 */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            What Is Real Estate Drone Photography — And Why Buyers Respond to It
+          </h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            <strong>Real estate drone photography</strong> uses DGCA-licensed unmanned aerial vehicles (UAVs)
+            equipped with high-resolution cameras to capture images and video of a property from the air.
+            Unlike a ground-level photograph that shows a building&apos;s facade, an aerial shot reveals
+            the full relationship between the project, its land, and its surroundings.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Buyers respond powerfully to aerial footage because it answers questions that no other medium
+            can: How close is this project to the highway? How much green cover surrounds it? How does
+            Phase 1 relate to Phase 2? Is the view from upper floors truly panoramic? These are
+            questions that determine buying decisions, and aerial drone video answers them in seconds.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-8">
+            For developers, the ROI of a single drone shoot session is extraordinary — the footage can
+            be repurposed across the project website, property portals (MagicBricks, 99acres, Housing.com),
+            social media, TV commercials, channel partner presentations, and NRI digital campaigns,
+            all from one day&apos;s work.
+          </p>
+
+          {/* Section 2 — Shot Types */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            6 Types of Aerial Drone Shots Used in Real Estate Marketing
+          </h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            A professional real estate drone shoot is not just &quot;flying above and recording.&quot;
+            Every angle is planned for a specific storytelling purpose. Here are the six shot types
+            that form a complete aerial library for a real estate project:
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-5 mb-10">
+            {[
+              {
+                icon: "ri-flight-takeoff-line",
+                title: "Establishing Aerial Reveal",
+                desc: "The drone rises from ground level while the camera tilts up to reveal the full project against the horizon. This is the cinematic opening shot used in nearly every property launch film — visually impressive and immediately establishes scale.",
+              },
+              {
+                icon: "ri-road-map-line",
+                title: "Location & Connectivity Flyover",
+                desc: "A slow tracking shot from the project outward, showing the highway, metro line, schools, hospitals, and landmarks within the catchment area. This shot is the core of every location AV video and directly answers the buyer's connectivity questions.",
+              },
+              {
+                icon: "ri-building-line",
+                title: "Overhead Master Plan Shot",
+                desc: "A bird's-eye view directly above the site showing the full land parcel, internal road network, amenity placement, and phase layout. Essential for township and plotted development marketing where the macro layout is the product.",
+              },
+              {
+                icon: "ri-sun-line",
+                title: "Golden Hour Cinematic Pass",
+                desc: "Shot 30 minutes before sunset, the golden hour aerial pass bathes the project in warm directional light that no artificial lighting can replicate. These shots are used in luxury project films and billboard campaigns to communicate premium lifestyle.",
+              },
+              {
+                icon: "ri-camera-3-line",
+                title: "Construction Progress Documentation",
+                desc: "Scheduled aerial shots at regular intervals during construction — weekly, fortnightly, or monthly. Creates a visual time-lapse record of construction milestones, valuable for RERA compliance, investor updates, and pre-launch marketing.",
+              },
+              {
+                icon: "ri-compass-3-line",
+                title: "360° Orbit Around the Tower",
+                desc: "The drone orbits the completed or near-complete tower in a smooth circular motion while the camera keeps the tower centred. This shot showcases all four facades, the view potential from different elevations, and the surrounding context from every direction.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="flex gap-4 p-5 bg-gray-50 rounded-xl">
+                <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i className={`${item.icon} text-black`}></i>
+                </div>
+                <div>
+                  <h3 className="font-bold text-black text-sm mb-1">{item.title}</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Inline image 1 */}
+          <div className="rounded-2xl overflow-hidden mb-12">
+            <img
+              src="/images/services/drone-shoots/2.jpg"
+              alt="4K drone aerial shot of a real estate project in India showing connectivity and surroundings"
+              className="w-full h-72 md:h-96 object-cover"
+            />
+            <p className="text-xs text-gray-400 text-center mt-2 italic">
+              4K aerial drone footage for a real estate project — Alliance Media Labs
+            </p>
+          </div>
+
+          {/* Section 3 */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Location AV Production: Beyond the Drone Shot
+          </h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A <strong>location AV video</strong> is one of the most strategically valuable — and most
+            underused — tools in real estate marketing. Where a drone shoot covers the project itself,
+            a location AV covers everything around it: the drive from the nearest metro station,
+            the school gates three minutes away, the weekend lifestyle of the neighbourhood,
+            the sunrise view from the highway approach.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Location AV production combines <strong>aerial drone footage</strong> with ground-level
+            cinematography — steady-cam city shots, vehicle-mounted tracking shots along the
+            access route, time-lapses of traffic flow, and golden-hour lifestyle footage of
+            nearby destinations. The result is a 2–4 minute film that answers the buyer&apos;s
+            most fundamental question: <em>Is this the right place to live?</em>
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            For projects where location is the primary differentiator — a project near a new
+            metro corridor, a township adjacent to a proposed IT park, a villa cluster near
+            a lake or hill station — the location AV often converts more buyers than the
+            project walkthrough itself.
+          </p>
+
+          {/* Comparison table */}
+          <div className="overflow-x-auto mb-12">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-black text-white">
+                  <th className="px-4 py-3 text-left font-semibold">Aerial Content Type</th>
+                  <th className="px-4 py-3 text-left font-semibold">Best Used For</th>
+                  <th className="px-4 py-3 text-left font-semibold">Output Length</th>
+                  <th className="px-4 py-3 text-left font-semibold">Platform</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Aerial Drone Photography (Stills)", "Brochures, billboards, portals, press", "10–20 edited stills", "Print + Digital"],
+                  ["Project Drone Video", "Launch films, website hero, YouTube", "60–90 seconds", "Digital"],
+                  ["Location AV Film", "NRI campaigns, channel partners, TV", "2–4 minutes", "TV + Digital"],
+                  ["Construction Progress Shoot", "RERA, investor updates, social media", "30–60 second cut", "Digital"],
+                  ["Golden Hour Luxury Reel", "Premium social, OOH, luxury portals", "30–45 seconds", "Instagram + Outdoor"],
+                ].map(([type, use, length, platform], i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                    <td className="px-4 py-3 text-gray-800 font-medium border-b border-gray-100">{type}</td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{use}</td>
+                    <td className="px-4 py-3 text-yellow-600 font-semibold border-b border-gray-100">{length}</td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{platform}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 4 — DGCA */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Why DGCA-Licensed Drone Operators Matter for Your Project
+          </h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            India&apos;s drone regulations under the DGCA (Directorate General of Civil Aviation) have
+            matured significantly since 2021. Every commercial drone operator must hold a{" "}
+            <strong>Remote Pilot License (RPL)</strong>, operate a DGCA-registered drone, and obtain
+            zone clearance before every shoot via the Digital Sky platform.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            For real estate developers, this matters for two reasons: <strong>legal protection</strong> and
+            <strong> quality assurance</strong>. A DGCA-licensed operator carries the right equipment
+            (typically DJI Matrice or Inspire series with professional-grade cameras), understands
+            airspace rules, and can legally fly in zones that unlicensed operators cannot — including
+            urban areas with restricted airspace that require individual DGCA permissions.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Unlicensed drone operators are cheaper — but they expose developers to significant
+            liability if footage is used commercially, if an incident occurs on site, or if
+            the footage quality is insufficient for broadcast or billboard use. Alliance Media Labs
+            uses exclusively DGCA-licensed pilots for all real estate aerial shoots across India.
+          </p>
+
+          {/* Steps for planning a shoot */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            How to Plan a Real Estate Drone Shoot: 5-Step Process
+          </h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <div className="space-y-4 mb-10">
+            {[
+              {
+                num: "01",
+                title: "Define Your Shot List and Output Deliverables",
+                desc: "Before the drone goes up, decide what you need: a project reveal video, a location AV, construction documentation, or stills for the brochure? Each output has a different shot list, time-of-day requirement, and post-production workflow. A well-defined brief eliminates costly re-shoots.",
+              },
+              {
+                num: "02",
+                title: "Check Zone Clearance and DGCA Permissions",
+                desc: "Your shoot location determines the regulatory complexity. Green zones require only Digital Sky clearance. Yellow and red zones require individual DGCA approval — a process that can take 1–7 days. Always confirm zone status before locking the shoot date.",
+              },
+              {
+                num: "03",
+                title: "Choose the Right Time of Day",
+                desc: "Golden hour (30 minutes after sunrise or before sunset) delivers the best cinematic quality for luxury and premium projects. Midday shoots work well for construction documentation where even lighting and maximum site visibility are the priority. Twilight shoots with LED lighting require specialised equipment.",
+              },
+              {
+                num: "04",
+                title: "Plan the Ground-Level B-Roll",
+                desc: "The best real estate drone videos intercut aerial footage with ground-level shots — lobby entries, amenity areas, lifestyle vignettes, the approach road. Plan B-roll requirements alongside the aerial shot list so both crews shoot simultaneously, cutting down the production day.",
+              },
+              {
+                num: "05",
+                title: "Brief the Post-Production Team on the Final Cut",
+                desc: "Raw 4K drone footage needs colour grading, stabilisation, music scoring, and editing before it is ready for use. Share your brand colour palette, preferred music tone (cinematic, aspirational, energetic), and the platform where the video will be used — Instagram ratios differ from YouTube and TV broadcast specs.",
+              },
+            ].map((item) => (
+              <div key={item.num} className="flex gap-4 p-5 border border-gray-200 rounded-xl">
+                <span className="text-3xl font-black text-yellow-400 leading-none flex-shrink-0">{item.num}</span>
+                <div>
+                  <h3 className="font-bold text-black mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Inline image 2 */}
+          <div className="rounded-2xl overflow-hidden mb-12">
+            <img
+              src="/images/services/drone-shoots/3.jpg"
+              alt="Drone aerial videography for real estate - location AV shoot in India"
+              className="w-full h-72 md:h-96 object-cover"
+            />
+            <p className="text-xs text-gray-400 text-center mt-2 italic">
+              Location AV aerial shoot — Alliance Media Labs
+            </p>
+          </div>
+
+          {/* Section 5 — Construction */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Aerial Drone for Construction Progress Monitoring
+          </h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            One of the most underutilised applications of <strong>real estate drone video</strong> is
+            construction progress documentation. Scheduled aerial shoots at consistent intervals —
+            same time of day, same camera angles, same altitude — create a visual record that serves
+            multiple business purposes simultaneously.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-5 mb-10">
+            {[
+              {
+                icon: "ri-file-list-3-line",
+                title: "RERA Compliance",
+                desc: "Dated aerial photographs provide irrefutable evidence of construction progress for quarterly RERA reporting — a legal obligation for all registered projects.",
+              },
+              {
+                icon: "ri-building-4-line",
+                title: "Investor & NRI Updates",
+                desc: "Monthly drone footage updates shared with investors and NRI buyers build confidence and reduce transaction friction by showing tangible construction progress.",
+              },
+              {
+                icon: "ri-megaphone-line",
+                title: "Pre-Launch Marketing",
+                desc: "When the project reaches a photogenic construction milestone — slab casting, tower topping, facade cladding — aerial documentation creates launch-worthy marketing content.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-black text-white p-6 rounded-2xl">
+                <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
+                  <i className={`${item.icon} text-black`}></i>
+                </div>
+                <h3 className="font-bold text-white mb-2 text-sm">{item.title}</h3>
+                <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Section 6 — Choosing a company */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            How to Choose the Right Drone Photography Company for Real Estate
+          </h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Not every <strong>aerial photography company</strong> has the real estate-specific expertise
+            to plan and execute a shoot that delivers marketing-ready content. Here are the five
+            questions every developer should ask before booking:
+          </p>
+
+          <div className="space-y-3 mb-10">
+            {[
+              ["Are your pilots DGCA-licensed?", "Non-negotiable. Ask for the Remote Pilot License number and drone registration certificate before signing any agreement."],
+              ["What camera and drone equipment do you use?", "Professional real estate shoots require at minimum DJI Inspire 2 or Matrice series with Zenmuse X7 or equivalent camera. Consumer-grade drones (Mavic Air) are not suitable for broadcast or large-format print."],
+              ["Can you show a real estate aerial video portfolio?", "Generic drone footage is very different from real estate-optimised aerial cinematography. Ask specifically for property launch films or location AV videos they have produced."],
+              ["Do you handle post-production in-house?", "An operator who outsources editing has less control over colour consistency and delivery timelines. In-house post-production ensures your footage matches your brand."],
+              ["Can you coordinate a same-day drone and ground shoot?", "The most cost-effective real estate productions combine aerial and ground-level crews on the same day. This requires production management expertise — not just a pilot with a drone."],
+            ].map(([q, a], i) => (
+              <div key={i} className="border border-gray-200 rounded-xl p-5">
+                <p className="font-bold text-black text-sm mb-1">Q: {q}</p>
+                <p className="text-gray-600 text-xs leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Internal links */}
+          <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 mb-12">
+            <h3 className="font-bold text-black mb-4 text-sm uppercase tracking-widest">
+              Related Services by Alliance Media Labs
+            </h3>
+            <div className="space-y-3">
+              {[
+                { href: "/services/drone-shoots", label: "Drone Shoots & Location AV", desc: "4K aerial cinematography, golden hour shoots, DGCA-licensed pilots, location AV production" },
+                { href: "/services/route-videos", label: "Route & Location Videos", desc: "Cinematic route videography showing project connectivity, access roads, and lifestyle context" },
+                { href: "/services/3d-walkthrough-videos", label: "3D Walkthrough Videos", desc: "Pair aerial drone footage with interior 3D walkthroughs for a complete property film package" },
+                { href: "/services/construction-update-videos", label: "Construction Update Videos", desc: "Scheduled construction progress documentation with drone and ground-level footage" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-start gap-3 p-3 rounded-xl hover:bg-yellow-100 transition-colors group"
+                >
+                  <i className="ri-arrow-right-circle-fill text-yellow-500 mt-0.5 flex-shrink-0 group-hover:text-yellow-600"></i>
+                  <div>
+                    <span className="font-semibold text-black text-sm">{item.label}</span>
+                    <p className="text-xs text-gray-500 mt-0.5">{item.desc}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Frequently Asked Questions: Real Estate Drone Photography India
+          </h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-8"></div>
+
+          <div className="space-y-4 mb-12">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border border-gray-200 rounded-xl p-6">
+                <h3 className="font-bold text-black mb-3 flex items-start gap-3">
+                  <span className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-xs font-black text-black flex-shrink-0 mt-0.5">
+                    {i + 1}
+                  </span>
+                  {faq.q}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm pl-9">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Conclusion */}
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Conclusion</h2>
+          <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            <strong>Real estate drone photography</strong> is no longer a premium add-on for only the
+            largest developers — it is a baseline expectation for any serious property launch in India.
+            Buyers have been trained by years of cinematic drone footage on property portals and social
+            media to expect an aerial perspective. A project without it signals either a tight budget
+            or a small site — neither of which is the impression any developer wants to make.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The ROI is undeniable: one well-planned <strong>aerial drone video shoot</strong> generates
+            content for your website, property portals, social media, investor decks, TV commercials,
+            and NRI digital campaigns — all from a single day&apos;s production. When combined with a
+            location AV film and a 3D walkthrough video, you have a complete digital marketing toolkit
+            that positions your project against any competitor in the market.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-8">
+            Choose a production partner with DGCA-licensed pilots, broadcast-quality equipment,
+            real estate-specific experience, and in-house post-production. That combination — not
+            just the drone itself — is what turns aerial footage into a sales asset.
+          </p>
+        </div>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 pt-8 border-t border-gray-200 mb-12">
+          {post.tags.map((tag) => (
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full"
+            >
+              #{tag.replace(/ /g, "")}
+            </span>
+          ))}
+        </div>
+
+        {/* Back to Blog */}
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Book a Real Estate Drone Shoot
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            DGCA-licensed pilots. 4K aerial cinematography. Location AV production. Pan-India service.
+            Get a quote for your next project launch.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
+              Get a Free Quote
+            </Link>
+            <Link
+              href="/services/drone-shoots"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
+              View Drone Shoot Services
             </Link>
           </div>
         </div>

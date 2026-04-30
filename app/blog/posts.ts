@@ -36,6 +36,18 @@ export const blogPosts: BlogPost[] = [
     tags: ["3D House Rendering", "Architectural Rendering", "3D Floor Plan", "3D Renders", "Real Estate Visualization"],
   },
   {
+    slug: "real-estate-drone-photography-india",
+    title: "Real Estate Drone Photography in India: The Complete Guide to Aerial Videography (2025)",
+    excerpt:
+      "Everything real estate developers need to know about hiring a drone photography company in India — aerial shot types, 4K drone video production, DGCA licensing, location AV shoots, construction aerial monitoring, and how to get cinematic footage that sells.",
+    category: "Real Estate Marketing",
+    date: "May 5, 2025",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/drone-shoots/1.jpg",
+    tags: ["Drone Photography", "Aerial Videography", "Real Estate Video", "Location AV", "DGCA"],
+  },
+  {
     slug: "architectural-scale-models-india-real-estate",
     title: "The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can't",
     excerpt:
