@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -241,6 +242,31 @@ export default function DroneShootsBangaloreClient() {
                 </div>
               )}
             </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services & Cities */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h3 className="text-xl font-bold text-black mb-4">Related Services</h3>
+              <ul className="space-y-2">
+                <li><Link href="/services/drone-shoots" className="text-gray-600 hover:text-yellow-500 transition-colors">Drone Shoots &amp; Location AV — Full Details</Link></li>
+                <li><Link href="/services/route-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">Route Videos &amp; Location AV</Link></li>
+                <li><Link href="/services/construction-update-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">Construction Update Videos</Link></li>
+                <li><Link href="/services/3d-walkthrough-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-black mb-4">More Bangalore &amp; City Services</h3>
+              <ul className="space-y-2">
+                <li><Link href="/city-services/3d-walkthrough-videos-bangalore" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Bangalore</Link></li>
+                <li><Link href="/city-services/3d-walkthrough-videos-mumbai" className="text-gray-600 hover:text-yellow-500 transition-colors">Drone Shoots Mumbai</Link></li>
+                <li><Link href="/city-services/real-estate-video-production-gurugram" className="text-gray-600 hover:text-yellow-500 transition-colors">Real Estate Video Production Gurugram</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

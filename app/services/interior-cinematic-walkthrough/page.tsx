@@ -128,7 +128,7 @@ const videoObjectSchema = {
   name: "Interior Cinematic Walkthrough Videos for Luxury Real Estate — Alliance Media Labs",
   description: "Premium 3D interior cinematic walkthrough videos for luxury apartments, villas, and penthouses. Studio-quality lighting, photorealistic materials, and cinematic camera work for premium real estate marketing in India.",
   thumbnailUrl: `${BASE}/images/services/3d-walkthrough-videos/2.jpg`,
-  uploadDate: "2025-01-01",
+  uploadDate: "2026-03-15",
   duration: "PT2M00S",
   publisher: {
     "@type": "Organization",

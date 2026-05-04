@@ -127,7 +127,7 @@ const videoObjectSchema = {
   name: "Construction Update Videos for Real Estate — Alliance Media Labs",
   description: "Regular site progress documentation videos combining drone aerial footage and ground-level walkthrough for real estate developers across India. Builds buyer confidence and supports RERA compliance.",
   thumbnailUrl: `${BASE}/images/services/construction-update-videos/1.jpg`,
-  uploadDate: "2025-01-01",
+  uploadDate: "2026-02-10",
   duration: "PT1M30S",
   publisher: {
     "@type": "Organization",

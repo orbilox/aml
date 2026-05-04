@@ -79,7 +79,7 @@ const videoObjectSchema = {
   name: "4K Drone Shoots & Location AV for Real Estate — Alliance Media Labs",
   description: "Professional 4K aerial drone cinematography and location AV production for real estate marketing in India. DGCA-licensed pilots. Mumbai, Delhi NCR, Bangalore, Gurugram.",
   thumbnailUrl: `${BASE}/images/home/2.jpg`,
-  uploadDate: "2025-01-01",
+  uploadDate: "2026-03-01",
   duration: "PT1M45S",
   publisher: {
     "@type": "Organization",

@@ -144,7 +144,7 @@ const videoObjectSchema = {
   name: "3D Walkthrough Video Service for Real Estate — Alliance Media Labs",
   description: "Photorealistic 3D walkthrough videos for real estate developers in India. Cinematic property tours that sell pre-launch projects faster across Mumbai, Delhi NCR, Bangalore, and Gurugram.",
   thumbnailUrl: `${BASE}/images/services/3d-walkthrough-videos/1.jpg`,
-  uploadDate: "2025-01-01",
+  uploadDate: "2026-01-15",
   duration: "PT2M30S",
   publisher: {
     "@type": "Organization",

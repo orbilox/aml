@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -320,6 +321,31 @@ export default function WalkthroughBangaloreClient() {
                 </div>
               )}
             </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services & Cities */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h3 className="text-xl font-bold text-black mb-4">Related Services</h3>
+              <ul className="space-y-2">
+                <li><Link href="/services/3d-walkthrough-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Video Service — Full Details</Link></li>
+                <li><Link href="/services/interior-cinematic-walkthrough" className="text-gray-600 hover:text-yellow-500 transition-colors">Interior Cinematic Walkthroughs</Link></li>
+                <li><Link href="/services/virtual-reality-tours" className="text-gray-600 hover:text-yellow-500 transition-colors">Virtual Reality Tours — 360° Property Experience</Link></li>
+                <li><Link href="/services/drone-shoots" className="text-gray-600 hover:text-yellow-500 transition-colors">Drone Shoots Bangalore</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-black mb-4">3D Walkthrough Videos — Other Cities</h3>
+              <ul className="space-y-2">
+                <li><Link href="/city-services/3d-walkthrough-videos-mumbai" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Mumbai</Link></li>
+                <li><Link href="/city-services/3d-walkthrough-videos-delhi" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Delhi NCR</Link></li>
+                <li><Link href="/city-services/drone-shoots-bangalore" className="text-gray-600 hover:text-yellow-500 transition-colors">Drone Shoots Bangalore</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

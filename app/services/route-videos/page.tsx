@@ -136,7 +136,7 @@ const videoObjectSchema = {
   name: "Route Videos & Location AV for Real Estate — Alliance Media Labs",
   description: "Cinematic route and location videos showcasing project connectivity, nearby infrastructure, and location advantages for real estate developers across India.",
   thumbnailUrl: `${BASE}/images/home/2.jpg`,
-  uploadDate: "2025-01-01",
+  uploadDate: "2026-02-20",
   duration: "PT2M00S",
   publisher: {
     "@type": "Organization",

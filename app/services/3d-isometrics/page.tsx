@@ -53,7 +53,7 @@ const serviceSchema = {
     { "@type": "City", name: "Gurugram" },
     { "@type": "Country", name: "India" },
   ],
-  image: `${BASE}/images/services/3d-isometrics/1.jpg`,
+  image: `${BASE}/images/services/3d-renders-isometrics/1.jpg`,
   url: `${BASE}/services/3d-isometrics`,
 };
 

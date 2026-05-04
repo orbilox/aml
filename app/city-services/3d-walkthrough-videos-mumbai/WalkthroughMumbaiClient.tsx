@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -348,6 +349,31 @@ export default function WalkthroughMumbaiClient() {
                 <p className="text-gray-600 mt-3">{item.a}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services & Cities */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h3 className="text-xl font-bold text-black mb-4">Related Services</h3>
+              <ul className="space-y-2">
+                <li><Link href="/services/3d-walkthrough-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Video Service — Full Details</Link></li>
+                <li><Link href="/services/interior-cinematic-walkthrough" className="text-gray-600 hover:text-yellow-500 transition-colors">Interior Cinematic Walkthroughs</Link></li>
+                <li><Link href="/services/virtual-reality-tours" className="text-gray-600 hover:text-yellow-500 transition-colors">Virtual Reality Tours — 360° Property Experience</Link></li>
+                <li><Link href="/services/3d-renders-isometrics" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Renders &amp; Isometrics</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-black mb-4">3D Walkthrough Videos — Other Cities</h3>
+              <ul className="space-y-2">
+                <li><Link href="/city-services/3d-walkthrough-videos-bangalore" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Bangalore</Link></li>
+                <li><Link href="/city-services/3d-walkthrough-videos-delhi" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Delhi NCR</Link></li>
+                <li><Link href="/city-services/real-estate-video-production-gurugram" className="text-gray-600 hover:text-yellow-500 transition-colors">Real Estate Video Production Gurugram</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

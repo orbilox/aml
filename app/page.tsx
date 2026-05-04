@@ -141,14 +141,6 @@ const structuredData = [
       longitude: 76.7179,
     },
     hasMap: "https://share.google/q1UmsNMlUsc99Bnwv",
-    // TODO: Replace ratingValue and reviewCount with real GMB figures once verified
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "47",
-      bestRating: "5",
-      worstRating: "1",
-    },
     dateModified: new Date().toISOString().split("T")[0],
   },
   {
