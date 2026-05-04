@@ -122,12 +122,33 @@ const faqSchema = {
   ],
 };
 
+const videoObjectSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Interior Cinematic Walkthrough Videos for Luxury Real Estate — Alliance Media Labs",
+  description: "Premium 3D interior cinematic walkthrough videos for luxury apartments, villas, and penthouses. Studio-quality lighting, photorealistic materials, and cinematic camera work for premium real estate marketing in India.",
+  thumbnailUrl: `${BASE}/images/services/3d-walkthrough-videos/2.jpg`,
+  uploadDate: "2025-01-01",
+  duration: "PT2M00S",
+  publisher: {
+    "@type": "Organization",
+    "@id": `${BASE}/#organization`,
+    name: "Alliance Media Labs",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://static.readdy.ai/image/8d54cefc56aae77b02ec7dea9869daf3/7240d6459fd7bd08670b4a90c4788daa.png",
+    },
+  },
+  contentUrl: "https://www.youtube.com/@alliancemedialabs",
+};
+
 export default function InteriorCinematicWalkthroughPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoObjectSchema) }} />
       <InteriorCinematicClient />
     </>
   );

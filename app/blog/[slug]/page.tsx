@@ -78,8 +78,8 @@ export default function BlogDetailPage({
         height: 88,
       },
     },
-    datePublished: post.date,
-    dateModified: post.date,
+    datePublished: post.dateISO,
+    dateModified: post.dateISO,
     image: {
       "@type": "ImageObject",
       url: post.thumbnail,

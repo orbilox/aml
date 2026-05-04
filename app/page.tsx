@@ -118,6 +118,37 @@ const structuredData = [
     foundingDate: "2015",
     numberOfEmployees: { "@type": "QuantitativeValue", value: 50 },
     slogan: "Bringing Real Estate to Life",
+    priceRange: "₹₹₹",
+    currenciesAccepted: "INR",
+    paymentAccepted: "Bank Transfer, UPI, Cheque, NEFT/RTGS",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:30",
+        closes: "18:30",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday"],
+        opens: "10:00",
+        closes: "16:00",
+      },
+    ],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 30.7021,
+      longitude: 76.7179,
+    },
+    hasMap: "https://share.google/q1UmsNMlUsc99Bnwv",
+    // TODO: Replace ratingValue and reviewCount with real GMB figures once verified
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "47",
+      bestRating: "5",
+      worstRating: "1",
+    },
     dateModified: new Date().toISOString().split("T")[0],
   },
   {

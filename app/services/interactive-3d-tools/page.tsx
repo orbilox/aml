@@ -38,7 +38,17 @@ const serviceSchema = {
   description: "Web-based interactive 3D property configurators, virtual showrooms, and interactive floor plans for real estate sales offices and websites.",
   provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "Alliance Media Labs" },
   serviceType: "3D Property Configurator",
+  image: `${BASE}/images/home/3.jpg`,
   areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bangalore" }, { "@type": "Country", name: "India" }],
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "INR",
+      description: "Interactive 3D property configurators and virtual showrooms starting from ₹1,50,000 depending on project scope",
+    },
+  },
   url: `${BASE}/services/interactive-3d-tools`,
 };
 

@@ -38,7 +38,17 @@ const serviceSchema = {
   description: "Comprehensive digital marketing for real estate developers: Google Ads, Meta Ads, SEO, social media, email marketing, and content strategy with analytics-driven ROI.",
   provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "Alliance Media Labs" },
   serviceType: "Digital Marketing",
+  image: `${BASE}/images/home/2.jpg`,
   areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bangalore" }, { "@type": "Country", name: "India" }],
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "INR",
+      description: "Google Ads and Meta Ads management from ₹20,000/month; full-service digital marketing packages from ₹50,000/month",
+    },
+  },
   url: `${BASE}/services/digital-marketing`,
 };
 

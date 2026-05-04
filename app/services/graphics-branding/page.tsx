@@ -38,7 +38,17 @@ const serviceSchema = {
   description: "Professional graphic design and branding for real estate developers including logo design, brochures, hoardings, digital assets, sales kits, and complete brand identity.",
   provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "Alliance Media Labs" },
   serviceType: "Graphic Design & Branding",
+  image: `${BASE}/images/home/3.jpg`,
   areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bangalore" }, { "@type": "Country", name: "India" }],
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "INR",
+      description: "Real estate brochure design from ₹15,000; complete project branding packages from ₹40,000",
+    },
+  },
   url: `${BASE}/services/graphics-branding`,
 };
 

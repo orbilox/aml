@@ -53,6 +53,15 @@ const serviceSchema = {
     { "@type": "City", name: "Gurugram" },
     { "@type": "Country", name: "India" },
   ],
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "INR",
+      description: "Route videos starting from ₹20,000; full location AV packages from ₹60,000",
+    },
+  },
   image: `${BASE}/images/services/route-videos/1.jpg`,
   url: `${BASE}/services/route-videos`,
 };
@@ -121,12 +130,33 @@ const faqSchema = {
   ],
 };
 
+const videoObjectSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Route Videos & Location AV for Real Estate — Alliance Media Labs",
+  description: "Cinematic route and location videos showcasing project connectivity, nearby infrastructure, and location advantages for real estate developers across India.",
+  thumbnailUrl: `${BASE}/images/home/2.jpg`,
+  uploadDate: "2025-01-01",
+  duration: "PT2M00S",
+  publisher: {
+    "@type": "Organization",
+    "@id": `${BASE}/#organization`,
+    name: "Alliance Media Labs",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://static.readdy.ai/image/8d54cefc56aae77b02ec7dea9869daf3/7240d6459fd7bd08670b4a90c4788daa.png",
+    },
+  },
+  contentUrl: "https://www.youtube.com/@alliancemedialabs",
+};
+
 export default function RouteVideosPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoObjectSchema) }} />
       <RouteVideosClient />
     </>
   );

@@ -53,6 +53,15 @@ const serviceSchema = {
     { "@type": "City", name: "Gurugram" },
     { "@type": "Country", name: "India" },
   ],
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "INR",
+      description: "Single tower models from ₹2,00,000; township models with LED integration from ₹20,00,000",
+    },
+  },
   image: `${BASE}/images/services/architectural-scale-models/1.jpg`,
   url: `${BASE}/services/architectural-scale-models`,
 };
