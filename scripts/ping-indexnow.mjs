@@ -5,7 +5,7 @@
  */
 
 const KEY = "8f3e7a2b9d1c4e6f0a5b8c3d7e2f1a4b";
-const BASE = "https://www.alliancemedialabs.com";
+const BASE = "https://alliancemedialabs.com";
 
 const ALL_URLS = [
   // Core pages
@@ -48,7 +48,7 @@ async function pingIndexNow() {
   console.log(`   Submitting ${ALL_URLS.length} URLs to IndexNow\n`);
 
   const body = {
-    host: "www.alliancemedialabs.com",
+    host: "alliancemedialabs.com",
     key: KEY,
     keyLocation: `${BASE}/${KEY}.txt`,
     urlList: ALL_URLS,

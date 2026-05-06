@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const revalidate = 86400; // Revalidate every 24 hours
 import Interactive3DToolsClient from "./Interactive3DToolsClient";
 
-const BASE = "https://www.alliancemedialabs.com";
+const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
   title: "Interactive 3D Tools for Real Estate | Property Configurator & Virtual Showroom India | Alliance Media Labs",

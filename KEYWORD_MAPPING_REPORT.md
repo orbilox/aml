@@ -1,5 +1,5 @@
 # Alliance Media Labs — SEO Keyword Mapping Report
-**Website:** https://www.alliancemedialabs.com  
+**Website:** https://alliancemedialabs.com  
 **Prepared by:** Alliance Media Labs SEO Optimization  
 **Date:** March 2026  
 **Total Pages Covered:** 23

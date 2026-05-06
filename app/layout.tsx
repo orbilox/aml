@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     apple: "/AML-FavIcon.png",
   },
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.alliancemedialabs.com"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://alliancemedialabs.com"
   ),
   openGraph: {
     title: "Alliance Media Labs | Creative Tech & Branding Company for Real Estate",
     description:
       "Alliance Media Labs partners with real estate brands to design immersive visuals, digital ecosystems, and impactful brand experiences.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.alliancemedialabs.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://alliancemedialabs.com",
     siteName: "Alliance Media Labs",
     images: [
       {

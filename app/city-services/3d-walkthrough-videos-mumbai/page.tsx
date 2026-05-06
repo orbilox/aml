@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const revalidate = 86400; // Revalidate every 24 hours
 import WalkthroughMumbaiClient from "./WalkthroughMumbaiClient";
 
-const BASE = "https://www.alliancemedialabs.com";
+const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
   title: "3D Walkthrough Videos Mumbai | Real Estate Animation & Property Tours | Alliance Media Labs",

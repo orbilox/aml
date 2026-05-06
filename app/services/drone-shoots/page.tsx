@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const revalidate = 86400; // Revalidate every 24 hours
 import DroneShootsClient from "./DroneShootsClient";
 
-const BASE = "https://www.alliancemedialabs.com";
+const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
   title: "Drone Shoots & Location AV for Real Estate | Aerial Cinematography India | Alliance Media Labs",

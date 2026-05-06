@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const revalidate = 86400; // Revalidate every 24 hours
 import RouteVideosClient from "./RouteVideosClient";
 
-const BASE = "https://www.alliancemedialabs.com";
+const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
   title: "Route Videos & Location AV for Real Estate | Connectivity Videos India | Alliance Media Labs",

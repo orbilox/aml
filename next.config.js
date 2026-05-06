@@ -19,17 +19,6 @@ const nextConfig = {
     ],
   },
 
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "alliancemedialabs.com" }],
-        destination: "https://www.alliancemedialabs.com/:path*",
-        permanent: true,
-      },
-    ];
-  },
-
   async headers() {
     return [
       {

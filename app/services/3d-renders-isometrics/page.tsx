@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const revalidate = 86400; // Revalidate every 24 hours
 import RendersIsometricsClient from "./RendersIsometricsClient";
 
-const BASE = "https://www.alliancemedialabs.com";
+const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
   title: "3D Renders & Isometrics | Photorealistic Architectural Visualization India | Alliance Media Labs",

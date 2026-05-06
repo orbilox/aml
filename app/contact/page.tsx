@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const revalidate = 86400; // Revalidate every 24 hours
 import ContactPageClient from "./ContactPageClient";
 
-const BASE = "https://www.alliancemedialabs.com";
+const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
   title: "Contact Alliance Media Labs | Get a Free Quote for 3D Walkthrough & Real Estate Visualization",

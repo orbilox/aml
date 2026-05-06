@@ -18,17 +18,17 @@ export const metadata: Metadata = {
   keywords:
     "real estate visualization company India, 3D walkthrough video service India, architectural visualization India, VR tours real estate, drone shoots real estate, 3D renders India, real estate marketing company Mumbai Delhi Bangalore, photorealistic architectural rendering, real estate 3D animation India, property visualization agency",
   alternates: {
-    canonical: "https://www.alliancemedialabs.com",
+    canonical: "https://alliancemedialabs.com",
   },
   openGraph: {
     title: "Alliance Media Labs | #1 Real Estate Visualization Company in India",
     description:
       "India's leading real estate visualization company. 3D walkthrough videos, VR tours, architectural renders, drone shoots & digital marketing. 500+ projects delivered across Mumbai, Delhi NCR, Bangalore & Gurugram.",
-    url: "https://www.alliancemedialabs.com",
+    url: "https://alliancemedialabs.com",
     siteName: "Alliance Media Labs",
     images: [
       {
-        url: "https://www.alliancemedialabs.com/images/home/1.jpg",
+        url: "https://alliancemedialabs.com/images/home/1.jpg",
         width: 1200,
         height: 630,
         alt: "Alliance Media Labs — Real Estate Visualization Company India",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Alliance Media Labs | #1 Real Estate Visualization Company in India",
     description:
       "India's leading real estate visualization company. 3D walkthrough videos, VR tours, architectural renders & drone shoots. 500+ projects delivered.",
-    images: ["https://www.alliancemedialabs.com/images/home/1.jpg"],
+    images: ["https://alliancemedialabs.com/images/home/1.jpg"],
   },
   robots: {
     index: true,
@@ -55,19 +55,19 @@ const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness"],
-    "@id": "https://www.alliancemedialabs.com/#organization",
+    "@id": "https://alliancemedialabs.com/#organization",
     name: "Alliance Media Labs",
     legalName: "Alliance Media Labs",
     description:
       "India's leading real estate visualization company specializing in 3D walkthrough videos, virtual reality tours, architectural renders, drone shoots, and digital marketing for real estate developers.",
-    url: "https://www.alliancemedialabs.com",
+    url: "https://alliancemedialabs.com",
     logo: {
       "@type": "ImageObject",
       url: "https://static.readdy.ai/image/8d54cefc56aae77b02ec7dea9869daf3/7240d6459fd7bd08670b4a90c4788daa.png",
       width: 320,
       height: 88,
     },
-    image: "https://www.alliancemedialabs.com/images/home/1.jpg",
+    image: "https://alliancemedialabs.com/images/home/1.jpg",
     telephone: "+91-9999916744",
     email: "info@alliancemedialabs.com",
     contactPoint: [
@@ -111,9 +111,9 @@ const structuredData = [
     },
     sameAs: [
       "https://linkedin.com/company/alliance-media-labs",
-      "https://www.instagram.com/alliancemedialabs",
+      "https://instagram.com/alliancemedialabs",
       "https://youtube.com/@alliancemedialabs",
-      "https://www.facebook.com/share/1KC5TqxSQL",
+      "https://facebook.com/share/1KC5TqxSQL",
     ],
     foundingDate: "2015",
     numberOfEmployees: { "@type": "QuantitativeValue", value: 50 },
@@ -146,14 +146,14 @@ const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://www.alliancemedialabs.com/#website",
-    url: "https://www.alliancemedialabs.com",
+    "@id": "https://alliancemedialabs.com/#website",
+    url: "https://alliancemedialabs.com",
     name: "Alliance Media Labs",
     description: "Real Estate Visualization & Marketing Company India",
-    publisher: { "@id": "https://www.alliancemedialabs.com/#organization" },
+    publisher: { "@id": "https://alliancemedialabs.com/#organization" },
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://www.alliancemedialabs.com/?s={search_term_string}",
+      target: "https://alliancemedialabs.com/?s={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   },

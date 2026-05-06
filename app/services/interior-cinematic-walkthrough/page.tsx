@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const revalidate = 86400; // Revalidate every 24 hours
 import InteriorCinematicClient from "./InteriorCinematicClient";
 
-const BASE = "https://www.alliancemedialabs.com";
+const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
   title: "Interior Cinematic Walkthrough Videos | Luxury Interior 3D Animation India | Alliance Media Labs",

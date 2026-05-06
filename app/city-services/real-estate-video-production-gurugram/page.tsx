@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const revalidate = 86400; // Revalidate every 24 hours
 import VideoProductionGurugramClient from "./VideoProductionGurugramClient";
 
-const BASE = "https://www.alliancemedialabs.com";
+const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
   title: "Real Estate Video Production Gurugram | 3D Walkthrough & Drone Shoots Gurgaon | Alliance Media Labs",

@@ -4,35 +4,35 @@
 
 ## Services
 
-- 3D Walkthrough Videos: https://www.alliancemedialabs.com/services/3d-walkthrough-videos
-- Virtual Reality Tours: https://www.alliancemedialabs.com/services/virtual-reality-tours
-- Drone Shoots & Location AV: https://www.alliancemedialabs.com/services/drone-shoots
-- 3D Renders & Isometrics: https://www.alliancemedialabs.com/services/3d-renders-isometrics
-- 3D Isometric Views: https://www.alliancemedialabs.com/services/3d-isometrics
-- Interior Cinematic Walkthroughs: https://www.alliancemedialabs.com/services/interior-cinematic-walkthrough
-- Architectural Scale Models: https://www.alliancemedialabs.com/services/architectural-scale-models
-- Construction Update Videos: https://www.alliancemedialabs.com/services/construction-update-videos
-- Route Videos & Location AV: https://www.alliancemedialabs.com/services/route-videos
-- Interactive 3D Tools: https://www.alliancemedialabs.com/services/interactive-3d-tools
-- Digital Marketing for Real Estate: https://www.alliancemedialabs.com/services/digital-marketing
-- Graphics & Branding: https://www.alliancemedialabs.com/services/graphics-branding
+- 3D Walkthrough Videos: https://alliancemedialabs.com/services/3d-walkthrough-videos
+- Virtual Reality Tours: https://alliancemedialabs.com/services/virtual-reality-tours
+- Drone Shoots & Location AV: https://alliancemedialabs.com/services/drone-shoots
+- 3D Renders & Isometrics: https://alliancemedialabs.com/services/3d-renders-isometrics
+- 3D Isometric Views: https://alliancemedialabs.com/services/3d-isometrics
+- Interior Cinematic Walkthroughs: https://alliancemedialabs.com/services/interior-cinematic-walkthrough
+- Architectural Scale Models: https://alliancemedialabs.com/services/architectural-scale-models
+- Construction Update Videos: https://alliancemedialabs.com/services/construction-update-videos
+- Route Videos & Location AV: https://alliancemedialabs.com/services/route-videos
+- Interactive 3D Tools: https://alliancemedialabs.com/services/interactive-3d-tools
+- Digital Marketing for Real Estate: https://alliancemedialabs.com/services/digital-marketing
+- Graphics & Branding: https://alliancemedialabs.com/services/graphics-branding
 
 ## City Pages
 
-- 3D Renders Mumbai: https://www.alliancemedialabs.com/city-services/3d-renders-mumbai
-- 3D Walkthrough Videos Mumbai: https://www.alliancemedialabs.com/city-services/3d-walkthrough-videos-mumbai
-- 3D Walkthrough Videos Bangalore: https://www.alliancemedialabs.com/city-services/3d-walkthrough-videos-bangalore
-- 3D Walkthrough Videos Delhi NCR: https://www.alliancemedialabs.com/city-services/3d-walkthrough-videos-delhi
-- Drone Shoots Bangalore: https://www.alliancemedialabs.com/city-services/drone-shoots-bangalore
-- Real Estate Video Production Gurugram: https://www.alliancemedialabs.com/city-services/real-estate-video-production-gurugram
+- 3D Renders Mumbai: https://alliancemedialabs.com/city-services/3d-renders-mumbai
+- 3D Walkthrough Videos Mumbai: https://alliancemedialabs.com/city-services/3d-walkthrough-videos-mumbai
+- 3D Walkthrough Videos Bangalore: https://alliancemedialabs.com/city-services/3d-walkthrough-videos-bangalore
+- 3D Walkthrough Videos Delhi NCR: https://alliancemedialabs.com/city-services/3d-walkthrough-videos-delhi
+- Drone Shoots Bangalore: https://alliancemedialabs.com/city-services/drone-shoots-bangalore
+- Real Estate Video Production Gurugram: https://alliancemedialabs.com/city-services/real-estate-video-production-gurugram
 
 ## Blog
 
-- https://www.alliancemedialabs.com/blog
-- 3D Walkthrough Video Guide: https://www.alliancemedialabs.com/blog/3d-walkthrough-video-service
-- 3D House Rendering India Guide: https://www.alliancemedialabs.com/blog/3d-house-rendering-guide-india
-- Real Estate Drone Photography India: https://www.alliancemedialabs.com/blog/real-estate-drone-photography-india
-- Architectural Scale Models India: https://www.alliancemedialabs.com/blog/architectural-scale-models-india-real-estate
+- https://alliancemedialabs.com/blog
+- 3D Walkthrough Video Guide: https://alliancemedialabs.com/blog/3d-walkthrough-video-service
+- 3D House Rendering India Guide: https://alliancemedialabs.com/blog/3d-house-rendering-guide-india
+- Real Estate Drone Photography India: https://alliancemedialabs.com/blog/real-estate-drone-photography-india
+- Architectural Scale Models India: https://alliancemedialabs.com/blog/architectural-scale-models-india-real-estate
 
 ## Cities Served
 
@@ -43,5 +43,5 @@ Mumbai, Delhi NCR, Bangalore, Gurugram, Pune, Hyderabad, Chennai, Kolkata, Ahmed
 - Phone: +91-9999916744
 - Email: info@alliancemedialabs.com
 - Address: D-244, 3rd Floor, Unit-4, Sector 74, Mohali, Punjab 160055, India
-- Website: https://www.alliancemedialabs.com
-- Portfolio: https://www.alliancemedialabs.com/portfolio
+- Website: https://alliancemedialabs.com
+- Portfolio: https://alliancemedialabs.com/portfolio
