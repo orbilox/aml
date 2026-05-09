@@ -6,18 +6,18 @@ import ArchitecturalScaleModelsClient from "./ArchitecturalScaleModelsClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Architectural Scale Models | Miniature Model Making India | Alliance Media Labs",
+  title: "Scale Model Making Company India | 3D Scale Model Maker | Alliance Media Labs",
   description:
-    "Professional architectural scale models and miniature model making for real estate developers. Precision craftsmanship, LED lighting integration, and premium materials for stunning property launch presentations. Mumbai, Delhi NCR, Bangalore.",
+    "Alliance Media Labs — India's #1 scale model making company. Expert 3D scale model maker & 3D model making service for real estate developers. Architectural scale models service in India with LED lighting & premium craftsmanship.",
   keywords:
-    "architectural scale models India, 3d model making service, miniature model making India, real estate scale model, scale model makers, scale model making company, 3D scale model builder India, physical scale model real estate, model making company India, architectural model for property launch, LED scale model real estate, township scale model India, scale model making Mumbai Delhi Bangalore, professional scale model builders, miniature model, scale models",
+    "scale model making company, 3d scale model maker, 3d model making service, architectural scale models service in india, architectural scale models India, miniature model making India, real estate scale model, scale model makers, 3D scale model builder India, physical scale model real estate, model making company India, architectural model for property launch, LED scale model real estate, township scale model India, scale model making Mumbai Delhi Bangalore, professional scale model builders",
   alternates: {
     canonical: `${BASE}/services/architectural-scale-models`,
   },
   openGraph: {
-    title: "Architectural Scale Models | Miniature Model Making — Alliance Media Labs",
+    title: "Scale Model Making Company India | 3D Scale Model Maker — Alliance Media Labs",
     description:
-      "Precision architectural scale models and miniature model making for real estate developers across India. LED lighting, premium materials, and stunning craftsmanship.",
+      "India's leading scale model making company. Expert 3D scale model maker & 3D model making service for real estate developers. Architectural scale models service in India with LED integration.",
     url: `${BASE}/services/architectural-scale-models`,
     siteName: "Alliance Media Labs",
     images: [{ url: `${BASE}/images/services/architectural-scale-models/1.jpg`, width: 1200, height: 630, alt: "Architectural Scale Models — Alliance Media Labs" }],
@@ -39,7 +39,7 @@ const serviceSchema = {
   "@id": `${BASE}/services/architectural-scale-models#service`,
   name: "Architectural Scale Models",
   description:
-    "Professional architectural scale model making for real estate developers. Precision-crafted physical models with LED lighting, premium materials, and detailed landscaping for property launch presentations, sales offices, and exhibitions.",
+    "India's leading scale model making company offering a complete 3D model making service for real estate developers. Expert 3D scale model maker team crafting precision architectural scale models service in India — LED lighting, premium materials, and detailed landscaping for property launches, sales offices, and exhibitions.",
   provider: {
     "@type": "Organization",
     "@id": `${BASE}/#organization`,

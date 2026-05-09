@@ -181,9 +181,9 @@ export default function ArchitecturalScaleModelsClient() {
               <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
                 <i className="ri-building-2-line text-3xl text-black"></i>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">Architectural Scale Models India</h1>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">Architectural Scale Models Service in India</h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
-                Detailed video presentations of physical and digital architectural scale models with professional cinematography.
+                India&apos;s trusted 3D scale model maker for real estate developers, infrastructure projects, and property launches. End-to-end 3D model making service with LED integration, premium materials, and precision craftsmanship.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer">Get Quote</Link>
@@ -197,9 +197,9 @@ export default function ArchitecturalScaleModelsClient() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Professional Scale Model Craftsmanship</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Professional 3D Model Making Service & Craftsmanship</h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">Handcrafted architectural scale models with exceptional detail and precision for presentations and exhibitions</p>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">Handcrafted architectural scale models with exceptional detail and precision. As a full-service 3D model making service, we handle everything from concept to delivery — for presentations, sales offices, and exhibitions across India.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -216,6 +216,60 @@ export default function ArchitecturalScaleModelsClient() {
                   </div>
                   <h3 className="text-xl font-bold text-black mb-4">{f.title}</h3>
                   <p className="text-gray-600">{f.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Scale Model Types Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Types of Scale Models We Make</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                From luxury residential towers to large-scale infrastructure, our architectural scale models service in India covers every project type with equal precision.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: "ri-building-4-line",
+                  title: "Residential & Housing",
+                  desc: "Apartment towers, villa clusters, gated communities, and affordable housing projects. Our 3D scale model maker team captures every detail — from facade to landscaping.",
+                  tags: ["Apartments", "Villas", "Townships"],
+                },
+                {
+                  icon: "ri-community-line",
+                  title: "Township Master Plans",
+                  desc: "Large-scale integrated townships, plotted developments, and master plan models at 1:500 to 1:1000 scale. India's most complex 3D model making service projects handled with precision.",
+                  tags: ["Plotted Dev.", "Mixed-Use", "Master Plans"],
+                },
+                {
+                  icon: "ri-store-3-line",
+                  title: "Commercial & Mixed-Use",
+                  desc: "Office parks, retail malls, hospitality developments, and mixed-use complexes. Our scale model making company delivers boardroom-ready models for investor and client presentations.",
+                  tags: ["Office Parks", "Retail", "Hotels"],
+                },
+                {
+                  icon: "ri-train-line",
+                  title: "Infrastructure & Government",
+                  desc: "Railway stations, metro hubs, airports, and civic infrastructure projects. Trusted by government bodies and urban planners for high-accuracy architectural scale models service in India.",
+                  tags: ["Railways", "Metro", "Civic"],
+                },
+              ].map((type) => (
+                <div key={type.title} className="bg-white rounded-2xl p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                  <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                    <i className={`${type.icon} text-2xl text-black`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-3">{type.title}</h3>
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{type.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {type.tags.map((tag) => (
+                      <span key={tag} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">{tag}</span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
@@ -354,7 +408,7 @@ export default function ArchitecturalScaleModelsClient() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Our Scale Model Making Process</h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-gray-600 max-w-2xl mx-auto">A structured, detail-driven approach to deliver precise and high-quality architectural scale models.</p>
+              <p className="text-gray-600 max-w-2xl mx-auto">Our structured 3D model making service follows a detail-driven approach — from drawing review to final delivery — ensuring precise, high-quality architectural scale models every time.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               {[
@@ -382,7 +436,7 @@ export default function ArchitecturalScaleModelsClient() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why Choose Our Scale Model Making Company</h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-gray-600 max-w-2xl mx-auto">We combine craftsmanship, technology, and real estate expertise to deliver world-class architectural scale models.</p>
+              <p className="text-gray-600 max-w-2xl mx-auto">As India&apos;s trusted scale model making company, we combine expert craftsmanship, advanced 3D model making service capabilities, and deep real estate expertise to deliver world-class architectural scale models service in India.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {[
@@ -492,6 +546,7 @@ export default function ArchitecturalScaleModelsClient() {
         { q: "Can the model be updated if the design changes?", a: "Yes. We offer modification services for existing models — adding new towers, updating landscaping, or changing unit configurations without rebuilding the entire model." },
         { q: "What scale is typically used for real estate models?", a: "1:100 for individual villas and apartments, 1:200 for mid-size residential projects, and 1:500 to 1:1000 for large townships. We recommend the best scale based on your display space and level of detail required." },
         { q: "How much does an architectural scale model cost?", a: "Pricing depends on the scale, size, complexity, materials, and LED integration. Contact our experts for a detailed quote based on your project drawings." },
+        { q: "Why is Alliance Media Labs the best architectural scale models service in India?", a: "Alliance Media Labs is India's most experienced scale model making company — trusted by real estate developers from Pune to Hyderabad. Our in-house 3D scale model maker team offers a complete 3D model making service, from initial concept to white-glove installation. Every model is engineered for accuracy, durability, and visual impact." },
       ].map((faq, i) => (
         <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
           <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
