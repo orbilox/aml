@@ -19,6 +19,7 @@ const ALL_URLS = [
   "/blog/architectural-scale-models-india-real-estate",
   "/blog/3d-house-rendering-guide-india",
   "/blog/real-estate-drone-photography-india",
+  "/blog/scale-model-making-india-complete-guide",
 
   // Service pages
   "/services/3d-walkthrough-videos",

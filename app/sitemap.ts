@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/architectural-scale-models-india-real-estate",
     "/blog/3d-house-rendering-guide-india",
     "/blog/real-estate-drone-photography-india",
+    "/blog/scale-model-making-india-complete-guide",
   ];
 
   const cityRoutes = [

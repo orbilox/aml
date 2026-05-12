@@ -52,6 +52,19 @@ export const blogPosts: BlogPost[] = [
     tags: ["Drone Photography", "Aerial Videography", "Real Estate Video", "Location AV", "DGCA"],
   },
   {
+    slug: "scale-model-making-india-complete-guide",
+    title: "Scale Model Making in India: The Complete Guide for Real Estate Developers (2026)",
+    excerpt:
+      "Everything real estate developers need to know about architectural scale models in India — types, scale ratios, materials, how to choose a scale model making company, costs, and why a physical miniature model still outsells every digital alternative.",
+    category: "Real Estate Marketing",
+    date: "May 8, 2026",
+    dateISO: "2026-05-08",
+    readTime: "12 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/architectural-scale-models/1.jpg",
+    tags: ["Scale Models", "Miniature Model Making", "3D Scale Model Maker", "Scale Model Making Company", "Architectural Scale Models"],
+  },
+  {
     slug: "architectural-scale-models-india-real-estate",
     title: "The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can't",
     excerpt:

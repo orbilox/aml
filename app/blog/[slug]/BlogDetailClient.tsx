@@ -26,6 +26,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <ScaleModelsArticle post={post} />;
   }
 
+  if (slug === "scale-model-making-india-complete-guide") {
+    return <ScaleModelMakingGuideArticle post={post} />;
+  }
+
   return notFound();
 }
 
@@ -1823,6 +1827,580 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
             >
               View Scale Model Portfolio
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SCALE MODEL MAKING — COMPLETE GUIDE
+   ───────────────────────────────────────────────────────────── */
+function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative bg-black pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="/images/services/architectural-scale-models/1.jpg"
+            alt="Scale model making in India — architectural miniature by Alliance Media Labs"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-gray-400 text-sm">{post.readTime}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
+          <div className="flex items-center gap-4 text-sm text-gray-400">
+            <span>{post.author}</span>
+            <span>•</span>
+            <span>{post.date}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Article Body */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* TOC */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-12">
+          <h2 className="text-lg font-bold text-black mb-4">In This Guide</h2>
+          <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+            <li><a href="#what-are" className="hover:text-yellow-500 transition-colors">What Is Architectural Scale Model Making?</a></li>
+            <li><a href="#types" className="hover:text-yellow-500 transition-colors">Types of Architectural Scale Models</a></li>
+            <li><a href="#process" className="hover:text-yellow-500 transition-colors">The Complete Scale Model Making Process</a></li>
+            <li><a href="#materials" className="hover:text-yellow-500 transition-colors">Materials Used in Miniature Model Making</a></li>
+            <li><a href="#scale-ratios" className="hover:text-yellow-500 transition-colors">Scale Ratios — Which One Is Right for You?</a></li>
+            <li><a href="#choose" className="hover:text-yellow-500 transition-colors">How to Choose a Scale Model Making Company</a></li>
+            <li><a href="#cost" className="hover:text-yellow-500 transition-colors">Cost of Architectural Scale Models in India</a></li>
+            <li><a href="#vs-digital" className="hover:text-yellow-500 transition-colors">Scale Models vs Digital Visualization</a></li>
+            <li><a href="#faq" className="hover:text-yellow-500 transition-colors">Frequently Asked Questions</a></li>
+          </ol>
+        </div>
+
+        {/* Section 1 — What Are */}
+        <section id="what-are" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">What Is Architectural Scale Model Making?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Architectural scale model making is the craft of building a precisely proportioned physical replica of a building, township, infrastructure project, or landscape. These three-dimensional miniatures are crafted at a fraction of the actual size — typically anywhere between 1:50 and 1:2000 — preserving every architectural detail, landscaping element, road network, and structural nuance of the original design.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            In India's competitive real estate market, scale model making has evolved from a simple presentation tool into a sophisticated sales instrument. When a prospective buyer walks into a project site office and sees a premium miniature model illuminated with fibre-optic lighting, phase-wise LED systems, and hand-crafted landscaping, the emotional impact is immediate and powerful — far beyond what any render or animation can replicate.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The discipline sits at the intersection of architecture, engineering, and fine craftsmanship. A professional <strong>3D scale model maker</strong> must read and interpret CAD drawings, understand structural and material properties, operate CNC routers and laser cutters with precision, and apply hand-finishing skills to achieve the lifelike quality that top developers demand.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Alliance Media Labs has been delivering high-precision architectural scale models for India's leading real estate developers, infrastructure companies, and government agencies. Our models combine digital fabrication technology with master craftsmanship — built to impress investors, buyers, and approval committees alike.
+          </p>
+        </section>
+
+        {/* Section 2 — Types */}
+        <section id="types" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">Types of Architectural Scale Models</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Not all projects need the same type of model. The right format depends on the size of the development, the intended audience, and the stage of the sales or approval process.
+          </p>
+
+          <div className="space-y-6">
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-2">1. Residential Housing Models</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Built for individual villas, apartment blocks, or gated communities. These models showcase building elevations, floor layouts, balcony designs, landscaping, and amenity zones such as pools, gyms, and clubhouses. They are the most common type used in pre-launch sales offices across India's metros and Tier 1 cities.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-2">2. Township Master Plan Models</h3>
+              <p className="text-gray-700 leading-relaxed">
+                These are large-format models — often spanning 8 to 20 feet — built to represent integrated townships, SEZs, and master-planned communities. They depict roads, sector divisions, phase boundaries, open spaces, and utility infrastructure, making them ideal for government presentations, investor roadshows, and large project launches.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-2">3. Commercial and Mixed-Use Models</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Office parks, business districts, malls, and mixed-use high-rises require models that convey scale, density, and connectivity. These models often include removable floor plates, interior fit-out displays, and directional lighting to highlight retail podiums or anchor zones.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-2">4. Infrastructure and Government Project Models</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Highways, metro rail corridors, airports, ports, and smart city developments are frequently presented using large terrain models. These capture topography, existing structures, and new infrastructure overlays — critical for government approvals, public consultations, and media presentations.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-2">5. Interior Show Flat Models</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Cutaway or open-top models that show the internal layout of a single apartment or villa — furniture arrangement, ceiling heights, kitchen design, and room adjacencies. These are especially effective for off-plan sales when a physical show flat cannot yet be constructed.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-2">6. Heritage Conservation and Institutional Models</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Museums, universities, and heritage bodies commission detailed scale replicas of monuments, campuses, and historical structures. These models prioritise accuracy of architectural detail and historical material representation over commercial sales utility.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3 — Process */}
+        <section id="process" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">The Complete Scale Model Making Process</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            A professionally executed scale model does not emerge from guesswork. Every model Alliance Media Labs produces follows a rigorous six-stage workflow — from drawing review to final delivery and installation — ensuring dimensional accuracy and finish quality that withstands close client scrutiny.
+          </p>
+
+          <div className="space-y-8">
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">1</div>
+              <div>
+                <h3 className="text-xl font-bold text-black mb-2">Design Brief and Drawing Review</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We begin by reviewing your architectural drawings — AutoCAD files, BIM models, site plans, and elevation sheets. Our team calculates the optimal scale ratio based on project size, model base dimensions, and the level of detail required. We confirm scope: which phases to include, what landscaping to show, and whether LEDs, water features, or interactive elements are needed. A detailed production brief is signed off before any fabrication begins.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">2</div>
+              <div>
+                <h3 className="text-xl font-bold text-black mb-2">Digital Modelling and CNC Preparation</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Our <strong>3D scale model maker</strong> team converts 2D drawings into precise 3D digital models using specialised CAD software. Every building component — walls, columns, rooflines, staircases, railings — is modelled to exact scaled dimensions. These digital files drive our CNC routers and laser cutters, eliminating the human measurement error that plagued traditional hand-cut model making.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">3</div>
+              <div>
+                <h3 className="text-xl font-bold text-black mb-2">Material Cutting and Fabrication</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Components are precision-cut from acrylic, ABS plastic, MDF, foam board, or specialist architectural modelling materials, depending on the element type. Glass facades are simulated with clear acrylic panels. Road networks are laser-etched onto the base. Green areas are built up using model grass, foam foliage, and hand-placed tree armatures. This is the most time-intensive stage of miniature model making — it can take anywhere from 5 to 40 working days depending on model size and complexity.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">4</div>
+              <div>
+                <h3 className="text-xl font-bold text-black mb-2">Assembly and Electrical Integration</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Individual components are assembled on the base board using precision adhesives and alignment jigs. LED lighting systems — warm white for habitable buildings, cool white for commercial, amber for landscape paths — are wired into hidden channels beneath the base. Phase-wise lighting controls allow salespeople to highlight specific blocks independently during a client walkthrough. Water simulation features, if specified, are plumbed and tested at this stage.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">5</div>
+              <div>
+                <h3 className="text-xl font-bold text-black mb-2">Painting, Finishing, and Landscaping</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Buildings are painted in custom-mixed colours matching your actual facade specifications. Window frames, balconies, and cladding patterns are hand-painted with fine brushes. Landscaping is layered in — ground cover, shrubs, specimen trees, water body colouring, and amenity area detailing. A protective acrylic cover and illuminated base complete the assembly. This final stage is where our craft sets Alliance Media Labs apart — it is the difference between a model that looks like a toy and one that looks like a luxury presentation piece.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">6</div>
+              <div>
+                <h3 className="text-xl font-bold text-black mb-2">Quality Check, Packaging, and Delivery</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Every model undergoes a structured quality inspection — checking dimensional accuracy, lighting function, finish consistency, and structural rigidity. Models are then photographed for documentation, packed in custom foam-lined crates, and transported to site by our own team. We supervise installation, test all electrics on-site, and brief your sales team on operation and maintenance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4 — Materials */}
+        <section id="materials" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">Materials Used in Miniature Model Making</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Material selection in miniature model making is not arbitrary. Each material serves a specific structural or visual purpose, and the choice directly affects the model's durability, finish quality, and cost. Here's how we think about material selection:
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 rounded-xl p-5">
+              <h3 className="font-bold text-black mb-2">Acrylic (PMMA)</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">The workhorse of architectural model making. Available in transparent, frosted, and coloured variants. Used for glazing, water surfaces, illuminated panels, and structural building shells. Machines cleanly on CNC routers and laser cutters. Bonds with solvent cement for invisible joints.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5">
+              <h3 className="font-bold text-black mb-2">ABS Plastic</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">High-strength thermoplastic used for complex moulded components — curved facades, dome structures, and bespoke architectural features. Can be vacuum-formed, 3D-printed, or CNC-milled. Paints and primes exceptionally well.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5">
+              <h3 className="font-bold text-black mb-2">MDF and Foam Board</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">Used for internal structure, base boards, terrain sculpting, and wall infill. MDF is dimensionally stable and takes paint well. High-density foam board is used for terrain contouring and lightweight construction of large base sections.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5">
+              <h3 className="font-bold text-black mb-2">Model Foliage and Ground Cover</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">Professional architectural model grass mats, scatter foliage, and pre-made tree armatures from specialist model suppliers. Applied in layers to create depth and realism. Colours are selected to represent planted species — not generic green.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5">
+              <h3 className="font-bold text-black mb-2">Laser-Etched Road and Paving Surfaces</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">Roads, footpaths, parking bays, and pavement patterns are engraved directly onto the base or road surface material using laser etching. This produces crisp, consistent line work impossible to achieve by hand at small scales.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5">
+              <h3 className="font-bold text-black mb-2">LED Systems and Fibre Optics</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">Warm-white, cool-white, and coloured SMD LEDs are wired into buildings and landscape elements. Fibre optic strands are used for star-field effects, swimming pool lighting, and ultra-fine feature illumination where conventional LEDs are too bulky.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 5 — Scale Ratios */}
+        <section id="scale-ratios" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">Scale Ratios — Which One Is Right for Your Project?</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Choosing the correct scale ratio is one of the most important decisions in scale model making. Too large a scale and the model becomes physically unmanageable; too small and critical detail is lost. The right ratio balances visual impact with practical constraints.
+          </p>
+
+          <div className="overflow-x-auto rounded-xl border border-gray-200 mb-6">
+            <table className="w-full text-sm">
+              <thead className="bg-black text-white">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Scale Ratio</th>
+                  <th className="px-4 py-3 text-left font-semibold">Best For</th>
+                  <th className="px-4 py-3 text-left font-semibold">Typical Model Size</th>
+                  <th className="px-4 py-3 text-left font-semibold">Level of Detail</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">1:50</td>
+                  <td className="px-4 py-3 text-gray-700">Individual villa, show flat layout</td>
+                  <td className="px-4 py-3 text-gray-700">2–4 ft</td>
+                  <td className="px-4 py-3 text-gray-700">Very High — furniture visible</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-3 font-medium">1:100</td>
+                  <td className="px-4 py-3 text-gray-700">Apartment block, boutique development</td>
+                  <td className="px-4 py-3 text-gray-700">3–6 ft</td>
+                  <td className="px-4 py-3 text-gray-700">High — floor-by-floor detail</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">1:200</td>
+                  <td className="px-4 py-3 text-gray-700">Mid-size residential complex, commercial tower</td>
+                  <td className="px-4 py-3 text-gray-700">4–8 ft</td>
+                  <td className="px-4 py-3 text-gray-700">Medium-High — window and balcony detail</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-3 font-medium">1:500</td>
+                  <td className="px-4 py-3 text-gray-700">Large housing project, township phase</td>
+                  <td className="px-4 py-3 text-gray-700">6–12 ft</td>
+                  <td className="px-4 py-3 text-gray-700">Medium — building massing, roads, landscape</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">1:1000</td>
+                  <td className="px-4 py-3 text-gray-700">Full township master plan</td>
+                  <td className="px-4 py-3 text-gray-700">8–16 ft</td>
+                  <td className="px-4 py-3 text-gray-700">Medium — sector layout, phase zoning</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-3 font-medium">1:2000+</td>
+                  <td className="px-4 py-3 text-gray-700">Regional infrastructure, smart city overview</td>
+                  <td className="px-4 py-3 text-gray-700">10–20 ft</td>
+                  <td className="px-4 py-3 text-gray-700">Low — overall spatial relationships</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-gray-500 text-sm italic">
+            Note: Custom ratios are possible when standard ratios don't fit your site dimensions or base table constraints. Our team will calculate the optimal ratio during the design brief phase.
+          </p>
+        </section>
+
+        {/* Section 6 — How to Choose */}
+        <section id="choose" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">How to Choose a Scale Model Making Company in India</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            India has hundreds of vendors calling themselves a scale model making company — ranging from single-person workshops to larger production studios. Not all are equal. Here are six questions to ask before you commission your next architectural model:
+          </p>
+
+          <div className="space-y-6">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">01</div>
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">Do they work directly from your CAD/BIM drawings?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  A professional <strong>scale model making company</strong> should be able to work directly from AutoCAD DWG, Revit, or SketchUp files — not hand-trace printed drawings. CNC-driven fabrication from digital files eliminates measurement errors and produces the dimensional precision your architects expect.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">02</div>
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">Can they show completed project portfolios similar to yours?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Photographs of past models are the best predictor of quality. Ask to see projects of similar type, scale, and complexity. Pay attention to window alignment, edge finish quality, landscape realism, and LED integration — these are the areas where lesser vendors cut corners.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">03</div>
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">What is their in-house capability versus outsourcing?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Some vendors outsource CNC cutting, painting, or electrical work to third parties — introducing quality control gaps and timeline risks. The best scale model making companies control the full production process in-house: digital modelling, CNC/laser cutting, hand-finishing, painting, and electrical integration.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">04</div>
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">Do they provide a formal production timeline?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Reliable vendors provide a written production schedule with milestones — drawing review sign-off, prototype component review, assembly completion, quality check, dispatch. If a vendor can't provide a structured timeline, your delivery risk is high, especially if you have a launch date to meet.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">05</div>
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">What are the post-delivery support terms?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Models live in sales offices for months or years. LED bulbs fail. Acrylic components get scratched. Landscaping elements get accidentally dislodged. Ask what the maintenance and repair policy is, and whether the vendor will travel to site if an issue arises.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">06</div>
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">Are they familiar with your city's developer market?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  A vendor who has worked with developers in Mumbai, Delhi, Bangalore, Pune, and Hyderabad understands regional project typologies, builder preferences, and site office space constraints. Local experience shortens the briefing cycle and reduces the risk of design misalignment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 7 — Cost */}
+        <section id="cost" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">Cost of Architectural Scale Models in India</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Scale model pricing in India varies enormously based on size, complexity, material quality, and the level of finish. The following ranges reflect 2026 market pricing for professionally produced architectural scale models — they do not include rock-bottom quotations from unqualified vendors who deliver low-quality work.
+          </p>
+
+          <div className="overflow-x-auto rounded-xl border border-gray-200 mb-6">
+            <table className="w-full text-sm">
+              <thead className="bg-black text-white">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Project Type</th>
+                  <th className="px-4 py-3 text-left font-semibold">Scale</th>
+                  <th className="px-4 py-3 text-left font-semibold">Approx. Cost Range (INR)</th>
+                  <th className="px-4 py-3 text-left font-semibold">Timeline</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">Individual Villa / Bungalow</td>
+                  <td className="px-4 py-3 text-gray-700">1:50 – 1:100</td>
+                  <td className="px-4 py-3 text-gray-700">₹80,000 – ₹2,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">10–20 days</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-3 font-medium">Mid-Rise Residential Block</td>
+                  <td className="px-4 py-3 text-gray-700">1:100 – 1:200</td>
+                  <td className="px-4 py-3 text-gray-700">₹1,50,000 – ₹4,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">15–25 days</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">Large Residential Complex (with LED)</td>
+                  <td className="px-4 py-3 text-gray-700">1:200 – 1:500</td>
+                  <td className="px-4 py-3 text-gray-700">₹3,00,000 – ₹8,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">20–35 days</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-3 font-medium">Township Master Plan Model</td>
+                  <td className="px-4 py-3 text-gray-700">1:500 – 1:1000</td>
+                  <td className="px-4 py-3 text-gray-700">₹6,00,000 – ₹20,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">30–50 days</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">Infrastructure / Government Model</td>
+                  <td className="px-4 py-3 text-gray-700">1:1000 – 1:2000</td>
+                  <td className="px-4 py-3 text-gray-700">₹10,00,000 – ₹40,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">40–70 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+            <p className="text-gray-800 text-sm leading-relaxed">
+              <strong>What drives cost up:</strong> LED phase-wise zoning, water simulation features, motorised rotating bases, custom acrylic covers with integrated lighting, extremely fine scale detail at 1:50, and tight delivery timelines requiring parallel production teams.
+            </p>
+            <p className="text-gray-800 text-sm leading-relaxed mt-3">
+              <strong>What drives cost down:</strong> Standard scale ratios with existing component libraries, single-phase builds without interactive features, and projects where digital files are clean and complete from day one.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 8 — vs Digital */}
+        <section id="vs-digital" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">Architectural Scale Models vs Digital Visualization — Which Is Better?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            This is one of the most common questions developers ask. The honest answer is: they serve different buyer psychology, and the strongest sales offices use both.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Digital visualization — 3D walkthroughs, VR tours, 3D renders — delivers immersive visual experience, unlimited iteration speed, and the ability to show interior finishes in photorealistic detail before construction begins. These are powerful tools for remote buyers, social media marketing, and early-stage concept presentation.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Physical architectural scale models do something no screen can replicate: they create a tangible, spatial experience. A buyer standing in front of a premium scale model can immediately understand the relationship between blocks, the depth of the landscaping buffer, the height of surrounding buildings relative to theirs, and the overall site context — all in a single glance. Research in consumer neuroscience consistently shows that physical interaction with objects triggers greater emotional engagement and memory retention than viewing the same information on a screen.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            India's top developers — those running flagship launches in Mumbai's Western suburbs, Gurugram's Golf Course Extension, Bangalore's North and East corridors, and Pune's Hinjewadi belt — routinely invest in both. The scale model anchors the sales office physically. The 3D walkthrough extends the reach digitally to NRI buyers and investors who cannot visit in person.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            If your budget forces a choice, consider your buyer profile. For high-ticket projects (₹2 Cr+ ticket size) with on-site buyer visits as the primary sales channel, a premium architectural scale model will consistently outperform any digital tool in terms of sales office conversion rate. For projects relying heavily on digital and broker channels, the 3D walkthrough takes priority. For landmark projects, invest in both.
+          </p>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-8">Frequently Asked Questions</h2>
+
+          <div className="space-y-6">
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">How long does scale model making take?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Timeline depends on model size and complexity. A single residential block typically takes 15–25 working days from drawing sign-off to delivery. A large township master plan model can take 40–60 days. We recommend building in at least 4 weeks of buffer before your project launch date.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">What files do you need to start production?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                We work from AutoCAD DWG site plans and building floor plans, elevation drawings, and 3D model files (Revit or SketchUp preferred). The more complete your digital files, the faster and more accurate the production. If your drawings are still at schematic stage, we can work from that but will require multiple review rounds.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">Can the scale model be updated if the design changes during construction?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Yes. We retain the digital model files for all projects, which allows targeted updates without rebuilding the entire model. Facade colour changes, block additions, or landscaping revisions can typically be incorporated within 7–15 days depending on scope.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">Do you deliver and install the model at our site office?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Yes. Our team handles crating, transportation, and on-site installation. We supervise the placement, test all lighting, and brief your sales staff on maintenance and operation. We cover Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and other major Indian cities.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">What makes Alliance Media Labs different from other scale model making companies?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                We combine CNC precision with master hand-craft finishing — a combination that most Indian vendors don't offer. Our miniature model making team has worked on over 200 real estate and infrastructure projects across India. We control the full production chain in-house: digital modelling, CNC fabrication, painting, electrical integration, and delivery. We also offer a post-delivery warranty and site visit for repairs.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">Can you make models for RERA registration or government approval purposes?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Yes. Our models are built to architectural accuracy standards required for regulatory presentations. We provide dimensional verification documentation on request. For government tenders and municipal approvals, we also produce scaled terrain models that accurately represent topography and infrastructure alignment.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">Conclusion — Why Professional Scale Model Making Still Matters in 2026</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            In an era where every developer has access to the same 3D renders and CGI walkthroughs, a premium handcrafted architectural scale model is the one thing your sales office will have that no competitor can instantly replicate. It signals commitment. It signals quality. And it gives buyers the tangible spatial experience that closes high-ticket deals.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The key is choosing the right <strong>scale model making company</strong> — one that operates with CNC precision, genuine craft skill, and the project management discipline to deliver on time. Cutting corners on model quality is a false economy when the model will be the centrepiece of your sales office for the next 18–24 months.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Alliance Media Labs has built its reputation as India's trusted <strong>3D scale model maker</strong> by delivering models that routinely stop visitors in their tracks and give your sales team a powerful conversation starter. If you're planning a project launch and want to know what's possible, reach out to our team today for a no-obligation consultation.
+          </p>
+        </section>
+
+        {/* Related Posts */}
+        <div className="border-t border-gray-100 pt-12 mb-12">
+          <h3 className="text-xl font-bold text-black mb-6">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/architectural-scale-models-india-real-estate" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Scale Models</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can&apos;t</h4>
+            </Link>
+            <Link href="/blog/real-estate-drone-photography-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Drone Photography</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">Real Estate Drone Photography in India: The Complete Guide (2026)</h4>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back to Blog */}
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Commission Your Architectural Scale Model
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Talk to our team today for a detailed consultation and quote tailored to your project.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
+              Get a Free Quote
+            </Link>
+            <Link
+              href="/services/architectural-scale-models"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
+              View Scale Model Services
             </Link>
           </div>
         </div>
