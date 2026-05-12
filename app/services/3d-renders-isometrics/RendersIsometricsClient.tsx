@@ -170,7 +170,9 @@ export default function RendersIsometricsClient() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleItemClick = (item: PortfolioItem) => {
     setSelectedItem(item);
@@ -185,12 +187,12 @@ export default function RendersIsometricsClient() {
   const nextSlide = () => {
     if (selectedItem?.sliderImages) {
       setCurrentSlideIndex((prev) =>
-        prev === selectedItem.sliderImages!.length - 1 ? 0 : prev + 1
+        prev === selectedItem.sliderImages!.length - 1 ? 0 : prev + 1,
       );
     }
     if (selectedItem?.galleryImages) {
       setCurrentSlideIndex((prev) =>
-        prev === selectedItem.galleryImages!.length - 1 ? 0 : prev + 1
+        prev === selectedItem.galleryImages!.length - 1 ? 0 : prev + 1,
       );
     }
   };
@@ -198,12 +200,12 @@ export default function RendersIsometricsClient() {
   const prevSlide = () => {
     if (selectedItem?.sliderImages) {
       setCurrentSlideIndex((prev) =>
-        prev === 0 ? selectedItem.sliderImages!.length - 1 : prev - 1
+        prev === 0 ? selectedItem.sliderImages!.length - 1 : prev - 1,
       );
     }
     if (selectedItem?.galleryImages) {
       setCurrentSlideIndex((prev) =>
-        prev === 0 ? selectedItem.galleryImages!.length - 1 : prev - 1
+        prev === 0 ? selectedItem.galleryImages!.length - 1 : prev - 1,
       );
     }
   };
@@ -213,7 +215,9 @@ export default function RendersIsometricsClient() {
   };
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -251,7 +255,13 @@ ${formData.message || "No additional details provided"}
       if (data.success) {
         setSubmitStatus("success");
         setTimeout(() => {
-          setFormData({ name: "", email: "", phone: "", project_type: "", message: "" });
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            project_type: "",
+            message: "",
+          });
           setSubmitStatus("idle");
         }, 3000);
       } else {
@@ -284,11 +294,15 @@ ${formData.message || "No additional details provided"}
                 <i className="ri-cube-line text-3xl text-black"></i>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-                3D Renders & Isometrics for Real Estate India
-</h1>
+                3D House Rendering, Architectural Rendering & 3D Floor Plan
+                Design Services in India
+              </h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
-                Photorealistic 3D visualizations and isometric illustrations
-                that bring architectural concepts to life.
+                Premium 3D rendering services for real estate developers,
+                architects, and interior designers including 3D house rendering,
+                3D floor plan design, architectural visualisation, 3D
+                architectural visualization, AI 3D rendering, and photorealistic
+                3D rendering interior design solutions.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -313,12 +327,14 @@ ${formData.message || "No additional details provided"}
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                Professional 3D Visualization
+                Professional 3D Rendering & Architectural Visualization Services
               </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Transform architectural plans into stunning photorealistic
-                renders and clear isometric illustrations
+                Transform architectural plans into photorealistic 3D renders,
+                architectural rendering presentations, 3D floor plans, and
+                high-end architectural visualization services for real estate
+                and interior design projects.
               </p>
             </div>
 
@@ -331,8 +347,9 @@ ${formData.message || "No additional details provided"}
                   Photorealistic Renders
                 </h3>
                 <p className="text-gray-600">
-                  Ultra-high quality 3D renders with realistic lighting,
-                  materials, and environmental details.
+                  Industry-leading 3D rendering services with photorealistic
+                  lighting, textures, materials, and environmental detailing for
+                  residential and commercial projects.
                 </p>
               </div>
 
@@ -344,8 +361,9 @@ ${formData.message || "No additional details provided"}
                   Isometric Illustrations
                 </h3>
                 <p className="text-gray-600">
-                  Clear, technical isometric views perfect for marketing
-                  materials and project presentations.
+                  Detailed 3D floor plan design and isometric architectural
+                  visualisation perfect for brochures, presentations, sales
+                  decks, and township marketing.
                 </p>
               </div>
 
@@ -370,8 +388,8 @@ ${formData.message || "No additional details provided"}
                   Material Accuracy
                 </h3>
                 <p className="text-gray-600">
-                  Precise material representation with accurate textures,
-                  reflections, and surface properties.
+                  Advanced 3D rendering interior design workflows with accurate
+                  textures, reflections, finishes, and architectural materials.
                 </p>
               </div>
 
@@ -383,8 +401,9 @@ ${formData.message || "No additional details provided"}
                   Environmental Context
                 </h3>
                 <p className="text-gray-600">
-                  Detailed surrounding environments including landscaping,
-                  streetscapes, and neighborhood context.
+                  Architectural rendering services with realistic landscaping,
+                  streetscapes, environmental context, and urban planning
+                  visualization.
                 </p>
               </div>
 
@@ -409,12 +428,15 @@ ${formData.message || "No additional details provided"}
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                Our 3D Rendering & Isometrics Portfolio
+                Our 3D Rendering, Architectural Visualization & 3D Floor Plan
+                Portfolio
               </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Explore our collection of stunning 3D renders and isometric
-                illustrations
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto mt-6">
+                Explore premium 3D house rendering projects, architectural
+                rendering services, 3D floor plans, interior visualisation, and
+                large-scale 3D architectural visualization created for India's
+                leading real estate developers and architects.
               </p>
             </div>
 
@@ -611,10 +633,16 @@ ${formData.message || "No additional details provided"}
                           selectedItem.galleryImages[currentSlideIndex] && (
                             <div className="bg-gray-50 rounded-lg p-4">
                               <h4 className="font-semibold text-black mb-2">
-                                {selectedItem.galleryImages[currentSlideIndex].title}
+                                {
+                                  selectedItem.galleryImages[currentSlideIndex]
+                                    .title
+                                }
                               </h4>
                               <p className="text-gray-600 text-sm">
-                                {selectedItem.galleryImages[currentSlideIndex].description}
+                                {
+                                  selectedItem.galleryImages[currentSlideIndex]
+                                    .description
+                                }
                               </p>
                             </div>
                           )}
@@ -641,7 +669,7 @@ ${formData.message || "No additional details provided"}
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                Rendering Services
+                3D Rendering Services & Architectural Visualization Solutions
               </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             </div>
@@ -655,8 +683,9 @@ ${formData.message || "No additional details provided"}
                   Exterior Renders
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Stunning exterior visualizations showcasing architectural
-                  design, materials, and environmental context.
+                  Photorealistic architectural rendering and 3D house rendering
+                  services showcasing building facades, landscaping, lighting,
+                  and environmental context for real estate marketing.
                 </p>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center space-x-2">
@@ -682,8 +711,9 @@ ${formData.message || "No additional details provided"}
                   Interior Renders
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Detailed interior visualizations highlighting space planning,
-                  materials, and design aesthetics.
+                  Premium 3D rendering interior design services with realistic
+                  furniture layouts, material detailing, mood lighting, and
+                  architectural visualisation for luxury interiors.
                 </p>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center space-x-2">
@@ -705,59 +735,63 @@ ${formData.message || "No additional details provided"}
         </section>
 
         {/* Testimonials Section */}
-<section className="py-24 bg-gray-50">
-  <div className="container mx-auto px-6">
-    <div className="text-center mb-12">
-      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-        Client Testimonials
-      </h2>
-      <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
-    </div>
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Client Testimonials
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {testimonials.map((testimonial, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-        >
-          {/* User Info */}
-          <div className="mb-6">
-            <h4 className="font-bold text-black text-lg">
-              {testimonial.name}
-            </h4>
-            <p className="text-sm text-gray-600">
-              {testimonial.position}
-            </p>
-            <p className="text-sm text-yellow-600 font-medium">
-              {testimonial.company}
-            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  {/* User Info */}
+                  <div className="mb-6">
+                    <h4 className="font-bold text-black text-lg">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      {testimonial.position}
+                    </p>
+                    <p className="text-sm text-yellow-600 font-medium">
+                      {testimonial.company}
+                    </p>
+                  </div>
+
+                  {/* Stars */}
+                  <div className="flex text-yellow-400 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className="ri-star-fill text-sm"></i>
+                    ))}
+                  </div>
+
+                  {/* Content */}
+                  <p className="text-gray-700 leading-relaxed italic">
+                    &ldquo;{testimonial.content}&rdquo;
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-
-          {/* Stars */}
-          <div className="flex text-yellow-400 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <i key={i} className="ri-star-fill text-sm"></i>
-            ))}
-          </div>
-
-          {/* Content */}
-          <p className="text-gray-700 leading-relaxed italic">
-            &ldquo;{testimonial.content}&rdquo;
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+        </section>
 
         {/* Types of 3D Rendering Services */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Types of 3D Rendering & Visualisation Services</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Types of 3D Rendering Services, Architectural Rendering &
+                Visualization Solutions
+              </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From a single 3D house rendering to full township visualisation packages — we cover every output a real estate developer needs.
+                From a single 3D house rendering to full township visualisation
+                packages — we cover every output a real estate developer needs.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -793,11 +827,16 @@ ${formData.message || "No additional details provided"}
                   desc: "We combine traditional 3D rendering with AI 3D rendering acceleration tools to deliver faster turnarounds on large projects without compromising photorealistic quality — ideal for launches with tight marketing deadlines.",
                 },
               ].map((item) => (
-                <div key={item.title} className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div
+                  key={item.title}
+                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow"
+                >
                   <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
                     <i className={`${item.icon} text-2xl text-black`}></i>
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-3">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-black mb-3">
+                    {item.title}
+                  </h3>
                   <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -809,30 +848,102 @@ ${formData.message || "No additional details provided"}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why 3D Renders Beat Photography</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Why 3D Renders Beat Photography
+              </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">For under-construction projects, photography is impossible. 3D renders let you market before the first brick is laid.</p>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                For under-construction projects, photography is impossible. 3D
+                renders let you market before the first brick is laid.
+              </p>
             </div>
             <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
               <div className="grid grid-cols-3 bg-black text-white">
                 <div className="p-6 font-bold text-lg">Feature</div>
-                <div className="p-6 font-bold text-lg text-center border-l border-gray-700">Photography</div>
-                <div className="p-6 font-bold text-lg text-center border-l border-gray-700 bg-yellow-400 text-black">3D Rendering</div>
+                <div className="p-6 font-bold text-lg text-center border-l border-gray-700">
+                  Photography
+                </div>
+                <div className="p-6 font-bold text-lg text-center border-l border-gray-700 bg-yellow-400 text-black">
+                  3D Rendering
+                </div>
               </div>
               {[
                 ["Available before construction", "✗ Not possible", "✓ Yes"],
-                ["Show multiple design options", "✗ Fixed shot", "✓ Unlimited variants"],
-                ["Control lighting & weather", "✗ Depends on conditions", "✓ Perfect every time"],
-                ["Suitable for RERA submission", "✗ Limited", "✓ Widely accepted"],
-                ["Modify post-delivery", "✗ Requires reshoot", "✓ Easy updates"],
-                ["Used in hoardings & brochures", "✓ Yes", "✓ Yes — higher quality"],
+                [
+                  "Show multiple design options",
+                  "✗ Fixed shot",
+                  "✓ Unlimited variants",
+                ],
+                [
+                  "Control lighting & weather",
+                  "✗ Depends on conditions",
+                  "✓ Perfect every time",
+                ],
+                [
+                  "Suitable for RERA submission",
+                  "✗ Limited",
+                  "✓ Widely accepted",
+                ],
+                [
+                  "Modify post-delivery",
+                  "✗ Requires reshoot",
+                  "✓ Easy updates",
+                ],
+                [
+                  "Used in hoardings & brochures",
+                  "✓ Yes",
+                  "✓ Yes — higher quality",
+                ],
               ].map(([feature, photo, render], i) => (
-                <div key={i} className={`grid grid-cols-3 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
-                  <div className="p-5 font-medium text-gray-800 border-t border-gray-200">{feature}</div>
-                  <div className="p-5 text-center text-gray-600 border-t border-l border-gray-200">{photo}</div>
-                  <div className="p-5 text-center font-semibold text-black border-t border-l border-gray-200 bg-yellow-50">{render}</div>
+                <div
+                  key={i}
+                  className={`grid grid-cols-3 ${i % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+                >
+                  <div className="p-5 font-medium text-gray-800 border-t border-gray-200">
+                    {feature}
+                  </div>
+                  <div className="p-5 text-center text-gray-600 border-t border-l border-gray-200">
+                    {photo}
+                  </div>
+                  <div className="p-5 text-center font-semibold text-black border-t border-l border-gray-200 bg-yellow-50">
+                    {render}
+                  </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 bg-black text-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8">
+                Leading 3D Rendering Company in India
+              </h2>
+
+              <p className="text-xl text-gray-300 leading-relaxed mb-6">
+                Alliance Media Labs is one of the fastest-growing 3D rendering
+                companies in India offering architectural rendering services,
+                architectural visualization services, 3D floor plan design, 3D
+                house rendering, and photorealistic 3D renders for residential
+                and commercial real estate projects.
+              </p>
+
+              <p className="text-lg text-gray-400 leading-relaxed mb-6">
+                Our team specializes in 3D architectural visualization,
+                architectural visualisation, 3D rendering interior design, AI 3D
+                rendering workflows, and high-end rendering services for
+                developers, architects, interior designers, and real estate
+                brands.
+              </p>
+
+              <p className="text-lg text-gray-400 leading-relaxed">
+                Whether you are searching for 3D rendering services near me, 3D
+                floor plan designer services, or complete architectural
+                rendering companies for real estate launches — we deliver
+                scalable, photorealistic visual solutions tailored for Indian
+                real estate marketing.
+              </p>
             </div>
           </div>
         </section>
@@ -841,20 +952,58 @@ ${formData.message || "No additional details provided"}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Frequently Asked Questions
+              </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             </div>
             <div className="max-w-3xl mx-auto space-y-4">
               {[
-                { q: "How long does a 3D render take to produce?", a: "A standard exterior render takes 5–7 working days. Interior renders take 7–10 days. Large sets (10+ views) or isometric master plans are scoped individually. Rush delivery is available." },
-                { q: "How many revision rounds are included?", a: "2 revision rounds are included in every project. The first after the grey-structure review, the second after final texturing and lighting. Additional revisions are billed separately." },
-                { q: "Can renders be used for RERA registration?", a: "Yes. Our renders are accepted for RERA project marketing submissions across Maharashtra, Karnataka, Delhi NCR, and other states. We include RERA disclaimer overlays as required." },
-                { q: "What file formats do you deliver?", a: "We deliver high-resolution JPG/PNG files (300 DPI print-ready) and web-optimised versions. PSD layered files and video turntables are available on request." },
-                { q: "What is the difference between a 3D render and a 3D isometric?", a: "A 3D render is a photorealistic still image of a building or interior — like a photograph. A 3D isometric is an aerial bird's-eye illustration showing the entire site or township layout, used for master plan marketing." },
-                { q: "How do I choose between different 3D rendering companies in India?", a: "Look for 3D rendering companies with a dedicated real estate portfolio — not generic product or film studios. Key criteria: real estate project experience, in-house modelling team, RERA-ready output, and transparent revision policies. Alliance Media Labs specialises exclusively in real estate and architectural rendering services, making us the preferred choice for India's top developers." },
-                { q: "How much do 3D renders cost in India?", a: "Pricing depends on the number of views, complexity of the structure, and output requirements. Contact our experts for a tailored quote." },
+                {
+                  q: "How long does a 3D render take to produce?",
+                  a: "A standard exterior render takes 5–7 working days. Interior renders take 7–10 days. Large sets (10+ views) or isometric master plans are scoped individually. Rush delivery is available.",
+                },
+                {
+                  q: "How many revision rounds are included?",
+                  a: "2 revision rounds are included in every project. The first after the grey-structure review, the second after final texturing and lighting. Additional revisions are billed separately.",
+                },
+                {
+                  q: "Can renders be used for RERA registration?",
+                  a: "Yes. Our renders are accepted for RERA project marketing submissions across Maharashtra, Karnataka, Delhi NCR, and other states. We include RERA disclaimer overlays as required.",
+                },
+                {
+                  q: "What file formats do you deliver?",
+                  a: "We deliver high-resolution JPG/PNG files (300 DPI print-ready) and web-optimised versions. PSD layered files and video turntables are available on request.",
+                },
+                {
+                  q: "What is the difference between a 3D render and a 3D isometric?",
+                  a: "A 3D render is a photorealistic still image of a building or interior — like a photograph. A 3D isometric is an aerial bird's-eye illustration showing the entire site or township layout, used for master plan marketing.",
+                },
+                {
+                  q: "How do I choose between different 3D rendering companies in India?",
+                  a: "Look for 3D rendering companies with a dedicated real estate portfolio — not generic product or film studios. Key criteria: real estate project experience, in-house modelling team, RERA-ready output, and transparent revision policies. Alliance Media Labs specialises exclusively in real estate and architectural rendering services, making us the preferred choice for India's top developers.",
+                },
+                {
+                  q: "How much do 3D renders cost in India?",
+                  a: "Pricing depends on the number of views, complexity of the structure, and output requirements. Contact our experts for a tailored quote.",
+                },
+                {
+                  q: "What are architectural rendering services?",
+                  a: "Architectural rendering services involve creating photorealistic 3D renders, architectural visualisation, and 3D architectural visualization for residential, commercial, and real estate projects before construction begins.",
+                },
+                {
+                  q: "Do you provide 3D floor plan designer services?",
+                  a: "Yes. We provide complete 3D floor plan design and 3D floor plan designer services for apartments, villas, commercial buildings, and township developments.",
+                },
+                {
+                  q: "Why choose your 3D rendering company?",
+                  a: "Unlike generic 3D rendering companies, we specialize exclusively in architectural rendering, real estate visualisation, and 3D rendering interior design for India's property market.",
+                },
               ].map((faq, i) => (
-                <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                <div
+                  key={i}
+                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow"
+                >
                   <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
                   <p className="text-gray-600 leading-relaxed">{faq.a}</p>
                 </div>
@@ -867,10 +1016,19 @@ ${formData.message || "No additional details provided"}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
-              <h2 className="text-3xl font-bold text-black mb-4">Pricing for 3D Renders & Isometrics</h2>
+              <h2 className="text-3xl font-bold text-black mb-4">
+                Pricing for 3D Renders & Isometrics
+              </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-gray-600 mb-8">Pricing varies based on the number of views, level of detail, and delivery timeline. Contact our experts for a custom quote tailored to your project.</p>
-              <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              <p className="text-gray-600 mb-8">
+                Pricing varies based on the number of views, level of detail,
+                and delivery timeline. Contact our experts for a custom quote
+                tailored to your project.
+              </p>
+              <a
+                href="/contact"
+                className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+              >
                 <i className="ri-phone-line mr-2"></i>Contact Our Experts
               </a>
             </div>
@@ -958,11 +1116,15 @@ ${formData.message || "No additional details provided"}
                         <option value="">Select render type</option>
                         <option value="exterior">Exterior Renders</option>
                         <option value="interior">Interior Renders</option>
-                        <option value="isometric">Isometric Illustrations</option>
+                        <option value="isometric">
+                          Isometric Illustrations
+                        </option>
                         <option value="aerial">Aerial Views</option>
                         <option value="360-panorama">360° Panoramas</option>
                         <option value="animation">3D Animation</option>
-                        <option value="comprehensive">Comprehensive Package</option>
+                        <option value="comprehensive">
+                          Comprehensive Package
+                        </option>
                         <option value="other">Other</option>
                       </select>
                     </div>
@@ -1030,8 +1192,10 @@ ${formData.message || "No additional details provided"}
               Bring Your Vision to Life
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Transform architectural plans into stunning photorealistic
-              visualizations that sell your vision.
+              Transform architectural plans into photorealistic 3D renders,
+              architectural visualisation, 3D floor plans, and high-end
+              architectural rendering presentations that elevate your real
+              estate marketing.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
