@@ -59,7 +59,7 @@ export default function WalkthroughVideosClient() {
       category: "3D Walkthrough",
       image: "/images/portfolio/1.png",
       description:
-        "Cinematic 3D walkthrough showcasing luxury residential units with panoramic city views.",
+        "Cinematic 3D property walkthrough and 3D virtual house tour showcasing luxury residential units with panoramic city views.",
       videoUrl: "https://www.youtube.com/embed/BiCCdx0fDik?autoplay=1&t",
       duration: "2:45",
     },
@@ -69,7 +69,7 @@ export default function WalkthroughVideosClient() {
       category: "3D Walkthrough",
       image: "/images/portfolio/Aura-Vantaje-Thumbnail.png",
       description:
-        "Developed an AI-powered 3D walkthrough for a commercial project, bringing out the scale, layout, and usability of the spaces in a smart way. Delivered at record speed of 7 days.",
+        "Developed an AI-powered 3D walkthrough real estate presentation and architectural walkthrough for a commercial project, highlighting scale, usability, and immersive buyer experience.",
       videoUrl: "https://www.youtube.com/embed/YGaAU9B37nc?autoplay=1",
       duration: "1:20",
     },
@@ -135,11 +135,13 @@ export default function WalkthroughVideosClient() {
         <div className="absolute inset-0 bg-black/80"></div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-2xl">
-            3D Walkthrough Video Service for Real Estate &amp; Architecture
+            3D Walkthrough Video Service for Real Estate, Architecture &amp; 3D
+            Virtual House Tours
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-lg">
-            Immersive cinematic experiences that bring your architectural
-            visions to life
+            Immersive 3D architectural walkthrough services and 3D virtual real
+            estate tours that bring your architectural visions to life with
+            cinematic quality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -167,7 +169,17 @@ export default function WalkthroughVideosClient() {
             </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
             <p className="text-lg text-black/80 leading-relaxed">
-              Transform your architectural designs into stunning cinematic experiences. Our <strong>3D walkthrough video service</strong> delivers photorealistic <strong>architectural walkthrough</strong> animations — also called <strong>3D virtual house tours</strong> — that let buyers experience your property before a single brick is laid. Whether you need a <strong>3D walkthrough real estate</strong> presentation for a pre-launch campaign, a <strong>3D architectural walkthrough</strong> for RERA submissions, or a cinematic fly-through for investor decks, we handle it all in-house.
+              Transform your architectural designs into stunning cinematic
+              experiences. Our <strong>3D walkthrough video service</strong>{" "}
+              delivers photorealistic <strong>architectural walkthrough</strong>{" "}
+              animations — also called <strong>3D virtual house tours</strong> —
+              that let buyers experience your property before a single brick is
+              laid. Whether you need a{" "}
+              <strong>3D walkthrough real estate</strong> presentation for a
+              pre-launch campaign, a{" "}
+              <strong>3D architectural walkthrough</strong> for RERA
+              submissions, or a cinematic fly-through for investor decks, we
+              handle it all in-house.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -214,8 +226,10 @@ export default function WalkthroughVideosClient() {
             </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
             <p className="text-lg text-black/80 max-w-3xl mx-auto">
-              Explore our collection of immersive 3D walkthrough videos across
-              various project types
+              Explore our collection of immersive 3D walkthrough video projects,
+              3D virtual house tours, and 3D property walkthrough solutions for
+              residential, commercial, and architectural developments across
+              India.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -311,9 +325,18 @@ export default function WalkthroughVideosClient() {
               Why Modern Real Estate Marketing Needs 3D Walkthroughs
             </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            {/* <p className="text-gray-600 max-w-2xl mx-auto">
               Real estate has become competitive — 3D walkthroughs give
               developers and builders a winning edge.
+            </p> */}
+            <p className="text-gray-700 max-w-4xl mx-auto mt-6 leading-relaxed">
+              From luxury apartments to commercial towers,{" "}
+              <strong>3D walkthrough real estate</strong> presentations help
+              developers showcase projects through immersive{" "}
+              <strong>3D virtual real estate tours</strong>. Our{" "}
+              <strong>3D architectural walkthrough services</strong> help buyers
+              understand layouts, amenities, interiors, and spatial flow before
+              construction is completed.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -383,13 +406,58 @@ export default function WalkthroughVideosClient() {
       {/* Trusted By */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-500 text-sm font-semibold uppercase tracking-widest mb-8">Trusted by Leading Real Estate Developers</p>
+          <p className="text-gray-500 text-sm font-semibold uppercase tracking-widest mb-8">
+            Trusted by Leading Real Estate Developers
+          </p>
           <div className="flex flex-wrap justify-center items-center gap-8">
-            {["Godrej Properties", "Prestige Group", "Brigade Group", "Sobha Realty", "Mahindra Lifespaces", "Tata Housing"].map((brand) => (
-              <div key={brand} className="px-6 py-3 bg-white rounded-xl shadow-sm border border-gray-100">
-                <span className="text-gray-700 font-semibold text-sm">{brand}</span>
+            {[
+              "Godrej Properties",
+              "Prestige Group",
+              "Brigade Group",
+              "Sobha Realty",
+              "Mahindra Lifespaces",
+              "Tata Housing",
+            ].map((brand) => (
+              <div
+                key={brand}
+                className="px-6 py-3 bg-white rounded-xl shadow-sm border border-gray-100"
+              >
+                <span className="text-gray-700 font-semibold text-sm">
+                  {brand}
+                </span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-black mb-6">
+              Real Estate 3D Walkthrough Service in India
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
+
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Alliance Media Labs offers premium{" "}
+              <strong>Real Estate 3D walkthrough service in India</strong> for
+              developers, architects, interior designers, and construction
+              brands. Our team creates immersive{" "}
+              <strong>3D walkthrough videos</strong>,{" "}
+              <strong>3D property walkthroughs</strong>, and{" "}
+              <strong>3D virtual real estate tours</strong> that help projects
+              stand out in a competitive market.
+            </p>
+
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Whether you need a luxury villa{" "}
+              <strong>3D virtual house tour</strong>, a township{" "}
+              <strong>architectural walkthrough</strong>, or a commercial{" "}
+              <strong>3D walkthrough real estate</strong> presentation, our
+              visualisation team delivers cinematic-quality results with fast
+              turnaround times across India.
+            </p>
           </div>
         </div>
       </section>
@@ -398,20 +466,45 @@ export default function WalkthroughVideosClient() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Frequently Asked Questions
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600">Everything you need to know about 3D walkthrough videos</p>
+            <p className="text-xl text-gray-600">
+              Everything you need to know about 3D walkthrough videos
+            </p>
           </div>
           <div className="max-w-3xl mx-auto space-y-4">
             {[
-              { q: "How long does it take to deliver a 3D walkthrough video?", a: "Typically 3–5 weeks depending on project size. A standard 2–3 BHK residential walkthrough takes about 3 weeks; large township projects with multiple typologies and amenities take 6–8 weeks. We share milestone previews throughout production." },
-              { q: "What files or inputs do you need to start?", a: "We work from architectural drawings, CAD files, floor plans, elevations, and site plans. Even rough sketches or PDF drawings are sufficient to begin modelling. Our team handles all 3D modelling, texturing, lighting, and animation in-house." },
-              { q: "How many revision rounds are included?", a: "Every project includes 2 rounds of revisions at the grey-structure stage and 2 rounds after final render — so 4 structured feedback cycles in total. Additional revisions are available at a nominal cost." },
-              { q: "What video formats and resolutions do you deliver?", a: "We deliver in Full HD (1080p) and 4K resolution as MP4 files. We also provide editable formats for further use in ads or presentations upon request." },
-              { q: "Can the walkthrough be used for RERA registration or project approvals?", a: "Yes. Our 3D walkthroughs are accepted for RERA project marketing submissions across states. We ensure all visuals include mandatory RERA disclaimer overlays." },
-              { q: "How much does a 3D walkthrough video cost?", a: "Every project is unique. Pricing depends on number of typologies, amenity areas, and output requirements. Contact our experts for a tailored quote." },
+              {
+                q: "How long does it take to deliver a 3D walkthrough video?",
+                a: "Typically 3–5 weeks depending on project size. A standard 2–3 BHK residential walkthrough takes about 3 weeks; large township projects with multiple typologies and amenities take 6–8 weeks. We share milestone previews throughout production.",
+              },
+              {
+                q: "What files or inputs do you need to start?",
+                a: "We work from architectural drawings, CAD files, floor plans, elevations, and site plans. Even rough sketches or PDF drawings are sufficient to begin modelling. Our team handles all 3D modelling, texturing, lighting, and animation in-house.",
+              },
+              {
+                q: "How many revision rounds are included?",
+                a: "Every project includes 2 rounds of revisions at the grey-structure stage and 2 rounds after final render — so 4 structured feedback cycles in total. Additional revisions are available at a nominal cost.",
+              },
+              {
+                q: "What video formats and resolutions do you deliver?",
+                a: "We deliver in Full HD (1080p) and 4K resolution as MP4 files. We also provide editable formats for further use in ads or presentations upon request.",
+              },
+              {
+                q: "Can the walkthrough be used for RERA registration or project approvals?",
+                a: "Yes. Our 3D walkthroughs are accepted for RERA project marketing submissions across states. We ensure all visuals include mandatory RERA disclaimer overlays.",
+              },
+              {
+                q: "How much does a 3D walkthrough video or 3D property walkthrough cost in India?",
+                a: "Every project is unique. Pricing depends on number of typologies, amenity areas, and output requirements. Contact our experts for a tailored quote.",
+              },
             ].map((faq, i) => (
-              <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+              <div
+                key={i}
+                className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow"
+              >
                 <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.a}</p>
               </div>
@@ -423,20 +516,41 @@ export default function WalkthroughVideosClient() {
       {/* City Coverage */}
       <section className="py-16 bg-black">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Pan-India 3D Walkthrough Services</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Pan-India 3D Walkthrough Services
+          </h2>
           <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
-          <p className="text-gray-400 mb-10">We serve real estate developers across India with fast turnarounds and remote collaboration</p>
+          <p className="text-gray-400 mb-10">
+            We serve real estate developers across India with fast turnarounds
+            and remote collaboration
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              { city: "Mumbai", href: "/city-services/3d-walkthrough-videos-mumbai" },
-              { city: "Delhi NCR", href: "/city-services/3d-walkthrough-videos-delhi" },
-              { city: "Bangalore", href: "/city-services/3d-walkthrough-videos-bangalore" },
-              { city: "Gurugram", href: "/city-services/real-estate-video-production-gurugram" },
+              {
+                city: "Mumbai",
+                href: "/city-services/3d-walkthrough-videos-mumbai",
+              },
+              {
+                city: "Delhi NCR",
+                href: "/city-services/3d-walkthrough-videos-delhi",
+              },
+              {
+                city: "Bangalore",
+                href: "/city-services/3d-walkthrough-videos-bangalore",
+              },
+              {
+                city: "Gurugram",
+                href: "/city-services/real-estate-video-production-gurugram",
+              },
               { city: "Pune", href: "/contact" },
               { city: "Hyderabad", href: "/contact" },
               { city: "Chennai", href: "/contact" },
             ].map(({ city, href }) => (
-              <a key={city} href={href} className="px-6 py-3 bg-gray-900 border border-gray-700 rounded-full text-white font-medium hover:border-yellow-400 hover:text-yellow-400 transition-colors">
+              <a
+                key={city}
+                href={href}
+                className="px-6 py-3 bg-gray-900 border border-gray-700 rounded-full text-white font-medium hover:border-yellow-400 hover:text-yellow-400 transition-colors"
+              >
                 {city}
               </a>
             ))}
@@ -448,22 +562,45 @@ export default function WalkthroughVideosClient() {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-black mb-4">Related Services</h2>
+            <h2 className="text-3xl font-bold text-black mb-4">
+              Related Services
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Virtual Reality Tours", desc: "Immersive VR experiences for NRI buyers and sales offices.", href: "/services/virtual-reality-tours", icon: "ri-vr-goggles-line" },
-              { name: "Interior Cinematic Walkthrough", desc: "Cinematic-grade interior animations with photorealistic lighting.", href: "/services/interior-cinematic-walkthrough", icon: "ri-film-line" },
-              { name: "3D Renders & Isometrics", desc: "Photorealistic exterior and interior renders for marketing.", href: "/services/3d-renders-isometrics", icon: "ri-image-3d-line" },
+              {
+                name: "Virtual Reality Tours",
+                desc: "Immersive 3D virtual real estate tours and VR experiences for NRI buyers and sales offices.",
+                href: "/services/virtual-reality-tours",
+                icon: "ri-vr-goggles-line",
+              },
+              {
+                name: "Interior Cinematic Walkthrough",
+                desc: "Cinematic-grade interior architectural walkthrough animations with photorealistic lighting.",
+                href: "/services/interior-cinematic-walkthrough",
+                icon: "ri-film-line",
+              },
+              {
+                name: "3D Renders & Isometrics",
+                desc: "Photorealistic exterior and interior renders for marketing.",
+                href: "/services/3d-renders-isometrics",
+                icon: "ri-image-3d-line",
+              },
             ].map((s) => (
-              <a key={s.href} href={s.href} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <a
+                key={s.href}
+                href={s.href}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group"
+              >
                 <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <i className={`${s.icon} text-2xl text-black`}></i>
                 </div>
                 <h3 className="text-xl font-bold text-black mb-3">{s.name}</h3>
                 <p className="text-gray-600 mb-4">{s.desc}</p>
-                <span className="text-yellow-600 font-semibold text-sm">Learn more →</span>
+                <span className="text-yellow-600 font-semibold text-sm">
+                  Learn more →
+                </span>
               </a>
             ))}
           </div>
@@ -480,8 +617,9 @@ export default function WalkthroughVideosClient() {
               </h2>
               <div className="w-20 h-1 bg-black mx-auto mb-8"></div>
               <p className="text-lg text-black/80">
-                Ready to bring your architectural vision to life? Contact us for
-                a custom quote.
+                Ready to create a stunning 3D walkthrough video, 3D virtual
+                house tour, or architectural walkthrough for your project?
+                Contact us for a custom quote.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-2xl">
@@ -568,7 +706,9 @@ export default function WalkthroughVideosClient() {
                   disabled={isSubmitting}
                   className="w-full bg-yellow-400 text-black py-4 rounded-lg font-semibold hover:bg-yellow-300 transition-colors disabled:opacity-50"
                 >
-                  {isSubmitting ? "Sending..." : "Get Your Quote"}
+                  {isSubmitting
+                    ? "Sending..."
+                    : "Get Your 3D Walkthrough Quote"}
                 </button>
                 {submitStatus === "success" && (
                   <p className="text-green-600 text-center font-medium">

@@ -163,11 +163,15 @@ export default function VirtualRealityToursClient() {
                 />
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-                Virtual Reality Tours for Real Estate India
+                Virtual Reality Tours & VR Real Estate Tours in India
               </h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
-                Interactive VR experiences allowing clients to explore
-                properties before construction with complete immersion.
+                We create immersive VR tours, 3D virtual reality tours, and real
+                estate virtual tours service in India for developers,
+                architects, and real estate brands. Explore properties through
+                interactive 3D virtual home tour experiences, 360 virtual
+                photography, and VR real estate tours designed for modern
+                buyers.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -196,8 +200,10 @@ export default function VirtualRealityToursClient() {
               </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Step into your future property with cutting-edge virtual reality
-                technology
+                Experience the best virtual reality tours with interactive VR
+                tour technology, 3D virtual real estate tours, and immersive
+                real estate virtual tours built for next-generation property
+                marketing.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -213,8 +219,9 @@ export default function VirtualRealityToursClient() {
                   Full 360° Immersion
                 </h3>
                 <p className="text-gray-600">
-                  Complete spherical views allowing users to look in any
-                  direction and explore every corner of the space.
+                  Complete 360 virtual photography and VR tour experiences
+                  allowing users to explore every angle of a property through
+                  immersive 3D virtual reality tours.
                 </p>
               </div>
               {[
@@ -226,7 +233,7 @@ export default function VirtualRealityToursClient() {
                 {
                   icon: "ri-smartphone-line",
                   title: "Multi-Device Support",
-                  desc: "Compatible with VR headsets, smartphones, tablets and desktop computers for maximum accessibility.",
+                  desc: "Compatible with VR headsets, smartphones, tablets, and desktops for seamless VR real estate tours and 3D virtual home tour experiences.",
                 },
                 {
                   icon: "ri-map-pin-line",
@@ -241,7 +248,7 @@ export default function VirtualRealityToursClient() {
                 {
                   icon: "ri-share-line",
                   title: "Easy Sharing",
-                  desc: "Simple links for sharing VR tours with clients, stakeholders, and potential buyers instantly.",
+                  desc: "Share real estate virtual tours instantly with buyers, investors, and channel partners through simple web-based VR tour links.",
                 },
               ].map((f) => (
                 <div
@@ -273,7 +280,7 @@ export default function VirtualRealityToursClient() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-bold text-black mb-6">
-                  Cutting-Edge VR Solutions
+                  Advanced VR Tour & 3D Virtual Reality Solutions
                 </h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
@@ -289,8 +296,9 @@ export default function VirtualRealityToursClient() {
                         High-Resolution Rendering
                       </h4>
                       <p className="text-gray-600">
-                        8K resolution support for crystal-clear visual quality
-                        in VR environments.
+                        High-end rendering technology for realistic 3D virtual
+                        reality tours, VR real estate tours, and interactive
+                        real estate virtual tours service in India.
                       </p>
                     </div>
                   </div>
@@ -345,8 +353,9 @@ export default function VirtualRealityToursClient() {
               </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Immersive virtual reality experiences that transport clients
-                into their future properties
+                Explore immersive VR tour projects, 3D virtual real estate
+                tours, and real estate virtual tours created for leading
+                developers across India.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -441,21 +450,43 @@ export default function VirtualRealityToursClient() {
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">How We Build Your VR Tour</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                How We Build Your VR Tour & Real Estate Virtual Tours
+              </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { num: "01", title: "Input & Brief", desc: "Share floor plans, CAD files, or drawings. We discuss style, materials, and target audience." },
-                { num: "02", title: "3D Build", desc: "Our team models the space in full 3D — architecture, interiors, lighting, and landscaping." },
-                { num: "03", title: "Review & Refine", desc: "You get a preview link for feedback. We refine materials, camera paths, and interactions." },
-                { num: "04", title: "Deploy", desc: "Final VR tour delivered as a web link, iPad app, or VR headset package ready for launch." },
+                {
+                  num: "01",
+                  title: "Input & Brief",
+                  desc: "Share floor plans, CAD files, or drawings. We discuss style, materials, and target audience.",
+                },
+                {
+                  num: "02",
+                  title: "3D Build",
+                  desc: "Our team models the space in full 3D — architecture, interiors, lighting, and landscaping.",
+                },
+                {
+                  num: "03",
+                  title: "Review & Refine",
+                  desc: "You get a preview link for feedback. We refine materials, camera paths, and interactions.",
+                },
+                {
+                  num: "04",
+                  title: "Deploy",
+                  desc: "Final VR tour delivered as a web link, iPad app, or VR headset package ready for launch.",
+                },
               ].map((step) => (
                 <div key={step.num} className="text-center">
                   <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl font-bold text-black">{step.num}</span>
+                    <span className="text-2xl font-bold text-black">
+                      {step.num}
+                    </span>
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-3">{step.title}</h3>
+                  <h3 className="text-xl font-bold text-black mb-3">
+                    {step.title}
+                  </h3>
                   <p className="text-gray-600">{step.desc}</p>
                 </div>
               ))}
@@ -472,15 +503,32 @@ export default function VirtualRealityToursClient() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { icon: "ri-building-4-line", title: "Pre-Launch Sales", desc: "Let buyers explore your project before a single brick is laid. Convert inquiries into bookings with immersive virtual tours at your sales office." },
-                { icon: "ri-flight-takeoff-line", title: "NRI Buyers", desc: "Give overseas investors a real sense of the property without flying in. Our VR tours are shareable via link — no headset needed." },
-                { icon: "ri-group-line", title: "Channel Partner Training", desc: "Equip your channel partners with an interactive demo they can carry on iPad to every client meeting." },
+                {
+                  icon: "ri-building-4-line",
+                  title: "Pre-Launch Sales",
+                  desc: "Convert inquiries into bookings using immersive VR tours, 3D virtual home tour experiences, and real estate virtual tours before construction begins.",
+                },
+                {
+                  icon: "ri-flight-takeoff-line",
+                  title: "NRI Buyers",
+                  desc: "Share VR real estate tours and 3D virtual reality tours with overseas buyers through simple web links.",
+                },
+                {
+                  icon: "ri-group-line",
+                  title: "Channel Partner Training",
+                  desc: "Equip your channel partners with an interactive demo they can carry on iPad to every client meeting.",
+                },
               ].map((item) => (
-                <div key={item.title} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors">
+                <div
+                  key={item.title}
+                  className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors"
+                >
                   <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
                     <i className={`${item.icon} text-2xl text-black`}></i>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {item.title}
+                  </h3>
                   <p className="text-gray-400">{item.desc}</p>
                 </div>
               ))}
@@ -493,10 +541,14 @@ export default function VirtualRealityToursClient() {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">360° Virtual Photography & 3D Virtual Home Tours</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+                  360° Virtual Photography & 3D Virtual Home Tours
+                </h2>
                 <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
                 <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                  We offer two distinct formats of immersive property experiences — choose based on your project stage, budget, and target buyer.
+                  We create immersive 360 virtual photography experiences, VR
+                  tours, and 3D virtual home tour solutions for developers,
+                  architects, and real estate companies across India.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
@@ -504,31 +556,69 @@ export default function VirtualRealityToursClient() {
                   <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
                     <i className="ri-camera-3-line text-2xl text-black"></i>
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-3">360° Virtual Photography</h3>
+                  <h3 className="text-xl font-bold text-black mb-3">
+                    360° Virtual Photography
+                  </h3>
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    <strong>360 virtual photography</strong> captures completed or show-flat spaces using professional 360° cameras, stitched into an interactive panorama. Ideal for ready-to-move projects, furnished showflats, and experience centres — giving buyers a photorealistic, navigable view of the actual space.
+                    <strong>360 virtual photography</strong> captures completed
+                    or show-flat spaces using professional 360° cameras,
+                    stitched into an interactive panorama. Ideal for
+                    ready-to-move projects, furnished showflats, and experience
+                    centres — giving buyers a photorealistic, navigable view of
+                    the actual space.
                   </p>
                   <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Works for completed / furnished spaces</li>
-                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Faster turnaround — 3–5 days</li>
-                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Photorealistic real-world accuracy</li>
+                    <li className="flex items-center gap-2">
+                      <i className="ri-check-line text-yellow-500"></i> Works
+                      for completed / furnished spaces
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <i className="ri-check-line text-yellow-500"></i> Faster
+                      turnaround — 3–5 days
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <i className="ri-check-line text-yellow-500"></i>{" "}
+                      Photorealistic real-world accuracy
+                    </li>
                   </ul>
                 </div>
                 <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
                   <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
                     <i className="ri-3d-glasses-line text-2xl text-black"></i>
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-3">3D Virtual Home Tour</h3>
+                  <h3 className="text-xl font-bold text-black mb-3">
+                    3D Virtual Home Tour
+                  </h3>
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    A <strong>3D virtual home tour</strong> is fully computer-generated — built from architectural drawings before the property is constructed. Buyers can walk through every room, explore amenities, and experience the layout of their future home from any device. Best for under-construction pre-launch marketing.
+                    A <strong>3D virtual home tour</strong> is fully
+                    computer-generated — built from architectural drawings
+                    before the property is constructed. Buyers can walk through
+                    every room, explore amenities, and experience the layout of
+                    their future home from any device. Best for
+                    under-construction pre-launch marketing.
                   </p>
                   <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> No construction required — pre-launch ready</li>
-                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Fully interactive with hotspots</li>
-                    <li className="flex items-center gap-2"><i className="ri-check-line text-yellow-500"></i> Multi-device: browser, iPad, VR headset</li>
+                    <li className="flex items-center gap-2">
+                      <i className="ri-check-line text-yellow-500"></i> No
+                      construction required — pre-launch ready
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <i className="ri-check-line text-yellow-500"></i> Fully
+                      interactive with hotspots
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <i className="ri-check-line text-yellow-500"></i>{" "}
+                      Multi-device: browser, iPad, VR headset
+                    </li>
                   </ul>
                 </div>
               </div>
+              <p className="text-gray-600 leading-relaxed mt-10 text-center">
+                Our real estate virtual tours service in India combines advanced
+                VR tour technology, 360 virtual photography, and interactive 3D
+                virtual real estate tours to help developers improve buyer
+                engagement and project presentation.
+              </p>
             </div>
           </div>
         </section>
@@ -537,19 +627,42 @@ export default function VirtualRealityToursClient() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Frequently Asked Questions
+              </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             </div>
             <div className="max-w-3xl mx-auto space-y-4">
               {[
-                { q: "What is the difference between a VR tour and a 3D walkthrough video?", a: "A 3D walkthrough is a pre-rendered video — like a movie of your property. A VR tour is interactive: users can look around freely, move through rooms, and explore at their own pace using a browser, iPad, or VR headset." },
-                { q: "Do buyers need a VR headset to experience the tour?", a: "No. Our VR tours are built to work on any device — mobile, tablet, desktop, or VR headset. Buyers can explore via a simple web link with no app or download required." },
-                { q: "Can the VR tour work offline at a sales office?", a: "Yes. We provide a fully offline-capable version of the VR tour that runs on a dedicated iPad or laptop at your sales office without requiring internet connectivity." },
-                { q: "How long does a VR tour take to build?", a: "Typically 4–6 weeks depending on the size and complexity of the project. We share progress previews at key milestones for your feedback." },
-                { q: "Can we update the VR tour if the design changes?", a: "Yes. We offer revision rounds during production. Post-delivery updates are available as a separate service, especially useful if floor plans or material specifications change." },
-                { q: "How much does a VR tour cost?", a: "Pricing depends on the number of unit types, amenity areas, and interactive features required. Contact our experts for a custom quote." },
+                {
+                  q: "What is the difference between a VR tour and a 3D walkthrough video?",
+                  a: "A 3D walkthrough is a pre-rendered video — like a movie of your property. A VR tour is interactive: users can look around freely, move through rooms, and explore at their own pace using a browser, iPad, or VR headset.",
+                },
+                {
+                  q: "Do buyers need a VR headset to experience the tour?",
+                  a: "No. Our VR tours are built to work on any device — mobile, tablet, desktop, or VR headset. Buyers can explore via a simple web link with no app or download required.",
+                },
+                {
+                  q: "Can the VR tour work offline at a sales office?",
+                  a: "Yes. We provide a fully offline-capable version of the VR tour that runs on a dedicated iPad or laptop at your sales office without requiring internet connectivity.",
+                },
+                {
+                  q: "How long does a VR tour take to build?",
+                  a: "Typically 4–6 weeks depending on the size and complexity of the project. We share progress previews at key milestones for your feedback.",
+                },
+                {
+                  q: "Can we update the VR tour if the design changes?",
+                  a: "Yes. We offer revision rounds during production. Post-delivery updates are available as a separate service, especially useful if floor plans or material specifications change.",
+                },
+                {
+                  q: "How much does a VR tour cost?",
+                  a: "Pricing depends on the number of unit types, amenity areas, and interactive features required. Contact our experts for a custom quote.",
+                },
               ].map((faq, i) => (
-                <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                <div
+                  key={i}
+                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow"
+                >
                   <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
                   <p className="text-gray-600 leading-relaxed">{faq.a}</p>
                 </div>
@@ -562,10 +675,19 @@ export default function VirtualRealityToursClient() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
-              <h2 className="text-3xl font-bold text-black mb-4">VR Tour Pricing</h2>
+              <h2 className="text-3xl font-bold text-black mb-4">
+                VR Tour Pricing
+              </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-gray-600 mb-8">Every project is unique. Our experts will assess your floor plans, number of unit types, and interactive requirements to give you the most accurate quote.</p>
-              <a href="/contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              <p className="text-gray-600 mb-8">
+                Pricing for VR tours, VR real estate tours, 3D virtual reality
+                tours, and real estate virtual tours service in India depends on
+                project size, unit types, and interaction requirements.
+              </p>
+              <a
+                href="/contact"
+                className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+              >
                 <i className="ri-phone-line mr-2"></i>Contact Our Experts
               </a>
             </div>
@@ -576,22 +698,47 @@ export default function VirtualRealityToursClient() {
         <section className="py-24 bg-black">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Related Services</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Related Services
+              </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { name: "3D Walkthrough Videos", desc: "Cinematic pre-rendered property tours for marketing and RERA.", href: "/services/3d-walkthrough-videos", icon: "ri-video-line" },
-                { name: "Interactive 3D Tools", desc: "Touch-screen unit selectors and configurators for sales offices.", href: "/services/interactive-3d-tools", icon: "ri-cursor-line" },
-                { name: "3D Renders & Isometrics", desc: "Photorealistic stills for brochures, hoardings, and digital ads.", href: "/services/3d-renders-isometrics", icon: "ri-image-3d-line" },
+                {
+                  name: "3D Walkthrough Videos",
+                  desc: "Cinematic pre-rendered property tours for marketing and RERA.",
+                  href: "/services/3d-walkthrough-videos",
+                  icon: "ri-video-line",
+                },
+                {
+                  name: "Interactive 3D Tools",
+                  desc: "Touch-screen unit selectors and configurators for sales offices.",
+                  href: "/services/interactive-3d-tools",
+                  icon: "ri-cursor-line",
+                },
+                {
+                  name: "3D Renders & Isometrics",
+                  desc: "Photorealistic stills for brochures, hoardings, and digital ads.",
+                  href: "/services/3d-renders-isometrics",
+                  icon: "ri-image-3d-line",
+                },
               ].map((s) => (
-                <a key={s.href} href={s.href} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors group">
+                <a
+                  key={s.href}
+                  href={s.href}
+                  className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors group"
+                >
                   <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <i className={`${s.icon} text-2xl text-black`}></i>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{s.name}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {s.name}
+                  </h3>
                   <p className="text-gray-400 mb-4">{s.desc}</p>
-                  <span className="text-yellow-400 font-semibold text-sm">Learn more →</span>
+                  <span className="text-yellow-400 font-semibold text-sm">
+                    Learn more →
+                  </span>
                 </a>
               ))}
             </div>
@@ -608,8 +755,9 @@ export default function VirtualRealityToursClient() {
                 </h2>
                 <div className="w-20 h-1 bg-black mx-auto mb-8"></div>
                 <p className="text-lg text-black/80">
-                  Ready to create immersive VR experiences? Contact us for a
-                  custom quote.
+                  Ready to create immersive VR tours, 3D virtual home tours, and
+                  real estate virtual tours for your next project? Contact our
+                  experts today.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-2xl">
