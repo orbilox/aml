@@ -71,6 +71,12 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
           rel="stylesheet"
         />
+        {/* Ahrefs Analytics */}
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="X3h/UFK3d+U8h2m7qR1Xbg"
+          async
+        />
       </head>
       <body>
         {/* Google Analytics */}
