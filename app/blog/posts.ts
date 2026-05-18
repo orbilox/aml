@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "real-estate-marketing-video-types-india",
+    title: "7 Types of Real Estate Marketing Videos Every Indian Developer Should Use in 2026",
+    excerpt:
+      "A complete guide to real estate video production in India — from 3D walkthroughs and drone shoots to VR tours and construction update videos. Learn which property video types drive the most leads, and how to build the right mix for your project launch.",
+    category: "Real Estate Marketing",
+    date: "May 18, 2026",
+    dateISO: "2026-05-18",
+    readTime: "11 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/3d-walkthrough-videos/1.jpg",
+    tags: ["Real Estate Marketing Videos", "Property Video Production", "Real Estate Video", "3D Walkthrough", "Drone Shoots", "VR Tours"],
+  },
+  {
     slug: "3d-walkthrough-video-service",
     title: "The Ultimate Guide to 3D Walkthrough Video Services for Real Estate",
     excerpt:

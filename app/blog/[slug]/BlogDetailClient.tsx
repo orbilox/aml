@@ -30,6 +30,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <ScaleModelMakingGuideArticle post={post} />;
   }
 
+  if (slug === "real-estate-marketing-video-types-india") {
+    return <RealEstateMarketingVideosArticle post={post} />;
+  }
+
   return notFound();
 }
 
@@ -2401,6 +2405,583 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
             >
               View Scale Model Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   REAL ESTATE MARKETING VIDEOS — 7 TYPES HUB POST
+   ───────────────────────────────────────────────────────────── */
+function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative bg-black pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="/images/services/3d-walkthrough-videos/1.jpg"
+            alt="Real estate marketing videos — 7 types for Indian developers"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-gray-400 text-sm">{post.readTime}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
+          <div className="flex items-center gap-4 text-sm text-gray-400">
+            <span>{post.author}</span>
+            <span>•</span>
+            <span>{post.date}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Article Body */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* TOC */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-12">
+          <h2 className="text-lg font-bold text-black mb-4">In This Guide</h2>
+          <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+            <li><a href="#why-video" className="hover:text-yellow-500 transition-colors">Why Real Estate Video Marketing Wins in 2026</a></li>
+            <li><a href="#type-1" className="hover:text-yellow-500 transition-colors">Type 1 — 3D Walkthrough Videos</a></li>
+            <li><a href="#type-2" className="hover:text-yellow-500 transition-colors">Type 2 — Aerial Drone Videos</a></li>
+            <li><a href="#type-3" className="hover:text-yellow-500 transition-colors">Type 3 — Construction Update Videos</a></li>
+            <li><a href="#type-4" className="hover:text-yellow-500 transition-colors">Type 4 — Virtual Reality (VR) Tours</a></li>
+            <li><a href="#type-5" className="hover:text-yellow-500 transition-colors">Type 5 — Interior Cinematic Walkthroughs</a></li>
+            <li><a href="#type-6" className="hover:text-yellow-500 transition-colors">Type 6 — Location &amp; Route Videos</a></li>
+            <li><a href="#type-7" className="hover:text-yellow-500 transition-colors">Type 7 — 3D Renders &amp; Isometric Visuals</a></li>
+            <li><a href="#mix" className="hover:text-yellow-500 transition-colors">Building the Right Video Marketing Mix</a></li>
+            <li><a href="#comparison" className="hover:text-yellow-500 transition-colors">Comparison Table</a></li>
+            <li><a href="#faq" className="hover:text-yellow-500 transition-colors">Frequently Asked Questions</a></li>
+          </ol>
+        </div>
+
+        {/* Intro */}
+        <section id="why-video" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">Why Real Estate Video Marketing Wins in 2026</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Indian real estate buyers have never been more visually literate — or more demanding. A static brochure and a site plan no longer move units the way they once did. Today&apos;s buyer expects to experience the project before they visit, understand it before they invest, and trust it before they sign. That trust is built through <strong>real estate marketing videos</strong>.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The numbers back this up. Listings with video content receive over 400% more enquiries than those without. Project launches supported by <strong>real estate video production</strong> content — walkthroughs, drone aerials, VR tours — consistently see faster sales velocity, higher booking-to-site-visit conversion rates, and stronger NRI buyer engagement.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            But &quot;video&quot; is not a monolith. There are seven distinct types of <strong>real estate marketing videos</strong>, each serving a different buyer mindset, a different moment in the sales funnel, and a different distribution channel. The developers who achieve the best results don&apos;t just commission one video — they build a deliberate content stack that covers every stage of the buyer journey.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            This guide breaks down all seven types — what each one does, who it&apos;s for, when to use it, and how Alliance Media Labs produces it. By the end, you&apos;ll know exactly which combination of <strong>property video production</strong> formats is right for your next project launch.
+          </p>
+        </section>
+
+        {/* Type 1 */}
+        <section id="type-1" className="mb-14">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">1</div>
+            <h2 className="text-3xl font-bold text-black">3D Walkthrough Videos</h2>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
+            <img src="/images/services/3d-walkthrough-videos/1.jpg" alt="3D walkthrough video for real estate" className="w-full h-full object-cover" />
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The 3D architectural walkthrough video is the single most powerful real estate marketing tool in India. It takes a buyer on a fully rendered, first-person journey through your project — towers, lobbies, apartments, amenities, and landscape — before a single brick has been laid.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A professional 3D walkthrough video captures every material finish, lighting mood, view angle, and spatial proportion in cinematic quality. For pre-launch projects — where buyers must make decisions without seeing a physical product — it transforms uncertainty into confidence.
+          </p>
+          <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+            <li>Pre-launch and soft launch campaigns</li>
+            <li>Off-plan sales to NRI and outstation buyers</li>
+            <li>Digital marketing: YouTube, Instagram Reels, Facebook Ads</li>
+            <li>Sales office screens and presentation decks</li>
+            <li>Channel partner and broker briefings</li>
+          </ul>
+          <h3 className="text-xl font-bold text-black mb-3">What sets a great 3D walkthrough apart:</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Cinematic camera movement, photo-real material rendering, accurate natural and artificial lighting, populated environments (people, cars, foliage), and a professional music soundtrack. Low-cost walkthroughs use template camera paths and generic textures — buyers notice the difference immediately.
+          </p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
+            <p className="text-gray-800 text-sm">
+              <strong>Alliance Media Labs</strong> produces 3D walkthrough videos using Lumion, Unreal Engine, and 3ds Max V-Ray depending on project size and quality requirements. Our walkthroughs are optimised for both 4K screen display and compressed social delivery.
+            </p>
+          </div>
+          <Link
+            href="/services/3d-walkthrough-videos"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
+          >
+            Explore our 3D Walkthrough Video Service <i className="ri-arrow-right-line"></i>
+          </Link>
+        </section>
+
+        {/* Type 2 */}
+        <section id="type-2" className="mb-14">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">2</div>
+            <h2 className="text-3xl font-bold text-black">Aerial Drone Videos</h2>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
+            <img src="/images/services/drone-shoots/1.jpg" alt="Aerial drone video for real estate" className="w-full h-full object-cover" />
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Aerial drone videography gives buyers the one view that no other format can provide: the bird&apos;s-eye perspective of your project in its real geographic context. Location is one of the top three purchase drivers in Indian real estate — and drone video is the most convincing way to demonstrate it.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A well-executed drone video shows proximity to highways, metro stations, schools, business parks, and city landmarks. It reveals the scale of the project, the quality of surrounding development, the depth of landscaping, and the view lines from upper floors. This is context that no 3D render or floor plan can convey.
+          </p>
+          <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+            <li>Demonstrating location advantages and connectivity</li>
+            <li>Large township and master plan launches</li>
+            <li>Construction progress documentation</li>
+            <li>High-impact social media and YouTube content</li>
+            <li>Investor and channel partner presentations</li>
+          </ul>
+          <h3 className="text-xl font-bold text-black mb-3">Regulatory note:</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Commercial drone operations in India require DGCA Remote Pilot Licence (RPL) certification and site-specific permissions for many urban locations. Always verify that your drone vendor is DGCA-compliant — using an unlicensed operator exposes you to legal risk and flight cancellations.
+          </p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
+            <p className="text-gray-800 text-sm">
+              Alliance Media Labs operates DGCA-licensed pilots with 4K and 6K cinema drones across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, and Gurugram. We handle all airspace permissions and provide colour-graded, music-tracked deliverables.
+            </p>
+          </div>
+          <Link
+            href="/services/drone-shoots"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
+          >
+            Explore our Drone Shoot Service <i className="ri-arrow-right-line"></i>
+          </Link>
+        </section>
+
+        {/* Type 3 */}
+        <section id="type-3" className="mb-14">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">3</div>
+            <h2 className="text-3xl font-bold text-black">Construction Update Videos</h2>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
+            <img src="/images/services/construction-update-videos/1.jpg" alt="Construction update video RERA real estate" className="w-full h-full object-cover" />
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Construction update videos are one of the most underutilised assets in Indian real estate marketing — and one of the most powerful for post-booking buyer retention and RERA compliance. These are regular video dispatches — typically monthly or quarterly — showing actual on-site construction progress, delivered directly to buyers who have already booked.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            In an environment where project delays and delivery uncertainty are among the biggest buyer anxieties, a professionally produced construction update video does something no email or PDF can: it shows buyers that their project is physically advancing, their money is being deployed, and the developer is accountable.
+          </p>
+          <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+            <li>Post-booking buyer communication and trust-building</li>
+            <li>RERA quarterly progress reporting</li>
+            <li>Channel partner confidence updates</li>
+            <li>Referral marketing — satisfied buyers share progress</li>
+            <li>Financing and bank milestone documentation</li>
+          </ul>
+          <h3 className="text-xl font-bold text-black mb-3">Format options:</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Ground-level walkaround footage with voiceover narration; drone aerials showing slab progress; timelapse sequences; project manager interviews; combination of live site footage with progress-against-plan graphics overlay.
+          </p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
+            <p className="text-gray-800 text-sm">
+              Alliance Media Labs offers retainer-based construction video packages — monthly site visits, filming, editing, and delivery within 5 business days — making it the most hassle-free way to maintain buyer communication at scale.
+            </p>
+          </div>
+          <Link
+            href="/services/construction-update-videos"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
+          >
+            Explore our Construction Update Video Service <i className="ri-arrow-right-line"></i>
+          </Link>
+        </section>
+
+        {/* Type 4 */}
+        <section id="type-4" className="mb-14">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">4</div>
+            <h2 className="text-3xl font-bold text-black">Virtual Reality (VR) Tours</h2>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
+            <img src="/images/services/virtual-reality-tours/1.jpg" alt="Virtual reality tour for real estate India" className="w-full h-full object-cover" />
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A virtual reality tour allows buyers to physically step inside your project — using a VR headset or a 360° browser experience — and explore it in full spatial immersion. Unlike a linear walkthrough video, a VR tour is interactive: the buyer controls where they go, what they look at, and how long they stay in each space.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            This interactivity is what makes VR tours uniquely powerful for high-ticket real estate. When a buyer can stand in the master bedroom of a ₹4 Cr apartment, look out of the window at a rendered view, and turn around to examine the wardrobes and ceiling height — the purchase decision accelerates dramatically. They are not watching someone else&apos;s experience; they are having their own.
+          </p>
+          <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+            <li>Sales office experiential setups with Oculus/VIVE headsets</li>
+            <li>NRI buyer roadshows in Dubai, Singapore, UK, USA</li>
+            <li>Premium residential launches (₹2 Cr+ ticket size)</li>
+            <li>Virtual property expos and online home fairs</li>
+            <li>Luxury hospitality and resort properties</li>
+          </ul>
+          <h3 className="text-xl font-bold text-black mb-3">Deployment options:</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Standalone VR headset (Oculus Quest 2/3) for sales office use; web-based 360° tour embeddable on your website and shared via link for remote buyers; custom-branded kiosk installations for property expos.
+          </p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
+            <p className="text-gray-800 text-sm">
+              Alliance Media Labs builds VR tours in Unreal Engine and custom WebGL environments, optimised for headset, browser, and kiosk deployment. All experiences are fully branded and include hotspot navigation, unit selector overlays, and lead capture integration.
+            </p>
+          </div>
+          <Link
+            href="/services/virtual-reality-tours"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
+          >
+            Explore our Virtual Reality Tour Service <i className="ri-arrow-right-line"></i>
+          </Link>
+        </section>
+
+        {/* Type 5 */}
+        <section id="type-5" className="mb-14">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">5</div>
+            <h2 className="text-3xl font-bold text-black">Interior Cinematic Walkthroughs</h2>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
+            <img src="/images/services/interior-cinematic-walkthrough/1.jpg" alt="Interior cinematic walkthrough real estate" className="w-full h-full object-cover" />
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Where a 3D architectural walkthrough covers the entire project — towers, landscape, amenities — an interior cinematic walkthrough goes deep inside a single unit. It&apos;s a room-by-room, surface-by-surface showcase of your design intent: materials, finishes, furniture, lighting, and atmosphere, rendered in film-quality visual fidelity.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Think of it as a virtual show flat. When physical show flats are too expensive to build at launch — or when you want to showcase multiple configuration types (2BHK, 3BHK, duplex, penthouse) simultaneously — an interior cinematic walkthrough delivers every finish option in a single, shareable video asset.
+          </p>
+          <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+            <li>Luxury residential interior showcase</li>
+            <li>Multiple unit type differentiation at a single launch</li>
+            <li>Replacing or supplementing physical show flats</li>
+            <li>Premium Instagram content and YouTube long-form</li>
+            <li>Interior design specification presentations to buyers</li>
+          </ul>
+          <h3 className="text-xl font-bold text-black mb-3">Distinguishing features:</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Slow, deliberate camera movement. Extreme close-up of material details — stone veining, wood grain, fabric texture. Transitional lighting from day to evening. Stylised composition and colour grade consistent with your brand identity. Background ambience sound design. Duration typically 90 seconds to 3 minutes.
+          </p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
+            <p className="text-gray-800 text-sm">
+              Alliance Media Labs&apos; interior cinematic walkthroughs are produced using 3ds Max with V-Ray or Corona render engines, post-processed in DaVinci Resolve for professional colour grading. Each project is storyboarded before rendering to ensure every frame serves the sales narrative.
+            </p>
+          </div>
+          <Link
+            href="/services/interior-cinematic-walkthrough"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
+          >
+            Explore our Interior Cinematic Walkthrough Service <i className="ri-arrow-right-line"></i>
+          </Link>
+        </section>
+
+        {/* Type 6 */}
+        <section id="type-6" className="mb-14">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">6</div>
+            <h2 className="text-3xl font-bold text-black">Location &amp; Route Videos</h2>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
+            <img src="/images/services/route-videos/1.jpg" alt="Location route video real estate marketing" className="w-full h-full object-cover" />
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Location videos and route videos bridge the gap between your project and the world around it. A location video cinematically captures the neighbourhood — nearby landmarks, parks, markets, schools, hospitals, and lifestyle amenities — making the case for why your project&apos;s address is a genuine lifestyle upgrade.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A route video specifically demonstrates the daily commute from your project to key destinations — office parks, metro stations, city centres, airports. For connectivity-driven buyers (particularly in NCR, Pune, and Bangalore tech corridors), proving a commute takes 20 minutes rather than 45 can be the deciding factor.
+          </p>
+          <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+            <li>Peripheral and emerging location projects where connectivity is a key objection</li>
+            <li>Lifestyle-led premium projects (hill stations, resort communities)</li>
+            <li>City fringe developments targeting metro commuters</li>
+            <li>Social media storytelling content alongside product visuals</li>
+            <li>Micro-market awareness for channel partners unfamiliar with the location</li>
+          </ul>
+          <h3 className="text-xl font-bold text-black mb-3">Production approach:</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Combination of ground-level live cinematography, drone aerials, and motion graphics overlays showing distances and travel times. Voice narration or upbeat music depending on tone. Duration: 60–120 seconds for social; 2–4 minutes for full sales presentation.
+          </p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
+            <p className="text-gray-800 text-sm">
+              Alliance Media Labs produces route and location AV shoots across India. Our location videos are storyboarded around your project&apos;s specific sales narrative — not generic real estate b-roll templates.
+            </p>
+          </div>
+          <Link
+            href="/services/route-videos"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
+          >
+            Explore our Route &amp; Location Video Service <i className="ri-arrow-right-line"></i>
+          </Link>
+        </section>
+
+        {/* Type 7 */}
+        <section id="type-7" className="mb-14">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">7</div>
+            <h2 className="text-3xl font-bold text-black">3D Renders &amp; Isometric Visuals</h2>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
+            <img src="/images/services/3d-renders-isometrics/1.jpg" alt="3D renders and isometric visuals real estate" className="w-full h-full object-cover" />
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            While not video in the traditional sense, 3D architectural renders and isometric visuals are essential components of any real estate marketing content stack. They are the still images — the hero visuals — that appear across every digital and print touchpoint: brochures, hoardings, newspaper ads, social carousels, website landing pages, and investor decks.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Isometric 3D views — the &quot;elevated&quot; perspective that shows the entire master plan or complex from a 45° angle — are particularly powerful for township and large mixed-use projects. They allow buyers to instantly comprehend the full scale, layout, and density of a development in a single visual.
+          </p>
+          <h3 className="text-xl font-bold text-black mb-3">Types of 3D render deliverables:</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+            <li>Exterior elevation renders (building facade, landscaping)</li>
+            <li>Aerial perspective / master plan views</li>
+            <li>Isometric township layout renders</li>
+            <li>Interior room renders (living, kitchen, master bedroom)</li>
+            <li>Amenity area renders (clubhouse, pool, gym, garden)</li>
+            <li>3D floor plan renders</li>
+            <li>Night view and golden-hour renders</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Every video-based <strong>real estate promotional video</strong> campaign needs a bank of 3D renders as supporting visual assets. The renders feed your digital ads, website hero sections, and brochure design — making the overall marketing package cohesive and visually compelling across every channel.
+          </p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
+            <p className="text-gray-800 text-sm">
+              Alliance Media Labs produces architectural renders in 3ds Max with V-Ray and Corona, delivering images at up to 8K resolution suitable for large-format hoarding printing. All renders include multiple camera angles and a day/evening variant.
+            </p>
+          </div>
+          <Link
+            href="/services/3d-renders-isometrics"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
+          >
+            Explore our 3D Renders &amp; Isometrics Service <i className="ri-arrow-right-line"></i>
+          </Link>
+        </section>
+
+        {/* Bonus: Interactive 3D */}
+        <section className="mb-14 bg-gray-50 rounded-2xl p-8">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center font-bold text-yellow-400 text-sm flex-shrink-0">+1</div>
+            <h2 className="text-2xl font-bold text-black">Bonus: Interactive 3D Tools — The Next Frontier</h2>
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Beyond the seven core video formats lies a growing category of interactive 3D digital tools — unit configurators, master plan selectors, and embedded 3D viewers hosted directly on your project website. These allow buyers to select their preferred unit from the master plan, configure their interior finish packages, and explore floor plates interactively — all from a browser or tablet in your sales office.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Interactive tools extend the life of your visual content well beyond launch. They live on your website permanently, collecting lead data from every buyer who interacts with them. They reduce the burden on your sales team for routine product navigation, freeing them for higher-value closing conversations.
+          </p>
+          <Link
+            href="/services/interactive-3d-tools"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
+          >
+            Explore our Interactive 3D Tools <i className="ri-arrow-right-line"></i>
+          </Link>
+        </section>
+
+        {/* Mix Section */}
+        <section id="mix" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">Building the Right Real Estate Video Marketing Mix</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Not every project needs all seven types. Budget, project scale, target buyer, and timeline all influence which formats to prioritise. Here&apos;s how to think about it:
+          </p>
+
+          <div className="space-y-6">
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-3">Pre-Launch (0–3 months before RERA registration)</h3>
+              <p className="text-gray-700 leading-relaxed mb-2"><strong>Priority formats:</strong> 3D walkthrough + 3D renders + drone video</p>
+              <p className="text-gray-700 leading-relaxed text-sm">Create desire and anticipation before the project is publicly announced. 3D content lets you generate interest and collect pre-registrations without relying on physical assets.</p>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-3">Launch Phase (Month 1–6)</h3>
+              <p className="text-gray-700 leading-relaxed mb-2"><strong>Priority formats:</strong> 3D walkthrough + VR tour + interior cinematic + location video</p>
+              <p className="text-gray-700 leading-relaxed text-sm">Maximum immersive impact for sales office visits and digital campaigns. VR in the sales office dramatically increases booking-to-visit conversion. Location video handles the connectivity objection proactively.</p>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-3">Active Sales Phase (Month 6–24)</h3>
+              <p className="text-gray-700 leading-relaxed mb-2"><strong>Priority formats:</strong> Construction update videos + 3D renders (seasonal refreshes) + interactive 3D tools</p>
+              <p className="text-gray-700 leading-relaxed text-sm">Keep booked buyers engaged, manage referral marketing, and maintain digital presence as the project progresses physically.</p>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-black mb-3">Luxury / High-Ticket Projects (₹2 Cr+)</h3>
+              <p className="text-gray-700 leading-relaxed mb-2"><strong>All seven formats + interactive tools</strong></p>
+              <p className="text-gray-700 leading-relaxed text-sm">Premium buyers expect premium content. Every touchpoint — from the first digital ad to the sales office experience — must reinforce quality. Budget for the full stack and treat the visual content as a core cost of sale, not a marketing overhead.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison Table */}
+        <section id="comparison" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-6">Comparison Table — Which Video Type Does What?</h2>
+          <div className="overflow-x-auto rounded-xl border border-gray-200">
+            <table className="w-full text-sm">
+              <thead className="bg-black text-white">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Video Type</th>
+                  <th className="px-4 py-3 text-left font-semibold">Sales Stage</th>
+                  <th className="px-4 py-3 text-left font-semibold">Primary Use</th>
+                  <th className="px-4 py-3 text-left font-semibold">Best Channel</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">3D Walkthrough</td>
+                  <td className="px-4 py-3 text-gray-700">Pre-launch + Launch</td>
+                  <td className="px-4 py-3 text-gray-700">Create desire</td>
+                  <td className="px-4 py-3 text-gray-700">YouTube, Social, Sales Office</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-3 font-medium">Drone Aerial</td>
+                  <td className="px-4 py-3 text-gray-700">Launch + Active</td>
+                  <td className="px-4 py-3 text-gray-700">Prove location</td>
+                  <td className="px-4 py-3 text-gray-700">Social, Digital Ads, Site</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">Construction Update</td>
+                  <td className="px-4 py-3 text-gray-700">Active Sales</td>
+                  <td className="px-4 py-3 text-gray-700">Build trust</td>
+                  <td className="px-4 py-3 text-gray-700">Email, WhatsApp, Buyer Portal</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-3 font-medium">VR Tour</td>
+                  <td className="px-4 py-3 text-gray-700">Launch</td>
+                  <td className="px-4 py-3 text-gray-700">Immersive decision</td>
+                  <td className="px-4 py-3 text-gray-700">Sales Office, NRI Roadshows</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">Interior Cinematic</td>
+                  <td className="px-4 py-3 text-gray-700">Launch</td>
+                  <td className="px-4 py-3 text-gray-700">Showcase finishes</td>
+                  <td className="px-4 py-3 text-gray-700">Instagram, Sales Office, Brochure</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-4 py-3 font-medium">Location / Route</td>
+                  <td className="px-4 py-3 text-gray-700">Pre-launch + Launch</td>
+                  <td className="px-4 py-3 text-gray-700">Handle objections</td>
+                  <td className="px-4 py-3 text-gray-700">Digital Ads, Broker Decks</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-medium">3D Renders</td>
+                  <td className="px-4 py-3 text-gray-700">All stages</td>
+                  <td className="px-4 py-3 text-gray-700">Visual identity</td>
+                  <td className="px-4 py-3 text-gray-700">Print, Hoardings, Website, Ads</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="mb-14">
+          <h2 className="text-3xl font-bold text-black mb-8">Frequently Asked Questions</h2>
+
+          <div className="space-y-6">
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">How much does real estate video production cost in India?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Costs vary widely by format and quality tier. A professional 3D walkthrough video typically ranges from ₹80,000 to ₹3,00,000+ depending on project size and render quality. Drone videos start from ₹25,000 for a basic half-day shoot. Construction update video retainer packages start from ₹15,000 per month. VR tours range from ₹1,50,000 to ₹5,00,000+ depending on scope and deployment. Contact Alliance Media Labs for a detailed quote tailored to your project.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">How long does it take to produce a 3D walkthrough video?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Standard production timeline is 15–25 working days from approved drawings to final delivery, depending on project complexity and number of revision rounds. Fast-track production (7–12 days) is available at a premium for urgent launch requirements. VR tours typically take 25–40 days. Construction videos can be delivered within 5 business days of the site shoot.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">Which type of real estate marketing video gives the best ROI?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                For most Indian developers, a professional 3D walkthrough video delivers the highest ROI because it is used across the longest span of the sales cycle and the widest range of channels. It feeds your digital ads, your website, your broker presentations, and your sales office screen simultaneously. For NRI-focused launches, combining a 3D walkthrough with a VR tour delivers the strongest conversion results.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">Can you handle the full real estate promotional video package — all types?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Yes. Alliance Media Labs is a full-service real estate video production company — we produce all seven video types in-house, alongside 3D renders, interactive tools, and scale models. Working with a single vendor means consistent visual identity across all content, streamlined project management, and better cost efficiency through package bundling.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">Do you work with developers outside Mumbai and Delhi?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Yes. We serve real estate developers across India — Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, Chennai, Kolkata, Ahmedabad, and Tier 1 and 2 cities. 3D and interactive content is produced remotely from your drawings; drone and live cinematography requires physical site visits which we coordinate and travel for.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Posts */}
+        <div className="border-t border-gray-100 pt-12 mb-12">
+          <h3 className="text-xl font-bold text-black mb-6">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/3d-walkthrough-video-service" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">3D Walkthrough</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">The Ultimate Guide to 3D Walkthrough Video Services for Real Estate</h4>
+            </Link>
+            <Link href="/blog/real-estate-drone-photography-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Drone Photography</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">Real Estate Drone Photography in India: The Complete Guide (2026)</h4>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back to Blog */}
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Build Your Real Estate Video Marketing Stack?
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Get a custom quote for the video formats that match your project, timeline, and buyer profile.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
+              Get a Free Consultation
+            </Link>
+            <Link
+              href="/portfolio"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
+              View Our Portfolio
             </Link>
           </div>
         </div>

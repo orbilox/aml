@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoutes = [
     "/blog",
+    "/blog/real-estate-marketing-video-types-india",
     "/blog/3d-walkthrough-video-service",
     "/blog/architectural-scale-models-india-real-estate",
     "/blog/3d-house-rendering-guide-india",
