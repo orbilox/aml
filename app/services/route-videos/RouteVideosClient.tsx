@@ -18,7 +18,7 @@ interface Project {
 
 const portfolioProjects: Project[] = [
   {
-    id: 7,
+    id: 1,
     title: "Hero Homes-The Palatial, Gurugram",
     category: "Route Videos",
     image: "/images/portfolio/14.png",
@@ -28,6 +28,16 @@ const portfolioProjects: Project[] = [
       "https://www.youtube.com/embed/ENlsfe7wQRs?si=y4M05nZkVgJPmB9U&autoplay=1",
     duration: "6:34",
   },
+  {
+      id: 2,
+      title: "Naman 58, Mumbai",
+      category: "Route Videos",
+      image: "/images/portfolio/Naman-58-Thumbnail.jpg",
+      description:
+        "Cinematic Route Location Video featuring Real Estate Connectivity Showcase, Google Map Animation, Drone Coverage, Highway Access, Landmark Highlighting & Location Advantage Visualization for Premium Real Estate Marketing. ",
+      videoUrl: "https://www.youtube.com/embed/Yqsj9E8-QHI?autoplay=1",
+      duration: "4:00",
+    },
 ];
 
 const features = [

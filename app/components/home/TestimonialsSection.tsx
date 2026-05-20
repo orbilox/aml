@@ -110,6 +110,7 @@ const clientLogos = [
   { name: "Pyramid", logo: "/images/testimonial/Pyramid-Logo.png" },
   { name: "Westway", logo: "/images/testimonial/Westway-Logo.png" },
   { name: "Shapoorji", logo: "/images/testimonial/Shapoorji-Logo.png" },
+  { name: "HCBS", logo: "/images/testimonial/HCBS-Logo.png" },
 ];
 
 export default function TestimonialsSection() {

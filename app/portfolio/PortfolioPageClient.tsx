@@ -332,39 +332,40 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 30,
-    title: "Centonic, Pune",
+    title: "The Dualis, Shapoorji Pallonji",
     category: "Architectural Scale Models",
-    image: "/images/services/architectural-scale-models/1.jpg",
+    image: "/images/services/architectural-scale-models/shapoorji/01.png",
     description:
-      "Precision architectural scale model showcasing Centonic's contemporary residential development in Pune, featuring detailed landscaping, modern tower structures, and comprehensive amenity planning.",
+      "A premium, space-efficient, visually engaging scale model solution that delivers maximum impact without occupying excessive space.",
     hasGallery: true,
     galleryImages: [
       {
-        url: "/images/services/architectural-scale-models/centonic/1.jpeg",
-        title: "Centonic Main Tower Complex",
+        url: "/images/services/architectural-scale-models/shapoorji/01.png",
+        title: "The Dualis Scale Model View",
         description:
-          "Detailed scale model of the primary residential towers with surrounding landscape elements and pedestrian pathways",
+          "Premium architectural scale model showcasing The Dualis by Shapoorji Pallonji with detailed tower structure, landscape elements, and modern residential planning.",
       },
       {
-        url: "/images/services/architectural-scale-models/centonic/2.jpeg",
-        title: "Amenity Zone Layout",
+        url: "/images/services/architectural-scale-models/shapoorji/02.jpeg",
+        title: "The Dualis Residential Layout",
         description:
-          "Miniature representation of recreational facilities including clubhouse, pool area, and community spaces",
+          "Detailed residential scale model highlighting tower placement, internal circulation, landscaped zones, and luxury project planning.",
       },
       {
-        url: "/images/services/architectural-scale-models/centonic/3.jpeg",
-        title: "Tower Elevation Detail",
+        url: "/images/services/architectural-scale-models/shapoorji/03.jpeg",
+        title: "The Dualis Master Planning Model",
         description:
-          "Close-up view showcasing architectural facade details, balcony arrangements, and building proportion accuracy",
+          "Comprehensive architectural model presenting the master layout, premium amenities, open spaces, and urban design visualization.",
       },
       {
-        url: "/images/services/architectural-scale-models/centonic/4.jpeg",
-        title: "Master Plan Overview",
+        url: "/images/services/architectural-scale-models/shapoorji/04.jpeg",
+        title: "The Dualis Premium Model Display",
         description:
-          "Complete aerial perspective of the Centonic development showing site planning and spatial organization",
+          "High-detail scale model crafted for real estate presentations, investor showcases, and luxury residential marketing visualization.",
       },
     ],
   },
+
   {
     id: 31,
     title: "Indian Railways",
@@ -598,8 +599,87 @@ const portfolioItems: PortfolioItem[] = [
       "Developed an AI-powered 3D walkthrough for a commercial project, bringing out the scale, layout, and usability of the spaces in a smart way. Delivered at record speed of 7 days.",
     videoUrl: "https://www.youtube.com/embed/YGaAU9B37nc?autoplay=1",
   },
+  {
+    id: 40,
+    title: "HCBS Auroville, Gurugram",
+    category: "Construction Updates",
+    image: "/images/portfolio/Auroville-Thumbnail.jpg",
+    description:
+      "High-Quality Construction Progress Video featuring Drone Videography, Real Estate Construction Updates, Site Progress Monitoring & Cinematic Project Documentation. ",
+    videoUrl: "https://www.youtube.com/embed/ommJFDhiz-M?autoplay=1",
+  },
+  {
+    id: 41,
+    title: "Smart World, Sky Arc, Gurugram",
+    category: "Construction Updates",
+    image: "/images/portfolio/Sky-Arc-Thumbnail.png",
+    description:
+      "Cinematic Construction Update Video with Drone Shoot, Real Estate Project Progress Tracking, Aerial Videography & Premium Construction Site Coverage for Real Estate Marketing.",
+    videoUrl: "https://www.youtube.com/embed/lJ9b5xaa04Q?autoplay=1",
+  },
+  {
+    id: 42,
+    title: "HCBS Glenwood, Jhajjar",
+    category: "Construction Updates",
+    image: "/images/portfolio/Glenwood-Thumbnail.png",
+    description:
+      "Professional Construction Update Film with Real Estate Drone Coverage, Construction Site Tracking, Infrastructure Progress Video & Premium Real Estate Marketing Visuals.",
+    videoUrl: "https://www.youtube.com/embed/19KFjpoBYBA?autoplay=1",
+  },
+  {
+    id: 43,
+    title: "HCBS Twin Horizon, Gurugram",
+    category: "Construction Updates",
+    image: "/images/portfolio/Twin-Horizon-Thumbnail.png",
+    description:
+      "Real Estate Construction Update Video with Aerial Drone Shoot, Monthly Project Progress Coverage, Cinematic Site Documentation & Builder Marketing Content.",
+    videoUrl: "https://www.youtube.com/embed/5fxjaqWpgYE?autoplay=1",
+  },
+  {
+    id: 44,
+    title: "Naman 58, Mumbai",
+    category: "Route Videos",
+    image: "/images/portfolio/Naman-58-Thumbnail.jpg",
+    description:
+      "Cinematic Route Location Video featuring Real Estate Connectivity Showcase, Google Map Animation, Drone Coverage, Highway Access, Landmark Highlighting & Location Advantage Visualization for Premium Real Estate Marketing. ",
+    videoUrl: "https://www.youtube.com/embed/Yqsj9E8-QHI?autoplay=1",
+  },
+  {
+    id: 45,
+    title: "Centonic, Pune",
+    category: "Architectural Scale Models",
+    image: "/images/services/architectural-scale-models/1.jpg",
+    description:
+      "Precision architectural scale model showcasing Centonic's contemporary residential development in Pune, featuring detailed landscaping, modern tower structures, and comprehensive amenity planning.",
+    hasGallery: true,
+    galleryImages: [
+      {
+        url: "/images/services/architectural-scale-models/centonic/1.jpeg",
+        title: "Centonic Main Tower Complex",
+        description:
+          "Detailed scale model of the primary residential towers with surrounding landscape elements and pedestrian pathways",
+      },
+      {
+        url: "/images/services/architectural-scale-models/centonic/2.jpeg",
+        title: "Amenity Zone Layout",
+        description:
+          "Miniature representation of recreational facilities including clubhouse, pool area, and community spaces",
+      },
+      {
+        url: "/images/services/architectural-scale-models/centonic/3.jpeg",
+        title: "Tower Elevation Detail",
+        description:
+          "Close-up view showcasing architectural facade details, balcony arrangements, and building proportion accuracy",
+      },
+      {
+        url: "/images/services/architectural-scale-models/centonic/4.jpeg",
+        title: "Master Plan Overview",
+        description:
+          "Complete aerial perspective of the Centonic development showing site planning and spatial organization",
+      },
+    ],
+  },
 ] as const;
-
 
 const categories = [
   "All",
@@ -617,110 +697,110 @@ const categories = [
 
 export default function PortfolioPageClient() {
   const [activeCategory, setActiveCategory] = useState("All");
-    const [selectedItem, setSelectedItem] = useState<
-      (typeof portfolioItems)[0] | null
-    >(null);
-    const [showVideo, setShowVideo] = useState(false);
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  
-    const filteredItems =
-      activeCategory === "All"
-        ? portfolioItems
-        : portfolioItems.filter((item) => item.category === activeCategory);
-  
-    const handleItemClick = (item: (typeof portfolioItems)[0]) => {
-      // Specific handling for known external or video items
-      if (item.title === "Yuu by Nahar, Mumbai") {
-        // Open external link in a new tab
-        window.open("https://amlabs.cloud/Nahar_VR/", "_blank");
-        return;
-      }
-  
-      if (item.title === "House of Hiranandani, Mumbai") {
-        // Open external link in a new tab
-        window.open("https://amlabs.cloud/HOH-V2/", "_blank");
-        return;
-      }
-  
-      if (
-        item.title === "Province D Olympia, Noida" &&
-        item.category === "VR Experience"
-      ) {
-        // Open external link in a new tab
-        window.open("https://amlabs.cloud/ATS_PDO/", "_blank");
-        return;
-      }
-  
-      if (item.title === "Etereo 1, Goa" && item.category === "3D Walkthrough") {
-        // Play video in modal
-        setSelectedItem(item);
-        setShowVideo(true);
-        return;
-      }
-  
-      if (item.title === "Etereo 1, Goa" && item.category === "3D Isometrics") {
-        // Show gallery in modal
-        setSelectedItem(item);
-        setShowVideo(false);
-        setCurrentSlideIndex(0);
-        return;
-      }
-  
-      // Generic external link handling
-      if (item.isExternal) {
-        window.open(item.videoUrl, "_blank");
-        return;
-      }
-  
-      // Default: open regular modal (image or slider)
-      setSelectedItem(item);
-      setCurrentSlideIndex(0);
-    };
-  
-    const handleVideoPlay = (item: (typeof portfolioItems)[0]) => {
-      if (item.isExternal) {
-        window.open(item.videoUrl, "_blank");
-        return;
-      }
+  const [selectedItem, setSelectedItem] = useState<
+    (typeof portfolioItems)[0] | null
+  >(null);
+  const [showVideo, setShowVideo] = useState(false);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+  const filteredItems =
+    activeCategory === "All"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeCategory);
+
+  const handleItemClick = (item: (typeof portfolioItems)[0]) => {
+    // Specific handling for known external or video items
+    if (item.title === "Yuu by Nahar, Mumbai") {
+      // Open external link in a new tab
+      window.open("https://amlabs.cloud/Nahar_VR/", "_blank");
+      return;
+    }
+
+    if (item.title === "House of Hiranandani, Mumbai") {
+      // Open external link in a new tab
+      window.open("https://amlabs.cloud/HOH-V2/", "_blank");
+      return;
+    }
+
+    if (
+      item.title === "Province D Olympia, Noida" &&
+      item.category === "VR Experience"
+    ) {
+      // Open external link in a new tab
+      window.open("https://amlabs.cloud/ATS_PDO/", "_blank");
+      return;
+    }
+
+    if (item.title === "Etereo 1, Goa" && item.category === "3D Walkthrough") {
+      // Play video in modal
       setSelectedItem(item);
       setShowVideo(true);
-    };
-  
-    const closeModal = () => {
-      setSelectedItem(null);
+      return;
+    }
+
+    if (item.title === "Etereo 1, Goa" && item.category === "3D Isometrics") {
+      // Show gallery in modal
+      setSelectedItem(item);
       setShowVideo(false);
       setCurrentSlideIndex(0);
-    };
-  
-    const nextSlide = () => {
-      if (selectedItem?.sliderImages) {
-        setCurrentSlideIndex((prev) =>
-          prev === selectedItem.sliderImages!.length - 1 ? 0 : prev + 1,
-        );
-      }
-      if (selectedItem?.galleryImages) {
-        setCurrentSlideIndex((prev) =>
-          prev === selectedItem.galleryImages!.length - 1 ? 0 : prev + 1,
-        );
-      }
-    };
-  
-    const prevSlide = () => {
-      if (selectedItem?.sliderImages) {
-        setCurrentSlideIndex((prev) =>
-          prev === 0 ? selectedItem.sliderImages!.length - 1 : prev - 1,
-        );
-      }
-      if (selectedItem?.galleryImages) {
-        setCurrentSlideIndex((prev) =>
-          prev === 0 ? selectedItem.galleryImages!.length - 1 : prev - 1,
-        );
-      }
-    };
-  
-    const goToSlide = (index: number) => {
-      setCurrentSlideIndex(index);
-    };
+      return;
+    }
+
+    // Generic external link handling
+    if (item.isExternal) {
+      window.open(item.videoUrl, "_blank");
+      return;
+    }
+
+    // Default: open regular modal (image or slider)
+    setSelectedItem(item);
+    setCurrentSlideIndex(0);
+  };
+
+  const handleVideoPlay = (item: (typeof portfolioItems)[0]) => {
+    if (item.isExternal) {
+      window.open(item.videoUrl, "_blank");
+      return;
+    }
+    setSelectedItem(item);
+    setShowVideo(true);
+  };
+
+  const closeModal = () => {
+    setSelectedItem(null);
+    setShowVideo(false);
+    setCurrentSlideIndex(0);
+  };
+
+  const nextSlide = () => {
+    if (selectedItem?.sliderImages) {
+      setCurrentSlideIndex((prev) =>
+        prev === selectedItem.sliderImages!.length - 1 ? 0 : prev + 1,
+      );
+    }
+    if (selectedItem?.galleryImages) {
+      setCurrentSlideIndex((prev) =>
+        prev === selectedItem.galleryImages!.length - 1 ? 0 : prev + 1,
+      );
+    }
+  };
+
+  const prevSlide = () => {
+    if (selectedItem?.sliderImages) {
+      setCurrentSlideIndex((prev) =>
+        prev === 0 ? selectedItem.sliderImages!.length - 1 : prev - 1,
+      );
+    }
+    if (selectedItem?.galleryImages) {
+      setCurrentSlideIndex((prev) =>
+        prev === 0 ? selectedItem.galleryImages!.length - 1 : prev - 1,
+      );
+    }
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlideIndex(index);
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -728,356 +808,357 @@ export default function PortfolioPageClient() {
 
       {/* Hero Section */}
       <section id="portfolio" className="py-24 bg-black">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 py-10">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            Our Portfolio
-          </h2>
-          <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive collection of projects showcasing cutting-edge technology and
-            creative excellence in real estate visualization
-          </p>
-        </div>
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 py-10">
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
+              Our Portfolio
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive collection of projects showcasing
+              cutting-edge technology and creative excellence in real estate
+              visualization
+            </p>
+          </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer ${
-                activeCategory === category
-                  ? "bg-yellow-400 text-black"
-                  : "bg-gray-800 text-white hover:bg-gray-700"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer ${
+                  activeCategory === category
+                    ? "bg-yellow-400 text-black"
+                    : "bg-gray-800 text-white hover:bg-gray-700"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
 
-        {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
-            <div
-              key={item.id}
-              className="group cursor-pointer"
-              onClick={() => handleItemClick(item)}
-            >
-              <div className="relative overflow-hidden rounded-2xl bg-gray-900">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div
-                    className="text-center text-white cursor-pointer"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      if (item.hasSlider || item.hasGallery) {
-                        handleItemClick(item);
-                      } else {
-                        handleVideoPlay(item);
-                      }
-                    }}
-                  >
-                    <i
-                      className={`${
-                        item.hasSlider || item.hasGallery
-                          ? "ri-image-line"
-                          : "ri-play-circle-line"
-                      } text-4xl mb-2`}
-                    ></i>
-                    <p className="text-sm">
-                      {item.hasSlider || item.hasGallery
-                        ? "View Gallery"
-                        : "View Project"}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-6">
-                <div className="text-yellow-400 text-sm font-medium mb-2">
-                  {item.category}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400 text-sm">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Modal */}
-        {selectedItem && (
-          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6">
-            <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">
-              {showVideo ? (
-                <div className="relative">
-                  <div className="aspect-video">
-                    <iframe
-                      src={selectedItem.videoUrl}
-                      title={selectedItem.title}
-                      className="w-full h-full rounded-t-2xl"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                  <button
-                    onClick={closeModal}
-                    className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
-                  >
-                    <i className="ri-close-line text-xl"></i>
-                  </button>
-                  <div className="p-8">
-                    <div className="text-yellow-400 text-sm font-medium mb-2">
-                      {selectedItem.category}
-                    </div>
-                    <h3 className="text-3xl font-bold text-black mb-4">
-                      {selectedItem.title}
-                    </h3>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                      {selectedItem.description}
-                    </p>
-                  </div>
-                </div>
-              ) : selectedItem.hasSlider ? (
-                // Slider Modal for Multiple Projects
-                <div className="relative">
-                  <button
-                    onClick={closeModal}
-                    className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-20"
-                  >
-                    <i className="ri-close-line text-xl"></i>
-                  </button>
-
-                  {/* Slider Container */}
-                  <div className="relative h-96 md:h-[500px] overflow-hidden rounded-t-2xl">
+          {/* Portfolio Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredItems.map((item) => (
+              <div
+                key={item.id}
+                className="group cursor-pointer"
+                onClick={() => handleItemClick(item)}
+              >
+                <div className="relative overflow-hidden rounded-2xl bg-gray-900">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div
-                      className="flex transition-transform duration-500 ease-in-out h-full"
-                      style={{
-                        transform: `translateX(-${currentSlideIndex * 100}%)`,
+                      className="text-center text-white cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (item.hasSlider || item.hasGallery) {
+                          handleItemClick(item);
+                        } else {
+                          handleVideoPlay(item);
+                        }
                       }}
                     >
-                      {selectedItem.sliderImages?.map((slide, index) => (
-                        <div
-                          key={index}
-                          className="w-full h-full flex-shrink-0 relative"
-                        >
-                          <img
-                            src={slide.url}
-                            alt={slide.title}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      ))}
+                      <i
+                        className={`${
+                          item.hasSlider || item.hasGallery
+                            ? "ri-image-line"
+                            : "ri-play-circle-line"
+                        } text-4xl mb-2`}
+                      ></i>
+                      <p className="text-sm">
+                        {item.hasSlider || item.hasGallery
+                          ? "View Gallery"
+                          : "View Project"}
+                      </p>
                     </div>
-
-                    {/* Navigation Arrows */}
-                    {selectedItem.sliderImages &&
-                      selectedItem.sliderImages.length > 1 && (
-                        <>
-                          <button
-                            onClick={prevSlide}
-                            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
-                          >
-                            <i className="ri-arrow-left-line text-xl"></i>
-                          </button>
-                          <button
-                            onClick={nextSlide}
-                            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
-                          >
-                            <i className="ri-arrow-right-line text-xl"></i>
-                          </button>
-                        </>
-                      )}
                   </div>
+                </div>
 
-                  {/* Slide Indicators */}
-                  {selectedItem.sliderImages &&
-                    selectedItem.sliderImages.length > 1 && (
-                      <div className="flex justify-center space-x-2 py-4 bg-gray-100">
-                        {selectedItem.sliderImages.map((_, index) => (
-                          <button
-                            key={index}
-                            onClick={() => goToSlide(index)}
-                            className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
-                              index === currentSlideIndex
-                                ? "bg-yellow-400"
-                                : "bg-gray-400"
-                            }`}
-                          ></button>
-                        ))}
+                <div className="pt-6">
+                  <div className="text-yellow-400 text-sm font-medium mb-2">
+                    {item.category}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Modal */}
+          {selectedItem && (
+            <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6">
+              <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">
+                {showVideo ? (
+                  <div className="relative">
+                    <div className="aspect-video">
+                      <iframe
+                        src={selectedItem.videoUrl}
+                        title={selectedItem.title}
+                        className="w-full h-full rounded-t-2xl"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                    <button
+                      onClick={closeModal}
+                      className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                    >
+                      <i className="ri-close-line text-xl"></i>
+                    </button>
+                    <div className="p-8">
+                      <div className="text-yellow-400 text-sm font-medium mb-2">
+                        {selectedItem.category}
                       </div>
-                    )}
-
-                  <div className="p-8">
-                    <div className="text-yellow-400 text-sm font-medium mb-2">
-                      {selectedItem.category}
+                      <h3 className="text-3xl font-bold text-black mb-4">
+                        {selectedItem.title}
+                      </h3>
+                      <p className="text-gray-700 text-lg leading-relaxed">
+                        {selectedItem.description}
+                      </p>
                     </div>
-                    <h3 className="text-3xl font-bold text-black mb-4">
-                      {selectedItem.title}
-                    </h3>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                      {selectedItem.description}
-                    </p>
                   </div>
-                </div>
-              ) : selectedItem.hasGallery ? (
-                // Gallery Modal for Etereo 1, Goa (3D Isometrics)
-                <div className="relative">
-                  <button
-                    onClick={closeModal}
-                    className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-20"
-                  >
-                    <i className="ri-close-line text-xl"></i>
-                  </button>
-
-                  {/* Gallery Container with Split Layout */}
-                  <div className="relative h-96 md:h-[500px] overflow-hidden rounded-t-2xl">
-                    <div
-                      className="flex transition-transform duration-500 ease-in-out h-full"
-                      style={{
-                        transform: `translateX(-${currentSlideIndex * 100}%)`,
-                      }}
+                ) : selectedItem.hasSlider ? (
+                  // Slider Modal for Multiple Projects
+                  <div className="relative">
+                    <button
+                      onClick={closeModal}
+                      className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-20"
                     >
-                      {selectedItem.galleryImages?.map((image, index) => (
-                        <div
-                          key={index}
-                          className="w-full h-full flex-shrink-0 relative justify-center items-center flex"
-                        >
-                          {/* Split layout for portrait images */}
-                          <div className="w-1/2 h-full">
+                      <i className="ri-close-line text-xl"></i>
+                    </button>
+
+                    {/* Slider Container */}
+                    <div className="relative h-96 md:h-[500px] overflow-hidden rounded-t-2xl">
+                      <div
+                        className="flex transition-transform duration-500 ease-in-out h-full"
+                        style={{
+                          transform: `translateX(-${currentSlideIndex * 100}%)`,
+                        }}
+                      >
+                        {selectedItem.sliderImages?.map((slide, index) => (
+                          <div
+                            key={index}
+                            className="w-full h-full flex-shrink-0 relative"
+                          >
                             <img
-                              src={image.url}
-                              alt={image.title}
+                              src={slide.url}
+                              alt={slide.title}
                               className="w-full h-full object-cover"
                             />
                           </div>
-                          {/* <div className="w-1/2 h-full">
+                        ))}
+                      </div>
+
+                      {/* Navigation Arrows */}
+                      {selectedItem.sliderImages &&
+                        selectedItem.sliderImages.length > 1 && (
+                          <>
+                            <button
+                              onClick={prevSlide}
+                              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                            >
+                              <i className="ri-arrow-left-line text-xl"></i>
+                            </button>
+                            <button
+                              onClick={nextSlide}
+                              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                            >
+                              <i className="ri-arrow-right-line text-xl"></i>
+                            </button>
+                          </>
+                        )}
+                    </div>
+
+                    {/* Slide Indicators */}
+                    {selectedItem.sliderImages &&
+                      selectedItem.sliderImages.length > 1 && (
+                        <div className="flex justify-center space-x-2 py-4 bg-gray-100">
+                          {selectedItem.sliderImages.map((_, index) => (
+                            <button
+                              key={index}
+                              onClick={() => goToSlide(index)}
+                              className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
+                                index === currentSlideIndex
+                                  ? "bg-yellow-400"
+                                  : "bg-gray-400"
+                              }`}
+                            ></button>
+                          ))}
+                        </div>
+                      )}
+
+                    <div className="p-8">
+                      <div className="text-yellow-400 text-sm font-medium mb-2">
+                        {selectedItem.category}
+                      </div>
+                      <h3 className="text-3xl font-bold text-black mb-4">
+                        {selectedItem.title}
+                      </h3>
+                      <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                        {selectedItem.description}
+                      </p>
+                    </div>
+                  </div>
+                ) : selectedItem.hasGallery ? (
+                  // Gallery Modal for Etereo 1, Goa (3D Isometrics)
+                  <div className="relative">
+                    <button
+                      onClick={closeModal}
+                      className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-20"
+                    >
+                      <i className="ri-close-line text-xl"></i>
+                    </button>
+
+                    {/* Gallery Container with Split Layout */}
+                    <div className="relative h-96 md:h-[500px] overflow-hidden rounded-t-2xl">
+                      <div
+                        className="flex transition-transform duration-500 ease-in-out h-full"
+                        style={{
+                          transform: `translateX(-${currentSlideIndex * 100}%)`,
+                        }}
+                      >
+                        {selectedItem.galleryImages?.map((image, index) => (
+                          <div
+                            key={index}
+                            className="w-full h-full flex-shrink-0 relative justify-center items-center flex"
+                          >
+                            {/* Split layout for portrait images */}
+                            <div className="w-1/2 h-full">
+                              <img
+                                src={image.url}
+                                alt={image.title}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                            {/* <div className="w-1/2 h-full">
                             <img
                               src={image.url}
                               alt={image.title}
                               className="w-full h-full object-cover"
                             />
                           </div> */}
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Navigation Arrows */}
-                    {selectedItem.galleryImages &&
-                      selectedItem.galleryImages.length > 1 && (
-                        <>
-                          <button
-                            onClick={prevSlide}
-                            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
-                          >
-                            <i className="ri-arrow-left-line text-xl"></i>
-                          </button>
-                          <button
-                            onClick={nextSlide}
-                            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
-                          >
-                            <i className="ri-arrow-right-line text-xl"></i>
-                          </button>
-                        </>
-                      )}
-                  </div>
-
-                  {/* Gallery Indicators */}
-                  {selectedItem.galleryImages &&
-                    selectedItem.galleryImages.length > 1 && (
-                      <div className="flex justify-center space-x-2 py-4 bg-gray-100">
-                        {selectedItem.galleryImages.map((_, index) => (
-                          <button
-                            key={index}
-                            onClick={() => goToSlide(index)}
-                            className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
-                              index === currentSlideIndex
-                                ? "bg-yellow-400"
-                                : "bg-gray-400"
-                            }`}
-                          ></button>
+                          </div>
                         ))}
                       </div>
-                    )}
 
-                  <div className="p-8">
-                    <div className="text-yellow-400 text-sm font-medium mb-2">
-                      {selectedItem.category}
+                      {/* Navigation Arrows */}
+                      {selectedItem.galleryImages &&
+                        selectedItem.galleryImages.length > 1 && (
+                          <>
+                            <button
+                              onClick={prevSlide}
+                              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                            >
+                              <i className="ri-arrow-left-line text-xl"></i>
+                            </button>
+                            <button
+                              onClick={nextSlide}
+                              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer z-10"
+                            >
+                              <i className="ri-arrow-right-line text-xl"></i>
+                            </button>
+                          </>
+                        )}
                     </div>
-                    <h3 className="text-3xl font-bold text-black mb-4">
-                      {selectedItem.title}
-                    </h3>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                      {selectedItem.description}
-                    </p>
+
+                    {/* Gallery Indicators */}
                     {selectedItem.galleryImages &&
-                      selectedItem.galleryImages[currentSlideIndex] && (
-                        <div className="bg-gray-50 rounded-lg p-4">
-                          <h4 className="font-semibold text-black mb-2">
-                            {
-                              selectedItem.galleryImages[currentSlideIndex]
-                                .title
-                            }
-                          </h4>
-                          <p className="text-gray-600 text-sm">
-                            {
-                              selectedItem.galleryImages[currentSlideIndex]
-                                .description
-                            }
-                          </p>
+                      selectedItem.galleryImages.length > 1 && (
+                        <div className="flex justify-center space-x-2 py-4 bg-gray-100">
+                          {selectedItem.galleryImages.map((_, index) => (
+                            <button
+                              key={index}
+                              onClick={() => goToSlide(index)}
+                              className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
+                                index === currentSlideIndex
+                                  ? "bg-yellow-400"
+                                  : "bg-gray-400"
+                              }`}
+                            ></button>
+                          ))}
                         </div>
                       )}
-                  </div>
-                </div>
-              ) : (
-                // Regular Image Modal
-                <div className="relative">
-                  <img
-                    src={selectedItem.image}
-                    alt={selectedItem.title}
-                    className="w-full h-96 object-cover object-top"
-                  />
-                  <button
-                    onClick={closeModal}
-                    className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer"
-                  >
-                    <i className="ri-close-line text-xl"></i>
-                  </button>
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <button
-                      onClick={() => setShowVideo(true)}
-                      className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-300 transition-colors cursor-pointer"
-                    >
-                      <i className="ri-play-fill text-3xl text-black"></i>
-                    </button>
-                  </div>
 
-                  <div className="p-8">
-                    <div className="text-yellow-400 text-sm font-medium mb-2">
-                      {selectedItem.category}
+                    <div className="p-8">
+                      <div className="text-yellow-400 text-sm font-medium mb-2">
+                        {selectedItem.category}
+                      </div>
+                      <h3 className="text-3xl font-bold text-black mb-4">
+                        {selectedItem.title}
+                      </h3>
+                      <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                        {selectedItem.description}
+                      </p>
+                      {selectedItem.galleryImages &&
+                        selectedItem.galleryImages[currentSlideIndex] && (
+                          <div className="bg-gray-50 rounded-lg p-4">
+                            <h4 className="font-semibold text-black mb-2">
+                              {
+                                selectedItem.galleryImages[currentSlideIndex]
+                                  .title
+                              }
+                            </h4>
+                            <p className="text-gray-600 text-sm">
+                              {
+                                selectedItem.galleryImages[currentSlideIndex]
+                                  .description
+                              }
+                            </p>
+                          </div>
+                        )}
                     </div>
-                    <h3 className="text-3xl font-bold text-black mb-4">
-                      {selectedItem.title}
-                    </h3>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                      {selectedItem.description}
-                    </p>
                   </div>
-                </div>
-              )}
+                ) : (
+                  // Regular Image Modal
+                  <div className="relative">
+                    <img
+                      src={selectedItem.image}
+                      alt={selectedItem.title}
+                      className="w-full h-96 object-cover object-top"
+                    />
+                    <button
+                      onClick={closeModal}
+                      className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors cursor-pointer"
+                    >
+                      <i className="ri-close-line text-xl"></i>
+                    </button>
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                      <button
+                        onClick={() => setShowVideo(true)}
+                        className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-300 transition-colors cursor-pointer"
+                      >
+                        <i className="ri-play-fill text-3xl text-black"></i>
+                      </button>
+                    </div>
+
+                    <div className="p-8">
+                      <div className="text-yellow-400 text-sm font-medium mb-2">
+                        {selectedItem.category}
+                      </div>
+                      <h3 className="text-3xl font-bold text-black mb-4">
+                        {selectedItem.title}
+                      </h3>
+                      <p className="text-gray-700 text-lg leading-relaxed">
+                        {selectedItem.description}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-    </section>
+          )}
+        </div>
+      </section>
 
       <Footer />
     </div>

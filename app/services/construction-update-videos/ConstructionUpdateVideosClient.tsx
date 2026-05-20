@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { url } from "inspector";
 
 interface Project {
   id: number;
@@ -72,6 +73,47 @@ export default function ConstructionUpdateVideosClient() {
       videoUrl: "https://www.youtube.com/embed/ZLblD-AEilk?autoplay=1",
       duration: "3:22",
     },
+    {
+      id: 5,
+      title: "HCBS Auroville, Gurugram",
+      category: "Construction Updates",
+      image: "/images/portfolio/Auroville-Thumbnail.jpg",
+      description:
+        "High-Quality Construction Progress Video featuring Drone Videography, Real Estate Construction Updates, Site Progress Monitoring & Cinematic Project Documentation. ",
+      videoUrl: "https://www.youtube.com/embed/ommJFDhiz-M?autoplay=1",
+      duration: "4:05",
+    },
+    {
+      id: 6,
+      title: "Smart World, Sky Arc, Gurugram",
+      category: "Construction Updates",
+      image: "/images/portfolio/Sky-Arc-Thumbnail.png",
+      description:
+        "Cinematic Construction Update Video with Drone Shoot, Real Estate Project Progress Tracking, Aerial Videography & Premium Construction Site Coverage for Real Estate Marketing.",
+      videoUrl: "https://www.youtube.com/embed/lJ9b5xaa04Q?autoplay=1",
+      duration: "3:50",
+    },
+    {
+      id: 7,
+      title: "HCBS Glenwood, Jhajjar",
+      category: "Construction Updates",
+      image: "/images/portfolio/Glenwood-Thumbnail.png",
+      description:
+        "Professional Construction Update Film with Real Estate Drone Coverage, Construction Site Tracking, Infrastructure Progress Video & Premium Real Estate Marketing Visuals.",
+      videoUrl: "https://www.youtube.com/embed/19KFjpoBYBA?autoplay=1",
+      duration: "4:15",
+    },
+    {
+      id: 8,
+      title: "HCBS Twin Horizon, Gurugram",
+      category: "Construction Updates",
+      image: "/images/portfolio/Twin-Horizon-Thumbnail.png",
+      description:
+        "Real Estate Construction Update Video with Aerial Drone Shoot, Monthly Project Progress Coverage, Cinematic Site Documentation & Builder Marketing Content.",
+      videoUrl: "https://www.youtube.com/embed/5fxjaqWpgYE?autoplay=1",
+      duration: "3:40",
+    },
+    
   ];
 
   const testimonials = [

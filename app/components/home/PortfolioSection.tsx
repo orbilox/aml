@@ -298,36 +298,36 @@ const portfolioItems = [
   },
   {
     id: 30,
-    title: "Centonic, Pune",
+    title: "The Dualis, Shapoorji Pallonji",
     category: "Architectural Scale Models",
-    image: "/images/services/architectural-scale-models/1.jpg",
+    image: "/images/services/architectural-scale-models/shapoorji/01.png",
     description:
-      "Precision architectural scale model showcasing Centonic's contemporary residential development in Pune, featuring detailed landscaping, modern tower structures, and comprehensive amenity planning.",
+      "A premium, space-efficient, visually engaging scale model solution that delivers maximum impact without occupying excessive space.",
     hasGallery: true,
     galleryImages: [
       {
-        url: "/images/services/architectural-scale-models/centonic/1.jpeg",
-        title: "Centonic Main Tower Complex",
+        url: "/images/services/architectural-scale-models/shapoorji/01.png",
+        title: "The Dualis Scale Model View",
         description:
-          "Detailed scale model of the primary residential towers with surrounding landscape elements and pedestrian pathways",
+          "Premium architectural scale model showcasing The Dualis by Shapoorji Pallonji with detailed tower structure, landscape elements, and modern residential planning.",
       },
       {
-        url: "/images/services/architectural-scale-models/centonic/2.jpeg",
-        title: "Amenity Zone Layout",
+        url: "/images/services/architectural-scale-models/shapoorji/02.jpeg",
+        title: "The Dualis Residential Layout",
         description:
-          "Miniature representation of recreational facilities including clubhouse, pool area, and community spaces",
+          "Detailed residential scale model highlighting tower placement, internal circulation, landscaped zones, and luxury project planning.",
       },
       {
-        url: "/images/services/architectural-scale-models/centonic/3.jpeg",
-        title: "Tower Elevation Detail",
+        url: "/images/services/architectural-scale-models/shapoorji/03.jpeg",
+        title: "The Dualis Master Planning Model",
         description:
-          "Close-up view showcasing architectural facade details, balcony arrangements, and building proportion accuracy",
+          "Comprehensive architectural model presenting the master layout, premium amenities, open spaces, and urban design visualization.",
       },
       {
-        url: "/images/services/architectural-scale-models/centonic/4.jpeg",
-        title: "Master Plan Overview",
+        url: "/images/services/architectural-scale-models/shapoorji/04.jpeg",
+        title: "The Dualis Premium Model Display",
         description:
-          "Complete aerial perspective of the Centonic development showing site planning and spatial organization",
+          "High-detail scale model crafted for real estate presentations, investor showcases, and luxury residential marketing visualization.",
       },
     ],
   },
@@ -563,6 +563,86 @@ const portfolioItems = [
     description:
       "Developed an AI-powered 3D walkthrough for a commercial project, bringing out the scale, layout, and usability of the spaces in a smart way. Delivered at record speed of 7 days.",
     videoUrl: "https://www.youtube.com/embed/YGaAU9B37nc?autoplay=1",
+  },
+  {
+    id: 40,
+    title: "HCBS Auroville, Gurugram",
+    category: "Construction Updates",
+    image: "/images/portfolio/Auroville-Thumbnail.jpg",
+    description:
+      "High-Quality Construction Progress Video featuring Drone Videography, Real Estate Construction Updates, Site Progress Monitoring & Cinematic Project Documentation. ",
+    videoUrl: "https://www.youtube.com/embed/ommJFDhiz-M?autoplay=1",
+  },
+  {
+    id: 41,
+    title: "Smart World, Sky Arc, Gurugram",
+    category: "Construction Updates",
+    image: "/images/portfolio/Sky-Arc-Thumbnail.png",
+    description:
+      "Cinematic Construction Update Video with Drone Shoot, Real Estate Project Progress Tracking, Aerial Videography & Premium Construction Site Coverage for Real Estate Marketing.",
+    videoUrl: "https://www.youtube.com/embed/lJ9b5xaa04Q?autoplay=1",
+  },
+  {
+    id: 42,
+    title: "HCBS Glenwood, Jhajjar",
+    category: "Construction Updates",
+    image: "/images/portfolio/Glenwood-Thumbnail.png",
+    description:
+      "Professional Construction Update Film with Real Estate Drone Coverage, Construction Site Tracking, Infrastructure Progress Video & Premium Real Estate Marketing Visuals.",
+    videoUrl: "https://www.youtube.com/embed/19KFjpoBYBA?autoplay=1",
+  },
+  {
+    id: 43,
+    title: "HCBS Twin Horizon, Gurugram",
+    category: "Construction Updates",
+    image: "/images/portfolio/Twin-Horizon-Thumbnail.png",
+    description:
+      "Real Estate Construction Update Video with Aerial Drone Shoot, Monthly Project Progress Coverage, Cinematic Site Documentation & Builder Marketing Content.",
+    videoUrl: "https://www.youtube.com/embed/5fxjaqWpgYE?autoplay=1",
+  },
+  {
+    id: 44,
+    title: "Naman 58, Mumbai",
+    category: "Route Videos",
+    image: "/images/portfolio/Naman-58-Thumbnail.jpg",
+    description:
+      "Cinematic Route Location Video featuring Real Estate Connectivity Showcase, Google Map Animation, Drone Coverage, Highway Access, Landmark Highlighting & Location Advantage Visualization for Premium Real Estate Marketing. ",
+    videoUrl: "https://www.youtube.com/embed/Yqsj9E8-QHI?autoplay=1",
+  },
+  {
+    id: 45,
+    title: "Centonic, Pune",
+    category: "Architectural Scale Models",
+    image: "/images/services/architectural-scale-models/1.jpg",
+    description:
+      "Precision architectural scale model showcasing Centonic's contemporary residential development in Pune, featuring detailed landscaping, modern tower structures, and comprehensive amenity planning.",
+    hasGallery: true,
+    galleryImages: [
+      {
+        url: "/images/services/architectural-scale-models/centonic/1.jpeg",
+        title: "Centonic Main Tower Complex",
+        description:
+          "Detailed scale model of the primary residential towers with surrounding landscape elements and pedestrian pathways",
+      },
+      {
+        url: "/images/services/architectural-scale-models/centonic/2.jpeg",
+        title: "Amenity Zone Layout",
+        description:
+          "Miniature representation of recreational facilities including clubhouse, pool area, and community spaces",
+      },
+      {
+        url: "/images/services/architectural-scale-models/centonic/3.jpeg",
+        title: "Tower Elevation Detail",
+        description:
+          "Close-up view showcasing architectural facade details, balcony arrangements, and building proportion accuracy",
+      },
+      {
+        url: "/images/services/architectural-scale-models/centonic/4.jpeg",
+        title: "Master Plan Overview",
+        description:
+          "Complete aerial perspective of the Centonic development showing site planning and spatial organization",
+      },
+    ],
   },
 ];
 
