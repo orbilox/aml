@@ -15,6 +15,7 @@ const ALL_URLS = [
 
   // Blog
   "/blog",
+  "/blog/best-architectural-scale-model-company-india",
   "/blog/real-estate-marketing-video-types-india",
   "/blog/3d-walkthrough-video-service",
   "/blog/architectural-scale-models-india-real-estate",

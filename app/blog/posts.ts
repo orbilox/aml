@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "best-architectural-scale-model-company-india",
+    title: "Best Architectural Scale Model Company in India: How to Choose the Right Partner (2026)",
+    excerpt:
+      "A practical B2B guide for real estate developers and project heads evaluating architectural scale model companies in India. Learn the seven criteria that separate the best architectural model makers from average vendors — and why the right partner directly impacts your sales office conversion.",
+    category: "Real Estate Marketing",
+    date: "May 25, 2026",
+    dateISO: "2026-05-25",
+    readTime: "7 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/architectural-scale-models/1.jpg",
+    tags: ["Architectural Scale Model Company", "Best Scale Model Maker", "Architectural Model Maker India", "Scale Model Company", "B2B Real Estate"],
+  },
+  {
     slug: "real-estate-marketing-video-types-india",
     title: "7 Types of Real Estate Marketing Videos Every Indian Developer Should Use in 2026",
     excerpt:

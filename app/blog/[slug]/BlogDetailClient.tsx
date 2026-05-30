@@ -34,6 +34,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <RealEstateMarketingVideosArticle post={post} />;
   }
 
+  if (slug === "best-architectural-scale-model-company-india") {
+    return <BestScaleModelCompanyArticle post={post} />;
+  }
+
   return notFound();
 }
 
@@ -2982,6 +2986,295 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
             >
               View Our Portfolio
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BEST ARCHITECTURAL SCALE MODEL COMPANY — B2B GUIDE
+   ───────────────────────────────────────────────────────────── */
+function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative bg-black pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="/images/services/architectural-scale-models/1.jpg"
+            alt="Best architectural scale model company India — Alliance Media Labs"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-gray-400 text-sm">{post.readTime}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <div className="flex items-center gap-4 text-sm text-gray-400">
+            <span>{post.author}</span>
+            <span>•</span>
+            <span>{post.date}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Body */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Intro */}
+        <section className="mb-12">
+          <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+            When a real estate developer, infrastructure firm, or government agency begins shortlisting vendors for an architectural scale model, the search almost always starts the same way: a Google query for the <strong>best architectural scale model company in India</strong>, a round of referrals from peers, and a series of portfolio reviews. The problem is that most vendors look similar at first glance — similar websites, similar quoted prices, similar promises about quality and timelines.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The difference only becomes visible after you&apos;ve commissioned the model. By then, a poor choice means a delayed project launch, a model that underwhelms in the sales office, or a vendor who disappears after delivery when you need a repair or an update.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            This guide gives project heads, marketing directors, and procurement teams a structured framework for evaluating <strong>architectural scale model companies in India</strong> — so you choose right the first time. We&apos;ll cover the seven non-negotiable criteria, the red flags that predict problems, and what a professional engagement actually looks like from brief to delivery.
+          </p>
+        </section>
+
+        {/* Section 1 — Why it matters */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">Why Choosing the Right Scale Model Company Directly Affects Your Sales</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            An architectural scale model is not a commodity purchase. It will sit at the centre of your sales office — the first thing every prospective buyer sees, the visual anchor of every sales presentation, and the physical manifestation of your brand quality before a single apartment is handed over.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A premium model from the <strong>best architectural model maker</strong> creates immediate credibility: it signals to buyers that the developer is serious, solvent, and committed to quality. A poorly executed model does the opposite — it raises doubts about the project itself, regardless of how strong the underlying design or location actually is.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            For high-ticket launches (₹2 Cr+ per unit), the model is often the single most cost-effective marketing investment in the entire budget. The right scale model company turns it into a 24-month sales asset. The wrong one turns it into a liability you have to explain away.
+          </p>
+        </section>
+
+        {/* Section 2 — 7 Criteria */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">7 Criteria to Evaluate Every Architectural Scale Model Company</h2>
+
+          <div className="space-y-6">
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">1. End-to-End In-House Production</h3>
+              <p className="text-gray-700 leading-relaxed">
+                The best <strong>architectural scale model companies</strong> control the entire production chain internally — digital modelling, CNC cutting, laser etching, hand-finishing, painting, electrical integration, and quality control. Vendors who outsource even one stage introduce quality gaps and timeline dependencies they cannot control. Always ask directly: what is outsourced, and to whom?
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">2. CAD-to-CNC Digital Workflow</h3>
+              <p className="text-gray-700 leading-relaxed">
+                A professional architectural model maker works directly from your AutoCAD, Revit, or SketchUp files — not from printed drawings measured by hand. CNC and laser-cut components driven from digital files eliminate measurement error and produce the dimensional precision that passes an architect&apos;s scrutiny. If a vendor cannot take your DWG files and produce a 3D model from them, they are not operating at a professional standard.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">3. Verifiable Portfolio of Comparable Projects</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Ask to see completed models of similar type (township, residential high-rise, commercial, infrastructure) and similar scale ratio to yours. Look specifically at: edge finish quality on acrylic components, window alignment consistency across multiple floors, landscape realism (not uniform green plastic), and LED integration quality. Photographs on a website are a starting point — a video walkthrough of completed models is more reliable evidence.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">4. Written Production Schedule with Milestones</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Any reputable <strong>scale model company</strong> should provide a written production timeline before you sign the order — drawing review sign-off date, prototype component review, assembly completion, electrical testing, quality check, dispatch, and installation. If a vendor quotes a delivery date without a milestone schedule, your risk of a late delivery is high. Always align the delivery to your launch date minus 10 working days of buffer.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">5. Mid-Project Review Process</h3>
+              <p className="text-gray-700 leading-relaxed">
+                The best architectural model makers build formal client review points into the production workflow. At minimum: a digital 3D model review before any physical fabrication begins, and a component review before final assembly. These checkpoints prevent costly rework caused by design misinterpretation. A vendor who builds and delivers without showing you anything in between is a vendor who is not confident in their accuracy.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">6. Post-Delivery Support and Repair Terms</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Scale models operate in sales offices for 18–36 months. LED systems need maintenance. Acrylic panels scratch. Landscape elements dislodge. Ask every prospective vendor: what is covered under warranty, for how long, and will they travel to site for repairs? A <strong>scale model company</strong> that cannot commit to post-delivery support is one that treats your commission as a transaction rather than a relationship.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">7. Developer-Side References in Your City</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Ask for two or three references from real estate developers in your target city. Call them. Ask about timeline adherence, how issues were handled, whether the model held up over months in a sales office environment, and whether they would use the vendor again. A vendor with no referable clients in your city either lacks the experience or lacks the confidence to offer references — both are warning signals.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Section 3 — Red Flags */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">Red Flags That Predict a Poor Outcome</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { flag: "Unusually low quote", detail: "Scale model quality is a direct function of time and material. A quote 40–50% below market rates means corners are being cut — on materials, finish quality, or production time." },
+              { flag: "No digital file requirement", detail: "A vendor who says they can work from a photo or a printed plan is working by hand measurement — errors are inevitable at any scale ratio below 1:200." },
+              { flag: "No milestone schedule", detail: "No timeline structure = no accountability. You will chase for updates and likely miss your launch date." },
+              { flag: "Generic portfolio", detail: "A portfolio full of generic residential blocks with no visible client names, project details, or delivery dates is difficult to verify and may not represent their actual standard." },
+              { flag: "No site installation offer", detail: "A professional scale model company delivers and installs. A vendor who dispatches via courier and asks your team to assemble it has not accounted for the complexity of final installation." },
+              { flag: "No post-delivery contact", detail: "If the sales team stops responding after payment is received and before delivery is complete, escalation becomes impossible. Verify before signing." },
+            ].map(({ flag, detail }) => (
+              <div key={flag} className="bg-red-50 border border-red-100 rounded-xl p-4">
+                <p className="font-bold text-red-800 text-sm mb-1">⚠ {flag}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">{detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 4 — Why AML */}
+        <section className="mb-12 bg-black rounded-2xl p-8 text-white">
+          <h2 className="text-2xl font-bold text-white mb-4">Why Alliance Media Labs is India&apos;s Best Architectural Scale Model Company</h2>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            Alliance Media Labs was founded on a single belief: that real estate developers deserve a <strong>scale model company</strong> that operates with the rigour of an engineering firm and the craft of a design studio. We are not a model shop that scales up volume at the cost of quality. We are a precision fabrication team that treats every model as a flagship project.
+          </p>
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            {[
+              { title: "200+ Projects Delivered", body: "Across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and Tier 1 cities — residential, commercial, township, and infrastructure." },
+              { title: "Full In-House Production", body: "Digital modelling → CNC fabrication → hand-finishing → LED integration → delivery and installation. Every stage controlled by our team." },
+              { title: "CAD-to-Model Precision", body: "We work directly from AutoCAD DWG, Revit, and SketchUp files. No hand measurements. No guesswork. Dimensional accuracy verified at every stage." },
+              { title: "Named Client References", body: "We work with India's leading real estate developers and are happy to provide direct references for projects in your city and segment." },
+            ].map(({ title, body }) => (
+              <div key={title} className="bg-white/10 rounded-xl p-4">
+                <p className="font-bold text-yellow-400 text-sm mb-1">{title}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-300 leading-relaxed mb-2">
+            As an <strong>architectural model maker</strong> with a track record across India&apos;s most competitive real estate markets, we know that the model is not a cost — it is a sales asset with a measurable return. Our clients consistently report faster buyer decisions, higher sales office engagement, and stronger NRI buyer conversion when our models are present.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            If you are evaluating vendors for your next project launch, we welcome the comparison. Our portfolio, references, and production process are fully transparent.
+          </p>
+        </section>
+
+        {/* Section 5 — What to expect */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">What a Professional Scale Model Engagement Looks Like</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            For developers who have not previously worked with a professional <strong>architectural scale model company</strong>, here is what a well-managed engagement should look like — from first contact to sales office installation:
+          </p>
+          <ol className="space-y-3">
+            {[
+              { step: "Initial Brief Call (Day 1)", detail: "Scope discussion — project type, scale ratio, model dimensions, special features (LEDs, water, rotating base), delivery date, and budget range." },
+              { step: "Drawing Review & Quotation (Days 2–3)", detail: "Review of your CAD/BIM files. Written quotation with itemised scope, production timeline, milestone dates, and payment terms." },
+              { step: "Drawing Sign-Off (Day 4–5)", detail: "Formal confirmation that drawings are complete and production can begin. Any incomplete drawing packages extend the timeline." },
+              { step: "Digital 3D Model Review (Days 8–12)", detail: "A rendered preview of the digital model built from your drawings — your chance to flag any interpretation issues before physical fabrication begins." },
+              { step: "Component Review (Day 15–20)", detail: "Sample components — building facades, landscape sections — for finish and colour approval before full assembly." },
+              { step: "Assembly, Electrical & Quality Check (Days 20–30+)", detail: "Full assembly, LED wiring, landscaping, painting, cover fitting. Comprehensive quality check before dispatch." },
+              { step: "Delivery & Installation (Final Day)", detail: "Our team delivers, installs, tests all electrics, and briefs your sales team on operation and care." },
+            ].map(({ step, detail }, i) => (
+              <li key={step} className="flex gap-4">
+                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">{i + 1}</div>
+                <div>
+                  <span className="font-bold text-black">{step} — </span>
+                  <span className="text-gray-700">{detail}</span>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* FAQ */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "How do we initiate a project with an architectural scale model company?",
+                a: "The fastest way is to share your project drawings (AutoCAD DWG or PDF), confirm the model size and scale you have in mind, and provide your launch date. Most professional vendors including Alliance Media Labs will respond with a quotation and timeline within 48 hours of receiving complete drawings.",
+              },
+              {
+                q: "What drawings do we need to provide?",
+                a: "At minimum: site plan (plot boundary, building footprints, road layout), floor plans for each unit type, all four building elevations, and a landscape or master plan layout. 3D model files (Revit, SketchUp) are ideal. Schematic drawings can work but add time for interpretation and review cycles.",
+              },
+              {
+                q: "Can a scale model be updated if the building design changes mid-production?",
+                a: "Yes, if the change is caught before the affected components are fabricated. Changes post-fabrication require rework at additional cost and extend the timeline. This is why the digital 3D model review checkpoint (before any physical production) is critical — it is your last zero-cost opportunity to incorporate design changes.",
+              },
+              {
+                q: "How do we evaluate quality before placing an order?",
+                a: "Ask for high-resolution photographs and videos of completed models of similar type. Ask for references you can call directly. If possible, visit a live sales office where one of the vendor's models is on display — nothing reveals real quality better than seeing an installed model under sales office conditions after several months of use.",
+              },
+              {
+                q: "Is Alliance Media Labs able to deliver models outside Mumbai and Delhi?",
+                a: "Yes. We deliver and install across India — Bangalore, Pune, Hyderabad, Gurugram, Chennai, Ahmedabad, and other cities. Our team supervises transportation and handles on-site installation at every location. Pan-India delivery is standard for us, not an exception.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="border border-gray-200 rounded-xl p-5">
+                <h3 className="font-bold text-black mb-2 text-base">{q}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Related Posts */}
+        <div className="border-t border-gray-100 pt-10 mb-12">
+          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-5">
+            <Link href="/blog/scale-model-making-india-complete-guide" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Complete Guide</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Scale Model Making in India: The Complete Guide for Real Estate Developers (2026)</h4>
+            </Link>
+            <Link href="/blog/architectural-scale-models-india-real-estate" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Sales Strategy</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can&apos;t</h4>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back */}
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Get a Quote from India&apos;s Best Architectural Scale Model Company
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Share your drawings and launch date. We&apos;ll respond with a detailed quote and production timeline within 48 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              Request a Quote
+            </Link>
+            <Link href="/services/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View Scale Model Service
             </Link>
           </div>
         </div>
