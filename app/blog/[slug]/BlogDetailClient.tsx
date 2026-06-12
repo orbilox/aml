@@ -38,6 +38,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <BestScaleModelCompanyArticle post={post} />;
   }
 
+  if (slug === "architectural-scale-model-price-india-2026") {
+    return <ScaleModelPriceArticle post={post} />;
+  }
+
   return notFound();
 }
 
@@ -3272,6 +3276,317 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
               Request a Quote
+            </Link>
+            <Link href="/services/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View Scale Model Service
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ARCHITECTURAL SCALE MODEL PRICE INDIA — B2B PRICING GUIDE
+   ───────────────────────────────────────────────────────────── */
+function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative bg-black pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="/images/services/architectural-scale-models/1.jpg"
+            alt="Architectural scale model price India 2026 — Alliance Media Labs"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-gray-400 text-sm">{post.readTime}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <div className="flex items-center gap-4 text-sm text-gray-400">
+            <span>{post.author}</span>
+            <span>•</span>
+            <span>{post.date}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Body */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Intro */}
+        <section className="mb-12">
+          <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+            &quot;How much does an architectural scale model cost in India?&quot; — it is one of the most common questions project heads and marketing managers ask when planning a real estate launch, and one of the hardest to answer without context. <strong>Architectural scale model price in India</strong> ranges from under ₹1 lakh for a simple residential block to over ₹30 lakhs for a large township master plan — a 30x variance that makes budgeting feel like guesswork.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            It doesn&apos;t have to be. Once you understand the five variables that drive <strong>scale model cost</strong>, you can estimate a realistic budget for any project type, evaluate vendor quotes intelligently, and avoid the two most common mistakes developers make: under-budgeting for a model they later have to compromise on, and over-paying for features they don&apos;t actually need.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            This guide gives you the complete 2026 pricing picture — including the full <strong>architectural model making charges</strong> breakdown by project type, a pricing table you can use for internal budget approval, and a clear explanation of what separates a ₹2 lakh quote from a ₹6 lakh quote for what looks like the same scope.
+          </p>
+        </section>
+
+        {/* Section 1 — 5 factors */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">The 5 Variables That Determine Architectural Scale Model Price</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Every quote you receive from an architectural model company is a function of these five variables. Understanding them puts you in control of the budget conversation.
+          </p>
+
+          <div className="space-y-5">
+            <div className="flex gap-5 items-start">
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">1</div>
+              <div>
+                <h3 className="font-bold text-black mb-1">Model Size and Base Footprint</h3>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  The single biggest cost driver. A 4×3 ft model of a residential block and a 16×12 ft township master plan involve fundamentally different quantities of material, fabrication time, and assembly labour. Every additional square foot of base footprint adds proportional cost — not just for the base itself, but for all the buildings, roads, and landscape elements on top of it. Discuss base dimensions before anything else.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5 items-start">
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">2</div>
+              <div>
+                <h3 className="font-bold text-black mb-1">Scale Ratio and Level of Detail</h3>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  A 1:50 scale model of a villa shows window frames, balcony railings, door reveals, and surface cladding detail. A 1:500 model of the same villa shows massing and roofline only. The finer the scale ratio, the more components, the more hand-finishing hours, and the higher the <strong>scale model price</strong>. For large master plan models, 1:500 or 1:1000 is standard and cost-efficient. For sales-office feature models of a signature tower, 1:100 with maximum detail delivers maximum impact.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5 items-start">
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">3</div>
+              <div>
+                <h3 className="font-bold text-black mb-1">LED Lighting and Electrical Features</h3>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  A model without LED lighting costs significantly less than one with phase-wise building illumination, fibre-optic landscape lighting, animated water simulation, and a zoned control panel. For a sales-office model intended to create buyer impact, LED integration is typically non-negotiable. For an approval-committee or internal planning model, it may not be required. Be explicit about which electrical features you want — they can add ₹50,000 to ₹3,00,000+ depending on scope.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5 items-start">
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">4</div>
+              <div>
+                <h3 className="font-bold text-black mb-1">Material and Finish Specification</h3>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  Premium-grade acrylic, professional architectural model foliage, custom-mixed paints, and hand-etched road surfaces cost more than standard MDF, generic plastic trees, and off-the-shelf paint. The difference is immediately visible in the finished model. For flagship launches by top developers, the premium finish is essential — it directly reflects on the brand. For mid-segment projects or internal presentations, a mid-grade specification can be cost-efficient without being embarrassing.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5 items-start">
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">5</div>
+              <div>
+                <h3 className="font-bold text-black mb-1">Timeline and Rush Premium</h3>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  Standard production timelines for professional models are 15–45 working days depending on size. Compressing a 30-day timeline to 15 days requires parallel production teams and extended working hours — that premium is real and typically adds 20–35% to the base <strong>architectural model making charges</strong>. The single most cost-effective thing a developer can do is engage their model vendor at least 6–8 weeks before the launch date.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Table */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">Architectural Scale Model Price in India — 2026 Reference Table</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            The ranges below reflect professionally produced models with quality materials, CNC fabrication, and LED integration at the standard level. Budget-tier vendors may quote lower — the difference is always visible in the finished product.
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 mb-4">
+            <table className="w-full text-sm">
+              <thead className="bg-black text-white">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Project Type</th>
+                  <th className="px-4 py-3 text-left font-semibold">Typical Scale</th>
+                  <th className="px-4 py-3 text-left font-semibold">Price Range (INR)</th>
+                  <th className="px-4 py-3 text-left font-semibold">Timeline</th>
+                  <th className="px-4 py-3 text-left font-semibold">LED Included?</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  ["Individual Villa / Bungalow", "1:50 – 1:100", "₹75,000 – ₹1,80,000", "10–18 days", "Optional"],
+                  ["Boutique Apartment Block (G+8)", "1:100 – 1:200", "₹1,50,000 – ₹3,50,000", "15–22 days", "Standard"],
+                  ["Mid-Rise Residential Complex", "1:200 – 1:300", "₹2,50,000 – ₹6,00,000", "18–28 days", "Standard"],
+                  ["Large Residential Project w/ Amenities", "1:200 – 1:500", "₹4,00,000 – ₹10,00,000", "22–35 days", "Standard + Zones"],
+                  ["Township / Master Plan Model", "1:500 – 1:1000", "₹7,00,000 – ₹22,00,000", "30–50 days", "Phase-wise Zones"],
+                  ["Commercial Tower / Office Park", "1:100 – 1:300", "₹3,00,000 – ₹8,00,000", "20–32 days", "Standard"],
+                  ["Infrastructure / Government Project", "1:1000 – 1:2000", "₹10,00,000 – ₹35,00,000", "40–65 days", "Optional"],
+                ].map(([type, scale, price, timeline, led]) => (
+                  <tr key={type} className="even:bg-gray-50">
+                    <td className="px-4 py-3 font-medium text-black">{type}</td>
+                    <td className="px-4 py-3 text-gray-700">{scale}</td>
+                    <td className="px-4 py-3 text-gray-900 font-semibold">{price}</td>
+                    <td className="px-4 py-3 text-gray-700">{timeline}</td>
+                    <td className="px-4 py-3 text-gray-700">{led}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-gray-500 text-xs italic">
+            Prices are indicative for 2026. Final quotes depend on exact scope, drawings completeness, finish specification, and delivery location. GST additional. Rush delivery adds 20–35%.
+          </p>
+        </section>
+
+        {/* Section — What's included */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">What Should Be Included in a Professional Quote</h2>
+          <p className="text-gray-700 leading-relaxed mb-5">
+            When you receive a <strong>scale model price</strong> quote from a vendor, it should clearly itemise the following. If any of these are missing or vague, ask explicitly — hidden costs and scope gaps are where budget overruns happen.
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { item: "Drawing review and 3D digital modelling", note: "The digital setup work before any physical production — some vendors charge this separately." },
+              { item: "All building fabrication and finishing", note: "Number of buildings, towers, blocks included. Phase exclusions should be clearly stated." },
+              { item: "Base board, roads, and site boundary", note: "The base platform with road network and plot boundary. Sometimes quoted separately for large bases." },
+              { item: "Landscaping and amenity areas", note: "Grass, trees, water bodies, pool, clubhouse detailing. Specify quality level expected." },
+              { item: "LED lighting system", note: "Which zones, what colour temperatures, control panel type. Fibre optics if specified." },
+              { item: "Protective acrylic cover", note: "Included as standard by most professional vendors. Confirm dimensions and locking mechanism." },
+              { item: "Packaging, transport, and installation", note: "Custom crating, delivery to site, installation supervision. Some vendors charge this separately." },
+              { item: "Post-delivery warranty", note: "Duration, what is covered, and response time for on-site repairs. Get this in writing." },
+            ].map(({ item, note }) => (
+              <div key={item} className="bg-gray-50 rounded-xl p-4">
+                <p className="font-semibold text-black text-sm mb-1">✓ {item}</p>
+                <p className="text-gray-500 text-xs leading-relaxed">{note}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section — comparing quotes */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">How to Compare Quotes — It&apos;s Not Just About the Number</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            When you have three quotes in front of you for what looks like the same scope, the lowest number is rarely the best choice. Here is how to compare them properly:
+          </p>
+          <div className="space-y-4">
+            <div className="flex gap-3">
+              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">→</span>
+              <p className="text-gray-700 leading-relaxed"><strong>Check what is excluded.</strong> The lowest quote almost always excludes something — transport and installation, the acrylic cover, one phase of the project, or the LED wiring. Bring all quotes to the same scope before comparing price.</p>
+            </div>
+            <div className="flex gap-3">
+              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">→</span>
+              <p className="text-gray-700 leading-relaxed"><strong>Ask for the production timeline in writing.</strong> A ₹3 lakh quote with a 45-day timeline and a ₹3.5 lakh quote with a 22-day milestone schedule are not the same product — one will make your launch and one probably won&apos;t.</p>
+            </div>
+            <div className="flex gap-3">
+              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">→</span>
+              <p className="text-gray-700 leading-relaxed"><strong>Request portfolio evidence at the quoted finish level.</strong> Ask the vendor to show you a completed model produced at the specification and price point they have quoted. This immediately separates vendors who can deliver from those who quote low and upgrade to extract more later.</p>
+            </div>
+            <div className="flex gap-3">
+              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">→</span>
+              <p className="text-gray-700 leading-relaxed"><strong>Verify post-delivery terms.</strong> A lower <strong>architectural scale model price</strong> means nothing if the vendor becomes unreachable when your LED system fails three months into the sales campaign. Confirm the warranty scope and response time in writing before placing the order.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ROI Section */}
+        <section className="mb-12 bg-black rounded-2xl p-8 text-white">
+          <h2 className="text-2xl font-bold text-white mb-4">The Real ROI of Architectural Scale Model Investment</h2>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            A common objection from finance teams is that ₹5–8 lakhs on a scale model is a significant marketing expense. Here is the counter-argument: a single unit sold at ₹2 Cr generates a sales brokerage and marketing cost that makes the scale model a rounding error. The question is not whether the model is expensive — it is whether it accelerates your sales velocity enough to justify the cost within the first two to four bookings.
+          </p>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            Developers who use Alliance Media Labs&apos; architectural scale models in their sales offices consistently report that buyer dwell time in the office increases, the number of follow-up visits per buyer drops (buyers decide faster), and NRI buyer conversion on video walkthroughs of the model is measurably higher than walkthroughs without a physical model reference.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            The model is not a cost of marketing. It is a cost of sale — and at a ₹2 Cr+ ticket size, the ROI calculation is straightforward. The real risk is not spending ₹5–8 lakhs on a great model. It is spending ₹2–3 lakhs on a poor one that undermines buyer confidence every day it sits in your sales office.
+          </p>
+        </section>
+
+        {/* FAQ */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions — Scale Model Pricing</h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "Why does architectural scale model price vary so much between vendors?",
+                a: "The variance reflects real differences in production method, material quality, and scope inclusion. Budget vendors use hand-cut components, generic materials, and outsource finishing — lower input costs produce a visibly inferior output. Professional vendors use CNC and laser-cut digital fabrication, premium architectural model materials, in-house finishing, and full project management. The difference is immediately apparent when you compare finished models side by side.",
+              },
+              {
+                q: "Is GST included in the quoted scale model price?",
+                a: "GST is almost always quoted separately and applied at 18% on the model fabrication value. Confirm with your vendor whether the quoted price is inclusive or exclusive of GST, and ensure a proper GST invoice is issued — this is essential for your accounts team and for input tax credit eligibility if applicable.",
+              },
+              {
+                q: "Can we get a model made in phases — start with one building and add more later?",
+                a: "Yes. Phased models are a cost-efficient approach for large township projects where not all phases are ready at launch. The base is typically built to full master plan size from the start (with empty landscape in future phase zones), and individual buildings are added as phases are launched. This is more cost-effective than building separate models for each phase.",
+              },
+              {
+                q: "How do we get an accurate quote from Alliance Media Labs?",
+                a: "Share your AutoCAD site plan, building floor plans, elevations, and your target delivery date. We will review your drawings and provide a detailed written quote with full scope itemisation, production timeline milestones, payment terms, and post-delivery warranty terms — typically within 48 business hours of receiving complete drawings.",
+              },
+              {
+                q: "What happens if our design changes after production has started?",
+                a: "Design changes before the digital 3D model review stage (typically Days 5–10 of production) are incorporated at no additional cost. Changes after physical fabrication has begun incur rework charges depending on which components are affected. The practical advice: freeze your design before placing the model order, or build 10–15 working days of buffer into your timeline to absorb a revision cycle.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="border border-gray-200 rounded-xl p-5">
+                <h3 className="font-bold text-black mb-2 text-base">{q}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Related Posts */}
+        <div className="border-t border-gray-100 pt-10 mb-12">
+          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-5">
+            <Link href="/blog/best-architectural-scale-model-company-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Vendor Selection</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Best Architectural Scale Model Company in India: How to Choose the Right Partner</h4>
+            </Link>
+            <Link href="/blog/scale-model-making-india-complete-guide" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Complete Guide</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Scale Model Making in India: The Complete Guide for Real Estate Developers (2026)</h4>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back */}
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Get an Accurate Scale Model Price for Your Project
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Share your drawings and we&apos;ll send a detailed, itemised quote within 48 hours — no generic pricing, no hidden charges.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              Request a Detailed Quote
             </Link>
             <Link href="/services/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Scale Model Service

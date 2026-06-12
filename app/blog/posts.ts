@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "architectural-scale-model-price-india-2026",
+    title: "Architectural Scale Model Price in India 2026: Complete Cost Guide for Real Estate Developers",
+    excerpt:
+      "What does an architectural scale model actually cost in India? This complete pricing guide breaks down scale model charges by project type, size, and finish level — so real estate developers and project heads can budget accurately and compare vendor quotes with confidence.",
+    category: "Real Estate Marketing",
+    date: "June 2, 2026",
+    dateISO: "2026-06-02",
+    readTime: "7 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/architectural-scale-models/1.jpg",
+    tags: ["Architectural Scale Model Price", "Scale Model Cost India", "Architectural Model Making Charges", "Scale Model Price", "Real Estate Developer"],
+  },
+  {
     slug: "best-architectural-scale-model-company-india",
     title: "Best Architectural Scale Model Company in India: How to Choose the Right Partner (2026)",
     excerpt:
