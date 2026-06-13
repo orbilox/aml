@@ -25,6 +25,7 @@ const ALL_URLS = [
   "/blog/scale-model-making-india-complete-guide",
 
   // Service pages
+  "/services/scale-model-maker-india",
   "/services/3d-walkthrough-videos",
   "/services/virtual-reality-tours",
   "/services/construction-update-videos",

@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const serviceRoutes = [
+    "/services/scale-model-maker-india",
     "/services/3d-walkthrough-videos",
     "/services/virtual-reality-tours",
     "/services/construction-update-videos",
