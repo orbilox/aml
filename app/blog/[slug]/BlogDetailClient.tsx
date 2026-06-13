@@ -447,7 +447,11 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           <p className="text-gray-700 leading-relaxed mb-8">
             Whether you are launching a luxury residential tower in Mumbai, a commercial complex in Gurugram,
             or a township in Bangalore, a professionally produced 3D walkthrough video from Alliance Media Labs
-            will give your project the competitive edge it deserves.
+            will give your project the competitive edge it deserves. Looking for India&apos;s best 3D walkthrough video company?{" "}
+            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
+              Explore our dedicated 3D walkthrough video company page
+            </Link>{" "}
+            for full pricing, portfolio, and production timelines.
           </p>
         </div>
 
@@ -780,10 +784,11 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
           {/* Internal links */}
           <div className="bg-gray-50 rounded-2xl p-8 mb-8">
             <h3 className="font-bold text-black mb-4">Explore Related Services</h3>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { href: "/services/3d-renders-isometrics", label: "3D Renders & Isometrics", icon: "ri-image-line" },
                 { href: "/services/3d-walkthrough-videos", label: "3D Walkthrough Videos", icon: "ri-movie-line" },
+                { href: "/services/3d-walkthrough-video-company-india", label: "3D Walkthrough Company", icon: "ri-building-line" },
                 { href: "/services/virtual-reality-tours", label: "VR Tours", icon: "ri-3d-glasses-line" },
               ].map((s) => (
                 <Link key={s.href} href={s.href} className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 hover:shadow-md transition-shadow border border-gray-200">
@@ -1302,7 +1307,11 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
             The ROI is undeniable: one well-planned <strong>aerial drone video shoot</strong> generates
             content for your website, property portals, social media, investor decks, TV commercials,
             and NRI digital campaigns — all from a single day&apos;s production. When combined with a
-            location AV film and a 3D walkthrough video, you have a complete digital marketing toolkit
+            location AV film and a{" "}
+            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
+              3D walkthrough video
+            </Link>
+            , you have a complete digital marketing toolkit
             that positions your project against any competitor in the market.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
@@ -2548,6 +2557,13 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
           >
             Explore our 3D Walkthrough Video Service <i className="ri-arrow-right-line"></i>
           </Link>
+          <br />
+          <Link
+            href="/services/3d-walkthrough-video-company-india"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors mt-2"
+          >
+            Why choose us as your 3D Walkthrough Video Company <i className="ri-arrow-right-line"></i>
+          </Link>
         </section>
 
         {/* Type 2 */}
@@ -3178,7 +3194,11 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
             As an <strong>architectural model maker</strong> with a track record across India&apos;s most competitive real estate markets, we know that the model is not a cost — it is a sales asset with a measurable return. Our clients consistently report faster buyer decisions, higher sales office engagement, and stronger NRI buyer conversion when our models are present.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            If you are evaluating vendors for your next project launch, we welcome the comparison. Our portfolio, references, and production process are fully transparent.
+            If you are evaluating vendors for your next project launch, we welcome the comparison. Our portfolio, references, and production process are fully transparent. Many of our clients also pair their scale model with a{" "}
+            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-400 font-semibold hover:underline">
+              3D walkthrough video
+            </Link>{" "}
+            — creating a complete sales office experience that covers every buyer touchpoint.
           </p>
         </section>
 
@@ -3513,7 +3533,11 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
             A common objection from finance teams is that ₹5–8 lakhs on a scale model is a significant marketing expense. Here is the counter-argument: a single unit sold at ₹2 Cr generates a sales brokerage and marketing cost that makes the scale model a rounding error. The question is not whether the model is expensive — it is whether it accelerates your sales velocity enough to justify the cost within the first two to four bookings.
           </p>
           <p className="text-gray-300 leading-relaxed mb-4">
-            Developers who use Alliance Media Labs&apos; architectural scale models in their sales offices consistently report that buyer dwell time in the office increases, the number of follow-up visits per buyer drops (buyers decide faster), and NRI buyer conversion on video walkthroughs of the model is measurably higher than walkthroughs without a physical model reference.
+            Developers who use Alliance Media Labs&apos; architectural scale models in their sales offices consistently report that buyer dwell time in the office increases, the number of follow-up visits per buyer drops (buyers decide faster), and NRI buyer conversion on{" "}
+            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-400 font-semibold hover:underline">
+              video walkthroughs
+            </Link>{" "}
+            of the model is measurably higher than walkthroughs without a physical model reference.
           </p>
           <p className="text-gray-300 leading-relaxed">
             The model is not a cost of marketing. It is a cost of sale — and at a ₹2 Cr+ ticket size, the ROI calculation is straightforward. The real risk is not spending ₹5–8 lakhs on a great model. It is spending ₹2–3 lakhs on a poor one that undermines buyer confidence every day it sits in your sales office.
