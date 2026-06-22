@@ -8,7 +8,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 interface Project {
   id: number;
   title: string;
-  market: string;
+  category: string;
   image: string;
   description: string;
   videoUrl: string | null;
@@ -70,34 +70,18 @@ export default function VirtualPropertyTourClient() {
     {
       id: 1,
       title: "Etereo 1, Goa",
-      market: "Gulf & UK NRI",
+      category: "3D Walkthrough",
       image: "/images/portfolio/1.png",
-      description: "Virtual property tour shared with overseas Etereo 1 buyers ahead of their first India visit, shortening the decision cycle considerably.",
+      description: "Cinematic 3D property walkthrough and virtual house tour showcasing luxury residential units with panoramic city views — shareable with buyers anywhere.",
       videoUrl: "https://www.youtube.com/embed/BiCCdx0fDik?autoplay=1",
     },
     {
       id: 2,
       title: "Aura Vantaje, Gurugram",
-      market: "US & Canada NRI",
+      category: "3D Walkthrough",
       image: "/images/portfolio/Aura-Vantaje-Thumbnail.png",
-      description: "AI-powered virtual tour produced in 7 days for a commercial project, becoming the most-shared asset with overseas leads.",
+      description: "AI-powered 3D walkthrough produced in 7 days for a commercial project, highlighting scale, usability, and immersive buyer experience for remote viewing.",
       videoUrl: "https://www.youtube.com/embed/YGaAU9B37nc?autoplay=1",
-    },
-    {
-      id: 3,
-      title: "Skyline Residences",
-      market: "Australia & Singapore NRI",
-      image: "/images/services/3d-walkthrough-videos/3.jpg",
-      description: "Virtual tour with subtitle variant for the APAC NRI segment, paired with a construction update video series for buyer confidence.",
-      videoUrl: null,
-    },
-    {
-      id: 4,
-      title: "Central Park Towers",
-      market: "Gulf NRI",
-      image: "/images/services/3d-walkthrough-videos/4.jpg",
-      description: "Virtual property tour built for a Gulf-market roadshow, optimised for large-screen presentation and WhatsApp follow-up sharing.",
-      videoUrl: null,
     },
   ];
 
@@ -214,9 +198,9 @@ export default function VirtualPropertyTourClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">Our Work</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Virtual Tours Built for Overseas Markets</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Virtual Tours Shared With Remote Buyers</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {portfolioProjects.map((project) => (
               <div key={project.id} className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer" onClick={() => setSelectedProject(project)}>
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -229,7 +213,7 @@ export default function VirtualPropertyTourClient() {
                     </div>
                   )}
                   <div className="absolute top-3 left-3">
-                    <span className="text-xs bg-[#e8b86d] text-black font-semibold px-2 py-1 rounded">{project.market}</span>
+                    <span className="text-xs bg-[#e8b86d] text-black font-semibold px-2 py-1 rounded">{project.category}</span>
                   </div>
                 </div>
                 <div className="p-4">

@@ -8,8 +8,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 interface Project {
   id: number;
   title: string;
-  type: string;
-  scale: string;
+  category: string;
   image: string;
   description: string;
 }
@@ -84,51 +83,59 @@ export default function ArchitecturalDesignModelClient() {
   const portfolioProjects: Project[] = [
     {
       id: 1,
-      title: "Residential Tower Massing Study",
-      type: "Concept Model",
-      scale: "1:500",
-      image: "/images/services/architectural-scale-models/2.jpg",
-      description: "Early massing study exploring tower form and floor-plate efficiency for a residential design proposal.",
+      title: "The Dualis, Shapoorji Pallonji",
+      category: "Architectural Scale Models",
+      image: "/images/services/architectural-scale-models/shapoorji/01.png",
+      description: "A premium, space-efficient, visually engaging scale model solution that delivers maximum impact without occupying excessive space.",
     },
     {
       id: 2,
-      title: "Mixed-Use Competition Entry",
-      type: "Competition Model",
-      scale: "1:200",
-      image: "/images/services/architectural-scale-models/3.jpg",
-      description: "Competition-ready presentation model built to a 10-day deadline for a mixed-use design competition submission.",
+      title: "Indian Railways",
+      category: "Scale Models",
+      image: "/images/services/architectural-scale-models/2.jpg",
+      description: "Intricate scale model for Indian Railways infrastructure project, demonstrating station layouts, platform configurations, and surrounding urban integration with meticulous attention to operational details.",
     },
     {
       id: 3,
-      title: "Township Master Plan Presentation",
-      type: "Client Presentation Model",
-      scale: "1:100",
-      image: "/images/services/architectural-scale-models/4.jpg",
-      description: "Detailed presentation model for a design review with the client board — full landscaping and amenity detailing.",
+      title: "Hiranandani Meadows, Thane",
+      category: "Scale Models",
+      image: "/images/services/architectural-scale-models/3.jpg",
+      description: "Elaborate architectural scale model of Hiranandani Meadows in Thane, capturing the sprawling residential township with multi-story buildings, green corridors, and integrated community facilities.",
     },
     {
       id: 4,
-      title: "Facade System Study Model",
-      type: "Material Study Model",
-      scale: "1:20",
-      image: "/images/services/architectural-scale-models/5.jpg",
-      description: "Close-scale model studying a louvre facade system and material junctions ahead of construction documentation.",
+      title: "Venkatesh Skydale, Pune",
+      category: "Scale Models",
+      image: "/images/services/architectural-scale-models/4.jpg",
+      description: "Sophisticated scale model of Venkatesh Skydale residential project in Pune, highlighting the twin-tower configuration, podium-level amenities, and contextual urban setting with accurate proportions.",
     },
     {
       id: 5,
-      title: "Institutional Campus Context Model",
-      type: "Context Model",
-      scale: "1:500",
-      image: "/images/services/architectural-scale-models/6.jpg",
-      description: "Site and context model for an institutional campus design, showing the proposal within its urban surroundings.",
+      title: "Spree City, Sonipat",
+      category: "Scale Models",
+      image: "/images/services/architectural-scale-models/5.jpg",
+      description: "Comprehensive architectural scale model for Spree City in Sonipat, representing a mixed-use development with residential zones, commercial areas, and extensive landscaping across multiple phases.",
     },
     {
       id: 6,
-      title: "Design Development Working Model",
-      type: "Design Development Model",
-      scale: "1:100",
+      title: "Skyline Realty, Hyderabad",
+      category: "Scale Models",
+      image: "/images/services/architectural-scale-models/6.jpg",
+      description: "Detailed architectural scale model for Skyline Realty's premium development in Hyderabad, showcasing contemporary high-rise design, rooftop amenities, and sophisticated urban living spaces.",
+    },
+    {
+      id: 7,
+      title: "Island City Centre, Mumbai",
+      category: "Scale Models",
       image: "/images/services/architectural-scale-models/7.jpg",
-      description: "Staged working model produced alongside a residential design as it evolved from concept to construction-ready.",
+      description: "Premium architectural scale model of Island City Centre in Mumbai, depicting a landmark mixed-use development with commercial towers, retail podiums, and waterfront promenade integration.",
+    },
+    {
+      id: 8,
+      title: "Centonic, Pune",
+      category: "Scale Models",
+      image: "/images/services/architectural-scale-models/1.jpg",
+      description: "Precision architectural scale model showcasing Centonic's contemporary residential development in Pune, featuring detailed landscaping, modern tower structures, and comprehensive amenity planning.",
     },
   ];
 
@@ -188,8 +195,7 @@ export default function ArchitecturalDesignModelClient() {
             <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-auto" />
             <div className="p-6">
               <div className="flex gap-2 mb-3">
-                <span className="text-xs bg-yellow-400 text-black font-semibold px-2 py-1 rounded">{selectedProject.type}</span>
-                <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">{selectedProject.scale}</span>
+                <span className="text-xs bg-yellow-400 text-black font-semibold px-2 py-1 rounded">{selectedProject.category}</span>
               </div>
               <h3 className="font-bold text-black text-lg mb-2">{selectedProject.title}</h3>
               <p className="text-gray-600 text-sm">{selectedProject.description}</p>
@@ -330,10 +336,7 @@ export default function ArchitecturalDesignModelClient() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-3 left-3 flex gap-2">
-                    <span className="text-xs bg-yellow-400 text-black font-semibold px-2 py-1 rounded">{project.type}</span>
-                  </div>
-                  <div className="absolute bottom-3 right-3">
-                    <span className="text-xs bg-black/70 text-white px-2 py-1 rounded backdrop-blur-sm">{project.scale}</span>
+                    <span className="text-xs bg-yellow-400 text-black font-semibold px-2 py-1 rounded">{project.category}</span>
                   </div>
                 </div>
                 <div className="p-4">
