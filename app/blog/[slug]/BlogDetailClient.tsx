@@ -42,6 +42,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <ScaleModelPriceArticle post={post} />;
   }
 
+  if (slug === "scale-model-vs-3d-walkthrough-video-india") {
+    return <ScaleModelVsWalkthroughArticle post={post} />;
+  }
+
   return notFound();
 }
 
@@ -3614,6 +3618,272 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
             </Link>
             <Link href="/services/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Scale Model Service
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SCALE MODEL VS 3D WALKTHROUGH VIDEO — B2B COMPARISON GUIDE
+   ───────────────────────────────────────────────────────────── */
+function ScaleModelVsWalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative bg-black pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="/images/services/architectural-scale-models/1.jpg"
+            alt="Architectural scale model vs 3D walkthrough video — Alliance Media Labs"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-gray-400 text-sm">{post.readTime}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <div className="flex items-center gap-4 text-sm text-gray-400">
+            <span>{post.author}</span>
+            <span>•</span>
+            <span>{post.date}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Body */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Intro */}
+        <section className="mb-12">
+          <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+            Every real estate marketing director planning a project launch eventually faces the same budget question: should the visualization spend go toward a physical <strong>architectural scale model</strong>, a <strong>3D walkthrough video</strong>, or both? The two are often framed as competing line items in the same budget — but they solve fundamentally different problems for fundamentally different buyer journeys.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A scale model is a physical, tactile sales-office asset that builds trust the moment a buyer walks in. A 3D walkthrough video is a digital, shareable asset that builds intent before a buyer ever visits. Choosing between them — or combining them — depends on your launch timeline, buyer profile, and how much of your sales funnel happens online versus in person.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            This guide breaks down exactly when each format wins, what they cost, and why an increasing number of Alliance Media Labs&apos; developer clients now commission both together as a single, coordinated sales office and digital marketing package.
+          </p>
+        </section>
+
+        {/* Section 1 — What a scale model does */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">What an Architectural Scale Model Does Best</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A physical <strong>scale model</strong> sits permanently in your sales office for 18–36 months, anchoring every walk-in presentation. Buyers can walk around it, point at specific units, and physically grasp the scale of the project in a way no screen replicates. It signals permanence and financial seriousness — a developer who commissions a premium model is making a statement about the quality of the project itself.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Scale models work best for high-footfall sales offices, premium ticket sizes (₹1.5 Cr+), and township or multi-phase launches where buyers need to understand spatial relationships between blocks, amenities, and phases at a glance.{" "}
+            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
+              Explore our architectural scale model maker service
+            </Link>{" "}
+            for pricing and project examples.
+          </p>
+        </section>
+
+        {/* Section 2 — What a walkthrough does */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">What a 3D Walkthrough Video Does Best</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A <strong>3D walkthrough video</strong> is a digital, infinitely shareable asset. It travels through WhatsApp, property portals, YouTube, Instagram, and investor decks — reaching NRI buyers, out-of-city investors, and online leads who will never set foot in your sales office before making a shortlisting decision. It demonstrates flow, lifestyle, and unit interiors in motion, something a static model cannot show.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Walkthrough videos win when your buyer base is digitally led, when you need a pre-launch asset before the sales office is even built, or when speed matters — a walkthrough can be produced and published in as fast as 7 days.{" "}
+            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
+              See our 3D walkthrough video company page
+            </Link>{" "}
+            for production timelines and sample work.
+          </p>
+        </section>
+
+        {/* Section 3 — Comparison Table */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">Side-by-Side Comparison</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full border border-gray-200 rounded-xl text-sm">
+              <thead>
+                <tr className="bg-black text-white">
+                  <th className="text-left p-4 font-semibold">Factor</th>
+                  <th className="text-left p-4 font-semibold">Scale Model</th>
+                  <th className="text-left p-4 font-semibold">3D Walkthrough Video</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Typical Cost", "₹1.5L – ₹20L+", "₹75K – ₹3.5L+"],
+                  ["Production Timeline", "15–50 working days", "7–35 working days"],
+                  ["Best Buyer Reach", "Local & walk-in buyers", "NRI, online & remote buyers"],
+                  ["Shareability", "Fixed to sales office", "Unlimited digital sharing"],
+                  ["Lifespan", "18–36 months physical asset", "Permanent digital asset"],
+                  ["Update Flexibility", "Costly to modify post-build", "Easy to re-edit or re-cut"],
+                  ["Strongest Use Case", "Township & premium launches", "Pre-launch & digital campaigns"],
+                ].map((row, i) => (
+                  <tr key={row[0]} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    {row.map((cell, j) => (
+                      <td key={j} className={`p-4 ${j === 0 ? "font-semibold text-black" : "text-gray-700"}`}>
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Section 4 — When model alone */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">When a Scale Model Alone Is the Right Call</h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            Choose a scale model as your primary asset when: your sales office sees consistent local walk-in traffic, the project is a high-ticket single-tower or township launch where spatial scale is the key selling point, or your buyer base skews heavily toward in-person, relationship-driven sales (common in tier-2 and tier-3 Indian cities).
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            If your digital marketing spend is minimal and most bookings close after a physical site or sales office visit, the model alone can carry the bulk of the persuasion work.
+          </p>
+        </section>
+
+        {/* Section 5 — When walkthrough alone */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">When a 3D Walkthrough Video Alone Is the Right Call</h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            Choose a 3D walkthrough video as your primary asset when: you need a pre-launch teaser before construction or the sales office exists, your buyer base includes a significant NRI or out-of-city segment, your campaign is digital-led (Meta, Google, property portals), or your timeline is too tight for a physical model&apos;s production schedule.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            A walkthrough is also the better first move for commercial and office-leasing projects, where decision-makers are often based outside the project city and need a shareable asset for internal stakeholder approval.
+          </p>
+        </section>
+
+        {/* Section 6 — Why use both */}
+        <section className="mb-12 bg-black rounded-2xl p-8 text-white">
+          <h2 className="text-2xl font-bold text-white mb-4">Why India&apos;s Top Developers Increasingly Use Both Together</h2>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            The strongest sales funnels don&apos;t treat these as competing choices — they sequence them. A <strong>3D walkthrough video</strong> runs in digital campaigns and drives qualified footfall to the sales office. Once a buyer arrives, the <strong>architectural scale model</strong> closes the deal by giving them a tactile, trust-building experience that a screen cannot replicate.
+          </p>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            We increasingly see Alliance Media Labs clients commission both from a single drawing set — the same CAD files used to build the digital walkthrough inform the physical model&apos;s proportions, reducing rework and keeping both assets visually consistent with each other and with the final built product.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            Explore both services:{" "}
+            <Link href="/services/scale-model-maker-india" className="text-yellow-400 font-semibold hover:underline">
+              Scale Model Maker India
+            </Link>{" "}
+            and{" "}
+            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-400 font-semibold hover:underline">
+              3D Walkthrough Video Company India
+            </Link>
+            .
+          </p>
+        </section>
+
+        {/* Section 7 — Budget framework */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">A Simple Budget Framework</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            For developers planning to commission both, a practical starting split is roughly 65–70% of the visualization budget toward the scale model and 30–35% toward the walkthrough video for premium township launches — since the model carries a longer lifespan and higher unit cost. For digital-led or pre-launch campaigns, this often flips to 60–70% toward the walkthrough video, with the model commissioned closer to sales office opening.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            The right split always depends on where your buyers actually convert — local sales office footfall versus digital lead-to-site-visit funnels. Track your own conversion data from the last launch before fixing next quarter&apos;s split.
+          </p>
+        </section>
+
+        {/* FAQ */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "Can we commission a scale model and a 3D walkthrough video at the same time without delays?",
+                a: "Yes. Since both are built from the same architectural drawings, running them in parallel is efficient — our 3D modelling team builds the digital walkthrough while the fabrication team begins CNC and laser-cutting on the physical model. Parallel production typically adds no extra time over commissioning either one alone.",
+              },
+              {
+                q: "Which has better ROI for a launch with a tight timeline?",
+                a: "If your launch is under 3 weeks away, a 3D walkthrough video is the faster asset — it can be produced in 7–15 working days versus 15–50 for a scale model. For tight timelines, lead with the walkthrough and commission the model for a slightly later sales office opening.",
+              },
+              {
+                q: "Does a physical scale model still matter when most buyers research online first?",
+                a: "Yes — online research narrows the shortlist, but the in-person sales office visit is where most high-ticket bookings are finalised. A scale model converts the buyer who has already self-selected via your digital content, making it the final and often decisive step in the funnel, not a replacement for it.",
+              },
+              {
+                q: "Can the same drawings be used for both productions to save cost and time?",
+                a: "Yes. The same AutoCAD, Revit, or SketchUp files used for the 3D walkthrough inform the model's dimensional accuracy, and vice versa. Sharing one drawing package across both productions avoids duplicate interpretation work and keeps both assets consistent with each other.",
+              },
+              {
+                q: "How much should we budget if commissioning both for a mid-size residential project?",
+                a: "For a typical mid-size residential launch (₹50 Cr–₹150 Cr project value), a reasonable combined visualization budget is ₹3–8 lakhs — split roughly 60/40 or 70/30 between model and walkthrough depending on whether your sales strategy is sales-office-led or digital-led. Contact us with your project details for a precise itemised quote.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="border border-gray-200 rounded-xl p-5">
+                <h3 className="font-bold text-black mb-2 text-base">{q}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Related Posts */}
+        <div className="border-t border-gray-100 pt-10 mb-12">
+          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-5">
+            <Link href="/blog/best-architectural-scale-model-company-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">B2B Guide</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Best Architectural Scale Model Company in India: How to Choose the Right Partner (2026)</h4>
+            </Link>
+            <Link href="/blog/3d-walkthrough-video-service" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Visualization</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">The Ultimate Guide to 3D Walkthrough Video Services for Real Estate</h4>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back */}
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Not Sure Which One Your Project Needs?
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Share your project details and launch timeline — we&apos;ll recommend the right mix of scale model and 3D walkthrough video, with a detailed quote within 24 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              Get a Free Recommendation
+            </Link>
+            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View Scale Model Service
+            </Link>
+            <Link href="/services/3d-walkthrough-video-company-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View Walkthrough Service
             </Link>
           </div>
         </div>

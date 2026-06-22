@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "scale-model-vs-3d-walkthrough-video-india",
+    title: "Architectural Scale Model vs 3D Walkthrough Video: Which Does Your Project Need in 2026?",
+    excerpt:
+      "Should your real estate launch budget go toward a physical architectural scale model, a 3D walkthrough video, or both? This practical comparison breaks down cost, buyer impact, and timeline for each — and explains why India's top developers increasingly deploy both together for maximum sales office conversion.",
+    category: "Real Estate Marketing",
+    date: "June 22, 2026",
+    dateISO: "2026-06-22",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/architectural-scale-models/1.jpg",
+    tags: ["Scale Model vs 3D Walkthrough", "Sales Office Visualization", "Architectural Scale Model", "3D Walkthrough Video", "Real Estate Marketing Budget"],
+  },
+  {
     slug: "architectural-scale-model-price-india-2026",
     title: "Architectural Scale Model Price in India 2026: Complete Cost Guide for Real Estate Developers",
     excerpt:
