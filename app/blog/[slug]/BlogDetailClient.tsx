@@ -42,8 +42,8 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <ScaleModelPriceArticle post={post} />;
   }
 
-  if (slug === "scale-model-vs-3d-walkthrough-video-india") {
-    return <ScaleModelVsWalkthroughArticle post={post} />;
+  if (slug === "sell-property-to-nri-buyers-india") {
+    return <NRIRemoteBuyersArticle post={post} />;
   }
 
   return notFound();
@@ -3629,9 +3629,9 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
 }
 
 /* ─────────────────────────────────────────────────────────────
-   SCALE MODEL VS 3D WALKTHROUGH VIDEO — B2B COMPARISON GUIDE
+   SELLING TO NRI BUYERS WHO CAN'T VISIT — REMOTE BUYER PLAYBOOK
    ───────────────────────────────────────────────────────────── */
-function ScaleModelVsWalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
   if (!post) return null;
 
   return (
@@ -3642,8 +3642,8 @@ function ScaleModelVsWalkthroughArticle({ post }: { post: ReturnType<typeof getP
       <section className="relative bg-black pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img
-            src="/images/services/architectural-scale-models/1.jpg"
-            alt="Architectural scale model vs 3D walkthrough video — Alliance Media Labs"
+            src="/images/services/3d-walkthrough-videos/1.jpg"
+            alt="How to sell property to NRI buyers who can't visit India — Alliance Media Labs"
             className="w-full h-full object-cover"
           />
         </div>
@@ -3681,134 +3681,154 @@ function ScaleModelVsWalkthroughArticle({ post }: { post: ReturnType<typeof getP
         {/* Intro */}
         <section className="mb-12">
           <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-            Every real estate marketing director planning a project launch eventually faces the same budget question: should the visualization spend go toward a physical <strong>architectural scale model</strong>, a <strong>3D walkthrough video</strong>, or both? The two are often framed as competing line items in the same budget — but they solve fundamentally different problems for fundamentally different buyer journeys.
+            Non-Resident Indians invest tens of billions of dollars into Indian real estate every year — drawn by rupee depreciation, retirement planning, and family ties. Yet almost every developer marketing to this segment runs into the same wall: the buyer with the money cannot get on a flight to inspect the property before committing ₹1–5 Cr to a booking.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A scale model is a physical, tactile sales-office asset that builds trust the moment a buyer walks in. A 3D walkthrough video is a digital, shareable asset that builds intent before a buyer ever visits. Choosing between them — or combining them — depends on your launch timeline, buyer profile, and how much of your sales funnel happens online versus in person.
+            The result is a predictable, expensive pattern — a hot NRI lead goes silent after the first call, an enquiry drags for six months without a decision, or a buyer books a smaller, cheaper unit they&apos;ve actually seen elsewhere over your unseen project because uncertainty beats ambition when ₹2 Cr is on the line.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This guide breaks down exactly when each format wins, what they cost, and why an increasing number of Alliance Media Labs&apos; developer clients now commission both together as a single, coordinated sales office and digital marketing package.
+            This isn&apos;t a marketing problem you fix with a better brochure. It&apos;s a trust and visualization problem, and it has a specific, repeatable solution. Here is the exact remote-buyer visualization stack that converts NRI enquiries into bookings without a single site visit.
           </p>
         </section>
 
-        {/* Section 1 — What a scale model does */}
+        {/* Section 1 — Why NRI buyers hesitate */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">What an Architectural Scale Model Does Best</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            A physical <strong>scale model</strong> sits permanently in your sales office for 18–36 months, anchoring every walk-in presentation. Buyers can walk around it, point at specific units, and physically grasp the scale of the project in a way no screen replicates. It signals permanence and financial seriousness — a developer who commissions a premium model is making a statement about the quality of the project itself.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Scale models work best for high-footfall sales offices, premium ticket sizes (₹1.5 Cr+), and township or multi-phase launches where buyers need to understand spatial relationships between blocks, amenities, and phases at a glance.{" "}
-            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
-              Explore our architectural scale model maker service
-            </Link>{" "}
-            for pricing and project examples.
-          </p>
-        </section>
-
-        {/* Section 2 — What a walkthrough does */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">What a 3D Walkthrough Video Does Best</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            A <strong>3D walkthrough video</strong> is a digital, infinitely shareable asset. It travels through WhatsApp, property portals, YouTube, Instagram, and investor decks — reaching NRI buyers, out-of-city investors, and online leads who will never set foot in your sales office before making a shortlisting decision. It demonstrates flow, lifestyle, and unit interiors in motion, something a static model cannot show.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Walkthrough videos win when your buyer base is digitally led, when you need a pre-launch asset before the sales office is even built, or when speed matters — a walkthrough can be produced and published in as fast as 7 days.{" "}
-            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
-              See our 3D walkthrough video company page
-            </Link>{" "}
-            for production timelines and sample work.
-          </p>
-        </section>
-
-        {/* Section 3 — Comparison Table */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">Side-by-Side Comparison</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border border-gray-200 rounded-xl text-sm">
-              <thead>
-                <tr className="bg-black text-white">
-                  <th className="text-left p-4 font-semibold">Factor</th>
-                  <th className="text-left p-4 font-semibold">Scale Model</th>
-                  <th className="text-left p-4 font-semibold">3D Walkthrough Video</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ["Typical Cost", "₹1.5L – ₹20L+", "₹75K – ₹3.5L+"],
-                  ["Production Timeline", "15–50 working days", "7–35 working days"],
-                  ["Best Buyer Reach", "Local & walk-in buyers", "NRI, online & remote buyers"],
-                  ["Shareability", "Fixed to sales office", "Unlimited digital sharing"],
-                  ["Lifespan", "18–36 months physical asset", "Permanent digital asset"],
-                  ["Update Flexibility", "Costly to modify post-build", "Easy to re-edit or re-cut"],
-                  ["Strongest Use Case", "Township & premium launches", "Pre-launch & digital campaigns"],
-                ].map((row, i) => (
-                  <tr key={row[0]} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    {row.map((cell, j) => (
-                      <td key={j} className={`p-4 ${j === 0 ? "font-semibold text-black" : "text-gray-700"}`}>
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <h2 className="text-2xl font-bold text-black mb-4">Why NRI Buyers Hesitate Without a Site Visit</h2>
+          <div className="space-y-5">
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">1. They Can&apos;t Verify Scale and Quality</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Photos and floor plans don&apos;t convey real proportions. A buyer in Dubai or Toronto has no reliable way to judge whether a "spacious 3BHK" actually feels spacious, or whether finish quality matches what the renders promised.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">2. Fraud and Misrepresentation Fears</h3>
+              <p className="text-gray-700 leading-relaxed">
+                NRI buyers are disproportionately targeted by fraudulent or misrepresented listings. Without a way to independently verify the construction stage and surrounding context, hesitation is a rational response, not an objection to overcome with pressure.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">3. No Way to Judge the Neighbourhood</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Location quality — road access, nearby development, noise, views — is impossible to judge from a sales brochure. This is exactly the gap aerial and ground-level video close.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">4. Construction-Stage Anxiety</h3>
+              <p className="text-gray-700 leading-relaxed">
+                For under-construction projects, NRI buyers worry most about delays and stalled projects — a well-founded fear after several high-profile project failures in the last decade. Without regular visual proof of progress, anxiety compounds with every missed self-imposed deadline.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">5. No Substitute for the In-Person "Feel"</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Local buyers get a felt sense of a project from walking through the sales office and model. NRI buyers need that same emotional confidence built remotely — through video, not text.
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* Section 4 — When model alone */}
+        {/* Section 2 — The visualization stack */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">When a Scale Model Alone Is the Right Call</h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Choose a scale model as your primary asset when: your sales office sees consistent local walk-in traffic, the project is a high-ticket single-tower or township launch where spatial scale is the key selling point, or your buyer base skews heavily toward in-person, relationship-driven sales (common in tier-2 and tier-3 Indian cities).
+          <h2 className="text-2xl font-bold text-black mb-6">The Remote Buyer Visualization Stack</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Each of the five hesitations above maps to a specific visual tool. Developers who close NRI sales consistently don&apos;t rely on one asset — they deploy this stack in sequence across the buyer&apos;s journey.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            If your digital marketing spend is minimal and most bookings close after a physical site or sales office visit, the model alone can carry the bulk of the persuasion work.
-          </p>
+
+          <div className="space-y-6">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-2">3D Walkthrough Videos — Solving "I Can&apos;t Verify Scale"</h3>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                A photorealistic walkthrough lets a buyer move through the actual floor plan at human scale — corridors, room proportions, ceiling heights, and natural light all become tangible on a video call or WhatsApp share.
+              </p>
+              <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline text-sm">
+                Explore our 3D walkthrough video company →
+              </Link>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-2">Virtual Reality Tours — Solving "No Substitute for the Feel"</h3>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                For high-value NRI prospects, a VR headset experience at an overseas roadshow or a 360° tour link sent to their phone gets closer to an in-person visit than any video can. It is the single highest-impact tool for closing six-figure-dollar bookings remotely.
+              </p>
+              <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline text-sm">
+                Explore our virtual reality tour service →
+              </Link>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-2">Aerial Drone Footage — Solving "I Can&apos;t Judge the Neighbourhood"</h3>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                Drone footage showing the project in its real geographic context — proximity to highways, metro, schools, and the broader skyline — answers the location question that no brochure can, and is one of the most-replayed assets in NRI sales calls.
+              </p>
+              <Link href="/services/drone-shoots" className="text-yellow-600 font-semibold hover:underline text-sm">
+                Explore our drone shoot service →
+              </Link>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-2">Construction Update Videos — Solving Delay Anxiety</h3>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                Monthly or quarterly construction progress videos, shared directly with booked and prospective NRI buyers, are the single most effective trust-maintenance tool for under-construction projects. They turn an anxious, silent buyer relationship into an active, confident one.
+              </p>
+              <Link href="/services/construction-update-videos" className="text-yellow-600 font-semibold hover:underline text-sm">
+                Explore our construction update video service →
+              </Link>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-2">Digital Marketing & WhatsApp Nurturing — Solving the Long Decision Cycle</h3>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                NRI buyers typically take 3–6 months to decide due to time zones, family consultations, and currency planning. A structured digital nurture sequence — retargeted ads, WhatsApp video drops, and scheduled video calls — keeps your project top of mind for the entire cycle instead of losing the lead to silence.
+              </p>
+              <Link href="/services/digital-marketing" className="text-yellow-600 font-semibold hover:underline text-sm">
+                Explore our digital marketing service →
+              </Link>
+            </div>
+          </div>
         </section>
 
-        {/* Section 5 — When walkthrough alone */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">When a 3D Walkthrough Video Alone Is the Right Call</h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Choose a 3D walkthrough video as your primary asset when: you need a pre-launch teaser before construction or the sales office exists, your buyer base includes a significant NRI or out-of-city segment, your campaign is digital-led (Meta, Google, property portals), or your timeline is too tight for a physical model&apos;s production schedule.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            A walkthrough is also the better first move for commercial and office-leasing projects, where decision-makers are often based outside the project city and need a shareable asset for internal stakeholder approval.
-          </p>
-        </section>
-
-        {/* Section 6 — Why use both */}
+        {/* Section 3 — Sample funnel */}
         <section className="mb-12 bg-black rounded-2xl p-8 text-white">
-          <h2 className="text-2xl font-bold text-white mb-4">Why India&apos;s Top Developers Increasingly Use Both Together</h2>
-          <p className="text-gray-300 leading-relaxed mb-4">
-            The strongest sales funnels don&apos;t treat these as competing choices — they sequence them. A <strong>3D walkthrough video</strong> runs in digital campaigns and drives qualified footfall to the sales office. Once a buyer arrives, the <strong>architectural scale model</strong> closes the deal by giving them a tactile, trust-building experience that a screen cannot replicate.
-          </p>
-          <p className="text-gray-300 leading-relaxed mb-4">
-            We increasingly see Alliance Media Labs clients commission both from a single drawing set — the same CAD files used to build the digital walkthrough inform the physical model&apos;s proportions, reducing rework and keeping both assets visually consistent with each other and with the final built product.
-          </p>
-          <p className="text-gray-300 leading-relaxed">
-            Explore both services:{" "}
-            <Link href="/services/scale-model-maker-india" className="text-yellow-400 font-semibold hover:underline">
-              Scale Model Maker India
-            </Link>{" "}
-            and{" "}
-            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-400 font-semibold hover:underline">
-              3D Walkthrough Video Company India
-            </Link>
-            .
-          </p>
+          <h2 className="text-2xl font-bold text-white mb-4">A Sample Remote-Buyer Sales Funnel</h2>
+          <ol className="space-y-3">
+            {[
+              { step: "First Contact", detail: "NRI lead comes in via a property portal or Instagram ad. Send the 3D walkthrough video immediately — within minutes, not days." },
+              { step: "Qualification Call", detail: "A video call where your sales team screen-shares the walkthrough and answers questions live, building a personal connection." },
+              { step: "Deepen Interest", detail: "Share drone footage of the location and surrounding development to address the neighbourhood question." },
+              { step: "Remove the Last Doubt", detail: "Offer a VR tour session — either scheduled on a video call with a headset shipped to a local distributor, or via an overseas roadshow if you run one." },
+              { step: "Booking & Beyond", detail: "Post-booking, enroll the buyer in your construction update video list — this single step is the strongest driver of referral business from existing NRI buyers." },
+            ].map(({ step, detail }, i) => (
+              <li key={step} className="flex gap-4">
+                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">{i + 1}</div>
+                <div>
+                  <span className="font-bold text-white">{step} — </span>
+                  <span className="text-gray-300">{detail}</span>
+                </div>
+              </li>
+            ))}
+          </ol>
         </section>
 
-        {/* Section 7 — Budget framework */}
+        {/* Section 4 — Common mistakes */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">A Simple Budget Framework</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            For developers planning to commission both, a practical starting split is roughly 65–70% of the visualization budget toward the scale model and 30–35% toward the walkthrough video for premium township launches — since the model carries a longer lifespan and higher unit cost. For digital-led or pre-launch campaigns, this often flips to 60–70% toward the walkthrough video, with the model commissioned closer to sales office opening.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            The right split always depends on where your buyers actually convert — local sales office footfall versus digital lead-to-site-visit funnels. Track your own conversion data from the last launch before fixing next quarter&apos;s split.
-          </p>
+          <h2 className="text-2xl font-bold text-black mb-4">Common Mistakes Developers Make Selling to NRI Buyers</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { flag: "Sending PDFs instead of video", detail: "A static brochure cannot answer the scale and quality questions that drive NRI hesitation. Video should be the first asset sent, not the last." },
+              { flag: "No regular construction updates", detail: "Silence between booking and possession is the #1 cause of NRI buyer anxiety and cancellation requests." },
+              { flag: "Sales team unprepared for video calls", detail: "Your team needs walkthrough files and drone footage ready to screen-share on demand — not promised 'I'll send it later'." },
+              { flag: "Ignoring time zone scheduling", detail: "Losing a hot lead because no one was available for a call at a workable hour in their time zone is a process failure, not a buyer problem." },
+            ].map((item) => (
+              <div key={item.flag} className="border border-red-200 bg-red-50 rounded-xl p-5">
+                <div className="flex items-start gap-2 mb-2">
+                  <i className="ri-close-circle-fill text-red-500 text-lg flex-shrink-0 mt-0.5"></i>
+                  <h3 className="font-bold text-black text-sm">{item.flag}</h3>
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* FAQ */}
@@ -3817,24 +3837,24 @@ function ScaleModelVsWalkthroughArticle({ post }: { post: ReturnType<typeof getP
           <div className="space-y-5">
             {[
               {
-                q: "Can we commission a scale model and a 3D walkthrough video at the same time without delays?",
-                a: "Yes. Since both are built from the same architectural drawings, running them in parallel is efficient — our 3D modelling team builds the digital walkthrough while the fabrication team begins CNC and laser-cutting on the physical model. Parallel production typically adds no extra time over commissioning either one alone.",
+                q: "What is the single most important asset for selling to NRI buyers remotely?",
+                a: "A photorealistic 3D walkthrough video is the highest-leverage asset — it should be the first thing sent to any NRI enquiry. It directly addresses the scale and quality verification problem that causes the most hesitation, and unlike a VR session, it can be shared instantly over WhatsApp at no scheduling cost.",
               },
               {
-                q: "Which has better ROI for a launch with a tight timeline?",
-                a: "If your launch is under 3 weeks away, a 3D walkthrough video is the faster asset — it can be produced in 7–15 working days versus 15–50 for a scale model. For tight timelines, lead with the walkthrough and commission the model for a slightly later sales office opening.",
+                q: "Do we need VR tours for every project, or only premium launches?",
+                a: "VR tours deliver the highest impact on high-ticket bookings (₹1.5 Cr+) where the buyer is making a six-figure-dollar decision and the cost of a VR session is justified by the deal size. For lower-ticket projects, a strong 3D walkthrough and drone footage combination is usually sufficient.",
               },
               {
-                q: "Does a physical scale model still matter when most buyers research online first?",
-                a: "Yes — online research narrows the shortlist, but the in-person sales office visit is where most high-ticket bookings are finalised. A scale model converts the buyer who has already self-selected via your digital content, making it the final and often decisive step in the funnel, not a replacement for it.",
+                q: "How often should we send construction update videos to NRI buyers?",
+                a: "Monthly is ideal for active construction phases; quarterly is the minimum acceptable cadence. The key is consistency — an irregular schedule undermines the trust-building purpose more than a less frequent but reliable one.",
               },
               {
-                q: "Can the same drawings be used for both productions to save cost and time?",
-                a: "Yes. The same AutoCAD, Revit, or SketchUp files used for the 3D walkthrough inform the model's dimensional accuracy, and vice versa. Sharing one drawing package across both productions avoids duplicate interpretation work and keeps both assets consistent with each other.",
+                q: "Can we use the same 3D walkthrough video for both local and NRI marketing?",
+                a: "Yes, the core walkthrough is reusable across both segments. We do recommend an NRI-specific cut with subtitles, currency-relevant messaging, and a stronger emphasis on location and security framing, which resonates more with overseas buyers.",
               },
               {
-                q: "How much should we budget if commissioning both for a mid-size residential project?",
-                a: "For a typical mid-size residential launch (₹50 Cr–₹150 Cr project value), a reasonable combined visualization budget is ₹3–8 lakhs — split roughly 60/40 or 70/30 between model and walkthrough depending on whether your sales strategy is sales-office-led or digital-led. Contact us with your project details for a precise itemised quote.",
+                q: "Is Alliance Media Labs able to produce this entire stack for one project?",
+                a: "Yes. We produce 3D walkthrough videos, VR tours, drone footage, and construction update videos as an integrated package from a single project brief and drawing set, which keeps all assets visually consistent and reduces coordination overhead for your marketing team.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="border border-gray-200 rounded-xl p-5">
@@ -3849,13 +3869,13 @@ function ScaleModelVsWalkthroughArticle({ post }: { post: ReturnType<typeof getP
         <div className="border-t border-gray-100 pt-10 mb-12">
           <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <Link href="/blog/best-architectural-scale-model-company-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">B2B Guide</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Best Architectural Scale Model Company in India: How to Choose the Right Partner (2026)</h4>
-            </Link>
             <Link href="/blog/3d-walkthrough-video-service" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
               <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Visualization</p>
               <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">The Ultimate Guide to 3D Walkthrough Video Services for Real Estate</h4>
+            </Link>
+            <Link href="/blog/real-estate-marketing-video-types-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Marketing</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">7 Types of Real Estate Marketing Videos Every Indian Developer Should Use in 2026</h4>
             </Link>
           </div>
         </div>
@@ -3870,20 +3890,20 @@ function ScaleModelVsWalkthroughArticle({ post }: { post: ReturnType<typeof getP
       <section className="py-20 bg-black">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Not Sure Which One Your Project Needs?
+            Build Your Remote Buyer Visualization Stack
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Share your project details and launch timeline — we&apos;ll recommend the right mix of scale model and 3D walkthrough video, with a detailed quote within 24 hours.
+            Share your project details and NRI target markets — we&apos;ll recommend the right mix of walkthrough, VR, drone, and update video assets, with a detailed quote within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
               Get a Free Recommendation
             </Link>
-            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
-              View Scale Model Service
-            </Link>
             <Link href="/services/3d-walkthrough-video-company-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Walkthrough Service
+            </Link>
+            <Link href="/services/virtual-reality-tours" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View VR Tour Service
             </Link>
           </div>
         </div>

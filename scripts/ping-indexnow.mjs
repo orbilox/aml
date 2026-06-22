@@ -15,7 +15,7 @@ const ALL_URLS = [
 
   // Blog
   "/blog",
-  "/blog/scale-model-vs-3d-walkthrough-video-india",
+  "/blog/sell-property-to-nri-buyers-india",
   "/blog/architectural-scale-model-price-india-2026",
   "/blog/best-architectural-scale-model-company-india",
   "/blog/real-estate-marketing-video-types-india",

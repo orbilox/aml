@@ -13,17 +13,17 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "scale-model-vs-3d-walkthrough-video-india",
-    title: "Architectural Scale Model vs 3D Walkthrough Video: Which Does Your Project Need in 2026?",
+    slug: "sell-property-to-nri-buyers-india",
+    title: "How to Sell Property to NRI Buyers Who Can't Visit India: The Remote Buyer Visualization Playbook",
     excerpt:
-      "Should your real estate launch budget go toward a physical architectural scale model, a 3D walkthrough video, or both? This practical comparison breaks down cost, buyer impact, and timeline for each — and explains why India's top developers increasingly deploy both together for maximum sales office conversion.",
+      "NRI buyers invest billions in Indian real estate every year — yet most can't fly in to inspect a property before booking. Here's the exact visualization stack top developers use to close high-ticket NRI sales remotely, without a single site visit.",
     category: "Real Estate Marketing",
     date: "June 22, 2026",
     dateISO: "2026-06-22",
-    readTime: "9 min read",
+    readTime: "10 min read",
     author: "Alliance Media Labs Team",
-    thumbnail: "/images/services/architectural-scale-models/1.jpg",
-    tags: ["Scale Model vs 3D Walkthrough", "Sales Office Visualization", "Architectural Scale Model", "3D Walkthrough Video", "Real Estate Marketing Budget"],
+    thumbnail: "/images/services/3d-walkthrough-videos/1.jpg",
+    tags: ["NRI Real Estate", "Remote Property Buyers", "NRI Marketing India", "3D Walkthrough", "Virtual Property Tours"],
   },
   {
     slug: "architectural-scale-model-price-india-2026",
