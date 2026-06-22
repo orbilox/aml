@@ -12,6 +12,8 @@ const ALL_URLS = [
   "/",
   "/contact",
   "/portfolio",
+  "/architectural-scale-models",
+  "/3d-walkthrough-videos",
 
   // Blog
   "/blog",

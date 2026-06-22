@@ -3202,7 +3202,11 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
             <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-400 font-semibold hover:underline">
               3D walkthrough video
             </Link>{" "}
-            — creating a complete sales office experience that covers every buyer touchpoint.
+            — creating a complete sales office experience that covers every buyer touchpoint. If you&apos;re an architecture firm rather than a developer, we also build{" "}
+            <Link href="/architectural-scale-models" className="text-yellow-400 font-semibold hover:underline">
+              concept and presentation models for design practices
+            </Link>
+            .
           </p>
         </section>
 
@@ -3743,6 +3747,10 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
               </p>
               <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline text-sm">
                 Explore our 3D walkthrough video company →
+              </Link>
+              <br />
+              <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline text-sm mt-2 inline-block">
+                See our virtual property tour video for NRI buyers →
               </Link>
             </div>
 

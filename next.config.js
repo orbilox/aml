@@ -21,18 +21,11 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // Legacy WordPress URLs (pre-Next.js migration) — 301 to current paths
-      // so link/index equity isn't lost on a 404.
-      {
-        source: "/architectural-scale-models",
-        destination: "/services/architectural-scale-models",
-        permanent: true,
-      },
-      {
-        source: "/3d-walkthrough-videos",
-        destination: "/services/3d-walkthrough-videos",
-        permanent: true,
-      },
+      // Legacy WordPress URL (pre-Next.js migration) — 301 so link/index
+      // equity isn't lost on a 404. /architectural-scale-models and
+      // /3d-walkthrough-videos are NOT redirected — they're live as their
+      // own distinct pages (see app/architectural-scale-models and
+      // app/3d-walkthrough-videos).
       {
         source: "/real-estate-video-production-service-in-lucknow",
         destination: "/city-services/real-estate-video-production-gurugram",
