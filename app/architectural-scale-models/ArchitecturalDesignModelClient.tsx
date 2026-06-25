@@ -16,38 +16,38 @@ interface Project {
 const modelTypes = [
   {
     icon: "ri-shape-2-line",
-    title: "Concept & Massing Models",
-    desc: "Early-stage volumetric studies that test form, proportion, and site relationships before detailing begins. Simple material blocks, fast turnaround.",
-    scale: "1:500 – 1:200",
-  },
-  {
-    icon: "ri-trophy-line",
-    title: "Competition Entry Models",
-    desc: "Precision presentation models built to deadline for architectural competitions — clean finish, accurate massing, and the visual impact a jury notices.",
+    title: "Architectural Scale Models",
+    desc: "Our core architectural scale models for real estate launches, design reviews, and investor presentations — built with precision CNC fabrication and LED lighting.",
     scale: "1:200 – 1:100",
   },
   {
-    icon: "ri-presentation-line",
-    title: "Client Presentation Models",
-    desc: "Detailed, finished models for client pitches and design reviews — material-accurate finishes, landscaping, and context buildings included.",
-    scale: "1:100 – 1:50",
+    icon: "ri-building-line",
+    title: "Real Estate Scale Models",
+    desc: "Detailed real estate scale models for residential towers, townships, and commercial projects — the centrepiece of every sales office we equip.",
+    scale: "1:200 – 1:100",
   },
   {
-    icon: "ri-layout-3-line",
-    title: "Design Development Models",
-    desc: "Working models that evolve alongside the design process — staged production as a scheme is refined from concept to construction-ready.",
-    scale: "1:100 – 1:50",
+    icon: "ri-magic-line",
+    title: "Miniature Models & Miniature Model Making",
+    desc: "Compact miniature models for site context, exhibitions, and quick-turnaround presentations — precision miniature model making at smaller scale ratios.",
+    scale: "1:1000 – 1:500",
+  },
+  {
+    icon: "ri-trophy-line",
+    title: "Competition & Concept Models",
+    desc: "Precision presentation models built to deadline for architectural competitions and early design concepts — clean finish, accurate massing.",
+    scale: "1:500 – 1:200",
   },
   {
     icon: "ri-palette-line",
     title: "Material & Facade Study Models",
-    desc: "Close-up models of facade systems, material junctions, and detailing — used to test and present material choices at large scale.",
+    desc: "Close-up models of facade systems and material junctions — built using our 3D scale model maker and 3D model making service workflow.",
     scale: "1:20 – 1:10",
   },
   {
-    icon: "ri-building-4-line",
-    title: "Context & Site Models",
-    desc: "Models showing a proposed building within its urban or landscape context — critical for planning submissions and urban design reviews.",
+    icon: "ri-map-2-line",
+    title: "Township & Master Plan Models",
+    desc: "Large-format real estate scale models for township master plans, showing phase-wise development, amenities, and connectivity.",
     scale: "1:1000 – 1:500",
   },
 ];
@@ -61,10 +61,10 @@ const processSteps = [
 ];
 
 const stats = [
-  { value: "150+", label: "Design Models Delivered" },
-  { value: "7 Days", label: "Fastest Competition Turnaround" },
+  { value: "200+", label: "Scale Models Delivered" },
+  { value: "7 Days", label: "Fastest Turnaround" },
   { value: "1:1000–1:10", label: "Scale Range" },
-  { value: "Pan-India", label: "Studio Delivery" },
+  { value: "Pan-India", label: "Studio & Site Delivery" },
 ];
 
 export default function ArchitecturalDesignModelClient() {
@@ -209,7 +209,7 @@ export default function ArchitecturalDesignModelClient() {
         <div className="absolute inset-0">
           <img
             src="/images/services/architectural-scale-models/2.jpg"
-            alt="Architectural design model maker for architects — Alliance Media Labs"
+            alt="Scale model making company India — Alliance Media Labs"
             className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
@@ -219,18 +219,18 @@ export default function ArchitecturalDesignModelClient() {
             <div className="flex items-center gap-2 mb-6">
               <span className="w-8 h-[2px] bg-yellow-400" />
               <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">
-                For Architects & Design Studios
+                Scale Model Making Company India
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Architectural Design Model Maker for{" "}
-              <span className="text-yellow-400">Architects</span>
+              India&apos;s Trusted Scale Model Making{" "}
+              <span className="text-yellow-400">Company</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4 max-w-2xl">
-              Concept models, competition entries, client presentation models, and design-development models — built from your drawings with precision CNC fabrication, for architecture firms and design studios across India.
+              As a leading scale model making company, we build architectural scale models, real estate scale models, and miniature models for developers and architects across India — backed by expert scale model makers and scale model builders.
             </p>
             <p className="text-base text-gray-400 mb-10 max-w-2xl">
-              From early massing studies to detailed presentation models, we support every stage of the design process.
+              From precision miniature model making to full 3D scale model maker and 3D model making service, our scale model making process covers every stage from digital drawings to sales-office installation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -266,24 +266,24 @@ export default function ArchitecturalDesignModelClient() {
         </div>
       </section>
 
-      {/* Why architects choose us */}
+      {/* Why choose our scale model making company */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-yellow-500 text-sm font-semibold tracking-widest uppercase">Why Architecture Firms Choose Us</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Built for the Design Process, Not Just Sales</h2>
+            <span className="text-yellow-500 text-sm font-semibold tracking-widest uppercase">Why Choose Our Scale Model Making Company</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Trusted Scale Model Makers & Scale Model Builders</h2>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              Real estate sales models and architectural design models solve different problems. We understand the difference — and build accordingly.
+              As a scale model making company, we build architectural scale models, real estate scale models, and miniature models under one roof — with no outsourcing at any stage.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: "ri-pencil-ruler-2-line", title: "We Read Design Drawings, Not Just Marketing Briefs", desc: "Our team works directly from SketchUp, Revit, Rhino, and AutoCAD files — understanding design intent, not just translating a brochure." },
-              { icon: "ri-time-line", title: "Deadline-Aware Production", desc: "Competition entries and client pitches run on fixed dates. We build production schedules around your deadline, not the other way around." },
-              { icon: "ri-stack-line", title: "Staged Model Production", desc: "Models can evolve with your design — an early massing study followed by a refined presentation model once the scheme is locked." },
-              { icon: "ri-tools-line", title: "Material-Accurate Detailing", desc: "Facade systems, material junctions, and finishes are represented accurately — critical for design-development and material study models." },
-              { icon: "ri-shield-check-line", title: "Confidentiality on Unreleased Designs", desc: "Competition entries and unreleased client work are handled under NDA on request — your design stays confidential until you choose to reveal it." },
-              { icon: "ri-truck-line", title: "Studio & Venue Delivery Anywhere in India", desc: "Careful packaging and delivery direct to your studio, a client's office, or a competition venue — nationwide." },
+              { icon: "ri-pencil-ruler-2-line", title: "In-House 3D Scale Model Maker Workflow", desc: "Our 3D scale model maker process works directly from SketchUp, Revit, Rhino, and AutoCAD files — a full 3D model making service before any physical fabrication begins." },
+              { icon: "ri-time-line", title: "Deadline-Aware Scale Model Making", desc: "Competition entries and sales-office launches run on fixed dates. As a scale model making company, we build production schedules around your deadline, not the other way around." },
+              { icon: "ri-stack-line", title: "Experienced Scale Model Makers", desc: "Our scale model makers and scale model builders handle every model type — from quick miniature model making to large real estate scale models — with consistent quality." },
+              { icon: "ri-tools-line", title: "Material-Accurate Detailing", desc: "Facade systems, material junctions, and finishes are represented accurately in every architectural scale model — critical for both sales and design-review use." },
+              { icon: "ri-shield-check-line", title: "Confidentiality on Unreleased Designs", desc: "Competition entries and unreleased developer projects are handled under NDA on request — your design stays confidential until you choose to reveal it." },
+              { icon: "ri-truck-line", title: "Pan-India Delivery by Our Scale Model Builders", desc: "Careful packaging and delivery direct to your studio, sales office, or exhibition venue — our scale model builders install and test on-site anywhere in India." },
             ].map((f) => (
               <div key={f.title} className="bg-gray-50 rounded-xl p-7 border border-gray-100 hover:border-yellow-400/50 hover:shadow-md transition-all group">
                 <div className="w-12 h-12 bg-yellow-400/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-yellow-400/20 transition-colors">
@@ -302,7 +302,7 @@ export default function ArchitecturalDesignModelClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">Model Types</span>
-            <h2 className="text-3xl sm:text-4xl font-bold mt-3">6 Types of Design Models We Build</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mt-3">6 Types of Scale Models We Build</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {modelTypes.map((mt) => (
@@ -324,7 +324,10 @@ export default function ArchitecturalDesignModelClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="text-yellow-500 text-sm font-semibold tracking-widest uppercase">Our Work</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Design Model Portfolio</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Architectural Scale Models Portfolio</h2>
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+              A sample of the architectural scale models and real estate scale models delivered by our scale model makers for developers across India.
+            </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {portfolioProjects.map((project) => (
@@ -385,24 +388,28 @@ export default function ArchitecturalDesignModelClient() {
           <div className="space-y-5">
             {[
               {
-                q: "Do you make models for architecture firms, not just real estate developers?",
-                a: "Yes. We work directly with architecture firms and design studios on concept models, massing studies, competition entries, and client presentation models — produced from your design drawings at any stage of the design process.",
+                q: "What does a scale model making company do?",
+                a: "A scale model making company designs and fabricates miniature physical replicas of buildings, townships, and infrastructure projects. As a scale model making company, we handle digital modelling, CNC fabrication, LED integration, and hand-finishing — delivering architectural scale models and real estate scale models for sales offices, exhibitions, and design presentations.",
               },
               {
-                q: "What is a concept or massing model and when is it needed?",
-                a: "A concept or massing model is a simplified physical study of a building's volumes, proportions, and site relationships — used early in design to test form and context before detailing begins.",
+                q: "What are architectural scale models used for?",
+                a: "Architectural scale models are used to showcase building design, layout, and scale to buyers, investors, and design review panels. Real estate developers use architectural scale models at sales offices and launch events, while architects use them for design presentations and competition entries.",
               },
               {
-                q: "Can you produce a model for a design competition on a tight deadline?",
-                a: "Yes. We offer rush production for concept and presentation models — typically 7–12 working days depending on scale and detail level, once drawings are finalised.",
+                q: "Who are the best scale model makers and scale model builders in India?",
+                a: "The best scale model makers and scale model builders combine in-house digital modelling, CNC and laser fabrication, and hand-finishing under one roof. We're a trusted scale model making company with 200+ projects delivered as scale model makers and scale model builders for developers across India.",
               },
               {
-                q: "What scale ratios do you work in for design and presentation models?",
-                a: "We work across the full range used in architectural practice — from 1:500 and 1:200 site/massing models to 1:100 and 1:50 detailed presentation models, and 1:20 material/facade study models.",
+                q: "What is the difference between miniature model making and a full-scale architectural scale model?",
+                a: "Miniature model making typically refers to smaller-scale, detailed builds at ratios like 1:500 or 1:1000, while architectural scale models for real estate are often larger, more detailed builds at 1:100 or 1:200 with LED lighting and landscaping. Both fall under our scale model making services.",
               },
               {
-                q: "Do you work directly with architects on revisions during the design process?",
-                a: "Yes. We support staged model production — an initial massing study followed by a refined presentation model once the design is locked — keeping cost proportional to each design stage.",
+                q: "Do you offer 3D scale model maker and 3D model making service together?",
+                a: "Yes. Our 3D scale model maker workflow starts with a 3D model making service — converting your CAD or BIM drawings into a precise digital model — before any physical fabrication begins, ensuring accuracy in every real estate scale model we build.",
+              },
+              {
+                q: "Do you provide architectural scale models service in India for all cities?",
+                a: "Yes. We deliver our architectural scale models service in India across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and other major cities, with on-site installation support included.",
               },
             ].map((faq, idx) => (
               <FAQItem key={idx} question={faq.q} answer={faq.a} />
@@ -471,9 +478,9 @@ export default function ArchitecturalDesignModelClient() {
           <div className="grid lg:grid-cols-2 gap-14 items-start">
             <div>
               <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">Get a Quote</span>
-              <h2 className="text-3xl sm:text-4xl font-bold mt-3 mb-6">Start Your Design Model Project</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mt-3 mb-6">Talk to Our Scale Model Making Company</h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Share your design files and deadline — we&apos;ll respond with a recommended scale, timeline, and quote within 24 hours.
+                Share your drawings and deadline — our scale model makers will respond with a recommended scale, timeline, and quote within 24 hours.
               </p>
               <div className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-xl">
                 <i className="ri-whatsapp-line text-green-400 text-2xl" />
@@ -519,11 +526,11 @@ export default function ArchitecturalDesignModelClient() {
                       <label className="block text-sm font-medium text-gray-300 mb-1.5">Model Type</label>
                       <select name="modelType" value={formData.modelType} onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400 transition-colors text-sm appearance-none">
                         <option value="" className="bg-gray-900">Select type</option>
-                        <option value="Concept/Massing Model" className="bg-gray-900">Concept / Massing Model</option>
-                        <option value="Competition Entry" className="bg-gray-900">Competition Entry</option>
-                        <option value="Client Presentation Model" className="bg-gray-900">Client Presentation Model</option>
-                        <option value="Design Development Model" className="bg-gray-900">Design Development Model</option>
-                        <option value="Material/Facade Study" className="bg-gray-900">Material / Facade Study</option>
+                        <option value="Architectural Scale Model" className="bg-gray-900">Architectural Scale Model</option>
+                        <option value="Real Estate Scale Model" className="bg-gray-900">Real Estate Scale Model</option>
+                        <option value="Miniature Model" className="bg-gray-900">Miniature Model</option>
+                        <option value="Township/Master Plan Model" className="bg-gray-900">Township / Master Plan Model</option>
+                        <option value="Concept/Competition Model" className="bg-gray-900">Concept / Competition Model</option>
                       </select>
                     </div>
                   </div>

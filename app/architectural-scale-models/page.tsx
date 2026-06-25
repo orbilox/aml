@@ -6,18 +6,18 @@ import ArchitecturalDesignModelClient from "./ArchitecturalDesignModelClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Architectural Design Model Maker for Architects | Concept & Presentation Models | Alliance Media Labs",
+  title: "Scale Model Making Company India | Architectural Scale Models & 3D Scale Model Maker | Alliance Media Labs",
   description:
-    "Alliance Media Labs makes concept, massing, and presentation models for architecture firms and design studios — competition entries, client presentations, and design-development models with precision CNC fabrication. Pan-India delivery.",
+    "Alliance Media Labs is a leading scale model making company in India, building architectural scale models, real estate scale models, and miniature models for developers nationwide. Our scale model makers and scale model builders deliver precision miniature model making, 3D scale model maker, and 3D model making service with LED lighting. Get a quote in 24 hours.",
   keywords:
-    "architectural design model maker, concept model making India, competition model maker for architects, design presentation scale model, architect model making services India, presentation model maker India, massing model India, design development model maker, architecture firm model making, conceptual scale model India",
+    "scale model making company, scale models, architectural scale models, scale model builders, miniature model, real estate scale model, scale model makers, miniature model making, scale model making, 3d scale model maker, 3d model making service, architectural scale models service in india",
   alternates: {
     canonical: `${BASE}/architectural-scale-models`,
   },
   openGraph: {
-    title: "Architectural Design Model Maker for Architects — Alliance Media Labs",
+    title: "Scale Model Making Company India | Architectural Scale Models — Alliance Media Labs",
     description:
-      "Concept, massing, and presentation models for architecture firms and design studios. Competition entries, client presentations, and design-development models built with precision.",
+      "A leading scale model making company in India — architectural scale models, real estate scale models, and miniature model making for developers nationwide. Expert scale model makers and scale model builders.",
     url: `${BASE}/architectural-scale-models`,
     siteName: "Alliance Media Labs",
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: `${BASE}/images/services/architectural-scale-models/2.jpg`,
         width: 1200,
         height: 630,
-        alt: "Architectural Design Model Maker for Architects — Alliance Media Labs",
+        alt: "Scale Model Making Company India — Alliance Media Labs",
       },
     ],
     type: "website",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Architectural Design Model Maker for Architects | Alliance Media Labs",
+    title: "Scale Model Making Company India | Alliance Media Labs",
     description:
-      "Concept, massing, and presentation models for architecture firms — competition entries, client presentations, design-development models.",
+      "Architectural scale models, real estate scale models, and miniature model making by India's trusted scale model makers and scale model builders.",
     images: [`${BASE}/images/services/architectural-scale-models/2.jpg`],
   },
   robots: { index: true, follow: true },
@@ -45,15 +45,15 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${BASE}/architectural-scale-models#service`,
-  name: "Architectural Design Model Maker for Architects",
+  name: "Scale Model Making Company India",
   description:
-    "Alliance Media Labs builds concept, massing, design-development, and presentation models for architecture firms and design studios across India — supporting competition entries, client pitches, and design review milestones with precision CNC fabrication.",
+    "Alliance Media Labs is a scale model making company delivering architectural scale models, real estate scale models, and miniature model making for developers, architects, and infrastructure projects across India. Our scale model makers and scale model builders provide 3D scale model maker and 3D model making service with precision CNC fabrication and LED integration.",
   provider: {
     "@type": "Organization",
     "@id": `${BASE}/#organization`,
     name: "Alliance Media Labs",
   },
-  serviceType: "Architectural Design & Presentation Model Making",
+  serviceType: "Scale Model Making",
   areaServed: [
     { "@type": "City", name: "Mumbai" },
     { "@type": "City", name: "Delhi" },
@@ -67,7 +67,7 @@ const serviceSchema = {
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "INR",
-      description: "Concept/massing models from ₹35,000; detailed presentation models from ₹1,50,000",
+      description: "Miniature models and concept models from ₹35,000; detailed architectural scale models from ₹1,50,000",
     },
   },
   image: `${BASE}/images/services/architectural-scale-models/2.jpg`,
@@ -82,7 +82,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Architectural Design Model Maker",
+      name: "Scale Model Making Company",
       item: `${BASE}/architectural-scale-models`,
     },
   ],
@@ -94,42 +94,50 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you make models for architecture firms, not just real estate developers?",
+      name: "What does a scale model making company do?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. While many of our clients are real estate developers, we work directly with architecture firms and design studios on concept models, massing studies, competition entries, and client presentation models — produced from your design drawings at any stage of the design process.",
+        text: "A scale model making company designs and fabricates miniature physical replicas of buildings, townships, and infrastructure projects. Alliance Media Labs, as a scale model making company, handles everything from digital modelling to CNC fabrication, LED integration, and hand-finishing — delivering architectural scale models and real estate scale models for sales offices, exhibitions, and design presentations.",
       },
     },
     {
       "@type": "Question",
-      name: "What is a concept or massing model and when is it needed?",
+      name: "What are architectural scale models used for?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A concept or massing model is a simplified physical study of a building's volumes, proportions, and site relationships — used early in design to test form and context before detailing begins. It is typically produced in monochrome or simple material blocks and turned around faster than a finished presentation model.",
+        text: "Architectural scale models are used to showcase building design, layout, and scale to buyers, investors, and design review panels. Real estate developers use architectural scale models at sales offices and launch events, while architects use them for design presentations and competition entries.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you produce a model for a design competition on a tight deadline?",
+      name: "Who are the best scale model makers and scale model builders in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Competition models often run on compressed timelines, and we offer rush production for concept and presentation models — typically 7–12 working days depending on scale and detail level, once drawings are finalised.",
+        text: "The best scale model makers and scale model builders combine in-house digital modelling, CNC and laser fabrication, and hand-finishing under one roof. Alliance Media Labs is a trusted scale model making company with 200+ projects delivered as scale model makers and scale model builders for developers across India.",
       },
     },
     {
       "@type": "Question",
-      name: "What scale ratios do you work in for design and presentation models?",
+      name: "What is the difference between miniature model making and a full-scale architectural scale model?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We work across the full range used in architectural practice — from 1:500 and 1:200 site/massing models to 1:100 and 1:50 detailed presentation models, and 1:20 material/facade study models. Scale is selected based on what the model needs to communicate.",
+        text: "Miniature model making typically refers to smaller-scale, detailed dioramas built at ratios like 1:500 or 1:1000, while architectural scale models for real estate are often larger, more detailed builds at 1:100 or 1:200 with LED lighting and landscaping. Both fall under our scale model making services.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you work directly with architects on revisions during the design process?",
+      name: "Do you offer 3D scale model maker and 3D model making service together?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Design models often go through iterations as a scheme develops. We support staged model production — an initial massing study followed by a refined presentation model once the design is locked — keeping cost proportional to each design stage.",
+        text: "Yes. Our 3D scale model maker workflow starts with a 3D model making service — converting your CAD or BIM drawings into a precise digital model — before any physical fabrication begins. This ensures dimensional accuracy in every real estate scale model and architectural scale model we build.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide architectural scale models service in India for all cities?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We deliver our architectural scale models service in India across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and other major cities, with on-site installation support included.",
       },
     },
   ],
