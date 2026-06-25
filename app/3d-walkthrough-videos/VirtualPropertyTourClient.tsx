@@ -34,23 +34,23 @@ const testimonials = [
 const remoteBuyerNeeds = [
   {
     icon: "ri-shield-check-line",
-    title: "Builds Trust Without a Site Visit",
-    desc: "A cinematic, accurate virtual tour answers the scale and quality questions that cause NRI and remote buyers to hesitate on high-ticket bookings.",
+    title: "Accurate 3D Architectural Walkthrough",
+    desc: "Every 3D architectural walkthrough we deliver is built from your real drawings — answering the scale and quality questions that drive remote-buyer hesitation.",
   },
   {
     icon: "ri-whatsapp-line",
-    title: "Optimised for WhatsApp & Video Calls",
-    desc: "Compressed, fast-loading files built specifically for sharing over WhatsApp and screen-sharing on live sales calls across time zones.",
+    title: "3D Walkthrough Video Optimised for Sharing",
+    desc: "Compressed, fast-loading 3D walkthrough video files built for WhatsApp sharing and screen-sharing on live sales calls across time zones.",
   },
   {
     icon: "ri-translate-2",
-    title: "Market-Specific Cuts Available",
-    desc: "Subtitle and messaging variants for Gulf, US, UK, Canada, and Australia NRI markets — tailored to how each diaspora segment evaluates a purchase.",
+    title: "3D Virtual House Tours for Every Market",
+    desc: "Subtitle and messaging variants for our 3D virtual house tours and 3D virtual tours real estate campaigns — tailored to overseas and domestic buyers alike.",
   },
   {
     icon: "ri-timer-flash-line",
-    title: "Fast Turnaround for Roadshows",
-    desc: "7-day rush production available for overseas property roadshows and time-sensitive digital campaigns targeting NRI investors.",
+    title: "Fast 3D Property Walkthrough Turnaround",
+    desc: "7-day rush production available for any 3D property walkthrough in India — built for time-sensitive launches and digital campaigns.",
   },
 ];
 
@@ -137,23 +137,23 @@ export default function VirtualPropertyTourClient() {
       {/* Hero */}
       <section className="relative bg-[#0a0a0a] text-white overflow-hidden min-h-[80vh] flex items-center">
         <div className="absolute inset-0">
-          <img src="/images/services/3d-walkthrough-videos/2.jpg" alt="Virtual property tour video for NRI buyers — Alliance Media Labs" className="w-full h-full object-cover opacity-30" />
+          <img src="/images/services/3d-walkthrough-videos/2.jpg" alt="3D architectural walkthrough services India — Alliance Media Labs" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-6">
               <span className="w-8 h-[2px] bg-[#e8b86d]" />
-              <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">For NRI & Remote Buyers</span>
+              <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">3D Architectural Walkthrough Services India</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Virtual Property Tour <span className="text-[#e8b86d]">Video India</span>
+              3D Architectural Walkthrough <span className="text-[#e8b86d]">Services</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4 max-w-2xl">
-              Shareable online 3D property tours that let NRI and remote buyers experience your project before they ever visit India — built for WhatsApp, video calls, and overseas marketing campaigns.
+              A complete Real Estate 3D walkthrough service in India — our 3D walkthrough services cover everything from a single 3D property walkthrough to full 3D virtual house tours and 3D virtual tours real estate campaigns.
             </p>
             <p className="text-base text-gray-400 mb-10 max-w-2xl">
-              Trusted by Etereo Realty and Aura World for NRI-led project launches. Delivery in as fast as 7 days.
+              From a quick 3D walkthrough video to a complete 3D property walkthrough in India, our architectural walkthrough team delivers in as fast as 7 days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="inline-flex items-center gap-2 bg-[#e8b86d] hover:bg-[#d4a55a] text-black font-bold px-8 py-4 rounded-lg transition-colors text-lg">
@@ -173,10 +173,10 @@ export default function VirtualPropertyTourClient() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">Built for Remote Buyers</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Why a Standard Walkthrough Isn&apos;t Enough for NRI Sales</h2>
+            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">3D Architectural Walkthrough Services</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">What Our 3D Walkthrough Services Cover</h2>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              NRI and remote buyers don&apos;t evaluate a project on a sales-office screen — they evaluate it on a phone, on a video call, across a time zone. The video needs to be built for that.
+              From a single 3D architectural walkthrough to a full 3D walkthrough real estate campaign — our architectural walkthrough services are built for both sales-office screens and remote video calls.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
@@ -198,7 +198,10 @@ export default function VirtualPropertyTourClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">Our Work</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Virtual Tours Shared With Remote Buyers</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">3D Property Walkthrough Portfolio</h2>
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+              Real 3D walkthrough video and 3D virtual real estate tours delivered as part of our 3D architectural walkthrough services for Indian developers.
+            </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {portfolioProjects.map((project) => (
@@ -237,7 +240,7 @@ export default function VirtualPropertyTourClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">Client Testimonials</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">What Developers Say About NRI Conversion</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">What Developers Say About Our 3D Virtual Real Estate Tours</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">
             {testimonials.map((t) => (
@@ -273,24 +276,24 @@ export default function VirtualPropertyTourClient() {
           <div className="space-y-5">
             {[
               {
-                q: "How is a virtual property tour video different from a regular 3D walkthrough?",
-                a: "It's produced and packaged specifically for remote viewing — optimised file sizes for WhatsApp sharing, subtitle options for overseas audiences, and a presentation style designed for a buyer who has never visited the site.",
+                q: "What are 3D architectural walkthrough services?",
+                a: "3D architectural walkthrough services produce a cinematic 3D walkthrough video that takes viewers through a building or property digitally — covering everything from a 3D property walkthrough of individual units to full 3D virtual house tours of a complete project, before construction is finished.",
               },
               {
-                q: "Can NRI buyers really make a booking decision from a virtual tour alone?",
-                a: "Yes, when combined with supporting content like drone footage and construction updates. A well-produced virtual tour addresses the scale and quality verification concerns that are the biggest source of remote-buyer hesitation.",
+                q: "What is the difference between a 3D property walkthrough and 3D virtual house tours?",
+                a: "A 3D property walkthrough is typically a pre-rendered cinematic 3D walkthrough video showing a fixed camera path through a property, while 3D virtual house tours can include interactive elements that let viewers navigate at their own pace. We offer both as part of our 3D walkthrough services.",
               },
               {
-                q: "How quickly can a virtual property tour video be produced?",
-                a: "Standard virtual tours take 10–18 working days. We also offer 7-day rush production for time-sensitive overseas campaigns or roadshows.",
+                q: "Do you provide a Real Estate 3D walkthrough service in India for all project types?",
+                a: "Yes. Our Real Estate 3D walkthrough service in India covers residential, commercial, and township projects — producing 3D walkthrough real estate content and 3D virtual tours real estate developers use for sales offices, digital marketing, and investor presentations.",
               },
               {
-                q: "Can the video be customised for different overseas markets?",
-                a: "Yes. We produce market-specific cuts with subtitles, currency-relevant messaging, and adjusted pacing for Gulf, US, UK, Canada, Australia, and Singapore NRI markets.",
+                q: "How quickly can you deliver a 3D property walkthrough in India?",
+                a: "Standard 3D architectural walkthrough projects take 10–18 working days. We also offer 7-day rush production for time-sensitive launches anywhere in India.",
               },
               {
-                q: "Do you provide this service across India?",
-                a: "Yes, we produce virtual property tour videos for developers pan-India, working remotely from your architectural drawings — Mumbai, Delhi NCR, Bangalore, Gurugram, Pune, Hyderabad, and other cities.",
+                q: "Can a 3D architectural walkthrough be produced from drawings alone?",
+                a: "Yes. We build every 3D walkthrough video directly from your AutoCAD, Revit, or SketchUp drawings, ensuring the architectural walkthrough is dimensionally accurate before any rendering begins.",
               },
             ].map((faq, idx) => (
               <FAQItem key={idx} question={faq.q} answer={faq.a} />
@@ -302,6 +305,9 @@ export default function VirtualPropertyTourClient() {
       {/* Related Services & Blogs */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-gray-500 max-w-2xl mx-auto mb-12">
+            Our 3D architectural walkthrough services pair well with VR tours and drone footage — explore the full visualization stack behind our 3D virtual real estate tours below.
+          </p>
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
@@ -360,9 +366,9 @@ export default function VirtualPropertyTourClient() {
           <div className="grid lg:grid-cols-2 gap-14 items-start">
             <div>
               <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">Get a Free Quote</span>
-              <h2 className="text-3xl sm:text-4xl font-bold mt-3 mb-6">Reach Your NRI & Remote Buyers Today</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mt-3 mb-6">Talk to Our 3D Architectural Walkthrough Team</h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Share your project drawings and target overseas markets — we&apos;ll send a detailed quote and production timeline within 24 hours.
+                Share your project drawings — we&apos;ll recommend the right 3D walkthrough services for your launch and send a detailed quote within 24 hours.
               </p>
               <div className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-xl">
                 <i className="ri-whatsapp-line text-green-400 text-2xl" />

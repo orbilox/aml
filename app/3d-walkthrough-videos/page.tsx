@@ -6,18 +6,18 @@ import VirtualPropertyTourClient from "./VirtualPropertyTourClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Virtual Property Tour Video India | Online 3D Property Tours for NRI Buyers | Alliance Media Labs",
+  title: "3D Architectural Walkthrough Services India | Real Estate 3D Walkthrough Service | Alliance Media Labs",
   description:
-    "Alliance Media Labs produces virtual property tour videos for NRI and remote real estate buyers — shareable online 3D tours that let overseas buyers experience a project without a site visit. Pan-India production, fast delivery.",
+    "Alliance Media Labs delivers 3D architectural walkthrough services for real estate developers across India. Get a cinematic 3D walkthrough video, 3D virtual house tours, and 3D property walkthrough in India — a trusted Real Estate 3D walkthrough service in India for 3D virtual tours real estate and 3D walkthrough real estate needs. Get a quote in 24 hours.",
   keywords:
-    "virtual property tour video India, online property tour video, property video for NRI buyers, pre-launch 3D walkthrough video India, animated property tour video, remote property viewing India, NRI virtual property tour, online 3D house tour India, virtual site visit real estate India, shareable property tour video",
+    "3d architectural walkthrough services, 3D walkthrough services, 3D walkthrough video, 3d virtual house tours, 3d property walkthrough, architectural walkthrough, 3d architectural walkthrough, 3d walkthrough real estate, 3d virtual tours real estate, 3d virtual real estate tours, Real Estate 3D walkthrough service in India, 3d property walkthrough in india",
   alternates: {
     canonical: `${BASE}/3d-walkthrough-videos`,
   },
   openGraph: {
-    title: "Virtual Property Tour Video India | Online 3D Property Tours for NRI Buyers — Alliance Media Labs",
+    title: "3D Architectural Walkthrough Services India | Alliance Media Labs",
     description:
-      "Shareable virtual property tour videos that let NRI and remote buyers experience a project online — without a site visit. Fast pan-India production.",
+      "Real Estate 3D walkthrough service in India — 3D walkthrough video, 3D virtual house tours, and 3D property walkthrough for developers nationwide.",
     url: `${BASE}/3d-walkthrough-videos`,
     siteName: "Alliance Media Labs",
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: `${BASE}/images/services/3d-walkthrough-videos/2.jpg`,
         width: 1200,
         height: 630,
-        alt: "Virtual Property Tour Video India — Alliance Media Labs",
+        alt: "3D Architectural Walkthrough Services India — Alliance Media Labs",
       },
     ],
     type: "website",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Virtual Property Tour Video India | Alliance Media Labs",
-    description: "Online 3D property tours built for NRI and remote buyers. Shareable, cinematic, fast turnaround.",
+    title: "3D Architectural Walkthrough Services India | Alliance Media Labs",
+    description: "3D walkthrough video, 3D virtual house tours, and 3D property walkthrough — Real Estate 3D walkthrough service in India.",
     images: [`${BASE}/images/services/3d-walkthrough-videos/2.jpg`],
   },
   robots: { index: true, follow: true },
@@ -44,15 +44,15 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${BASE}/3d-walkthrough-videos#service`,
-  name: "Virtual Property Tour Video for NRI & Remote Buyers",
+  name: "3D Architectural Walkthrough Services India",
   description:
-    "Alliance Media Labs produces virtual property tour videos designed for NRI and remote real estate buyers — shareable, cinematic 3D tours optimised for WhatsApp, video calls, and overseas digital marketing campaigns, eliminating the need for a physical site visit before booking.",
+    "Alliance Media Labs provides 3D architectural walkthrough services and a complete Real Estate 3D walkthrough service in India — producing 3D walkthrough video, 3D virtual house tours, and 3D property walkthrough content for developers, architects, and infrastructure projects nationwide.",
   provider: {
     "@type": "Organization",
     "@id": `${BASE}/#organization`,
     name: "Alliance Media Labs",
   },
-  serviceType: "Virtual Property Tour Video Production",
+  serviceType: "3D Architectural Walkthrough Services",
   areaServed: [
     { "@type": "City", name: "Mumbai" },
     { "@type": "City", name: "Delhi" },
@@ -66,7 +66,7 @@ const serviceSchema = {
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "INR",
-      description: "Virtual property tour videos from ₹60,000; NRI-targeted campaign packages from ₹1,50,000",
+      description: "3D walkthrough video and 3D property walkthrough packages from ₹60,000; full campaign packages from ₹1,50,000",
     },
   },
   image: `${BASE}/images/services/3d-walkthrough-videos/2.jpg`,
@@ -81,7 +81,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Virtual Property Tour Video",
+      name: "3D Architectural Walkthrough Services",
       item: `${BASE}/3d-walkthrough-videos`,
     },
   ],
@@ -93,42 +93,42 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How is a virtual property tour video different from a regular 3D walkthrough?",
+      name: "What are 3D architectural walkthrough services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A virtual property tour video is produced and packaged specifically for remote viewing — optimised file sizes for WhatsApp sharing, subtitle options for overseas audiences, and a presentation style designed to be watched on a video call with a buyer who has never visited the site, rather than only on a sales-office screen.",
+        text: "3D architectural walkthrough services produce a cinematic 3D walkthrough video that takes viewers through a building or property digitally — covering everything from a 3D property walkthrough of individual units to full 3D virtual house tours of a complete project, before construction is finished.",
       },
     },
     {
       "@type": "Question",
-      name: "Can NRI buyers really make a booking decision from a virtual tour alone?",
+      name: "What is the difference between a 3D property walkthrough and 3D virtual house tours?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, when the virtual tour is combined with supporting content like drone footage and construction updates. A well-produced virtual property tour addresses the scale and quality verification concerns that are the biggest source of remote-buyer hesitation.",
+        text: "A 3D property walkthrough is typically a pre-rendered cinematic 3D walkthrough video showing a fixed camera path through a property, while 3D virtual house tours can include interactive elements that let viewers navigate at their own pace. We offer both as part of our architectural walkthrough services.",
       },
     },
     {
       "@type": "Question",
-      name: "How quickly can a virtual property tour video be produced?",
+      name: "Do you provide a Real Estate 3D walkthrough service in India for all project types?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Standard virtual tours are typically produced in 10–18 working days. We also offer rush production in 7 days for time-sensitive overseas marketing campaigns or roadshows.",
+        text: "Yes. Our Real Estate 3D walkthrough service in India covers residential, commercial, and township projects — producing 3D walkthrough real estate content and 3D virtual tours real estate developers use for sales offices, digital marketing, and investor presentations.",
       },
     },
     {
       "@type": "Question",
-      name: "Can the video be customised for different overseas markets?",
+      name: "How quickly can you deliver a 3D property walkthrough in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We can produce market-specific cuts with subtitles, currency-relevant messaging, and adjusted pacing for different NRI markets — Gulf, US, UK, Canada, Australia, and Singapore are the most common.",
+        text: "Standard 3D architectural walkthrough projects take 10–18 working days. We also offer 7-day rush production for time-sensitive launches anywhere in India.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide this service across India?",
+      name: "Can a 3D architectural walkthrough be produced from drawings alone?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We produce virtual property tour videos for developers pan-India, working remotely from your architectural drawings — Mumbai, Delhi NCR, Bangalore, Gurugram, Pune, Hyderabad, and other cities.",
+        text: "Yes. We build every 3D walkthrough video directly from your AutoCAD, Revit, or SketchUp drawings, ensuring the architectural walkthrough is dimensionally accurate before any rendering begins.",
       },
     },
   ],
