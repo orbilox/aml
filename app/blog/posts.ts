@@ -26,6 +26,19 @@ export const blogPosts: BlogPost[] = [
     tags: ["NRI Real Estate", "Remote Property Buyers", "NRI Marketing India", "3D Walkthrough", "Virtual Property Tours"],
   },
   {
+    slug: "construction-delay-buyer-trust-india",
+    title: "Construction Delays Are Killing Buyer Trust: How Indian Developers Rebuild Confidence With Video Updates",
+    excerpt:
+      "Construction delays are the single biggest fear driving real estate buyer anxiety in India — and it's the silence between booking and possession, not the delay itself, that turns a hesitant buyer into a cancellation. Here's the exact video-update framework developers use to protect their sales pipeline.",
+    category: "Real Estate Marketing",
+    date: "June 13, 2026",
+    dateISO: "2026-06-13",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/portfolio/10.png",
+    tags: ["Construction Delay", "Buyer Trust", "Construction Update Video", "RERA Compliance", "Real Estate Developer"],
+  },
+  {
     slug: "architectural-scale-model-price-india-2026",
     title: "Architectural Scale Model Price in India 2026: Complete Cost Guide for Real Estate Developers",
     excerpt:

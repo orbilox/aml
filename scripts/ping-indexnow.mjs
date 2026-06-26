@@ -18,6 +18,7 @@ const ALL_URLS = [
   // Blog
   "/blog",
   "/blog/sell-property-to-nri-buyers-india",
+  "/blog/construction-delay-buyer-trust-india",
   "/blog/architectural-scale-model-price-india-2026",
   "/blog/best-architectural-scale-model-company-india",
   "/blog/real-estate-marketing-video-types-india",

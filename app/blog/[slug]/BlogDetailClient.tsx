@@ -46,6 +46,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <NRIRemoteBuyersArticle post={post} />;
   }
 
+  if (slug === "construction-delay-buyer-trust-india") {
+    return <ConstructionDelayTrustArticle post={post} />;
+  }
+
   return notFound();
 }
 
@@ -3782,6 +3786,10 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
               <Link href="/services/construction-update-videos" className="text-yellow-600 font-semibold hover:underline text-sm">
                 Explore our construction update video service →
               </Link>
+              <br />
+              <Link href="/blog/construction-delay-buyer-trust-india" className="text-yellow-600 font-semibold hover:underline text-sm mt-2 inline-block">
+                Read: how construction delays affect buyer trust →
+              </Link>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6">
@@ -3912,6 +3920,271 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
             </Link>
             <Link href="/services/virtual-reality-tours" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View VR Tour Service
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CONSTRUCTION DELAYS & BUYER TRUST — VIDEO UPDATE FRAMEWORK
+   ───────────────────────────────────────────────────────────── */
+function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative bg-black pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="/images/portfolio/10.png"
+            alt="Construction delay buyer trust India — Alliance Media Labs"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-gray-400 text-sm">{post.readTime}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <div className="flex items-center gap-4 text-sm text-gray-400">
+            <span>{post.author}</span>
+            <span>•</span>
+            <span>{post.date}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Body */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Intro */}
+        <section className="mb-12">
+          <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+            Every real estate developer in India eventually faces the same uncomfortable conversation: a construction milestone slips, the possession date moves, and a booked buyer wants to know why. After a decade of high-profile stalled projects — Amrapali, Jaypee, and dozens of smaller failures — Indian homebuyers carry a deep, well-founded fear of <strong>construction delay</strong>. That fear doesn&apos;t go away when they book with you. It just goes quiet.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Here is the part most developers miss: the delay itself is rarely what costs you the buyer. It&apos;s the silence afterward. A buyer who hears nothing for three months assumes the worst, starts asking on broker WhatsApp groups whether your project is "in trouble," and either demands a refund or quietly tells five other prospective buyers not to book with you.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            This guide covers why delays erode <strong>buyer trust</strong> faster than the delay itself justifies, the warning signs that you&apos;re losing a booked buyer, and the exact <strong>construction update video</strong> framework developers use to keep buyers confident and engaged through a long construction cycle — delayed or not.
+          </p>
+        </section>
+
+        {/* Section 1 — Why delays happen */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">Why Construction Delays Happen — And Why That Doesn&apos;t Matter to Your Buyer</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Labour shortages, material cost spikes, monsoon disruption, approval bottlenecks, and funding gaps are all common, often legitimate reasons a project slips behind schedule. Most developers can explain a delay with a perfectly reasonable operational story.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            But a buyer who has put down ₹20–40 lakhs as a booking amount doesn&apos;t experience your operational reality — they experience an unanswered question. The reason for the delay matters far less to buyer psychology than whether you communicated it proactively, and how often you keep communicating after.
+          </p>
+        </section>
+
+        {/* Section 2 — The real cost is silence */}
+        <section className="mb-12 bg-black rounded-2xl p-8 text-white">
+          <h2 className="text-2xl font-bold text-white mb-4">The Real Cost of a Delay Isn&apos;t the Delay — It&apos;s the Silence</h2>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            <strong className="text-white">Construction delay buyer trust</strong> collapses in a predictable pattern: a milestone is missed, the developer doesn&apos;t proactively communicate, the buyer starts calling the sales office for updates, gets vague answers, and starts assuming the worst. By the time a developer finally sends an update, the buyer relationship has already shifted from "patient" to "suspicious."
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            The fix isn&apos;t avoiding delays — on long construction cycles, some slippage is close to unavoidable. The fix is making proactive, visual communication a default part of your sales process from the day a unit is booked, not something you reach for only after a buyer complains.
+          </p>
+        </section>
+
+        {/* Section 3 — Warning signs */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">5 Warning Signs You&apos;re Losing a Booked Buyer&apos;s Trust</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { flag: "Site visit requests increase sharply", detail: "A buyer who suddenly wants to visit the site in person, after months of being satisfied with updates, is checking whether the project is real and on track." },
+              { flag: "Calls shift from sales to accounts/legal", detail: "When buyer queries start going to your accounts or legal team instead of sales, they're exploring refund or cancellation options." },
+              { flag: "Broker complaints about 'no updates'", detail: "Brokers hear buyer frustration before you do. If brokers start mentioning 'no updates' as an objection, buyer trust has already eroded with multiple bookings." },
+              { flag: "Negative mentions on property portals or social media", detail: "Anxious buyers vent publicly before they escalate privately. Monitor portal reviews and social comments for delay-related complaints." },
+              { flag: "Possession-date no-shows", detail: "A buyer who doesn't show up to inspect a unit near possession, after being highly engaged earlier, may already be planning to exit or renegotiate." },
+              { flag: "Rising refund or resale enquiries", detail: "An uptick in buyers asking about exiting via resale or refund is a lagging indicator that trust has been eroding for months." },
+            ].map((item) => (
+              <div key={item.flag} className="border border-red-200 bg-red-50 rounded-xl p-5">
+                <div className="flex items-start gap-2 mb-2">
+                  <i className="ri-alarm-warning-fill text-red-500 text-lg flex-shrink-0 mt-0.5"></i>
+                  <h3 className="font-bold text-black text-sm">{item.flag}</h3>
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 4 — The framework */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">The Construction Update Video Framework</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            A scheduled <strong>construction update video</strong> is the single most effective tool for maintaining buyer confidence through a long build cycle — delayed or on schedule. Here is the framework we recommend to every developer client:
+          </p>
+          <div className="space-y-6">
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">1. Fixed Monthly or Quarterly Cadence</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Commit to a cadence — monthly for active construction phases, quarterly at minimum — and stick to it regardless of whether progress that month was dramatic. Consistency, not drama, is what rebuilds <strong>construction delay buyer trust</strong>. An irregular schedule undermines the purpose more than a less frequent but reliable one.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">2. Aerial + Ground-Level Footage Together</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Drone footage shows overall site progress and scale; ground-level footage shows construction detail and quality. A <strong>construction progress video for buyers</strong> that includes both is far more convincing than either alone — it signals nothing is being hidden.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">3. Plan-vs-Actual Timeline Overlay</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Show the original construction timeline alongside actual progress on screen. If you&apos;re behind schedule, naming it directly — with a revised date — builds more trust than vague optimism. Buyers forgive a clearly communicated delay far more easily than a discovered one.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">4. Brief Narration From a Real Project Lead</h3>
+              <p className="text-gray-700 leading-relaxed">
+                A 30-second voiceover or on-camera update from your site or project head — not just a generic marketing voice — makes the update feel accountable rather than promotional. Buyers respond to a named person taking ownership of the timeline.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">5. Direct Distribution, Not Just a Website Upload</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Push the video directly to booked buyers via WhatsApp groups and email — don&apos;t make them go looking for it. A <strong>RERA construction progress video</strong> uploaded only to your website rarely gets watched; one sent directly to a buyer&apos;s phone almost always does.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 5 — Already delayed */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">What to Do When You&apos;re Already Delayed</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            If you&apos;re reading this because you&apos;re already behind schedule and buyers are getting anxious, the instinct to go quiet until you have better news is exactly backwards. Increase your update frequency during a crisis, not decrease it — switch to monthly or even bi-weekly updates until the project is visibly back on track.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Be explicit about the revised timeline, acknowledge the delay directly in the video rather than glossing over it, and where possible, offer a concrete gesture — a minor compensation, an upgraded fitting, or priority on a preferred unit — alongside the update. Buyers who feel informed and acknowledged rarely escalate to cancellation; buyers who feel ignored almost always do.
+          </p>
+        </section>
+
+        {/* Section 6 — Sample calendar */}
+        <section className="mb-12 bg-gray-50 rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-black mb-4">A Sample Buyer Communication Calendar</h2>
+          <ol className="space-y-3">
+            {[
+              { step: "Booking + 30 Days", detail: "Welcome video introducing the project team, current site status, and the update schedule the buyer can expect going forward." },
+              { step: "Monthly During Active Construction", detail: "Standard construction update video — aerial + ground footage, timeline overlay, brief narration." },
+              { step: "Any Missed Milestone", detail: "Immediate proactive update explaining the delay, the revised date, and the reason — sent within days, not at the next scheduled cycle." },
+              { step: "90 Days Before Possession", detail: "Increased cadence to fortnightly, plus a dedicated walkthrough video of a near-final unit if available." },
+              { step: "Possession", detail: "Final handover video and a direct invitation to schedule an inspection — closing the communication loop that began at booking." },
+            ].map(({ step, detail }, i) => (
+              <li key={step} className="flex gap-4">
+                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">{i + 1}</div>
+                <div>
+                  <span className="font-bold text-black">{step} — </span>
+                  <span className="text-gray-700">{detail}</span>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* FAQ */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "How often should we send a construction update video to buyers?",
+                a: "Monthly is ideal during active construction. Quarterly is the minimum acceptable cadence. If you fall behind schedule, increase frequency to fortnightly until the project is visibly back on track — consistency matters more than the news being positive.",
+              },
+              {
+                q: "Should we mention a delay directly in a construction update video, or avoid it?",
+                a: "Mention it directly, with a revised date. Buyers who discover a delay themselves — through silence, a site visit, or a broker — lose far more trust than buyers who hear it proactively from you, even when the news itself is identical.",
+              },
+              {
+                q: "What is the cost of a construction update video service in India?",
+                a: "A construction update video service typically costs ₹15,000–₹40,000 per update depending on drone usage, editing complexity, and narration, or can be packaged as a recurring quarterly/monthly retainer for the full construction period.",
+              },
+              {
+                q: "How do construction update videos help with RERA compliance?",
+                a: "While RERA has its own quarterly progress disclosure requirements, a well-produced construction update video complements your RERA filings by giving buyers an accessible, visual version of the same progress information — building trust beyond the bare regulatory minimum.",
+              },
+              {
+                q: "Can construction update videos help win back buyers who are considering a refund?",
+                a: "Yes, particularly when combined with direct communication and a concrete gesture of goodwill. A visual, honest update often reframes a buyer's perception from 'this project may be failing' to 'this developer is on top of the situation' — which is frequently enough to retain a wavering buyer.",
+              },
+              {
+                q: "Is Alliance Media Labs able to produce a recurring construction update video service?",
+                a: "Yes. We offer construction update video service India as a recurring engagement — scheduled drone and ground-level shoots, edited and delivered on a monthly or quarterly cadence, ready for direct distribution to your buyer base.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="border border-gray-200 rounded-xl p-5">
+                <h3 className="font-bold text-black mb-2 text-base">{q}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Related Posts */}
+        <div className="border-t border-gray-100 pt-10 mb-12">
+          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-5">
+            <Link href="/blog/sell-property-to-nri-buyers-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">NRI Guide</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">How to Sell Property to NRI Buyers Who Can&apos;t Visit India</h4>
+            </Link>
+            <Link href="/blog/real-estate-drone-photography-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Drone</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Real Estate Drone Photography in India: The Complete Guide</h4>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back */}
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Start Building Buyer Trust With Scheduled Updates
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Share your project timeline and buyer base — we&apos;ll set up a recurring construction update video schedule with a quote within 24 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              Request a Quote
+            </Link>
+            <Link href="/services/construction-update-videos" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View Construction Update Video Service
             </Link>
           </div>
         </div>
