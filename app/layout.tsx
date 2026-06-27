@@ -4,7 +4,8 @@ import "./globals.css";
 import WhatsAppFloat from "@/components/feature/WhatsAppFloat";
 
 export const metadata: Metadata = {
-  title: "Alliance Media Labs | Creative Tech & Branding Company for Real Estate",
+  title:
+    "Alliance Media Labs | Creative Tech & Branding Company for Real Estate",
   description:
     "Alliance Media Labs partners with real estate brands to design immersive visuals, digital ecosystems, and impactful brand experiences.",
   keywords:
@@ -15,10 +16,11 @@ export const metadata: Metadata = {
     apple: "/AML-FavIcon.png",
   },
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://alliancemedialabs.com"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://alliancemedialabs.com",
   ),
   openGraph: {
-    title: "Alliance Media Labs | Creative Tech & Branding Company for Real Estate",
+    title:
+      "Alliance Media Labs | Creative Tech & Branding Company for Real Estate",
     description:
       "Alliance Media Labs partners with real estate brands to design immersive visuals, digital ecosystems, and impactful brand experiences.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://alliancemedialabs.com",
@@ -35,7 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alliance Media Labs | Creative Tech & Branding Company for Real Estate",
+    title:
+      "Alliance Media Labs | Creative Tech & Branding Company for Real Estate",
     description:
       "Alliance Media Labs partners with real estate brands to design immersive visuals, digital ecosystems, and impactful brand experiences.",
     images: ["/images/services/3d-walkthrough-videos/1.jpg"],
@@ -92,6 +95,30 @@ export default function RootLayout({
             gtag('config', 'G-DBV5K3KE82');
           `}
         </Script>
+
+        {/* Meta Pixel */}
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1557599789491040');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1557599789491040&ev=PageView&noscript=1"
+          />
+        </noscript>
         {children}
         <WhatsAppFloat />
       </body>
