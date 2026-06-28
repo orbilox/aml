@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoutes = [
     "/blog",
+    "/blog/premium-real-estate-marketing-differentiation-india",
     "/blog/sell-property-to-nri-buyers-india",
     "/blog/construction-delay-buyer-trust-india",
     "/blog/architectural-scale-model-price-india-2026",

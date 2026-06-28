@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "premium-real-estate-marketing-differentiation-india",
+    title: "Why Your Premium Project Looks Like Every Other Listing Online",
+    excerpt:
+      "You spent crores on premium finishes, larger floor plates, and better amenities — then put up the same generic renders and stock-style photos as every budget project in your market. Here's why your premium positioning dies in the first three seconds of a scroll, and the exact fix.",
+    category: "Real Estate Marketing",
+    date: "June 28, 2026",
+    dateISO: "2026-06-28",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/home/3.jpg",
+    tags: ["Premium Real Estate Marketing", "Interior Cinematic Walkthrough", "Real Estate Branding", "Luxury Property Marketing", "Real Estate Developer"],
+  },
+  {
     slug: "sell-property-to-nri-buyers-india",
     title: "How to Sell Property to NRI Buyers Who Can't Visit India: The Remote Buyer Visualization Playbook",
     excerpt:

@@ -50,6 +50,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <ConstructionDelayTrustArticle post={post} />;
   }
 
+  if (slug === "premium-real-estate-marketing-differentiation-india") {
+    return <PremiumDifferentiationArticle post={post} />;
+  }
+
   return notFound();
 }
 
@@ -4185,6 +4189,253 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
             </Link>
             <Link href="/services/construction-update-videos" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Construction Update Video Service
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PREMIUM PROJECT DIFFERENTIATION — INTERIOR WALKTHROUGH + BRANDING
+   ───────────────────────────────────────────────────────────── */
+function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative bg-black pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="/images/home/3.jpg"
+            alt="Premium real estate marketing differentiation India — Alliance Media Labs"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-gray-400 text-sm">{post.readTime}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <div className="flex items-center gap-4 text-sm text-gray-400">
+            <span>{post.author}</span>
+            <span>•</span>
+            <span>{post.date}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Body */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Intro */}
+        <section className="mb-12">
+          <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+            You spent extra on larger floor plates, better fittings, and premium amenities. Your pricing reflects that. But scroll through your Instagram feed or your listing on a property portal, and it looks indistinguishable from a budget project three localities away — the same flat 3D renders, the same empty-room photography, the same generic logo treatment.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            This is the most expensive, least talked-about problem in <strong>premium real estate marketing</strong> in India: developers pay a premium to build a better product, then present it with the same visual language as everyone else. The buyer never gets far enough to learn about your superior specs, because nothing in the first three seconds of a scroll signalled that this project was different.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            This guide breaks down exactly where <strong>premium project differentiation</strong> is lost, the five visual signals that actually separate premium from generic in a buyer&apos;s mind, and how interior cinematic walkthroughs and proper branding work together to fix it.
+          </p>
+        </section>
+
+        {/* Section 1 — The 3-second scroll test */}
+        <section className="mb-12 bg-black rounded-2xl p-8 text-white">
+          <h2 className="text-2xl font-bold text-white mb-4">The 3-Second Scroll Test</h2>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            A buyer scrolling Instagram, a property portal, or a WhatsApp forward spends roughly three seconds deciding whether a project is worth a second look. In that window, they are not reading your specifications, your RERA carpet area, or your amenity list — they are reacting purely to the visual quality and feel of what is on screen.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            If your visuals look like every other listing — generic renders, flat lighting, no lifestyle context — your project fails the 3-second scroll test regardless of how good the actual product is. The buyer scrolls past before your premium positioning has a chance to register.
+          </p>
+        </section>
+
+        {/* Section 2 — 5 visual signals */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">5 Visual Signals That Separate Premium From Generic</h2>
+          <div className="space-y-6">
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">1. Cinematic Lighting and Mood, Not Flat Renders</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Generic 3D renders use flat, even lighting that shows the layout but nothing about how the space actually feels at golden hour or in the evening. Premium presentation uses deliberate lighting design — warm interior glow, natural light raking across a living room — the same way a luxury hotel photographs its suites.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">2. Lifestyle Staging, Not Empty Rooms</h3>
+              <p className="text-gray-700 leading-relaxed">
+                An empty room, however well-built, reads as generic inventory. Staged furniture, styled decor, and a sense of how someone would actually live in the space is what makes a buyer picture themselves there — and is consistently missing from budget-style real estate visuals.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">3. Cinematic Camera Movement, Not Static Shots</h3>
+              <p className="text-gray-700 leading-relaxed">
+                A static render or photo asks the buyer to imagine the space. A cinematic walkthrough with deliberate camera movement — a slow push through a doorway, a reveal of a view — does the imagining for them. Movement and pacing are themselves a signal of production quality and, by extension, project quality.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">4. Material and Detail Storytelling</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Premium finishes only register as premium when the camera lingers on them — a macro shot of a marble vein, a close-up of a brushed-brass handle, the texture of a wood panel. Wide shots alone hide the very details buyers are paying extra for.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">5. Consistent Brand Identity Across Every Touchpoint</h3>
+              <p className="text-gray-700 leading-relaxed">
+                A premium logo and typography system used inconsistently — a polished hoarding next to a poorly designed brochure next to a generic Instagram template — undercuts the very positioning the visuals are trying to build. Premium perception requires consistency, not just one great asset.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3 — Interior cinematic walkthrough */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">How Interior Cinematic Walkthroughs Solve the Differentiation Problem</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            An <strong>interior cinematic walkthrough</strong> is built specifically to deliver the first four signals above in one asset — lighting design, lifestyle staging, camera choreography, and material detail — sequenced as a single cinematic experience rather than a set of disconnected renders.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Unlike a standard walkthrough that simply moves a camera through a floor plan, an interior cinematic walkthrough is directed: it chooses what to reveal, in what order, and lingers exactly where the premium detail is. This is the single highest-leverage fix for a premium project that currently presents like a budget one online.{" "}
+            <Link href="/services/interior-cinematic-walkthrough" className="text-yellow-600 font-semibold hover:underline">
+              Explore our interior cinematic walkthrough service
+            </Link>
+            .
+          </p>
+        </section>
+
+        {/* Section 4 — Branding */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">Branding Is the Other Half of Premium Perception</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Even a perfect walkthrough underperforms if it sits next to a generic logo, an inconsistent typography system, or a brochure that looks like a template. A <strong>real estate branding agency</strong> brings the same discipline to your visual identity that a cinematic walkthrough brings to your interiors — consistent typography, a defined colour system, and presentation-grade collateral across hoardings, brochures, digital ads, and investor decks.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Developers who pair a strong interior walkthrough with disciplined branding see the two reinforce each other — the walkthrough creates desire, the branding makes that desire feel premium and trustworthy at every subsequent touchpoint.{" "}
+            <Link href="/services/graphics-branding" className="text-yellow-600 font-semibold hover:underline">
+              Explore our graphics and branding service
+            </Link>
+            .
+          </p>
+        </section>
+
+        {/* Section 5 — Audit checklist */}
+        <section className="mb-12 bg-gray-50 rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-black mb-4">A Quick Audit: 6 Questions for Your Current Premium Marketing</h2>
+          <ol className="space-y-3">
+            {[
+              { step: "Lighting Check", detail: "Do your renders and walkthroughs use deliberate, warm lighting — or flat, even daylight that shows layout but no mood?" },
+              { step: "Staging Check", detail: "Are your interior spaces shown furnished and styled, or empty and generic?" },
+              { step: "Movement Check", detail: "Does your walkthrough use directed camera movement, or does it feel like a static render in motion?" },
+              { step: "Detail Check", detail: "Does anything in your visuals show the actual material quality you're charging a premium for?" },
+              { step: "Brand Consistency Check", detail: "Would a buyer recognise your hoarding, brochure, and Instagram post as coming from the same project?" },
+              { step: "3-Second Check", detail: "Show your current visuals to someone unfamiliar with the project for 3 seconds — do they describe it as 'premium,' or just 'a flat'?" },
+            ].map(({ step, detail }, i) => (
+              <li key={step} className="flex gap-4">
+                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">{i + 1}</div>
+                <div>
+                  <span className="font-bold text-black">{step} — </span>
+                  <span className="text-gray-700">{detail}</span>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* FAQ */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "What makes a real estate visual feel premium rather than generic?",
+                a: "Five factors: deliberate lighting and mood, lifestyle staging instead of empty rooms, cinematic camera movement, close-up material storytelling, and consistent brand identity across every touchpoint. Most generic-feeling projects are missing at least three of these five.",
+              },
+              {
+                q: "Is an interior cinematic walkthrough worth it for a mid-size project, not just luxury towers?",
+                a: "Yes. Differentiation matters most where competition is highest, which is often the mid-size segment with many comparable projects in the same micro-market. A cinematic walkthrough is frequently the cheapest way to stand out when specs and pricing are similar across competitors.",
+              },
+              {
+                q: "How long does an interior cinematic walkthrough take to produce?",
+                a: "Typically 15–25 working days for a single unit type, depending on the level of staging, lighting detail, and number of interior sequences required.",
+              },
+              {
+                q: "Can branding and the interior walkthrough be commissioned together?",
+                a: "Yes, and we recommend it. Aligning the colour grading and visual language of your walkthrough with your brand identity guidelines from the start avoids a mismatched feel between your video assets and your print/digital collateral later.",
+              },
+              {
+                q: "We already have a logo and brochure — do we need a full rebrand?",
+                a: "Not necessarily. Many developers need consistency work rather than a full rebrand — applying existing brand elements correctly and consistently across hoardings, digital ads, and presentation decks often closes most of the premium perception gap without a ground-up redesign.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="border border-gray-200 rounded-xl p-5">
+                <h3 className="font-bold text-black mb-2 text-base">{q}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Related Posts */}
+        <div className="border-t border-gray-100 pt-10 mb-12">
+          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-5">
+            <Link href="/blog/3d-house-rendering-guide-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Rendering</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">3D House Rendering in India: The Complete Guide for Real Estate Developers (2026)</h4>
+            </Link>
+            <Link href="/blog/real-estate-marketing-video-types-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Marketing</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">7 Types of Real Estate Marketing Videos Every Indian Developer Should Use in 2026</h4>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back */}
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Make Your Premium Project Look Premium
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Share your project details — we&apos;ll recommend the right mix of interior cinematic walkthrough and branding work, with a quote within 24 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              Request a Quote
+            </Link>
+            <Link href="/services/interior-cinematic-walkthrough" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View Interior Walkthrough Service
+            </Link>
+            <Link href="/services/graphics-branding" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View Branding Service
             </Link>
           </div>
         </div>
