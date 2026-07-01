@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords:
     "real estate visualization, 3D walkthrough, VR tours, drone cinematography, architectural rendering, construction videos",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/AML.svg",
     shortcut: "/AML-FavIcon.png",
     apple: "/AML-FavIcon.png",
   },
