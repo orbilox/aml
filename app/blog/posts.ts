@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "scale-model-sales-gallery-real-estate-india",
+    title: "What a Scale Model Actually Does Inside a Real Estate Sales Gallery (And Why Empty Ones Lose Bookings)",
+    excerpt:
+      "You built a sales gallery to close deals — but if the centrepiece is a screen instead of a physical scale model, buyers walk the space, nod politely, and leave without booking. Here's what a scale model actually does inside an experience centre, and why the room feels empty without one.",
+    category: "Real Estate Marketing",
+    date: "July 5, 2026",
+    dateISO: "2026-07-05",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/architectural-scale-models/2.jpg",
+    tags: ["Scale Model Sales Gallery", "Experience Centre Design", "Property Sales Office", "Architectural Scale Model", "Real Estate Developer"],
+  },
+  {
     slug: "premium-real-estate-marketing-differentiation-india",
     title: "Why Your Premium Project Looks Like Every Other Listing Online",
     excerpt:

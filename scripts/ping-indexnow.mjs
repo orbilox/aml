@@ -17,6 +17,7 @@ const ALL_URLS = [
 
   // Blog
   "/blog",
+  "/blog/scale-model-sales-gallery-real-estate-india",
   "/blog/premium-real-estate-marketing-differentiation-india",
   "/blog/sell-property-to-nri-buyers-india",
   "/blog/construction-delay-buyer-trust-india",

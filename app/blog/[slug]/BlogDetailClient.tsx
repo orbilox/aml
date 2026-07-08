@@ -54,6 +54,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <PremiumDifferentiationArticle post={post} />;
   }
 
+  if (slug === "scale-model-sales-gallery-real-estate-india") {
+    return <ScaleModelSalesGalleryArticle post={post} />;
+  }
+
   return notFound();
 }
 
@@ -4436,6 +4440,236 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
             </Link>
             <Link href="/services/graphics-branding" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Branding Service
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SCALE MODEL IN THE SALES GALLERY — EXPERIENCE CENTRE ROI
+   ───────────────────────────────────────────────────────────── */
+function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative bg-black pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="/images/services/architectural-scale-models/2.jpg"
+            alt="Scale model in a real estate sales gallery — Alliance Media Labs"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-gray-400 text-sm">{post.readTime}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <div className="flex items-center gap-4 text-sm text-gray-400">
+            <span>{post.author}</span>
+            <span>•</span>
+            <span>{post.date}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Body */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Intro */}
+        <section className="mb-12">
+          <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+            A real estate sales gallery exists to do one job: turn a walk-in into a booking. You spend on the location, the interiors, the sample flat, the sales team — and then, increasingly, on a wall of screens playing a 3D walkthrough on loop. Yet a room full of screens rarely holds a buyer the way a physical <strong>scale model for sales gallery</strong> use does. Buyers glance at the video, nod, and drift toward the exit.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The reason isn&apos;t the quality of the video. It&apos;s that a screen asks a buyer to <em>watch</em>, while a scale model invites them to <em>lean in</em>. In an <strong>experience centre design</strong> built to close high-value bookings, that difference in body language is the difference between a lead and a booking.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            This guide breaks down what a scale model actually does inside a sales gallery, why an experience centre without one feels strangely empty, and how to think about a <strong>property sales office model</strong> as a conversion tool rather than a decorative centrepiece.
+          </p>
+        </section>
+
+        {/* Section 1 — What the model does */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">What a Scale Model Actually Does in the Room</h2>
+          <div className="space-y-6">
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">It Gives the Buyer a Reason to Stop Walking</h3>
+              <p className="text-gray-700 leading-relaxed">
+                A physical model is the one object in the sales gallery a buyer physically walks around. That circling motion buys your sales team the single most valuable thing in a pitch: time. A buyer standing still at a <strong>property sales office model</strong> for four minutes is a buyer being sold to; a buyer drifting past a screen is already leaving.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">It Answers &quot;Where Is My Flat?&quot; Instantly</h3>
+              <p className="text-gray-700 leading-relaxed">
+                The most common buyer question in any sales gallery is spatial — which tower, which side, what does my unit look out onto. A scale model answers it with a pointing finger in two seconds, where a brochure or screen needs a paragraph. This is why <strong>experience centre design</strong> that centres on a model consistently shortens the explanation phase of a pitch.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">It Makes Scale and Density Feel Honest</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Renders can flatter; a physical model reads as truthful. When a buyer can see the real spacing between towers, the actual size of the podium garden, and how the project sits in its plot, trust goes up. That perceived honesty is a large part of the <strong>scale model ROI real estate</strong> developers report — it removes a silent objection before it&apos;s spoken.
+              </p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-2">It Creates the Photo Buyers Take Home</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Buyers photograph a lit scale model far more than they photograph a screen. That photo travels home to the co-decision-maker who didn&apos;t visit — the spouse, the parent, the investing partner — carrying your project into the conversation where the real booking decision often gets made.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2 — Why empty galleries lose bookings */}
+        <section className="mb-12 bg-black rounded-2xl p-8 text-white">
+          <h2 className="text-2xl font-bold text-white mb-4">Why a Screen-Only Gallery Feels Empty</h2>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            An <strong className="text-white">experience centre design</strong> built only around screens and sample flats has no natural gathering point. Buyers don&apos;t know where to stand, the sales conversation has no anchor, and the room reads as a lobby rather than a showroom. The screen plays whether anyone watches or not, so it commands no attention.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            A scale model fixes the room&apos;s geography. It tells everyone — buyer, spouse, and salesperson — where to stand and what to look at. Remove it and the most expensive room in your marketing budget loses its focal point, which is exactly why galleries without a <strong className="text-white">property sales office model</strong> quietly underperform on walk-in-to-booking conversion.
+          </p>
+        </section>
+
+        {/* Section 3 — Making the model earn its cost */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">Making the Model Earn Its Place (Not Just Fill Space)</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            A scale model only delivers <strong>scale model ROI real estate</strong> when it&apos;s built and placed as a sales tool. Five things separate a model that converts from one that just occupies a table:
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { t: "Working LED lighting", d: "Lit units, amenity zones, and landscape make the model a live object buyers interact with, not a static block. Switchable lighting also lets a salesperson highlight exactly the tower or floor a buyer is considering." },
+              { t: "Central, walk-around placement", d: "The model belongs in the middle of the gallery with clear space on all sides — not against a wall. Buyers need to circle it. If they can only see one face, half its value is lost." },
+              { t: "Accurate context, not just towers", d: "Roads, neighbouring plots, and real surroundings make the model trustworthy. A tower floating on an empty base raises the very doubts the model is meant to remove." },
+              { t: "Unit-level legibility", d: "A buyer should be able to find a specific unit type on the model. This turns the model into a closing aid the sales team uses on every pitch, not just a first-impression prop." },
+              { t: "A protective, well-finished case", d: "A dusty or damaged model signals a careless developer. A clean acrylic case with good finishing protects both the model and the premium perception of the project." },
+              { t: "Paired with the digital walkthrough", d: "The model answers 'where and how big'; a 3D walkthrough answers 'what does it feel like inside'. Used together at the gallery, they cover the full buyer question set." },
+            ].map((item) => (
+              <div key={item.t} className="border border-gray-200 rounded-xl p-5">
+                <div className="flex items-start gap-2 mb-2">
+                  <i className="ri-checkbox-circle-fill text-yellow-500 text-lg flex-shrink-0 mt-0.5"></i>
+                  <h3 className="font-bold text-black text-sm">{item.t}</h3>
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed">{item.d}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 4 — Model + walkthrough together */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-4">The Model and the Screen Are Partners, Not Rivals</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The mistake isn&apos;t having screens in the gallery — it&apos;s letting a screen replace the model. The two do different jobs. The physical model owns the room&apos;s attention and answers spatial questions; the{" "}
+            <Link href="/services/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">
+              3D walkthrough video
+            </Link>{" "}
+            takes a buyer inside a unit once the model has earned their interest.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            The highest-converting sales galleries sequence the two deliberately: the salesperson opens at the model to establish the whole project, then walks the buyer to the screen or sample flat for the interior experience. Commissioning both from{" "}
+            <Link href="/services/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+              one architectural scale model partner
+            </Link>{" "}
+            keeps the massing, materials, and colour story consistent between the physical model and the video.
+          </p>
+        </section>
+
+        {/* FAQ */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "Is a physical scale model still worth it when we already have a 3D walkthrough?",
+                a: "Yes — they do different jobs. The walkthrough shows what a unit feels like inside; the scale model owns the room, answers 'where is my flat' instantly, and gives buyers a physical object to gather around. Galleries that use both consistently convert better than those relying on screens alone.",
+              },
+              {
+                q: "Where should the scale model go in a sales gallery?",
+                a: "Centrally, with clear walking space on all sides, ideally as the first thing a buyer reaches. A model pushed against a wall can only be viewed from one face and loses much of its value as a walk-around anchor for the sales conversation.",
+              },
+              {
+                q: "What size scale model works best for a sales office?",
+                a: "It depends on plot size and gallery space, but most residential sales galleries use 1:100 to 1:200 for a single project and 1:500 to 1:1000 for large townships. The right scale is the one that lets a buyer find their specific unit while still fitting comfortably as a central table.",
+              },
+              {
+                q: "How does a scale model improve booking conversion?",
+                a: "It increases dwell time (buyers circle it), answers spatial questions faster, makes scale feel honest, and produces a photo buyers carry home to co-decision-makers. Each of these removes friction in the walk-in-to-booking journey, which is where scale model ROI in real estate comes from.",
+              },
+              {
+                q: "Can you build a sales gallery model and a matching walkthrough together?",
+                a: "Yes. Alliance Media Labs produces both architectural scale models and 3D walkthrough videos in-house, so the massing, materials, and colour story stay consistent between the physical model on your gallery floor and the video on your screens.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="border border-gray-200 rounded-xl p-5">
+                <h3 className="font-bold text-black mb-2 text-base">{q}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Related Posts */}
+        <div className="border-t border-gray-100 pt-10 mb-12">
+          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-5">
+            <Link href="/blog/architectural-scale-models-india-real-estate" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Scale Models</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can&apos;t</h4>
+            </Link>
+            <Link href="/blog/architectural-scale-model-price-india-2026" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Pricing</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Architectural Scale Model Price in India 2026: Complete Cost Guide</h4>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back */}
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Give Your Sales Gallery a Centrepiece That Converts
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Share your project and gallery plans — we&apos;ll recommend the right scale model and walkthrough setup for your experience centre, with a quote within 24 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              Request a Quote
+            </Link>
+            <Link href="/services/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              View Scale Model Service
             </Link>
           </div>
         </div>
