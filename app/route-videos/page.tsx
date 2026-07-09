@@ -46,7 +46,7 @@ const serviceSchema = {
   "@id": `${BASE}/route-videos#service`,
   name: "Location Video & Real Estate Videography Services India",
   description:
-    "Alliance Media Labs is a real estate video company producing location videos, real estate videography, and property videography for developers across India — showcasing location advantage with drone footage, animated maps, and proximity callouts.",
+    "Alliance Media Labs is a real estate video company producing location videos, real estate videography, and property videography for developers across India — delivering real estate location av in India with drone footage, animated maps, and proximity callouts.",
   provider: {
     "@type": "Organization",
     "@id": `${BASE}/#organization`,

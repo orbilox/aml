@@ -238,6 +238,9 @@ export default function RouteVideosFlatClient() {
           <div className="text-center mb-14">
             <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">Video Types</span>
             <h2 className="text-3xl sm:text-4xl font-bold mt-3">6 Types of Location & Real Estate Videos We Produce</h2>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+              Every real estate location video we deliver is part of a broader real estate videos toolkit — combined with your walkthroughs and construction updates for a complete marketing package.
+            </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {videoTypes.map((mt) => (
@@ -345,6 +348,10 @@ export default function RouteVideosFlatClient() {
               {
                 q: "Can real estate connectivity videos be used for channel partner presentations?",
                 a: "Yes. Real estate connectivity videos are commonly used in channel partner presentations, pre-launch buyer decks, and digital ads.",
+              },
+              {
+                q: "Do you offer real estate location AV in India for cities beyond the metros?",
+                a: "Yes. Our real estate location av in India covers Tier 1 and Tier 2 cities alike — every real estate location video we produce is scoped to the actual connectivity landmarks relevant to that city, not a generic template.",
               },
             ].map((faq, idx) => (
               <FAQItem key={idx} question={faq.q} answer={faq.a} />

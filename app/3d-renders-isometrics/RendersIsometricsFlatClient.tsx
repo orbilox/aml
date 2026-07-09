@@ -16,8 +16,8 @@ interface Project {
 const renderTypes = [
   {
     icon: "ri-building-line",
-    title: "3D House Rendering",
-    desc: "Photorealistic exterior and interior 3D house rendering for individual units, sample flats, and full towers.",
+    title: "3D House Rendering & Architectural Visualization",
+    desc: "Photorealistic exterior and interior 3D house rendering paired with full 3D architectural visualization for individual units, sample flats, and full towers — delivered as part of our 3D architectural rendering services.",
   },
   {
     icon: "ri-layout-grid-line",
@@ -31,8 +31,8 @@ const renderTypes = [
   },
   {
     icon: "ri-shape-line",
-    title: "3D Isometric Views",
-    desc: "Isometric renders showing full-site layouts, unit distribution, and master plans in a single, easy-to-read visual.",
+    title: "3D Isometric Views & 3D Visualisation",
+    desc: "Isometric renders and 3D visualisation showing full-site layouts, unit distribution, and master plans in a single, easy-to-read visual.",
   },
   {
     icon: "ri-sofa-line",
@@ -228,7 +228,7 @@ export default function RendersIsometricsFlatClient() {
             <span className="text-yellow-500 text-sm font-semibold tracking-widest uppercase">Why Choose Our Architectural Rendering Company</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">3D Rendering Services Built for Real Estate</h2>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              As an architectural rendering company, we deliver 3D house rendering, 3D visualisation, and architectural rendering services under one roof.
+              As one of the architectural rendering companies developers return to project after project, we deliver 3D house rendering, architectural visualisation, and 3D architectural rendering services under one roof — with a dedicated 3D floor plan designer on every project.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -360,7 +360,11 @@ export default function RendersIsometricsFlatClient() {
               },
               {
                 q: "How do I choose between 3D rendering companies in India?",
-                a: "Look for an architectural rendering company with an in-house team, a real estate-specific portfolio, and a track record of accurate scale and lighting. Ask to see full-resolution 3D renders from a completed project first.",
+                a: "Look for one of the architectural rendering companies with an in-house team, a real estate-specific portfolio, and a track record of accurate scale and lighting. Ask to see full-resolution 3D renders from a completed project first.",
+              },
+              {
+                q: "Do you offer architectural visualization services in India for both residential and commercial projects?",
+                a: "Yes. Our architectural visualization services in India cover residential, commercial, and mixed-use developments — from 3D architectural visualization of a single unit to full 3D floor plan designer work across an entire master plan.",
               },
               {
                 q: "Can you produce 3D rendering of house plans before construction begins?",

@@ -32,8 +32,8 @@ const tourTypes = [
   },
   {
     icon: "ri-building-2-line",
-    title: "VR Real Estate Tours for Townships",
-    desc: "Large-format VR real estate tours covering entire townships and master-planned developments, letting buyers explore amenities and multiple unit types in one session.",
+    title: "3D Virtual Reality Tours for Townships",
+    desc: "Large-format 3D virtual reality tours covering entire townships and master-planned developments, letting buyers explore amenities and multiple unit types as 3d virtual real estate tours in one session.",
   },
   {
     icon: "ri-global-line",
@@ -394,6 +394,10 @@ export default function VirtualRealityToursFlatClient() {
               {
                 q: "Do you offer the best virtual reality tours for pre-launch marketing?",
                 a: "Yes. Interactive virtual reality tours are one of the highest-converting pre-launch assets for developers, letting NRI and out-of-city buyers explore a project remotely.",
+              },
+              {
+                q: "Can you produce 3D virtual reality tours for large, multi-tower developments?",
+                a: "Yes. Our 3D virtual reality tours scale from a single sample flat to full townships, and our 3D virtual real estate tours can include multiple unit types and amenity zones navigable from one shared link.",
               },
             ].map((faq, idx) => (
               <FAQItem key={idx} question={faq.q} answer={faq.a} />

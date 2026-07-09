@@ -16,8 +16,8 @@ interface Project {
 const deliverableTypes = [
   {
     icon: "ri-palette-line",
-    title: "Real Estate Graphics",
-    desc: "Complete real estate graphics for launches, sales offices, and digital campaigns — the foundation of our graphics for real estate offering.",
+    title: "Real Estate Graphics Design",
+    desc: "Complete real estate graphics design for launches, sales offices, and digital campaigns — the foundation of our graphics for real estate offering.",
   },
   {
     icon: "ri-book-open-line",
@@ -386,6 +386,10 @@ export default function GraphicsBrandingFlatClient() {
               {
                 q: "How do I choose the right brochure design company for a real estate project?",
                 a: "Look for a brochure design company with real estate-specific experience, a portfolio of commercial real estate graphics, and the ability to handle hoarding design service and digital assets under one visual system.",
+              },
+              {
+                q: "Does real estate graphics design cover both print and digital formats?",
+                a: "Yes. Our real estate graphics design work is delivered in both print-ready and digital-ready formats — the same visual system scales from a hoarding to a brochure to an Instagram ad.",
               },
             ].map((faq, idx) => (
               <FAQItem key={idx} question={faq.q} answer={faq.a} />

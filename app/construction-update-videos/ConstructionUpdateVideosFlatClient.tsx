@@ -22,8 +22,8 @@ const videoTypes = [
   },
   {
     icon: "ri-time-line",
-    title: "Construction Time Lapse",
-    desc: "Fixed-camera construction time lapse compressing weeks or months of progress into a compelling short video.",
+    title: "Construction Time Lapse Video",
+    desc: "A fixed-camera construction time lapse video compressing weeks or months of progress into a compelling short clip.",
   },
   {
     icon: "ri-flight-takeoff-line",
