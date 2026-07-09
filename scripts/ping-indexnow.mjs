@@ -1,8 +1,25 @@
 /**
- * IndexNow Auto-Ping Script
+ * IndexNow + Google Indexing API Auto-Ping Script
  * Runs automatically after every build (postbuild hook).
- * Submits all site URLs to IndexNow — picked up by Bing, Yandex, and other engines.
+ *
+ * 1. IndexNow — Bing, Yandex, Seznam, Naver. Always runs (no credentials needed).
+ * 2. Google Indexing API — same mechanism WordPress "Instant Indexing" plugins
+ *    (e.g. RankMath) use. OPT-IN: only runs when the env var
+ *    GOOGLE_INDEXING_KEY_JSON is set to the service-account JSON key
+ *    (or GOOGLE_INDEXING_KEY_FILE to a path of that file). Setup:
+ *      a. Google Cloud Console -> new project -> enable "Web Search Indexing API"
+ *      b. Create a Service Account -> create JSON key -> download it
+ *      c. Google Search Console -> Settings -> Users -> add the service
+ *         account's email as OWNER
+ *      d. Vercel -> Project Settings -> Environment Variables ->
+ *         GOOGLE_INDEXING_KEY_JSON = (paste full JSON file contents)
+ *    Note: Google officially scopes this API to job-posting/livestream pages;
+ *    regular pages submitted this way may not be prioritized. GSC "Request
+ *    Indexing" remains the highest-certainty manual lever.
  */
+
+import { createSign } from "node:crypto";
+import { readFileSync } from "node:fs";
 
 const KEY = "8f3e7a2b9d1c4e6f0a5b8c3d7e2f1a4b";
 const BASE = "https://alliancemedialabs.com";
@@ -106,4 +123,101 @@ async function pingIndexNow() {
   console.log("\n🏁 IndexNow ping complete.\n");
 }
 
-pingIndexNow();
+/* ── Google Indexing API (opt-in via env credentials) ─────────────── */
+
+function loadGoogleCredentials() {
+  const raw = process.env.GOOGLE_INDEXING_KEY_JSON
+    ? process.env.GOOGLE_INDEXING_KEY_JSON
+    : process.env.GOOGLE_INDEXING_KEY_FILE
+      ? readFileSync(process.env.GOOGLE_INDEXING_KEY_FILE, "utf-8")
+      : null;
+  if (!raw) return null;
+  const creds = JSON.parse(raw);
+  if (!creds.client_email || !creds.private_key) {
+    throw new Error("service-account JSON missing client_email/private_key");
+  }
+  return creds;
+}
+
+function base64url(input) {
+  return Buffer.from(input).toString("base64url");
+}
+
+async function getGoogleAccessToken(creds) {
+  const now = Math.floor(Date.now() / 1000);
+  const header = base64url(JSON.stringify({ alg: "RS256", typ: "JWT" }));
+  const claims = base64url(
+    JSON.stringify({
+      iss: creds.client_email,
+      scope: "https://www.googleapis.com/auth/indexing",
+      aud: "https://oauth2.googleapis.com/token",
+      iat: now,
+      exp: now + 3600,
+    }),
+  );
+  const signer = createSign("RSA-SHA256");
+  signer.update(`${header}.${claims}`);
+  const signature = signer.sign(creds.private_key, "base64url");
+  const jwt = `${header}.${claims}.${signature}`;
+
+  const res = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      assertion: jwt,
+    }),
+  });
+  if (!res.ok) throw new Error(`token exchange failed — ${res.status} ${await res.text()}`);
+  const data = await res.json();
+  return data.access_token;
+}
+
+async function pingGoogleIndexingApi() {
+  let creds;
+  try {
+    creds = loadGoogleCredentials();
+  } catch (err) {
+    console.log(`   ⚠️  Google Indexing API skipped (bad credentials: ${err.message})\n`);
+    return;
+  }
+  if (!creds) {
+    console.log(
+      "   ℹ️  Google Indexing API not configured — set GOOGLE_INDEXING_KEY_JSON to enable (see header of this script).\n",
+    );
+    return;
+  }
+
+  console.log(`🔔 Google Indexing API — submitting ${ALL_URLS.length} URLs...`);
+  try {
+    const token = await getGoogleAccessToken(creds);
+    let ok = 0;
+    let failed = 0;
+    for (const url of ALL_URLS) {
+      try {
+        const res = await fetch("https://indexing.googleapis.com/v3/urlNotifications:publish", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ url, type: "URL_UPDATED" }),
+        });
+        if (res.ok) {
+          ok++;
+        } else {
+          failed++;
+          if (failed <= 3) console.log(`   ⚠️  ${res.status} for ${url}`);
+        }
+      } catch {
+        failed++;
+      }
+    }
+    console.log(`   ✅ Google Indexing API — ${ok} accepted, ${failed} failed\n`);
+  } catch (err) {
+    console.log(`   ⚠️  Google Indexing API skipped (${err.message})\n`);
+  }
+}
+
+await pingIndexNow();
+await pingGoogleIndexingApi();
