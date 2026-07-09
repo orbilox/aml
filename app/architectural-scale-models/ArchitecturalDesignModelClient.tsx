@@ -680,7 +680,8 @@ export default function ArchitecturalDesignModelClient() {
                 {[
                   { href: "/services/architectural-scale-models", title: "Architectural Scale Models", desc: "Sales-office models for real estate launches and developer presentations.", icon: "ri-building-line" },
                   { href: "/services/scale-model-maker-india", title: "Scale Model Maker India", desc: "Pan-India scale model fabrication for developers and infrastructure projects.", icon: "ri-map-pin-line" },
-                  { href: "/services/3d-renders-isometrics", title: "3D Renders & Isometrics", desc: "Photorealistic renders and isometric views for design presentations.", icon: "ri-image-line" },
+                  { href: "/3d-renders-isometrics", title: "3D House Rendering", desc: "Photorealistic 3D renders and isometric views for design presentations.", icon: "ri-image-line" },
+                  { href: "/virtual-reality-tours", title: "Virtual Reality Tours", desc: "Interactive VR tours and 360 virtual photography.", icon: "ri-vr-glasses-line" },
                 ].map((s) => (
                   <Link key={s.href} href={s.href} className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group">
                     <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">

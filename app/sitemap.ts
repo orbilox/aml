@@ -10,6 +10,11 @@ const LASTMOD: Record<string, string> = {
   "/portfolio": "2026-06-20",
   "/architectural-scale-models": "2026-06-24",
   "/3d-walkthrough-videos": "2026-06-25",
+  "/virtual-reality-tours": "2026-07-09",
+  "/3d-renders-isometrics": "2026-07-09",
+  "/construction-update-videos": "2026-07-09",
+  "/route-videos": "2026-07-09",
+  "/graphics-branding": "2026-07-09",
   "/services/scale-model-maker-india": "2026-06-15",
   "/services/3d-walkthrough-videos": "2026-06-22",
   "/services/3d-walkthrough-video-company-india": "2026-06-22",
@@ -47,6 +52,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/portfolio", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/architectural-scale-models", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/3d-walkthrough-videos", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/virtual-reality-tours", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/3d-renders-isometrics", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/construction-update-videos", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/route-videos", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/graphics-branding", priority: 0.7, changeFrequency: "monthly" as const },
   ];
 
   const serviceRoutes = [

@@ -14,6 +14,11 @@ const ALL_URLS = [
   "/portfolio",
   "/architectural-scale-models",
   "/3d-walkthrough-videos",
+  "/virtual-reality-tours",
+  "/3d-renders-isometrics",
+  "/construction-update-videos",
+  "/route-videos",
+  "/graphics-branding",
 
   // Blog
   "/blog",

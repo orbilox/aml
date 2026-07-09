@@ -317,9 +317,9 @@ export default function VirtualPropertyTourClient() {
               <div className="grid gap-4">
                 {[
                   { href: "/services/3d-walkthrough-videos", title: "3D Walkthrough Video Service", desc: "Architectural walkthrough videos for property launches and investor presentations.", icon: "ri-video-line" },
-                  { href: "/services/3d-walkthrough-video-company-india", title: "3D Walkthrough Video Company", desc: "Full-service 3D walkthrough production for real estate developers.", icon: "ri-building-line" },
-                  { href: "/services/virtual-reality-tours", title: "Virtual Reality Tours", desc: "Immersive VR property experiences for high-ticket remote buyer conversion.", icon: "ri-vr-goggles-line" },
-                  { href: "/services/drone-shoots", title: "Drone Shoots", desc: "Aerial footage showing location and context for remote buyer confidence.", icon: "ri-flight-takeoff-line" },
+                  { href: "/virtual-reality-tours", title: "Virtual Reality Tours", desc: "Immersive VR property experiences for high-ticket remote buyer conversion.", icon: "ri-vr-glasses-line" },
+                  { href: "/3d-renders-isometrics", title: "3D House Rendering", desc: "Photorealistic 3D renders and isometric views for design presentations.", icon: "ri-image-2-line" },
+                  { href: "/route-videos", title: "Location Video", desc: "Aerial footage showing location and connectivity for remote buyer confidence.", icon: "ri-flight-takeoff-line" },
                 ].map((s) => (
                   <Link key={s.href} href={s.href} className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-[#e8b86d]/50 hover:bg-[#e8b86d]/5 transition-all group">
                     <div className="w-10 h-10 bg-[#e8b86d]/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#e8b86d]/20 transition-colors">
