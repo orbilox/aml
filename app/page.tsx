@@ -21,14 +21,15 @@ export const metadata: Metadata = {
     canonical: "https://alliancemedialabs.com",
   },
   openGraph: {
-    title: "Alliance Media Labs | #1 Real Estate Visualization Company in India",
+    title:
+      "Alliance Media Labs | #1 Real Estate Visualization Company in India",
     description:
       "India's leading real estate visualization company. 3D walkthrough videos, VR tours, architectural renders, drone shoots & digital marketing. 500+ projects delivered across Mumbai, Delhi NCR, Bangalore & Gurugram.",
     url: "https://alliancemedialabs.com",
     siteName: "Alliance Media Labs",
     images: [
       {
-        url: "https://alliancemedialabs.com/images/home/1.jpg",
+        url: "https://alliancemedialabs.com/images/home/main-banner.png",
         width: 1200,
         height: 630,
         alt: "Alliance Media Labs — Real Estate Visualization Company India",
@@ -39,7 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alliance Media Labs | #1 Real Estate Visualization Company in India",
+    title:
+      "Alliance Media Labs | #1 Real Estate Visualization Company in India",
     description:
       "India's leading real estate visualization company. 3D walkthrough videos, VR tours, architectural renders & drone shoots. 500+ projects delivered.",
     images: ["https://alliancemedialabs.com/images/home/1.jpg"],
@@ -47,7 +49,12 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -101,12 +108,33 @@ const structuredData = [
       "@type": "OfferCatalog",
       name: "Real Estate Visualization Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "3D Walkthrough Videos" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Virtual Reality Tours" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "3D Renders & Isometrics" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drone Shoots" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Architectural Scale Models" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Digital Marketing" } },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "3D Walkthrough Videos" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Virtual Reality Tours" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "3D Renders & Isometrics" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Drone Shoots" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Architectural Scale Models",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Digital Marketing" },
+        },
       ],
     },
     sameAs: [
