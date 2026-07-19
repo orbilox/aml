@@ -60,16 +60,26 @@ const walkthroughTypes = [
     tags: ["Master Plans", "Phase-wise", "Amenity Zones", "Landscaping"],
   },
   {
-    icon: "ri-sofa-line",
+    icon: "ri-door-line",
     title: "Interior Cinematic Walkthroughs",
     desc: "Ultra-detailed interior walkthroughs with custom furniture, material finishes, lighting moods, and architectural detailing — ideal for premium launches and interior brand storytelling.",
-    tags: ["Luxury Interiors", "Material Finishes", "Lighting Design", "Branded"],
+    tags: [
+      "Luxury Interiors",
+      "Material Finishes",
+      "Lighting Design",
+      "Branded",
+    ],
   },
   {
     icon: "ri-vip-diamond-line",
     title: "AI-Enhanced Premium Walkthroughs",
     desc: "Next-generation AI-powered walkthroughs with hyper-realistic textures, real-time atmosphere effects, and cinematic colour grading — for ultra-luxury and international-grade projects.",
-    tags: ["AI Rendering", "Hyper-Realistic", "Cinematic Grade", "Luxury Launches"],
+    tags: [
+      "AI Rendering",
+      "Hyper-Realistic",
+      "Cinematic Grade",
+      "Luxury Launches",
+    ],
   },
 ];
 
@@ -106,18 +116,14 @@ const productionProcess = [
   },
 ];
 
-const companyStats = [
-  { value: "200+", label: "Projects Delivered" },
-  { value: "7 Days", label: "Fastest Delivery" },
-  { value: "4K", label: "Render Resolution" },
-  { value: "Pan-India", label: "Coverage" },
-];
-
 const cityLinks = [
   { city: "Mumbai", href: "/city-services/3d-walkthrough-videos-mumbai" },
   { city: "Delhi NCR", href: "/city-services/3d-walkthrough-videos-delhi" },
   { city: "Bangalore", href: "/city-services/3d-walkthrough-videos-bangalore" },
-  { city: "Gurugram", href: "/city-services/real-estate-video-production-gurugram" },
+  {
+    city: "Gurugram",
+    href: "/city-services/real-estate-video-production-gurugram",
+  },
   { city: "Pune", href: "/contact" },
   { city: "Hyderabad", href: "/contact" },
   { city: "Chennai", href: "/contact" },
@@ -192,7 +198,9 @@ export default function WalkthroughVideoCompanyClient() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const portfolioProjects: Project[] = [
     {
@@ -286,7 +294,9 @@ export default function WalkthroughVideoCompanyClient() {
   ];
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -307,7 +317,14 @@ export default function WalkthroughVideoCompanyClient() {
       });
       if (res.ok) {
         setSubmitStatus("success");
-        setFormData({ name: "", email: "", phone: "", project_type: "", city: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          project_type: "",
+          city: "",
+          message: "",
+        });
       } else {
         setSubmitStatus("error");
       }
@@ -321,113 +338,65 @@ export default function WalkthroughVideoCompanyClient() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <WhatsAppFloat />
-
-      {/* Video Modal */}
-      {selectedProject && selectedProject.videoUrl && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-          onClick={() => setSelectedProject(null)}
-        >
-          <div
-            className="relative w-full max-w-4xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setSelectedProject(null)}
-              className="absolute top-3 right-3 z-10 w-9 h-9 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-colors"
-            >
-              <i className="ri-close-line text-lg" />
-            </button>
-            <iframe
-              src={selectedProject.videoUrl}
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title={selectedProject.title}
-            />
-          </div>
-        </div>
-      )}
 
       {/* ── HERO ── */}
-      <section className="relative bg-[#0a0a0a] text-white overflow-hidden min-h-[88vh] flex items-center">
-        <div className="absolute inset-0">
-          <img
-            src="/images/services/3d-walkthrough-videos/1.jpg"
-            alt="3D Walkthrough Video Company India — Alliance Media Labs"
-            className="w-full h-full object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-8 h-[2px] bg-[#e8b86d]" />
-              <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-                India&apos;s Premier 3D Walkthrough Company
-              </span>
+      <section className="py-24 h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('/images/services/3d-walkthrough-videos/2.jpg')`,
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8 mx-auto">
+              <i className="ri-video-line text-3xl text-black"></i>
             </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
               3D Walkthrough Video{" "}
-              <span className="text-[#e8b86d]">Company India</span>
+              <span className="text-yellow-400">Company India</span>
             </h1>
-
-            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4 max-w-2xl">
-              Photorealistic architectural walkthrough videos that sell projects before a brick is laid. From residential apartments to township master plans — we build buyer confidence with cinematic 3D storytelling.
+            <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
+              Photorealistic architectural walkthrough videos that sell projects
+              before a brick is laid. From residential apartments to township
+              master plans — we build buyer confidence with cinematic 3D
+              storytelling.
             </p>
-            <p className="text-base text-gray-400 mb-10 max-w-2xl">
-              Trusted by Etereo Realty, Aura World, SRMG, and 200+ Indian developers. Delivery in as fast as 7 working days.
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
+              Trusted by Etereo Realty, Aura World, SRMG, and 200+ Indian
+              developers. Delivery in as fast as 7 working days.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 bg-[#e8b86d] hover:bg-[#d4a55a] text-black font-bold px-8 py-4 rounded-lg transition-colors text-lg"
+                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
               >
-                <i className="ri-video-line" />
-                Get a Free Quote
+                Get Quote
               </a>
               <a
                 href="#portfolio"
-                className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white px-8 py-4 rounded-lg transition-colors text-lg"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap"
               >
-                <i className="ri-play-circle-line" />
-                Watch Our Work
+                View Portfolio
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── STATS BAR ── */}
-      <section className="bg-[#e8b86d] py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {companyStats.map((s) => (
-              <div key={s.label}>
-                <div className="text-3xl font-black text-black">{s.value}</div>
-                <div className="text-sm font-semibold text-black/70 mt-1">{s.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* ── WHY CHOOSE US ── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-              Why Developers Choose Us
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               India&apos;s Most Trusted 3D Walkthrough Company
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              We combine AI-powered rendering, architectural precision, and cinematic storytelling to produce walkthroughs that move buyers from interest to booking.
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              We combine AI-powered rendering, architectural precision, and
+              cinematic storytelling to produce walkthroughs that move buyers
+              from interest to booking.
             </p>
           </div>
 
@@ -466,13 +435,15 @@ export default function WalkthroughVideoCompanyClient() {
             ].map((f) => (
               <div
                 key={f.title}
-                className="bg-gray-50 rounded-xl p-7 border border-gray-100 hover:border-[#e8b86d]/50 hover:shadow-md transition-all group"
+                className="bg-gray-50 rounded-xl p-7 border border-gray-100 hover:border-yellow-400/50 hover:shadow-md transition-all group"
               >
-                <div className="w-12 h-12 bg-[#e8b86d]/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#e8b86d]/20 transition-colors">
-                  <i className={`${f.icon} text-2xl text-[#e8b86d]`} />
+                <div className="w-12 h-12 bg-yellow-400/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-yellow-400/20 transition-colors">
+                  <i className={`${f.icon} text-2xl text-yellow-400`} />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{f.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
+                <h3 className="text-lg font-bold text-black mb-2">{f.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {f.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -480,17 +451,17 @@ export default function WalkthroughVideoCompanyClient() {
       </section>
 
       {/* ── WALKTHROUGH TYPES ── */}
-      <section className="py-20 bg-[#0a0a0a] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-black text-white">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-              Our Specialisations
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold mt-3">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               5 Types of 3D Walkthrough Videos We Produce
             </h2>
-            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-              Every project type demands a different visual approach. We&apos;re India&apos;s only 3D walkthrough company with deep specialisation across all five.
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Every project type demands a different visual approach. We&apos;re
+              India&apos;s only 3D walkthrough company with deep specialisation
+              across all five.
             </p>
           </div>
 
@@ -498,15 +469,17 @@ export default function WalkthroughVideoCompanyClient() {
             {walkthroughTypes.map((wt, idx) => (
               <div
                 key={wt.title}
-                className={`rounded-xl p-7 border transition-all hover:border-[#e8b86d]/60 ${
+                className={`rounded-xl p-7 border transition-all hover:border-yellow-400/60 ${
                   idx === 4 ? "sm:col-span-2 lg:col-span-1" : ""
                 } bg-white/5 border-white/10`}
               >
-                <div className="w-11 h-11 bg-[#e8b86d]/10 rounded-lg flex items-center justify-center mb-5">
-                  <i className={`${wt.icon} text-xl text-[#e8b86d]`} />
+                <div className="w-11 h-11 bg-yellow-400/10 rounded-lg flex items-center justify-center mb-5">
+                  <i className={`${wt.icon} text-xl text-yellow-400`} />
                 </div>
                 <h3 className="text-lg font-bold mb-3">{wt.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">{wt.desc}</p>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  {wt.desc}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {wt.tags.map((tag) => (
                     <span
@@ -524,17 +497,17 @@ export default function WalkthroughVideoCompanyClient() {
       </section>
 
       {/* ── PORTFOLIO ── */}
-      <section id="portfolio" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="portfolio" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-              Our Work
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
-              3D Walkthrough Portfolio
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              3D Walkthrough Video Company Portfolio
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              From luxury gated communities to large-format commercial parks — explore how India&apos;s top developers use our walkthroughs to sell faster and smarter.
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              From luxury gated communities to large-format commercial parks —
+              explore how India&apos;s top developers use our walkthroughs to
+              sell faster and smarter.
             </p>
           </div>
 
@@ -554,7 +527,7 @@ export default function WalkthroughVideoCompanyClient() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   {project.videoUrl ? (
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="w-14 h-14 bg-[#e8b86d] rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
                         <i className="ri-play-fill text-2xl text-black ml-1" />
                       </div>
                     </div>
@@ -566,7 +539,7 @@ export default function WalkthroughVideoCompanyClient() {
                     </div>
                   )}
                   <div className="absolute top-3 left-3 flex gap-2">
-                    <span className="text-xs bg-[#e8b86d] text-black font-semibold px-2 py-1 rounded">
+                    <span className="text-xs bg-yellow-400 text-black font-semibold px-2 py-1 rounded">
                       {project.category}
                     </span>
                     <span className="text-xs bg-black/60 text-white px-2 py-1 rounded backdrop-blur-sm">
@@ -582,7 +555,9 @@ export default function WalkthroughVideoCompanyClient() {
                   )}
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold text-gray-900 text-sm mb-1">{project.title}</h3>
+                  <h3 className="font-bold text-black text-sm mb-1">
+                    {project.title}
+                  </h3>
                   <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">
                     {project.description}
                   </p>
@@ -594,7 +569,7 @@ export default function WalkthroughVideoCompanyClient() {
           <div className="text-center mt-12">
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-2 bg-[#e8b86d] hover:bg-[#d4a55a] text-black font-bold px-8 py-4 rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-lg transition-colors"
             >
               <i className="ri-gallery-line" />
               View Full Portfolio
@@ -604,17 +579,17 @@ export default function WalkthroughVideoCompanyClient() {
       </section>
 
       {/* ── PRODUCTION PROCESS ── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-              How We Work
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               Our 6-Step Production Process
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              A structured pipeline built for speed, accuracy, and zero surprises — designed for developer timelines and sales office deadlines.
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              A structured pipeline built for speed, accuracy, and zero
+              surprises — designed for developer timelines and sales office
+              deadlines.
             </p>
           </div>
 
@@ -622,110 +597,34 @@ export default function WalkthroughVideoCompanyClient() {
             {productionProcess.map((step) => (
               <div
                 key={step.step}
-                className="relative bg-gray-50 rounded-xl p-7 border border-gray-100 hover:border-[#e8b86d]/40 hover:shadow-md transition-all"
+                className="relative bg-gray-50 rounded-xl p-7 border border-gray-100 hover:border-yellow-400/40 hover:shadow-md transition-all"
               >
-                <div className="text-5xl font-black text-[#e8b86d]/20 absolute top-5 right-5">
+                <div className="text-5xl font-black text-yellow-400/20 absolute top-5 right-5">
                   {step.step}
                 </div>
-                <div className="w-9 h-9 bg-[#e8b86d] text-black rounded-lg flex items-center justify-center text-sm font-black mb-5">
+                <div className="w-9 h-9 bg-yellow-400 text-black rounded-lg flex items-center justify-center text-sm font-black mb-5">
                   {step.step}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PRICING ── */}
-      <section className="py-20 bg-[#0a0a0a] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-              Transparent Pricing
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold mt-3">
-              3D Walkthrough Video Pricing
-            </h2>
-            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-              No hidden costs. No vague quotes. Clear pricing tiers designed for the Indian real estate developer budget — from a single apartment to a full township.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-7 max-w-5xl mx-auto">
-            {pricingTiers.map((tier) => (
-              <div
-                key={tier.name}
-                className={`rounded-2xl p-8 border transition-all ${
-                  tier.highlight
-                    ? "bg-[#e8b86d] border-[#e8b86d] text-black"
-                    : "bg-white/5 border-white/10 text-white"
-                }`}
-              >
-                {tier.highlight && (
-                  <div className="text-xs font-black tracking-widest uppercase bg-black text-[#e8b86d] px-3 py-1 rounded-full inline-block mb-4">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className={`text-xl font-black mb-1 ${tier.highlight ? "text-black" : "text-white"}`}>
-                  {tier.name}
+                <h3 className="text-lg font-bold text-black mb-3">
+                  {step.title}
                 </h3>
-                <p className={`text-sm mb-5 ${tier.highlight ? "text-black/70" : "text-gray-400"}`}>
-                  {tier.subtitle}
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {step.desc}
                 </p>
-                <div className="mb-2">
-                  <span className={`text-3xl font-black ${tier.highlight ? "text-black" : "text-[#e8b86d]"}`}>
-                    {tier.price}
-                  </span>
-                  <span className={`text-sm ml-1 ${tier.highlight ? "text-black/60" : "text-gray-400"}`}>
-                    {tier.priceNote}
-                  </span>
-                </div>
-                <p className={`text-xs mb-6 ${tier.highlight ? "text-black/60" : "text-gray-500"}`}>
-                  Delivery: {tier.duration}
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm">
-                      <i className={`ri-check-line text-base flex-shrink-0 mt-0.5 ${tier.highlight ? "text-black" : "text-[#e8b86d]"}`} />
-                      <span className={tier.highlight ? "text-black/80" : "text-gray-300"}>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="#contact"
-                  className={`block text-center font-bold py-3 rounded-lg transition-colors ${
-                    tier.highlight
-                      ? "bg-black text-[#e8b86d] hover:bg-gray-900"
-                      : "bg-[#e8b86d] text-black hover:bg-[#d4a55a]"
-                  }`}
-                >
-                  {tier.cta}
-                </a>
               </div>
             ))}
           </div>
-
-          <p className="text-center text-gray-500 text-sm mt-8">
-            All prices are indicative. Final pricing depends on project scope, duration, and revision requirements.{" "}
-            <a href="#contact" className="text-[#e8b86d] hover:underline">
-              Contact us for a custom quote.
-            </a>
-          </p>
         </div>
       </section>
 
       {/* ── TESTIMONIALS ── */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-              Client Testimonials
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               What India&apos;s Top Developers Say
             </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-7">
@@ -736,18 +635,21 @@ export default function WalkthroughVideoCompanyClient() {
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <i key={i} className="ri-star-fill text-[#e8b86d] text-sm" />
+                    <i
+                      key={i}
+                      className="ri-star-fill text-yellow-400 text-sm"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm leading-relaxed mb-6 italic">
                   &ldquo;{t.content}&rdquo;
                 </p>
                 <div className="flex items-center gap-3 border-t border-gray-100 pt-5">
-                  <div className="w-10 h-10 bg-[#e8b86d]/10 rounded-full flex items-center justify-center">
-                    <i className="ri-user-line text-[#e8b86d]" />
+                  <div className="w-10 h-10 bg-yellow-400/10 rounded-full flex items-center justify-center">
+                    <i className="ri-user-line text-yellow-400" />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900 text-sm">{t.name}</div>
+                    <div className="font-bold text-black text-sm">{t.name}</div>
                     <div className="text-gray-500 text-xs">
                       {t.position}, {t.company}
                     </div>
@@ -761,14 +663,12 @@ export default function WalkthroughVideoCompanyClient() {
 
       {/* ── CITY COVERAGE ── */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-10">
-            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-              Pan-India Coverage
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               3D Walkthrough Company Serving All Major Indian Cities
             </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3">
@@ -776,9 +676,9 @@ export default function WalkthroughVideoCompanyClient() {
               <Link
                 key={c.city}
                 href={c.href}
-                className="inline-flex items-center gap-2 border border-gray-200 hover:border-[#e8b86d] hover:bg-[#e8b86d]/5 text-gray-700 hover:text-gray-900 px-5 py-2.5 rounded-full text-sm font-medium transition-all"
+                className="inline-flex items-center gap-2 border border-gray-200 hover:border-yellow-400 hover:bg-yellow-400/5 text-gray-700 hover:text-black px-5 py-2.5 rounded-full text-sm font-medium transition-all"
               >
-                <i className="ri-map-pin-line text-[#e8b86d] text-xs" />
+                <i className="ri-map-pin-line text-yellow-400 text-xs" />
                 {c.city}
               </Link>
             ))}
@@ -787,21 +687,20 @@ export default function WalkthroughVideoCompanyClient() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-              FAQ
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-500 mt-4">
-              Questions developers ask before choosing a 3D walkthrough video company in India.
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600">
+              Questions developers ask before choosing a 3D walkthrough video
+              company in India.
             </p>
           </div>
 
-          <div className="space-y-5">
+          <div className="max-w-3xl mx-auto space-y-4">
             {[
               {
                 q: "What makes Alliance Media Labs India's best 3D walkthrough video company?",
@@ -828,7 +727,13 @@ export default function WalkthroughVideoCompanyClient() {
                 a: "We deliver in MP4 (4K UHD master), web-optimised 1080p for digital platforms, compressed social cuts (9:16 for Instagram Reels / Stories and 1:1 for feed), and a full-resolution master for display screens at your sales office. All files are cloud-shared for instant access.",
               },
             ].map((faq, idx) => (
-              <FAQItem key={idx} question={faq.q} answer={faq.a} />
+              <div
+                key={idx}
+                className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow"
+              >
+                <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -836,12 +741,12 @@ export default function WalkthroughVideoCompanyClient() {
 
       {/* ── RELATED SERVICES & BLOGS ── */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Related Services */}
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <i className="ri-stack-line text-[#e8b86d]" />
+              <h3 className="text-xl font-bold text-black mb-6 flex items-center gap-2">
+                <i className="ri-stack-line text-yellow-400" />
                 Related Services
               </h3>
               <div className="grid gap-4">
@@ -856,7 +761,7 @@ export default function WalkthroughVideoCompanyClient() {
                     href: "/services/virtual-reality-tours",
                     title: "Virtual Reality Tours",
                     desc: "Immersive VR property experiences for sales offices and remote buyers.",
-                    icon: "ri-vr-goggles-line",
+                    icon: "ri-eye-line",
                   },
                   {
                     href: "/services/3d-renders-isometrics",
@@ -874,16 +779,18 @@ export default function WalkthroughVideoCompanyClient() {
                   <Link
                     key={s.href}
                     href={s.href}
-                    className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-[#e8b86d]/50 hover:bg-[#e8b86d]/5 transition-all group"
+                    className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group"
                   >
-                    <div className="w-10 h-10 bg-[#e8b86d]/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#e8b86d]/20 transition-colors">
-                      <i className={`${s.icon} text-[#e8b86d] text-lg`} />
+                    <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
+                      <i className={`${s.icon} text-yellow-400 text-lg`} />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900 text-sm group-hover:text-[#e8b86d] transition-colors">
+                      <div className="font-semibold text-black text-sm group-hover:text-yellow-400 transition-colors">
                         {s.title}
                       </div>
-                      <div className="text-gray-500 text-xs mt-0.5">{s.desc}</div>
+                      <div className="text-gray-500 text-xs mt-0.5">
+                        {s.desc}
+                      </div>
                     </div>
                   </Link>
                 ))}
@@ -892,8 +799,8 @@ export default function WalkthroughVideoCompanyClient() {
 
             {/* Related Blog Posts */}
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <i className="ri-article-line text-[#e8b86d]" />
+              <h3 className="text-xl font-bold text-black mb-6 flex items-center gap-2">
+                <i className="ri-article-line text-yellow-400" />
                 Related Articles
               </h3>
               <div className="grid gap-4">
@@ -926,17 +833,21 @@ export default function WalkthroughVideoCompanyClient() {
                   <Link
                     key={b.href}
                     href={b.href}
-                    className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-[#e8b86d]/50 hover:bg-[#e8b86d]/5 transition-all group"
+                    className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group"
                   >
-                    <div className="w-10 h-10 bg-[#e8b86d]/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#e8b86d]/20 transition-colors">
-                      <i className="ri-article-line text-[#e8b86d] text-lg" />
+                    <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
+                      <i className="ri-article-line text-yellow-400 text-lg" />
                     </div>
                     <div>
-                      <span className="text-xs text-[#e8b86d] font-semibold">{b.tag}</span>
-                      <div className="font-semibold text-gray-900 text-sm group-hover:text-[#e8b86d] transition-colors mt-0.5">
+                      <span className="text-xs text-yellow-400 font-semibold">
+                        {b.tag}
+                      </span>
+                      <div className="font-semibold text-black text-sm group-hover:text-yellow-400 transition-colors mt-0.5">
                         {b.title}
                       </div>
-                      <div className="text-gray-500 text-xs mt-0.5">{b.desc}</div>
+                      <div className="text-gray-500 text-xs mt-0.5">
+                        {b.desc}
+                      </div>
                     </div>
                   </Link>
                 ))}
@@ -947,73 +858,76 @@ export default function WalkthroughVideoCompanyClient() {
       </section>
 
       {/* ── CONTACT FORM ── */}
-      <section id="contact" className="py-20 bg-[#0a0a0a] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-14 items-start">
-            {/* Left: CTA Copy */}
-            <div>
-              <span className="text-[#e8b86d] text-sm font-semibold tracking-widest uppercase">
-                Get a Free Quote
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold mt-3 mb-6">
+      <section id="contact" className="py-24 bg-yellow-400">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
                 Start Your 3D Walkthrough Project Today
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Share your project drawings and we&apos;ll send a detailed quote within 24 hours — with production timeline, pricing breakdown, and sample references relevant to your project type.
+              <div className="w-20 h-1 bg-black mx-auto mb-8"></div>
+              <p className="text-lg text-black/80">
+                Share your project drawings and we&apos;ll send a detailed quote
+                within 24 hours — with production timeline, pricing breakdown,
+                and sample references relevant to your project type.
               </p>
-
-              <div className="space-y-5 mb-10">
-                {[
-                  { icon: "ri-time-line", title: "Quote in 24 Hours", desc: "Detailed scope, timeline, and pricing breakdown" },
-                  { icon: "ri-draft-line", title: "Drawing Review Included", desc: "We review your CAD/PDF files before quoting — no hidden scope gaps" },
-                  { icon: "ri-shield-check-line", title: "NDA on Request", desc: "Your project data and drawings are fully confidential" },
-                ].map((i) => (
-                  <div key={i.title} className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#e8b86d]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <i className={`${i.icon} text-[#e8b86d] text-lg`} />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">{i.title}</div>
-                      <div className="text-gray-400 text-sm">{i.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-xl">
-                <i className="ri-whatsapp-line text-green-400 text-2xl" />
-                <div>
-                  <div className="text-sm font-semibold">WhatsApp Us Directly</div>
-                  <a
-                    href="https://wa.me/919999999999"
-                    className="text-green-400 text-sm hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    +91 99999 99999
-                  </a>
-                </div>
-              </div>
             </div>
 
-            {/* Right: Form */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div className="grid sm:grid-cols-3 gap-6 mb-10">
+              {[
+                {
+                  icon: "ri-time-line",
+                  title: "Quote in 24 Hours",
+                  desc: "Detailed scope, timeline, and pricing breakdown",
+                },
+                {
+                  icon: "ri-draft-line",
+                  title: "Drawing Review Included",
+                  desc: "We review your CAD/PDF files before quoting",
+                },
+                {
+                  icon: "ri-shield-check-line",
+                  title: "NDA on Request",
+                  desc: "Your project data and drawings stay confidential",
+                },
+              ].map((i) => (
+                <div
+                  key={i.title}
+                  className="flex items-start gap-3 bg-white/40 rounded-xl p-4"
+                >
+                  <i
+                    className={`${i.icon} text-black text-xl flex-shrink-0 mt-0.5`}
+                  />
+                  <div>
+                    <div className="font-semibold text-black text-sm">
+                      {i.title}
+                    </div>
+                    <div className="text-black/70 text-xs">{i.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-2xl">
               {submitStatus === "success" ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="ri-check-line text-3xl text-green-400" />
+                  <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-3xl text-green-500" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Thank You!</h3>
-                  <p className="text-gray-400">
-                    We&apos;ve received your enquiry. Our team will get back to you within 24 hours with a detailed quote.
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    Thank You!
+                  </h3>
+                  <p className="text-gray-600">
+                    We&apos;ve received your enquiry. Our team will get back to
+                    you within 24 hours with a detailed quote.
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                        Name <span className="text-[#e8b86d]">*</span>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Name *
                       </label>
                       <input
                         type="text"
@@ -1022,12 +936,12 @@ export default function WalkthroughVideoCompanyClient() {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Your full name"
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#e8b86d] transition-colors text-sm"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                        Phone <span className="text-[#e8b86d]">*</span>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Phone *
                       </label>
                       <input
                         type="tel"
@@ -1036,14 +950,14 @@ export default function WalkthroughVideoCompanyClient() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+91 98765 43210"
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#e8b86d] transition-colors text-sm"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                      Email <span className="text-[#e8b86d]">*</span>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Email *
                     </label>
                     <input
                       type="email"
@@ -1052,55 +966,65 @@ export default function WalkthroughVideoCompanyClient() {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="you@company.com"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#e8b86d] transition-colors text-sm"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                     />
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         Walkthrough Type
                       </label>
                       <select
                         name="project_type"
                         value={formData.project_type}
                         onChange={handleInputChange}
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#e8b86d] transition-colors text-sm appearance-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                       >
-                        <option value="" className="bg-gray-900">Select type</option>
-                        <option value="Residential Walkthrough" className="bg-gray-900">Residential Walkthrough</option>
-                        <option value="Commercial Walkthrough" className="bg-gray-900">Commercial Walkthrough</option>
-                        <option value="Township Flythrough" className="bg-gray-900">Township Flythrough</option>
-                        <option value="Interior Cinematic" className="bg-gray-900">Interior Cinematic</option>
-                        <option value="AI-Enhanced Premium" className="bg-gray-900">AI-Enhanced Premium</option>
+                        <option value="">Select type</option>
+                        <option value="Residential Walkthrough">
+                          Residential Walkthrough
+                        </option>
+                        <option value="Commercial Walkthrough">
+                          Commercial Walkthrough
+                        </option>
+                        <option value="Township Flythrough">
+                          Township Flythrough
+                        </option>
+                        <option value="Interior Cinematic">
+                          Interior Cinematic
+                        </option>
+                        <option value="AI-Enhanced Premium">
+                          AI-Enhanced Premium
+                        </option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         City
                       </label>
                       <select
                         name="city"
                         value={formData.city}
                         onChange={handleInputChange}
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#e8b86d] transition-colors text-sm appearance-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                       >
-                        <option value="" className="bg-gray-900">Select city</option>
-                        <option value="Mumbai" className="bg-gray-900">Mumbai</option>
-                        <option value="Delhi NCR" className="bg-gray-900">Delhi NCR</option>
-                        <option value="Bangalore" className="bg-gray-900">Bangalore</option>
-                        <option value="Gurugram" className="bg-gray-900">Gurugram</option>
-                        <option value="Pune" className="bg-gray-900">Pune</option>
-                        <option value="Hyderabad" className="bg-gray-900">Hyderabad</option>
-                        <option value="Chennai" className="bg-gray-900">Chennai</option>
-                        <option value="Ahmedabad" className="bg-gray-900">Ahmedabad</option>
-                        <option value="Other" className="bg-gray-900">Other City</option>
+                        <option value="">Select city</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi NCR">Delhi NCR</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Gurugram">Gurugram</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Other">Other City</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1.5">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Project Details
                     </label>
                     <textarea
@@ -1109,20 +1033,21 @@ export default function WalkthroughVideoCompanyClient() {
                       value={formData.message}
                       onChange={handleInputChange}
                       placeholder="Tell us about your project — project name, location, scale, timeline, and any specific requirements..."
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#e8b86d] transition-colors text-sm resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
                     />
                   </div>
 
                   {submitStatus === "error" && (
-                    <p className="text-red-400 text-sm">
-                      Something went wrong. Please try again or WhatsApp us directly.
+                    <p className="text-red-600 text-sm">
+                      Something went wrong. Please try again or WhatsApp us
+                      directly.
                     </p>
                   )}
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-[#e8b86d] hover:bg-[#d4a55a] disabled:opacity-60 text-black font-bold py-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    className="w-full bg-yellow-400 text-black py-4 rounded-lg font-semibold hover:bg-yellow-300 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
@@ -1137,7 +1062,17 @@ export default function WalkthroughVideoCompanyClient() {
                     )}
                   </button>
                   <p className="text-center text-gray-500 text-xs">
-                    We respond within 24 hours. Your information is confidential.
+                    We respond within 24 hours. Your information is
+                    confidential. Or{" "}
+                    <a
+                      href="https://wa.me/919999999999"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-600 font-medium hover:underline"
+                    >
+                      WhatsApp us directly
+                    </a>
+                    .
                   </p>
                 </form>
               )}
@@ -1147,28 +1082,32 @@ export default function WalkthroughVideoCompanyClient() {
       </section>
 
       <Footer />
-    </div>
-  );
-}
+      <WhatsAppFloat />
 
-function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors"
-      >
-        <span className="font-semibold text-gray-900 text-sm pr-4">{question}</span>
-        <i
-          className={`ri-arrow-down-s-line text-xl text-[#e8b86d] flex-shrink-0 transition-transform duration-200 ${
-            open ? "rotate-180" : ""
-          }`}
-        />
-      </button>
-      {open && (
-        <div className="px-5 pb-5 bg-white border-t border-gray-100">
-          <p className="text-gray-600 text-sm leading-relaxed pt-4">{answer}</p>
+      {/* Video Modal */}
+      {selectedProject && selectedProject.videoUrl && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div
+            className="relative w-full max-w-4xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-3 right-3 z-10 w-9 h-9 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-colors"
+            >
+              <i className="ri-close-line text-lg" />
+            </button>
+            <iframe
+              src={selectedProject.videoUrl}
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title={selectedProject.title}
+            />
+          </div>
         </div>
       )}
     </div>
