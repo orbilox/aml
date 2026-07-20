@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "real-estate-buyer-psychology-first-3-seconds",
+    title: "Real Estate Buyer Psychology: Why Most Developers Lose Deals in the First 3 Seconds (And How to Win Them Back)",
+    excerpt:
+      "Discover why real estate buyers make decisions in the first 3 seconds — and the exact psychology framework top developers use to build trust immediately. Learn the real estate buyer psychology patterns that determine whether a buyer stays or leaves your sales gallery.",
+    category: "Real Estate Marketing",
+    date: "July 20, 2026",
+    dateISO: "2026-07-20",
+    readTime: "12 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/home/main-banner.png",
+    tags: ["Real Estate Buyer Psychology", "Buyer Decision Making", "Sales Psychology", "Real Estate Marketing Strategy", "Developer Marketing", "Real Estate Conversion"],
+  },
+  {
     slug: "scale-model-sales-gallery-real-estate-india",
     title: "What a Scale Model Actually Does Inside a Real Estate Sales Gallery (And Why Empty Ones Lose Bookings)",
     excerpt:

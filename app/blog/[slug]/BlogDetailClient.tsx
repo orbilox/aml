@@ -58,6 +58,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
     return <ScaleModelSalesGalleryArticle post={post} />;
   }
 
+  if (slug === "real-estate-buyer-psychology-first-3-seconds") {
+    return <BuyerPsychologyArticle post={post} />;
+  }
+
   return notFound();
 }
 
@@ -4670,6 +4674,259 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
             </Link>
             <Link href="/services/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Scale Model Service
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   REAL ESTATE BUYER PSYCHOLOGY — FIRST 3 SECONDS
+   ───────────────────────────────────────────────────────────── */
+function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+  if (!post) return null;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative bg-black pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src={post.thumbnail}
+            alt={post.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-gray-400 text-sm">{post.readTime}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <div className="flex items-center gap-4 text-sm text-gray-400">
+            <span>{post.author}</span>
+            <span>•</span>
+            <span>{post.date}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Body */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {post.tags.map((tag) => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Article Content */}
+        <article className="space-y-8 text-gray-700">
+          <p className="text-lg leading-relaxed">
+            You built a stunning project. The location is perfect. The amenities are premium. The pricing is competitive. Then a buyer walks into your sales gallery, glances around for 3 seconds, and never comes back.
+          </p>
+
+          <p className="text-lg leading-relaxed">
+            This isn't because your project is bad. It's because you didn't understand <strong>real estate buyer psychology</strong> — and most Indian developers don't.
+          </p>
+
+          <p className="text-lg leading-relaxed">
+            Real estate purchase decisions happen in layers. The first layer — the one that determines whether a buyer stays or leaves — takes approximately 3 seconds. Not 3 minutes. Not the site visit. Not the brochure. Three seconds.
+          </p>
+
+          <div className="my-8 p-6 bg-yellow-50 border-l-4 border-yellow-400 rounded">
+            <p className="text-base font-semibold text-black">Key Insight:</p>
+            <p className="text-gray-700">After those first 3 seconds, the buyer's brain has already made an emotional decision. Everything after that is just confirmation bias.</p>
+          </div>
+
+          <h2 className="text-2xl font-bold text-black mt-10 mb-6">The Science: How Buyers Actually Make Real Estate Decisions</h2>
+
+          <p className="leading-relaxed">
+            Real estate buyer psychology isn't random. It's predictable. And it's rooted in how the human brain processes information under uncertainty.
+          </p>
+
+          <p className="leading-relaxed">
+            When a buyer enters your sales gallery, their brain immediately scans for trust assessment, scale comprehension, emotional resonance, and confidence level. All before conscious thought kicks in.
+          </p>
+
+          <p className="leading-relaxed italic text-gray-600">
+            The buyer hasn't read marketing copy. They've made an emotional judgment. This is real estate buyer psychology in action.
+          </p>
+
+          <h2 className="text-2xl font-bold text-black mt-10 mb-6">Why Developers Lose Deals: The Five Critical Mistakes</h2>
+
+          <div className="space-y-8">
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-3">Mistake 1: Treating Your Sales Gallery Like a Desk</h3>
+              <p className="leading-relaxed">
+                Top developers use <strong>architectural scale models</strong>. Buyers physically engage. They understand project relationships instantly. Trust builds faster than any spreadsheet.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-3">Mistake 2: Showing, Not Demonstrating</h3>
+              <p className="leading-relaxed">
+                A render is static. A <strong>3D architectural walkthrough</strong> is dynamic. Decision confidence jumps. Developers report 40% faster buyer decisions with professional walkthroughs.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-3">Mistake 3: Showing Projects in Isolation</h3>
+              <p className="leading-relaxed">
+                <strong>Location videos</strong> and <strong>route videos</strong> answer the trust question first. Buyers who see context make faster decisions. Location is a core trust-builder.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-3">Mistake 4: Generic Graphics</h3>
+              <p className="leading-relaxed">
+                Professional <strong>real estate graphics</strong> and <strong>branding</strong> signal credibility. Differentiated branding makes your project stand out immediately.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-yellow-400 pl-6">
+              <h3 className="text-lg font-bold text-black mb-3">Mistake 5: Many Mediocre Tools vs. Few Excellent Ones</h3>
+              <p className="leading-relaxed">
+                Depth beats breadth. One excellent 3D walkthrough serves better than five mediocre visualizations. Choose your one core tool and execute it exceptionally.
+              </p>
+            </div>
+          </div>
+
+          <h2 className="text-2xl font-bold text-black mt-10 mb-6">The 4-Layer Real Estate Buyer Psychology Framework</h2>
+
+          <div className="space-y-4 my-8">
+            <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
+              <p className="font-bold text-black mb-2">Layer 1 — Trust (0-3 seconds)</p>
+              <p className="text-gray-700 text-sm">Professional execution, clarity, credibility. One weak signal loses everything.</p>
+            </div>
+            <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
+              <p className="font-bold text-black mb-2">Layer 2 — Comprehension (3-30 seconds)</p>
+              <p className="text-gray-700 text-sm">Scale models, 3D floor plans, renders. Buyers mentally move through the space.</p>
+            </div>
+            <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
+              <p className="font-bold text-black mb-2">Layer 3 — Emotional Connection (30 sec - 5 min)</p>
+              <p className="text-gray-700 text-sm">Construction videos, location videos, VR tours, walkthroughs. Buyers imagine themselves living there.</p>
+            </div>
+            <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
+              <p className="font-bold text-black mb-2">Layer 4 — Confidence (5+ minutes)</p>
+              <p className="text-gray-700 text-sm">Transparency, branding consistency, professional communication. Trust reinforces or erodes.</p>
+            </div>
+          </div>
+
+          <h2 className="text-2xl font-bold text-black mt-10 mb-6">The Bottom Line</h2>
+
+          <p className="leading-relaxed font-semibold text-black mb-4">
+            Your strategy must answer: <em>How do I build buyer confidence in the first 3 seconds, and deepen it after?</em>
+          </p>
+
+          <p className="leading-relaxed">
+            The emotional brain decides first. The rational brain confirms second. Win the emotional layer first. Everything after is reinforcement.
+          </p>
+        </article>
+
+        {/* FAQ */}
+        <section id="faq" className="mt-16 mb-14">
+          <h2 className="text-3xl font-bold text-black mb-8">Frequently Asked Questions</h2>
+
+          <div className="space-y-6">
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">What is real estate buyer psychology?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                How buyers make property decisions — their emotional triggers, trust patterns, and decision timelines. Research shows gut-level decisions happen in the first 3 seconds; everything after is confirmation bias.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">How does a scale model improve real estate buyer psychology?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Instant tactile comprehension of scale and density. Builds trust faster than digital. Physical presence extends buyer engagement time — the single most valuable metric in closing.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">How important is professional branding?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Professional graphics communicate expertise before the floor plan. Generic design signals mediocrity; premium design signals confidence. Directly affects buyer trust and decision speed.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">What's the ROI of construction update videos?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Addresses mid-phase anxiety. Developers report 50% higher buyer confidence, faster recovery after delays, fewer cancellations. ROI measured in retained bookings and referrals.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-black mb-3">3D walkthroughs or location videos first?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Lead with location for trust-building. Follow with 3D walkthroughs for comprehension and emotion. Together they address the psychology of property buying in sequence.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Posts */}
+        <div className="border-t border-gray-100 pt-12 mb-12">
+          <h3 className="text-xl font-bold text-black mb-6">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/scale-model-sales-gallery-real-estate-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Sales Gallery</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">What a Scale Model Actually Does Inside a Real Estate Sales Gallery</h4>
+            </Link>
+            <Link href="/blog/premium-real-estate-marketing-differentiation-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Premium Marketing</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">Why Your Premium Project Looks Like Every Other Listing Online</h4>
+            </Link>
+            <Link href="/blog/real-estate-marketing-video-types-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Video Strategy</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">7 Types of Real Estate Marketing Videos Every Indian Developer Should Use in 2026</h4>
+            </Link>
+            <Link href="/blog/construction-delay-buyer-trust-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Buyer Confidence</p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">Construction Delays Are Killing Buyer Trust: How Indian Developers Rebuild Confidence With Video Updates</h4>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back */}
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </div>
+
+      {/* CTA */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Win Buyers in the First 3 Seconds?
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            The visualization tools you choose — scale models, 3D walkthroughs, location videos, graphics — are your core framework for winning buyer confidence. Let's discuss your strategy.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+              Get a Free Consultation
+            </Link>
+            <Link href="/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              Scale Model Service
+            </Link>
+            <Link href="/3d-walkthrough-videos" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+              3D Walkthroughs
             </Link>
           </div>
         </div>
