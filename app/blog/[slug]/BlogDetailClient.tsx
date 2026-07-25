@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getPostBySlug } from "../posts";
+import PortfolioInventoryArticle from "@/app/blog/articles/PortfolioInventoryArticle";
 
 export default function BlogDetailClient({ slug }: { slug: string }) {
   const post = getPostBySlug(slug);
@@ -60,6 +61,10 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
 
   if (slug === "real-estate-buyer-psychology-first-3-seconds") {
     return <BuyerPsychologyArticle post={post} />;
+  }
+
+  if (slug === "portfolio-inventory-faster-sales-india") {
+    return <PortfolioInventoryArticle />;
   }
 
   return notFound();

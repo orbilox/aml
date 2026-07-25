@@ -39,6 +39,7 @@ const ALL_URLS = [
 
   // Blog
   "/blog",
+  "/blog/portfolio-inventory-faster-sales-india",
   "/blog/scale-model-sales-gallery-real-estate-india",
   "/blog/premium-real-estate-marketing-differentiation-india",
   "/blog/sell-property-to-nri-buyers-india",

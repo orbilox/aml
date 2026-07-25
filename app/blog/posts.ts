@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "portfolio-inventory-faster-sales-india",
+    title: "How Top Real Estate Developers Sell Portfolio Inventory 40% Faster — Without Discounting",
+    excerpt:
+      "Portfolio developers managing 5+ active projects face a silent killer: inventory stagnation on some projects while others sell out. Here's the exact framework top developers use to accelerate sales velocity across their entire portfolio—without margin-crushing discounts.",
+    category: "Real Estate Portfolio Marketing",
+    date: "July 25, 2026",
+    dateISO: "2026-07-25",
+    readTime: "12 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/3d-renders-isometrics/1.jpg",
+    tags: ["Portfolio Marketing", "Real Estate Developer", "Inventory Acceleration", "Sales Strategy", "Project Launch"],
+  },
+  {
     slug: "real-estate-buyer-psychology-first-3-seconds",
     title: "Real Estate Buyer Psychology: Why Most Developers Lose Deals in the First 3 Seconds (And How to Win Them Back)",
     excerpt:
