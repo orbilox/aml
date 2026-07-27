@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "real estate visualization, 3D walkthrough, VR tours, drone cinematography, architectural rendering, construction videos",
   icons: {
     icon: "/AML.svg",
-    shortcut: "/AML-FavIcon.png",
+    shortcut: "/AML.svg",
     apple: "/AML-FavIcon.png",
   },
   metadataBase: new URL(
