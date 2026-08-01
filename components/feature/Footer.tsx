@@ -81,12 +81,24 @@ export default function Footer() {
                   name: "Interactive 3D Tools",
                   href: "/services/interactive-3d-tools",
                 },
-                { name: "Drone Shoots & Location AV", href: "/services/drone-shoots" },
+                {
+                  name: "Drone Shoots & Location AV",
+                  href: "/services/drone-shoots",
+                },
                 { name: "Route Videos", href: "/services/route-videos" },
-                { name: "Construction Update Videos", href: "/services/construction-update-videos" },
+                {
+                  name: "Construction Update Videos",
+                  href: "/services/construction-update-videos",
+                },
                 { name: "3D Isometric Views", href: "/services/3d-isometrics" },
-                { name: "Interior Cinematic Walkthrough", href: "/services/interior-cinematic-walkthrough" },
-                { name: "Architectural Scale Models", href: "/services/architectural-scale-models" },
+                {
+                  name: "Interior Cinematic Walkthrough",
+                  href: "/services/interior-cinematic-walkthrough",
+                },
+                {
+                  name: "Architectural Scale Models",
+                  href: "/services/architectural-scale-models",
+                },
                 {
                   name: "Graphics & Branding",
                   href: "/services/graphics-branding",
@@ -200,7 +212,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Alliance Media Labs. All rights reserved.
+            © 2026 Alliance Media Labs. All rights reserved.
           </p>
         </div>
       </div>

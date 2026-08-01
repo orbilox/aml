@@ -447,6 +447,10 @@ ${formData.message || "No additional details provided"}
                             Unit No. 1456, 14th Floor, Gaur City Mall, Noida
                           </a>
                         </li>
+                        <li className="text-gray-300 hover:text-green-400 transition-colors">
+                          Gopalan Workspace, Gopalan Signature Mall,
+                          Nagavarapalya,CV Raman Nagar, Bengaluru
+                        </li>
                       </ul>
                     </div>
                   </div>

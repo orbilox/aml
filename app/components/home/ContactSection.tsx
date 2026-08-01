@@ -113,6 +113,10 @@ export default function ContactSection() {
                       D-244, 3rd Floor, Unit-4, Sector 74, Mohali, Chandigarh
                     </li>
                     <li>Unit No. 1456, 14th Floor, Gaur City Mall, Noida</li>
+                    <li>
+                      Gopalan Workspace, Gopalan Signature Mall,
+                      Nagavarapalya,CV Raman Nagar, Bengaluru
+                    </li>
                   </ul>
                 </div>
               </div>
