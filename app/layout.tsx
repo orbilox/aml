@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/AML.svg",
     shortcut: "/AML.svg",
-    apple: "/AML-FavIcon.png",
+    apple: "/AML.svg",
   },
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://alliancemedialabs.com",
