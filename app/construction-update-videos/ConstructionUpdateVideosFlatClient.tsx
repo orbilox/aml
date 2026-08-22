@@ -201,35 +201,146 @@ export default function ConstructionUpdateVideosFlatClient() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-8 h-[2px] bg-yellow-400" />
-              <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">Construction Videos India</span>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-2 mb-6">
+                <span className="w-8 h-[2px] bg-yellow-400" />
+                <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">Construction Videos India</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Construction <span className="text-yellow-400">Videos</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4 max-w-2xl">
+                A trusted construction time lapse company — construction update videos, drone timelapse construction, and real estate construction video coverage on a scheduled cadence.
+              </p>
+              <p className="text-base text-gray-400 mb-10 max-w-2xl">
+                From a single construction time lapse video to a full recurring update engagement, our team keeps buyers confident through every build.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-lg transition-colors text-lg"
+                >
+                  <i className="ri-vidicon-line" />
+                  Request a Quote
+                </a>
+                <a
+                  href="#portfolio"
+                  className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white px-8 py-4 rounded-lg transition-colors text-lg"
+                >
+                  <i className="ri-play-circle-line" />
+                  Watch Sample Videos
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Construction <span className="text-yellow-400">Videos</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4 max-w-2xl">
-              A trusted construction time lapse company — construction update videos, drone timelapse construction, and real estate construction video coverage on a scheduled cadence.
-            </p>
-            <p className="text-base text-gray-400 mb-10 max-w-2xl">
-              From a single construction time lapse video to a full recurring update engagement, our team keeps buyers confident through every build.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-lg transition-colors text-lg"
-              >
-                <i className="ri-vidicon-line" />
-                Request a Quote
-              </a>
-              <a
-                href="#portfolio"
-                className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white px-8 py-4 rounded-lg transition-colors text-lg"
-              >
-                <i className="ri-play-circle-line" />
-                Watch Sample Videos
-              </a>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+              {submitStatus === "success" ? (
+                <div className="text-center py-10">
+                  <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-2xl text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <p className="text-gray-600 text-sm">
+                    We&apos;ve received your enquiry. Our team will respond within 24 hours.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                  <p className="text-gray-500 text-sm mb-5">
+                    Share your project timeline and we&apos;ll respond within 24 hours.
+                  </p>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                        <input
+                          type="text"
+                          name="name"
+                          required
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          placeholder="Your full name"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone *</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          required
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          placeholder="+91 98765 43210"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="you@company.com"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      />
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Company Name</label>
+                        <input
+                          type="text"
+                          name="firm"
+                          value={formData.firm}
+                          onChange={handleInputChange}
+                          placeholder="Your company name"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Video Type</label>
+                        <select
+                          name="videoType"
+                          value={formData.videoType}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        >
+                          <option value="">Select type</option>
+                          <option value="Construction Update Video">Construction Update Video</option>
+                          <option value="Construction Time Lapse">Construction Time Lapse</option>
+                          <option value="Drone Timelapse">Drone Timelapse</option>
+                          <option value="Recurring Package">Recurring Package</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                      <textarea
+                        name="message"
+                        rows={3}
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="Project name, construction stage, and update frequency needed..."
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                      />
+                    </div>
+                    {submitStatus === "error" && (
+                      <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-yellow-400 hover:bg-yellow-300 disabled:opacity-50 text-black font-bold py-3.5 rounded-lg transition-colors"
+                    >
+                      {isSubmitting ? "Sending..." : "Get My Free Quote"}
+                    </button>
+                  </form>
+                </>
+              )}
             </div>
           </div>
         </div>

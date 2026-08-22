@@ -279,43 +279,120 @@ export default function ScaleModelMakerIndiaClient() {
             style={{ backgroundImage: `url('/images/services/architectural-scale-models/shapoorji/01.png')` }}
           ></div>
           <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-4xl">
-              <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
-                <i className="ri-building-2-line text-3xl text-black"></i>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
+                  <i className="ri-building-2-line text-3xl text-black"></i>
+                </div>
+                {/* Breadcrumb */}
+                <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
+                  <Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link>
+                  <span>/</span>
+                  <span className="text-gray-300">Services</span>
+                  <span>/</span>
+                  <span className="text-yellow-400">Scale Model Maker India</span>
+                </nav>
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl leading-tight">
+                  India&apos;s Expert<br />
+                  <span className="text-yellow-400">Scale Model Maker</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
+                  Professional architectural model maker trusted by India&apos;s top real estate developers,
+                  infrastructure companies, and government agencies.
+                </p>
+                <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                  Precision miniature model making with CNC fabrication, LED integration, hand-craft finishing,
+                  and white-glove pan-India delivery — from Mumbai to Hyderabad.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    href="#quote-form"
+                    className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+                  >
+                    Get Quote in 24 Hours
+                  </Link>
+                  <Link
+                    href="/portfolio"
+                    className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors"
+                  >
+                    View Portfolio
+                  </Link>
+                </div>
               </div>
-              {/* Breadcrumb */}
-              <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-                <Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link>
-                <span>/</span>
-                <span className="text-gray-300">Services</span>
-                <span>/</span>
-                <span className="text-yellow-400">Scale Model Maker India</span>
-              </nav>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl leading-tight">
-                India&apos;s Expert<br />
-                <span className="text-yellow-400">Scale Model Maker</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
-                Professional architectural model maker trusted by India&apos;s top real estate developers,
-                infrastructure companies, and government agencies.
-              </p>
-              <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-                Precision miniature model making with CNC fabrication, LED integration, hand-craft finishing,
-                and white-glove pan-India delivery — from Mumbai to Hyderabad.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="#quote-form"
-                  className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
-                >
-                  Get Quote in 24 Hours
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors"
-                >
-                  View Portfolio
-                </Link>
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+                <h3 className="text-xl font-bold text-black mb-1">Get Your Quote in 24 Hours</h3>
+                <p className="text-gray-500 text-sm mb-5">
+                  Share your project details and we&apos;ll respond with a detailed quote.
+                </p>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1.5">Name *</label>
+                      <input type="text" name="name" value={formData.name} onChange={handleInputChange} required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        placeholder="Your full name" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1.5">Email *</label>
+                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        placeholder="your@company.com" />
+                    </div>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1.5">Phone</label>
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        placeholder="+91 XXXXX XXXXX" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1.5">Project City</label>
+                      <select name="city" value={formData.city} onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm">
+                        <option value="">Select city</option>
+                        {["Mumbai", "Delhi NCR", "Bangalore", "Pune", "Hyderabad", "Gurugram", "Chennai", "Ahmedabad", "Other"].map((c) => (
+                          <option key={c} value={c}>{c}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Model Type</label>
+                    <select name="project_type" value={formData.project_type} onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm">
+                      <option value="">Select model type</option>
+                      <option value="residential">Residential / Apartment</option>
+                      <option value="township">Township / Master Plan</option>
+                      <option value="commercial">Commercial / Office Park</option>
+                      <option value="infrastructure">Infrastructure / Government</option>
+                      <option value="villa">Villa / Bungalow</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Project Details</label>
+                    <textarea name="message" value={formData.message} onChange={handleInputChange} rows={3} maxLength={600}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                      placeholder="Size, number of towers, preferred scale, LED requirements..."></textarea>
+                  </div>
+                  <button type="submit" disabled={isSubmitting}
+                    className="w-full bg-yellow-400 text-black py-3.5 rounded-xl font-bold hover:bg-yellow-300 transition-colors disabled:opacity-50 flex items-center justify-center gap-2">
+                    {isSubmitting ? (
+                      <><i className="ri-loader-4-line animate-spin"></i> Sending...</>
+                    ) : (
+                      <><span>Request My Scale Model Quote</span><i className="ri-arrow-right-line"></i></>
+                    )}
+                  </button>
+                  {submitStatus === "success" && (
+                    <p className="text-green-600 text-center font-semibold text-sm">
+                      ✓ Thank you! We&apos;ll respond with a detailed quote within 24 hours.
+                    </p>
+                  )}
+                  {submitStatus === "error" && (
+                    <p className="text-red-600 text-center font-medium text-sm">Something went wrong. Please try again or call us directly.</p>
+                  )}
+                </form>
               </div>
             </div>
           </div>

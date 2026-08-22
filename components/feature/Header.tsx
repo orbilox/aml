@@ -6,20 +6,23 @@ import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 
 const services = [
-  { name: "3D Walkthrough Videos", href: "/services/3d-walkthrough-videos" },
-  { name: "Virtual Reality Tours", href: "/services/virtual-reality-tours" },
-  { name: "3D Renders & Isometrics", href: "/services/3d-renders-isometrics" },
+  {
+    name: "3D Walkthrough Videos",
+    href: "/services/3d-walkthrough-video-company-india",
+  },
+  { name: "Virtual Reality Tours", href: "/virtual-reality-tours" },
+  { name: "3D Renders & Isometrics", href: "/3d-renders-isometrics" },
   { name: "Interactive 3D Tools", href: "/services/interactive-3d-tools" },
   {
     name: "Architectural Scale Models",
-    href: "/services/architectural-scale-models",
+    href: "/services/scale-model-maker-india",
   },
   {
     name: "Construction Update Videos",
-    href: "/services/construction-update-videos",
+    href: "/construction-update-videos",
   },
   { name: "Location AV", href: "/services/drone-shoots" },
-  { name: "Graphics & Branding", href: "/services/graphics-branding" },
+  { name: "Graphics & Branding", href: "/graphics-branding" },
   { name: "Digital Marketing", href: "/services/digital-marketing" },
 ];
 
@@ -125,7 +128,7 @@ export default function Header() {
               onClick={() =>
                 window.open(
                   "https://calendly.com/lakshay-alliancemedialabs/30min?month=2025-10",
-                  "_blank"
+                  "_blank",
                 )
               }
               className="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold text-sm hover:bg-yellow-300 transition-colors"
@@ -159,9 +162,7 @@ export default function Header() {
 
               <div>
                 <button
-                  onClick={() =>
-                    setIsMobileServicesOpen(!isMobileServicesOpen)
-                  }
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                   className="w-full text-left px-4 py-3 text-gray-300 hover:text-yellow-400 hover:bg-gray-800 transition-colors rounded-lg flex items-center justify-between"
                 >
                   <span>Services</span>
@@ -206,7 +207,7 @@ export default function Header() {
                 onClick={() =>
                   window.open(
                     "https://calendly.com/lakshay-alliancemedialabs/30min?month=2025-10",
-                    "_blank"
+                    "_blank",
                   )
                 }
                 className="mx-4 mt-2 bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold text-sm hover:bg-yellow-300 transition-colors"

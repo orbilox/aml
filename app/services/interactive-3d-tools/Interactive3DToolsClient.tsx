@@ -154,30 +154,136 @@ ${formData.message || "No additional details provided"}
             }}
           ></div>
           <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-4xl">
-              <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
-                <i className="ri-computer-line text-3xl text-black"></i>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
+                  <i className="ri-computer-line text-3xl text-black"></i>
+                </div>
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+                  Interactive 3D Tools for Real Estate India
+                </h1>
+                <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
+                  Custom web-based 3D configurators and interactive visualization
+                  platforms that engage and convert prospects.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    href="/contact"
+                    className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
+                  >
+                    Get Quote
+                  </Link>
+                  <Link
+                    href="/portfolio"
+                    className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap cursor-pointer"
+                  >
+                    View Portfolio
+                  </Link>
+                </div>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-                Interactive 3D Tools for Real Estate India
-              </h1>
-              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
-                Custom web-based 3D configurators and interactive visualization
-                platforms that engage and convert prospects.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/contact"
-                  className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
-                >
-                  Get Quote
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap cursor-pointer"
-                >
-                  View Portfolio
-                </Link>
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+                <h3 className="text-xl font-bold text-black mb-1">Get Your Interactive 3D Quote</h3>
+                <p className="text-gray-500 text-sm mb-5">
+                  Ready to create engaging interactive experiences? Contact us for a custom quote.
+                </p>
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        placeholder="Your phone number"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Type</label>
+                      <select
+                        name="project_type"
+                        value={formData.project_type}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 pr-8 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      >
+                        <option value="">Select project type</option>
+                        <option value="configurator">Product Configurator</option>
+                        <option value="virtual-showroom">Virtual Showroom</option>
+                        <option value="interactive-floor-plan">Interactive Floor Plan</option>
+                        <option value="3d-viewer">3D Model Viewer</option>
+                        <option value="ar-experience">AR Experience</option>
+                        <option value="custom-tool">Custom Interactive Tool</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={3}
+                      maxLength={500}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                      placeholder="Tell us about your project..."
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-yellow-400 text-black py-3.5 rounded-full font-semibold hover:bg-yellow-300 transition-colors disabled:opacity-70"
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center justify-center space-x-2">
+                        <i className="ri-loader-4-line animate-spin"></i>
+                        <span>Sending.....</span>
+                      </span>
+                    ) : (
+                      <span className="flex items-center justify-center space-x-2">
+                        <span>Send Inquiry via Email</span>
+                        <i className="ri-mail-send-line"></i>
+                      </span>
+                    )}
+                  </button>
+                  {submitStatus === "success" && (
+                    <div className="text-green-600 text-center font-medium text-sm">
+                      Thank you! We&apos;ll get back to you with a custom quote within 24 hours.
+                    </div>
+                  )}
+                  {submitStatus === "error" && (
+                    <div className="text-red-600 text-center font-medium text-sm">
+                      Something went wrong. Please try again.
+                    </div>
+                  )}
+                </form>
               </div>
             </div>
           </div>

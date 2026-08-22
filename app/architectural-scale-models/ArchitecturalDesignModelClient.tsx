@@ -575,44 +575,165 @@ export default function ArchitecturalDesignModelClient() {
           ></div>
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-4xl">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <i className="ri-shape-2-line text-3xl text-black"></i>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <i className="ri-shape-2-line text-3xl text-black"></i>
+                  </div>
+                  <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">
+                    Scale Model Making Company India
+                  </span>
                 </div>
-                <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">
-                  Scale Model Making Company India
-                </span>
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+                  India&apos;s Trusted Scale Model Making{" "}
+                  <span className="text-yellow-400">Company</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
+                  As a leading scale model making company, we build architectural
+                  scale models, real estate scale models, and miniature models for
+                  developers and architects across India — backed by expert scale
+                  model makers and scale model builders.
+                </p>
+                <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
+                  From precision miniature model making to full 3D scale model
+                  maker and 3D model making service, our scale model making
+                  process covers every stage from digital drawings to sales-office
+                  installation.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="#contact"
+                    className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
+                  >
+                    Get Quote
+                  </a>
+                  <a
+                    href="#portfolio"
+                    className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap cursor-pointer"
+                  >
+                    View Portfolio
+                  </a>
+                </div>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-                India&apos;s Trusted Scale Model Making{" "}
-                <span className="text-yellow-400">Company</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
-                As a leading scale model making company, we build architectural
-                scale models, real estate scale models, and miniature models for
-                developers and architects across India — backed by expert scale
-                model makers and scale model builders.
-              </p>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
-                From precision miniature model making to full 3D scale model
-                maker and 3D model making service, our scale model making
-                process covers every stage from digital drawings to sales-office
-                installation.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="#contact"
-                  className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
-                >
-                  Get Quote
-                </a>
-                <a
-                  href="#portfolio"
-                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap cursor-pointer"
-                >
-                  View Portfolio
-                </a>
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+                {submitStatus === "success" ? (
+                  <div className="text-center py-10">
+                    <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i className="ri-check-line text-2xl text-green-500" />
+                    </div>
+                    <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                    <p className="text-gray-600 text-sm">
+                      We&apos;ve received your enquiry. Our team will respond within 24 hours.
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                    <p className="text-gray-500 text-sm mb-5">
+                      Share your drawings and deadline — we&apos;ll respond within 24 hours.
+                    </p>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                          <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                            placeholder="Your full name"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                          <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                            placeholder="you@studio.com"
+                          />
+                        </div>
+                      </div>
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                          <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                            placeholder="+91 98765 43210"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-1.5">Firm / Studio Name</label>
+                          <input
+                            type="text"
+                            name="firm"
+                            value={formData.firm}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                            placeholder="Your firm name"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Model Type</label>
+                        <select
+                          name="modelType"
+                          value={formData.modelType}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        >
+                          <option value="">Select type</option>
+                          <option value="Architectural Scale Model">Architectural Scale Model</option>
+                          <option value="Real Estate Scale Model">Real Estate Scale Model</option>
+                          <option value="Miniature Model">Miniature Model</option>
+                          <option value="Township/Master Plan Model">Township / Master Plan Model</option>
+                          <option value="Concept/Competition Model">Concept / Competition Model</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                        <textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          rows={3}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                          placeholder="Project name, deadline, scale preference..."
+                        ></textarea>
+                      </div>
+                      {submitStatus === "error" && (
+                        <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                      )}
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full bg-yellow-400 text-black py-3.5 rounded-lg font-semibold hover:bg-yellow-300 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <i className="ri-loader-4-line animate-spin"></i>
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            Request a Quote
+                            <i className="ri-send-plane-line"></i>
+                          </>
+                        )}
+                      </button>
+                    </form>
+                  </>
+                )}
               </div>
             </div>
           </div>

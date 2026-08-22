@@ -264,37 +264,157 @@ export default function VirtualRealityToursFlatClient() {
         ></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl">
-            <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
-              <img src="/images/services/virtual-reality-tours/2.png" alt="VR" className="w-10 h-10" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
+                <img src="/images/services/virtual-reality-tours/2.png" alt="VR" className="w-10 h-10" />
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+                Virtual Reality <span className="text-yellow-400">Tours</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
+                A complete real estate virtual tours service in India —
+                interactive VR tour experiences, 3D virtual home tours, and 360
+                virtual photography that let buyers explore a project from
+                anywhere.
+              </p>
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
+                From a single VR real estate tour to a full multi-device virtual
+                reality tours rollout, our team delivers pan-India with fast
+                turnaround.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#contact"
+                  className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
+                >
+                  Request a Quote
+                </a>
+                <a
+                  href="#portfolio"
+                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap"
+                >
+                  View Our Work
+                </a>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-              Virtual Reality <span className="text-yellow-400">Tours</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
-              A complete real estate virtual tours service in India —
-              interactive VR tour experiences, 3D virtual home tours, and 360
-              virtual photography that let buyers explore a project from
-              anywhere.
-            </p>
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
-              From a single VR real estate tour to a full multi-device virtual
-              reality tours rollout, our team delivers pan-India with fast
-              turnaround.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="#contact"
-                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
-              >
-                Request a Quote
-              </a>
-              <a
-                href="#portfolio"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap"
-              >
-                View Our Work
-              </a>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+              {submitStatus === "success" ? (
+                <div className="text-center py-10">
+                  <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-2xl text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <p className="text-gray-600 text-sm">
+                    We&apos;ve received your enquiry. Our team will respond within 24 hours.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                  <p className="text-gray-500 text-sm mb-5">
+                    Share your project details and we&apos;ll respond within 24 hours.
+                  </p>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          placeholder="Your full name"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          placeholder="you@company.com"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          placeholder="+91 98765 43210"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Company Name</label>
+                        <input
+                          type="text"
+                          name="firm"
+                          value={formData.firm}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          placeholder="Your company name"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Tour Type</label>
+                      <select
+                        name="tourType"
+                        value={formData.tourType}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      >
+                        <option value="">Select type</option>
+                        <option value="Interactive VR Tour">Interactive VR Tour</option>
+                        <option value="360 Virtual Photography">360 Virtual Photography</option>
+                        <option value="3D Virtual Home Tour">3D Virtual Home Tour</option>
+                        <option value="Township VR Tour">Township VR Tour</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        rows={3}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                        placeholder="Project name, timeline, and any specific requirements..."
+                      ></textarea>
+                    </div>
+                    {submitStatus === "error" && (
+                      <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-yellow-400 text-black py-3.5 rounded-lg font-semibold hover:bg-yellow-300 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <i className="ri-loader-4-line animate-spin"></i>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Get My Free Quote
+                          <i className="ri-send-plane-line"></i>
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </>
+              )}
             </div>
           </div>
         </div>

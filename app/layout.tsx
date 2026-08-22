@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import WhatsAppFloat from "@/components/feature/WhatsAppFloat";
+import LeadRegistrationModal from "@/components/feature/LeadRegistrationModal";
 
 export const metadata: Metadata = {
   title:
@@ -121,6 +122,7 @@ export default function RootLayout({
         </noscript>
         {children}
         <WhatsAppFloat />
+        <LeadRegistrationModal />
       </body>
     </html>
   );

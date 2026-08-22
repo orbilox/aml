@@ -246,23 +246,143 @@ export default function RouteVideosFlatClient() {
         ></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-              Location <span className="text-yellow-400">Video</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
-              A trusted real estate video company — real estate videography, property videography, and real estate connectivity videos that sell the location advantage.
-            </p>
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
-              From a single location video to full real estate video packages, our team covers connectivity, landmarks, and drone routes pan-India.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a href="#contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap">
-                Request a Quote
-              </a>
-              <a href="#portfolio" className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap">
-                Watch Sample Videos
-              </a>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+                Location <span className="text-yellow-400">Video</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
+                A trusted real estate video company — real estate videography, property videography, and real estate connectivity videos that sell the location advantage.
+              </p>
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
+                From a single location video to full real estate video packages, our team covers connectivity, landmarks, and drone routes pan-India.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href="#contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap">
+                  Request a Quote
+                </a>
+                <a href="#portfolio" className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap">
+                  Watch Sample Videos
+                </a>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+              {submitStatus === "success" ? (
+                <div className="text-center py-10">
+                  <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-2xl text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <p className="text-gray-600 text-sm">
+                    We&apos;ve received your enquiry. Our team will respond within 24 hours.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                  <p className="text-gray-500 text-sm mb-5">
+                    Share your project location and we&apos;ll respond within 24 hours.
+                  </p>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          placeholder="Your full name"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          placeholder="you@company.com"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          placeholder="+91 98765 43210"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Company Name</label>
+                        <input
+                          type="text"
+                          name="firm"
+                          value={formData.firm}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          placeholder="Your company name"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Video Type</label>
+                      <select
+                        name="videoType"
+                        value={formData.videoType}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      >
+                        <option value="">Select type</option>
+                        <option value="Location Video">Location Video</option>
+                        <option value="Real Estate Videography">Real Estate Videography</option>
+                        <option value="Property Videography">Property Videography</option>
+                        <option value="Full Video Package">Full Video Package</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        rows={3}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                        placeholder="Project name, location, and any specific requirements..."
+                      ></textarea>
+                    </div>
+                    {submitStatus === "error" && (
+                      <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-yellow-400 text-black py-3.5 rounded-lg font-semibold hover:bg-yellow-300 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <i className="ri-loader-4-line animate-spin"></i>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Get My Free Quote
+                          <i className="ri-send-plane-line"></i>
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </>
+              )}
             </div>
           </div>
         </div>

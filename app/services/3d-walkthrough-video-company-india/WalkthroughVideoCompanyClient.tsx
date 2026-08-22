@@ -349,37 +349,168 @@ export default function WalkthroughVideoCompanyClient() {
         ></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8 mx-auto">
-              <i className="ri-video-line text-3xl text-black"></i>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
+                <i className="ri-video-line text-3xl text-black"></i>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+                3D Walkthrough Video{" "}
+                <span className="text-yellow-400">Company India</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
+                Photorealistic architectural walkthrough videos that sell projects
+                before a brick is laid. From residential apartments to township
+                master plans — we build buyer confidence with cinematic 3D
+                storytelling.
+              </p>
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
+                Trusted by Etereo Realty, Aura World, SRMG, and 200+ Indian
+                developers. Delivery in as fast as 7 working days.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#contact"
+                  className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
+                >
+                  Get Quote
+                </a>
+                <a
+                  href="#portfolio"
+                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap"
+                >
+                  View Portfolio
+                </a>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-              3D Walkthrough Video{" "}
-              <span className="text-yellow-400">Company India</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
-              Photorealistic architectural walkthrough videos that sell projects
-              before a brick is laid. From residential apartments to township
-              master plans — we build buyer confidence with cinematic 3D
-              storytelling.
-            </p>
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
-              Trusted by Etereo Realty, Aura World, SRMG, and 200+ Indian
-              developers. Delivery in as fast as 7 working days.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a
-                href="#contact"
-                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
-              >
-                Get Quote
-              </a>
-              <a
-                href="#portfolio"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap"
-              >
-                View Portfolio
-              </a>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+              {submitStatus === "success" ? (
+                <div className="text-center py-10">
+                  <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-2xl text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <p className="text-gray-600 text-sm">
+                    We&apos;ve received your enquiry. Our team will get back to you within 24 hours with a detailed quote.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                  <p className="text-gray-500 text-sm mb-5">
+                    Share your project drawings and we&apos;ll respond within 24 hours.
+                  </p>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                        <input
+                          type="text"
+                          name="name"
+                          required
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          placeholder="Your full name"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone *</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          required
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          placeholder="+91 98765 43210"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="you@company.com"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      />
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Walkthrough Type</label>
+                        <select
+                          name="project_type"
+                          value={formData.project_type}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        >
+                          <option value="">Select type</option>
+                          <option value="Residential Walkthrough">Residential Walkthrough</option>
+                          <option value="Commercial Walkthrough">Commercial Walkthrough</option>
+                          <option value="Township Flythrough">Township Flythrough</option>
+                          <option value="Interior Cinematic">Interior Cinematic</option>
+                          <option value="AI-Enhanced Premium">AI-Enhanced Premium</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">City</label>
+                        <select
+                          name="city"
+                          value={formData.city}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        >
+                          <option value="">Select city</option>
+                          <option value="Mumbai">Mumbai</option>
+                          <option value="Delhi NCR">Delhi NCR</option>
+                          <option value="Bangalore">Bangalore</option>
+                          <option value="Gurugram">Gurugram</option>
+                          <option value="Pune">Pune</option>
+                          <option value="Hyderabad">Hyderabad</option>
+                          <option value="Chennai">Chennai</option>
+                          <option value="Ahmedabad">Ahmedabad</option>
+                          <option value="Other">Other City</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                      <textarea
+                        name="message"
+                        rows={3}
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="Project name, location, scale, timeline..."
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                      />
+                    </div>
+                    {submitStatus === "error" && (
+                      <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-yellow-400 hover:bg-yellow-300 disabled:opacity-60 text-black font-bold py-3.5 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <i className="ri-loader-4-line animate-spin"></i>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <i className="ri-send-plane-line" />
+                          Get My Free Quote
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </>
+              )}
             </div>
           </div>
         </div>
