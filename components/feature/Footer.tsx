@@ -67,15 +67,15 @@ export default function Footer() {
               {[
                 {
                   name: "3D Walkthrough Videos",
-                  href: "/services/3d-walkthrough-videos",
+                  href: "/services/3d-walkthrough-video-company-india",
                 },
                 {
                   name: "Virtual Reality Tours",
-                  href: "/services/virtual-reality-tours",
+                  href: "/virtual-reality-tours",
                 },
                 {
                   name: "3D Renders & Isometrics",
-                  href: "/services/3d-renders-isometrics",
+                  href: "/3d-renders-isometrics",
                 },
                 {
                   name: "Interactive 3D Tools",
@@ -88,7 +88,7 @@ export default function Footer() {
                 { name: "Route Videos", href: "/services/route-videos" },
                 {
                   name: "Construction Update Videos",
-                  href: "/services/construction-update-videos",
+                  href: "/construction-update-videos",
                 },
                 { name: "3D Isometric Views", href: "/services/3d-isometrics" },
                 {
@@ -97,11 +97,11 @@ export default function Footer() {
                 },
                 {
                   name: "Architectural Scale Models",
-                  href: "/services/architectural-scale-models",
+                  href: "/services/scale-model-maker-india",
                 },
                 {
                   name: "Graphics & Branding",
-                  href: "/services/graphics-branding",
+                  href: "/graphics-branding",
                 },
                 {
                   name: "Digital Marketing",
