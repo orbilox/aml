@@ -149,6 +149,24 @@ export default function VirtualRealityToursFlatClient() {
         "A 360° VR real estate tour for Dosti Group, featuring a superimposed 3D building for a realistic virtual property walkthrough experience.",
       tourUrl: "https://amlabs.cloud/Dosti_Mumbai_V01/",
     },
+    {
+      id: 6,
+      title: "Featherlite Signature, Bengaluru",
+      category: "VR Experience",
+      image: "/images/portfolio/Featherlite-Thumbnail.png",
+      description:
+        "Interactive VR Tour of Commercial Office Spaces with 3D Visualization & Nearby Landmark Highlights.",
+      tourUrl: "https://amlabs.cloud/Featherlite_Signature-V02/",
+    },
+    {
+      id: 7,
+      title: "GMC Confluence, Bengaluru",
+      category: "VR Experience",
+      image: "/images/portfolio/GMC-Thumbnail.png",
+      description:
+        "Immersive VR Tour for Residential Real Estate, featuring modern amenities, landscaped green spaces, premium day & night views, 3D visualization, and interactive nearby landmark highlights. ",
+      tourUrl: "https://amlabs.cloud/GMC_Bengaluru/",
+    },
   ];
 
   const testimonials = [
@@ -267,7 +285,11 @@ export default function VirtualRealityToursFlatClient() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
-                <img src="/images/services/virtual-reality-tours/2.png" alt="VR" className="w-10 h-10" />
+                <img
+                  src="/images/services/virtual-reality-tours/2.png"
+                  alt="VR"
+                  className="w-10 h-10"
+                />
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
                 Virtual Reality <span className="text-yellow-400">Tours</span>
@@ -304,21 +326,29 @@ export default function VirtualRealityToursFlatClient() {
                   <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ri-check-line text-2xl text-green-500" />
                   </div>
-                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <h3 className="text-lg font-bold text-black mb-1">
+                    Thank You!
+                  </h3>
                   <p className="text-gray-600 text-sm">
-                    We&apos;ve received your enquiry. Our team will respond within 24 hours.
+                    We&apos;ve received your enquiry. Our team will respond
+                    within 24 hours.
                   </p>
                 </div>
               ) : (
                 <>
-                  <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                  <h3 className="text-xl font-bold text-black mb-1">
+                    Get a Free Quote
+                  </h3>
                   <p className="text-gray-500 text-sm mb-5">
-                    Share your project details and we&apos;ll respond within 24 hours.
+                    Share your project details and we&apos;ll respond within 24
+                    hours.
                   </p>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Name *
+                        </label>
                         <input
                           type="text"
                           name="name"
@@ -330,7 +360,9 @@ export default function VirtualRealityToursFlatClient() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Email *
+                        </label>
                         <input
                           type="email"
                           name="email"
@@ -344,7 +376,9 @@ export default function VirtualRealityToursFlatClient() {
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Phone
+                        </label>
                         <input
                           type="tel"
                           name="phone"
@@ -355,7 +389,9 @@ export default function VirtualRealityToursFlatClient() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Company Name</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Company Name
+                        </label>
                         <input
                           type="text"
                           name="firm"
@@ -367,7 +403,9 @@ export default function VirtualRealityToursFlatClient() {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Tour Type</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Tour Type
+                      </label>
                       <select
                         name="tourType"
                         value={formData.tourType}
@@ -375,14 +413,24 @@ export default function VirtualRealityToursFlatClient() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                       >
                         <option value="">Select type</option>
-                        <option value="Interactive VR Tour">Interactive VR Tour</option>
-                        <option value="360 Virtual Photography">360 Virtual Photography</option>
-                        <option value="3D Virtual Home Tour">3D Virtual Home Tour</option>
-                        <option value="Township VR Tour">Township VR Tour</option>
+                        <option value="Interactive VR Tour">
+                          Interactive VR Tour
+                        </option>
+                        <option value="360 Virtual Photography">
+                          360 Virtual Photography
+                        </option>
+                        <option value="3D Virtual Home Tour">
+                          3D Virtual Home Tour
+                        </option>
+                        <option value="Township VR Tour">
+                          Township VR Tour
+                        </option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Project Details
+                      </label>
                       <textarea
                         name="message"
                         value={formData.message}
@@ -393,7 +441,10 @@ export default function VirtualRealityToursFlatClient() {
                       ></textarea>
                     </div>
                     {submitStatus === "error" && (
-                      <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                      <p className="text-red-600 text-sm">
+                        Something went wrong. Please try again or WhatsApp us
+                        directly.
+                      </p>
                     )}
                     <button
                       type="submit"
@@ -419,7 +470,63 @@ export default function VirtualRealityToursFlatClient() {
           </div>
         </div>
       </section>
-      ={/* Why Choose Section */}
+      {/* Portfolio Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              VR Experience Portfolio
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Explore immersive VR tour projects, 3D virtual real estate tours,
+              and real estate virtual tours created for leading developers
+              across India.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioProjects.map((project) => (
+              <div
+                key={project.id}
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                onClick={() => window.open(project.tourUrl, "_blank")}
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+                      <i className="ri-play-fill text-2xl text-black"></i>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                    {project.category}
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-black/70">{project.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              href="/portfolio"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
+            >
+              View Our Portfolio
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -564,108 +671,6 @@ export default function VirtualRealityToursFlatClient() {
               />
             </div>
           </div>
-        </div>
-      </section>
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Virtual Reality Tours Portfolio &amp; Case Studies
-            </h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Real VR tour and 360 virtual photography projects delivered as
-              part of our virtual reality tours service for developers across
-              India.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioProjects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-                onClick={() => setSelectedProject(project)}
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <i className="ri-eye-line text-2xl text-black"></i>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                    {project.category}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-black/70">{project.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              href="/portfolio"
-              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap inline-flex"
-            >
-              View Full Portfolio
-            </Link>
-          </div>
-
-          {/* Preview Modal */}
-          {selectedProject && (
-            <div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-              onClick={() => setSelectedProject(null)}
-            >
-              <div
-                className="relative w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="absolute top-3 right-3 z-10 w-9 h-9 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-colors"
-                >
-                  <i className="ri-close-line text-lg" />
-                </button>
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-auto"
-                />
-                <div className="p-6">
-                  <div className="flex gap-2 mb-3">
-                    <span className="text-xs bg-yellow-400 text-black font-semibold px-2 py-1 rounded">
-                      {selectedProject.category}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-black text-lg mb-2">
-                    {selectedProject.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {selectedProject.description}
-                  </p>
-                  <a
-                    href={selectedProject.tourUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg transition-colors text-sm"
-                  >
-                    <i className="ri-eye-line" />
-                    Launch VR Tour
-                  </a>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </section>
       {/* Testimonials Section */}

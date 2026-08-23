@@ -236,6 +236,47 @@ export default function RendersIsometricsFlatClient() {
         },
       ],
     },
+    {
+      id: 4,
+      title: "Aura Aerth, Gurugram",
+      category: "3D Rendering",
+      image: "/images/services/3d-renders-isometrics/Aura-renders/render-1.png",
+      description:
+        "High-Rise 3D Architectural Renders showcasing premium residential living, luxury design, and detailed architectural visualization.",
+      hasSlider: true,
+      sliderImages: [
+        {
+          url: "/images/services/3d-renders-isometrics/Aura-renders/render-1.png",
+          title: "Luxury Residential Complex",
+          description: "Modern residential development with premium amenities",
+        },
+        {
+          url: "/images/services/3d-renders-isometrics/Aura-renders/render-3.png",
+          title: "Premium Interior Design",
+          description: "Sophisticated interior spaces with modern finishes",
+        },
+        {
+          url: "/images/services/3d-renders-isometrics/Aura-renders/render-4.png",
+          title: "High-Rise Development",
+          description: "Urban residential tower with panoramic city views",
+        },
+        {
+          url: "/images/services/3d-renders-isometrics/Aura-renders/render-5.png",
+          title: "Premium Villa Project",
+          description: "Exclusive villa development with luxury amenities",
+        },
+        {
+          url: "/images/services/3d-renders-isometrics/Aura-renders/render-7.png",
+          title: "Master Plan Visualization",
+          description: "Complete residential development master planning",
+        },
+        {
+          url: "/images/services/3d-renders-isometrics/Aura-renders/render-8.png",
+          title: "Master Plan Visualization",
+          description: "Complete residential development master planning",
+        },
+      ],
+    },
   ];
 
   const faqs = [
@@ -383,21 +424,29 @@ export default function RendersIsometricsFlatClient() {
                     <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
                       <i className="ri-check-line text-2xl text-green-500" />
                     </div>
-                    <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                    <h3 className="text-lg font-bold text-black mb-1">
+                      Thank You!
+                    </h3>
                     <p className="text-gray-600 text-sm">
-                      We&apos;ve received your enquiry. Our team will respond within 24 hours.
+                      We&apos;ve received your enquiry. Our team will respond
+                      within 24 hours.
                     </p>
                   </div>
                 ) : (
                   <>
-                    <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                    <h3 className="text-xl font-bold text-black mb-1">
+                      Get a Free Quote
+                    </h3>
                     <p className="text-gray-500 text-sm mb-5">
-                      Share your drawings and we&apos;ll respond within 24 hours.
+                      Share your drawings and we&apos;ll respond within 24
+                      hours.
                     </p>
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                            Name *
+                          </label>
                           <input
                             type="text"
                             name="name"
@@ -409,7 +458,9 @@ export default function RendersIsometricsFlatClient() {
                           />
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                            Email *
+                          </label>
                           <input
                             type="email"
                             name="email"
@@ -423,7 +474,9 @@ export default function RendersIsometricsFlatClient() {
                       </div>
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                            Phone
+                          </label>
                           <input
                             type="tel"
                             name="phone"
@@ -434,7 +487,9 @@ export default function RendersIsometricsFlatClient() {
                           />
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1.5">Company Name</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                            Company Name
+                          </label>
                           <input
                             type="text"
                             name="firm"
@@ -446,7 +501,9 @@ export default function RendersIsometricsFlatClient() {
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Render Type</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Render Type
+                        </label>
                         <select
                           name="renderType"
                           value={formData.renderType}
@@ -454,14 +511,24 @@ export default function RendersIsometricsFlatClient() {
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                         >
                           <option value="">Select type</option>
-                          <option value="3D House Rendering">3D House Rendering</option>
-                          <option value="3D Floor Plan Design">3D Floor Plan Design</option>
-                          <option value="3D Isometric View">3D Isometric View</option>
-                          <option value="3D Rendering Interior Design">3D Rendering Interior Design</option>
+                          <option value="3D House Rendering">
+                            3D House Rendering
+                          </option>
+                          <option value="3D Floor Plan Design">
+                            3D Floor Plan Design
+                          </option>
+                          <option value="3D Isometric View">
+                            3D Isometric View
+                          </option>
+                          <option value="3D Rendering Interior Design">
+                            3D Rendering Interior Design
+                          </option>
                         </select>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Project Details
+                        </label>
                         <textarea
                           name="message"
                           value={formData.message}
@@ -472,7 +539,10 @@ export default function RendersIsometricsFlatClient() {
                         ></textarea>
                       </div>
                       {submitStatus === "error" && (
-                        <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                        <p className="text-red-600 text-sm">
+                          Something went wrong. Please try again or WhatsApp us
+                          directly.
+                        </p>
                       )}
                       <button
                         type="submit"
@@ -498,103 +568,6 @@ export default function RendersIsometricsFlatClient() {
             </div>
           </div>
         </section>
-
-        {/* Why Choose / Features Section */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                3D Rendering Services Built for Real Estate
-              </h2>
-              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                As one of the architectural rendering companies developers
-                return to project after project, we deliver 3D house rendering,
-                architectural visualisation, and 3D architectural rendering
-                services under one roof — with a dedicated 3D floor plan
-                designer on every project.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: "ri-pencil-ruler-2-line",
-                  title: "In-House 3D Rendering Team",
-                  desc: "Our 3D rendering services work directly from CAD, Revit, and SketchUp files — no outsourcing at any stage of the architectural visualization process.",
-                },
-                {
-                  icon: "ri-time-line",
-                  title: "Fast, Deadline-Aware Delivery",
-                  desc: "3D renders and 3D floor plan design delivered on schedule for launches, brochures, and hoarding print deadlines.",
-                },
-                {
-                  icon: "ri-magic-line",
-                  title: "AI 3D Rendering, Human Finishing",
-                  desc: "AI 3D rendering speeds up texturing and lighting studies; our artists refine every scene for photorealistic accuracy.",
-                },
-                {
-                  icon: "ri-hd-line",
-                  title: "High-Resolution Output",
-                  desc: "Every 3D render is delivered print-ready at 4K+ resolution, suitable for hoardings, brochures, and digital ads.",
-                },
-                {
-                  icon: "ri-shape-line",
-                  title: "Isometric & Floor Plan Expertise",
-                  desc: "3D floor plan designer skills combined with full-site isometric renders for master plans and unit-level marketing.",
-                },
-                {
-                  icon: "ri-global-line",
-                  title: "Architectural Visualization Services Pan-India",
-                  desc: "We deliver architectural visualization services in India remotely — no site visit required for most rendering work.",
-                },
-              ].map((f) => (
-                <div
-                  key={f.title}
-                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow"
-                >
-                  <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                    <i className={`${f.icon} text-2xl text-black`}></i>
-                  </div>
-                  <h3 className="text-xl font-bold text-black mb-4">
-                    {f.title}
-                  </h3>
-                  <p className="text-gray-600">{f.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Render Types Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                6 Types of 3D Rendering We Deliver
-              </h2>
-              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {renderTypes.map((mt) => (
-                <div
-                  key={mt.title}
-                  className="bg-white rounded-2xl p-8 hover:shadow-xl transition-shadow border border-gray-100"
-                >
-                  <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                    <i className={`${mt.icon} text-2xl text-black`}></i>
-                  </div>
-                  <h3 className="text-xl font-bold text-black mb-3">
-                    {mt.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {mt.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Portfolio Section */}
         <section id="portfolio" className="py-24 bg-gray-50">
           <div className="container mx-auto px-6">
@@ -740,6 +713,102 @@ export default function RendersIsometricsFlatClient() {
                 </div>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Why Choose / Features Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                3D Rendering Services Built for Real Estate
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                As one of the architectural rendering companies developers
+                return to project after project, we deliver 3D house rendering,
+                architectural visualisation, and 3D architectural rendering
+                services under one roof — with a dedicated 3D floor plan
+                designer on every project.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: "ri-pencil-ruler-2-line",
+                  title: "In-House 3D Rendering Team",
+                  desc: "Our 3D rendering services work directly from CAD, Revit, and SketchUp files — no outsourcing at any stage of the architectural visualization process.",
+                },
+                {
+                  icon: "ri-time-line",
+                  title: "Fast, Deadline-Aware Delivery",
+                  desc: "3D renders and 3D floor plan design delivered on schedule for launches, brochures, and hoarding print deadlines.",
+                },
+                {
+                  icon: "ri-magic-line",
+                  title: "AI 3D Rendering, Human Finishing",
+                  desc: "AI 3D rendering speeds up texturing and lighting studies; our artists refine every scene for photorealistic accuracy.",
+                },
+                {
+                  icon: "ri-hd-line",
+                  title: "High-Resolution Output",
+                  desc: "Every 3D render is delivered print-ready at 4K+ resolution, suitable for hoardings, brochures, and digital ads.",
+                },
+                {
+                  icon: "ri-shape-line",
+                  title: "Isometric & Floor Plan Expertise",
+                  desc: "3D floor plan designer skills combined with full-site isometric renders for master plans and unit-level marketing.",
+                },
+                {
+                  icon: "ri-global-line",
+                  title: "Architectural Visualization Services Pan-India",
+                  desc: "We deliver architectural visualization services in India remotely — no site visit required for most rendering work.",
+                },
+              ].map((f) => (
+                <div
+                  key={f.title}
+                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow"
+                >
+                  <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                    <i className={`${f.icon} text-2xl text-black`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-4">
+                    {f.title}
+                  </h3>
+                  <p className="text-gray-600">{f.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Render Types Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                6 Types of 3D Rendering We Deliver
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {renderTypes.map((mt) => (
+                <div
+                  key={mt.title}
+                  className="bg-white rounded-2xl p-8 hover:shadow-xl transition-shadow border border-gray-100"
+                >
+                  <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                    <i className={`${mt.icon} text-2xl text-black`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-3">
+                    {mt.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {mt.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

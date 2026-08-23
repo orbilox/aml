@@ -9,7 +9,6 @@ interface Project {
   id: number;
   title: string;
   category: string;
-  city: string;
   image: string;
   description: string;
   videoUrl: string | null;
@@ -130,63 +129,6 @@ const cityLinks = [
   { city: "Ahmedabad", href: "/contact" },
 ];
 
-const pricingTiers = [
-  {
-    name: "Starter",
-    subtitle: "Single unit / apartment walkthrough",
-    price: "₹75,000",
-    priceNote: "onwards",
-    duration: "10–15 working days",
-    features: [
-      "Up to 2.5 min walkthrough",
-      "1 residential unit",
-      "Photorealistic textures & lighting",
-      "2 rounds of revision",
-      "HD 1080p + MP4 delivery",
-      "Social media cut included",
-    ],
-    cta: "Get Quote",
-    highlight: false,
-  },
-  {
-    name: "Professional",
-    subtitle: "Multi-block or commercial project",
-    price: "₹1,80,000",
-    priceNote: "onwards",
-    duration: "15–25 working days",
-    features: [
-      "Up to 4 min walkthrough",
-      "Multi-unit or commercial block",
-      "AI-enhanced rendering",
-      "Lifestyle staging & human figures",
-      "3 rounds of revision",
-      "4K UHD + social cuts delivery",
-      "Aerial approach shot included",
-    ],
-    cta: "Get Quote",
-    highlight: true,
-  },
-  {
-    name: "Township",
-    subtitle: "Master plan flythrough & premium launch",
-    price: "₹3,50,000",
-    priceNote: "onwards",
-    duration: "25–40 working days",
-    features: [
-      "5–8 min cinematic presentation",
-      "Full township / master plan",
-      "Phase-wise animation",
-      "Amenity zone detailing",
-      "Custom brand voiceover + music",
-      "4K + social cuts + web optimised",
-      "Dedicated project manager",
-      "Unlimited revisions",
-    ],
-    cta: "Get Quote",
-    highlight: false,
-  },
-];
-
 export default function WalkthroughVideoCompanyClient() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [formData, setFormData] = useState({
@@ -206,90 +148,32 @@ export default function WalkthroughVideoCompanyClient() {
     {
       id: 1,
       title: "Etereo 1, Goa",
-      category: "Residential Walkthrough",
-      city: "Goa",
+      category: "3D Walkthrough",
       image: "/images/portfolio/1.png",
       description:
-        "Cinematic 3D property walkthrough showcasing luxury residential units with panoramic views, lifestyle staging, and premium architectural detailing.",
-      videoUrl: "https://www.youtube.com/embed/BiCCdx0fDik?autoplay=1",
+        "Cinematic 3D property walkthrough and 3D virtual house tour showcasing luxury residential units with panoramic city views.",
+      videoUrl: "https://www.youtube.com/embed/BiCCdx0fDik?autoplay=1&t",
       duration: "2:45",
     },
     {
       id: 2,
       title: "Aura Vantaje, Gurugram",
-      category: "Commercial Walkthrough",
-      city: "Gurugram",
+      category: "3D Walkthrough",
       image: "/images/portfolio/Aura-Vantaje-Thumbnail.png",
       description:
-        "AI-powered 3D walkthrough for a premium commercial project in Gurugram, produced in 7 days — highlighting scale, usability, and immersive buyer experience.",
+        "Developed an AI-powered 3D walkthrough real estate presentation and architectural walkthrough for a commercial project, highlighting scale, usability, and immersive buyer experience.",
       videoUrl: "https://www.youtube.com/embed/YGaAU9B37nc?autoplay=1",
       duration: "1:20",
     },
     {
-      id: 3,
-      title: "Auroville Township, Pune",
-      category: "Township Flythrough",
-      city: "Pune",
-      image: "/images/portfolio/Auroville-Thumbnail.jpg",
+      id: 49,
+      title: "Briston, Neemrana",
+      category: "3D Walkthrough",
+      image: "/images/portfolio/Briston-Thumbnail.png",
       description:
-        "Master plan flythrough animation for a large township project — covering phase-wise development, amenity zones, and connectivity in a cinematic aerial presentation.",
-      videoUrl: null,
-      duration: null,
-    },
-    {
-      id: 4,
-      title: "Glenwood Residences, Bangalore",
-      category: "Residential Walkthrough",
-      city: "Bangalore",
-      image: "/images/portfolio/Glenwood-Thumbnail.png",
-      description:
-        "Photorealistic 3D walkthrough for premium residential towers — detailed landscaping, clubhouse, and unit interior sequences with natural lighting and lifestyle staging.",
-      videoUrl: null,
-      duration: null,
-    },
-    {
-      id: 5,
-      title: "Naman 58, Mumbai",
-      category: "Luxury Walkthrough",
-      city: "Mumbai",
-      image: "/images/portfolio/Naman-58-Thumbnail.jpg",
-      description:
-        "Ultra-premium walkthrough for a luxury sea-facing residential project — AI-enhanced photorealism with custom material finishes and branded colour grading.",
-      videoUrl: null,
-      duration: null,
-    },
-    {
-      id: 6,
-      title: "Sky Arc, Hyderabad",
-      category: "Interior Cinematic",
-      city: "Hyderabad",
-      image: "/images/portfolio/Sky-Arc-Thumbnail.png",
-      description:
-        "Interior cinematic walkthrough featuring custom furniture staging, bespoke material finishes, and architectural lighting design for a premium apartment launch.",
-      videoUrl: null,
-      duration: null,
-    },
-    {
-      id: 7,
-      title: "Twin Horizon, Delhi NCR",
-      category: "Commercial Walkthrough",
-      city: "Delhi NCR",
-      image: "/images/portfolio/Twin-Horizon-Thumbnail.png",
-      description:
-        "Dual-tower commercial walkthrough and aerial flythrough for a Grade-A office project — communicating scale, connectivity, and workspace quality to enterprise tenants.",
-      videoUrl: null,
-      duration: null,
-    },
-    {
-      id: 8,
-      title: "Central Ikon, Mumbai",
-      category: "Retail Walkthrough",
-      city: "Mumbai",
-      image: "/images/portfolio/Central-Ikon-Thumbnail.png",
-      description:
-        "3D walkthrough for a large-format retail and mixed-use development — showcasing retail frontage, food court, and entertainment zones to attract anchor tenants.",
-      videoUrl: null,
-      duration: null,
+        "AI-powered teaser video showcasing Japanese-inspired apartments, architecture, and lifestyle.",
+      videoUrl: "https://www.youtube.com/embed/5aCZOQxUZg4?autoplay=1",
+      duration: "0:53",
     },
   ];
 
@@ -359,10 +243,10 @@ export default function WalkthroughVideoCompanyClient() {
                 <span className="text-yellow-400">Company India</span>
               </h1>
               <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
-                Photorealistic architectural walkthrough videos that sell projects
-                before a brick is laid. From residential apartments to township
-                master plans — we build buyer confidence with cinematic 3D
-                storytelling.
+                Photorealistic architectural walkthrough videos that sell
+                projects before a brick is laid. From residential apartments to
+                township master plans — we build buyer confidence with cinematic
+                3D storytelling.
               </p>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
                 Trusted by Etereo Realty, Aura World, SRMG, and 200+ Indian
@@ -389,21 +273,29 @@ export default function WalkthroughVideoCompanyClient() {
                   <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ri-check-line text-2xl text-green-500" />
                   </div>
-                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <h3 className="text-lg font-bold text-black mb-1">
+                    Thank You!
+                  </h3>
                   <p className="text-gray-600 text-sm">
-                    We&apos;ve received your enquiry. Our team will get back to you within 24 hours with a detailed quote.
+                    We&apos;ve received your enquiry. Our team will get back to
+                    you within 24 hours with a detailed quote.
                   </p>
                 </div>
               ) : (
                 <>
-                  <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                  <h3 className="text-xl font-bold text-black mb-1">
+                    Get a Free Quote
+                  </h3>
                   <p className="text-gray-500 text-sm mb-5">
-                    Share your project drawings and we&apos;ll respond within 24 hours.
+                    Share your project drawings and we&apos;ll respond within 24
+                    hours.
                   </p>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Name *
+                        </label>
                         <input
                           type="text"
                           name="name"
@@ -415,7 +307,9 @@ export default function WalkthroughVideoCompanyClient() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Phone *
+                        </label>
                         <input
                           type="tel"
                           name="phone"
@@ -428,7 +322,9 @@ export default function WalkthroughVideoCompanyClient() {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Email *
+                      </label>
                       <input
                         type="email"
                         name="email"
@@ -441,7 +337,9 @@ export default function WalkthroughVideoCompanyClient() {
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Walkthrough Type</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Walkthrough Type
+                        </label>
                         <select
                           name="project_type"
                           value={formData.project_type}
@@ -449,15 +347,27 @@ export default function WalkthroughVideoCompanyClient() {
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                         >
                           <option value="">Select type</option>
-                          <option value="Residential Walkthrough">Residential Walkthrough</option>
-                          <option value="Commercial Walkthrough">Commercial Walkthrough</option>
-                          <option value="Township Flythrough">Township Flythrough</option>
-                          <option value="Interior Cinematic">Interior Cinematic</option>
-                          <option value="AI-Enhanced Premium">AI-Enhanced Premium</option>
+                          <option value="Residential Walkthrough">
+                            Residential Walkthrough
+                          </option>
+                          <option value="Commercial Walkthrough">
+                            Commercial Walkthrough
+                          </option>
+                          <option value="Township Flythrough">
+                            Township Flythrough
+                          </option>
+                          <option value="Interior Cinematic">
+                            Interior Cinematic
+                          </option>
+                          <option value="AI-Enhanced Premium">
+                            AI-Enhanced Premium
+                          </option>
                         </select>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">City</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          City
+                        </label>
                         <select
                           name="city"
                           value={formData.city}
@@ -478,7 +388,9 @@ export default function WalkthroughVideoCompanyClient() {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Project Details
+                      </label>
                       <textarea
                         name="message"
                         rows={3}
@@ -489,7 +401,10 @@ export default function WalkthroughVideoCompanyClient() {
                       />
                     </div>
                     {submitStatus === "error" && (
-                      <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                      <p className="text-red-600 text-sm">
+                        Something went wrong. Please try again or WhatsApp us
+                        directly.
+                      </p>
                     )}
                     <button
                       type="submit"
@@ -512,6 +427,58 @@ export default function WalkthroughVideoCompanyClient() {
                 </>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+              Our 3D Walkthrough Portfolio
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
+            <p className="text-lg text-black/80 max-w-3xl mx-auto">
+              Explore our collection of immersive 3D walkthrough video projects,
+              3D virtual house tours, and 3D property walkthrough solutions for
+              residential, commercial, and architectural developments across
+              India.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioProjects.map((project) => (
+              <div
+                key={project.id}
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                onClick={() => setSelectedProject(project)}
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+                      <i className="ri-play-fill text-2xl text-black"></i>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
+                    {project.duration}
+                  </div>
+                  <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                    {project.category}
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-black/70">{project.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -623,88 +590,6 @@ export default function WalkthroughVideoCompanyClient() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PORTFOLIO ── */}
-      <section id="portfolio" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              3D Walkthrough Video Company Portfolio
-            </h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              From luxury gated communities to large-format commercial parks —
-              explore how India&apos;s top developers use our walkthroughs to
-              sell faster and smarter.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {portfolioProjects.map((project) => (
-              <div
-                key={project.id}
-                className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
-                onClick={() => setSelectedProject(project)}
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  {project.videoUrl ? (
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
-                        <i className="ri-play-fill text-2xl text-black ml-1" />
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <i className="ri-zoom-in-line text-xl text-white" />
-                      </div>
-                    </div>
-                  )}
-                  <div className="absolute top-3 left-3 flex gap-2">
-                    <span className="text-xs bg-yellow-400 text-black font-semibold px-2 py-1 rounded">
-                      {project.category}
-                    </span>
-                    <span className="text-xs bg-black/60 text-white px-2 py-1 rounded backdrop-blur-sm">
-                      {project.city}
-                    </span>
-                  </div>
-                  {project.duration && (
-                    <div className="absolute bottom-3 right-3">
-                      <span className="text-xs bg-black/70 text-white px-2 py-1 rounded backdrop-blur-sm">
-                        {project.duration}
-                      </span>
-                    </div>
-                  )}
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-black text-sm mb-1">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-lg transition-colors"
-            >
-              <i className="ri-gallery-line" />
-              View Full Portfolio
-            </Link>
           </div>
         </div>
       </section>

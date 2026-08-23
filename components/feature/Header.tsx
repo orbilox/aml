@@ -15,7 +15,7 @@ const services = [
   { name: "Interactive 3D Tools", href: "/services/interactive-3d-tools" },
   {
     name: "Architectural Scale Models",
-    href: "/services/scale-model-maker-india",
+    href: "/architectural-scale-models",
   },
   {
     name: "Construction Update Videos",

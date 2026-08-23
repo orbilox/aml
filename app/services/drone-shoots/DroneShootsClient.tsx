@@ -70,6 +70,26 @@ export default function DroneShootsClient() {
       videoUrl: "-6icu6ALbr4?si=0H-4fGbiNLi3y0fG&autoplay=1",
       duration: "3:18",
     },
+    {
+      id: 5,
+      title: "Hero Homes, Sector 99, Mohali",
+      category: "Location AV",
+      image: "/images/portfolio/Hero-Mohali-Thumbnail.png",
+      description:
+        "A nature led, Real Estate Location AV for Hero Homes, Sector 99 Mohali, featuring cinematic storytelling, professional voiceover, location visuals and connectivity mapping",
+      videoUrl: "yWt6TLb0a2k?si=y4M05nZkVgJPmB9U&autoplay=1",
+      duration: "4:03",
+    },
+    {
+      id: 6,
+      title: "Hero Homes, Sector MU, Greater Noida ",
+      category: "Location AV",
+      image: "/images/portfolio/Hero-Homes-Noida-Thumbnail.png",
+      description:
+        "Location AV showcasing real estate connectivity, cinematic storytelling, route visualization and professional real estate video production. ",
+      videoUrl: "d22cdmKn2WE?si=y4M05nZkVgJPmB9U&autoplay=1",
+      duration: "5:04",
+    },
   ];
   const testimonials = [
     {
@@ -145,44 +165,200 @@ export default function DroneShootsClient() {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/70"></div>
+        <section className="py-24 min-h-[85vh] flex items-center bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://readdy.ai/api/search-image?query=Professional%20drone%20aerial%20photography%20real%20estate%20property%20cinematic%20overhead%20view&width=1920&height=1080&seq=drone-hero&orientation=landscape')`,
+              backgroundImage: `url('/images/portfolio/3.png')`,
             }}
           ></div>
+          <div className="absolute inset-0 bg-black/60"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-4xl">
-              <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
-                <i className="ri-flight-takeoff-line text-3xl text-black"></i>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
+                  <i className="ri-flight-takeoff-line text-3xl text-black"></i>
+                </div>
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+                  Real Estate Location Video & Drone Shoots in India
+                </h1>
+                <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
+                  We create cinematic real estate location video content, real
+                  estate drone video campaigns, and professional real estate
+                  videography services for developers across India. From property
+                  videography to real estate connectivity videos and location AV
+                  production, we help showcase your project's location advantage
+                  through immersive storytelling.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    href="/contact"
+                    className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
+                  >
+                    Get Quote
+                  </Link>
+                  <Link
+                    href="/portfolio"
+                    className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap cursor-pointer"
+                  >
+                    View Portfolio
+                  </Link>
+                </div>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-                Real Estate Location Video & Drone Shoots in India
-              </h1>
-              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
-                We create cinematic real estate location video content, real
-                estate drone video campaigns, and professional real estate
-                videography services for developers across India. From property
-                videography to real estate connectivity videos and location AV
-                production, we help showcase your project's location advantage
-                through immersive storytelling.
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+                <h3 className="text-xl font-bold text-black mb-1">Get Your Drone Shoot Quote</h3>
+                <p className="text-gray-500 text-sm mb-5">
+                  Ready to create cinematic real estate videos and professional property videography for your next project?
+                </p>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        placeholder="Your phone number"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Shoot Type</label>
+                      <select
+                        name="project_type"
+                        value={formData.project_type}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 pr-8 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      >
+                        <option value="">Select shoot type</option>
+                        <option value="aerial-photography">Aerial Photography</option>
+                        <option value="aerial-videography">Aerial Videography</option>
+                        <option value="construction-progress">Construction Progress</option>
+                        <option value="property-showcase">Property Showcase</option>
+                        <option value="site-survey">Site Survey</option>
+                        <option value="marketing-content">Marketing Content</option>
+                        <option value="comprehensive">Comprehensive Package</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={3}
+                      maxLength={500}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                      placeholder="Tell us about your drone shoot requirements, location, timeline..."
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-black text-white py-3.5 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2 disabled:opacity-50"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <i className="ri-loader-4-line animate-spin"></i>
+                        <span>Sending...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Send Inquiry via Email</span>
+                        <i className="ri-mail-send-line"></i>
+                      </>
+                    )}
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Portfolio */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Aerial Photography Portfolio
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Explore cinematic real estate location video projects, property
+                videography, and real estate drone video productions created for
+                leading developers across India.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/contact"
-                  className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {portfolioProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                  onClick={() => setSelectedProject(project)}
                 >
-                  Get Quote
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap cursor-pointer"
-                >
-                  View Portfolio
-                </Link>
-              </div>
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+                        <i className="ri-play-fill text-2xl text-black"></i>
+                      </div>
+                    </div>
+                    <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
+                      {project.duration}
+                    </div>
+                    <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                      {project.category}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-black mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-black/70">{project.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <Link
+                href="/portfolio"
+                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
+              >
+                View Our Portfolio
+              </Link>
             </div>
           </div>
         </section>
@@ -247,65 +423,6 @@ export default function DroneShootsClient() {
                   <p className="text-gray-600">{f.desc}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Portfolio */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                Aerial Photography Portfolio
-              </h2>
-              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Explore cinematic real estate location video projects, property
-                videography, and real estate drone video productions created for
-                leading developers across India.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {portfolioProjects.map((project) => (
-                <div
-                  key={project.id}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-                  onClick={() => setSelectedProject(project)}
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                        <i className="ri-play-fill text-2xl text-black"></i>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
-                      {project.duration}
-                    </div>
-                    <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                      {project.category}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-black mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-black/70">{project.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-12">
-              <Link
-                href="/portfolio"
-                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
-              >
-                View Our Portfolio
-              </Link>
             </div>
           </div>
         </section>

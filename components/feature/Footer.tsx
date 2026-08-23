@@ -85,7 +85,7 @@ export default function Footer() {
                   name: "Drone Shoots & Location AV",
                   href: "/services/drone-shoots",
                 },
-                { name: "Route Videos", href: "/services/route-videos" },
+                { name: "Route Videos", href: "/route-videos" },
                 {
                   name: "Construction Update Videos",
                   href: "/construction-update-videos",
@@ -97,7 +97,7 @@ export default function Footer() {
                 },
                 {
                   name: "Architectural Scale Models",
-                  href: "/services/scale-model-maker-india",
+                  href: "/architectural-scale-models",
                 },
                 {
                   name: "Graphics & Branding",

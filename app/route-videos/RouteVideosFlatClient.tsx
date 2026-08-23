@@ -91,10 +91,26 @@ const locationVideoBenefits = [
 ];
 
 const processSteps = [
-  { step: "01", title: "Route Planning", desc: "We map all connectivity highlights — metro stations, schools, hospitals, highways, and landmarks." },
-  { step: "02", title: "Shoot Day", desc: "Drone and ground footage of all key routes and landmark destinations around your project." },
-  { step: "03", title: "Motion Graphics", desc: "Animated map overlays, distance callouts, proximity labels, and route highlights added in post." },
-  { step: "04", title: "Final Delivery", desc: "Branded location video delivered in full HD — with social cuts for Instagram, YouTube, and WhatsApp." },
+  {
+    step: "01",
+    title: "Route Planning",
+    desc: "We map all connectivity highlights — metro stations, schools, hospitals, highways, and landmarks.",
+  },
+  {
+    step: "02",
+    title: "Shoot Day",
+    desc: "Drone and ground footage of all key routes and landmark destinations around your project.",
+  },
+  {
+    step: "03",
+    title: "Motion Graphics",
+    desc: "Animated map overlays, distance callouts, proximity labels, and route highlights added in post.",
+  },
+  {
+    step: "04",
+    title: "Final Delivery",
+    desc: "Branded location video delivered in full HD — with social cuts for Instagram, YouTube, and WhatsApp.",
+  },
 ];
 
 const useCases = [
@@ -151,7 +167,9 @@ export default function RouteVideosFlatClient() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const portfolioProjects: Project[] = [
     {
@@ -159,7 +177,8 @@ export default function RouteVideosFlatClient() {
       title: "Hero Homes-The Palatial, Gurugram",
       category: "Location Video",
       image: "/images/portfolio/14.png",
-      description: "Dynamic location video showcasing different approach routes to reach the project site, highlighting nearby landmarks and markers for easy navigation.",
+      description:
+        "Dynamic location video showcasing different approach routes to reach the project site, highlighting nearby landmarks and markers for easy navigation.",
       videoUrl: "https://www.youtube.com/embed/ENlsfe7wQRs?autoplay=1",
       duration: "6:34",
     },
@@ -168,9 +187,30 @@ export default function RouteVideosFlatClient() {
       title: "Naman 58, Mumbai",
       category: "Location Video",
       image: "/images/portfolio/Naman-58-Thumbnail.jpg",
-      description: "Cinematic location video featuring real estate connectivity showcase, animated map, drone coverage, and highway access highlighting.",
+      description:
+        "Cinematic location video featuring real estate connectivity showcase, animated map, drone coverage, and highway access highlighting.",
       videoUrl: "https://www.youtube.com/embed/Yqsj9E8-QHI?autoplay=1",
       duration: "4:00",
+    },
+    {
+      id: 3,
+      title: "ATS Bonheur Hub,Gurugram",
+      category: "Route Videos",
+      image: "/images/portfolio/ATS-bonheur-Hub-Thumbnail.png",
+      description:
+        "Real Estate Route & Connectivity Video for ATS Bonheur Hub, Gurugram, featuring location mapping, drone videography, route visualization and location markers by Alliance Media Labs.",
+      videoUrl: "https://www.youtube.com/embed/rQLJRDb9dwM?autoplay=1",
+      duration: "2:32",
+    },
+    {
+      id: 4,
+      title: "ATS Grove, Gurugram",
+      category: "Route Videos",
+      image: "/images/portfolio/ATS-Grove-Thumbnail.png",
+      description:
+        "Real Estate Route & Connectivity Video for ATS Grove,Gurugram, featuring location mapping, drone videography, route visualization and location markers. ",
+      videoUrl: " https://www.youtube.com/embed/HAPjlVna-FE?autoplay=1",
+      duration: "3.37",
     },
   ];
 
@@ -202,7 +242,9 @@ export default function RouteVideosFlatClient() {
   ];
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -223,7 +265,14 @@ export default function RouteVideosFlatClient() {
       });
       if (res.ok) {
         setSubmitStatus("success");
-        setFormData({ name: "", email: "", phone: "", firm: "", videoType: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          firm: "",
+          videoType: "",
+          message: "",
+        });
       } else {
         setSubmitStatus("error");
       }
@@ -252,16 +301,26 @@ export default function RouteVideosFlatClient() {
                 Location <span className="text-yellow-400">Video</span>
               </h1>
               <p className="text-xl md:text-2xl text-white mb-4 leading-relaxed drop-shadow-lg">
-                A trusted real estate video company — real estate videography, property videography, and real estate connectivity videos that sell the location advantage.
+                A trusted real estate video company — real estate videography,
+                property videography, and real estate connectivity videos that
+                sell the location advantage.
               </p>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed drop-shadow-lg">
-                From a single location video to full real estate video packages, our team covers connectivity, landmarks, and drone routes pan-India.
+                From a single location video to full real estate video packages,
+                our team covers connectivity, landmarks, and drone routes
+                pan-India.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="#contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap">
+                <a
+                  href="#contact"
+                  className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
+                >
                   Request a Quote
                 </a>
-                <a href="#portfolio" className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap">
+                <a
+                  href="#portfolio"
+                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap"
+                >
                   Watch Sample Videos
                 </a>
               </div>
@@ -272,21 +331,29 @@ export default function RouteVideosFlatClient() {
                   <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ri-check-line text-2xl text-green-500" />
                   </div>
-                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <h3 className="text-lg font-bold text-black mb-1">
+                    Thank You!
+                  </h3>
                   <p className="text-gray-600 text-sm">
-                    We&apos;ve received your enquiry. Our team will respond within 24 hours.
+                    We&apos;ve received your enquiry. Our team will respond
+                    within 24 hours.
                   </p>
                 </div>
               ) : (
                 <>
-                  <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                  <h3 className="text-xl font-bold text-black mb-1">
+                    Get a Free Quote
+                  </h3>
                   <p className="text-gray-500 text-sm mb-5">
-                    Share your project location and we&apos;ll respond within 24 hours.
+                    Share your project location and we&apos;ll respond within 24
+                    hours.
                   </p>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Name *
+                        </label>
                         <input
                           type="text"
                           name="name"
@@ -298,7 +365,9 @@ export default function RouteVideosFlatClient() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Email *
+                        </label>
                         <input
                           type="email"
                           name="email"
@@ -312,7 +381,9 @@ export default function RouteVideosFlatClient() {
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Phone
+                        </label>
                         <input
                           type="tel"
                           name="phone"
@@ -323,7 +394,9 @@ export default function RouteVideosFlatClient() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Company Name</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                          Company Name
+                        </label>
                         <input
                           type="text"
                           name="firm"
@@ -335,7 +408,9 @@ export default function RouteVideosFlatClient() {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Video Type</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Video Type
+                      </label>
                       <select
                         name="videoType"
                         value={formData.videoType}
@@ -344,13 +419,21 @@ export default function RouteVideosFlatClient() {
                       >
                         <option value="">Select type</option>
                         <option value="Location Video">Location Video</option>
-                        <option value="Real Estate Videography">Real Estate Videography</option>
-                        <option value="Property Videography">Property Videography</option>
-                        <option value="Full Video Package">Full Video Package</option>
+                        <option value="Real Estate Videography">
+                          Real Estate Videography
+                        </option>
+                        <option value="Property Videography">
+                          Property Videography
+                        </option>
+                        <option value="Full Video Package">
+                          Full Video Package
+                        </option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Project Details
+                      </label>
                       <textarea
                         name="message"
                         value={formData.message}
@@ -361,7 +444,10 @@ export default function RouteVideosFlatClient() {
                       ></textarea>
                     </div>
                     {submitStatus === "error" && (
-                      <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                      <p className="text-red-600 text-sm">
+                        Something went wrong. Please try again or WhatsApp us
+                        directly.
+                      </p>
                     )}
                     <button
                       type="submit"
@@ -388,16 +474,61 @@ export default function RouteVideosFlatClient() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-yellow-400 py-6">
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <div className="text-3xl font-black text-black">{s.value}</div>
-                <div className="text-sm font-semibold text-black/70 mt-1">{s.label}</div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Location Video Portfolio
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Real location video and real estate videography projects delivered
+              as part of our real estate video packages for developers across
+              India.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioProjects.map((project) => (
+              <div
+                key={project.id}
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                onClick={() => setSelectedProject(project)}
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+                      <i className="ri-play-fill text-2xl text-black"></i>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
+                    {project.duration}
+                  </div>
+                  <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                    {project.category}
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-black/70">{project.description}</p>
+                </div>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              href="/portfolio"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap inline-flex"
+            >
+              View Full Portfolio
+            </Link>
           </div>
         </div>
       </section>
@@ -406,15 +537,21 @@ export default function RouteVideosFlatClient() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Real Estate Video Production Capabilities</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Real Estate Video Production Capabilities
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Comprehensive route documentation that enhances location marketing and buyer confidence.
+              Comprehensive route documentation that enhances location marketing
+              and buyer confidence.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {productionCapabilities.map((f) => (
-              <div key={f.title} className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-yellow-400 transition-all duration-300">
+              <div
+                key={f.title}
+                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-yellow-400 transition-all duration-300"
+              >
                 <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
                   <i className={`${f.icon} text-2xl text-black`}></i>
                 </div>
@@ -430,20 +567,31 @@ export default function RouteVideosFlatClient() {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">6 Types of Location &amp; Real Estate Videos We Produce</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              6 Types of Location &amp; Real Estate Videos We Produce
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Every real estate location video we deliver is part of a broader real estate videos toolkit — combined with your walkthroughs and construction updates for a complete marketing package.
+              Every real estate location video we deliver is part of a broader
+              real estate videos toolkit — combined with your walkthroughs and
+              construction updates for a complete marketing package.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {videoTypes.map((mt) => (
-              <div key={mt.title} className="bg-white rounded-2xl p-8 hover:shadow-xl transition-shadow border border-gray-100">
+              <div
+                key={mt.title}
+                className="bg-white rounded-2xl p-8 hover:shadow-xl transition-shadow border border-gray-100"
+              >
                 <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
                   <i className={`${mt.icon} text-2xl text-black`}></i>
                 </div>
-                <h3 className="text-xl font-bold text-black mb-3">{mt.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{mt.desc}</p>
+                <h3 className="text-xl font-bold text-black mb-3">
+                  {mt.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {mt.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -455,10 +603,14 @@ export default function RouteVideosFlatClient() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-black mb-6">What a Location Video Does For Your Launch</h2>
+              <h2 className="text-4xl font-bold text-black mb-6">
+                What a Location Video Does For Your Launch
+              </h2>
               <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
               <p className="text-xl text-gray-600 mb-8">
-                Location videos give potential buyers the accessibility context that photos and floor plans can&apos;t — and give your sales team a story to sell before the first site visit.
+                Location videos give potential buyers the accessibility context
+                that photos and floor plans can&apos;t — and give your sales
+                team a story to sell before the first site visit.
               </p>
               <ul className="space-y-4">
                 {locationVideoBenefits.map((benefit) => (
@@ -470,50 +622,12 @@ export default function RouteVideosFlatClient() {
               </ul>
             </div>
             <div className="relative">
-              <img src="/images/home/1.jpg" alt="Location video production" className="rounded-2xl shadow-2xl w-full h-auto object-cover" />
+              <img
+                src="/images/home/1.jpg"
+                alt="Location video production"
+                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+              />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Location Video Portfolio</h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Real location video and real estate videography projects delivered as part of our real estate video packages for developers across India.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioProjects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-                onClick={() => setSelectedProject(project)}
-              >
-                <div className="relative overflow-hidden">
-                  <img src={project.image} alt={project.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <i className="ri-play-fill text-2xl text-black"></i>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">{project.duration}</div>
-                  <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">{project.category}</div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">{project.title}</h3>
-                  <p className="text-black/70">{project.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/portfolio" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap inline-flex">
-              View Full Portfolio
-            </Link>
           </div>
         </div>
       </section>
@@ -522,16 +636,22 @@ export default function RouteVideosFlatClient() {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Our 4-Step Process</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Our 4-Step Process
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step) => (
               <div key={step.step} className="text-center">
                 <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-black">{step.step.replace(/^0/, "")}</span>
+                  <span className="text-2xl font-bold text-black">
+                    {step.step.replace(/^0/, "")}
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-black mb-4">{step.title}</h3>
+                <h3 className="text-xl font-bold text-black mb-4">
+                  {step.title}
+                </h3>
                 <p className="text-gray-600">{step.desc}</p>
               </div>
             ))}
@@ -543,22 +663,53 @@ export default function RouteVideosFlatClient() {
       <section className="py-24 bg-black">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Choose Our Real Estate Video Company</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Why Choose Our Real Estate Video Company
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              As a real estate video company, we deliver real estate videography and property videography that turns location advantage into a buyer decision point.
+              As a real estate video company, we deliver real estate videography
+              and property videography that turns location advantage into a
+              buyer decision point.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: "ri-flight-takeoff-line", title: "Drone Aerial B-Roll", desc: "Cinematic overhead shots of the project site, arterial roads, and key landmarks in every real estate drone video." },
-              { icon: "ri-map-2-line", title: "Animated Map Overlays", desc: "Motion graphics showing routes, distances, and travel times built into every location video." },
-              { icon: "ri-road-map-line", title: "Proximity Text Labels", desc: "On-screen callouts like '5 mins to Metro' or '10 mins to Airport' during the relevant shots." },
-              { icon: "ri-music-2-line", title: "Professional Music & VO", desc: "Licensed background music and optional professional voiceover narration on every real estate videography project." },
-              { icon: "ri-scissors-cut-line", title: "Social Media Cut-Downs", desc: "30s and 60s versions optimised for Instagram Reels, YouTube Shorts, and WhatsApp included in every package." },
-              { icon: "ri-building-4-line", title: "Brand Overlays", desc: "Your project logo, brand colours, and developer identity integrated throughout every property videography deliverable." },
+              {
+                icon: "ri-flight-takeoff-line",
+                title: "Drone Aerial B-Roll",
+                desc: "Cinematic overhead shots of the project site, arterial roads, and key landmarks in every real estate drone video.",
+              },
+              {
+                icon: "ri-map-2-line",
+                title: "Animated Map Overlays",
+                desc: "Motion graphics showing routes, distances, and travel times built into every location video.",
+              },
+              {
+                icon: "ri-road-map-line",
+                title: "Proximity Text Labels",
+                desc: "On-screen callouts like '5 mins to Metro' or '10 mins to Airport' during the relevant shots.",
+              },
+              {
+                icon: "ri-music-2-line",
+                title: "Professional Music & VO",
+                desc: "Licensed background music and optional professional voiceover narration on every real estate videography project.",
+              },
+              {
+                icon: "ri-scissors-cut-line",
+                title: "Social Media Cut-Downs",
+                desc: "30s and 60s versions optimised for Instagram Reels, YouTube Shorts, and WhatsApp included in every package.",
+              },
+              {
+                icon: "ri-building-4-line",
+                title: "Brand Overlays",
+                desc: "Your project logo, brand colours, and developer identity integrated throughout every property videography deliverable.",
+              },
             ].map((f) => (
-              <div key={f.title} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors">
+              <div
+                key={f.title}
+                className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors"
+              >
                 <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
                   <i className={`${f.icon} text-2xl text-black`}></i>
                 </div>
@@ -574,16 +725,23 @@ export default function RouteVideosFlatClient() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-black mb-4">Who Uses Our Location Videos</h2>
+            <h2 className="text-4xl font-bold text-black mb-4">
+              Who Uses Our Location Videos
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {useCases.map((item) => (
-              <div key={item.title} className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+              <div
+                key={item.title}
+                className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow"
+              >
                 <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
                   <i className={`${item.icon} text-2xl text-black`}></i>
                 </div>
-                <h3 className="text-xl font-bold text-black mb-3">{item.title}</h3>
+                <h3 className="text-xl font-bold text-black mb-3">
+                  {item.title}
+                </h3>
                 <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
@@ -595,10 +753,14 @@ export default function RouteVideosFlatClient() {
       <section className="py-20 bg-black text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Developers Choose Our Real Estate Video Company</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Why Developers Choose Our Real Estate Video Company
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              We specialise exclusively in real estate video — location videos, property videography, and real estate connectivity videos — so every shoot is planned around what actually helps a project sell.
+              We specialise exclusively in real estate video — location videos,
+              property videography, and real estate connectivity videos — so
+              every shoot is planned around what actually helps a project sell.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-left">
               {companyCards.map((item) => (
@@ -607,7 +769,9 @@ export default function RouteVideosFlatClient() {
                     <i className={`${item.icon} text-black`}></i>
                   </div>
                   <h3 className="font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -619,12 +783,17 @@ export default function RouteVideosFlatClient() {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Frequently Asked Questions
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
           </div>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-8 hover:shadow-md transition-shadow">
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-8 hover:shadow-md transition-shadow"
+              >
                 <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.a}</p>
               </div>
@@ -637,12 +806,19 @@ export default function RouteVideosFlatClient() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center bg-gray-50 rounded-2xl p-12 shadow-lg">
-            <h2 className="text-3xl font-bold text-black mb-4">Get a Custom Location Video Quote</h2>
+            <h2 className="text-3xl font-bold text-black mb-4">
+              Get a Custom Location Video Quote
+            </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             <p className="text-gray-600 mb-8">
-              Pricing depends on the number of routes covered, aerial footage, animation complexity, and delivery timeline. Contact our experts for a custom quote.
+              Pricing depends on the number of routes covered, aerial footage,
+              animation complexity, and delivery timeline. Contact our experts
+              for a custom quote.
             </p>
-            <a href="#contact" className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+            <a
+              href="#contact"
+              className="inline-flex items-center bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
               <i className="ri-phone-line mr-2"></i>Talk to Our Team
             </a>
           </div>
@@ -660,17 +836,40 @@ export default function RouteVideosFlatClient() {
               </h3>
               <div className="grid gap-4">
                 {[
-                  { href: "/services/route-videos", title: "Location AV / Route Videos", desc: "Cinematic connectivity and location advantage videos.", icon: "ri-road-map-line" },
-                  { href: "/construction-update-videos", title: "Construction Videos", desc: "Scheduled construction progress documentation.", icon: "ri-vidicon-line" },
-                  { href: "/3d-walkthrough-videos", title: "3D Architectural Walkthrough Services", desc: "Cinematic 3D walkthrough videos for property launches.", icon: "ri-video-line" },
+                  {
+                    href: "/services/route-videos",
+                    title: "Location AV / Route Videos",
+                    desc: "Cinematic connectivity and location advantage videos.",
+                    icon: "ri-road-map-line",
+                  },
+                  {
+                    href: "/construction-update-videos",
+                    title: "Construction Videos",
+                    desc: "Scheduled construction progress documentation.",
+                    icon: "ri-vidicon-line",
+                  },
+                  {
+                    href: "/3d-walkthrough-videos",
+                    title: "3D Architectural Walkthrough Services",
+                    desc: "Cinematic 3D walkthrough videos for property launches.",
+                    icon: "ri-video-line",
+                  },
                 ].map((s) => (
-                  <Link key={s.href} href={s.href} className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group">
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group"
+                  >
                     <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
                       <i className={`${s.icon} text-yellow-500 text-lg`} />
                     </div>
                     <div>
-                      <div className="font-semibold text-black text-sm group-hover:text-yellow-600 transition-colors">{s.title}</div>
-                      <div className="text-gray-500 text-xs mt-0.5">{s.desc}</div>
+                      <div className="font-semibold text-black text-sm group-hover:text-yellow-600 transition-colors">
+                        {s.title}
+                      </div>
+                      <div className="text-gray-500 text-xs mt-0.5">
+                        {s.desc}
+                      </div>
                     </div>
                   </Link>
                 ))}
@@ -683,17 +882,40 @@ export default function RouteVideosFlatClient() {
               </h3>
               <div className="grid gap-4">
                 {[
-                  { href: "/blog/real-estate-marketing-video-types-india", title: "7 Types of Real Estate Marketing Videos Every Indian Developer Should Use", tag: "Marketing" },
-                  { href: "/blog/sell-property-to-nri-buyers-india", title: "How to Sell Property to NRI Buyers Who Can't Visit India", tag: "NRI Guide" },
-                  { href: "/blog/premium-real-estate-marketing-differentiation-india", title: "Why Your Premium Project Looks Like Every Other Listing Online", tag: "Marketing" },
+                  {
+                    href: "/blog/real-estate-marketing-video-types-india",
+                    title:
+                      "7 Types of Real Estate Marketing Videos Every Indian Developer Should Use",
+                    tag: "Marketing",
+                  },
+                  {
+                    href: "/blog/sell-property-to-nri-buyers-india",
+                    title:
+                      "How to Sell Property to NRI Buyers Who Can't Visit India",
+                    tag: "NRI Guide",
+                  },
+                  {
+                    href: "/blog/premium-real-estate-marketing-differentiation-india",
+                    title:
+                      "Why Your Premium Project Looks Like Every Other Listing Online",
+                    tag: "Marketing",
+                  },
                 ].map((b) => (
-                  <Link key={b.href} href={b.href} className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group">
+                  <Link
+                    key={b.href}
+                    href={b.href}
+                    className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group"
+                  >
                     <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
                       <i className="ri-article-line text-yellow-500 text-lg" />
                     </div>
                     <div>
-                      <span className="text-xs text-yellow-600 font-semibold">{b.tag}</span>
-                      <div className="font-semibold text-black text-sm group-hover:text-yellow-600 transition-colors mt-0.5">{b.title}</div>
+                      <span className="text-xs text-yellow-600 font-semibold">
+                        {b.tag}
+                      </span>
+                      <div className="font-semibold text-black text-sm group-hover:text-yellow-600 transition-colors mt-0.5">
+                        {b.title}
+                      </div>
                     </div>
                   </Link>
                 ))}
@@ -708,10 +930,13 @@ export default function RouteVideosFlatClient() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">Talk to Our Location Video Team</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                Talk to Our Location Video Team
+              </h2>
               <div className="w-20 h-1 bg-black mx-auto mb-8"></div>
               <p className="text-lg text-black/80">
-                Share your project location — we&apos;ll map the connectivity story and send a quote within 24 hours.
+                Share your project location — we&apos;ll map the connectivity
+                story and send a quote within 24 hours.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-2xl">
@@ -720,14 +945,21 @@ export default function RouteVideosFlatClient() {
                   <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ri-check-line text-3xl text-green-500" />
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-2">Thank You!</h3>
-                  <p className="text-gray-600">We&apos;ve received your enquiry. Our team will respond within 24 hours.</p>
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    Thank You!
+                  </h3>
+                  <p className="text-gray-600">
+                    We&apos;ve received your enquiry. Our team will respond
+                    within 24 hours.
+                  </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Name *
+                      </label>
                       <input
                         type="text"
                         name="name"
@@ -739,7 +971,9 @@ export default function RouteVideosFlatClient() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Email *
+                      </label>
                       <input
                         type="email"
                         name="email"
@@ -753,7 +987,9 @@ export default function RouteVideosFlatClient() {
                   </div>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Phone
+                      </label>
                       <input
                         type="tel"
                         name="phone"
@@ -764,7 +1000,9 @@ export default function RouteVideosFlatClient() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Company Name
+                      </label>
                       <input
                         type="text"
                         name="firm"
@@ -776,7 +1014,9 @@ export default function RouteVideosFlatClient() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Video Type</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Video Type
+                    </label>
                     <select
                       name="videoType"
                       value={formData.videoType}
@@ -785,13 +1025,21 @@ export default function RouteVideosFlatClient() {
                     >
                       <option value="">Select type</option>
                       <option value="Location Video">Location Video</option>
-                      <option value="Real Estate Videography">Real Estate Videography</option>
-                      <option value="Property Videography">Property Videography</option>
-                      <option value="Full Video Package">Full Video Package</option>
+                      <option value="Real Estate Videography">
+                        Real Estate Videography
+                      </option>
+                      <option value="Property Videography">
+                        Property Videography
+                      </option>
+                      <option value="Full Video Package">
+                        Full Video Package
+                      </option>
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Project Details
+                    </label>
                     <textarea
                       name="message"
                       value={formData.message}
@@ -802,7 +1050,10 @@ export default function RouteVideosFlatClient() {
                     ></textarea>
                   </div>
                   {submitStatus === "error" && (
-                    <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                    <p className="text-red-600 text-sm">
+                      Something went wrong. Please try again or WhatsApp us
+                      directly.
+                    </p>
                   )}
                   <button
                     type="submit"
@@ -822,8 +1073,14 @@ export default function RouteVideosFlatClient() {
                     )}
                   </button>
                   <p className="text-center text-gray-500 text-xs">
-                    We respond within 24 hours. Your information is confidential. Or{" "}
-                    <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="text-green-600 font-medium hover:underline">
+                    We respond within 24 hours. Your information is
+                    confidential. Or{" "}
+                    <a
+                      href="https://wa.me/919999999999"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-600 font-medium hover:underline"
+                    >
                       WhatsApp us directly
                     </a>
                     .
@@ -838,15 +1095,24 @@ export default function RouteVideosFlatClient() {
       {/* Final CTA */}
       <section className="py-24 bg-black">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Tell Your Location Story?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Tell Your Location Story?
+          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            From a single connectivity clip to a full location-video package, our team is ready to map the route.
+            From a single connectivity clip to a full location-video package,
+            our team is ready to map the route.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap">
+            <a
+              href="#contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
+            >
               Start Your Project
             </a>
-            <a href="#portfolio" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors whitespace-nowrap">
+            <a
+              href="#portfolio"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors whitespace-nowrap"
+            >
               View Our Work
             </a>
           </div>
@@ -858,8 +1124,14 @@ export default function RouteVideosFlatClient() {
 
       {/* Video Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6" onClick={() => setSelectedProject(null)}>
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div
+            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="relative">
               <div className="aspect-video">
                 <iframe
@@ -878,12 +1150,18 @@ export default function RouteVideosFlatClient() {
               </button>
             </div>
             <div className="p-8">
-              <h3 className="text-3xl font-bold text-black mb-4">{selectedProject.title}</h3>
-              <p className="text-black/70 text-lg mb-6">{selectedProject.description}</p>
+              <h3 className="text-3xl font-bold text-black mb-4">
+                {selectedProject.title}
+              </h3>
+              <p className="text-black/70 text-lg mb-6">
+                {selectedProject.description}
+              </p>
               <div className="flex items-center space-x-6 mb-2">
                 <div className="flex items-center space-x-2">
                   <i className="ri-time-line text-yellow-500"></i>
-                  <span className="text-black">Duration: {selectedProject.duration}</span>
+                  <span className="text-black">
+                    Duration: {selectedProject.duration}
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <i className="ri-play-circle-line text-yellow-500"></i>

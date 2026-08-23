@@ -644,6 +644,114 @@ const portfolioItems = [
       },
     ],
   },
+  {
+    id: 46,
+    title: "Featherlite Signature, Bengaluru",
+    category: "VR Experience",
+    image: "/images/portfolio/Featherlite-Thumbnail.png",
+    description:
+      "Interactive VR Tour of Commercial Office Spaces with 3D Visualization & Nearby Landmark Highlights.",
+    videoUrl: "https://amlabs.cloud/Featherlite_Signature-V02/",
+    isExternal: true,
+  },
+  {
+    id: 47,
+    title: "GMC Confluence, Bengaluru",
+    category: "VR Experience",
+    image: "/images/portfolio/GMC-Thumbnail.png",
+    description:
+      "Immersive VR Tour for Residential Real Estate, featuring modern amenities, landscaped green spaces, premium day & night views, 3D visualization, and interactive nearby landmark highlights. ",
+    videoUrl: "https://amlabs.cloud/GMC_Bengaluru/",
+    isExternal: true,
+  },
+  {
+    id: 48,
+    title: "Aura Aerth, Gurugram",
+    category: "3D Rendering",
+    image: "/images/services/3d-renders-isometrics/Aura-renders/render-1.png",
+    description:
+      "High-Rise 3D Architectural Renders showcasing premium residential living, luxury design, and detailed architectural visualization.",
+    // videoUrl:
+    //   "https://www.youtube.com/embed/BiCCdx0fDik?si=y4M05nZkVgJPmB9U&autoplay=1",
+    hasSlider: true,
+    sliderImages: [
+      {
+        url: "/images/services/3d-renders-isometrics/Aura-renders/render-1.png",
+        title: "Luxury Residential Complex",
+        description: "Modern residential development with premium amenities",
+      },
+      {
+        url: "/images/services/3d-renders-isometrics/Aura-renders/render-3.png",
+        title: "Premium Interior Design",
+        description: "Sophisticated interior spaces with modern finishes",
+      },
+      {
+        url: "/images/services/3d-renders-isometrics/Aura-renders/render-4.png",
+        title: "High-Rise Development",
+        description: "Urban residential tower with panoramic city views",
+      },
+      {
+        url: "/images/services/3d-renders-isometrics/Aura-renders/render-5.png",
+        title: "Premium Villa Project",
+        description: "Exclusive villa development with luxury amenities",
+      },
+      {
+        url: "/images/services/3d-renders-isometrics/Aura-renders/render-7.png",
+        title: "Master Plan Visualization",
+        description: "Complete residential development master planning",
+      },
+      {
+        url: "/images/services/3d-renders-isometrics/Aura-renders/render-8.png",
+        title: "Master Plan Visualization",
+        description: "Complete residential development master planning",
+      },
+    ],
+  },
+  {
+    id: 49,
+    title: "Briston, Neemrana",
+    category: "3D Walkthrough",
+    image: "/images/portfolio/Briston-Thumbnail.png",
+    description:
+      "AI-powered teaser video showcasing Japanese-inspired apartments, architecture, and lifestyle.",
+    videoUrl: "https://www.youtube.com/embed/5aCZOQxUZg4?autoplay=1",
+  },
+  {
+    id: 50,
+    title: "ATS Bonheur Hub,Gurugram",
+    category: "Route Videos",
+    image: "/images/portfolio/ATS-bonheur-Hub-Thumbnail.png",
+    description:
+      "Real Estate Route & Connectivity Video for ATS Bonheur Hub, Gurugram, featuring location mapping, drone videography, route visualization and location markers by Alliance Media Labs.",
+    videoUrl: "https://www.youtube.com/embed/rQLJRDb9dwM?autoplay=1",
+  },
+  {
+    id: 51,
+    title: "ATS Grove, Gurugram",
+    category: "Route Videos",
+    image: "/images/portfolio/ATS-Grove-Thumbnail.png",
+    description:
+      "Real Estate Route & Connectivity Video for ATS Grove,Gurugram, featuring location mapping, drone videography, route visualization and location markers. ",
+    videoUrl: "https://www.youtube.com/embed/HAPjlVna-FE?autoplay=1",
+  },
+  {
+    id: 52,
+    title: "Hero Homes, Sector 99, Mohali",
+    category: "Location AV",
+    image: "/images/portfolio/Hero-Mohali-Thumbnail.png",
+    description:
+      "A nature led, Real Estate Location AV for Hero Homes, Sector 99 Mohali, featuring cinematic storytelling, professional voiceover, location visuals and connectivity mapping",
+    videoUrl: "https://www.youtube.com/embed/yWt6TLb0a2k?autoplay=1",
+  },
+  {
+    id: 53,
+    title: "Hero Homes, Sector MU, Greater Noida ",
+    category: "Location AV",
+    image: "/images/portfolio/Hero-Homes-Noida-Thumbnail.png",
+    description:
+      "Location AV showcasing real estate connectivity, cinematic storytelling, route visualization and professional real estate video production. ",
+    videoUrl: "https://www.youtube.com/embed/d22cdmKn2WE?autoplay=1",
+  },
 ];
 
 const categories = [

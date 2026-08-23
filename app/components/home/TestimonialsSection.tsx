@@ -113,6 +113,8 @@ const clientLogos = [
   { name: "HCBS", logo: "/images/testimonial/HCBS-Logo.png" },
   { name: "Briston", logo: "/images/testimonial/Briston-Logo.png" },
   { name: "XPO", logo: "/images/testimonial/Property-XPO-Logo.png" },
+  { name: "GMC", logo: "/images/testimonial/GMC-logo.png" },
+  { name: "Divyansh", logo: "/images/testimonial/divyansh-logo.png" },
 ];
 
 export default function TestimonialsSection() {
