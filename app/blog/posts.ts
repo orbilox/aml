@@ -13,6 +13,45 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "real-estate-digital-marketing-guide-india",
+    title: "Real Estate Digital Marketing in India: The Complete Guide for Developers (2026)",
+    excerpt:
+      "Real estate developers in India spend heavily on Google Ads, Meta campaigns, and portal listings — then wonder why cost-per-lead keeps climbing while site-visit conversion stays flat. Here's the complete 2026 playbook for real estate digital marketing that actually converts traffic into bookings.",
+    category: "Real Estate Digital Marketing",
+    date: "August 25, 2026",
+    dateISO: "2026-08-25",
+    readTime: "10 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/home/2.jpg",
+    tags: ["Real Estate Digital Marketing", "SEO for Developers", "Real Estate Paid Ads", "Social Media Marketing India", "Lead Generation Real Estate"],
+  },
+  {
+    slug: "interactive-3d-tools-real-estate-sales-guide",
+    title: "Interactive 3D Tools for Real Estate Sales: The Complete Guide (2026)",
+    excerpt:
+      "Static renders show a buyer one version of a unit. Interactive 3D tools let them build their own — swapping finishes, comparing unit types, and checking the view from their exact floor before they ever visit the site. Here's how Indian developers are using them to qualify buyers and cut sales cycles.",
+    category: "Interactive 3D Tools",
+    date: "August 20, 2026",
+    dateISO: "2026-08-20",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/portfolio/13.png",
+    tags: ["Interactive 3D Tools", "Apartment Configurator", "Real Estate Sales Technology", "3D Configurator India", "Digital Sales Office"],
+  },
+  {
+    slug: "virtual-reality-tours-real-estate-india-guide",
+    title: "Virtual Reality Tours for Real Estate in India: The Complete Guide (2026)",
+    excerpt:
+      "Everything Indian real estate developers need to know about virtual reality tours — how they work, what they cost, how VR compares to 360° tours and 3D walkthroughs, and how top developers use immersive VR experiences to close NRI and remote buyers without a single site visit.",
+    category: "Virtual Reality Tours",
+    date: "August 10, 2026",
+    dateISO: "2026-08-10",
+    readTime: "10 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/virtual-reality-tours/1.jpg",
+    tags: ["Virtual Reality Tours", "VR Real Estate India", "360 Property Tour", "NRI Real Estate", "Real Estate Visualization"],
+  },
+  {
     slug: "portfolio-inventory-faster-sales-india",
     title: "How Top Real Estate Developers Sell Portfolio Inventory 40% Faster — Without Discounting",
     excerpt:
@@ -30,7 +69,7 @@ export const blogPosts: BlogPost[] = [
     title: "Real Estate Buyer Psychology: Why Most Developers Lose Deals in the First 3 Seconds (And How to Win Them Back)",
     excerpt:
       "Discover why real estate buyers make decisions in the first 3 seconds — and the exact psychology framework top developers use to build trust immediately. Learn the real estate buyer psychology patterns that determine whether a buyer stays or leaves your sales gallery.",
-    category: "Real Estate Marketing",
+    category: "Real Estate Sales Psychology",
     date: "July 20, 2026",
     dateISO: "2026-07-20",
     readTime: "12 min read",
@@ -43,7 +82,7 @@ export const blogPosts: BlogPost[] = [
     title: "What a Scale Model Actually Does Inside a Real Estate Sales Gallery (And Why Empty Ones Lose Bookings)",
     excerpt:
       "You built a sales gallery to close deals — but if the centrepiece is a screen instead of a physical scale model, buyers walk the space, nod politely, and leave without booking. Here's what a scale model actually does inside an experience centre, and why the room feels empty without one.",
-    category: "Real Estate Marketing",
+    category: "Architectural Scale Models",
     date: "July 5, 2026",
     dateISO: "2026-07-05",
     readTime: "9 min read",
@@ -56,7 +95,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why Your Premium Project Looks Like Every Other Listing Online",
     excerpt:
       "You spent crores on premium finishes, larger floor plates, and better amenities — then put up the same generic renders and stock-style photos as every budget project in your market. Here's why your premium positioning dies in the first three seconds of a scroll, and the exact fix.",
-    category: "Real Estate Marketing",
+    category: "Luxury Real Estate Marketing",
     date: "June 28, 2026",
     dateISO: "2026-06-28",
     readTime: "9 min read",
@@ -69,7 +108,7 @@ export const blogPosts: BlogPost[] = [
     title: "How to Sell Property to NRI Buyers Who Can't Visit India: The Remote Buyer Visualization Playbook",
     excerpt:
       "NRI buyers invest billions in Indian real estate every year — yet most can't fly in to inspect a property before booking. Here's the exact visualization stack top developers use to close high-ticket NRI sales remotely, without a single site visit.",
-    category: "Real Estate Marketing",
+    category: "NRI Real Estate Marketing",
     date: "June 22, 2026",
     dateISO: "2026-06-22",
     readTime: "10 min read",
@@ -82,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     title: "Construction Delays Are Killing Buyer Trust: How Indian Developers Rebuild Confidence With Video Updates",
     excerpt:
       "Construction delays are the single biggest fear driving real estate buyer anxiety in India — and it's the silence between booking and possession, not the delay itself, that turns a hesitant buyer into a cancellation. Here's the exact video-update framework developers use to protect their sales pipeline.",
-    category: "Real Estate Marketing",
+    category: "Construction Update Videos",
     date: "June 13, 2026",
     dateISO: "2026-06-13",
     readTime: "9 min read",
@@ -95,7 +134,7 @@ export const blogPosts: BlogPost[] = [
     title: "Architectural Scale Model Price in India 2026: Complete Cost Guide for Real Estate Developers",
     excerpt:
       "What does an architectural scale model actually cost in India? This complete pricing guide breaks down scale model charges by project type, size, and finish level — so real estate developers and project heads can budget accurately and compare vendor quotes with confidence.",
-    category: "Real Estate Marketing",
+    category: "Architectural Scale Models",
     date: "June 2, 2026",
     dateISO: "2026-06-02",
     readTime: "7 min read",
@@ -108,7 +147,7 @@ export const blogPosts: BlogPost[] = [
     title: "Best Architectural Scale Model Company in India: How to Choose the Right Partner (2026)",
     excerpt:
       "A practical B2B guide for real estate developers and project heads evaluating architectural scale model companies in India. Learn the seven criteria that separate the best architectural model makers from average vendors — and why the right partner directly impacts your sales office conversion.",
-    category: "Real Estate Marketing",
+    category: "Architectural Scale Models",
     date: "May 25, 2026",
     dateISO: "2026-05-25",
     readTime: "7 min read",
@@ -121,7 +160,7 @@ export const blogPosts: BlogPost[] = [
     title: "7 Types of Real Estate Marketing Videos Every Indian Developer Should Use in 2026",
     excerpt:
       "A complete guide to real estate video production in India — from 3D walkthroughs and drone shoots to VR tours and construction update videos. Learn which property video types drive the most leads, and how to build the right mix for your project launch.",
-    category: "Real Estate Marketing",
+    category: "Real Estate Video Marketing",
     date: "May 18, 2026",
     dateISO: "2026-05-18",
     readTime: "11 min read",
@@ -134,7 +173,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Ultimate Guide to 3D Walkthrough Video Services for Real Estate",
     excerpt:
       "Discover how professional 3D walkthrough video services are transforming real estate marketing in India. Learn about the production process, costs, and why top developers choose 3D walkthroughs to sell faster.",
-    category: "Real Estate Marketing",
+    category: "3D Walkthrough Videos",
     date: "March 15, 2026",
     dateISO: "2026-03-15",
     readTime: "8 min read",
@@ -147,7 +186,7 @@ export const blogPosts: BlogPost[] = [
     title: "3D House Rendering in India: The Complete Guide for Real Estate Developers (2026)",
     excerpt:
       "Everything Indian real estate developers need to know about 3D house rendering — types of renders, how to choose between 3D rendering companies, costs, timelines, AI rendering, and when to use a 3D floor plan vs a walkthrough video.",
-    category: "Real Estate Marketing",
+    category: "3D Renders & Isometrics",
     date: "April 20, 2026",
     dateISO: "2026-04-20",
     readTime: "9 min read",
@@ -160,7 +199,7 @@ export const blogPosts: BlogPost[] = [
     title: "Real Estate Drone Photography in India: The Complete Guide to Aerial Videography (2026)",
     excerpt:
       "Everything real estate developers need to know about hiring a drone photography company in India — aerial shot types, 4K drone video production, DGCA licensing, location AV shoots, construction aerial monitoring, and how to get cinematic footage that sells.",
-    category: "Real Estate Marketing",
+    category: "Drone Shoots & Aerial Videography",
     date: "May 5, 2026",
     dateISO: "2026-05-05",
     readTime: "9 min read",
@@ -173,7 +212,7 @@ export const blogPosts: BlogPost[] = [
     title: "Scale Model Making in India: The Complete Guide for Real Estate Developers (2026)",
     excerpt:
       "Everything real estate developers need to know about architectural scale models in India — types, scale ratios, materials, how to choose a scale model making company, costs, and why a physical miniature model still outsells every digital alternative.",
-    category: "Real Estate Marketing",
+    category: "Architectural Scale Models",
     date: "May 8, 2026",
     dateISO: "2026-05-08",
     readTime: "12 min read",
@@ -186,7 +225,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can't",
     excerpt:
       "In an era of VR tours and CGI renders, why do India's top real estate developers still commission handcrafted architectural scale models? The answer lies in neuroscience, trust, and one undeniable truth about how buyers make decisions.",
-    category: "Real Estate Marketing",
+    category: "Architectural Scale Models",
     date: "April 13, 2026",
     dateISO: "2026-04-13",
     readTime: "9 min read",

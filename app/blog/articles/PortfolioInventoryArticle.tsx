@@ -1,19 +1,64 @@
 "use client";
 
 import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import type { BlogPost } from "../posts";
 
-export default function PortfolioInventoryArticle() {
+export default function PortfolioInventoryArticle({ post }: { post: BlogPost }) {
   return (
-    <article className="max-w-4xl mx-auto px-6 py-12">
-      {/* Hero Section */}
-      <div className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-          How Top Real Estate Developers Sell Portfolio Inventory 40% Faster — Without Discounting
-        </h1>
-        <p className="text-xl text-gray-600 mb-4">
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero Image */}
+      <div className="relative h-[480px] overflow-hidden mt-20">
+        <img
+          src={post.thumbnail}
+          alt={post.title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/55"></div>
+        <div className="absolute inset-0 flex items-end">
+          <div className="container mx-auto px-6 pb-12">
+            <span className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">
+              {post.category}
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold text-white max-w-4xl leading-tight">
+              {post.title}
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <article className="max-w-4xl mx-auto px-6 py-16">
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
+          <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
+          <i className="ri-arrow-right-s-line"></i>
+          <Link href="/blog" className="hover:text-yellow-500 transition-colors">Blog</Link>
+          <i className="ri-arrow-right-s-line"></i>
+          <span className="text-gray-400 truncate max-w-xs">{post.title}</span>
+        </nav>
+
+        {/* Meta */}
+        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-10 pb-8 border-b border-gray-200">
+          <div className="flex items-center gap-2">
+            <i className="ri-user-line text-yellow-500"></i>
+            <span>{post.author}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="ri-calendar-line text-yellow-500"></i>
+            <span>{post.date}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="ri-time-line text-yellow-500"></i>
+            <span>{post.readTime}</span>
+          </div>
+        </div>
+
+        <p className="text-xl text-gray-600 mb-8">
           Portfolio developers managing 5+ active projects face a silent killer: inventory stagnation on some projects while others sell out. Here's the exact framework top developers use to accelerate sales velocity across their entire portfolio—without margin-crushing discounts.
         </p>
-      </div>
 
       {/* Main Content */}
       <div className="prose prose-lg max-w-none mb-12">
@@ -249,6 +294,29 @@ export default function PortfolioInventoryArticle() {
           </div>
         </div>
       </div>
-    </article>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 pt-8 border-t border-gray-200 mt-12 mb-12">
+          {post.tags.map((tag) => (
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full"
+            >
+              #{tag.replace(/ /g, "")}
+            </span>
+          ))}
+        </div>
+
+        {/* Back to Blog */}
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-4"
+        >
+          <i className="ri-arrow-left-line"></i> Back to Blog
+        </Link>
+      </article>
+
+      <Footer />
+    </div>
   );
 }

@@ -1,10 +1,13 @@
 "use client";
 import { useState } from "react";
 import Button from "@/components/base/Button";
+import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
 type FormFields = {
   name: string;
   email: string;
+  countryCode: string;
+  phone: string;
   company: string;
   project_type: string;
   budget: string;
@@ -43,6 +46,12 @@ function validateField(name: keyof FormFields, value: string): string | undefine
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()))
         return "Enter a valid email address.";
       return undefined;
+    case "phone": {
+      if (!value.trim()) return "Phone number is required.";
+      const digits = value.replace(/\D/g, "");
+      if (digits.length !== 10) return "Enter a valid 10-digit mobile number.";
+      return undefined;
+    }
     default:
       return undefined;
   }
@@ -52,6 +61,8 @@ export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    countryCode: DEFAULT_COUNTRY_CODE,
+    phone: "",
     company: "",
     project_type: "",
     budget: "",
@@ -74,9 +85,10 @@ export default function ContactSection() {
   ) => {
     const { name, value } = e.target;
     const field = name as keyof FormFields;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const sanitized = field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    setFormData((prev) => ({ ...prev, [field]: sanitized }));
     if (touched[field]) {
-      setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
+      setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
     }
   };
 
@@ -95,9 +107,10 @@ export default function ContactSection() {
     const nextErrors: FormErrors = {
       name: validateField("name", formData.name),
       email: validateField("email", formData.email),
+      phone: validateField("phone", formData.phone),
     };
     setErrors(nextErrors);
-    setTouched((prev) => ({ ...prev, name: true, email: true }));
+    setTouched((prev) => ({ ...prev, name: true, email: true, phone: true }));
     if (Object.values(nextErrors).some(Boolean)) return;
 
     setIsSubmitting(true);
@@ -110,7 +123,7 @@ export default function ContactSection() {
           subject: `Contact Form Inquiry - ${formData.name}`,
           from_name: formData.name,
           from_email: formData.email,
-          message: `New Contact Form Submission\n\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "Not provided"}\nProject Type: ${formData.project_type || "Not specified"}\nBudget Range: ${formData.budget || "Not specified"}\n\nProject Details:\n${formData.message || "No additional details provided"}`,
+          message: `New Contact Form Submission\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.countryCode} ${formData.phone}\nCompany: ${formData.company || "Not provided"}\nProject Type: ${formData.project_type || "Not specified"}\nBudget Range: ${formData.budget || "Not specified"}\n\nProject Details:\n${formData.message || "No additional details provided"}`,
         }),
       });
       const data = await response.json();
@@ -120,6 +133,8 @@ export default function ContactSection() {
           setFormData({
             name: "",
             email: "",
+            countryCode: DEFAULT_COUNTRY_CODE,
+            phone: "",
             company: "",
             project_type: "",
             budget: "",
@@ -259,18 +274,58 @@ export default function ContactSection() {
                   )}
                 </div>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Company
-                </label>
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
-                  placeholder="Your company name"
-                />
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone *
+                  </label>
+                  <div className="flex gap-2">
+                    <select
+                      name="countryCode"
+                      value={formData.countryCode}
+                      onChange={handleInputChange}
+                      className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
+                    >
+                      {COUNTRY_CODES.map((c) => (
+                        <option key={c.code} value={c.code}>
+                          {c.code}
+                        </option>
+                      ))}
+                    </select>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      onBlur={handleBlur}
+                      required
+                      maxLength={10}
+                      inputMode="numeric"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+                        touched.phone && errors.phone
+                          ? "border-red-400 focus:ring-red-400"
+                          : "border-gray-300 focus:ring-yellow-400"
+                      }`}
+                      placeholder="10-digit mobile number"
+                    />
+                  </div>
+                  {touched.phone && errors.phone && (
+                    <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                  )}
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                    placeholder="Your company name"
+                  />
+                </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>

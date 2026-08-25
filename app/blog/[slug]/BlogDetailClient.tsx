@@ -6,10 +6,25 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getPostBySlug } from "../posts";
 import PortfolioInventoryArticle from "@/app/blog/articles/PortfolioInventoryArticle";
+import VirtualRealityToursGuideArticle from "@/app/blog/articles/VirtualRealityToursGuideArticle";
+import Interactive3DToolsGuideArticle from "@/app/blog/articles/Interactive3DToolsGuideArticle";
+import DigitalMarketingGuideArticle from "@/app/blog/articles/DigitalMarketingGuideArticle";
 
 export default function BlogDetailClient({ slug }: { slug: string }) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
+
+  if (slug === "real-estate-digital-marketing-guide-india") {
+    return <DigitalMarketingGuideArticle post={post} />;
+  }
+
+  if (slug === "interactive-3d-tools-real-estate-sales-guide") {
+    return <Interactive3DToolsGuideArticle post={post} />;
+  }
+
+  if (slug === "virtual-reality-tours-real-estate-india-guide") {
+    return <VirtualRealityToursGuideArticle post={post} />;
+  }
 
   if (slug === "3d-walkthrough-video-service") {
     return <WalkthroughArticle post={post} />;
@@ -64,7 +79,7 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
   }
 
   if (slug === "portfolio-inventory-faster-sales-india") {
-    return <PortfolioInventoryArticle />;
+    return <PortfolioInventoryArticle post={post} />;
   }
 
   return notFound();
@@ -628,7 +643,11 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
           <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">What Is 3D House Rendering?</h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            <strong>3D house rendering</strong> is the process of generating a photorealistic image of a building from architectural drawings using specialist 3D software. The result looks indistinguishable from a professional photograph — except that the building does not need to exist yet.
+            <strong>3D house rendering</strong> is the process of generating a photorealistic image of a building from architectural drawings using specialist 3D software. The result looks indistinguishable from a professional photograph — except that the building does not need to exist yet. Alliance Media Labs&apos;{" "}
+            <Link href="/services/3d-renders-isometrics" className="text-yellow-600 font-semibold hover:underline">
+              3D renders and isometrics service
+            </Link>{" "}
+            handles all three stages in-house for developers across India.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             The process involves three stages: <strong>3D modelling</strong> (building a digital replica of the structure from drawings), <strong>texturing and lighting</strong> (applying realistic materials, shadows, and time-of-day lighting), and <strong>rendering</strong> (calculating the final photorealistic output). Professional <strong>3D rendering services</strong> handle all three stages in-house, delivering images at 300 DPI print resolution.
@@ -709,7 +728,11 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
           </div>
 
           <p className="text-gray-700 leading-relaxed mb-8">
-            Most successful launch campaigns use all three: <strong>3D renders</strong> for print and hoardings, a <strong>3D walkthrough video</strong> for digital ads and social media, and a <strong>VR tour</strong> for the sales office and NRI portal. The renders are produced first, since the walkthrough video and VR tour are built from the same 3D model.
+            Most successful launch campaigns use all three: <strong>3D renders</strong> for print and hoardings, a{" "}
+            <Link href="/services/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">
+              3D walkthrough video
+            </Link>{" "}
+            for digital ads and social media, and a <strong>VR tour</strong> for the sales office and NRI portal. The renders are produced first, since the walkthrough video and VR tour are built from the same 3D model.
           </p>
 
           {/* Inline image 2 */}
@@ -1504,8 +1527,15 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
             Walk into any top-performing real estate sales office in Mumbai, Pune, Bengaluru, or Hyderabad
             and you will find it at the centre of the room — a hand-crafted architectural scale model,
-            lit from within, drawing buyers like a magnet. In a world saturated with VR headsets, CGI
-            fly-throughs, and interactive 3D tools, the physical scale model has not just survived —
+            lit from within, drawing buyers like a magnet. In a world saturated with{" "}
+            <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">
+              VR headsets
+            </Link>
+            ,{" "}
+            <Link href="/services/3d-renders-isometrics" className="text-yellow-600 font-semibold hover:underline">
+              CGI fly-throughs
+            </Link>
+            , and interactive 3D tools, the physical scale model has not just survived —
             it has quietly become the single highest-converting sales asset in premium real estate.
             Here is why.
           </p>
@@ -1562,7 +1592,11 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
             one thing above all else: <strong>we are serious, and this is real</strong>.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The physical permanence of a scale model is itself a trust signal. It cannot be edited
+            The physical permanence of a{" "}
+            <Link href="/services/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+              scale model
+            </Link>{" "}
+            is itself a trust signal. It cannot be edited
             overnight. It exists in three dimensions and can be photographed from every angle. It
             invites scrutiny rather than avoiding it. For a developer launching a ₹5 crore or ₹50 crore
             product, this tangibility is not a marketing luxury — it is a psychological necessity.
@@ -1955,10 +1989,18 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
         <section id="what-are" className="mb-14">
           <h2 className="text-3xl font-bold text-black mb-6">What Is Architectural Scale Model Making?</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Architectural scale model making is the craft of building a precisely proportioned physical replica of a building, township, infrastructure project, or landscape. These three-dimensional miniatures are crafted at a fraction of the actual size — typically anywhere between 1:50 and 1:2000 — preserving every architectural detail, landscaping element, road network, and structural nuance of the original design.
+            Architectural{" "}
+            <Link href="/services/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+              scale model making
+            </Link>{" "}
+            is the craft of building a precisely proportioned physical replica of a building, township, infrastructure project, or landscape. These three-dimensional miniatures are crafted at a fraction of the actual size — typically anywhere between 1:50 and 1:2000 — preserving every architectural detail, landscaping element, road network, and structural nuance of the original design.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            In India's competitive real estate market, scale model making has evolved from a simple presentation tool into a sophisticated sales instrument. When a prospective buyer walks into a project site office and sees a premium miniature model illuminated with fibre-optic lighting, phase-wise LED systems, and hand-crafted landscaping, the emotional impact is immediate and powerful — far beyond what any render or animation can replicate.
+            In India's competitive real estate market, scale model making has evolved from a simple presentation tool into a sophisticated sales instrument. When a prospective buyer walks into a project site office and sees a premium{" "}
+            <Link href="/services/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+              miniature model
+            </Link>{" "}
+            illuminated with fibre-optic lighting, phase-wise LED systems, and hand-crafted landscaping, the emotional impact is immediate and powerful — far beyond what any render or animation can replicate.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             The discipline sits at the intersection of architecture, engineering, and fine craftsmanship. A professional <strong>3D scale model maker</strong> must read and interpret CAD drawings, understand structural and material properties, operate CNC routers and laser cutters with precision, and apply hand-finishing skills to achieve the lifelike quality that top developers demand.
@@ -4006,7 +4048,11 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
             Here is the part most developers miss: the delay itself is rarely what costs you the buyer. It&apos;s the silence afterward. A buyer who hears nothing for three months assumes the worst, starts asking on broker WhatsApp groups whether your project is "in trouble," and either demands a refund or quietly tells five other prospective buyers not to book with you.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This guide covers why delays erode <strong>buyer trust</strong> faster than the delay itself justifies, the warning signs that you&apos;re losing a booked buyer, and the exact <strong>construction update video</strong> framework developers use to keep buyers confident and engaged through a long construction cycle — delayed or not.
+            This guide covers why delays erode <strong>buyer trust</strong> faster than the delay itself justifies, the warning signs that you&apos;re losing a booked buyer, and the exact{" "}
+            <Link href="/services/construction-update-videos" className="text-yellow-600 font-semibold hover:underline">
+              construction update video
+            </Link>{" "}
+            framework developers use to keep buyers confident and engaged through a long construction cycle — delayed or not.
           </p>
         </section>
 
@@ -4028,7 +4074,11 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
             <strong className="text-white">Construction delay buyer trust</strong> collapses in a predictable pattern: a milestone is missed, the developer doesn&apos;t proactively communicate, the buyer starts calling the sales office for updates, gets vague answers, and starts assuming the worst. By the time a developer finally sends an update, the buyer relationship has already shifted from "patient" to "suspicious."
           </p>
           <p className="text-gray-300 leading-relaxed">
-            The fix isn&apos;t avoiding delays — on long construction cycles, some slippage is close to unavoidable. The fix is making proactive, visual communication a default part of your sales process from the day a unit is booked, not something you reach for only after a buyer complains.
+            The fix isn&apos;t avoiding delays — on long construction cycles, some slippage is close to unavoidable. The fix is making{" "}
+            <Link href="/services/construction-update-videos" className="text-yellow-400 font-semibold hover:underline">
+              proactive, visual communication
+            </Link>{" "}
+            a default part of your sales process from the day a unit is booked, not something you reach for only after a buyer complains.
           </p>
         </section>
 
@@ -4089,7 +4139,11 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
             <div className="border-l-4 border-yellow-400 pl-6">
               <h3 className="text-lg font-bold text-black mb-2">5. Direct Distribution, Not Just a Website Upload</h3>
               <p className="text-gray-700 leading-relaxed">
-                Push the video directly to booked buyers via WhatsApp groups and email — don&apos;t make them go looking for it. A <strong>RERA construction progress video</strong> uploaded only to your website rarely gets watched; one sent directly to a buyer&apos;s phone almost always does.
+                Push the video directly to booked buyers via WhatsApp groups and email — don&apos;t make them go looking for it. A <strong>RERA construction progress video</strong> uploaded only to your website rarely gets watched; one sent directly to a buyer&apos;s phone almost always does. Near possession, pairing it with a{" "}
+                <Link href="/services/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">
+                  3D walkthrough video
+                </Link>{" "}
+                of a near-final unit keeps buyers visually engaged right up to handover.
               </p>
             </div>
           </div>
@@ -4778,14 +4832,22 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
             <div className="border-l-4 border-yellow-400 pl-6">
               <h3 className="text-lg font-bold text-black mb-3">Mistake 1: Treating Your Sales Gallery Like a Desk</h3>
               <p className="leading-relaxed">
-                Top developers use <strong>architectural scale models</strong>. Buyers physically engage. They understand project relationships instantly. Trust builds faster than any spreadsheet.
+                Top developers use{" "}
+                <Link href="/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+                  architectural scale models
+                </Link>
+                . Buyers physically engage. They understand project relationships instantly. Trust builds faster than any spreadsheet.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
               <h3 className="text-lg font-bold text-black mb-3">Mistake 2: Showing, Not Demonstrating</h3>
               <p className="leading-relaxed">
-                A render is static. A <strong>3D architectural walkthrough</strong> is dynamic. Decision confidence jumps. Developers report 40% faster buyer decisions with professional walkthroughs.
+                A render is static. A{" "}
+                <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">
+                  3D architectural walkthrough
+                </Link>{" "}
+                is dynamic. Decision confidence jumps. Developers report 40% faster buyer decisions with professional walkthroughs.
               </p>
             </div>
 
@@ -4824,7 +4886,13 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
             </div>
             <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
               <p className="font-bold text-black mb-2">Layer 3 — Emotional Connection (30 sec - 5 min)</p>
-              <p className="text-gray-700 text-sm">Construction videos, location videos, VR tours, walkthroughs. Buyers imagine themselves living there.</p>
+              <p className="text-gray-700 text-sm">
+                Construction videos, location videos,{" "}
+                <Link href="/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">
+                  VR tours
+                </Link>
+                , walkthroughs. Buyers imagine themselves living there.
+              </p>
             </div>
             <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
               <p className="font-bold text-black mb-2">Layer 4 — Confidence (5+ minutes)</p>

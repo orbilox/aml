@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
 type FormData = {
   name: string;
   email: string;
+  countryCode: string;
+  phone: string;
   company: string;
   project_type: string;
   budget: string;
@@ -16,6 +19,8 @@ type FormErrors = Partial<Record<keyof FormData, string>>;
 const initialFormData: FormData = {
   name: "",
   email: "",
+  countryCode: DEFAULT_COUNTRY_CODE,
+  phone: "",
   company: "",
   project_type: "",
   budget: "",
@@ -33,6 +38,12 @@ function validateField(name: keyof FormData, value: string): string | undefined 
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()))
         return "Enter a valid email address.";
       return undefined;
+    case "phone": {
+      if (!value.trim()) return "Phone number is required.";
+      const digits = value.replace(/\D/g, "");
+      if (digits.length !== 10) return "Enter a valid 10-digit mobile number.";
+      return undefined;
+    }
     default:
       return undefined;
   }
@@ -58,9 +69,10 @@ export default function LeadRegistrationModal() {
   ) => {
     const { name, value } = e.target;
     const field = name as keyof FormData;
-    setFormData((prev) => ({ ...prev, [field]: value }));
+    const sanitized = field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    setFormData((prev) => ({ ...prev, [field]: sanitized }));
     if (touched[field]) {
-      setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
+      setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
     }
   };
 
@@ -79,9 +91,10 @@ export default function LeadRegistrationModal() {
     const nextErrors: FormErrors = {
       name: validateField("name", formData.name),
       email: validateField("email", formData.email),
+      phone: validateField("phone", formData.phone),
     };
     setErrors(nextErrors);
-    setTouched({ name: true, email: true });
+    setTouched({ name: true, email: true, phone: true });
     if (Object.values(nextErrors).some(Boolean)) return;
 
     setIsSubmitting(true);
@@ -214,17 +227,50 @@ export default function LeadRegistrationModal() {
                 </div>
               </div>
 
-              {/* Company */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="Your company name"
-                  className={inputClass("company")}
-                />
+              {/* Phone + Company */}
+              <div className="grid md:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
+                  <div className="flex gap-2">
+                    <select
+                      name="countryCode"
+                      value={formData.countryCode}
+                      onChange={handleChange}
+                      className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none text-sm bg-white w-[92px] flex-shrink-0"
+                    >
+                      {COUNTRY_CODES.map((c) => (
+                        <option key={c.code} value={c.code}>
+                          {c.code}
+                        </option>
+                      ))}
+                    </select>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      maxLength={10}
+                      inputMode="numeric"
+                      placeholder="10-digit mobile number"
+                      className={inputClass("phone")}
+                    />
+                  </div>
+                  {touched.phone && errors.phone && (
+                    <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                  )}
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder="Your company name"
+                    className={inputClass("company")}
+                  />
+                </div>
               </div>
 
               {/* Project Type + Budget Range */}
