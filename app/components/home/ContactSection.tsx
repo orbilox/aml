@@ -13,6 +13,25 @@ type FormFields = {
 
 type FormErrors = Partial<Record<keyof FormFields, string>>;
 
+const OFFICES = [
+  {
+    key: "chandigarh",
+    label: "Chandigarh",
+    address: "D-244, 3rd Floor, Unit-4, Sector 74, Mohali, Chandigarh",
+  },
+  {
+    key: "noida",
+    label: "Noida",
+    address: "Unit No. 1456, 14th Floor, Gaur City Mall, Noida",
+  },
+  {
+    key: "bengaluru",
+    label: "Bengaluru",
+    address:
+      "Gopalan Workspace, Gopalan Signature Mall, Nagavarapalya, CV Raman Nagar, Bengaluru",
+  },
+] as const;
+
 function validateField(name: keyof FormFields, value: string): string | undefined {
   switch (name) {
     case "name":
@@ -44,6 +63,9 @@ export default function ContactSection() {
   >("idle");
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormFields, boolean>>>({});
+  const [activeOffice, setActiveOffice] = useState<(typeof OFFICES)[number]["key"]>(
+    "chandigarh"
+  );
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -153,22 +175,31 @@ export default function ContactSection() {
                   <p className="text-black/80">info@alliancemedialabs.com</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center flex-shrink-0">
                   <i className="ri-map-pin-line text-xl text-yellow-400"></i>
                 </div>
-                <div>
-                  <p className="font-semibold text-black">Location</p>
-                  <ul className="text-black/80 list-disc ml-5">
-                    <li>
-                      D-244, 3rd Floor, Unit-4, Sector 74, Mohali, Chandigarh
-                    </li>
-                    <li>Unit No. 1456, 14th Floor, Gaur City Mall, Noida</li>
-                    <li>
-                      Gopalan Workspace, Gopalan Signature Mall,
-                      Nagavarapalya,CV Raman Nagar, Bengaluru
-                    </li>
-                  </ul>
+                <div className="flex-1 space-y-3">
+                  <p className="font-semibold text-black">Our Offices</p>
+                  <div className="flex flex-wrap gap-2">
+                    {OFFICES.map((office) => (
+                      <button
+                        key={office.key}
+                        type="button"
+                        onClick={() => setActiveOffice(office.key)}
+                        className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                          activeOffice === office.key
+                            ? "bg-black text-yellow-400"
+                            : "bg-black/10 text-black hover:bg-black/20"
+                        }`}
+                      >
+                        {office.label}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-black/80">
+                    {OFFICES.find((office) => office.key === activeOffice)?.address}
+                  </p>
                 </div>
               </div>
             </div>

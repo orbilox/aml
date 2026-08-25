@@ -20,6 +20,29 @@ type FormFields = {
 
 type FormErrors = Partial<Record<keyof FormFields, string>>;
 
+const OFFICES = [
+  {
+    key: "chandigarh",
+    label: "Chandigarh",
+    address: "D-244, 3rd Floor, Unit-4, Sector 74, Mohali, Chandigarh",
+    mapUrl: "https://maps.google.com/?q=D-244,+Sector+74,+Chandigarh,+Mohali",
+  },
+  {
+    key: "noida",
+    label: "Noida",
+    address: "Unit No. 1456, 14th Floor, Gaur City Mall, Noida",
+    mapUrl: "https://maps.google.com/?q=Gaur+City+Mall,+Noida",
+  },
+  {
+    key: "bengaluru",
+    label: "Bengaluru",
+    address:
+      "Gopalan Workspace, Gopalan Signature Mall, Nagavarapalya, CV Raman Nagar, Bengaluru",
+    mapUrl:
+      "https://maps.google.com/?q=Gopalan+Signature+Mall,+CV+Raman+Nagar,+Bengaluru",
+  },
+] as const;
+
 function validateField(name: keyof FormFields, value: string): string | undefined {
   switch (name) {
     case "name":
@@ -63,6 +86,9 @@ export default function ContactPageClient() {
   >("idle");
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormFields, boolean>>>({});
+  const [activeOffice, setActiveOffice] = useState<(typeof OFFICES)[number]["key"]>(
+    "chandigarh"
+  );
 
   const services = [
     "3D Walkthrough Videos",
@@ -532,43 +558,44 @@ ${formData.message || "No additional details provided"}
                 </div>
 
                 <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 border border-green-500/20 rounded-xl p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <i className="ri-map-pin-line text-white text-xl"></i>
                     </div>
-                    <div>
-                      <h3 className="text-white font-semibold mb-1">
-                        Visit Us
-                      </h3>
+                    <div className="flex-1 space-y-3">
+                      <h3 className="text-white font-semibold">Visit Us</h3>
 
-                      <ul className="list-disc ml-5 space-y-1 marker:text-white">
-                        <li>
+                      <div className="flex flex-wrap gap-2">
+                        {OFFICES.map((office) => (
+                          <button
+                            key={office.key}
+                            type="button"
+                            onClick={() => setActiveOffice(office.key)}
+                            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                              activeOffice === office.key
+                                ? "bg-green-500 text-white"
+                                : "bg-white/10 text-gray-300 hover:bg-white/20"
+                            }`}
+                          >
+                            {office.label}
+                          </button>
+                        ))}
+                      </div>
+
+                      {(() => {
+                        const office = OFFICES.find((o) => o.key === activeOffice);
+                        if (!office) return null;
+                        return (
                           <a
-                            href="https://maps.google.com/?q=D-244,+Sector+74,+Chandigarh,+Mohali"
+                            href={office.mapUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-300 hover:text-green-400 transition-colors"
+                            className="block text-sm text-gray-300 hover:text-green-400 transition-colors"
                           >
-                            D-244, 3rd Floor, Unit-4, Sector 74, Mohali,
-                            Chandigarh
+                            {office.address}
                           </a>
-                        </li>
-
-                        <li>
-                          <a
-                            href="https://maps.google.com/?q=Gaur+City+Mall,+Noida"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-300 hover:text-green-400 transition-colors"
-                          >
-                            Unit No. 1456, 14th Floor, Gaur City Mall, Noida
-                          </a>
-                        </li>
-                        <li className="text-gray-300 hover:text-green-400 transition-colors">
-                          Gopalan Workspace, Gopalan Signature Mall,
-                          Nagavarapalya,CV Raman Nagar, Bengaluru
-                        </li>
-                      </ul>
+                        );
+                      })()}
                     </div>
                   </div>
                 </div>
