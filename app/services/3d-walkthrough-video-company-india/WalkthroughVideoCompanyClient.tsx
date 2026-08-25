@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
 interface Project {
   id: number;
@@ -129,11 +130,37 @@ const cityLinks = [
   { city: "Ahmedabad", href: "/contact" },
 ];
 
+type FieldName = "name" | "email" | "countryCode" | "phone" | "project_type" | "city" | "message";
+type FormErrors = Partial<Record<FieldName, string>>;
+
+function validateField(name: FieldName, value: string): string | undefined {
+  switch (name) {
+    case "name":
+      if (!value.trim()) return "Name is required.";
+      if (value.trim().length < 2) return "Name must be at least 2 characters.";
+      return undefined;
+    case "email":
+      if (!value.trim()) return "Email is required.";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()))
+        return "Enter a valid email address.";
+      return undefined;
+    case "phone": {
+      if (!value.trim()) return "Phone number is required.";
+      const digits = value.replace(/\D/g, "");
+      if (digits.length !== 10) return "Enter a valid 10-digit mobile number.";
+      return undefined;
+    }
+    default:
+      return undefined;
+  }
+}
+
 export default function WalkthroughVideoCompanyClient() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    countryCode: DEFAULT_COUNTRY_CODE,
     phone: "",
     project_type: "",
     city: "",
@@ -143,6 +170,8 @@ export default function WalkthroughVideoCompanyClient() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
 
   const portfolioProjects: Project[] = [
     {
@@ -182,11 +211,45 @@ export default function WalkthroughVideoCompanyClient() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    const field = name as FieldName;
+    const sanitized = field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    setFormData((prev) => ({ ...prev, [field]: sanitized }));
+    if (touched[field]) {
+      setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
+    }
   };
+
+  const handleBlur = (
+    e: React.FocusEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    const field = name as FieldName;
+    setTouched((prev) => ({ ...prev, [field]: true }));
+    setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
+  };
+
+  const inputClass = (field: FieldName) =>
+    `w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+      touched[field] && errors[field]
+        ? "border-red-400 focus:ring-red-400"
+        : "border-gray-300 focus:ring-yellow-400"
+    }`;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const nextErrors: FormErrors = {
+      name: validateField("name", formData.name),
+      email: validateField("email", formData.email),
+      phone: validateField("phone", formData.phone),
+    };
+    setErrors(nextErrors);
+    setTouched((prev) => ({ ...prev, name: true, email: true, phone: true }));
+    if (Object.values(nextErrors).some(Boolean)) return;
+
     setIsSubmitting(true);
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -204,6 +267,7 @@ export default function WalkthroughVideoCompanyClient() {
         setFormData({
           name: "",
           email: "",
+          countryCode: DEFAULT_COUNTRY_CODE,
           phone: "",
           project_type: "",
           city: "",
@@ -290,7 +354,7 @@ export default function WalkthroughVideoCompanyClient() {
                     Share your project drawings and we&apos;ll respond within 24
                     hours.
                   </p>
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} noValidate className="space-y-4">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1.5">
@@ -299,26 +363,46 @@ export default function WalkthroughVideoCompanyClient() {
                         <input
                           type="text"
                           name="name"
-                          required
                           value={formData.name}
                           onChange={handleInputChange}
+                          onBlur={handleBlur}
                           placeholder="Your full name"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          className={inputClass("name")}
                         />
+                        {touched.name && errors.name && (
+                          <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        )}
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1.5">
                           Phone *
                         </label>
-                        <input
-                          type="tel"
-                          name="phone"
-                          required
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          placeholder="+91 98765 43210"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
-                        />
+                        <div className="flex gap-2">
+                          <select
+                            name="countryCode"
+                            value={formData.countryCode}
+                            onChange={handleInputChange}
+                            className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
+                          >
+                            {COUNTRY_CODES.map((c) => (
+                              <option key={c.code} value={c.code}>{c.code}</option>
+                            ))}
+                          </select>
+                          <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            onBlur={handleBlur}
+                            maxLength={10}
+                            inputMode="numeric"
+                            placeholder="10-digit mobile number"
+                            className={inputClass("phone")}
+                          />
+                        </div>
+                        {touched.phone && errors.phone && (
+                          <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        )}
                       </div>
                     </div>
                     <div>
@@ -328,12 +412,15 @@ export default function WalkthroughVideoCompanyClient() {
                       <input
                         type="email"
                         name="email"
-                        required
                         value={formData.email}
                         onChange={handleInputChange}
+                        onBlur={handleBlur}
                         placeholder="you@company.com"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        className={inputClass("email")}
                       />
+                      {touched.email && errors.email && (
+                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                      )}
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
@@ -939,7 +1026,7 @@ export default function WalkthroughVideoCompanyClient() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} noValidate className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -948,26 +1035,46 @@ export default function WalkthroughVideoCompanyClient() {
                       <input
                         type="text"
                         name="name"
-                        required
                         value={formData.name}
                         onChange={handleInputChange}
+                        onBlur={handleBlur}
                         placeholder="Your full name"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        className={inputClass("name")}
                       />
+                      {touched.name && errors.name && (
+                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Phone *
                       </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        required
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="+91 98765 43210"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
-                      />
+                      <div className="flex gap-2">
+                        <select
+                          name="countryCode"
+                          value={formData.countryCode}
+                          onChange={handleInputChange}
+                          className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
+                        >
+                          {COUNTRY_CODES.map((c) => (
+                            <option key={c.code} value={c.code}>{c.code}</option>
+                          ))}
+                        </select>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          onBlur={handleBlur}
+                          maxLength={10}
+                          inputMode="numeric"
+                          placeholder="10-digit mobile number"
+                          className={inputClass("phone")}
+                        />
+                      </div>
+                      {touched.phone && errors.phone && (
+                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                      )}
                     </div>
                   </div>
 
@@ -978,12 +1085,15 @@ export default function WalkthroughVideoCompanyClient() {
                     <input
                       type="email"
                       name="email"
-                      required
                       value={formData.email}
                       onChange={handleInputChange}
+                      onBlur={handleBlur}
                       placeholder="you@company.com"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      className={inputClass("email")}
                     />
+                    {touched.email && errors.email && (
+                      <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                    )}
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">

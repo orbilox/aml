@@ -4,11 +4,52 @@ import { useState } from "react";
 import Header from "@/components/feature/Header";
 import Footer from "@/components/feature/Footer";
 import Button from "@/components/base/Button";
+import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
+
+type FormFields = {
+  name: string;
+  email: string;
+  countryCode: string;
+  phone: string;
+  company: string;
+  service: string;
+  budget: string;
+  message: string;
+  timeline: string;
+};
+
+type FormErrors = Partial<Record<keyof FormFields, string>>;
+
+function validateField(name: keyof FormFields, value: string): string | undefined {
+  switch (name) {
+    case "name":
+      if (!value.trim()) return "Name is required.";
+      if (value.trim().length < 2) return "Name must be at least 2 characters.";
+      return undefined;
+    case "email":
+      if (!value.trim()) return "Email is required.";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()))
+        return "Enter a valid email address.";
+      return undefined;
+    case "phone": {
+      if (!value.trim()) return "Phone number is required.";
+      const digits = value.replace(/\D/g, "");
+      if (digits.length !== 10) return "Enter a valid 10-digit mobile number.";
+      return undefined;
+    }
+    case "message":
+      if (!value.trim()) return "Project details are required.";
+      return undefined;
+    default:
+      return undefined;
+  }
+}
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    countryCode: DEFAULT_COUNTRY_CODE,
     phone: "",
     company: "",
     service: "",
@@ -20,6 +61,8 @@ export default function ContactPageClient() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState<Partial<Record<keyof FormFields, boolean>>>({});
 
   const services = [
     "3D Walkthrough Videos",
@@ -49,11 +92,36 @@ export default function ContactPageClient() {
     >,
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const field = name as keyof FormFields;
+    const sanitized = field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    setFormData((prev) => ({ ...prev, [field]: sanitized }));
+    if (touched[field]) {
+      setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
+    }
+  };
+
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
+    const { name, value } = e.target;
+    const field = name as keyof FormFields;
+    setTouched((prev) => ({ ...prev, [field]: true }));
+    setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const nextErrors: FormErrors = {
+      name: validateField("name", formData.name),
+      email: validateField("email", formData.email),
+      phone: validateField("phone", formData.phone),
+      message: validateField("message", formData.message),
+    };
+    setErrors(nextErrors);
+    setTouched((prev) => ({ ...prev, name: true, email: true, phone: true, message: true }));
+    if (Object.values(nextErrors).some(Boolean)) return;
+
     setIsSubmitting(true);
 
     try {
@@ -70,7 +138,7 @@ New Contact Inquiry
 
 Name: ${formData.name}
 Email: ${formData.email}
-Phone: ${formData.phone || "Not provided"}
+Phone: ${formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided"}
 Service Interested In: ${formData.service || "Not specified"}
 Company: ${formData.company || "Not specified"}
 Budget Range: ${formData.budget || "Not specified"}
@@ -90,6 +158,7 @@ ${formData.message || "No additional details provided"}
           setFormData({
             name: "",
             email: "",
+            countryCode: DEFAULT_COUNTRY_CODE,
             phone: "",
             service: "",
             message: "",
@@ -171,7 +240,7 @@ ${formData.message || "No additional details provided"}
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} noValidate className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-white font-medium mb-2">
@@ -182,10 +251,18 @@ ${formData.message || "No additional details provided"}
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
+                      onBlur={handleBlur}
                       required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:border-yellow-400 transition-colors"
+                      className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white text-sm focus:outline-none transition-colors ${
+                        touched.name && errors.name
+                          ? "border-red-400 focus:border-red-400"
+                          : "border-gray-700 focus:border-yellow-400"
+                      }`}
                       placeholder="Your full name"
                     />
+                    {touched.name && errors.name && (
+                      <p className="text-red-400 text-xs mt-1">{errors.name}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-white font-medium mb-2">
@@ -196,10 +273,18 @@ ${formData.message || "No additional details provided"}
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
+                      onBlur={handleBlur}
                       required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:border-yellow-400 transition-colors"
+                      className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white text-sm focus:outline-none transition-colors ${
+                        touched.email && errors.email
+                          ? "border-red-400 focus:border-red-400"
+                          : "border-gray-700 focus:border-yellow-400"
+                      }`}
                       placeholder="your@email.com"
                     />
+                    {touched.email && errors.email && (
+                      <p className="text-red-400 text-xs mt-1">{errors.email}</p>
+                    )}
                   </div>
                 </div>
 
@@ -208,15 +293,39 @@ ${formData.message || "No additional details provided"}
                     <label className="block text-white font-medium mb-2">
                       Phone Number *
                     </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:border-yellow-400 transition-colors"
-                      placeholder="+91 1234567890"
-                    />
+                    <div className="flex gap-2">
+                      <select
+                        name="countryCode"
+                        value={formData.countryCode}
+                        onChange={handleInputChange}
+                        className="px-2 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:border-yellow-400 transition-colors w-[92px] flex-shrink-0"
+                      >
+                        {COUNTRY_CODES.map((c) => (
+                          <option key={c.code} value={c.code} className="bg-gray-800">
+                            {c.code}
+                          </option>
+                        ))}
+                      </select>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        onBlur={handleBlur}
+                        required
+                        maxLength={10}
+                        inputMode="numeric"
+                        className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white text-sm focus:outline-none transition-colors ${
+                          touched.phone && errors.phone
+                            ? "border-red-400 focus:border-red-400"
+                            : "border-gray-700 focus:border-yellow-400"
+                        }`}
+                        placeholder="10-digit mobile number"
+                      />
+                    </div>
+                    {touched.phone && errors.phone && (
+                      <p className="text-red-400 text-xs mt-1">{errors.phone}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-white font-medium mb-2">
@@ -308,12 +417,20 @@ ${formData.message || "No additional details provided"}
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
+                    onBlur={handleBlur}
                     required
                     maxLength={500}
                     rows={5}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:border-yellow-400 transition-colors resize-none"
+                    className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white text-sm focus:outline-none transition-colors resize-none ${
+                      touched.message && errors.message
+                        ? "border-red-400 focus:border-red-400"
+                        : "border-gray-700 focus:border-yellow-400"
+                    }`}
                     placeholder="Tell us about your project, goals, and any specific requirements..."
                   ></textarea>
+                  {touched.message && errors.message && (
+                    <p className="text-red-400 text-xs mt-1">{errors.message}</p>
+                  )}
                   <div className="text-right text-gray-500 text-xs mt-1">
                     {formData.message.length}/500 characters
                   </div>

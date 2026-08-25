@@ -5,52 +5,84 @@ import { useEffect, useState } from "react";
 type FormData = {
   name: string;
   email: string;
-  phone: string;
-  targetMarket: string;
+  company: string;
+  project_type: string;
+  budget: string;
   message: string;
 };
 
+type FormErrors = Partial<Record<keyof FormData, string>>;
+
+const initialFormData: FormData = {
+  name: "",
+  email: "",
+  company: "",
+  project_type: "",
+  budget: "",
+  message: "",
+};
+
+function validateField(name: keyof FormData, value: string): string | undefined {
+  switch (name) {
+    case "name":
+      if (!value.trim()) return "Name is required.";
+      if (value.trim().length < 2) return "Name must be at least 2 characters.";
+      return undefined;
+    case "email":
+      if (!value.trim()) return "Email is required.";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()))
+        return "Enter a valid email address.";
+      return undefined;
+    default:
+      return undefined;
+  }
+}
+
 export default function LeadRegistrationModal() {
   const [isOpen, setIsOpen] = useState(false);
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
-
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    targetMarket: "",
-    message: "",
-  });
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
 
   useEffect(() => {
-    // Show popup after 2 seconds
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 2000);
-
     return () => clearTimeout(timer);
   }, []);
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
+    const field = name as keyof FormData;
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    if (touched[field]) {
+      setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
+    }
+  };
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    const field = name as keyof FormData;
+    setTouched((prev) => ({ ...prev, [field]: true }));
+    setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const nextErrors: FormErrors = {
+      name: validateField("name", formData.name),
+      email: validateField("email", formData.email),
+    };
+    setErrors(nextErrors);
+    setTouched({ name: true, email: true });
+    if (Object.values(nextErrors).some(Boolean)) return;
 
     setIsSubmitting(true);
     setSubmitStatus("idle");
@@ -58,36 +90,22 @@ export default function LeadRegistrationModal() {
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           access_key: "a557c293-5de3-4d54-8636-50b7d3c406c7",
-
           subject: "New Lead — Website Registration Popup",
-
           from_name: formData.name,
-
           ...formData,
-
           source: "Website Lead Popup",
-
           page_url: window.location.href,
         }),
       });
 
       if (res.ok) {
         setSubmitStatus("success");
-
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          targetMarket: "",
-          message: "",
-        });
-
-        // Close after showing success message
+        setFormData(initialFormData);
+        setErrors({});
+        setTouched({});
         setTimeout(() => {
           setIsOpen(false);
           setSubmitStatus("idle");
@@ -111,13 +129,17 @@ export default function LeadRegistrationModal() {
     return null;
   }
 
+  const inputClass = (field: keyof FormData) =>
+    `w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent outline-none text-sm ${
+      touched[field] && errors[field]
+        ? "border-red-400 focus:ring-red-400"
+        : "border-gray-300 focus:ring-yellow-400"
+    }`;
+
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4 py-6">
       {/* Overlay */}
-      <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-        onClick={closeModal}
-      />
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModal} />
 
       {/* Modal */}
       <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl">
@@ -136,14 +158,11 @@ export default function LeadRegistrationModal() {
           <p className="text-sm font-semibold uppercase tracking-wider text-black/70 mb-2">
             Alliance Media Labs
           </p>
-
           <h2 className="text-2xl sm:text-3xl font-bold text-black pr-10">
             Let&apos;s Bring Your Vision to Life
           </h2>
-
           <p className="mt-2 text-sm sm:text-base text-black/80">
-            Tell us about your project and our team will get back to you within
-            24 hours.
+            Tell us about your project and our team will get back to you within 24 hours.
           </p>
         </div>
 
@@ -154,116 +173,120 @@ export default function LeadRegistrationModal() {
               <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="ri-check-line text-3xl text-green-500" />
               </div>
-
               <h3 className="text-2xl font-bold text-black mb-2">Thank You!</h3>
-
               <p className="text-gray-600">
-                We&apos;ve received your enquiry. Our team will respond within
-                24 hours.
+                We&apos;ve received your enquiry. Our team will respond within 24 hours.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} noValidate className="space-y-5">
               {/* Name + Email */}
               <div className="grid md:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
-                  </label>
-
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
+                    onBlur={handleBlur}
                     placeholder="Your full name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none text-sm"
+                    className={inputClass("name")}
                   />
+                  {touched.name && errors.name && (
+                    <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                  )}
                 </div>
-
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
+                    onBlur={handleBlur}
                     placeholder="you@company.com"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none text-sm"
+                    className={inputClass("email")}
                   />
+                  {touched.email && errors.email && (
+                    <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                  )}
                 </div>
               </div>
 
-              {/* Phone + Target Market */}
+              {/* Company */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                <input
+                  type="text"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  placeholder="Your company name"
+                  className={inputClass("company")}
+                />
+              </div>
+
+              {/* Project Type + Budget Range */}
               <div className="grid md:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone *
-                  </label>
-
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    placeholder="+91 98765 43210"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none text-sm"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Target Market
-                  </label>
-
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
                   <select
-                    name="targetMarket"
-                    value={formData.targetMarket}
+                    name="project_type"
+                    value={formData.project_type}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none text-sm bg-white"
+                    className={`${inputClass("project_type")} bg-white`}
                   >
-                    <option value="">Select market</option>
-                    <option value="India">India</option>
-                    <option value="Gulf (UAE/Saudi/Qatar)">
-                      Gulf (UAE / Saudi / Qatar)
-                    </option>
-                    <option value="USA">USA</option>
-                    <option value="UK">UK</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Singapore">Singapore</option>
-                    <option value="Multiple Markets">Multiple Markets</option>
+                    <option value="">Select project type</option>
+                    <option value="3d-walkthrough">3D Walkthrough Videos</option>
+                    <option value="vr-tour">Virtual Reality Tours (360°)</option>
+                    <option value="construction-updates">Construction Update Videos</option>
+                    <option value="drone-cinematography">Location AVs & Drone Shoots</option>
+                    <option value="architectural-models">Architectural Scale Models</option>
+                    <option value="3d-renders">3D Renders & Isometrics</option>
+                    <option value="interactive-3d">Interactive 3D Tools</option>
+                    <option value="digital-marketing">Real Estate Digital Marketing</option>
+                    <option value="graphics-branding">Graphics & Branding Content</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Budget Range</label>
+                  <select
+                    name="budget"
+                    value={formData.budget}
+                    onChange={handleChange}
+                    className={`${inputClass("budget")} bg-white`}
+                  >
+                    <option value="">Select budget range</option>
+                    <option value="50k-1lakh">INR 50,000 - 1,00,000</option>
+                    <option value="1lakh-5lakh">INR 1,00,000 - 5,00,000</option>
+                    <option value="5lakh-10lakh">INR 5,00,000 - 10,00,000</option>
+                    <option value="over-10lakh">Over INR 10,00,000</option>
                   </select>
                 </div>
               </div>
 
               {/* Project Details */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Project Details
-                </label>
-
+                <label className="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  placeholder="Tell us about your project..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none text-sm resize-none"
+                  maxLength={500}
+                  placeholder="Tell us about your project requirements..."
+                  className={`${inputClass("message")} resize-none`}
                 />
+                <div className="text-right text-xs text-gray-500 mt-1">
+                  {formData.message.length}/500 characters
+                </div>
               </div>
 
               {/* Error */}
               {submitStatus === "error" && (
                 <p className="text-red-600 text-sm">
-                  Something went wrong. Please try again or WhatsApp us
-                  directly.
+                  Something went wrong. Please try again or WhatsApp us directly.
                 </p>
               )}
 
@@ -276,12 +299,12 @@ export default function LeadRegistrationModal() {
                 {isSubmitting ? (
                   <>
                     <div className="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin" />
-                    Sending...
+                    Sending.....
                   </>
                 ) : (
                   <>
-                    <i className="ri-send-plane-line" />
-                    Get My Free Quote
+                    <span>Send Message via Email</span>
+                    <i className="ri-mail-send-line" />
                   </>
                 )}
               </button>

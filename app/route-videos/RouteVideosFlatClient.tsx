@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
 interface Project {
   id: number;
@@ -156,11 +157,49 @@ const stats = [
   { value: "Pan-India", label: "Location Coverage" },
 ];
 
+type RouteVideoFormData = {
+  name: string;
+  email: string;
+  countryCode: string;
+  phone: string;
+  firm: string;
+  videoType: string;
+  message: string;
+};
+
+type RouteVideoFormErrors = Partial<Record<keyof RouteVideoFormData, string>>;
+
+function validateField(
+  name: keyof RouteVideoFormData,
+  value: string,
+): string | undefined {
+  switch (name) {
+    case "name":
+      if (!value.trim()) return "Name is required.";
+      if (value.trim().length < 2) return "Name must be at least 2 characters.";
+      return undefined;
+    case "email":
+      if (!value.trim()) return "Email is required.";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()))
+        return "Enter a valid email address.";
+      return undefined;
+    case "phone": {
+      if (!value.trim()) return undefined;
+      const digits = value.replace(/\D/g, "");
+      if (digits.length !== 10) return "Enter a valid 10-digit mobile number.";
+      return undefined;
+    }
+    default:
+      return undefined;
+  }
+}
+
 export default function RouteVideosFlatClient() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    countryCode: DEFAULT_COUNTRY_CODE,
     phone: "",
     firm: "",
     videoType: "",
@@ -170,6 +209,17 @@ export default function RouteVideosFlatClient() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [errors, setErrors] = useState<RouteVideoFormErrors>({});
+  const [touched, setTouched] = useState<
+    Partial<Record<keyof RouteVideoFormData, boolean>>
+  >({});
+
+  const inputClass = (field: keyof RouteVideoFormData) =>
+    `w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+      touched[field] && errors[field]
+        ? "border-red-400 focus:ring-red-400"
+        : "border-gray-300 focus:ring-yellow-400"
+    }`;
 
   const portfolioProjects: Project[] = [
     {
@@ -246,11 +296,38 @@ export default function RouteVideosFlatClient() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    const field = name as keyof RouteVideoFormData;
+    const sanitized = field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    setFormData((prev) => ({ ...prev, [field]: sanitized }));
+    if (touched[field]) {
+      setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
+    }
+  };
+
+  const handleBlur = (
+    e: React.FocusEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    const field = name as keyof RouteVideoFormData;
+    setTouched((prev) => ({ ...prev, [field]: true }));
+    setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const nextErrors: RouteVideoFormErrors = {
+      name: validateField("name", formData.name),
+      email: validateField("email", formData.email),
+      phone: validateField("phone", formData.phone),
+    };
+    setErrors(nextErrors);
+    setTouched((prev) => ({ ...prev, name: true, email: true, phone: true }));
+    if (Object.values(nextErrors).some(Boolean)) return;
+
     setIsSubmitting(true);
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -261,6 +338,7 @@ export default function RouteVideosFlatClient() {
           subject: "New Lead — Location Video / Route Videos Page",
           from_name: formData.name,
           ...formData,
+          phone: formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided",
         }),
       });
       if (res.ok) {
@@ -268,11 +346,14 @@ export default function RouteVideosFlatClient() {
         setFormData({
           name: "",
           email: "",
+          countryCode: DEFAULT_COUNTRY_CODE,
           phone: "",
           firm: "",
           videoType: "",
           message: "",
         });
+        setErrors({});
+        setTouched({});
       } else {
         setSubmitStatus("error");
       }
@@ -348,7 +429,7 @@ export default function RouteVideosFlatClient() {
                     Share your project location and we&apos;ll respond within 24
                     hours.
                   </p>
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} noValidate className="space-y-4">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1.5">
@@ -359,10 +440,14 @@ export default function RouteVideosFlatClient() {
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
+                          onBlur={handleBlur}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          className={inputClass("name")}
                           placeholder="Your full name"
                         />
+                        {touched.name && errors.name && (
+                          <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        )}
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1.5">
@@ -373,10 +458,14 @@ export default function RouteVideosFlatClient() {
                           name="email"
                           value={formData.email}
                           onChange={handleInputChange}
+                          onBlur={handleBlur}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                          className={inputClass("email")}
                           placeholder="you@company.com"
                         />
+                        {touched.email && errors.email && (
+                          <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                        )}
                       </div>
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -384,14 +473,32 @@ export default function RouteVideosFlatClient() {
                         <label className="block text-sm font-medium text-gray-700 mb-1.5">
                           Phone
                         </label>
-                        <input
-                          type="tel"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
-                          placeholder="+91 98765 43210"
-                        />
+                        <div className="flex gap-2">
+                          <select
+                            name="countryCode"
+                            value={formData.countryCode}
+                            onChange={handleInputChange}
+                            className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
+                          >
+                            {COUNTRY_CODES.map((c) => (
+                              <option key={c.code} value={c.code}>{c.code}</option>
+                            ))}
+                          </select>
+                          <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            onBlur={handleBlur}
+                            maxLength={10}
+                            inputMode="numeric"
+                            className={inputClass("phone")}
+                            placeholder="10-digit mobile number"
+                          />
+                        </div>
+                        {touched.phone && errors.phone && (
+                          <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        )}
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1.5">
@@ -954,7 +1061,7 @@ export default function RouteVideosFlatClient() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} noValidate className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -965,10 +1072,14 @@ export default function RouteVideosFlatClient() {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
+                        onBlur={handleBlur}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        className={inputClass("name")}
                         placeholder="Your full name"
                       />
+                      {touched.name && errors.name && (
+                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -979,10 +1090,14 @@ export default function RouteVideosFlatClient() {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
+                        onBlur={handleBlur}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                        className={inputClass("email")}
                         placeholder="you@company.com"
                       />
+                      {touched.email && errors.email && (
+                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                      )}
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-6">
@@ -990,14 +1105,32 @@ export default function RouteVideosFlatClient() {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Phone
                       </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
-                        placeholder="+91 98765 43210"
-                      />
+                      <div className="flex gap-2">
+                        <select
+                          name="countryCode"
+                          value={formData.countryCode}
+                          onChange={handleInputChange}
+                          className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
+                        >
+                          {COUNTRY_CODES.map((c) => (
+                            <option key={c.code} value={c.code}>{c.code}</option>
+                          ))}
+                        </select>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          onBlur={handleBlur}
+                          maxLength={10}
+                          inputMode="numeric"
+                          className={inputClass("phone")}
+                          placeholder="10-digit mobile number"
+                        />
+                      </div>
+                      {touched.phone && errors.phone && (
+                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">

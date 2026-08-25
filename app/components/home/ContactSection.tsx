@@ -2,6 +2,33 @@
 import { useState } from "react";
 import Button from "@/components/base/Button";
 
+type FormFields = {
+  name: string;
+  email: string;
+  company: string;
+  project_type: string;
+  budget: string;
+  message: string;
+};
+
+type FormErrors = Partial<Record<keyof FormFields, string>>;
+
+function validateField(name: keyof FormFields, value: string): string | undefined {
+  switch (name) {
+    case "name":
+      if (!value.trim()) return "Name is required.";
+      if (value.trim().length < 2) return "Name must be at least 2 characters.";
+      return undefined;
+    case "email":
+      if (!value.trim()) return "Email is required.";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()))
+        return "Enter a valid email address.";
+      return undefined;
+    default:
+      return undefined;
+  }
+}
+
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,6 +42,8 @@ export default function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState<Partial<Record<keyof FormFields, boolean>>>({});
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -22,11 +51,33 @@ export default function ContactSection() {
     >,
   ) => {
     const { name, value } = e.target;
+    const field = name as keyof FormFields;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (touched[field]) {
+      setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
+    }
+  };
+
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
+    const { name, value } = e.target;
+    const field = name as keyof FormFields;
+    setTouched((prev) => ({ ...prev, [field]: true }));
+    setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const nextErrors: FormErrors = {
+      name: validateField("name", formData.name),
+      email: validateField("email", formData.email),
+    };
+    setErrors(nextErrors);
+    setTouched((prev) => ({ ...prev, name: true, email: true }));
+    if (Object.values(nextErrors).some(Boolean)) return;
+
     setIsSubmitting(true);
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -128,6 +179,7 @@ export default function ContactSection() {
             <form
               id="contact-form"
               onSubmit={handleSubmit}
+              noValidate
               className="space-y-6"
             >
               <div className="grid md:grid-cols-2 gap-6">
@@ -140,10 +192,18 @@ export default function ContactSection() {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
+                    onBlur={handleBlur}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+                      touched.name && errors.name
+                        ? "border-red-400 focus:ring-red-400"
+                        : "border-gray-300 focus:ring-yellow-400"
+                    }`}
                     placeholder="Your full name"
                   />
+                  {touched.name && errors.name && (
+                    <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -154,10 +214,18 @@ export default function ContactSection() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
+                    onBlur={handleBlur}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+                      touched.email && errors.email
+                        ? "border-red-400 focus:ring-red-400"
+                        : "border-gray-300 focus:ring-yellow-400"
+                    }`}
                     placeholder="your@email.com"
                   />
+                  {touched.email && errors.email && (
+                    <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                  )}
                 </div>
               </div>
               <div>

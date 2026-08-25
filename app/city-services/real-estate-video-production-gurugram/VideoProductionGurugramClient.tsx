@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
 const services = [
   { icon: "ri-video-camera-line", title: "3D Walkthrough Videos", description: "Immersive property tours for Gurugram's premium developments" },
@@ -59,10 +60,36 @@ const processSteps = [
   { n: 4, t: "Final Delivery", d: "Complete video package with multiple formats for all marketing channels." },
 ];
 
+type ValidatedField = "name" | "email" | "phone";
+type FormErrors = Partial<Record<ValidatedField, string>>;
+
+function validateField(name: ValidatedField, value: string): string | undefined {
+  switch (name) {
+    case "name":
+      if (!value.trim()) return "Name is required.";
+      if (value.trim().length < 2) return "Name must be at least 2 characters.";
+      return undefined;
+    case "email":
+      if (!value.trim()) return "Email is required.";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()))
+        return "Enter a valid email address.";
+      return undefined;
+    case "phone": {
+      if (!value.trim()) return undefined;
+      const digits = value.replace(/\D/g, "");
+      if (digits.length !== 10) return "Enter a valid 10-digit mobile number.";
+      return undefined;
+    }
+    default:
+      return undefined;
+  }
+}
+
 export default function VideoProductionGurugramClient() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    countryCode: DEFAULT_COUNTRY_CODE,
     phone: "",
     service_type: "",
     project_location: "",
@@ -70,16 +97,46 @@ export default function VideoProductionGurugramClient() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState<Partial<Record<ValidatedField, boolean>>>({});
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const sanitized = name === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    setFormData((prev) => ({ ...prev, [name]: sanitized }));
+    if (name === "name" || name === "email" || name === "phone") {
+      const field = name as ValidatedField;
+      if (touched[field]) {
+        setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
+      }
+    }
+  };
+
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    if (name === "name" || name === "email" || name === "phone") {
+      const field = name as ValidatedField;
+      setTouched((prev) => ({ ...prev, [field]: true }));
+      setErrors((prev) => ({ ...prev, [field]: validateField(field, value) }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const nextErrors: FormErrors = {
+      name: validateField("name", formData.name),
+      email: validateField("email", formData.email),
+      phone: validateField("phone", formData.phone),
+    };
+    setErrors(nextErrors);
+    setTouched((prev) => ({ ...prev, name: true, email: true, phone: true }));
+    if (Object.values(nextErrors).some(Boolean)) return;
+
     setIsSubmitting(true);
     setSubmitStatus("idle");
     try {
@@ -91,13 +148,13 @@ export default function VideoProductionGurugramClient() {
           subject: `Gurugram Video Production Inquiry - ${formData.name}`,
           from_name: formData.name,
           from_email: formData.email,
-          message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService Type: ${formData.service_type || "Not selected"}\nProject Location: ${formData.project_location || "Not provided"}\n\nProject Details:\n${formData.message || "No details provided"}`,
+          message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided"}\nService Type: ${formData.service_type || "Not selected"}\nProject Location: ${formData.project_location || "Not provided"}\n\nProject Details:\n${formData.message || "No details provided"}`,
         }),
       });
       const data = await response.json();
       if (data.success) {
         setSubmitStatus("success");
-        setFormData({ name: "", email: "", phone: "", service_type: "", project_location: "", message: "" });
+        setFormData({ name: "", email: "", countryCode: DEFAULT_COUNTRY_CODE, phone: "", service_type: "", project_location: "", message: "" });
       } else {
         setSubmitStatus("error");
       }
@@ -312,7 +369,7 @@ export default function VideoProductionGurugramClient() {
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-2xl">
-              <form id="gurugram-video-inquiry-form" onSubmit={handleSubmit} className="space-y-6">
+              <form id="gurugram-video-inquiry-form" onSubmit={handleSubmit} noValidate className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
@@ -321,10 +378,17 @@ export default function VideoProductionGurugramClient() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      required
+                      onBlur={handleBlur}
                       placeholder="Your full name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+                        touched.name && errors.name
+                          ? "border-red-400 focus:ring-red-400"
+                          : "border-gray-300 focus:ring-yellow-400"
+                      }`}
                     />
+                    {touched.name && errors.name && (
+                      <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
@@ -333,23 +397,52 @@ export default function VideoProductionGurugramClient() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      required
+                      onBlur={handleBlur}
                       placeholder="your@email.com"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+                        touched.email && errors.email
+                          ? "border-red-400 focus:ring-red-400"
+                          : "border-gray-300 focus:ring-yellow-400"
+                      }`}
                     />
+                    {touched.email && errors.email && (
+                      <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                    )}
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder="Your phone number"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
-                    />
+                    <div className="flex gap-2">
+                      <select
+                        name="countryCode"
+                        value={formData.countryCode}
+                        onChange={handleInputChange}
+                        className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
+                      >
+                        {COUNTRY_CODES.map((c) => (
+                          <option key={c.code} value={c.code}>{c.code}</option>
+                        ))}
+                      </select>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        onBlur={handleBlur}
+                        maxLength={10}
+                        inputMode="numeric"
+                        placeholder="10-digit mobile number"
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+                          touched.phone && errors.phone
+                            ? "border-red-400 focus:ring-red-400"
+                            : "border-gray-300 focus:ring-yellow-400"
+                        }`}
+                      />
+                    </div>
+                    {touched.phone && errors.phone && (
+                      <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
