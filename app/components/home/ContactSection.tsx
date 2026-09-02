@@ -33,6 +33,12 @@ const OFFICES = [
     address:
       "Gopalan Workspace, Gopalan Signature Mall, Nagavarapalya, CV Raman Nagar, Bengaluru",
   },
+  {
+    key: "mumbai",
+    label: "Mumbai",
+    address:
+      "Unit No. 1005, IJMIMA Complex, Mindspace, Behind Infinity Mall, Malad West, Mumbai",
+  },
 ] as const;
 
 function validateField(name: keyof FormFields, value: string): string | undefined {

@@ -41,6 +41,14 @@ const OFFICES = [
     mapUrl:
       "https://maps.google.com/?q=Gopalan+Signature+Mall,+CV+Raman+Nagar,+Bengaluru",
   },
+  {
+    key: "mumbai",
+    label: "Mumbai",
+    address:
+      "Unit No. 1005, IJMIMA Complex, Mindspace, Behind Infinity Mall, Malad West, Mumbai",
+    mapUrl:
+      "https://maps.google.com/?q=IJMIMA+Complex,+Mindspace,+Malad+West,+Mumbai",
+  },
 ] as const;
 
 function validateField(name: keyof FormFields, value: string): string | undefined {
