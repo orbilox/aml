@@ -329,7 +329,7 @@ export default function InteriorCinematicClient() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "3D Walkthrough Videos", desc: "Full project walkthroughs covering exteriors, amenities, and multiple unit types.", href: "/services/3d-walkthrough-videos", icon: "ri-video-line" },
+              { name: "3D Walkthrough Videos", desc: "Full project walkthroughs covering exteriors, amenities, and multiple unit types.", href: "/services/3d-walkthrough-video-company-india", icon: "ri-video-line" },
               { name: "Virtual Reality Tours", desc: "Interactive VR experiences letting buyers explore spaces at their own pace.", href: "/services/virtual-reality-tours", icon: "ri-vr-goggles-line" },
               { name: "3D Renders & Isometrics", desc: "Photorealistic still images for brochures, hoardings, and digital ads.", href: "/services/3d-renders-isometrics", icon: "ri-image-3d-line" },
             ].map((s) => (

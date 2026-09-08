@@ -888,7 +888,7 @@ export default function VirtualRealityToursClient() {
                 {
                   name: "3D Walkthrough Videos",
                   desc: "Cinematic pre-rendered property tours for marketing and RERA.",
-                  href: "/services/3d-walkthrough-videos",
+                  href: "/services/3d-walkthrough-video-company-india",
                   icon: "ri-video-line",
                 },
                 {

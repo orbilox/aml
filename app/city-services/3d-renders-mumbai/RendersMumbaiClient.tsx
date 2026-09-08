@@ -371,7 +371,7 @@ export default function RendersMumbaiClient() {
               <ul className="space-y-2">
                 <li><Link href="/services/3d-renders-isometrics" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Renders &amp; Isometrics — Full Details</Link></li>
                 <li><Link href="/services/3d-isometrics" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Isometric Views &amp; Master Plans</Link></li>
-                <li><Link href="/services/3d-walkthrough-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Mumbai</Link></li>
+                <li><Link href="/services/3d-walkthrough-video-company-india" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Mumbai</Link></li>
                 <li><Link href="/services/interior-cinematic-walkthrough" className="text-gray-600 hover:text-yellow-500 transition-colors">Interior Cinematic Walkthroughs</Link></li>
               </ul>
             </div>

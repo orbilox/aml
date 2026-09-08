@@ -944,7 +944,7 @@ export default function RouteVideosFlatClient() {
               <div className="grid gap-4">
                 {[
                   {
-                    href: "/services/route-videos",
+                    href: "/route-videos",
                     title: "Location AV / Route Videos",
                     desc: "Cinematic connectivity and location advantage videos.",
                     icon: "ri-road-map-line",
@@ -956,7 +956,7 @@ export default function RouteVideosFlatClient() {
                     icon: "ri-vidicon-line",
                   },
                   {
-                    href: "/3d-walkthrough-videos",
+                    href: "/services/3d-walkthrough-video-company-india",
                     title: "3D Architectural Walkthrough Services",
                     desc: "Cinematic 3D walkthrough videos for property launches.",
                     icon: "ri-video-line",

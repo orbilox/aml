@@ -35,7 +35,7 @@ export default function NotFound() {
 
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
             <Link
-              href="/services/3d-walkthrough-videos"
+              href="/services/3d-walkthrough-video-company-india"
               className="p-4 border border-gray-200 rounded-xl hover:border-yellow-400 transition-colors text-sm font-medium text-black/70 hover:text-black"
             >
               3D Walkthrough Videos

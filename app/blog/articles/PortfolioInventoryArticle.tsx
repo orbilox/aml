@@ -105,9 +105,9 @@ export default function PortfolioInventoryArticle({ post }: { post: BlogPost }) 
           For example:
         </p>
         <ul>
-          <li><strong>Premium luxury project:</strong> Lead with <Link href="/3d-renders-isometrics" className="text-blue-600 hover:underline">high-end 3D architectural renders</Link> showing interior finishes, amenities, lifestyle imagery.</li>
-          <li><strong>Value/affordable project:</strong> Lead with <Link href="/virtual-reality-tours" className="text-blue-600 hover:underline">360 VR tours</Link> showing scale, layout clarity, and unit type variety.</li>
-          <li><strong>Mixed-use/commercial:</strong> Lead with <Link href="/3d-walkthrough-videos" className="text-blue-600 hover:underline">cinematic 3D walkthroughs</Link> showing connectivity, street-facing visibility, and anchor tenant locations.</li>
+          <li><strong>Premium luxury project:</strong> Lead with <Link href="/services/3d-renders-isometrics" className="text-blue-600 hover:underline">high-end 3D architectural renders</Link> showing interior finishes, amenities, lifestyle imagery.</li>
+          <li><strong>Value/affordable project:</strong> Lead with <Link href="/services/virtual-reality-tours" className="text-blue-600 hover:underline">360 VR tours</Link> showing scale, layout clarity, and unit type variety.</li>
+          <li><strong>Mixed-use/commercial:</strong> Lead with <Link href="/services/3d-walkthrough-video-company-india" className="text-blue-600 hover:underline">cinematic 3D walkthroughs</Link> showing connectivity, street-facing visibility, and anchor tenant locations.</li>
         </ul>
         <p>
           This isn't about spending more on each project—it's about spending smarter. A luxury project doesn't need VR tours; it needs renders that scream premium. A value project needs clarity, not luxury renders.
@@ -158,8 +158,8 @@ export default function PortfolioInventoryArticle({ post }: { post: BlogPost }) 
           Top portfolio developers use different visualization strategies for each sales office:
         </p>
         <ul>
-          <li><strong>Luxury project sales office:</strong> Features a high-detail <Link href="/architectural-scale-models" className="text-blue-600 hover:underline">architectural scale model</Link> as the centerpiece, showing premium finishes, amenities, and landscaping with museum-quality detail. Buyers touch the model, feel the scale, and visualize themselves in the space. Zero digital fatigue.</li>
-          <li><strong>Value project sales office:</strong> Uses <Link href="/virtual-reality-tours" className="text-blue-600 hover:underline">VR headsets</Link> to walk buyers through every unit type in 5 minutes. No appointment needed. Buyers see scale, layout, and options fast. Reduces sales cycle from weeks to days.</li>
+          <li><strong>Luxury project sales office:</strong> Features a high-detail <Link href="/services/scale-model-maker-india" className="text-blue-600 hover:underline">architectural scale model</Link> as the centerpiece, showing premium finishes, amenities, and landscaping with museum-quality detail. Buyers touch the model, feel the scale, and visualize themselves in the space. Zero digital fatigue.</li>
+          <li><strong>Value project sales office:</strong> Uses <Link href="/services/virtual-reality-tours" className="text-blue-600 hover:underline">VR headsets</Link> to walk buyers through every unit type in 5 minutes. No appointment needed. Buyers see scale, layout, and options fast. Reduces sales cycle from weeks to days.</li>
           <li><strong>Commercial/mixed-use sales office:</strong> Displays <Link href="/route-videos" className="text-blue-600 hover:underline">location advantage videos</Link> showing connectivity, neighboring businesses, and street traffic patterns. Investors get data, not just renders.</li>
         </ul>
         <p>
@@ -174,10 +174,10 @@ export default function PortfolioInventoryArticle({ post }: { post: BlogPost }) 
           <strong>Project in high demand / early phase:</strong> Minimal visualization. Word-of-mouth works. Allocate budget to <Link href="/graphics-branding" className="text-blue-600 hover:underline">branding and collateral</Link> to cement positioning.
         </p>
         <p>
-          <strong>Project mid-sales / competitive market:</strong> Maximum visualization investment. Use <Link href="/3d-renders-isometrics" className="text-blue-600 hover:underline">3D renders</Link> + <Link href="/3d-walkthrough-videos" className="text-blue-600 hover:underline">3D walkthroughs</Link> to create clear differentiation. This is where a 2x visualization spend yields 5x sales lift.
+          <strong>Project mid-sales / competitive market:</strong> Maximum visualization investment. Use <Link href="/services/3d-renders-isometrics" className="text-blue-600 hover:underline">3D renders</Link> + <Link href="/services/3d-walkthrough-video-company-india" className="text-blue-600 hover:underline">3D walkthroughs</Link> to create clear differentiation. This is where a 2x visualization spend yields 5x sales lift.
         </p>
         <p>
-          <strong>Project post-occupancy / resale:</strong> Focus on <Link href="/construction-update-videos" className="text-blue-600 hover:underline">social proof videos</Link> and <Link href="/virtual-reality-tours" className="text-blue-600 hover:underline">VR tours</Link> to show real occupants and completed finishes. Buyers need confidence, not renders.
+          <strong>Project post-occupancy / resale:</strong> Focus on <Link href="/construction-update-videos" className="text-blue-600 hover:underline">social proof videos</Link> and <Link href="/services/virtual-reality-tours" className="text-blue-600 hover:underline">VR tours</Link> to show real occupants and completed finishes. Buyers need confidence, not renders.
         </p>
         <p>
           <strong>Slow-moving inventory / repositioning:</strong> Aggressive visualization reset. New renders, new positioning narrative, new sales office experience. This is where scale models and VR tours can reduce time-to-sale by 6+ months.
@@ -230,7 +230,7 @@ export default function PortfolioInventoryArticle({ post }: { post: BlogPost }) 
           Ready to Accelerate Your Portfolio Sales?
         </h3>
         <p className="text-gray-700 mb-6">
-          We help portfolio developers implement this framework with custom <Link href="/3d-renders-isometrics" className="text-blue-600 hover:underline">3D renders</Link>, <Link href="/3d-walkthrough-videos" className="text-blue-600 hover:underline">3D walkthroughs</Link>, <Link href="/architectural-scale-models" className="text-blue-600 hover:underline">scale models</Link>, and <Link href="/virtual-reality-tours" className="text-blue-600 hover:underline">VR experiences</Link> that differentiate each project.
+          We help portfolio developers implement this framework with custom <Link href="/services/3d-renders-isometrics" className="text-blue-600 hover:underline">3D renders</Link>, <Link href="/services/3d-walkthrough-video-company-india" className="text-blue-600 hover:underline">3D walkthroughs</Link>, <Link href="/services/scale-model-maker-india" className="text-blue-600 hover:underline">scale models</Link>, and <Link href="/services/virtual-reality-tours" className="text-blue-600 hover:underline">VR experiences</Link> that differentiate each project.
         </p>
         <a
           href="mailto:itcrewindia@gmail.com"
@@ -246,7 +246,7 @@ export default function PortfolioInventoryArticle({ post }: { post: BlogPost }) 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="border rounded-lg p-6 hover:shadow-lg transition">
             <h4 className="font-semibold text-lg mb-2">
-              <Link href="/3d-renders-isometrics" className="text-blue-600 hover:underline">
+              <Link href="/services/3d-renders-isometrics" className="text-blue-600 hover:underline">
                 3D Architectural Renders
               </Link>
             </h4>
@@ -254,7 +254,7 @@ export default function PortfolioInventoryArticle({ post }: { post: BlogPost }) 
           </div>
           <div className="border rounded-lg p-6 hover:shadow-lg transition">
             <h4 className="font-semibold text-lg mb-2">
-              <Link href="/3d-walkthrough-videos" className="text-blue-600 hover:underline">
+              <Link href="/services/3d-walkthrough-video-company-india" className="text-blue-600 hover:underline">
                 3D Walkthrough Videos
               </Link>
             </h4>
@@ -262,7 +262,7 @@ export default function PortfolioInventoryArticle({ post }: { post: BlogPost }) 
           </div>
           <div className="border rounded-lg p-6 hover:shadow-lg transition">
             <h4 className="font-semibold text-lg mb-2">
-              <Link href="/architectural-scale-models" className="text-blue-600 hover:underline">
+              <Link href="/services/scale-model-maker-india" className="text-blue-600 hover:underline">
                 Architectural Scale Models
               </Link>
             </h4>
@@ -270,7 +270,7 @@ export default function PortfolioInventoryArticle({ post }: { post: BlogPost }) 
           </div>
           <div className="border rounded-lg p-6 hover:shadow-lg transition">
             <h4 className="font-semibold text-lg mb-2">
-              <Link href="/virtual-reality-tours" className="text-blue-600 hover:underline">
+              <Link href="/services/virtual-reality-tours" className="text-blue-600 hover:underline">
                 Virtual Reality Tours
               </Link>
             </h4>

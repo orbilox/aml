@@ -628,9 +628,9 @@ export default function GraphicsBrandingFlatClient() {
               </h3>
               <div className="grid gap-4">
                 {[
-                  { href: "/services/graphics-branding", title: "Real Estate Graphics & Branding", desc: "Full brand identity and marketing collateral design.", icon: "ri-palette-line" },
+                  { href: "/graphics-branding", title: "Real Estate Graphics & Branding", desc: "Full brand identity and marketing collateral design.", icon: "ri-palette-line" },
                   { href: "/services/digital-marketing", title: "Digital Marketing", desc: "Meta and Google campaigns for real estate lead generation.", icon: "ri-advertisement-line" },
-                  { href: "/3d-renders-isometrics", title: "3D House Rendering", desc: "3D renders and floor plans for brochures and hoardings.", icon: "ri-image-2-line" },
+                  { href: "/services/3d-renders-isometrics", title: "3D House Rendering", desc: "3D renders and floor plans for brochures and hoardings.", icon: "ri-image-2-line" },
                 ].map((s) => (
                   <Link key={s.href} href={s.href} className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group">
                     <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">

@@ -6,7 +6,7 @@ const services = [
     title: "3D Walkthrough Videos",
     description:
       "Cinematic 3D animations that bring architectural designs to life with photorealistic detail.",
-    href: "/services/3d-walkthrough-videos",
+    href: "/services/3d-walkthrough-video-company-india",
   },
   {
     icon: null,
@@ -35,14 +35,14 @@ const services = [
     title: "Architectural Scale Models",
     description:
       "Precision-crafted physical models for presentations and exhibitions.",
-    href: "/services/architectural-scale-models",
+    href: "/services/scale-model-maker-india",
   },
   {
     icon: "ri-camera-line",
     title: "Construction Update Videos",
     description:
       "Professional documentation of construction progress for stakeholders.",
-    href: "/services/construction-update-videos",
+    href: "/construction-update-videos",
   },
   {
     icon: "ri-flight-takeoff-line",
@@ -56,7 +56,7 @@ const services = [
     title: "Graphics & Branding",
     description:
       "Complete brand identity and marketing collateral for real estate projects.",
-    href: "/services/graphics-branding",
+    href: "/graphics-branding",
   },
   {
     icon: "ri-global-line",
@@ -70,7 +70,7 @@ const services = [
     title: "Route Videos",
     description:
       "Animated route visualization showing connectivity and location advantages.",
-    href: "/services/route-videos",
+    href: "/route-videos",
   },
   {
     icon: "ri-map-2-line",

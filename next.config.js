@@ -22,13 +22,59 @@ const nextConfig = {
   async redirects() {
     return [
       // Legacy WordPress URL (pre-Next.js migration) — 301 so link/index
-      // equity isn't lost on a 404. /architectural-scale-models and
-      // /3d-walkthrough-videos are NOT redirected — they're live as their
-      // own distinct pages (see app/architectural-scale-models and
-      // app/3d-walkthrough-videos).
+      // equity isn't lost on a 404.
       {
         source: "/real-estate-video-production-service-in-lucknow",
         destination: "/city-services/real-estate-video-production-gurugram",
+        permanent: true,
+      },
+
+      // Duplicate-page consolidation (Aug 2026 ranking audit) — each pair
+      // below was competing with itself for the same keywords. Redirecting
+      // into whichever page was actually ranking.
+      {
+        source: "/virtual-reality-tours",
+        destination: "/services/virtual-reality-tours",
+        permanent: true,
+      },
+      {
+        source: "/3d-renders-isometrics",
+        destination: "/services/3d-renders-isometrics",
+        permanent: true,
+      },
+      {
+        source: "/architectural-scale-models",
+        destination: "/services/scale-model-maker-india",
+        permanent: true,
+      },
+      {
+        source: "/services/architectural-scale-models",
+        destination: "/services/scale-model-maker-india",
+        permanent: true,
+      },
+      {
+        source: "/3d-walkthrough-videos",
+        destination: "/services/3d-walkthrough-video-company-india",
+        permanent: true,
+      },
+      {
+        source: "/services/3d-walkthrough-videos",
+        destination: "/services/3d-walkthrough-video-company-india",
+        permanent: true,
+      },
+      {
+        source: "/services/route-videos",
+        destination: "/route-videos",
+        permanent: true,
+      },
+      {
+        source: "/services/graphics-branding",
+        destination: "/graphics-branding",
+        permanent: true,
+      },
+      {
+        source: "/services/construction-update-videos",
+        destination: "/construction-update-videos",
         permanent: true,
       },
     ];

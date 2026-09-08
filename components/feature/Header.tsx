@@ -10,12 +10,12 @@ const services = [
     name: "3D Walkthrough Videos",
     href: "/services/3d-walkthrough-video-company-india",
   },
-  { name: "Virtual Reality Tours", href: "/virtual-reality-tours" },
-  { name: "3D Renders & Isometrics", href: "/3d-renders-isometrics" },
+  { name: "Virtual Reality Tours", href: "/services/virtual-reality-tours" },
+  { name: "3D Renders & Isometrics", href: "/services/3d-renders-isometrics" },
   { name: "Interactive 3D Tools", href: "/services/interactive-3d-tools" },
   {
     name: "Architectural Scale Models",
-    href: "/architectural-scale-models",
+    href: "/services/scale-model-maker-india",
   },
   {
     name: "Construction Update Videos",

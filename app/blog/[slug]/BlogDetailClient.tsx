@@ -533,7 +533,7 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
               Get Free Quote
             </Link>
             <Link
-              href="/services/3d-walkthrough-videos"
+              href="/services/3d-walkthrough-video-company-india"
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
             >
               View Our Walkthrough Work
@@ -729,7 +729,7 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
 
           <p className="text-gray-700 leading-relaxed mb-8">
             Most successful launch campaigns use all three: <strong>3D renders</strong> for print and hoardings, a{" "}
-            <Link href="/services/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">
+            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
               3D walkthrough video
             </Link>{" "}
             for digital ads and social media, and a <strong>VR tour</strong> for the sales office and NRI portal. The renders are produced first, since the walkthrough video and VR tour are built from the same 3D model.
@@ -835,7 +835,7 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { href: "/services/3d-renders-isometrics", label: "3D Renders & Isometrics", icon: "ri-image-line" },
-                { href: "/services/3d-walkthrough-videos", label: "3D Walkthrough Videos", icon: "ri-movie-line" },
+                { href: "/services/3d-walkthrough-video-company-india", label: "3D Walkthrough Videos", icon: "ri-movie-line" },
                 { href: "/services/3d-walkthrough-video-company-india", label: "3D Walkthrough Company", icon: "ri-building-line" },
                 { href: "/services/virtual-reality-tours", label: "VR Tours", icon: "ri-3d-glasses-line" },
               ].map((s) => (
@@ -1302,9 +1302,9 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
             <div className="space-y-3">
               {[
                 { href: "/services/drone-shoots", label: "Drone Shoots & Location AV", desc: "4K aerial cinematography, golden hour shoots, DGCA-licensed pilots, location AV production" },
-                { href: "/services/route-videos", label: "Route & Location Videos", desc: "Cinematic route videography showing project connectivity, access roads, and lifestyle context" },
-                { href: "/services/3d-walkthrough-videos", label: "3D Walkthrough Videos", desc: "Pair aerial drone footage with interior 3D walkthroughs for a complete property film package" },
-                { href: "/services/construction-update-videos", label: "Construction Update Videos", desc: "Scheduled construction progress documentation with drone and ground-level footage" },
+                { href: "/route-videos", label: "Route & Location Videos", desc: "Cinematic route videography showing project connectivity, access roads, and lifestyle context" },
+                { href: "/services/3d-walkthrough-video-company-india", label: "3D Walkthrough Videos", desc: "Pair aerial drone footage with interior 3D walkthroughs for a complete property film package" },
+                { href: "/construction-update-videos", label: "Construction Update Videos", desc: "Scheduled construction progress documentation with drone and ground-level footage" },
               ].map((item) => (
                 <Link
                   key={item.href}
@@ -1593,7 +1593,7 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             The physical permanence of a{" "}
-            <Link href="/services/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
               scale model
             </Link>{" "}
             is itself a trust signal. It cannot be edited
@@ -1903,7 +1903,7 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
               Get a Free Quote
             </Link>
             <Link
-              href="/services/architectural-scale-models"
+              href="/services/scale-model-maker-india"
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
             >
               View Scale Model Portfolio
@@ -1990,14 +1990,14 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
           <h2 className="text-3xl font-bold text-black mb-6">What Is Architectural Scale Model Making?</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             Architectural{" "}
-            <Link href="/services/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
               scale model making
             </Link>{" "}
             is the craft of building a precisely proportioned physical replica of a building, township, infrastructure project, or landscape. These three-dimensional miniatures are crafted at a fraction of the actual size — typically anywhere between 1:50 and 1:2000 — preserving every architectural detail, landscaping element, road network, and structural nuance of the original design.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             In India's competitive real estate market, scale model making has evolved from a simple presentation tool into a sophisticated sales instrument. When a prospective buyer walks into a project site office and sees a premium{" "}
-            <Link href="/services/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
               miniature model
             </Link>{" "}
             illuminated with fibre-optic lighting, phase-wise LED systems, and hand-crafted landscaping, the emotional impact is immediate and powerful — far beyond what any render or animation can replicate.
@@ -2485,7 +2485,7 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
               Get a Free Quote
             </Link>
             <Link
-              href="/services/architectural-scale-models"
+              href="/services/scale-model-maker-india"
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
             >
               View Scale Model Services
@@ -2619,7 +2619,7 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
             </p>
           </div>
           <Link
-            href="/services/3d-walkthrough-videos"
+            href="/services/3d-walkthrough-video-company-india"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
             Explore our 3D Walkthrough Video Service <i className="ri-arrow-right-line"></i>
@@ -2706,7 +2706,7 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
             </p>
           </div>
           <Link
-            href="/services/construction-update-videos"
+            href="/construction-update-videos"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
             Explore our Construction Update Video Service <i className="ri-arrow-right-line"></i>
@@ -2826,7 +2826,7 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
             </p>
           </div>
           <Link
-            href="/services/route-videos"
+            href="/route-videos"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
             Explore our Route &amp; Location Video Service <i className="ri-arrow-right-line"></i>
@@ -3266,7 +3266,7 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
               3D walkthrough video
             </Link>{" "}
             — creating a complete sales office experience that covers every buyer touchpoint. If you&apos;re an architecture firm rather than a developer, we also build{" "}
-            <Link href="/architectural-scale-models" className="text-yellow-400 font-semibold hover:underline">
+            <Link href="/services/scale-model-maker-india" className="text-yellow-400 font-semibold hover:underline">
               concept and presentation models for design practices
             </Link>
             .
@@ -3368,7 +3368,7 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
             <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
               Request a Quote
             </Link>
-            <Link href="/services/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Scale Model Service
             </Link>
           </div>
@@ -3683,7 +3683,7 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
             <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
               Request a Detailed Quote
             </Link>
-            <Link href="/services/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Scale Model Service
             </Link>
           </div>
@@ -3812,7 +3812,7 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
                 Explore our 3D walkthrough video company →
               </Link>
               <br />
-              <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline text-sm mt-2 inline-block">
+              <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline text-sm mt-2 inline-block">
                 See our virtual property tour video for NRI buyers →
               </Link>
             </div>
@@ -3842,7 +3842,7 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
               <p className="text-gray-700 leading-relaxed mb-3">
                 Monthly or quarterly construction progress videos, shared directly with booked and prospective NRI buyers, are the single most effective trust-maintenance tool for under-construction projects. They turn an anxious, silent buyer relationship into an active, confident one.
               </p>
-              <Link href="/services/construction-update-videos" className="text-yellow-600 font-semibold hover:underline text-sm">
+              <Link href="/construction-update-videos" className="text-yellow-600 font-semibold hover:underline text-sm">
                 Explore our construction update video service →
               </Link>
               <br />
@@ -4049,7 +4049,7 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
           </p>
           <p className="text-gray-700 leading-relaxed">
             This guide covers why delays erode <strong>buyer trust</strong> faster than the delay itself justifies, the warning signs that you&apos;re losing a booked buyer, and the exact{" "}
-            <Link href="/services/construction-update-videos" className="text-yellow-600 font-semibold hover:underline">
+            <Link href="/construction-update-videos" className="text-yellow-600 font-semibold hover:underline">
               construction update video
             </Link>{" "}
             framework developers use to keep buyers confident and engaged through a long construction cycle — delayed or not.
@@ -4075,7 +4075,7 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
           </p>
           <p className="text-gray-300 leading-relaxed">
             The fix isn&apos;t avoiding delays — on long construction cycles, some slippage is close to unavoidable. The fix is making{" "}
-            <Link href="/services/construction-update-videos" className="text-yellow-400 font-semibold hover:underline">
+            <Link href="/construction-update-videos" className="text-yellow-400 font-semibold hover:underline">
               proactive, visual communication
             </Link>{" "}
             a default part of your sales process from the day a unit is booked, not something you reach for only after a buyer complains.
@@ -4140,7 +4140,7 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
               <h3 className="text-lg font-bold text-black mb-2">5. Direct Distribution, Not Just a Website Upload</h3>
               <p className="text-gray-700 leading-relaxed">
                 Push the video directly to booked buyers via WhatsApp groups and email — don&apos;t make them go looking for it. A <strong>RERA construction progress video</strong> uploaded only to your website rarely gets watched; one sent directly to a buyer&apos;s phone almost always does. Near possession, pairing it with a{" "}
-                <Link href="/services/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">
+                <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
                   3D walkthrough video
                 </Link>{" "}
                 of a near-final unit keeps buyers visually engaged right up to handover.
@@ -4254,7 +4254,7 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
             <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
               Request a Quote
             </Link>
-            <Link href="/services/construction-update-videos" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link href="/construction-update-videos" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Construction Update Video Service
             </Link>
           </div>
@@ -4400,7 +4400,7 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
           </p>
           <p className="text-gray-700 leading-relaxed">
             Developers who pair a strong interior walkthrough with disciplined branding see the two reinforce each other — the walkthrough creates desire, the branding makes that desire feel premium and trustworthy at every subsequent touchpoint.{" "}
-            <Link href="/services/graphics-branding" className="text-yellow-600 font-semibold hover:underline">
+            <Link href="/graphics-branding" className="text-yellow-600 font-semibold hover:underline">
               Explore our graphics and branding service
             </Link>
             .
@@ -4501,7 +4501,7 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
             <Link href="/services/interior-cinematic-walkthrough" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Interior Walkthrough Service
             </Link>
-            <Link href="/services/graphics-branding" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link href="/graphics-branding" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Branding Service
             </Link>
           </div>
@@ -4649,14 +4649,14 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
           <h2 className="text-2xl font-bold text-black mb-4">The Model and the Screen Are Partners, Not Rivals</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             The mistake isn&apos;t having screens in the gallery — it&apos;s letting a screen replace the model. The two do different jobs. The physical model owns the room&apos;s attention and answers spatial questions; the{" "}
-            <Link href="/services/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">
+            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
               3D walkthrough video
             </Link>{" "}
             takes a buyer inside a unit once the model has earned their interest.
           </p>
           <p className="text-gray-700 leading-relaxed">
             The highest-converting sales galleries sequence the two deliberately: the salesperson opens at the model to establish the whole project, then walks the buyer to the screen or sample flat for the interior experience. Commissioning both from{" "}
-            <Link href="/services/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
               one architectural scale model partner
             </Link>{" "}
             keeps the massing, materials, and colour story consistent between the physical model and the video.
@@ -4731,7 +4731,7 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
             <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
               Request a Quote
             </Link>
-            <Link href="/services/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               View Scale Model Service
             </Link>
           </div>
@@ -4833,7 +4833,7 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
               <h3 className="text-lg font-bold text-black mb-3">Mistake 1: Treating Your Sales Gallery Like a Desk</h3>
               <p className="leading-relaxed">
                 Top developers use{" "}
-                <Link href="/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">
+                <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
                   architectural scale models
                 </Link>
                 . Buyers physically engage. They understand project relationships instantly. Trust builds faster than any spreadsheet.
@@ -4844,7 +4844,7 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
               <h3 className="text-lg font-bold text-black mb-3">Mistake 2: Showing, Not Demonstrating</h3>
               <p className="leading-relaxed">
                 A render is static. A{" "}
-                <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">
+                <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
                   3D architectural walkthrough
                 </Link>{" "}
                 is dynamic. Decision confidence jumps. Developers report 40% faster buyer decisions with professional walkthroughs.
@@ -4888,7 +4888,7 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
               <p className="font-bold text-black mb-2">Layer 3 — Emotional Connection (30 sec - 5 min)</p>
               <p className="text-gray-700 text-sm">
                 Construction videos, location videos,{" "}
-                <Link href="/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">
+                <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">
                   VR tours
                 </Link>
                 , walkthroughs. Buyers imagine themselves living there.
@@ -4995,10 +4995,10 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
             <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
               Get a Free Consultation
             </Link>
-            <Link href="/architectural-scale-models" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               Scale Model Service
             </Link>
-            <Link href="/3d-walkthrough-videos" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link href="/services/3d-walkthrough-video-company-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
               3D Walkthroughs
             </Link>
           </div>

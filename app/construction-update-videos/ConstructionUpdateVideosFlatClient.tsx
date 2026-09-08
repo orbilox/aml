@@ -99,6 +99,37 @@ function validateField(
   }
 }
 
+const testimonials = [
+  {
+    name: "Abhishek Patel",
+    position: "Marketing Manager",
+    company: "Smart World Developers",
+    content:
+      "Working with Alliance Media Labs on the construction update videos for The Edition has been a smooth experience throughout our yearly engagement. The consistency, timelines, and overall real estate construction progress video production have been well maintained across deliverables.",
+  },
+  {
+    name: "Pooran Tomar",
+    position: "Head of Marketing",
+    company: "Aditya Builders",
+    content:
+      "Alliance Media Labs handled the construction update videos for Aditya Builders' project The Kutumb with a clear and consistent approach. The overall real estate construction progress video came out clean, timely, and easy to follow.",
+  },
+  {
+    name: "Shresth",
+    position: "Digital Marketing",
+    company: "Pyramid Infratech",
+    content:
+      "For the past year, Alliance Media Labs has been delivering construction update videos for our project Alban in Gurugram with great consistency every time.",
+  },
+  {
+    name: "Kapil Sharma",
+    position: "Marketing Head",
+    company: "GMI Infra",
+    content:
+      "GMI Infra partnered with Alliance Media Labs for the construction update videos of GMI Elite Homes, and the whole process felt well-managed from start to finish. The updates were presented clearly, and the overall real estate construction progress video maintained a professional flow.",
+  },
+];
+
 export default function ConstructionUpdateVideosFlatClient() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [formData, setFormData] = useState({
@@ -585,6 +616,33 @@ export default function ConstructionUpdateVideosFlatClient() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-yellow-500 text-sm font-semibold tracking-widest uppercase">Client Testimonials</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">What Developers Say About Our Construction Videos</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-7 border border-gray-100 hover:border-yellow-400/40 hover:shadow-md transition-all">
+                <div className="mb-5">
+                  <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-600">{testimonial.position}</p>
+                  <p className="text-sm text-yellow-600 font-medium">{testimonial.company}</p>
+                </div>
+                <div className="flex text-yellow-400 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <i key={i} className="ri-star-fill text-sm"></i>
+                  ))}
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed italic">&ldquo;{testimonial.content}&rdquo;</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -632,9 +690,9 @@ export default function ConstructionUpdateVideosFlatClient() {
               </h3>
               <div className="grid gap-4">
                 {[
-                  { href: "/services/construction-update-videos", title: "Construction Update Videos", desc: "Scheduled construction progress documentation with drone and ground-level footage.", icon: "ri-vidicon-line" },
-                  { href: "/services/route-videos", title: "Location AV / Route Videos", desc: "Cinematic connectivity and location advantage videos.", icon: "ri-road-map-line" },
-                  { href: "/3d-walkthrough-videos", title: "3D Architectural Walkthrough Services", desc: "Cinematic 3D walkthrough videos for property launches.", icon: "ri-video-line" },
+                  { href: "/construction-update-videos", title: "Construction Update Videos", desc: "Scheduled construction progress documentation with drone and ground-level footage.", icon: "ri-vidicon-line" },
+                  { href: "/route-videos", title: "Location AV / Route Videos", desc: "Cinematic connectivity and location advantage videos.", icon: "ri-road-map-line" },
+                  { href: "/services/3d-walkthrough-video-company-india", title: "3D Architectural Walkthrough Services", desc: "Cinematic 3D walkthrough videos for property launches.", icon: "ri-video-line" },
                 ].map((s) => (
                   <Link key={s.href} href={s.href} className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group">
                     <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">

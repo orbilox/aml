@@ -78,7 +78,7 @@ export default function DigitalMarketingGuideArticle({ post }: { post: BlogPost 
             The single most common reason real estate ad campaigns underperform in India isn&apos;t targeting or budget — it&apos;s the landing experience. A buyer clicks a Google ad for &quot;3 BHK apartments in Gurugram,&quot; lands on a page with a stock photo and a generic form, and bounces in under ten seconds.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            Digital marketing&apos;s job is to earn the click. What happens after the click — a <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">3D walkthrough video</Link>, a <Link href="/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">virtual reality tour</Link>, or a scroll-stopping <Link href="/services/drone-shoots" className="text-yellow-600 font-semibold hover:underline">drone shot</Link> of the actual site — is what converts that click into a qualified lead. Campaigns that pair strong targeting with weak visual content consistently produce high traffic and low conversion. The fix isn&apos;t more budget; it&apos;s better landing content.
+            Digital marketing&apos;s job is to earn the click. What happens after the click — a <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">3D walkthrough video</Link>, a <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">virtual reality tour</Link>, or a scroll-stopping <Link href="/services/drone-shoots" className="text-yellow-600 font-semibold hover:underline">drone shot</Link> of the actual site — is what converts that click into a qualified lead. Campaigns that pair strong targeting with weak visual content consistently produce high traffic and low conversion. The fix isn&apos;t more budget; it&apos;s better landing content.
           </p>
 
           <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">The Real Estate Digital Marketing Channel Stack</h2>
@@ -100,10 +100,10 @@ export default function DigitalMarketingGuideArticle({ post }: { post: BlogPost 
             Across every channel in the stack, one pattern holds consistently in the Indian real estate market: video and interactive content outperforms static images on every meaningful metric — time-on-page, form-fill rate, and cost-per-qualified-lead.
           </p>
           <ul className="list-disc list-inside text-gray-700 space-y-1 mb-8">
-            <li>A <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">3D walkthrough video</Link> as the landing page hero consistently holds attention longer than a photo carousel.</li>
+            <li>A <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">3D walkthrough video</Link> as the landing page hero consistently holds attention longer than a photo carousel.</li>
             <li>A <Link href="/services/drone-shoots" className="text-yellow-600 font-semibold hover:underline">drone shoot</Link> of the actual site builds credibility that renders alone can&apos;t — especially for pre-launch campaigns.</li>
             <li>A <Link href="/route-videos" className="text-yellow-600 font-semibold hover:underline">location advantage video</Link> answers the connectivity question that drives most first-message inquiries.</li>
-            <li>A <Link href="/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">VR tour</Link> link shared via WhatsApp remarketing re-engages leads who went cold after the first inquiry.</li>
+            <li>A <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">VR tour</Link> link shared via WhatsApp remarketing re-engages leads who went cold after the first inquiry.</li>
           </ul>
           <p className="text-gray-700 leading-relaxed mb-8">
             The campaigns with the lowest cost-per-booking in 2026 are the ones where the media budget and the visualization budget were planned together, not as separate line items.
@@ -138,7 +138,7 @@ export default function DigitalMarketingGuideArticle({ post }: { post: BlogPost 
             Organic social media rarely generates direct bookings for real estate — its real job is building a retargeting pool and reinforcing brand credibility before a paid ad reaches the same person again.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            What performs: short-form video (Reels, YouTube Shorts) built from existing <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">walkthrough</Link> and <Link href="/services/drone-shoots" className="text-yellow-600 font-semibold hover:underline">drone footage</Link>, construction progress updates that build trust over time, and behind-the-scenes content from the sales gallery. What underperforms: static graphic posts with pricing overlays and generic stock-style renders — the same content buyers scroll past on every competitor&apos;s page.
+            What performs: short-form video (Reels, YouTube Shorts) built from existing <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">walkthrough</Link> and <Link href="/services/drone-shoots" className="text-yellow-600 font-semibold hover:underline">drone footage</Link>, construction progress updates that build trust over time, and behind-the-scenes content from the sales gallery. What underperforms: static graphic posts with pricing overlays and generic stock-style renders — the same content buyers scroll past on every competitor&apos;s page.
           </p>
 
           <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">The Lead-to-Sale Funnel: Where Most Developers Lose Buyers</h2>
@@ -150,7 +150,7 @@ export default function DigitalMarketingGuideArticle({ post }: { post: BlogPost 
             <strong>Ad click to landing page:</strong> Weak or generic visual content causes immediate bounce, regardless of how well-targeted the ad was.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            <strong>Inquiry to site visit:</strong> A lead who submits a form but never confirms a site visit is the single biggest drop-off. This is exactly where a <Link href="/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">VR tour</Link> or <Link href="/services/interactive-3d-tools" className="text-yellow-600 font-semibold hover:underline">interactive configurator</Link> link sent via WhatsApp keeps the lead warm and engaged until the site visit is actually confirmed.
+            <strong>Inquiry to site visit:</strong> A lead who submits a form but never confirms a site visit is the single biggest drop-off. This is exactly where a <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">VR tour</Link> or <Link href="/services/interactive-3d-tools" className="text-yellow-600 font-semibold hover:underline">interactive configurator</Link> link sent via WhatsApp keeps the lead warm and engaged until the site visit is actually confirmed.
           </p>
 
           <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">How Much Should You Budget for Digital Marketing?</h2>
@@ -192,7 +192,7 @@ export default function DigitalMarketingGuideArticle({ post }: { post: BlogPost 
           <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">What to Do Next</h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed">
-            Audit your current highest-spend campaign and check what it lands on. If it&apos;s a generic page with static images, that&apos;s the fastest fix available — swap in a <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">walkthrough video</Link> or <Link href="/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">VR tour</Link> before increasing budget further. Looking for a partner to build the visual content your campaigns need?{" "}
+            Audit your current highest-spend campaign and check what it lands on. If it&apos;s a generic page with static images, that&apos;s the fastest fix available — swap in a <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">walkthrough video</Link> or <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">VR tour</Link> before increasing budget further. Looking for a partner to build the visual content your campaigns need?{" "}
             <Link href="/services/digital-marketing" className="text-yellow-600 font-semibold hover:underline">
               Explore our real estate digital marketing service
             </Link>{" "}

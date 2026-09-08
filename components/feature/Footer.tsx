@@ -71,11 +71,11 @@ export default function Footer() {
                 },
                 {
                   name: "Virtual Reality Tours",
-                  href: "/virtual-reality-tours",
+                  href: "/services/virtual-reality-tours",
                 },
                 {
                   name: "3D Renders & Isometrics",
-                  href: "/3d-renders-isometrics",
+                  href: "/services/3d-renders-isometrics",
                 },
                 {
                   name: "Interactive 3D Tools",
@@ -97,7 +97,7 @@ export default function Footer() {
                 },
                 {
                   name: "Architectural Scale Models",
-                  href: "/architectural-scale-models",
+                  href: "/services/scale-model-maker-india",
                 },
                 {
                   name: "Graphics & Branding",

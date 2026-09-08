@@ -347,9 +347,9 @@ export default function DroneShootsBangaloreClient() {
               <h3 className="text-xl font-bold text-black mb-4">Related Services</h3>
               <ul className="space-y-2">
                 <li><Link href="/services/drone-shoots" className="text-gray-600 hover:text-yellow-500 transition-colors">Drone Shoots &amp; Location AV — Full Details</Link></li>
-                <li><Link href="/services/route-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">Route Videos &amp; Location AV</Link></li>
-                <li><Link href="/services/construction-update-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">Construction Update Videos</Link></li>
-                <li><Link href="/services/3d-walkthrough-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos</Link></li>
+                <li><Link href="/route-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">Route Videos &amp; Location AV</Link></li>
+                <li><Link href="/construction-update-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">Construction Update Videos</Link></li>
+                <li><Link href="/services/3d-walkthrough-video-company-india" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos</Link></li>
               </ul>
             </div>
             <div>

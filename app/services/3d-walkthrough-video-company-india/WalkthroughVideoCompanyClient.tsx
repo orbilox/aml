@@ -855,7 +855,7 @@ export default function WalkthroughVideoCompanyClient() {
               <div className="grid gap-4">
                 {[
                   {
-                    href: "/services/3d-walkthrough-videos",
+                    href: "/services/3d-walkthrough-video-company-india",
                     title: "3D Walkthrough Video Service",
                     desc: "Architectural walkthrough videos for property launches and investor presentations.",
                     icon: "ri-video-line",

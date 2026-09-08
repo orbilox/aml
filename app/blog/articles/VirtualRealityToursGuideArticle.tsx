@@ -69,7 +69,7 @@ export default function VirtualRealityToursGuideArticle({ post }: { post: BlogPo
             A virtual reality tour is an interactive, 360-degree digital walkthrough of a property that lets a buyer explore a home or project as if they were physically inside it — from a browser, a mobile phone, or a VR headset. Instead of scrolling through static images or watching a fixed camera path, the buyer controls the experience: looking up, down, left, right, and moving from room to room at their own pace.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            For under-construction projects, <Link href="/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">virtual reality tours</Link> are built directly from the architectural 3D model — so buyers can walk through show flats, amenity decks, and clubhouses that don&apos;t physically exist yet. For ready or nearly-complete inventory, tours can also be captured on-site using 360° cameras and stitched into a navigable walkthrough.
+            For under-construction projects, <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">virtual reality tours</Link> are built directly from the architectural 3D model — so buyers can walk through show flats, amenity decks, and clubhouses that don&apos;t physically exist yet. For ready or nearly-complete inventory, tours can also be captured on-site using 360° cameras and stitched into a navigable walkthrough.
           </p>
 
           <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Why Indian Developers Are Investing in VR Tours Right Now</h2>
@@ -101,7 +101,7 @@ export default function VirtualRealityToursGuideArticle({ post }: { post: BlogPo
             For under-construction projects, the production pipeline looks like this:
           </p>
           <ol className="list-decimal list-inside text-gray-700 space-y-1 mb-8">
-            <li><strong>3D model build.</strong> The studio builds a detailed 3D model of the show flat, amenities, or entire project from architectural drawings and material specifications — the same base model often used for <Link href="/3d-renders-isometrics" className="text-yellow-600 font-semibold hover:underline">3D renders</Link> and <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">walkthrough videos</Link>.</li>
+            <li><strong>3D model build.</strong> The studio builds a detailed 3D model of the show flat, amenities, or entire project from architectural drawings and material specifications — the same base model often used for <Link href="/services/3d-renders-isometrics" className="text-yellow-600 font-semibold hover:underline">3D renders</Link> and <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">walkthrough videos</Link>.</li>
             <li><strong>360° render capture.</strong> Instead of a single fixed camera angle, the studio renders full 360° panoramic nodes at key points — entrance, living room, bedrooms, balcony, clubhouse — each one a complete spherical view.</li>
             <li><strong>Hotspot linking and navigation.</strong> The panoramic nodes are stitched together with clickable hotspots so a buyer can move logically from room to room, floor to floor.</li>
             <li><strong>Interactive layer (optional).</strong> Floor plan overlays, unit information pop-ups, material swap buttons, and lead-capture forms are added directly inside the tour.</li>
@@ -142,7 +142,7 @@ export default function VirtualRealityToursGuideArticle({ post }: { post: BlogPo
             </table>
           </div>
           <p className="text-gray-700 leading-relaxed mb-8">
-            In practice, top developers pair all three: a cinematic <Link href="/3d-walkthrough-videos" className="text-yellow-600 font-semibold hover:underline">walkthrough video</Link> for top-of-funnel marketing, a VR tour for serious, later-stage buyers to self-explore in detail, and a physical <Link href="/architectural-scale-models" className="text-yellow-600 font-semibold hover:underline">scale model</Link> in the sales gallery to close the deal in person.
+            In practice, top developers pair all three: a cinematic <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">walkthrough video</Link> for top-of-funnel marketing, a VR tour for serious, later-stage buyers to self-explore in detail, and a physical <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">scale model</Link> in the sales gallery to close the deal in person.
           </p>
 
           <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">What Does a Virtual Reality Tour Cost in India?</h2>
@@ -231,7 +231,7 @@ export default function VirtualRealityToursGuideArticle({ post }: { post: BlogPo
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed">
             If you&apos;re evaluating VR for an upcoming launch, start by identifying your highest-intent, lowest-conversion buyer segment — usually NRI or outstation buyers — and pilot a single-unit VR tour for that segment first. Measure inquiry-to-site-visit conversion before and after, then decide whether to scale the format across your full project or portfolio. Looking for a partner to build it?{" "}
-            <Link href="/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">
+            <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">
               Explore our virtual reality tours service
             </Link>{" "}
             for portfolio examples and production timelines.
@@ -276,7 +276,7 @@ export default function VirtualRealityToursGuideArticle({ post }: { post: BlogPo
               Get Free Quote
             </Link>
             <Link
-              href="/virtual-reality-tours"
+              href="/services/virtual-reality-tours"
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
             >
               View Our VR Work

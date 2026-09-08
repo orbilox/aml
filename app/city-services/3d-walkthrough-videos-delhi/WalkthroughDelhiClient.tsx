@@ -425,7 +425,7 @@ export default function WalkthroughDelhiClient() {
             <div>
               <h3 className="text-xl font-bold text-black mb-4">Related Services</h3>
               <ul className="space-y-2">
-                <li><Link href="/services/3d-walkthrough-videos" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Video Service — Full Details</Link></li>
+                <li><Link href="/services/3d-walkthrough-video-company-india" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Video Service — Full Details</Link></li>
                 <li><Link href="/services/interior-cinematic-walkthrough" className="text-gray-600 hover:text-yellow-500 transition-colors">Interior Cinematic Walkthroughs</Link></li>
                 <li><Link href="/services/virtual-reality-tours" className="text-gray-600 hover:text-yellow-500 transition-colors">Virtual Reality Tours — 360° Property Experience</Link></li>
                 <li><Link href="/services/3d-renders-isometrics" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Renders &amp; Isometrics</Link></li>

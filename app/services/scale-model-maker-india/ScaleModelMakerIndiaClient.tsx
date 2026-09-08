@@ -930,9 +930,9 @@ export default function ScaleModelMakerIndiaClient() {
                 <h3 className="text-2xl font-bold text-black mb-6">Related Services</h3>
                 <div className="space-y-3">
                   {[
-                    { label: "Architectural Scale Models Service", href: "/services/architectural-scale-models" },
+                    { label: "Architectural Scale Models Service", href: "/services/scale-model-maker-india" },
                     { label: "3D Renders & Isometrics", href: "/services/3d-renders-isometrics" },
-                    { label: "3D Walkthrough Videos", href: "/services/3d-walkthrough-videos" },
+                    { label: "3D Walkthrough Videos", href: "/services/3d-walkthrough-video-company-india" },
                     { label: "Virtual Reality Tours", href: "/services/virtual-reality-tours" },
                   ].map((s) => (
                     <Link key={s.href} href={s.href} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-yellow-400 transition-colors group">
