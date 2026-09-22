@@ -121,13 +121,6 @@ export default function GraphicsBrandingFlatClient() {
         : "border-gray-300 focus:ring-yellow-400"
     }`;
 
-  const darkInputClass = (field: keyof GraphicsFormData) =>
-    `w-full bg-white/5 border rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none transition-colors text-sm ${
-      touched[field] && errors[field]
-        ? "border-red-400 focus:border-red-400"
-        : "border-white/10 focus:border-yellow-400"
-    }`;
-
   const portfolioProjects: Project[] = [
     {
       id: 1,
@@ -671,94 +664,137 @@ export default function GraphicsBrandingFlatClient() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="py-20 bg-[#0a0a0a] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-14 items-start">
-            <div>
-              <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">Get a Quote</span>
-              <h2 className="text-3xl sm:text-4xl font-bold mt-3 mb-6">Talk to Our Brochure Design Team</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Share your project details — we&apos;ll recommend the right mix of brochure, hoarding, and digital graphics, with a quote within 24 hours.
+      {/* Contact Form Section */}
+      <section id="contact" className="py-24 bg-yellow-400">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                Start Your Graphics &amp; Branding Project
+              </h2>
+              <div className="w-20 h-1 bg-black mx-auto mb-8"></div>
+              <p className="text-lg text-black/80">
+                Need real estate brochure design, hoarding design service, or a full brochure design agency engagement? Contact our experts for a custom quote.
               </p>
-              <div className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-xl">
-                <i className="ri-whatsapp-line text-green-400 text-2xl" />
-                <div>
-                  <div className="text-sm font-semibold">WhatsApp Us Directly</div>
-                  <a href="https://wa.me/919999999999" className="text-green-400 text-sm hover:underline" target="_blank" rel="noopener noreferrer">
-                    +91 99999 99999
-                  </a>
-                </div>
-              </div>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div className="bg-white rounded-2xl p-8 shadow-2xl">
               {submitStatus === "success" ? (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="ri-check-line text-3xl text-green-400" />
+                <div className="text-center py-10">
+                  <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-2xl text-green-500" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Thank You!</h3>
-                  <p className="text-gray-400">We&apos;ve received your enquiry. Our team will respond within 24 hours.</p>
+                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <p className="text-gray-600 text-sm">
+                    We&apos;ve received your enquiry. Our team will respond within 24 hours.
+                  </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} noValidate className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
+                <form onSubmit={handleSubmit} noValidate className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Name <span className="text-yellow-400">*</span></label>
-                      <input type="text" name="name" required value={formData.name} onChange={handleInputChange} onBlur={handleBlur} placeholder="Your full name" className={darkInputClass("name")} />
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        onBlur={handleBlur}
+                        required
+                        className={inputClass("name")}
+                        placeholder="Your full name"
+                      />
                       {touched.name && errors.name && (
-                        <p className="text-red-400 text-xs mt-1">{errors.name}</p>
+                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Phone <span className="text-yellow-400">*</span></label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        onBlur={handleBlur}
+                        required
+                        className={inputClass("email")}
+                        placeholder="your@email.com"
+                      />
+                      {touched.email && errors.email && (
+                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
                       <div className="flex gap-2">
                         <select
                           name="countryCode"
                           value={formData.countryCode}
                           onChange={handleInputChange}
-                          className="bg-white/5 border border-white/10 rounded-lg px-2 py-3 text-white focus:outline-none focus:border-yellow-400 transition-colors text-sm w-[92px] flex-shrink-0"
+                          className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
                         >
                           {COUNTRY_CODES.map((c) => (
-                            <option key={c.code} value={c.code} className="bg-gray-900">{c.code}</option>
+                            <option key={c.code} value={c.code}>{c.code}</option>
                           ))}
                         </select>
-                        <input type="tel" name="phone" required value={formData.phone} onChange={handleInputChange} onBlur={handleBlur} maxLength={10} inputMode="numeric" placeholder="10-digit mobile number" className={darkInputClass("phone")} />
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          onBlur={handleBlur}
+                          required
+                          maxLength={10}
+                          inputMode="numeric"
+                          className={inputClass("phone")}
+                          placeholder="10-digit mobile number"
+                        />
                       </div>
                       {touched.phone && errors.phone && (
-                        <p className="text-red-400 text-xs mt-1">{errors.phone}</p>
+                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
                       )}
                     </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1.5">Email <span className="text-yellow-400">*</span></label>
-                    <input type="email" name="email" required value={formData.email} onChange={handleInputChange} onBlur={handleBlur} placeholder="you@company.com" className={darkInputClass("email")} />
-                    {touched.email && errors.email && (
-                      <p className="text-red-400 text-xs mt-1">{errors.email}</p>
-                    )}
-                  </div>
-                  <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Company Name</label>
-                      <input type="text" name="firm" value={formData.firm} onChange={handleInputChange} placeholder="Your company name" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors text-sm" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Deliverable Type</label>
-                      <select name="deliverableType" value={formData.deliverableType} onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400 transition-colors text-sm appearance-none">
-                        <option value="" className="bg-gray-900">Select type</option>
-                        <option value="Real Estate Brochure Design" className="bg-gray-900">Real Estate Brochure Design</option>
-                        <option value="Hoarding Design" className="bg-gray-900">Hoarding Design</option>
-                        <option value="Commercial Real Estate Graphics" className="bg-gray-900">Commercial Real Estate Graphics</option>
-                        <option value="Full Brochure Design Agency Package" className="bg-gray-900">Full Brochure Design Agency Package</option>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Deliverable Type</label>
+                      <select
+                        name="deliverableType"
+                        value={formData.deliverableType}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      >
+                        <option value="">Select type</option>
+                        <option value="Real Estate Brochure Design">Real Estate Brochure Design</option>
+                        <option value="Hoarding Design">Hoarding Design</option>
+                        <option value="Commercial Real Estate Graphics">Commercial Real Estate Graphics</option>
+                        <option value="Full Brochure Design Agency Package">Full Brochure Design Agency Package</option>
                       </select>
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1.5">Project Details</label>
-                    <textarea name="message" rows={4} value={formData.message} onChange={handleInputChange} placeholder="Project name, deadline, and any specific requirements..." className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors text-sm resize-none" />
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                    <input
+                      type="text"
+                      name="firm"
+                      value={formData.firm}
+                      onChange={handleInputChange}
+                      placeholder="Your company name"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                      placeholder="Project name, deadline, and any specific requirements..."
+                    ></textarea>
                   </div>
                   {submitStatus === "error" && (
-                    <p className="text-red-400 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
+                    <p className="text-red-600 text-sm">Something went wrong. Please try again or WhatsApp us directly.</p>
                   )}
                   <button
                     type="submit"
