@@ -6,59 +6,218 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
-interface Project {
+interface PortfolioItem {
   id: number;
   title: string;
-  category: string;
+  desc: string;
   image: string;
-  description: string;
+  tag: string;
+  label: string;
 }
 
-const deliverableTypes = [
+const whatWeDeliver = [
   {
-    icon: "ri-palette-line",
-    title: "Real Estate Graphics Design",
-    desc: "Complete real estate graphics design for launches, sales offices, and digital campaigns — the foundation of our graphics for real estate offering.",
+    icon: "ri-pen-nib-line",
+    title: "Brand Identity & Logo",
+    desc: "Professional real estate graphics design including logos, brand guidelines, typography systems, and complete visual identity solutions for real estate brands.",
+  },
+  {
+    icon: "ri-file-text-line",
+    title: "Real Estate Brochure Design",
+    desc: "Premium real estate brochure design and property brochure design services for developers. We offer brochure design online, print-ready sales collaterals, and complete brochure design agency support for luxury and commercial projects.",
+  },
+  {
+    icon: "ri-megaphone-line",
+    title: "Construction Hoarding Design",
+    desc: "Creative hoarding design service and large-scale construction hoarding design solutions built for high visibility, branding impact, and roadside marketing.",
+  },
+  {
+    icon: "ri-instagram-line",
+    title: "Social Media Kit",
+    desc: "Custom graphics for real estate campaigns including branded social media creatives, launch posts, digital ads, and marketing templates.",
+  },
+  {
+    icon: "ri-mail-line",
+    title: "Email & WhatsApp Templates",
+    desc: "Branded communication templates for launch mailers, construction updates, and festival creatives.",
+  },
+  {
+    icon: "ri-building-4-line",
+    title: "Sales Office Branding",
+    desc: "Commercial real estate graphics and sales office branding including wall graphics, directional signage, backlit panels, and customer experience design.",
+  },
+];
+
+const brandingSolutions = [
+  {
+    icon: "ri-award-line",
+    title: "Logo & Brand Identity",
+    desc: "Premium real estate graphics and brand identity systems that establish a strong visual presence for residential and commercial developments.",
   },
   {
     icon: "ri-book-open-line",
-    title: "Real Estate Brochure Design",
-    desc: "Real estate brochure design and property brochure design built to convert — from concept to print-ready file.",
-  },
-  {
-    icon: "ri-signpost-line",
-    title: "Hoarding Design Service",
-    desc: "Large-format hoarding design service and construction hoarding design for site signage and pre-launch visibility.",
-  },
-  {
-    icon: "ri-store-2-line",
-    title: "Commercial Real Estate Graphics",
-    desc: "Commercial real estate graphics for office parks, retail, and mixed-use developments — investor-ready visuals.",
+    title: "Marketing Collaterals",
+    desc: "Professional real estate brochure design, property brochure design, flyers, and marketing materials crafted for maximum buyer engagement.",
   },
   {
     icon: "ri-global-line",
-    title: "Brochure Design Online",
-    desc: "Fully remote brochure design online engagements — share drawings and get a brochure design company workflow without an in-person meeting.",
+    title: "Digital Assets",
+    desc: "Modern graphics for real estate websites, social media campaigns, and digital advertising creatives optimized for online marketing.",
   },
   {
-    icon: "ri-team-line",
-    title: "Brochure Design Agency Engagement",
-    desc: "Full brochure design agency support across brochures, hoardings, digital ads, and presentation decks on one visual system.",
+    icon: "ri-signpost-line",
+    title: "Signage & Wayfinding",
+    desc: "Professional hoarding design service, construction hoarding design, and signage systems for sales offices and project sites.",
+  },
+  {
+    icon: "ri-presentation-line",
+    title: "Presentation Design",
+    desc: "Compelling presentation templates and pitch decks for investor meetings and client presentations.",
+  },
+  {
+    icon: "ri-layout-line",
+    title: "Layout & Typography",
+    desc: "Strategic real estate graphics design and typography systems that ensure premium and consistent brand communication.",
+  },
+];
+
+const portfolioItems: PortfolioItem[] = [
+  {
+    id: 1,
+    title: "Prestige Towers",
+    desc: "Complete brand identity for luxury high-rise development with premium positioning.",
+    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-1&orientation=landscape",
+    tag: "ri-palette-line",
+    label: "Brand Identity • Marketing",
+  },
+  {
+    id: 2,
+    title: "Urban Living Brochure",
+    desc: "Comprehensive sales brochure showcasing modern residential development features.",
+    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-2&orientation=landscape",
+    tag: "ri-book-open-line",
+    label: "Print Design • Sales Materials",
+  },
+  {
+    id: 3,
+    title: "Property Portal Website",
+    desc: "User-friendly website design with advanced property search and virtual tours.",
+    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-3&orientation=landscape",
+    tag: "ri-global-line",
+    label: "Web Design • UX/UI",
+  },
+  {
+    id: 4,
+    title: "Social Media Campaign",
+    desc: "Engaging social media templates and content strategy for property marketing.",
+    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-4&orientation=landscape",
+    tag: "ri-smartphone-line",
+    label: "Social Media • Digital Marketing",
+  },
+  {
+    id: 5,
+    title: "Development Signage",
+    desc: "Comprehensive signage system for large-scale mixed-use development project.",
+    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-5&orientation=landscape",
+    tag: "ri-signpost-line",
+    label: "Signage • Wayfinding",
+  },
+  {
+    id: 6,
+    title: "Investor Presentation",
+    desc: "Professional pitch deck design for major real estate investment opportunity.",
+    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-6&orientation=landscape",
+    tag: "ri-presentation-line",
+    label: "Presentation • Corporate Design",
   },
 ];
 
 const processSteps = [
-  { step: "01", title: "Discovery & Research", desc: "We study your project, target buyer, and competitor positioning before any design work begins." },
-  { step: "02", title: "Concept Development", desc: "Initial real estate graphics concepts and brochure layouts presented for your review." },
-  { step: "03", title: "Design Refinement", desc: "Revisions to typography, layout, and messaging until the design is launch-ready." },
-  { step: "04", title: "Final Delivery", desc: "Print-ready and digital-ready files delivered — brochure, hoarding, and social assets in one package." },
+  { num: "1", title: "Discovery & Research", desc: "Understanding your brand values, target audience, and competitive landscape to inform design decisions." },
+  { num: "2", title: "Concept Development", desc: "Creating multiple design concepts and exploring different creative directions based on research insights." },
+  { num: "3", title: "Design Refinement", desc: "Refining chosen concepts through iterative design process and client feedback integration." },
+  { num: "4", title: "Final Delivery", desc: "Delivering final designs with comprehensive brand guidelines and all necessary file formats." },
 ];
 
-const stats = [
-  { value: "100+", label: "Brochures & Hoardings Designed" },
-  { value: "10 Days", label: "Average Turnaround" },
-  { value: "Print + Digital", label: "Every Deliverable" },
-  { value: "Pan-India", label: "Remote Delivery" },
+const designCategories = [
+  {
+    icon: "ri-building-line",
+    title: "Project Branding",
+    desc: "Complete real estate graphics and branding systems for residential, commercial, and mixed-use property developments.",
+    items: ["Project logos and naming", "Color schemes and typography", "Marketing material templates", "Environmental graphics"],
+  },
+  {
+    icon: "ri-store-line",
+    title: "Corporate Branding",
+    desc: "Commercial real estate graphics and visual identity systems for real estate companies and developer brands.",
+    items: ["Corporate logo and identity", "Business card and stationery", "Office branding and signage", "Brand guidelines manual"],
+  },
+  {
+    icon: "ri-smartphone-line",
+    title: "Digital Graphics",
+    desc: "Modern graphics for real estate marketing including digital creatives, social media templates, and online branding campaigns.",
+    items: ["Social media templates", "Website graphics and banners", "Email marketing templates", "Digital advertising creatives"],
+  },
+  {
+    icon: "ri-printer-line",
+    title: "Print Materials",
+    desc: "Premium property brochure design, sales catalogues, and brochure design service solutions for print marketing.",
+    items: ["Sales brochures and catalogs", "Floor plan layouts", "Outdoor advertising materials", "Trade show displays"],
+  },
+];
+
+const whyChoose = [
+  {
+    icon: "ri-building-4-line",
+    title: "Real Estate Specialists",
+    desc: "We work exclusively with real estate developers. We understand RERA disclaimers, buyer psychology, and what sells at a site visit.",
+  },
+  {
+    icon: "ri-palette-line",
+    title: "Design + Strategy",
+    desc: "We combine real estate graphic design services with strategic marketing thinking to create brochures, hoardings, and branding assets that generate enquiries.",
+  },
+  {
+    icon: "ri-time-line",
+    title: "Fast Turnarounds",
+    desc: "Launch deadline approaching? We deliver high-quality branding in days, not weeks. Our team works across time zones to meet your schedule.",
+  },
+  {
+    icon: "ri-refresh-line",
+    title: "One Creative Partner",
+    desc: "From brochure design company support to complete brochure design agency services, one team handles your entire branding ecosystem.",
+  },
+];
+
+const faqs = [
+  {
+    q: "How long does a real estate brochure take to design?",
+    a: "A standard 16-page sales brochure takes 7–10 working days from brief to final files. We share concept layouts for approval before proceeding to detailed design.",
+  },
+  {
+    q: "What formats do you deliver design files in?",
+    a: "We deliver print-ready PDF files (CMYK, 300 DPI) for physical production and web-optimised PDF/JPG versions for digital use. Source files (AI, PSD, InDesign) are available on request.",
+  },
+  {
+    q: "How many revision rounds are included?",
+    a: "Every project includes 2 rounds of revisions. Additional rounds are available. We present concepts clearly and work collaboratively to get the design right.",
+  },
+  {
+    q: "Can you design hoardings in custom sizes?",
+    a: "Yes. We design hoardings in any dimension — from 10x20 ft site boards to 40x80 ft highway hoardings. We provide files formatted for your printer's specifications.",
+  },
+  {
+    q: "Do you also handle brand identity from scratch?",
+    a: "Yes. We offer complete brand identity packages — logo, colour palette, typography, brand guidelines, and usage documentation. Ideal for new project launches or rebranding existing ones.",
+  },
+  {
+    q: "Do you provide brochure design online services?",
+    a: "Yes. We provide brochure design online services for developers across India and internationally. Clients can collaborate remotely while receiving complete brochure design service support including layouts, revisions, and print-ready delivery.",
+  },
+  {
+    q: "Do you handle commercial real estate graphics?",
+    a: "Yes. We create commercial real estate graphics including leasing brochures, office branding, construction hoarding design, investor decks, and marketing campaigns for commercial projects.",
+  },
 ];
 
 type GraphicsFormData = {
@@ -99,7 +258,6 @@ function validateField(
 }
 
 export default function GraphicsBrandingFlatClient() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -120,51 +278,6 @@ export default function GraphicsBrandingFlatClient() {
         ? "border-red-400 focus:ring-red-400"
         : "border-gray-300 focus:ring-yellow-400"
     }`;
-
-  const portfolioProjects: Project[] = [
-    {
-      id: 1,
-      title: "Prestige Towers",
-      category: "Brand Identity • Marketing",
-      image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=600&height=400&seq=branding-portfolio-1&orientation=landscape",
-      description: "Complete brand identity for luxury high-rise development with premium positioning.",
-    },
-    {
-      id: 2,
-      title: "Urban Living Brochure",
-      category: "Print Design • Sales Materials",
-      image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=600&height=400&seq=branding-portfolio-2&orientation=landscape",
-      description: "Comprehensive sales brochure showcasing modern residential development features.",
-    },
-    {
-      id: 3,
-      title: "Property Portal Website",
-      category: "Web Design • UX/UI",
-      image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=600&height=400&seq=branding-portfolio-3&orientation=landscape",
-      description: "User-friendly website design with advanced property search and virtual tours.",
-    },
-    {
-      id: 4,
-      title: "Social Media Campaign",
-      category: "Social Media • Digital Marketing",
-      image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=600&height=400&seq=branding-portfolio-4&orientation=landscape",
-      description: "Engaging social media templates and content strategy for property marketing.",
-    },
-    {
-      id: 5,
-      title: "Development Signage",
-      category: "Signage • Wayfinding",
-      image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=600&height=400&seq=branding-portfolio-5&orientation=landscape",
-      description: "Comprehensive signage system for large-scale mixed-use development project.",
-    },
-    {
-      id: 6,
-      title: "Investor Presentation",
-      category: "Presentation • Corporate Design",
-      image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=600&height=400&seq=branding-portfolio-6&orientation=landscape",
-      description: "Professional pitch deck design for major real estate investment opportunity.",
-    },
-  ];
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -230,33 +343,6 @@ export default function GraphicsBrandingFlatClient() {
     <div className="min-h-screen bg-white">
       <Header />
       <WhatsAppFloat />
-
-      {selectedProject && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-          onClick={() => setSelectedProject(null)}
-        >
-          <div
-            className="relative w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setSelectedProject(null)}
-              className="absolute top-3 right-3 z-10 w-9 h-9 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-colors"
-            >
-              <i className="ri-close-line text-lg" />
-            </button>
-            <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-auto" />
-            <div className="p-6">
-              <div className="flex gap-2 mb-3">
-                <span className="text-xs bg-yellow-400 text-black font-semibold px-2 py-1 rounded">{selectedProject.category}</span>
-              </div>
-              <h3 className="font-bold text-black text-lg mb-2">{selectedProject.title}</h3>
-              <p className="text-gray-600 text-sm">{selectedProject.description}</p>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Hero */}
       <section className="relative bg-[#0a0a0a] text-white overflow-hidden min-h-[80vh] flex items-center">
@@ -440,179 +526,184 @@ export default function GraphicsBrandingFlatClient() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-yellow-400 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <div className="text-3xl font-black text-black">{s.value}</div>
-                <div className="text-sm font-semibold text-black/70 mt-1">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why choose us */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-yellow-500 text-sm font-semibold tracking-widest uppercase">Why Choose Our Brochure Design Company</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Real Estate Graphic Design Services That Convert</h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              As a brochure design agency, we deliver real estate graphics, hoarding design service, and commercial real estate graphics under one visual system.
+      {/* What We Deliver */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">What We Deliver</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600">
+              A complete real estate graphics design toolkit — from logo creation and brochure design service to launch campaigns and construction hoarding design.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: "ri-pencil-ruler-2-line", title: "Real Estate-Specific Design Team", desc: "Our real estate graphic design services are built by a team that understands buyer psychology, not a generic design shop." },
-              { icon: "ri-time-line", title: "Fast, Deadline-Aware Delivery", desc: "Real estate brochure design and hoarding design service delivered on schedule for launches and print deadlines." },
-              { icon: "ri-stack-line", title: "One Visual System, Every Touchpoint", desc: "Brochures, hoardings, digital ads, and presentation decks stay consistent across every commercial real estate graphics deliverable." },
-              { icon: "ri-global-line", title: "Brochure Design Online, No Site Visit Needed", desc: "Our brochure design service works fully remote — share your drawings and we handle the rest as a brochure design company." },
-              { icon: "ri-signpost-line", title: "Construction Hoarding Expertise", desc: "Construction hoarding design built for real-world site conditions — large format, weatherproof, and on-brand." },
-              { icon: "ri-team-line", title: "Full Brochure Design Agency Support", desc: "From a single property brochure design to a full brochure design agency engagement — scale up as your project grows." },
-            ].map((f) => (
-              <div key={f.title} className="bg-gray-50 rounded-xl p-7 border border-gray-100 hover:border-yellow-400/50 hover:shadow-md transition-all group">
-                <div className="w-12 h-12 bg-yellow-400/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-yellow-400/20 transition-colors">
-                  <i className={`${f.icon} text-2xl text-yellow-500`} />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whatWeDeliver.map((item) => (
+              <div key={item.title} className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className={`${item.icon} text-2xl text-black`}></i>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{f.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
+                <h3 className="text-xl font-bold text-black mb-3">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Deliverable Types */}
-      <section className="py-20 bg-[#0a0a0a] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-yellow-400 text-sm font-semibold tracking-widest uppercase">Deliverable Types</span>
-            <h2 className="text-3xl sm:text-4xl font-bold mt-3">6 Types of Real Estate Graphics We Design</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {deliverableTypes.map((mt) => (
-              <div key={mt.title} className="rounded-xl p-7 border border-white/10 bg-white/5 hover:border-yellow-400/60 transition-all">
-                <div className="w-11 h-11 bg-yellow-400/10 rounded-lg flex items-center justify-center mb-5">
-                  <i className={`${mt.icon} text-xl text-yellow-400`} />
-                </div>
-                <h3 className="text-lg font-bold mb-2">{mt.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{mt.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio */}
-      <section id="portfolio" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-yellow-500 text-sm font-semibold tracking-widest uppercase">Our Work</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Branding & Design Portfolio</h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-              Explore real estate graphics, brochure design, and commercial real estate graphics created for leading property brands.
+      {/* Complete Branding Solutions */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Complete Branding Solutions</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Comprehensive real estate graphic design services tailored for developers, builders, and commercial real estate marketing campaigns.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {portfolioProjects.map((project) => (
-              <div
-                key={project.id}
-                className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
-                onClick={() => setSelectedProject(project)}
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
-                      <i className="ri-image-line text-2xl text-black" />
-                    </div>
-                  </div>
-                  <div className="absolute top-3 left-3 flex gap-2">
-                    <span className="text-xs bg-yellow-400 text-black font-semibold px-2 py-1 rounded">{project.category}</span>
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {brandingSolutions.map((item) => (
+              <div key={item.title} className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className={`${item.icon} text-2xl text-black`}></i>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-gray-900 text-sm mb-1">{project.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">{project.description}</p>
+                <h3 className="text-xl font-bold text-black mb-4">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Branding &amp; Design Portfolio</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Explore premium real estate graphics, brochure design services, and commercial real estate graphics created for leading property brands.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioItems.map((item) => (
+              <div key={item.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src={item.image} alt={item.title} className="w-full h-48 object-cover object-top" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
+                  <p className="text-gray-600 mb-4">{item.desc}</p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <i className={`${item.tag} mr-2`}></i>
+                    <span>{item.label}</span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/portfolio" className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-lg transition-colors">
-              <i className="ri-gallery-line" />
-              View Full Portfolio
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-full transition-colors"
+            >
+              View Our Portfolio
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-yellow-500 text-sm font-semibold tracking-widest uppercase">How We Work</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Our 4-Step Process</h2>
+      {/* Design Process Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Our Real Estate Graphics Design Process</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step) => (
-              <div key={step.step} className="relative bg-gray-50 rounded-xl p-7 border border-gray-100 hover:border-yellow-400/40 hover:shadow-md transition-all">
-                <div className="text-5xl font-black text-yellow-400/20 absolute top-5 right-5">{step.step}</div>
-                <div className="w-9 h-9 bg-yellow-400 text-black rounded-lg flex items-center justify-center text-sm font-black mb-5">{step.step}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+              <div key={step.num} className="text-center">
+                <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-black">{step.num}</span>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">{step.title}</h3>
+                <p className="text-gray-600">{step.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-yellow-500 text-sm font-semibold tracking-widest uppercase">FAQ</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Frequently Asked Questions</h2>
+      {/* Design Categories Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Design Categories</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
           </div>
-          <div className="space-y-5">
-            {[
-              {
-                q: "What is included in real estate graphic design services?",
-                a: "Our real estate graphic design services cover real estate brochure design, hoarding design service, social media graphics, sales office branding, and digital ad creatives.",
-              },
-              {
-                q: "What is the difference between property brochure design and a brochure design agency engagement?",
-                a: "Property brochure design refers to a single brochure deliverable, while a full brochure design agency engagement includes brand-consistent collateral across brochures, hoardings, digital ads, and presentation decks.",
-              },
-              {
-                q: "Do you offer brochure design online for developers outside major cities?",
-                a: "Yes. Our brochure design service is delivered fully online — share your project details remotely, and we handle everything without requiring an in-person meeting.",
-              },
-              {
-                q: "What is construction hoarding design and when is it needed?",
-                a: "Construction hoarding design is large-format signage installed at a project site during construction — showing renders, amenities, and contact details to passersby.",
-              },
-              {
-                q: "How do I choose the right brochure design company for a real estate project?",
-                a: "Look for a brochure design company with real estate-specific experience, a portfolio of commercial real estate graphics, and the ability to handle hoarding design service and digital assets under one visual system.",
-              },
-              {
-                q: "Does real estate graphics design cover both print and digital formats?",
-                a: "Yes. Our real estate graphics design work is delivered in both print-ready and digital-ready formats — the same visual system scales from a hoarding to a brochure to an Instagram ad.",
-              },
-            ].map((faq, idx) => (
-              <FAQItem key={idx} question={faq.q} answer={faq.a} />
+          <div className="grid md:grid-cols-2 gap-8">
+            {designCategories.map((cat) => (
+              <div key={cat.title} className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className={`${cat.icon} text-2xl text-black`}></i>
+                </div>
+                <h3 className="text-2xl font-bold text-black mb-4">{cat.title}</h3>
+                <p className="text-gray-600 mb-6">{cat.desc}</p>
+                <ul className="space-y-2 text-gray-600">
+                  {cat.items.map((item) => (
+                    <li key={item} className="flex items-center space-x-2">
+                      <i className="ri-check-line text-yellow-400"></i>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose */}
+      <section className="py-24 bg-black">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Real Estate Design Experts — Not a Generic Agency</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {whyChoose.map((item) => (
+              <div key={item.title} className="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors flex gap-6">
+                <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i className={`${item.icon} text-xl text-black`}></i>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-400">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqs.map((faq, i) => (
+              <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-bold text-black mb-3">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Related Services & Blogs */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
@@ -621,11 +712,11 @@ export default function GraphicsBrandingFlatClient() {
               </h3>
               <div className="grid gap-4">
                 {[
-                  { href: "/graphics-branding", title: "Real Estate Graphics & Branding", desc: "Full brand identity and marketing collateral design.", icon: "ri-palette-line" },
                   { href: "/services/digital-marketing", title: "Digital Marketing", desc: "Meta and Google campaigns for real estate lead generation.", icon: "ri-advertisement-line" },
                   { href: "/services/3d-renders-isometrics", title: "3D House Rendering", desc: "3D renders and floor plans for brochures and hoardings.", icon: "ri-image-2-line" },
+                  { href: "/construction-update-videos", title: "Construction Update Videos", desc: "Scheduled construction progress documentation.", icon: "ri-vidicon-line" },
                 ].map((s) => (
-                  <Link key={s.href} href={s.href} className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group">
+                  <Link key={s.href} href={s.href} className="flex items-start gap-4 p-4 bg-white border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group">
                     <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
                       <i className={`${s.icon} text-yellow-500 text-lg`} />
                     </div>
@@ -648,7 +739,7 @@ export default function GraphicsBrandingFlatClient() {
                   { href: "/blog/real-estate-marketing-video-types-india", title: "7 Types of Real Estate Marketing Videos Every Indian Developer Should Use", tag: "Marketing" },
                   { href: "/blog/scale-model-sales-gallery-real-estate-india", title: "What a Scale Model Actually Does Inside a Sales Gallery", tag: "Sales Gallery" },
                 ].map((b) => (
-                  <Link key={b.href} href={b.href} className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group">
+                  <Link key={b.href} href={b.href} className="flex items-start gap-4 p-4 bg-white border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group">
                     <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
                       <i className="ri-article-line text-yellow-500 text-lg" />
                     </div>
@@ -670,11 +761,11 @@ export default function GraphicsBrandingFlatClient() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-                Start Your Graphics &amp; Branding Project
+                Get Your Branding Quote
               </h2>
               <div className="w-20 h-1 bg-black mx-auto mb-8"></div>
               <p className="text-lg text-black/80">
-                Need real estate brochure design, hoarding design service, or a full brochure design agency engagement? Contact our experts for a custom quote.
+                Ready to create premium real estate graphics, brochure designs, and impactful branding for your next project? Contact our experts today.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-2xl">
@@ -811,24 +902,6 @@ export default function GraphicsBrandingFlatClient() {
       </section>
 
       <Footer />
-    </div>
-  );
-}
-
-function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between gap-4 p-5 text-left bg-white hover:bg-gray-50 transition-colors"
-      >
-        <span className="font-semibold text-gray-900 text-sm sm:text-base">{question}</span>
-        <i className={`ri-arrow-down-s-line text-xl text-gray-500 transition-transform flex-shrink-0 ${open ? "rotate-180" : ""}`} />
-      </button>
-      {open && (
-        <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed bg-white">{answer}</div>
-      )}
     </div>
   );
 }

@@ -9,10 +9,25 @@ import PortfolioInventoryArticle from "@/app/blog/articles/PortfolioInventoryArt
 import VirtualRealityToursGuideArticle from "@/app/blog/articles/VirtualRealityToursGuideArticle";
 import Interactive3DToolsGuideArticle from "@/app/blog/articles/Interactive3DToolsGuideArticle";
 import DigitalMarketingGuideArticle from "@/app/blog/articles/DigitalMarketingGuideArticle";
+import GraphicsBrandingGuideArticle from "@/app/blog/articles/GraphicsBrandingGuideArticle";
+import RouteVideosGuideArticle from "@/app/blog/articles/RouteVideosGuideArticle";
+import InteriorCinematicWalkthroughGuideArticle from "@/app/blog/articles/InteriorCinematicWalkthroughGuideArticle";
 
 export default function BlogDetailClient({ slug }: { slug: string }) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
+
+  if (slug === "interior-cinematic-walkthrough-guide-india") {
+    return <InteriorCinematicWalkthroughGuideArticle post={post} />;
+  }
+
+  if (slug === "route-videos-real-estate-connectivity-guide-india") {
+    return <RouteVideosGuideArticle post={post} />;
+  }
+
+  if (slug === "real-estate-graphics-branding-guide-india") {
+    return <GraphicsBrandingGuideArticle post={post} />;
+  }
 
   if (slug === "real-estate-digital-marketing-guide-india") {
     return <DigitalMarketingGuideArticle post={post} />;

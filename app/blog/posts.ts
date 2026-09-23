@@ -13,6 +13,45 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "interior-cinematic-walkthrough-guide-india",
+    title: "Interior Cinematic Walkthrough for Real Estate: The Complete Guide (2026)",
+    excerpt:
+      "A full project walkthrough has to cover the exterior, the amenities, and every unit type in a few minutes — which means no single interior ever gets more than a few seconds of screen time. Here's what an interior cinematic walkthrough actually is, how it's produced, and when it earns its budget back.",
+    category: "Interior Cinematic Walkthrough",
+    date: "September 26, 2026",
+    dateISO: "2026-09-26",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/portfolio/19.jpg",
+    tags: ["Interior Cinematic Walkthrough", "Luxury Interior Video", "3D Interior Walkthrough", "Real Estate Video Marketing", "Cinematic Real Estate Video"],
+  },
+  {
+    slug: "route-videos-real-estate-connectivity-guide-india",
+    title: "Route Videos for Real Estate: The Complete Guide to Location & Connectivity Videos (2026)",
+    excerpt:
+      "\"How far is it from the metro?\" is one of the first questions a real estate buyer asks — and one of the hardest to answer convincingly with a static map screenshot. Here's what route videos actually cover, how they're produced, and where they earn their budget back fastest.",
+    category: "Route Videos",
+    date: "September 14, 2026",
+    dateISO: "2026-09-14",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/home/1.jpg",
+    tags: ["Route Videos", "Location Video", "Real Estate Connectivity", "Real Estate Drone Video", "Property Videography"],
+  },
+  {
+    slug: "real-estate-graphics-branding-guide-india",
+    title: "Real Estate Graphics & Branding in India: The Complete Guide (2026)",
+    excerpt:
+      "Most developers get the visualization right — the renders, the walkthrough, the scale model — then hand the brochure and hoarding to whoever is available that week. Here's what real estate graphics and branding actually needs to cover, and how top developers keep it consistent from the highway hoarding to the PDF a buyer forwards to their spouse.",
+    category: "Real Estate Graphics & Branding",
+    date: "September 7, 2026",
+    dateISO: "2026-09-07",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/home/3.jpg",
+    tags: ["Real Estate Branding", "Real Estate Brochure Design", "Hoarding Design", "Real Estate Graphics", "Construction Hoarding Design"],
+  },
+  {
     slug: "real-estate-digital-marketing-guide-india",
     title: "Real Estate Digital Marketing in India: The Complete Guide for Developers (2026)",
     excerpt:
