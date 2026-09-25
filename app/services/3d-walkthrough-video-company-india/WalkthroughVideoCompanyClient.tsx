@@ -130,7 +130,14 @@ const cityLinks = [
   { city: "Ahmedabad", href: "/contact" },
 ];
 
-type FieldName = "name" | "email" | "countryCode" | "phone" | "project_type" | "city" | "message";
+type FieldName =
+  | "name"
+  | "email"
+  | "countryCode"
+  | "phone"
+  | "project_type"
+  | "city"
+  | "message";
 type FormErrors = Partial<Record<FieldName, string>>;
 
 function validateField(name: FieldName, value: string): string | undefined {
@@ -171,7 +178,9 @@ export default function WalkthroughVideoCompanyClient() {
     "idle" | "success" | "error"
   >("idle");
   const [errors, setErrors] = useState<FormErrors>({});
-  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
+  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>(
+    {},
+  );
 
   const portfolioProjects: Project[] = [
     {
@@ -213,10 +222,14 @@ export default function WalkthroughVideoCompanyClient() {
   ) => {
     const { name, value } = e.target;
     const field = name as FieldName;
-    const sanitized = field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    const sanitized =
+      field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
     setFormData((prev) => ({ ...prev, [field]: sanitized }));
     if (touched[field]) {
-      setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
+      setErrors((prev) => ({
+        ...prev,
+        [field]: validateField(field, sanitized),
+      }));
     }
   };
 
@@ -288,7 +301,7 @@ export default function WalkthroughVideoCompanyClient() {
       <Header />
 
       {/* ── HERO ── */}
-      <section className="py-24 h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+      <section className="py-24 min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -318,13 +331,13 @@ export default function WalkthroughVideoCompanyClient() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
                 >
                   Get Quote
                 </a>
                 <a
-                  href="#portfolio"
+                  href="/portfolio"
                   className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap"
                 >
                   View Portfolio
@@ -354,7 +367,11 @@ export default function WalkthroughVideoCompanyClient() {
                     Share your project drawings and we&apos;ll respond within 24
                     hours.
                   </p>
-                  <form onSubmit={handleSubmit} noValidate className="space-y-4">
+                  <form
+                    onSubmit={handleSubmit}
+                    noValidate
+                    className="space-y-4"
+                  >
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1.5">
@@ -370,7 +387,9 @@ export default function WalkthroughVideoCompanyClient() {
                           className={inputClass("name")}
                         />
                         {touched.name && errors.name && (
-                          <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                          <p className="text-red-500 text-xs mt-1">
+                            {errors.name}
+                          </p>
                         )}
                       </div>
                       <div>
@@ -385,7 +404,9 @@ export default function WalkthroughVideoCompanyClient() {
                             className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
                           >
                             {COUNTRY_CODES.map((c) => (
-                              <option key={c.code} value={c.code}>{c.code}</option>
+                              <option key={c.code} value={c.code}>
+                                {c.code}
+                              </option>
                             ))}
                           </select>
                           <input
@@ -401,7 +422,9 @@ export default function WalkthroughVideoCompanyClient() {
                           />
                         </div>
                         {touched.phone && errors.phone && (
-                          <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                          <p className="text-red-500 text-xs mt-1">
+                            {errors.phone}
+                          </p>
                         )}
                       </div>
                     </div>
@@ -419,7 +442,9 @@ export default function WalkthroughVideoCompanyClient() {
                         className={inputClass("email")}
                       />
                       {touched.email && errors.email && (
-                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.email}
+                        </p>
                       )}
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -1042,7 +1067,9 @@ export default function WalkthroughVideoCompanyClient() {
                         className={inputClass("name")}
                       />
                       {touched.name && errors.name && (
-                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.name}
+                        </p>
                       )}
                     </div>
                     <div>
@@ -1057,7 +1084,9 @@ export default function WalkthroughVideoCompanyClient() {
                           className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
                         >
                           {COUNTRY_CODES.map((c) => (
-                            <option key={c.code} value={c.code}>{c.code}</option>
+                            <option key={c.code} value={c.code}>
+                              {c.code}
+                            </option>
                           ))}
                         </select>
                         <input
@@ -1073,7 +1102,9 @@ export default function WalkthroughVideoCompanyClient() {
                         />
                       </div>
                       {touched.phone && errors.phone && (
-                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.phone}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -1092,7 +1123,9 @@ export default function WalkthroughVideoCompanyClient() {
                       className={inputClass("email")}
                     />
                     {touched.email && errors.email && (
-                      <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
 

@@ -372,18 +372,18 @@ export default function GraphicsBrandingFlatClient() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-lg transition-colors text-lg"
                 >
                   <i className="ri-palette-line" />
-                  Request a Quote
+                  Get Quote
                 </a>
                 <a
-                  href="#portfolio"
+                  href="/portfolio"
                   className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white px-8 py-4 rounded-lg transition-colors text-lg"
                 >
                   <i className="ri-gallery-line" />
-                  View Our Work
+                  View Portfolio
                 </a>
               </div>
             </div>

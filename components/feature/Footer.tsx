@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <Image
-              src="https://static.readdy.ai/image/8d54cefc56aae77b02ec7dea9869daf3/7240d6459fd7bd08670b4a90c4788daa.png"
+              src="/aml-logo.png"
               alt="Alliance Media Labs"
               width={160}
               height={44}

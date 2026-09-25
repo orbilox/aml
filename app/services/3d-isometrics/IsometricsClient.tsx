@@ -150,11 +150,12 @@ export default function IsometricsClient() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url('https://readdy.ai/api/search-image?query=Professional%20isometric%20architectural%20illustration%20workspace%2C%20technical%20drawings%2C%20detailed%203D%20isometric%20projections%2C%20architectural%20design%20studio%2C%20professional%20visualization&width=1920&height=1080&seq=isometrics-hero-bg&orientation=landscape')`,
           }}
         ></div>
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -171,7 +172,7 @@ export default function IsometricsClient() {
                 href="/contact"
                 className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
               >
-                Start Your Project
+                Get Quote
               </Link>
               <Link
                 href="/portfolio"
@@ -506,7 +507,8 @@ export default function IsometricsClient() {
               Flat plans tell. 3D isometrics sell.
             </p>
           </div>
-          <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
+          <div className="max-w-4xl mx-auto overflow-x-auto rounded-2xl shadow-lg">
+           <div className="min-w-[600px]">
             <div className="grid grid-cols-3 bg-black text-white">
               <div className="p-6 font-bold text-lg">Feature</div>
               <div className="p-6 font-bold text-lg text-center border-l border-gray-700">
@@ -563,6 +565,7 @@ export default function IsometricsClient() {
                 </div>
               </div>
             ))}
+           </div>
           </div>
         </div>
       </section>

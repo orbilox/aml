@@ -100,7 +100,11 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
   return notFound();
 }
 
-function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function WalkthroughArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -129,12 +133,18 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
 
       {/* Article Body */}
       <div className="container mx-auto px-6 py-16 max-w-4xl">
-
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-yellow-500 transition-colors">
+            Home
+          </Link>
           <i className="ri-arrow-right-s-line"></i>
-          <Link href="/blog" className="hover:text-yellow-500 transition-colors">Blog</Link>
+          <Link
+            href="/blog"
+            className="hover:text-yellow-500 transition-colors"
+          >
+            Blog
+          </Link>
           <i className="ri-arrow-right-s-line"></i>
           <span className="text-gray-400 truncate max-w-xs">{post.title}</span>
         </nav>
@@ -157,13 +167,14 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
-
           {/* Introduction */}
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            In India&apos;s booming real estate market, the difference between a project that sells out in months
-            and one that struggles for years often comes down to one thing: how well buyers can visualize the
-            finished product. <strong>3D walkthrough video services</strong> have become the most powerful
-            marketing tool available to real estate developers today — helping them sell faster, reach wider
+            In India&apos;s booming real estate market, the difference between a
+            project that sells out in months and one that struggles for years
+            often comes down to one thing: how well buyers can visualize the
+            finished product. <strong>3D walkthrough video services</strong>{" "}
+            have become the most powerful marketing tool available to real
+            estate developers today — helping them sell faster, reach wider
             audiences, and command premium pricing.
           </p>
 
@@ -173,16 +184,19 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A <strong>3D walkthrough video service</strong> involves the creation of a computer-generated
-            animation that allows prospective buyers to virtually tour a property before a single brick
-            has been laid. Unlike static images or floor plans, a 3D walkthrough creates a cinematic,
-            immersive experience — guiding viewers through every room, corridor, amenity area, and
-            outdoor space with smooth, realistic camera movements.
+            A <strong>3D walkthrough video service</strong> involves the
+            creation of a computer-generated animation that allows prospective
+            buyers to virtually tour a property before a single brick has been
+            laid. Unlike static images or floor plans, a 3D walkthrough creates
+            a cinematic, immersive experience — guiding viewers through every
+            room, corridor, amenity area, and outdoor space with smooth,
+            realistic camera movements.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            The result is a photorealistic video that looks and feels like footage of a completed building,
-            complete with furniture, finishes, lighting effects, landscaping, and even time-of-day
-            lighting variations — all before construction begins.
+            The result is a photorealistic video that looks and feels like
+            footage of a completed building, complete with furniture, finishes,
+            lighting effects, landscaping, and even time-of-day lighting
+            variations — all before construction begins.
           </p>
 
           {/* Inline image after Section 1 */}
@@ -242,7 +256,9 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
                 </div>
                 <div>
                   <h3 className="font-bold text-black mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -254,8 +270,9 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-8">
-            Understanding how 3D walkthrough videos are made helps you plan better and set
-            realistic expectations. Here&apos;s the step-by-step process followed by Alliance Media Labs:
+            Understanding how 3D walkthrough videos are made helps you plan
+            better and set realistic expectations. Here&apos;s the step-by-step
+            process followed by Alliance Media Labs:
           </p>
 
           <div className="space-y-4 mb-8">
@@ -307,7 +324,9 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
                 </div>
                 <div className="pt-2">
                   <h3 className="font-bold text-black mb-1">{step.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {step.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -364,26 +383,46 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
                 desc: "Web-based interactive versions where buyers click to navigate between rooms, change material finishes, and view units from multiple angles — the next level of engagement.",
               },
             ].map((type, i) => (
-              <div key={i} className="p-5 border border-gray-200 rounded-xl hover:border-yellow-400 transition-colors">
+              <div
+                key={i}
+                className="p-5 border border-gray-200 rounded-xl hover:border-yellow-400 transition-colors"
+              >
                 <h3 className="font-bold text-black mb-2 flex items-center gap-2">
                   <span className="text-yellow-500">•</span> {type.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{type.desc}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {type.desc}
+                </p>
               </div>
             ))}
           </div>
 
           {/* Portfolio gallery after Types */}
           <div className="mb-12">
-            <p className="text-sm text-gray-500 font-medium mb-3 uppercase tracking-wider">Our Work</p>
+            <p className="text-sm text-gray-500 font-medium mb-3 uppercase tracking-wider">
+              Our Work
+            </p>
             <div className="grid grid-cols-3 gap-3">
               {[
-                { src: "/images/services/3d-walkthrough-videos/5.jpg", alt: "3D walkthrough project sample 1" },
-                { src: "/images/services/3d-walkthrough-videos/6.jpg", alt: "3D walkthrough project sample 2" },
-                { src: "/images/services/3d-walkthrough-videos/7.jpg", alt: "3D walkthrough project sample 3" },
+                {
+                  src: "/images/services/3d-walkthrough-videos/5.jpg",
+                  alt: "3D walkthrough project sample 1",
+                },
+                {
+                  src: "/images/services/3d-walkthrough-videos/6.jpg",
+                  alt: "3D walkthrough project sample 2",
+                },
+                {
+                  src: "/images/services/3d-walkthrough-videos/7.jpg",
+                  alt: "3D walkthrough project sample 3",
+                },
               ].map((img) => (
                 <div key={img.src} className="rounded-xl overflow-hidden">
-                  <img src={img.src} alt={img.alt} className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300" />
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
               ))}
             </div>
@@ -395,8 +434,9 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Not all 3D walkthrough videos are created equal. Here&apos;s what separates a mediocre
-            walkthrough from one that genuinely drives sales:
+            Not all 3D walkthrough videos are created equal. Here&apos;s what
+            separates a mediocre walkthrough from one that genuinely drives
+            sales:
           </p>
           <ul className="space-y-3 mb-8">
             {[
@@ -421,30 +461,59 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-6">
-            The cost of a 3D walkthrough video service depends on several factors. Here&apos;s a
-            quick reference:
+            The cost of a 3D walkthrough video service depends on several
+            factors. Here&apos;s a quick reference:
           </p>
 
           <div className="overflow-x-auto mb-6">
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="bg-black text-white">
-                  <th className="text-left px-4 py-3 font-semibold rounded-tl-lg">Cost Factor</th>
-                  <th className="text-left px-4 py-3 font-semibold rounded-tr-lg">Impact on Cost</th>
+                  <th className="text-left px-4 py-3 font-semibold rounded-tl-lg">
+                    Cost Factor
+                  </th>
+                  <th className="text-left px-4 py-3 font-semibold rounded-tr-lg">
+                    Impact on Cost
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["Project size (sq ft)", "Larger projects = more 3D modeling time"],
-                  ["Number of floor plan typologies", "Each unique unit type requires separate modeling"],
-                  ["Interior styling level", "Luxury styling with high-end materials takes more time"],
-                  ["Animation complexity & duration", "More camera sequences and longer runtime"],
-                  ["Number of videos (exterior, interior, amenities)", "Each additional video adds to scope"],
-                  ["Turnaround time", "Rush projects may carry a premium over standard timelines"],
+                  [
+                    "Project size (sq ft)",
+                    "Larger projects = more 3D modeling time",
+                  ],
+                  [
+                    "Number of floor plan typologies",
+                    "Each unique unit type requires separate modeling",
+                  ],
+                  [
+                    "Interior styling level",
+                    "Luxury styling with high-end materials takes more time",
+                  ],
+                  [
+                    "Animation complexity & duration",
+                    "More camera sequences and longer runtime",
+                  ],
+                  [
+                    "Number of videos (exterior, interior, amenities)",
+                    "Each additional video adds to scope",
+                  ],
+                  [
+                    "Turnaround time",
+                    "Rush projects may carry a premium over standard timelines",
+                  ],
                 ].map(([factor, impact], i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                    <td className="px-4 py-3 text-black font-medium border-b border-gray-200">{factor}</td>
-                    <td className="px-4 py-3 text-gray-600 border-b border-gray-200">{impact}</td>
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                  >
+                    <td className="px-4 py-3 text-black font-medium border-b border-gray-200">
+                      {factor}
+                    </td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-200">
+                      {impact}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -454,9 +523,11 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-5 rounded-r-xl mb-8">
             <p className="text-gray-700 font-medium">
               <i className="ri-information-line text-yellow-500 mr-2"></i>
-              Typical costs in India range from <strong>₹50,000</strong> for a basic residential walkthrough
-              to <strong>₹5,00,000+</strong> for a comprehensive luxury project with multiple typologies,
-              amenities, and a master plan flyover. Contact us for a detailed quote tailored to your project.
+              Typical costs in India range from <strong>₹50,000</strong> for a
+              basic residential walkthrough to <strong>₹5,00,000+</strong> for a
+              comprehensive luxury project with multiple typologies, amenities,
+              and a master plan flyover. Contact us for a detailed quote
+              tailored to your project.
             </p>
           </div>
 
@@ -466,44 +537,82 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-6">
-            With over 500 projects delivered across India&apos;s top cities, Alliance Media Labs is
-            the trusted 3D walkthrough video service partner for India&apos;s leading real estate developers.
+            With over 500 projects delivered across India&apos;s top cities,
+            Alliance Media Labs is the trusted 3D walkthrough video service
+            partner for India&apos;s leading real estate developers.
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-8">
             {[
-              { icon: "ri-award-line", title: "500+ Projects Delivered", desc: "Proven experience across residential, commercial, and mixed-use developments." },
-              { icon: "ri-map-pin-line", title: "Pan-India Service", desc: "Mumbai, Delhi NCR, Bangalore, Gurugram, Pune, Hyderabad, and beyond." },
-              { icon: "ri-user-star-line", title: "Dedicated Project Manager", desc: "Single point of contact from brief to final delivery — no confusion, no delays." },
-              { icon: "ri-time-line", title: "Industry-Leading Turnaround", desc: "We deliver faster than the industry standard without ever compromising quality." },
-              { icon: "ri-price-tag-3-line", title: "Transparent Pricing", desc: "No hidden charges. Detailed scope and quote provided upfront." },
-              { icon: "ri-tools-line", title: "End-to-End Solution", desc: "From CAD review to final post-production, we handle every step in-house." },
+              {
+                icon: "ri-award-line",
+                title: "500+ Projects Delivered",
+                desc: "Proven experience across residential, commercial, and mixed-use developments.",
+              },
+              {
+                icon: "ri-map-pin-line",
+                title: "Pan-India Service",
+                desc: "Mumbai, Delhi NCR, Bangalore, Gurugram, Pune, Hyderabad, and beyond.",
+              },
+              {
+                icon: "ri-user-star-line",
+                title: "Dedicated Project Manager",
+                desc: "Single point of contact from brief to final delivery — no confusion, no delays.",
+              },
+              {
+                icon: "ri-time-line",
+                title: "Industry-Leading Turnaround",
+                desc: "We deliver faster than the industry standard without ever compromising quality.",
+              },
+              {
+                icon: "ri-price-tag-3-line",
+                title: "Transparent Pricing",
+                desc: "No hidden charges. Detailed scope and quote provided upfront.",
+              },
+              {
+                icon: "ri-tools-line",
+                title: "End-to-End Solution",
+                desc: "From CAD review to final post-production, we handle every step in-house.",
+              },
             ].map((item, i) => (
               <div key={i} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
                 <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
                   <i className={`${item.icon} text-black`}></i>
                 </div>
                 <div>
-                  <h3 className="font-bold text-black text-sm mb-1">{item.title}</h3>
-                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                  <h3 className="font-bold text-black text-sm mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Conclusion */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Conclusion</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Conclusion
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            <strong>3D walkthrough video services</strong> are no longer a luxury — they are an essential
-            component of modern real estate marketing. With buyers spending more time online researching
-            properties before visiting, the quality of your digital content directly impacts your sales velocity.
+            <strong>3D walkthrough video services</strong> are no longer a
+            luxury — they are an essential component of modern real estate
+            marketing. With buyers spending more time online researching
+            properties before visiting, the quality of your digital content
+            directly impacts your sales velocity.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            Whether you are launching a luxury residential tower in Mumbai, a commercial complex in Gurugram,
-            or a township in Bangalore, a professionally produced 3D walkthrough video from Alliance Media Labs
-            will give your project the competitive edge it deserves. Looking for India&apos;s best 3D walkthrough video company?{" "}
-            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
+            Whether you are launching a luxury residential tower in Mumbai, a
+            commercial complex in Gurugram, or a township in Bangalore, a
+            professionally produced 3D walkthrough video from Alliance Media
+            Labs will give your project the competitive edge it deserves.
+            Looking for India&apos;s best 3D walkthrough video company?{" "}
+            <Link
+              href="/services/3d-walkthrough-video-company-india"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               Explore our dedicated 3D walkthrough video company page
             </Link>{" "}
             for full pricing, portfolio, and production timelines.
@@ -538,7 +647,8 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
             Ready to Start Your 3D Walkthrough Video Project?
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Talk to our team today and get a free consultation and quote for your real estate project.
+            Talk to our team today and get a free consultation and quote for
+            your real estate project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -562,7 +672,11 @@ function WalkthroughArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
   );
 }
 
-function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function HouseRenderingArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   const faqs = [
@@ -614,102 +728,201 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
 
       {/* Hero */}
       <div className="relative h-[480px] overflow-hidden mt-20">
-        <img src={post.thumbnail} alt={post.title} className="w-full h-full object-cover" />
+        <img
+          src={post.thumbnail}
+          alt={post.title}
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="absolute inset-0 flex items-end">
           <div className="container mx-auto px-6 pb-12">
             <span className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">
               {post.category}
             </span>
-            <h1 className="text-3xl md:text-5xl font-bold text-white max-w-4xl leading-tight">{post.title}</h1>
+            <h1 className="text-3xl md:text-5xl font-bold text-white max-w-4xl leading-tight">
+              {post.title}
+            </h1>
           </div>
         </div>
       </div>
 
       <div className="container mx-auto px-6 py-16 max-w-4xl">
-
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-yellow-500 transition-colors">
+            Home
+          </Link>
           <i className="ri-arrow-right-s-line"></i>
-          <Link href="/blog" className="hover:text-yellow-500 transition-colors">Blog</Link>
+          <Link
+            href="/blog"
+            className="hover:text-yellow-500 transition-colors"
+          >
+            Blog
+          </Link>
           <i className="ri-arrow-right-s-line"></i>
           <span className="text-gray-400 truncate max-w-xs">{post.title}</span>
         </nav>
 
         {/* Meta */}
         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-10 pb-8 border-b border-gray-200">
-          <div className="flex items-center gap-2"><i className="ri-user-line text-yellow-500"></i><span>{post.author}</span></div>
-          <div className="flex items-center gap-2"><i className="ri-calendar-line text-yellow-500"></i><span>{post.date}</span></div>
-          <div className="flex items-center gap-2"><i className="ri-time-line text-yellow-500"></i><span>{post.readTime}</span></div>
+          <div className="flex items-center gap-2">
+            <i className="ri-user-line text-yellow-500"></i>
+            <span>{post.author}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="ri-calendar-line text-yellow-500"></i>
+            <span>{post.date}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="ri-time-line text-yellow-500"></i>
+            <span>{post.readTime}</span>
+          </div>
         </div>
 
         <div className="prose prose-lg max-w-none">
-
           {/* Intro */}
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            If you search for any real estate visualization service in India, one term comes up more than any other: <strong>3D house rendering</strong>. With over 10,000 monthly searches, it is the single most sought-after architectural visualization service among Indian property buyers, developers, and architects. Yet despite its popularity, there is a lot of confusion about what 3D house rendering actually involves, how it differs from related services, and how to choose the right company.
+            If you search for any real estate visualization service in India,
+            one term comes up more than any other:{" "}
+            <strong>3D house rendering</strong>. With over 10,000 monthly
+            searches, it is the single most sought-after architectural
+            visualization service among Indian property buyers, developers, and
+            architects. Yet despite its popularity, there is a lot of confusion
+            about what 3D house rendering actually involves, how it differs from
+            related services, and how to choose the right company.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            This guide covers everything — from the types of <strong>3D renders</strong> available, to <strong>3D floor plan design</strong>, to AI-assisted rendering, to choosing between <strong>architectural rendering companies</strong> in India. By the end, you will know exactly what to brief, what to expect, and what to pay.
+            This guide covers everything — from the types of{" "}
+            <strong>3D renders</strong> available, to{" "}
+            <strong>3D floor plan design</strong>, to AI-assisted rendering, to
+            choosing between <strong>architectural rendering companies</strong>{" "}
+            in India. By the end, you will know exactly what to brief, what to
+            expect, and what to pay.
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">What Is 3D House Rendering?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            What Is 3D House Rendering?
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            <strong>3D house rendering</strong> is the process of generating a photorealistic image of a building from architectural drawings using specialist 3D software. The result looks indistinguishable from a professional photograph — except that the building does not need to exist yet. Alliance Media Labs&apos;{" "}
-            <Link href="/services/3d-renders-isometrics" className="text-yellow-600 font-semibold hover:underline">
+            <strong>3D house rendering</strong> is the process of generating a
+            photorealistic image of a building from architectural drawings using
+            specialist 3D software. The result looks indistinguishable from a
+            professional photograph — except that the building does not need to
+            exist yet. Alliance Media Labs&apos;{" "}
+            <Link
+              href="/services/3d-renders-isometrics"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               3D renders and isometrics service
             </Link>{" "}
             handles all three stages in-house for developers across India.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The process involves three stages: <strong>3D modelling</strong> (building a digital replica of the structure from drawings), <strong>texturing and lighting</strong> (applying realistic materials, shadows, and time-of-day lighting), and <strong>rendering</strong> (calculating the final photorealistic output). Professional <strong>3D rendering services</strong> handle all three stages in-house, delivering images at 300 DPI print resolution.
+            The process involves three stages: <strong>3D modelling</strong>{" "}
+            (building a digital replica of the structure from drawings),{" "}
+            <strong>texturing and lighting</strong> (applying realistic
+            materials, shadows, and time-of-day lighting), and{" "}
+            <strong>rendering</strong> (calculating the final photorealistic
+            output). Professional <strong>3D rendering services</strong> handle
+            all three stages in-house, delivering images at 300 DPI print
+            resolution.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            For Indian real estate developers, <strong>architectural rendering</strong> solves a fundamental problem: under-construction projects cannot be photographed. A developer launching a project two years before completion needs visual assets for hoardings, brochures, digital ads, and RERA registration — all before the first floor is built. 3D rendering makes this possible.
+            For Indian real estate developers,{" "}
+            <strong>architectural rendering</strong> solves a fundamental
+            problem: under-construction projects cannot be photographed. A
+            developer launching a project two years before completion needs
+            visual assets for hoardings, brochures, digital ads, and RERA
+            registration — all before the first floor is built. 3D rendering
+            makes this possible.
           </p>
 
           {/* Inline image 1 */}
           <div className="rounded-2xl overflow-hidden mb-12">
-            <img src="/images/services/3d-renders-isometrics/2.jpg" alt="Photorealistic 3D house rendering exterior — Alliance Media Labs" className="w-full h-72 md:h-96 object-cover" />
-            <p className="text-xs text-gray-400 text-center mt-2 italic">Photorealistic exterior 3D house rendering — Alliance Media Labs</p>
+            <img
+              src="/images/services/3d-renders-isometrics/2.jpg"
+              alt="Photorealistic 3D house rendering exterior — Alliance Media Labs"
+              className="w-full h-72 md:h-96 object-cover"
+            />
+            <p className="text-xs text-gray-400 text-center mt-2 italic">
+              Photorealistic exterior 3D house rendering — Alliance Media Labs
+            </p>
           </div>
 
           {/* Section 2 */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Types of 3D Rendering Services for Real Estate</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Types of 3D Rendering Services for Real Estate
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Not all <strong>rendering services</strong> are the same. Here are the six main types that Indian real estate developers commission, and what each one is used for:
+            Not all <strong>rendering services</strong> are the same. Here are
+            the six main types that Indian real estate developers commission,
+            and what each one is used for:
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-10">
             {[
-              { icon: "ri-home-4-line", title: "Exterior 3D House Rendering", desc: "The most common type — a photorealistic front, side, or aerial perspective of the building facade. Used for hoardings, brochures, launch campaigns, and RERA submissions. Can show any time of day, season, or weather condition." },
-              { icon: "ri-sofa-line", title: "Interior 3D Rendering", desc: "Photorealistic images of living rooms, kitchens, bedrooms, lobbies, and amenity areas. Used to showcase finishes, furniture layout, lighting moods, and material quality. Particularly powerful for luxury apartments and villas." },
-              { icon: "ri-layout-grid-line", title: "3D Floor Plan Design", desc: "A top-down three-dimensional view of a unit showing room layout, furniture placement, and proportions. Far more readable than a 2D plan for buyers. Used in brochures, on websites, and at sales offices. The 3D floor plan designer role involves translating raw CAD plans into client-ready visuals." },
-              { icon: "ri-earth-line", title: "Isometric & Aerial View", desc: "A bird's-eye 3D illustration of the entire project — showing multiple towers, roads, landscaping, amenities, and the surrounding context. Essential for township launches and master plan brochures. Also used as a hoarding creative." },
-              { icon: "ri-building-line", title: "3D Architectural Rendering", desc: "Full architectural rendering services covering both the building exterior and contextual surroundings — including neighbouring streets, greenery, and sky. Used by architects for client presentations and by developers for investor decks." },
-              { icon: "ri-cpu-line", title: "AI-Assisted 3D Rendering", desc: "AI 3D rendering uses machine learning to accelerate the lighting and denoising stages of production, reducing turnaround time on large sets without compromising quality. Best used for bulk orders of 10+ views with tight launch deadlines." },
+              {
+                icon: "ri-home-4-line",
+                title: "Exterior 3D House Rendering",
+                desc: "The most common type — a photorealistic front, side, or aerial perspective of the building facade. Used for hoardings, brochures, launch campaigns, and RERA submissions. Can show any time of day, season, or weather condition.",
+              },
+              {
+                icon: "ri-sofa-line",
+                title: "Interior 3D Rendering",
+                desc: "Photorealistic images of living rooms, kitchens, bedrooms, lobbies, and amenity areas. Used to showcase finishes, furniture layout, lighting moods, and material quality. Particularly powerful for luxury apartments and villas.",
+              },
+              {
+                icon: "ri-layout-grid-line",
+                title: "3D Floor Plan Design",
+                desc: "A top-down three-dimensional view of a unit showing room layout, furniture placement, and proportions. Far more readable than a 2D plan for buyers. Used in brochures, on websites, and at sales offices. The 3D floor plan designer role involves translating raw CAD plans into client-ready visuals.",
+              },
+              {
+                icon: "ri-earth-line",
+                title: "Isometric & Aerial View",
+                desc: "A bird's-eye 3D illustration of the entire project — showing multiple towers, roads, landscaping, amenities, and the surrounding context. Essential for township launches and master plan brochures. Also used as a hoarding creative.",
+              },
+              {
+                icon: "ri-building-line",
+                title: "3D Architectural Rendering",
+                desc: "Full architectural rendering services covering both the building exterior and contextual surroundings — including neighbouring streets, greenery, and sky. Used by architects for client presentations and by developers for investor decks.",
+              },
+              {
+                icon: "ri-cpu-line",
+                title: "AI-Assisted 3D Rendering",
+                desc: "AI 3D rendering uses machine learning to accelerate the lighting and denoising stages of production, reducing turnaround time on large sets without compromising quality. Best used for bulk orders of 10+ views with tight launch deadlines.",
+              },
             ].map((item) => (
-              <div key={item.title} className="flex gap-4 p-5 bg-gray-50 rounded-xl">
+              <div
+                key={item.title}
+                className="flex gap-4 p-5 bg-gray-50 rounded-xl"
+              >
                 <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
                   <i className={`${item.icon} text-black`}></i>
                 </div>
                 <div>
-                  <h3 className="font-bold text-black text-sm mb-1">{item.title}</h3>
-                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                  <h3 className="font-bold text-black text-sm mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">3D House Rendering vs 3D Walkthrough vs VR Tour: Which Do You Need?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            3D House Rendering vs 3D Walkthrough vs VR Tour: Which Do You Need?
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-6">
-            This is the most common question developers ask. All three are produced from the same 3D model — but they serve completely different purposes:
+            This is the most common question developers ask. All three are
+            produced from the same 3D model — but they serve completely
+            different purposes:
           </p>
 
           <div className="overflow-x-auto mb-10">
@@ -717,25 +930,70 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
               <thead>
                 <tr className="bg-black text-white">
                   <th className="px-4 py-3 text-left font-semibold">Feature</th>
-                  <th className="px-4 py-3 text-left font-semibold">3D House Rendering</th>
-                  <th className="px-4 py-3 text-left font-semibold">3D Walkthrough Video</th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    3D House Rendering
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    3D Walkthrough Video
+                  </th>
                   <th className="px-4 py-3 text-left font-semibold">VR Tour</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["Output format", "Still image (JPG/PNG)", "Video (MP4)", "Interactive web link"],
-                  ["Used in", "Hoardings, brochures, print, RERA", "YouTube, social media, screens", "Sales office, website, NRI"],
-                  ["Buyer experience", "Passive — views image", "Passive — watches video", "Active — explores freely"],
-                  ["Production time", "5–7 days per view", "3–6 weeks", "4–6 weeks"],
-                  ["Best for", "Launch marketing collateral", "Pre-launch digital campaigns", "NRI buyers, premium launches"],
-                  ["Can show 3D floor plan", "✓ As a separate render", "✓ As a section in video", "✓ As an interactive overlay"],
+                  [
+                    "Output format",
+                    "Still image (JPG/PNG)",
+                    "Video (MP4)",
+                    "Interactive web link",
+                  ],
+                  [
+                    "Used in",
+                    "Hoardings, brochures, print, RERA",
+                    "YouTube, social media, screens",
+                    "Sales office, website, NRI",
+                  ],
+                  [
+                    "Buyer experience",
+                    "Passive — views image",
+                    "Passive — watches video",
+                    "Active — explores freely",
+                  ],
+                  [
+                    "Production time",
+                    "5–7 days per view",
+                    "3–6 weeks",
+                    "4–6 weeks",
+                  ],
+                  [
+                    "Best for",
+                    "Launch marketing collateral",
+                    "Pre-launch digital campaigns",
+                    "NRI buyers, premium launches",
+                  ],
+                  [
+                    "Can show 3D floor plan",
+                    "✓ As a separate render",
+                    "✓ As a section in video",
+                    "✓ As an interactive overlay",
+                  ],
                 ].map(([feature, render, walkthrough, vr], i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                    <td className="px-4 py-3 font-medium text-gray-800 border-b border-gray-100">{feature}</td>
-                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{render}</td>
-                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{walkthrough}</td>
-                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{vr}</td>
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                  >
+                    <td className="px-4 py-3 font-medium text-gray-800 border-b border-gray-100">
+                      {feature}
+                    </td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">
+                      {render}
+                    </td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">
+                      {walkthrough}
+                    </td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">
+                      {vr}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -743,139 +1001,282 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
           </div>
 
           <p className="text-gray-700 leading-relaxed mb-8">
-            Most successful launch campaigns use all three: <strong>3D renders</strong> for print and hoardings, a{" "}
-            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
+            Most successful launch campaigns use all three:{" "}
+            <strong>3D renders</strong> for print and hoardings, a{" "}
+            <Link
+              href="/services/3d-walkthrough-video-company-india"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               3D walkthrough video
             </Link>{" "}
-            for digital ads and social media, and a <strong>VR tour</strong> for the sales office and NRI portal. The renders are produced first, since the walkthrough video and VR tour are built from the same 3D model.
+            for digital ads and social media, and a <strong>VR tour</strong> for
+            the sales office and NRI portal. The renders are produced first,
+            since the walkthrough video and VR tour are built from the same 3D
+            model.
           </p>
 
           {/* Inline image 2 */}
           <div className="rounded-2xl overflow-hidden mb-12">
-            <img src="/images/services/3d-renders-isometrics/4.jpg" alt="3D floor plan design and architectural rendering for real estate brochure" className="w-full h-72 md:h-96 object-cover" />
-            <p className="text-xs text-gray-400 text-center mt-2 italic">3D floor plan design + exterior render for a residential launch — Alliance Media Labs</p>
+            <img
+              src="/images/services/3d-renders-isometrics/4.jpg"
+              alt="3D floor plan design and architectural rendering for real estate brochure"
+              className="w-full h-72 md:h-96 object-cover"
+            />
+            <p className="text-xs text-gray-400 text-center mt-2 italic">
+              3D floor plan design + exterior render for a residential launch —
+              Alliance Media Labs
+            </p>
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">How to Choose Between Architectural Rendering Companies in India</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            How to Choose Between Architectural Rendering Companies in India
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            There are hundreds of <strong>3D rendering companies</strong> and freelancers in India. The quality difference between the best and worst is enormous. Here are the five criteria that separate professional <strong>architectural rendering companies</strong> from generic studios:
+            There are hundreds of <strong>3D rendering companies</strong> and
+            freelancers in India. The quality difference between the best and
+            worst is enormous. Here are the five criteria that separate
+            professional <strong>architectural rendering companies</strong> from
+            generic studios:
           </p>
 
           <div className="space-y-4 mb-10">
             {[
-              { num: "01", title: "Real Estate Portfolio Depth", desc: "Look for 3D rendering services that have delivered work specifically for real estate developers — not product renders, game assets, or animations. Real estate rendering requires understanding of RERA requirements, sales office context, and what actually converts buyers." },
-              { num: "02", title: "In-House Modelling Team", desc: "Many companies outsource 3D modelling to third parties. This creates quality gaps and delays. Choose architectural rendering services with an in-house team — it means faster communication, better quality control, and more accountability." },
-              { num: "03", title: "RERA-Ready Output", desc: "If you are in Maharashtra, Karnataka, Delhi NCR, or any RERA-active state, your renders must include specific disclaimer overlays and be produced from approved drawings. A specialist real estate rendering company will know this without being told." },
-              { num: "04", title: "Transparent Revision Policy", desc: "Professional architectural visualization services include structured revision rounds — typically 2 rounds during modelling and 2 rounds after final render. Avoid companies that charge per change or provide no revision policy upfront." },
-              { num: "05", title: "3D Floor Plan Design Capability", desc: "The best 3D rendering services near you should also offer 3D floor plan design as a standalone or bundled service. A dedicated 3D floor plan designer on the team means your brochure layouts and unit floor plans are consistent with your exterior renders." },
+              {
+                num: "01",
+                title: "Real Estate Portfolio Depth",
+                desc: "Look for 3D rendering services that have delivered work specifically for real estate developers — not product renders, game assets, or animations. Real estate rendering requires understanding of RERA requirements, sales office context, and what actually converts buyers.",
+              },
+              {
+                num: "02",
+                title: "In-House Modelling Team",
+                desc: "Many companies outsource 3D modelling to third parties. This creates quality gaps and delays. Choose architectural rendering services with an in-house team — it means faster communication, better quality control, and more accountability.",
+              },
+              {
+                num: "03",
+                title: "RERA-Ready Output",
+                desc: "If you are in Maharashtra, Karnataka, Delhi NCR, or any RERA-active state, your renders must include specific disclaimer overlays and be produced from approved drawings. A specialist real estate rendering company will know this without being told.",
+              },
+              {
+                num: "04",
+                title: "Transparent Revision Policy",
+                desc: "Professional architectural visualization services include structured revision rounds — typically 2 rounds during modelling and 2 rounds after final render. Avoid companies that charge per change or provide no revision policy upfront.",
+              },
+              {
+                num: "05",
+                title: "3D Floor Plan Design Capability",
+                desc: "The best 3D rendering services near you should also offer 3D floor plan design as a standalone or bundled service. A dedicated 3D floor plan designer on the team means your brochure layouts and unit floor plans are consistent with your exterior renders.",
+              },
             ].map((item) => (
-              <div key={item.num} className="flex gap-4 p-5 border border-gray-200 rounded-xl">
-                <span className="text-3xl font-black text-yellow-400 leading-none flex-shrink-0">{item.num}</span>
+              <div
+                key={item.num}
+                className="flex gap-4 p-5 border border-gray-200 rounded-xl"
+              >
+                <span className="text-3xl font-black text-yellow-400 leading-none flex-shrink-0">
+                  {item.num}
+                </span>
                 <div>
                   <h3 className="font-bold text-black mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Architectural Visualization Services in India — Timeline & What to Expect</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Architectural Visualization Services in India — Timeline & What to
+            Expect
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A typical <strong>architectural visualization services</strong> project in India follows this timeline once drawings are shared:
+            A typical <strong>architectural visualization services</strong>{" "}
+            project in India follows this timeline once drawings are shared:
           </p>
 
           <div className="grid md:grid-cols-4 gap-4 mb-10">
             {[
-              { step: "Day 1–2", title: "Brief & Modelling Start", desc: "Drawings reviewed, camera angles agreed, 3D modelling begins" },
-              { step: "Day 3–5", title: "Grey Structure Review", desc: "Raw 3D model shared for proportion and accuracy feedback before texturing" },
-              { step: "Day 5–7", title: "Texturing & Lighting", desc: "Materials applied, lighting set up, environment built around the structure" },
-              { step: "Day 6–8", title: "Final Render Delivery", desc: "High-resolution JPG/PNG files delivered at 300 DPI print-ready quality" },
+              {
+                step: "Day 1–2",
+                title: "Brief & Modelling Start",
+                desc: "Drawings reviewed, camera angles agreed, 3D modelling begins",
+              },
+              {
+                step: "Day 3–5",
+                title: "Grey Structure Review",
+                desc: "Raw 3D model shared for proportion and accuracy feedback before texturing",
+              },
+              {
+                step: "Day 5–7",
+                title: "Texturing & Lighting",
+                desc: "Materials applied, lighting set up, environment built around the structure",
+              },
+              {
+                step: "Day 6–8",
+                title: "Final Render Delivery",
+                desc: "High-resolution JPG/PNG files delivered at 300 DPI print-ready quality",
+              },
             ].map((item) => (
-              <div key={item.step} className="bg-gray-50 rounded-xl p-5 text-center">
-                <div className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full mb-3">{item.step}</div>
-                <h3 className="font-bold text-black text-sm mb-2">{item.title}</h3>
-                <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+              <div
+                key={item.step}
+                className="bg-gray-50 rounded-xl p-5 text-center"
+              >
+                <div className="inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full mb-3">
+                  {item.step}
+                </div>
+                <h3 className="font-bold text-black text-sm mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
 
           {/* Inline image 3 */}
           <div className="rounded-2xl overflow-hidden mb-12">
-            <img src="/images/services/3d-renders-isometrics/6.jpg" alt="Architectural rendering of residential township with isometric view India" className="w-full h-72 md:h-96 object-cover" />
-            <p className="text-xs text-gray-400 text-center mt-2 italic">Township aerial 3D render — Alliance Media Labs</p>
+            <img
+              src="/images/services/3d-renders-isometrics/6.jpg"
+              alt="Architectural rendering of residential township with isometric view India"
+              className="w-full h-72 md:h-96 object-cover"
+            />
+            <p className="text-xs text-gray-400 text-center mt-2 italic">
+              Township aerial 3D render — Alliance Media Labs
+            </p>
           </div>
 
           {/* Section 6 */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">3D Rendering Services Near Me — Why Location Doesn&apos;t Matter Anymore</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            3D Rendering Services Near Me — Why Location Doesn&apos;t Matter
+            Anymore
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Many developers search for <strong>3D rendering services near me</strong> assuming they need a local vendor for in-person meetings. In reality, 100% of the 3D rendering workflow happens digitally — drawings are shared electronically, renders are reviewed on screen, and feedback is given via video call or email.
+            Many developers search for{" "}
+            <strong>3D rendering services near me</strong> assuming they need a
+            local vendor for in-person meetings. In reality, 100% of the 3D
+            rendering workflow happens digitally — drawings are shared
+            electronically, renders are reviewed on screen, and feedback is
+            given via video call or email.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            Alliance Media Labs provides <strong>3D architectural rendering services</strong> for developers across Mumbai, Delhi NCR, Pune, Bangalore, Hyderabad, Chennai, Kolkata, and tier-2 cities — all managed remotely with the same quality standards. Your project&apos;s location determines the architectural context of the render; your proximity to our studio determines nothing.
+            Alliance Media Labs provides{" "}
+            <strong>3D architectural rendering services</strong> for developers
+            across Mumbai, Delhi NCR, Pune, Bangalore, Hyderabad, Chennai,
+            Kolkata, and tier-2 cities — all managed remotely with the same
+            quality standards. Your project&apos;s location determines the
+            architectural context of the render; your proximity to our studio
+            determines nothing.
           </p>
 
           {/* FAQ */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Frequently Asked Questions
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-8"></div>
           <div className="space-y-4 mb-12">
             {faqs.map((faq, i) => (
               <div key={i} className="border border-gray-200 rounded-xl p-6">
                 <h3 className="font-bold text-black mb-3 flex items-start gap-3">
-                  <span className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-xs font-black text-black flex-shrink-0 mt-0.5">{i + 1}</span>
+                  <span className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-xs font-black text-black flex-shrink-0 mt-0.5">
+                    {i + 1}
+                  </span>
                   {faq.q}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-sm pl-9">{faq.a}</p>
+                <p className="text-gray-600 leading-relaxed text-sm pl-9">
+                  {faq.a}
+                </p>
               </div>
             ))}
           </div>
 
           {/* Conclusion */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Conclusion</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Conclusion
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            <strong>3D house rendering</strong> is not just a marketing tool — it is the foundation of every successful real estate launch in India today. From the hoarding that stops traffic on the highway, to the brochure a buyer takes home, to the RERA registration package submitted to the authority — photorealistic <strong>architectural rendering</strong> is everywhere.
+            <strong>3D house rendering</strong> is not just a marketing tool —
+            it is the foundation of every successful real estate launch in India
+            today. From the hoarding that stops traffic on the highway, to the
+            brochure a buyer takes home, to the RERA registration package
+            submitted to the authority — photorealistic{" "}
+            <strong>architectural rendering</strong> is everywhere.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            Whether you need a single exterior <strong>3D render</strong>, a complete set of interior and exterior views, a <strong>3D floor plan design</strong> for your brochure, or a full campaign covering renders, walkthrough videos, and VR tours — Alliance Media Labs handles it all with one brief, one team, and one point of accountability.
+            Whether you need a single exterior <strong>3D render</strong>, a
+            complete set of interior and exterior views, a{" "}
+            <strong>3D floor plan design</strong> for your brochure, or a full
+            campaign covering renders, walkthrough videos, and VR tours —
+            Alliance Media Labs handles it all with one brief, one team, and one
+            point of accountability.
           </p>
 
           {/* Internal links */}
           <div className="bg-gray-50 rounded-2xl p-8 mb-8">
-            <h3 className="font-bold text-black mb-4">Explore Related Services</h3>
+            <h3 className="font-bold text-black mb-4">
+              Explore Related Services
+            </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { href: "/services/3d-renders-isometrics", label: "3D Renders & Isometrics", icon: "ri-image-line" },
-                { href: "/services/3d-walkthrough-video-company-india", label: "3D Walkthrough Videos", icon: "ri-movie-line" },
-                { href: "/services/3d-walkthrough-video-company-india", label: "3D Walkthrough Company", icon: "ri-building-line" },
-                { href: "/services/virtual-reality-tours", label: "VR Tours", icon: "ri-3d-glasses-line" },
+                {
+                  href: "/services/3d-renders-isometrics",
+                  label: "3D Renders & Isometrics",
+                  icon: "ri-image-line",
+                },
+                {
+                  href: "/services/3d-walkthrough-video-company-india",
+                  label: "3D Walkthrough Videos",
+                  icon: "ri-movie-line",
+                },
+                {
+                  href: "/services/3d-walkthrough-video-company-india",
+                  label: "3D Walkthrough Company",
+                  icon: "ri-building-line",
+                },
+                {
+                  href: "/services/virtual-reality-tours",
+                  label: "VR Tours",
+                  icon: "ri-3d-glasses-line",
+                },
               ].map((s) => (
-                <Link key={s.href} href={s.href} className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 hover:shadow-md transition-shadow border border-gray-200">
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 hover:shadow-md transition-shadow border border-gray-200"
+                >
                   <div className="w-8 h-8 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
                     <i className={`${s.icon} text-black text-sm`}></i>
                   </div>
-                  <span className="font-semibold text-black text-sm">{s.label}</span>
+                  <span className="font-semibold text-black text-sm">
+                    {s.label}
+                  </span>
                 </Link>
               ))}
             </div>
           </div>
-
         </div>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 pt-8 border-t border-gray-200 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full"
+            >
               #{tag.replace(/ /g, "")}
             </span>
           ))}
         </div>
 
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
           <i className="ri-arrow-left-line"></i> Back to Blog
         </Link>
       </div>
@@ -883,15 +1284,24 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
       {/* CTA */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get a Quote for Your 3D Rendering Project</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Get a Quote for Your 3D Rendering Project
+          </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Share your drawings with our team and get a detailed quote within 24 hours.
+            Share your drawings with our team and get a detailed quote within 24
+            hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
               Get Free Quote
             </Link>
-            <Link href="/services/3d-renders-isometrics" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/services/3d-renders-isometrics"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               View Our Render Portfolio
             </Link>
           </div>
@@ -903,7 +1313,11 @@ function HouseRenderingArticle({ post }: { post: ReturnType<typeof getPostBySlug
   );
 }
 
-function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function DronePhotographyArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   const faqs = [
@@ -975,12 +1389,18 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
 
       {/* Article Body */}
       <div className="container mx-auto px-6 py-16 max-w-4xl">
-
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-yellow-500 transition-colors">
+            Home
+          </Link>
           <i className="ri-arrow-right-s-line"></i>
-          <Link href="/blog" className="hover:text-yellow-500 transition-colors">Blog</Link>
+          <Link
+            href="/blog"
+            className="hover:text-yellow-500 transition-colors"
+          >
+            Blog
+          </Link>
           <i className="ri-arrow-right-s-line"></i>
           <span className="text-gray-400 truncate max-w-xs">{post.title}</span>
         </nav>
@@ -1003,16 +1423,17 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
-
           {/* Introduction */}
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            The most powerful sales tool in modern real estate marketing is not a brochure, a VR headset,
-            or a CGI render — it is a 4K drone shot that reveals your project from 200 feet above the
-            earth, showing the full sweep of land, the connectivity to the city, and the lifestyle
-            promise of the location in a single cinematic frame. <strong>Real estate drone photography</strong> has
-            become the non-negotiable opening act of every premium property launch in India. This
-            guide tells you exactly how to plan, commission, and get the most from a professional
-            drone shoot for your project.
+            The most powerful sales tool in modern real estate marketing is not
+            a brochure, a VR headset, or a CGI render — it is a 4K drone shot
+            that reveals your project from 200 feet above the earth, showing the
+            full sweep of land, the connectivity to the city, and the lifestyle
+            promise of the location in a single cinematic frame.{" "}
+            <strong>Real estate drone photography</strong> has become the
+            non-negotiable opening act of every premium property launch in
+            India. This guide tells you exactly how to plan, commission, and get
+            the most from a professional drone shoot for your project.
           </p>
 
           {/* Section 1 */}
@@ -1021,22 +1442,27 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            <strong>Real estate drone photography</strong> uses DGCA-licensed unmanned aerial vehicles (UAVs)
-            equipped with high-resolution cameras to capture images and video of a property from the air.
-            Unlike a ground-level photograph that shows a building&apos;s facade, an aerial shot reveals
-            the full relationship between the project, its land, and its surroundings.
+            <strong>Real estate drone photography</strong> uses DGCA-licensed
+            unmanned aerial vehicles (UAVs) equipped with high-resolution
+            cameras to capture images and video of a property from the air.
+            Unlike a ground-level photograph that shows a building&apos;s
+            facade, an aerial shot reveals the full relationship between the
+            project, its land, and its surroundings.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Buyers respond powerfully to aerial footage because it answers questions that no other medium
-            can: How close is this project to the highway? How much green cover surrounds it? How does
-            Phase 1 relate to Phase 2? Is the view from upper floors truly panoramic? These are
-            questions that determine buying decisions, and aerial drone video answers them in seconds.
+            Buyers respond powerfully to aerial footage because it answers
+            questions that no other medium can: How close is this project to the
+            highway? How much green cover surrounds it? How does Phase 1 relate
+            to Phase 2? Is the view from upper floors truly panoramic? These are
+            questions that determine buying decisions, and aerial drone video
+            answers them in seconds.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            For developers, the ROI of a single drone shoot session is extraordinary — the footage can
-            be repurposed across the project website, property portals (MagicBricks, 99acres, Housing.com),
-            social media, TV commercials, channel partner presentations, and NRI digital campaigns,
-            all from one day&apos;s work.
+            For developers, the ROI of a single drone shoot session is
+            extraordinary — the footage can be repurposed across the project
+            website, property portals (MagicBricks, 99acres, Housing.com),
+            social media, TV commercials, channel partner presentations, and NRI
+            digital campaigns, all from one day&apos;s work.
           </p>
 
           {/* Section 2 — Shot Types */}
@@ -1045,9 +1471,10 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-6">
-            A professional real estate drone shoot is not just &quot;flying above and recording.&quot;
-            Every angle is planned for a specific storytelling purpose. Here are the six shot types
-            that form a complete aerial library for a real estate project:
+            A professional real estate drone shoot is not just &quot;flying
+            above and recording.&quot; Every angle is planned for a specific
+            storytelling purpose. Here are the six shot types that form a
+            complete aerial library for a real estate project:
           </p>
 
           <div className="grid md:grid-cols-2 gap-5 mb-10">
@@ -1083,13 +1510,20 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
                 desc: "The drone orbits the completed or near-complete tower in a smooth circular motion while the camera keeps the tower centred. This shot showcases all four facades, the view potential from different elevations, and the surrounding context from every direction.",
               },
             ].map((item) => (
-              <div key={item.title} className="flex gap-4 p-5 bg-gray-50 rounded-xl">
+              <div
+                key={item.title}
+                className="flex gap-4 p-5 bg-gray-50 rounded-xl"
+              >
                 <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
                   <i className={`${item.icon} text-black`}></i>
                 </div>
                 <div>
-                  <h3 className="font-bold text-black text-sm mb-1">{item.title}</h3>
-                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                  <h3 className="font-bold text-black text-sm mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -1103,7 +1537,8 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
               className="w-full h-72 md:h-96 object-cover"
             />
             <p className="text-xs text-gray-400 text-center mt-2 italic">
-              4K aerial drone footage for a real estate project — Alliance Media Labs
+              4K aerial drone footage for a real estate project — Alliance Media
+              Labs
             </p>
           </div>
 
@@ -1113,24 +1548,27 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A <strong>location AV video</strong> is one of the most strategically valuable — and most
-            underused — tools in real estate marketing. Where a drone shoot covers the project itself,
-            a location AV covers everything around it: the drive from the nearest metro station,
-            the school gates three minutes away, the weekend lifestyle of the neighbourhood,
-            the sunrise view from the highway approach.
+            A <strong>location AV video</strong> is one of the most
+            strategically valuable — and most underused — tools in real estate
+            marketing. Where a drone shoot covers the project itself, a location
+            AV covers everything around it: the drive from the nearest metro
+            station, the school gates three minutes away, the weekend lifestyle
+            of the neighbourhood, the sunrise view from the highway approach.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Location AV production combines <strong>aerial drone footage</strong> with ground-level
-            cinematography — steady-cam city shots, vehicle-mounted tracking shots along the
-            access route, time-lapses of traffic flow, and golden-hour lifestyle footage of
-            nearby destinations. The result is a 2–4 minute film that answers the buyer&apos;s
-            most fundamental question: <em>Is this the right place to live?</em>
+            Location AV production combines{" "}
+            <strong>aerial drone footage</strong> with ground-level
+            cinematography — steady-cam city shots, vehicle-mounted tracking
+            shots along the access route, time-lapses of traffic flow, and
+            golden-hour lifestyle footage of nearby destinations. The result is
+            a 2–4 minute film that answers the buyer&apos;s most fundamental
+            question: <em>Is this the right place to live?</em>
           </p>
           <p className="text-gray-700 leading-relaxed mb-6">
-            For projects where location is the primary differentiator — a project near a new
-            metro corridor, a township adjacent to a proposed IT park, a villa cluster near
-            a lake or hill station — the location AV often converts more buyers than the
-            project walkthrough itself.
+            For projects where location is the primary differentiator — a
+            project near a new metro corridor, a township adjacent to a proposed
+            IT park, a villa cluster near a lake or hill station — the location
+            AV often converts more buyers than the project walkthrough itself.
           </p>
 
           {/* Comparison table */}
@@ -1138,25 +1576,69 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-black text-white">
-                  <th className="px-4 py-3 text-left font-semibold">Aerial Content Type</th>
-                  <th className="px-4 py-3 text-left font-semibold">Best Used For</th>
-                  <th className="px-4 py-3 text-left font-semibold">Output Length</th>
-                  <th className="px-4 py-3 text-left font-semibold">Platform</th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Aerial Content Type
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Best Used For
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Output Length
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Platform
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["Aerial Drone Photography (Stills)", "Brochures, billboards, portals, press", "10–20 edited stills", "Print + Digital"],
-                  ["Project Drone Video", "Launch films, website hero, YouTube", "60–90 seconds", "Digital"],
-                  ["Location AV Film", "NRI campaigns, channel partners, TV", "2–4 minutes", "TV + Digital"],
-                  ["Construction Progress Shoot", "RERA, investor updates, social media", "30–60 second cut", "Digital"],
-                  ["Golden Hour Luxury Reel", "Premium social, OOH, luxury portals", "30–45 seconds", "Instagram + Outdoor"],
+                  [
+                    "Aerial Drone Photography (Stills)",
+                    "Brochures, billboards, portals, press",
+                    "10–20 edited stills",
+                    "Print + Digital",
+                  ],
+                  [
+                    "Project Drone Video",
+                    "Launch films, website hero, YouTube",
+                    "60–90 seconds",
+                    "Digital",
+                  ],
+                  [
+                    "Location AV Film",
+                    "NRI campaigns, channel partners, TV",
+                    "2–4 minutes",
+                    "TV + Digital",
+                  ],
+                  [
+                    "Construction Progress Shoot",
+                    "RERA, investor updates, social media",
+                    "30–60 second cut",
+                    "Digital",
+                  ],
+                  [
+                    "Golden Hour Luxury Reel",
+                    "Premium social, OOH, luxury portals",
+                    "30–45 seconds",
+                    "Instagram + Outdoor",
+                  ],
                 ].map(([type, use, length, platform], i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                    <td className="px-4 py-3 text-gray-800 font-medium border-b border-gray-100">{type}</td>
-                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{use}</td>
-                    <td className="px-4 py-3 text-yellow-600 font-semibold border-b border-gray-100">{length}</td>
-                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{platform}</td>
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                  >
+                    <td className="px-4 py-3 text-gray-800 font-medium border-b border-gray-100">
+                      {type}
+                    </td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">
+                      {use}
+                    </td>
+                    <td className="px-4 py-3 text-yellow-600 font-semibold border-b border-gray-100">
+                      {length}
+                    </td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">
+                      {platform}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -1169,23 +1651,29 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            India&apos;s drone regulations under the DGCA (Directorate General of Civil Aviation) have
-            matured significantly since 2021. Every commercial drone operator must hold a{" "}
-            <strong>Remote Pilot License (RPL)</strong>, operate a DGCA-registered drone, and obtain
-            zone clearance before every shoot via the Digital Sky platform.
+            India&apos;s drone regulations under the DGCA (Directorate General
+            of Civil Aviation) have matured significantly since 2021. Every
+            commercial drone operator must hold a{" "}
+            <strong>Remote Pilot License (RPL)</strong>, operate a
+            DGCA-registered drone, and obtain zone clearance before every shoot
+            via the Digital Sky platform.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            For real estate developers, this matters for two reasons: <strong>legal protection</strong> and
-            <strong> quality assurance</strong>. A DGCA-licensed operator carries the right equipment
-            (typically DJI Matrice or Inspire series with professional-grade cameras), understands
-            airspace rules, and can legally fly in zones that unlicensed operators cannot — including
-            urban areas with restricted airspace that require individual DGCA permissions.
+            For real estate developers, this matters for two reasons:{" "}
+            <strong>legal protection</strong> and
+            <strong> quality assurance</strong>. A DGCA-licensed operator
+            carries the right equipment (typically DJI Matrice or Inspire series
+            with professional-grade cameras), understands airspace rules, and
+            can legally fly in zones that unlicensed operators cannot —
+            including urban areas with restricted airspace that require
+            individual DGCA permissions.
           </p>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Unlicensed drone operators are cheaper — but they expose developers to significant
-            liability if footage is used commercially, if an incident occurs on site, or if
-            the footage quality is insufficient for broadcast or billboard use. Alliance Media Labs
-            uses exclusively DGCA-licensed pilots for all real estate aerial shoots across India.
+            Unlicensed drone operators are cheaper — but they expose developers
+            to significant liability if footage is used commercially, if an
+            incident occurs on site, or if the footage quality is insufficient
+            for broadcast or billboard use. Alliance Media Labs uses exclusively
+            DGCA-licensed pilots for all real estate aerial shoots across India.
           </p>
 
           {/* Steps for planning a shoot */}
@@ -1221,11 +1709,18 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
                 desc: "Raw 4K drone footage needs colour grading, stabilisation, music scoring, and editing before it is ready for use. Share your brand colour palette, preferred music tone (cinematic, aspirational, energetic), and the platform where the video will be used — Instagram ratios differ from YouTube and TV broadcast specs.",
               },
             ].map((item) => (
-              <div key={item.num} className="flex gap-4 p-5 border border-gray-200 rounded-xl">
-                <span className="text-3xl font-black text-yellow-400 leading-none flex-shrink-0">{item.num}</span>
+              <div
+                key={item.num}
+                className="flex gap-4 p-5 border border-gray-200 rounded-xl"
+              >
+                <span className="text-3xl font-black text-yellow-400 leading-none flex-shrink-0">
+                  {item.num}
+                </span>
                 <div>
                   <h3 className="font-bold text-black mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -1249,10 +1744,11 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            One of the most underutilised applications of <strong>real estate drone video</strong> is
-            construction progress documentation. Scheduled aerial shoots at consistent intervals —
-            same time of day, same camera angles, same altitude — create a visual record that serves
-            multiple business purposes simultaneously.
+            One of the most underutilised applications of{" "}
+            <strong>real estate drone video</strong> is construction progress
+            documentation. Scheduled aerial shoots at consistent intervals —
+            same time of day, same camera angles, same altitude — create a
+            visual record that serves multiple business purposes simultaneously.
           </p>
 
           <div className="grid md:grid-cols-3 gap-5 mb-10">
@@ -1273,12 +1769,19 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
                 desc: "When the project reaches a photogenic construction milestone — slab casting, tower topping, facade cladding — aerial documentation creates launch-worthy marketing content.",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-black text-white p-6 rounded-2xl">
+              <div
+                key={item.title}
+                className="bg-black text-white p-6 rounded-2xl"
+              >
                 <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
                   <i className={`${item.icon} text-black`}></i>
                 </div>
-                <h3 className="font-bold text-white mb-2 text-sm">{item.title}</h3>
-                <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
+                <h3 className="font-bold text-white mb-2 text-sm">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 text-xs leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -1289,18 +1792,34 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Not every <strong>aerial photography company</strong> has the real estate-specific expertise
-            to plan and execute a shoot that delivers marketing-ready content. Here are the five
-            questions every developer should ask before booking:
+            Not every <strong>aerial photography company</strong> has the real
+            estate-specific expertise to plan and execute a shoot that delivers
+            marketing-ready content. Here are the five questions every developer
+            should ask before booking:
           </p>
 
           <div className="space-y-3 mb-10">
             {[
-              ["Are your pilots DGCA-licensed?", "Non-negotiable. Ask for the Remote Pilot License number and drone registration certificate before signing any agreement."],
-              ["What camera and drone equipment do you use?", "Professional real estate shoots require at minimum DJI Inspire 2 or Matrice series with Zenmuse X7 or equivalent camera. Consumer-grade drones (Mavic Air) are not suitable for broadcast or large-format print."],
-              ["Can you show a real estate aerial video portfolio?", "Generic drone footage is very different from real estate-optimised aerial cinematography. Ask specifically for property launch films or location AV videos they have produced."],
-              ["Do you handle post-production in-house?", "An operator who outsources editing has less control over colour consistency and delivery timelines. In-house post-production ensures your footage matches your brand."],
-              ["Can you coordinate a same-day drone and ground shoot?", "The most cost-effective real estate productions combine aerial and ground-level crews on the same day. This requires production management expertise — not just a pilot with a drone."],
+              [
+                "Are your pilots DGCA-licensed?",
+                "Non-negotiable. Ask for the Remote Pilot License number and drone registration certificate before signing any agreement.",
+              ],
+              [
+                "What camera and drone equipment do you use?",
+                "Professional real estate shoots require at minimum DJI Inspire 2 or Matrice series with Zenmuse X7 or equivalent camera. Consumer-grade drones (Mavic Air) are not suitable for broadcast or large-format print.",
+              ],
+              [
+                "Can you show a real estate aerial video portfolio?",
+                "Generic drone footage is very different from real estate-optimised aerial cinematography. Ask specifically for property launch films or location AV videos they have produced.",
+              ],
+              [
+                "Do you handle post-production in-house?",
+                "An operator who outsources editing has less control over colour consistency and delivery timelines. In-house post-production ensures your footage matches your brand.",
+              ],
+              [
+                "Can you coordinate a same-day drone and ground shoot?",
+                "The most cost-effective real estate productions combine aerial and ground-level crews on the same day. This requires production management expertise — not just a pilot with a drone.",
+              ],
             ].map(([q, a], i) => (
               <div key={i} className="border border-gray-200 rounded-xl p-5">
                 <p className="font-bold text-black text-sm mb-1">Q: {q}</p>
@@ -1316,10 +1835,26 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
             </h3>
             <div className="space-y-3">
               {[
-                { href: "/services/drone-shoots", label: "Drone Shoots & Location AV", desc: "4K aerial cinematography, golden hour shoots, DGCA-licensed pilots, location AV production" },
-                { href: "/route-videos", label: "Route & Location Videos", desc: "Cinematic route videography showing project connectivity, access roads, and lifestyle context" },
-                { href: "/services/3d-walkthrough-video-company-india", label: "3D Walkthrough Videos", desc: "Pair aerial drone footage with interior 3D walkthroughs for a complete property film package" },
-                { href: "/construction-update-videos", label: "Construction Update Videos", desc: "Scheduled construction progress documentation with drone and ground-level footage" },
+                {
+                  href: "/services/drone-shoots",
+                  label: "Drone Shoots & Location AV",
+                  desc: "4K aerial cinematography, golden hour shoots, DGCA-licensed pilots, location AV production",
+                },
+                {
+                  href: "/route-videos",
+                  label: "Route & Location Videos",
+                  desc: "Cinematic route videography showing project connectivity, access roads, and lifestyle context",
+                },
+                {
+                  href: "/services/3d-walkthrough-video-company-india",
+                  label: "3D Walkthrough Videos",
+                  desc: "Pair aerial drone footage with interior 3D walkthroughs for a complete property film package",
+                },
+                {
+                  href: "/construction-update-videos",
+                  label: "Construction Update Videos",
+                  desc: "Scheduled construction progress documentation with drone and ground-level footage",
+                },
               ].map((item) => (
                 <Link
                   key={item.href}
@@ -1328,7 +1863,9 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
                 >
                   <i className="ri-arrow-right-circle-fill text-yellow-500 mt-0.5 flex-shrink-0 group-hover:text-yellow-600"></i>
                   <div>
-                    <span className="font-semibold text-black text-sm">{item.label}</span>
+                    <span className="font-semibold text-black text-sm">
+                      {item.label}
+                    </span>
                     <p className="text-xs text-gray-500 mt-0.5">{item.desc}</p>
                   </div>
                 </Link>
@@ -1351,36 +1888,47 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
                   </span>
                   {faq.q}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-sm pl-9">{faq.a}</p>
+                <p className="text-gray-600 leading-relaxed text-sm pl-9">
+                  {faq.a}
+                </p>
               </div>
             ))}
           </div>
 
           {/* Conclusion */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Conclusion</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Conclusion
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            <strong>Real estate drone photography</strong> is no longer a premium add-on for only the
-            largest developers — it is a baseline expectation for any serious property launch in India.
-            Buyers have been trained by years of cinematic drone footage on property portals and social
-            media to expect an aerial perspective. A project without it signals either a tight budget
-            or a small site — neither of which is the impression any developer wants to make.
+            <strong>Real estate drone photography</strong> is no longer a
+            premium add-on for only the largest developers — it is a baseline
+            expectation for any serious property launch in India. Buyers have
+            been trained by years of cinematic drone footage on property portals
+            and social media to expect an aerial perspective. A project without
+            it signals either a tight budget or a small site — neither of which
+            is the impression any developer wants to make.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The ROI is undeniable: one well-planned <strong>aerial drone video shoot</strong> generates
-            content for your website, property portals, social media, investor decks, TV commercials,
-            and NRI digital campaigns — all from a single day&apos;s production. When combined with a
-            location AV film and a{" "}
-            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
+            The ROI is undeniable: one well-planned{" "}
+            <strong>aerial drone video shoot</strong> generates content for your
+            website, property portals, social media, investor decks, TV
+            commercials, and NRI digital campaigns — all from a single
+            day&apos;s production. When combined with a location AV film and a{" "}
+            <Link
+              href="/services/3d-walkthrough-video-company-india"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               3D walkthrough video
             </Link>
-            , you have a complete digital marketing toolkit
-            that positions your project against any competitor in the market.
+            , you have a complete digital marketing toolkit that positions your
+            project against any competitor in the market.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            Choose a production partner with DGCA-licensed pilots, broadcast-quality equipment,
-            real estate-specific experience, and in-house post-production. That combination — not
-            just the drone itself — is what turns aerial footage into a sales asset.
+            Choose a production partner with DGCA-licensed pilots,
+            broadcast-quality equipment, real estate-specific experience, and
+            in-house post-production. That combination — not just the drone
+            itself — is what turns aerial footage into a sales asset.
           </p>
         </div>
 
@@ -1412,8 +1960,9 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
             Book a Real Estate Drone Shoot
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            DGCA-licensed pilots. 4K aerial cinematography. Location AV production. Pan-India service.
-            Get a quote for your next project launch.
+            DGCA-licensed pilots. 4K aerial cinematography. Location AV
+            production. Pan-India service. Get a quote for your next project
+            launch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -1437,7 +1986,11 @@ function DronePhotographyArticle({ post }: { post: ReturnType<typeof getPostBySl
   );
 }
 
-function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function ScaleModelsArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   const faqs = [
@@ -1509,12 +2062,18 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
 
       {/* Article Body */}
       <div className="container mx-auto px-6 py-16 max-w-4xl">
-
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-yellow-500 transition-colors">
+            Home
+          </Link>
           <i className="ri-arrow-right-s-line"></i>
-          <Link href="/blog" className="hover:text-yellow-500 transition-colors">Blog</Link>
+          <Link
+            href="/blog"
+            className="hover:text-yellow-500 transition-colors"
+          >
+            Blog
+          </Link>
           <i className="ri-arrow-right-s-line"></i>
           <span className="text-gray-400 truncate max-w-xs">{post.title}</span>
         </nav>
@@ -1537,22 +2096,28 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
-
           {/* Introduction */}
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Walk into any top-performing real estate sales office in Mumbai, Pune, Bengaluru, or Hyderabad
-            and you will find it at the centre of the room — a hand-crafted architectural scale model,
-            lit from within, drawing buyers like a magnet. In a world saturated with{" "}
-            <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">
+            Walk into any top-performing real estate sales office in Mumbai,
+            Pune, Bengaluru, or Hyderabad and you will find it at the centre of
+            the room — a hand-crafted architectural scale model, lit from
+            within, drawing buyers like a magnet. In a world saturated with{" "}
+            <Link
+              href="/services/virtual-reality-tours"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               VR headsets
             </Link>
             ,{" "}
-            <Link href="/services/3d-renders-isometrics" className="text-yellow-600 font-semibold hover:underline">
+            <Link
+              href="/services/3d-renders-isometrics"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               CGI fly-throughs
             </Link>
-            , and interactive 3D tools, the physical scale model has not just survived —
-            it has quietly become the single highest-converting sales asset in premium real estate.
-            Here is why.
+            , and interactive 3D tools, the physical scale model has not just
+            survived — it has quietly become the single highest-converting sales
+            asset in premium real estate. Here is why.
           </p>
 
           {/* Section 1 */}
@@ -1561,24 +2126,29 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Neuroscience research consistently shows that <strong>physical objects activate more regions
-            of the brain</strong> than digital representations of the same object. When a buyer leans
-            over an architectural scale model, their motor cortex, spatial reasoning centres, and
-            emotional memory circuits all fire simultaneously. They are not just looking — they are
-            mentally inhabiting the space.
+            Neuroscience research consistently shows that{" "}
+            <strong>physical objects activate more regions of the brain</strong>{" "}
+            than digital representations of the same object. When a buyer leans
+            over an architectural scale model, their motor cortex, spatial
+            reasoning centres, and emotional memory circuits all fire
+            simultaneously. They are not just looking — they are mentally
+            inhabiting the space.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A 3D walkthrough video, no matter how photorealistic, is processed by the brain as
-            television — a passive observation experience. A scale model, by contrast, is processed
-            as <em>reality</em>. The buyer subconsciously scales themselves into the model. They trace
-            the route from the lobby to their floor. They notice how the park faces east. They point
-            to the unit they want.
+            A 3D walkthrough video, no matter how photorealistic, is processed
+            by the brain as television — a passive observation experience. A
+            scale model, by contrast, is processed as <em>reality</em>. The
+            buyer subconsciously scales themselves into the model. They trace
+            the route from the lobby to their floor. They notice how the park
+            faces east. They point to the unit they want.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            This transition from passive observer to active explorer is precisely what triggers the
-            emotional commitment that leads to a booking. Sales teams across India consistently report
-            that buyers who spend more than five minutes at a scale model are <strong>3–4× more
-            likely to book</strong> than those who only watch a presentation screen.
+            This transition from passive observer to active explorer is
+            precisely what triggers the emotional commitment that leads to a
+            booking. Sales teams across India consistently report that buyers
+            who spend more than five minutes at a scale model are{" "}
+            <strong>3–4× more likely to book</strong> than those who only watch
+            a presentation screen.
           </p>
 
           {/* Inline image 1 */}
@@ -1589,7 +2159,8 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
               className="w-full h-72 md:h-96 object-cover"
             />
             <p className="text-xs text-gray-400 text-center mt-2 italic">
-              A detailed township scale model with LED lighting — Alliance Media Labs
+              A detailed township scale model with LED lighting — Alliance Media
+              Labs
             </p>
           </div>
 
@@ -1599,28 +2170,36 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Indian real estate buyers carry a deep-seated skepticism born of a generation of undelivered
-            promises. Delays, design changes, amenity deletions — these experiences have made the modern
-            buyer acutely suspicious of marketing materials. A render can be made to look like anything.
-            A VR tour can exaggerate ceiling heights and views. But a precisely built architectural scale
-            model, constructed to approved drawings and placed under glass in a sales office, communicates
-            one thing above all else: <strong>we are serious, and this is real</strong>.
+            Indian real estate buyers carry a deep-seated skepticism born of a
+            generation of undelivered promises. Delays, design changes, amenity
+            deletions — these experiences have made the modern buyer acutely
+            suspicious of marketing materials. A render can be made to look like
+            anything. A VR tour can exaggerate ceiling heights and views. But a
+            precisely built architectural scale model, constructed to approved
+            drawings and placed under glass in a sales office, communicates one
+            thing above all else:{" "}
+            <strong>we are serious, and this is real</strong>.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             The physical permanence of a{" "}
-            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
+            <Link
+              href="/services/scale-model-maker-india"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               scale model
             </Link>{" "}
-            is itself a trust signal. It cannot be edited
-            overnight. It exists in three dimensions and can be photographed from every angle. It
-            invites scrutiny rather than avoiding it. For a developer launching a ₹5 crore or ₹50 crore
-            product, this tangibility is not a marketing luxury — it is a psychological necessity.
+            is itself a trust signal. It cannot be edited overnight. It exists
+            in three dimensions and can be photographed from every angle. It
+            invites scrutiny rather than avoiding it. For a developer launching
+            a ₹5 crore or ₹50 crore product, this tangibility is not a marketing
+            luxury — it is a psychological necessity.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            RERA-registered projects gain an additional benefit: a scale model built precisely to
-            approved drawings is the safest possible marketing tool under RERA, because it represents
-            only what has been officially sanctioned — unlike a render, which can depict aspirational
-            finishes that may not be delivered.
+            RERA-registered projects gain an additional benefit: a scale model
+            built precisely to approved drawings is the safest possible
+            marketing tool under RERA, because it represents only what has been
+            officially sanctioned — unlike a render, which can depict
+            aspirational finishes that may not be delivered.
           </p>
 
           {/* Feature grid — what makes a premium model */}
@@ -1629,8 +2208,9 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Not all scale models are created equal. The difference between a model that impresses
-            and one that underwhelms comes down to six craft decisions:
+            Not all scale models are created equal. The difference between a
+            model that impresses and one that underwhelms comes down to six
+            craft decisions:
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -1666,13 +2246,20 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
                 desc: "Models built for long-term sales office deployment use UV-stable paints, tempered glass display cases, and anti-static protective coatings to remain pristine for 3–5 years of continuous display.",
               },
             ].map((item) => (
-              <div key={item.title} className="flex gap-4 p-5 bg-gray-50 rounded-xl">
+              <div
+                key={item.title}
+                className="flex gap-4 p-5 bg-gray-50 rounded-xl"
+              >
                 <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
                   <i className={`${item.icon} text-black`}></i>
                 </div>
                 <div>
-                  <h3 className="font-bold text-black text-sm mb-1">{item.title}</h3>
-                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                  <h3 className="font-bold text-black text-sm mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -1686,7 +2273,8 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
               className="w-full h-72 md:h-96 object-cover"
             />
             <p className="text-xs text-gray-400 text-center mt-2 italic">
-              Fibre-optic lit tower model with landscape detailing — Alliance Media Labs
+              Fibre-optic lit tower model with landscape detailing — Alliance
+              Media Labs
             </p>
           </div>
 
@@ -1696,22 +2284,28 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The placement and presentation of a scale model within a sales experience centre is itself
-            a science. Leading sales office designers treat the model as the room&apos;s anchor — the
-            first thing a buyer sees on entry and the last thing they interact with before stepping into
-            the closing booth.
+            The placement and presentation of a scale model within a sales
+            experience centre is itself a science. Leading sales office
+            designers treat the model as the room&apos;s anchor — the first
+            thing a buyer sees on entry and the last thing they interact with
+            before stepping into the closing booth.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A well-designed sales office journey works as follows: The buyer enters and is immediately
-            drawn to the model, which gives them a macro understanding of the project. A sales manager
-            then walks them through the model, pointing out their specific building, the amenities deck,
-            the view corridor. Only after this spatial orientation does the buyer sit down to review
-            floor plans and pricing — arriving at that conversation already emotionally anchored.
+            A well-designed sales office journey works as follows: The buyer
+            enters and is immediately drawn to the model, which gives them a
+            macro understanding of the project. A sales manager then walks them
+            through the model, pointing out their specific building, the
+            amenities deck, the view corridor. Only after this spatial
+            orientation does the buyer sit down to review floor plans and
+            pricing — arriving at that conversation already emotionally
+            anchored.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            This sequence is not accidental. It mirrors the way the brain processes decisions: emotion
-            first, logic second. The scale model handles the emotional priming. Everything that follows
-            is the logical justification for a decision the buyer has already made instinctively.
+            This sequence is not accidental. It mirrors the way the brain
+            processes decisions: emotion first, logic second. The scale model
+            handles the emotional priming. Everything that follows is the
+            logical justification for a decision the buyer has already made
+            instinctively.
           </p>
 
           {/* Section 4 — Scale choices */}
@@ -1720,33 +2314,73 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Scale selection is the first and most consequential decision in the model brief. The wrong
-            scale can make a luxury project look cramped, or make an intimate boutique development
-            look sparse. Here is a practical guide:
+            Scale selection is the first and most consequential decision in the
+            model brief. The wrong scale can make a luxury project look cramped,
+            or make an intimate boutique development look sparse. Here is a
+            practical guide:
           </p>
 
           <div className="overflow-x-auto mb-10">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-black text-white">
-                  <th className="px-4 py-3 text-left font-semibold">Project Type</th>
-                  <th className="px-4 py-3 text-left font-semibold">Recommended Scale</th>
-                  <th className="px-4 py-3 text-left font-semibold">What It Shows Best</th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Project Type
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Recommended Scale
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    What It Shows Best
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["Large Township (50+ acres)", "1:1000 or 1:500", "Phase layout, road network, macro amenities"],
-                  ["Mid-Rise Residential Complex", "1:300 or 1:200", "Building massing, podium, landscaping"],
-                  ["Single High-Rise Tower", "1:200 or 1:150", "Facade detail, setbacks, tower crown design"],
-                  ["Luxury Villa Cluster", "1:100", "Individual villa volumes, private gardens, driveways"],
-                  ["Showflat / Unit Interior", "1:50 or 1:25", "Room proportions, furniture layout, ceiling features"],
-                  ["Commercial / Mixed-Use", "1:300 or 1:200", "Retail podium, office floors, connectivity"],
+                  [
+                    "Large Township (50+ acres)",
+                    "1:1000 or 1:500",
+                    "Phase layout, road network, macro amenities",
+                  ],
+                  [
+                    "Mid-Rise Residential Complex",
+                    "1:300 or 1:200",
+                    "Building massing, podium, landscaping",
+                  ],
+                  [
+                    "Single High-Rise Tower",
+                    "1:200 or 1:150",
+                    "Facade detail, setbacks, tower crown design",
+                  ],
+                  [
+                    "Luxury Villa Cluster",
+                    "1:100",
+                    "Individual villa volumes, private gardens, driveways",
+                  ],
+                  [
+                    "Showflat / Unit Interior",
+                    "1:50 or 1:25",
+                    "Room proportions, furniture layout, ceiling features",
+                  ],
+                  [
+                    "Commercial / Mixed-Use",
+                    "1:300 or 1:200",
+                    "Retail podium, office floors, connectivity",
+                  ],
                 ].map(([type, scale, shows], i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                    <td className="px-4 py-3 text-gray-800 font-medium border-b border-gray-100">{type}</td>
-                    <td className="px-4 py-3 text-yellow-600 font-semibold border-b border-gray-100">{scale}</td>
-                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">{shows}</td>
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                  >
+                    <td className="px-4 py-3 text-gray-800 font-medium border-b border-gray-100">
+                      {type}
+                    </td>
+                    <td className="px-4 py-3 text-yellow-600 font-semibold border-b border-gray-100">
+                      {scale}
+                    </td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100">
+                      {shows}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -1771,35 +2405,65 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            VR tours and 3D walkthroughs excel at showing interior finishes, material quality, and
-            the emotional feel of a space. But they have a structural limitation: they are inherently
-            first-person experiences. The buyer is always inside the project, never able to see it
-            as a whole.
+            VR tours and 3D walkthroughs excel at showing interior finishes,
+            material quality, and the emotional feel of a space. But they have a
+            structural limitation: they are inherently first-person experiences.
+            The buyer is always inside the project, never able to see it as a
+            whole.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A scale model solves this. It gives the buyer a <strong>god-eye view</strong> of the
-            entire project — showing how the towers relate to each other, how the park is positioned
-            relative to the main building, how Phase 1 connects to Phase 2. This macro understanding
-            is critical for township decisions, where buyers are investing in a neighbourhood, not
-            just an apartment.
+            A scale model solves this. It gives the buyer a{" "}
+            <strong>god-eye view</strong> of the entire project — showing how
+            the towers relate to each other, how the park is positioned relative
+            to the main building, how Phase 1 connects to Phase 2. This macro
+            understanding is critical for township decisions, where buyers are
+            investing in a neighbourhood, not just an apartment.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            There are five specific scenarios where a scale model consistently outperforms digital:
+            There are five specific scenarios where a scale model consistently
+            outperforms digital:
           </p>
 
           <div className="space-y-4 mb-10">
             {[
-              { num: "01", title: "Large Group Presentations", desc: "A scale model can be viewed simultaneously by 8–12 people. A VR headset accommodates one person at a time. For channel partner presentations, investor days, or group site visits, the model wins by design." },
-              { num: "02", title: "NRI and Diaspora Buyers", desc: "NRI buyers making multi-crore decisions from abroad typically visit on short trips. A scale model gives them a definitive physical reference that they can photograph, share with family, and return to — creating a tangible anchor for a remote decision." },
-              { num: "03", title: "Senior Buyer Demographics", desc: "Buyers above 55 — a significant segment for retirement communities and senior living projects — are more comfortable with physical objects than digital interfaces. A model is inclusive in a way that a VR headset is not." },
-              { num: "04", title: "Government and Institutional Sales", desc: "Government housing projects, PSU staff housing, and institutional bulk sales involve committees, not individuals. A scale model facilitates group deliberation and creates a shared visual reference for multi-stakeholder decisions." },
-              { num: "05", title: "Media and PR Launches", desc: "A scale model is photogenic in a way that a screen presentation is not. Press coverage of a project launch almost always features the model — the newspaper photograph, the social media post, the news segment. The model is PR infrastructure." },
+              {
+                num: "01",
+                title: "Large Group Presentations",
+                desc: "A scale model can be viewed simultaneously by 8–12 people. A VR headset accommodates one person at a time. For channel partner presentations, investor days, or group site visits, the model wins by design.",
+              },
+              {
+                num: "02",
+                title: "NRI and Diaspora Buyers",
+                desc: "NRI buyers making multi-crore decisions from abroad typically visit on short trips. A scale model gives them a definitive physical reference that they can photograph, share with family, and return to — creating a tangible anchor for a remote decision.",
+              },
+              {
+                num: "03",
+                title: "Senior Buyer Demographics",
+                desc: "Buyers above 55 — a significant segment for retirement communities and senior living projects — are more comfortable with physical objects than digital interfaces. A model is inclusive in a way that a VR headset is not.",
+              },
+              {
+                num: "04",
+                title: "Government and Institutional Sales",
+                desc: "Government housing projects, PSU staff housing, and institutional bulk sales involve committees, not individuals. A scale model facilitates group deliberation and creates a shared visual reference for multi-stakeholder decisions.",
+              },
+              {
+                num: "05",
+                title: "Media and PR Launches",
+                desc: "A scale model is photogenic in a way that a screen presentation is not. Press coverage of a project launch almost always features the model — the newspaper photograph, the social media post, the news segment. The model is PR infrastructure.",
+              },
             ].map((item) => (
-              <div key={item.num} className="flex gap-4 p-5 border border-gray-200 rounded-xl">
-                <span className="text-3xl font-black text-yellow-400 leading-none flex-shrink-0">{item.num}</span>
+              <div
+                key={item.num}
+                className="flex gap-4 p-5 border border-gray-200 rounded-xl"
+              >
+                <span className="text-3xl font-black text-yellow-400 leading-none flex-shrink-0">
+                  {item.num}
+                </span>
                 <div>
                   <h3 className="font-bold text-black mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -1811,22 +2475,26 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
           </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            At Alliance Media Labs, we treat every architectural scale model as a piece of precision
-            craft — not a commodity product. Our production process begins with a deep brief: we study
-            the approved architectural drawings, understand the project&apos;s market positioning,
-            and align the model&apos;s level of detail with the sales experience it needs to support.
+            At Alliance Media Labs, we treat every architectural scale model as
+            a piece of precision craft — not a commodity product. Our production
+            process begins with a deep brief: we study the approved
+            architectural drawings, understand the project&apos;s market
+            positioning, and align the model&apos;s level of detail with the
+            sales experience it needs to support.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our models are built by a team of trained model-makers using CNC-cut acrylic and ABS
-            structural cores, hand-finished facades, real-texture landscape materials, and LED
-            fibre-optic lighting systems integrated before final assembly. Every model goes through
-            a client review at the 60% completion stage, ensuring any design refinements can be
-            incorporated before final finishing.
+            Our models are built by a team of trained model-makers using CNC-cut
+            acrylic and ABS structural cores, hand-finished facades,
+            real-texture landscape materials, and LED fibre-optic lighting
+            systems integrated before final assembly. Every model goes through a
+            client review at the 60% completion stage, ensuring any design
+            refinements can be incorporated before final finishing.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            We have built models for some of India&apos;s most recognisable developers — from township
-            launches covering hundreds of acres to intimate luxury villa clusters of eight homes.
-            Each model ships in custom-built protective cases, with installation supervision at the
+            We have built models for some of India&apos;s most recognisable
+            developers — from township launches covering hundreds of acres to
+            intimate luxury villa clusters of eight homes. Each model ships in
+            custom-built protective cases, with installation supervision at the
             destination sales office.
           </p>
 
@@ -1857,26 +2525,32 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
                   </span>
                   {faq.q}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-sm pl-9">{faq.a}</p>
+                <p className="text-gray-600 leading-relaxed text-sm pl-9">
+                  {faq.a}
+                </p>
               </div>
             ))}
           </div>
 
           {/* Conclusion */}
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">Conclusion</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-12 mb-4">
+            Conclusion
+          </h2>
           <div className="w-12 h-1 bg-yellow-400 mb-6"></div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The architectural scale model is not a relic of pre-digital marketing. It is the one
-            sales tool that digital technology has consistently failed to replace — because it operates
-            in a dimension that screens cannot reach: the physical world that buyers trust with their
-            bodies, not just their eyes.
+            The architectural scale model is not a relic of pre-digital
+            marketing. It is the one sales tool that digital technology has
+            consistently failed to replace — because it operates in a dimension
+            that screens cannot reach: the physical world that buyers trust with
+            their bodies, not just their eyes.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            In India&apos;s fiercely competitive real estate market, where buyers carry both ambition
-            and skepticism into every sales office visit, a meticulously crafted architectural scale
-            model is the silent salesperson that never loses its composure, never oversells, and
-            never needs a day off. It works every hour the sales office is open — drawing crowds,
-            building trust, and closing deals.
+            In India&apos;s fiercely competitive real estate market, where
+            buyers carry both ambition and skepticism into every sales office
+            visit, a meticulously crafted architectural scale model is the
+            silent salesperson that never loses its composure, never oversells,
+            and never needs a day off. It works every hour the sales office is
+            open — drawing crowds, building trust, and closing deals.
           </p>
         </div>
 
@@ -1908,7 +2582,8 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
             Commission Your Architectural Scale Model
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Talk to our team today for a detailed consultation and quote tailored to your project.
+            Talk to our team today for a detailed consultation and quote
+            tailored to your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -1935,7 +2610,11 @@ function ScaleModelsArticle({ post }: { post: ReturnType<typeof getPostBySlug> }
 /* ─────────────────────────────────────────────────────────────
    SCALE MODEL MAKING — COMPLETE GUIDE
    ───────────────────────────────────────────────────────────── */
-function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function ScaleModelMakingGuideArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -1974,11 +2653,13 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
 
       {/* Article Body */}
       <div className="container mx-auto px-6 max-w-4xl py-16">
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium"
+            >
               {tag}
             </span>
           ))}
@@ -1988,90 +2669,222 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-12">
           <h2 className="text-lg font-bold text-black mb-4">In This Guide</h2>
           <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
-            <li><a href="#what-are" className="hover:text-yellow-500 transition-colors">What Is Architectural Scale Model Making?</a></li>
-            <li><a href="#types" className="hover:text-yellow-500 transition-colors">Types of Architectural Scale Models</a></li>
-            <li><a href="#process" className="hover:text-yellow-500 transition-colors">The Complete Scale Model Making Process</a></li>
-            <li><a href="#materials" className="hover:text-yellow-500 transition-colors">Materials Used in Miniature Model Making</a></li>
-            <li><a href="#scale-ratios" className="hover:text-yellow-500 transition-colors">Scale Ratios — Which One Is Right for You?</a></li>
-            <li><a href="#choose" className="hover:text-yellow-500 transition-colors">How to Choose a Scale Model Making Company</a></li>
-            <li><a href="#cost" className="hover:text-yellow-500 transition-colors">Cost of Architectural Scale Models in India</a></li>
-            <li><a href="#vs-digital" className="hover:text-yellow-500 transition-colors">Scale Models vs Digital Visualization</a></li>
-            <li><a href="#faq" className="hover:text-yellow-500 transition-colors">Frequently Asked Questions</a></li>
+            <li>
+              <a
+                href="#what-are"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                What Is Architectural Scale Model Making?
+              </a>
+            </li>
+            <li>
+              <a
+                href="#types"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Types of Architectural Scale Models
+              </a>
+            </li>
+            <li>
+              <a
+                href="#process"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                The Complete Scale Model Making Process
+              </a>
+            </li>
+            <li>
+              <a
+                href="#materials"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Materials Used in Miniature Model Making
+              </a>
+            </li>
+            <li>
+              <a
+                href="#scale-ratios"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Scale Ratios — Which One Is Right for You?
+              </a>
+            </li>
+            <li>
+              <a
+                href="#choose"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                How to Choose a Scale Model Making Company
+              </a>
+            </li>
+            <li>
+              <a
+                href="#cost"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Cost of Architectural Scale Models in India
+              </a>
+            </li>
+            <li>
+              <a
+                href="#vs-digital"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Scale Models vs Digital Visualization
+              </a>
+            </li>
+            <li>
+              <a
+                href="#faq"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Frequently Asked Questions
+              </a>
+            </li>
           </ol>
         </div>
 
         {/* Section 1 — What Are */}
         <section id="what-are" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">What Is Architectural Scale Model Making?</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            What Is Architectural Scale Model Making?
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             Architectural{" "}
-            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
+            <Link
+              href="/services/scale-model-maker-india"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               scale model making
             </Link>{" "}
-            is the craft of building a precisely proportioned physical replica of a building, township, infrastructure project, or landscape. These three-dimensional miniatures are crafted at a fraction of the actual size — typically anywhere between 1:50 and 1:2000 — preserving every architectural detail, landscaping element, road network, and structural nuance of the original design.
+            is the craft of building a precisely proportioned physical replica
+            of a building, township, infrastructure project, or landscape. These
+            three-dimensional miniatures are crafted at a fraction of the actual
+            size — typically anywhere between 1:50 and 1:2000 — preserving every
+            architectural detail, landscaping element, road network, and
+            structural nuance of the original design.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            In India's competitive real estate market, scale model making has evolved from a simple presentation tool into a sophisticated sales instrument. When a prospective buyer walks into a project site office and sees a premium{" "}
-            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
+            In India's competitive real estate market, scale model making has
+            evolved from a simple presentation tool into a sophisticated sales
+            instrument. When a prospective buyer walks into a project site
+            office and sees a premium{" "}
+            <Link
+              href="/services/scale-model-maker-india"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               miniature model
             </Link>{" "}
-            illuminated with fibre-optic lighting, phase-wise LED systems, and hand-crafted landscaping, the emotional impact is immediate and powerful — far beyond what any render or animation can replicate.
+            illuminated with fibre-optic lighting, phase-wise LED systems, and
+            hand-crafted landscaping, the emotional impact is immediate and
+            powerful — far beyond what any render or animation can replicate.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The discipline sits at the intersection of architecture, engineering, and fine craftsmanship. A professional <strong>3D scale model maker</strong> must read and interpret CAD drawings, understand structural and material properties, operate CNC routers and laser cutters with precision, and apply hand-finishing skills to achieve the lifelike quality that top developers demand.
+            The discipline sits at the intersection of architecture,
+            engineering, and fine craftsmanship. A professional{" "}
+            <strong>3D scale model maker</strong> must read and interpret CAD
+            drawings, understand structural and material properties, operate CNC
+            routers and laser cutters with precision, and apply hand-finishing
+            skills to achieve the lifelike quality that top developers demand.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Alliance Media Labs has been delivering high-precision architectural scale models for India's leading real estate developers, infrastructure companies, and government agencies. Our models combine digital fabrication technology with master craftsmanship — built to impress investors, buyers, and approval committees alike.
+            Alliance Media Labs has been delivering high-precision architectural
+            scale models for India's leading real estate developers,
+            infrastructure companies, and government agencies. Our models
+            combine digital fabrication technology with master craftsmanship —
+            built to impress investors, buyers, and approval committees alike.
           </p>
         </section>
 
         {/* Section 2 — Types */}
         <section id="types" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">Types of Architectural Scale Models</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Types of Architectural Scale Models
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Not all projects need the same type of model. The right format depends on the size of the development, the intended audience, and the stage of the sales or approval process.
+            Not all projects need the same type of model. The right format
+            depends on the size of the development, the intended audience, and
+            the stage of the sales or approval process.
           </p>
 
           <div className="space-y-6">
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-2">1. Residential Housing Models</h3>
+              <h3 className="text-xl font-bold text-black mb-2">
+                1. Residential Housing Models
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Built for individual villas, apartment blocks, or gated communities. These models showcase building elevations, floor layouts, balcony designs, landscaping, and amenity zones such as pools, gyms, and clubhouses. They are the most common type used in pre-launch sales offices across India's metros and Tier 1 cities.
+                Built for individual villas, apartment blocks, or gated
+                communities. These models showcase building elevations, floor
+                layouts, balcony designs, landscaping, and amenity zones such as
+                pools, gyms, and clubhouses. They are the most common type used
+                in pre-launch sales offices across India's metros and Tier 1
+                cities.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-2">2. Township Master Plan Models</h3>
+              <h3 className="text-xl font-bold text-black mb-2">
+                2. Township Master Plan Models
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                These are large-format models — often spanning 8 to 20 feet — built to represent integrated townships, SEZs, and master-planned communities. They depict roads, sector divisions, phase boundaries, open spaces, and utility infrastructure, making them ideal for government presentations, investor roadshows, and large project launches.
+                These are large-format models — often spanning 8 to 20 feet —
+                built to represent integrated townships, SEZs, and
+                master-planned communities. They depict roads, sector divisions,
+                phase boundaries, open spaces, and utility infrastructure,
+                making them ideal for government presentations, investor
+                roadshows, and large project launches.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-2">3. Commercial and Mixed-Use Models</h3>
+              <h3 className="text-xl font-bold text-black mb-2">
+                3. Commercial and Mixed-Use Models
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Office parks, business districts, malls, and mixed-use high-rises require models that convey scale, density, and connectivity. These models often include removable floor plates, interior fit-out displays, and directional lighting to highlight retail podiums or anchor zones.
+                Office parks, business districts, malls, and mixed-use
+                high-rises require models that convey scale, density, and
+                connectivity. These models often include removable floor plates,
+                interior fit-out displays, and directional lighting to highlight
+                retail podiums or anchor zones.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-2">4. Infrastructure and Government Project Models</h3>
+              <h3 className="text-xl font-bold text-black mb-2">
+                4. Infrastructure and Government Project Models
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Highways, metro rail corridors, airports, ports, and smart city developments are frequently presented using large terrain models. These capture topography, existing structures, and new infrastructure overlays — critical for government approvals, public consultations, and media presentations.
+                Highways, metro rail corridors, airports, ports, and smart city
+                developments are frequently presented using large terrain
+                models. These capture topography, existing structures, and new
+                infrastructure overlays — critical for government approvals,
+                public consultations, and media presentations.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-2">5. Interior Show Flat Models</h3>
+              <h3 className="text-xl font-bold text-black mb-2">
+                5. Interior Show Flat Models
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Cutaway or open-top models that show the internal layout of a single apartment or villa — furniture arrangement, ceiling heights, kitchen design, and room adjacencies. These are especially effective for off-plan sales when a physical show flat cannot yet be constructed.
+                Cutaway or open-top models that show the internal layout of a
+                single apartment or villa — furniture arrangement, ceiling
+                heights, kitchen design, and room adjacencies. These are
+                especially effective for off-plan sales when a physical show
+                flat cannot yet be constructed.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-2">6. Heritage Conservation and Institutional Models</h3>
+              <h3 className="text-xl font-bold text-black mb-2">
+                6. Heritage Conservation and Institutional Models
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Museums, universities, and heritage bodies commission detailed scale replicas of monuments, campuses, and historical structures. These models prioritise accuracy of architectural detail and historical material representation over commercial sales utility.
+                Museums, universities, and heritage bodies commission detailed
+                scale replicas of monuments, campuses, and historical
+                structures. These models prioritise accuracy of architectural
+                detail and historical material representation over commercial
+                sales utility.
               </p>
             </div>
           </div>
@@ -2079,68 +2892,141 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
 
         {/* Section 3 — Process */}
         <section id="process" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">The Complete Scale Model Making Process</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            The Complete Scale Model Making Process
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            A professionally executed scale model does not emerge from guesswork. Every model Alliance Media Labs produces follows a rigorous six-stage workflow — from drawing review to final delivery and installation — ensuring dimensional accuracy and finish quality that withstands close client scrutiny.
+            A professionally executed scale model does not emerge from
+            guesswork. Every model Alliance Media Labs produces follows a
+            rigorous six-stage workflow — from drawing review to final delivery
+            and installation — ensuring dimensional accuracy and finish quality
+            that withstands close client scrutiny.
           </p>
 
           <div className="space-y-8">
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">1</div>
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
+                1
+              </div>
               <div>
-                <h3 className="text-xl font-bold text-black mb-2">Design Brief and Drawing Review</h3>
+                <h3 className="text-xl font-bold text-black mb-2">
+                  Design Brief and Drawing Review
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  We begin by reviewing your architectural drawings — AutoCAD files, BIM models, site plans, and elevation sheets. Our team calculates the optimal scale ratio based on project size, model base dimensions, and the level of detail required. We confirm scope: which phases to include, what landscaping to show, and whether LEDs, water features, or interactive elements are needed. A detailed production brief is signed off before any fabrication begins.
+                  We begin by reviewing your architectural drawings — AutoCAD
+                  files, BIM models, site plans, and elevation sheets. Our team
+                  calculates the optimal scale ratio based on project size,
+                  model base dimensions, and the level of detail required. We
+                  confirm scope: which phases to include, what landscaping to
+                  show, and whether LEDs, water features, or interactive
+                  elements are needed. A detailed production brief is signed off
+                  before any fabrication begins.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">2</div>
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
+                2
+              </div>
               <div>
-                <h3 className="text-xl font-bold text-black mb-2">Digital Modelling and CNC Preparation</h3>
+                <h3 className="text-xl font-bold text-black mb-2">
+                  Digital Modelling and CNC Preparation
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Our <strong>3D scale model maker</strong> team converts 2D drawings into precise 3D digital models using specialised CAD software. Every building component — walls, columns, rooflines, staircases, railings — is modelled to exact scaled dimensions. These digital files drive our CNC routers and laser cutters, eliminating the human measurement error that plagued traditional hand-cut model making.
+                  Our <strong>3D scale model maker</strong> team converts 2D
+                  drawings into precise 3D digital models using specialised CAD
+                  software. Every building component — walls, columns,
+                  rooflines, staircases, railings — is modelled to exact scaled
+                  dimensions. These digital files drive our CNC routers and
+                  laser cutters, eliminating the human measurement error that
+                  plagued traditional hand-cut model making.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">3</div>
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
+                3
+              </div>
               <div>
-                <h3 className="text-xl font-bold text-black mb-2">Material Cutting and Fabrication</h3>
+                <h3 className="text-xl font-bold text-black mb-2">
+                  Material Cutting and Fabrication
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Components are precision-cut from acrylic, ABS plastic, MDF, foam board, or specialist architectural modelling materials, depending on the element type. Glass facades are simulated with clear acrylic panels. Road networks are laser-etched onto the base. Green areas are built up using model grass, foam foliage, and hand-placed tree armatures. This is the most time-intensive stage of miniature model making — it can take anywhere from 5 to 40 working days depending on model size and complexity.
+                  Components are precision-cut from acrylic, ABS plastic, MDF,
+                  foam board, or specialist architectural modelling materials,
+                  depending on the element type. Glass facades are simulated
+                  with clear acrylic panels. Road networks are laser-etched onto
+                  the base. Green areas are built up using model grass, foam
+                  foliage, and hand-placed tree armatures. This is the most
+                  time-intensive stage of miniature model making — it can take
+                  anywhere from 5 to 40 working days depending on model size and
+                  complexity.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">4</div>
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
+                4
+              </div>
               <div>
-                <h3 className="text-xl font-bold text-black mb-2">Assembly and Electrical Integration</h3>
+                <h3 className="text-xl font-bold text-black mb-2">
+                  Assembly and Electrical Integration
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Individual components are assembled on the base board using precision adhesives and alignment jigs. LED lighting systems — warm white for habitable buildings, cool white for commercial, amber for landscape paths — are wired into hidden channels beneath the base. Phase-wise lighting controls allow salespeople to highlight specific blocks independently during a client walkthrough. Water simulation features, if specified, are plumbed and tested at this stage.
+                  Individual components are assembled on the base board using
+                  precision adhesives and alignment jigs. LED lighting systems —
+                  warm white for habitable buildings, cool white for commercial,
+                  amber for landscape paths — are wired into hidden channels
+                  beneath the base. Phase-wise lighting controls allow
+                  salespeople to highlight specific blocks independently during
+                  a client walkthrough. Water simulation features, if specified,
+                  are plumbed and tested at this stage.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">5</div>
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
+                5
+              </div>
               <div>
-                <h3 className="text-xl font-bold text-black mb-2">Painting, Finishing, and Landscaping</h3>
+                <h3 className="text-xl font-bold text-black mb-2">
+                  Painting, Finishing, and Landscaping
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Buildings are painted in custom-mixed colours matching your actual facade specifications. Window frames, balconies, and cladding patterns are hand-painted with fine brushes. Landscaping is layered in — ground cover, shrubs, specimen trees, water body colouring, and amenity area detailing. A protective acrylic cover and illuminated base complete the assembly. This final stage is where our craft sets Alliance Media Labs apart — it is the difference between a model that looks like a toy and one that looks like a luxury presentation piece.
+                  Buildings are painted in custom-mixed colours matching your
+                  actual facade specifications. Window frames, balconies, and
+                  cladding patterns are hand-painted with fine brushes.
+                  Landscaping is layered in — ground cover, shrubs, specimen
+                  trees, water body colouring, and amenity area detailing. A
+                  protective acrylic cover and illuminated base complete the
+                  assembly. This final stage is where our craft sets Alliance
+                  Media Labs apart — it is the difference between a model that
+                  looks like a toy and one that looks like a luxury presentation
+                  piece.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">6</div>
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
+                6
+              </div>
               <div>
-                <h3 className="text-xl font-bold text-black mb-2">Quality Check, Packaging, and Delivery</h3>
+                <h3 className="text-xl font-bold text-black mb-2">
+                  Quality Check, Packaging, and Delivery
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Every model undergoes a structured quality inspection — checking dimensional accuracy, lighting function, finish consistency, and structural rigidity. Models are then photographed for documentation, packed in custom foam-lined crates, and transported to site by our own team. We supervise installation, test all electrics on-site, and brief your sales team on operation and maintenance.
+                  Every model undergoes a structured quality inspection —
+                  checking dimensional accuracy, lighting function, finish
+                  consistency, and structural rigidity. Models are then
+                  photographed for documentation, packed in custom foam-lined
+                  crates, and transported to site by our own team. We supervise
+                  installation, test all electrics on-site, and brief your sales
+                  team on operation and maintenance.
                 </p>
               </div>
             </div>
@@ -2149,165 +3035,301 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
 
         {/* Section 4 — Materials */}
         <section id="materials" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">Materials Used in Miniature Model Making</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Materials Used in Miniature Model Making
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Material selection in miniature model making is not arbitrary. Each material serves a specific structural or visual purpose, and the choice directly affects the model's durability, finish quality, and cost. Here's how we think about material selection:
+            Material selection in miniature model making is not arbitrary. Each
+            material serves a specific structural or visual purpose, and the
+            choice directly affects the model's durability, finish quality, and
+            cost. Here's how we think about material selection:
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-gray-50 rounded-xl p-5">
               <h3 className="font-bold text-black mb-2">Acrylic (PMMA)</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">The workhorse of architectural model making. Available in transparent, frosted, and coloured variants. Used for glazing, water surfaces, illuminated panels, and structural building shells. Machines cleanly on CNC routers and laser cutters. Bonds with solvent cement for invisible joints.</p>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                The workhorse of architectural model making. Available in
+                transparent, frosted, and coloured variants. Used for glazing,
+                water surfaces, illuminated panels, and structural building
+                shells. Machines cleanly on CNC routers and laser cutters. Bonds
+                with solvent cement for invisible joints.
+              </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-5">
               <h3 className="font-bold text-black mb-2">ABS Plastic</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">High-strength thermoplastic used for complex moulded components — curved facades, dome structures, and bespoke architectural features. Can be vacuum-formed, 3D-printed, or CNC-milled. Paints and primes exceptionally well.</p>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                High-strength thermoplastic used for complex moulded components
+                — curved facades, dome structures, and bespoke architectural
+                features. Can be vacuum-formed, 3D-printed, or CNC-milled.
+                Paints and primes exceptionally well.
+              </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-5">
               <h3 className="font-bold text-black mb-2">MDF and Foam Board</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">Used for internal structure, base boards, terrain sculpting, and wall infill. MDF is dimensionally stable and takes paint well. High-density foam board is used for terrain contouring and lightweight construction of large base sections.</p>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Used for internal structure, base boards, terrain sculpting, and
+                wall infill. MDF is dimensionally stable and takes paint well.
+                High-density foam board is used for terrain contouring and
+                lightweight construction of large base sections.
+              </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-5">
-              <h3 className="font-bold text-black mb-2">Model Foliage and Ground Cover</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">Professional architectural model grass mats, scatter foliage, and pre-made tree armatures from specialist model suppliers. Applied in layers to create depth and realism. Colours are selected to represent planted species — not generic green.</p>
+              <h3 className="font-bold text-black mb-2">
+                Model Foliage and Ground Cover
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Professional architectural model grass mats, scatter foliage,
+                and pre-made tree armatures from specialist model suppliers.
+                Applied in layers to create depth and realism. Colours are
+                selected to represent planted species — not generic green.
+              </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-5">
-              <h3 className="font-bold text-black mb-2">Laser-Etched Road and Paving Surfaces</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">Roads, footpaths, parking bays, and pavement patterns are engraved directly onto the base or road surface material using laser etching. This produces crisp, consistent line work impossible to achieve by hand at small scales.</p>
+              <h3 className="font-bold text-black mb-2">
+                Laser-Etched Road and Paving Surfaces
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Roads, footpaths, parking bays, and pavement patterns are
+                engraved directly onto the base or road surface material using
+                laser etching. This produces crisp, consistent line work
+                impossible to achieve by hand at small scales.
+              </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-5">
-              <h3 className="font-bold text-black mb-2">LED Systems and Fibre Optics</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">Warm-white, cool-white, and coloured SMD LEDs are wired into buildings and landscape elements. Fibre optic strands are used for star-field effects, swimming pool lighting, and ultra-fine feature illumination where conventional LEDs are too bulky.</p>
+              <h3 className="font-bold text-black mb-2">
+                LED Systems and Fibre Optics
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Warm-white, cool-white, and coloured SMD LEDs are wired into
+                buildings and landscape elements. Fibre optic strands are used
+                for star-field effects, swimming pool lighting, and ultra-fine
+                feature illumination where conventional LEDs are too bulky.
+              </p>
             </div>
           </div>
         </section>
 
         {/* Section 5 — Scale Ratios */}
         <section id="scale-ratios" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">Scale Ratios — Which One Is Right for Your Project?</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Scale Ratios — Which One Is Right for Your Project?
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Choosing the correct scale ratio is one of the most important decisions in scale model making. Too large a scale and the model becomes physically unmanageable; too small and critical detail is lost. The right ratio balances visual impact with practical constraints.
+            Choosing the correct scale ratio is one of the most important
+            decisions in scale model making. Too large a scale and the model
+            becomes physically unmanageable; too small and critical detail is
+            lost. The right ratio balances visual impact with practical
+            constraints.
           </p>
 
           <div className="overflow-x-auto rounded-xl border border-gray-200 mb-6">
             <table className="w-full text-sm">
               <thead className="bg-black text-white">
                 <tr>
-                  <th className="px-4 py-3 text-left font-semibold">Scale Ratio</th>
-                  <th className="px-4 py-3 text-left font-semibold">Best For</th>
-                  <th className="px-4 py-3 text-left font-semibold">Typical Model Size</th>
-                  <th className="px-4 py-3 text-left font-semibold">Level of Detail</th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Scale Ratio
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Best For
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Typical Model Size
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Level of Detail
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">1:50</td>
-                  <td className="px-4 py-3 text-gray-700">Individual villa, show flat layout</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Individual villa, show flat layout
+                  </td>
                   <td className="px-4 py-3 text-gray-700">2–4 ft</td>
-                  <td className="px-4 py-3 text-gray-700">Very High — furniture visible</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Very High — furniture visible
+                  </td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-4 py-3 font-medium">1:100</td>
-                  <td className="px-4 py-3 text-gray-700">Apartment block, boutique development</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Apartment block, boutique development
+                  </td>
                   <td className="px-4 py-3 text-gray-700">3–6 ft</td>
-                  <td className="px-4 py-3 text-gray-700">High — floor-by-floor detail</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    High — floor-by-floor detail
+                  </td>
                 </tr>
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">1:200</td>
-                  <td className="px-4 py-3 text-gray-700">Mid-size residential complex, commercial tower</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Mid-size residential complex, commercial tower
+                  </td>
                   <td className="px-4 py-3 text-gray-700">4–8 ft</td>
-                  <td className="px-4 py-3 text-gray-700">Medium-High — window and balcony detail</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Medium-High — window and balcony detail
+                  </td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-4 py-3 font-medium">1:500</td>
-                  <td className="px-4 py-3 text-gray-700">Large housing project, township phase</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Large housing project, township phase
+                  </td>
                   <td className="px-4 py-3 text-gray-700">6–12 ft</td>
-                  <td className="px-4 py-3 text-gray-700">Medium — building massing, roads, landscape</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Medium — building massing, roads, landscape
+                  </td>
                 </tr>
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">1:1000</td>
-                  <td className="px-4 py-3 text-gray-700">Full township master plan</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Full township master plan
+                  </td>
                   <td className="px-4 py-3 text-gray-700">8–16 ft</td>
-                  <td className="px-4 py-3 text-gray-700">Medium — sector layout, phase zoning</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Medium — sector layout, phase zoning
+                  </td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-4 py-3 font-medium">1:2000+</td>
-                  <td className="px-4 py-3 text-gray-700">Regional infrastructure, smart city overview</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Regional infrastructure, smart city overview
+                  </td>
                   <td className="px-4 py-3 text-gray-700">10–20 ft</td>
-                  <td className="px-4 py-3 text-gray-700">Low — overall spatial relationships</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Low — overall spatial relationships
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="text-gray-500 text-sm italic">
-            Note: Custom ratios are possible when standard ratios don't fit your site dimensions or base table constraints. Our team will calculate the optimal ratio during the design brief phase.
+            Note: Custom ratios are possible when standard ratios don't fit your
+            site dimensions or base table constraints. Our team will calculate
+            the optimal ratio during the design brief phase.
           </p>
         </section>
 
         {/* Section 6 — How to Choose */}
         <section id="choose" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">How to Choose a Scale Model Making Company in India</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            How to Choose a Scale Model Making Company in India
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            India has hundreds of vendors calling themselves a scale model making company — ranging from single-person workshops to larger production studios. Not all are equal. Here are six questions to ask before you commission your next architectural model:
+            India has hundreds of vendors calling themselves a scale model
+            making company — ranging from single-person workshops to larger
+            production studios. Not all are equal. Here are six questions to ask
+            before you commission your next architectural model:
           </p>
 
           <div className="space-y-6">
             <div className="flex gap-4">
-              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">01</div>
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">
+                01
+              </div>
               <div>
-                <h3 className="text-lg font-bold text-black mb-2">Do they work directly from your CAD/BIM drawings?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">
+                  Do they work directly from your CAD/BIM drawings?
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  A professional <strong>scale model making company</strong> should be able to work directly from AutoCAD DWG, Revit, or SketchUp files — not hand-trace printed drawings. CNC-driven fabrication from digital files eliminates measurement errors and produces the dimensional precision your architects expect.
+                  A professional <strong>scale model making company</strong>{" "}
+                  should be able to work directly from AutoCAD DWG, Revit, or
+                  SketchUp files — not hand-trace printed drawings. CNC-driven
+                  fabrication from digital files eliminates measurement errors
+                  and produces the dimensional precision your architects expect.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">02</div>
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">
+                02
+              </div>
               <div>
-                <h3 className="text-lg font-bold text-black mb-2">Can they show completed project portfolios similar to yours?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">
+                  Can they show completed project portfolios similar to yours?
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Photographs of past models are the best predictor of quality. Ask to see projects of similar type, scale, and complexity. Pay attention to window alignment, edge finish quality, landscape realism, and LED integration — these are the areas where lesser vendors cut corners.
+                  Photographs of past models are the best predictor of quality.
+                  Ask to see projects of similar type, scale, and complexity.
+                  Pay attention to window alignment, edge finish quality,
+                  landscape realism, and LED integration — these are the areas
+                  where lesser vendors cut corners.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">03</div>
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">
+                03
+              </div>
               <div>
-                <h3 className="text-lg font-bold text-black mb-2">What is their in-house capability versus outsourcing?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">
+                  What is their in-house capability versus outsourcing?
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Some vendors outsource CNC cutting, painting, or electrical work to third parties — introducing quality control gaps and timeline risks. The best scale model making companies control the full production process in-house: digital modelling, CNC/laser cutting, hand-finishing, painting, and electrical integration.
+                  Some vendors outsource CNC cutting, painting, or electrical
+                  work to third parties — introducing quality control gaps and
+                  timeline risks. The best scale model making companies control
+                  the full production process in-house: digital modelling,
+                  CNC/laser cutting, hand-finishing, painting, and electrical
+                  integration.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">04</div>
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">
+                04
+              </div>
               <div>
-                <h3 className="text-lg font-bold text-black mb-2">Do they provide a formal production timeline?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">
+                  Do they provide a formal production timeline?
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Reliable vendors provide a written production schedule with milestones — drawing review sign-off, prototype component review, assembly completion, quality check, dispatch. If a vendor can't provide a structured timeline, your delivery risk is high, especially if you have a launch date to meet.
+                  Reliable vendors provide a written production schedule with
+                  milestones — drawing review sign-off, prototype component
+                  review, assembly completion, quality check, dispatch. If a
+                  vendor can't provide a structured timeline, your delivery risk
+                  is high, especially if you have a launch date to meet.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">05</div>
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">
+                05
+              </div>
               <div>
-                <h3 className="text-lg font-bold text-black mb-2">What are the post-delivery support terms?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">
+                  What are the post-delivery support terms?
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Models live in sales offices for months or years. LED bulbs fail. Acrylic components get scratched. Landscaping elements get accidentally dislodged. Ask what the maintenance and repair policy is, and whether the vendor will travel to site if an issue arises.
+                  Models live in sales offices for months or years. LED bulbs
+                  fail. Acrylic components get scratched. Landscaping elements
+                  get accidentally dislodged. Ask what the maintenance and
+                  repair policy is, and whether the vendor will travel to site
+                  if an issue arises.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">06</div>
+              <div className="flex-shrink-0 text-yellow-400 font-bold text-xl mt-1">
+                06
+              </div>
               <div>
-                <h3 className="text-lg font-bold text-black mb-2">Are they familiar with your city's developer market?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">
+                  Are they familiar with your city's developer market?
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  A vendor who has worked with developers in Mumbai, Delhi, Bangalore, Pune, and Hyderabad understands regional project typologies, builder preferences, and site office space constraints. Local experience shortens the briefing cycle and reduces the risk of design misalignment.
+                  A vendor who has worked with developers in Mumbai, Delhi,
+                  Bangalore, Pune, and Hyderabad understands regional project
+                  typologies, builder preferences, and site office space
+                  constraints. Local experience shortens the briefing cycle and
+                  reduces the risk of design misalignment.
                 </p>
               </div>
             </div>
@@ -2316,50 +3338,82 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
 
         {/* Section 7 — Cost */}
         <section id="cost" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">Cost of Architectural Scale Models in India</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Cost of Architectural Scale Models in India
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Scale model pricing in India varies enormously based on size, complexity, material quality, and the level of finish. The following ranges reflect 2026 market pricing for professionally produced architectural scale models — they do not include rock-bottom quotations from unqualified vendors who deliver low-quality work.
+            Scale model pricing in India varies enormously based on size,
+            complexity, material quality, and the level of finish. The following
+            ranges reflect 2026 market pricing for professionally produced
+            architectural scale models — they do not include rock-bottom
+            quotations from unqualified vendors who deliver low-quality work.
           </p>
 
           <div className="overflow-x-auto rounded-xl border border-gray-200 mb-6">
             <table className="w-full text-sm">
               <thead className="bg-black text-white">
                 <tr>
-                  <th className="px-4 py-3 text-left font-semibold">Project Type</th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Project Type
+                  </th>
                   <th className="px-4 py-3 text-left font-semibold">Scale</th>
-                  <th className="px-4 py-3 text-left font-semibold">Approx. Cost Range (INR)</th>
-                  <th className="px-4 py-3 text-left font-semibold">Timeline</th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Approx. Cost Range (INR)
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Timeline
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr className="bg-white">
-                  <td className="px-4 py-3 font-medium">Individual Villa / Bungalow</td>
+                  <td className="px-4 py-3 font-medium">
+                    Individual Villa / Bungalow
+                  </td>
                   <td className="px-4 py-3 text-gray-700">1:50 – 1:100</td>
-                  <td className="px-4 py-3 text-gray-700">₹80,000 – ₹2,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    ₹80,000 – ₹2,00,000
+                  </td>
                   <td className="px-4 py-3 text-gray-700">10–20 days</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="px-4 py-3 font-medium">Mid-Rise Residential Block</td>
+                  <td className="px-4 py-3 font-medium">
+                    Mid-Rise Residential Block
+                  </td>
                   <td className="px-4 py-3 text-gray-700">1:100 – 1:200</td>
-                  <td className="px-4 py-3 text-gray-700">₹1,50,000 – ₹4,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    ₹1,50,000 – ₹4,00,000
+                  </td>
                   <td className="px-4 py-3 text-gray-700">15–25 days</td>
                 </tr>
                 <tr className="bg-white">
-                  <td className="px-4 py-3 font-medium">Large Residential Complex (with LED)</td>
+                  <td className="px-4 py-3 font-medium">
+                    Large Residential Complex (with LED)
+                  </td>
                   <td className="px-4 py-3 text-gray-700">1:200 – 1:500</td>
-                  <td className="px-4 py-3 text-gray-700">₹3,00,000 – ₹8,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    ₹3,00,000 – ₹8,00,000
+                  </td>
                   <td className="px-4 py-3 text-gray-700">20–35 days</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="px-4 py-3 font-medium">Township Master Plan Model</td>
+                  <td className="px-4 py-3 font-medium">
+                    Township Master Plan Model
+                  </td>
                   <td className="px-4 py-3 text-gray-700">1:500 – 1:1000</td>
-                  <td className="px-4 py-3 text-gray-700">₹6,00,000 – ₹20,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    ₹6,00,000 – ₹20,00,000
+                  </td>
                   <td className="px-4 py-3 text-gray-700">30–50 days</td>
                 </tr>
                 <tr className="bg-white">
-                  <td className="px-4 py-3 font-medium">Infrastructure / Government Model</td>
+                  <td className="px-4 py-3 font-medium">
+                    Infrastructure / Government Model
+                  </td>
                   <td className="px-4 py-3 text-gray-700">1:1000 – 1:2000</td>
-                  <td className="px-4 py-3 text-gray-700">₹10,00,000 – ₹40,00,000</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    ₹10,00,000 – ₹40,00,000
+                  </td>
                   <td className="px-4 py-3 text-gray-700">40–70 days</td>
                 </tr>
               </tbody>
@@ -2368,78 +3422,159 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
 
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
             <p className="text-gray-800 text-sm leading-relaxed">
-              <strong>What drives cost up:</strong> LED phase-wise zoning, water simulation features, motorised rotating bases, custom acrylic covers with integrated lighting, extremely fine scale detail at 1:50, and tight delivery timelines requiring parallel production teams.
+              <strong>What drives cost up:</strong> LED phase-wise zoning, water
+              simulation features, motorised rotating bases, custom acrylic
+              covers with integrated lighting, extremely fine scale detail at
+              1:50, and tight delivery timelines requiring parallel production
+              teams.
             </p>
             <p className="text-gray-800 text-sm leading-relaxed mt-3">
-              <strong>What drives cost down:</strong> Standard scale ratios with existing component libraries, single-phase builds without interactive features, and projects where digital files are clean and complete from day one.
+              <strong>What drives cost down:</strong> Standard scale ratios with
+              existing component libraries, single-phase builds without
+              interactive features, and projects where digital files are clean
+              and complete from day one.
             </p>
           </div>
         </section>
 
         {/* Section 8 — vs Digital */}
         <section id="vs-digital" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">Architectural Scale Models vs Digital Visualization — Which Is Better?</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Architectural Scale Models vs Digital Visualization — Which Is
+            Better?
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            This is one of the most common questions developers ask. The honest answer is: they serve different buyer psychology, and the strongest sales offices use both.
+            This is one of the most common questions developers ask. The honest
+            answer is: they serve different buyer psychology, and the strongest
+            sales offices use both.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Digital visualization — 3D walkthroughs, VR tours, 3D renders — delivers immersive visual experience, unlimited iteration speed, and the ability to show interior finishes in photorealistic detail before construction begins. These are powerful tools for remote buyers, social media marketing, and early-stage concept presentation.
+            Digital visualization — 3D walkthroughs, VR tours, 3D renders —
+            delivers immersive visual experience, unlimited iteration speed, and
+            the ability to show interior finishes in photorealistic detail
+            before construction begins. These are powerful tools for remote
+            buyers, social media marketing, and early-stage concept
+            presentation.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Physical architectural scale models do something no screen can replicate: they create a tangible, spatial experience. A buyer standing in front of a premium scale model can immediately understand the relationship between blocks, the depth of the landscaping buffer, the height of surrounding buildings relative to theirs, and the overall site context — all in a single glance. Research in consumer neuroscience consistently shows that physical interaction with objects triggers greater emotional engagement and memory retention than viewing the same information on a screen.
+            Physical architectural scale models do something no screen can
+            replicate: they create a tangible, spatial experience. A buyer
+            standing in front of a premium scale model can immediately
+            understand the relationship between blocks, the depth of the
+            landscaping buffer, the height of surrounding buildings relative to
+            theirs, and the overall site context — all in a single glance.
+            Research in consumer neuroscience consistently shows that physical
+            interaction with objects triggers greater emotional engagement and
+            memory retention than viewing the same information on a screen.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            India's top developers — those running flagship launches in Mumbai's Western suburbs, Gurugram's Golf Course Extension, Bangalore's North and East corridors, and Pune's Hinjewadi belt — routinely invest in both. The scale model anchors the sales office physically. The 3D walkthrough extends the reach digitally to NRI buyers and investors who cannot visit in person.
+            India's top developers — those running flagship launches in Mumbai's
+            Western suburbs, Gurugram's Golf Course Extension, Bangalore's North
+            and East corridors, and Pune's Hinjewadi belt — routinely invest in
+            both. The scale model anchors the sales office physically. The 3D
+            walkthrough extends the reach digitally to NRI buyers and investors
+            who cannot visit in person.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            If your budget forces a choice, consider your buyer profile. For high-ticket projects (₹2 Cr+ ticket size) with on-site buyer visits as the primary sales channel, a premium architectural scale model will consistently outperform any digital tool in terms of sales office conversion rate. For projects relying heavily on digital and broker channels, the 3D walkthrough takes priority. For landmark projects, invest in both.
+            If your budget forces a choice, consider your buyer profile. For
+            high-ticket projects (₹2 Cr+ ticket size) with on-site buyer visits
+            as the primary sales channel, a premium architectural scale model
+            will consistently outperform any digital tool in terms of sales
+            office conversion rate. For projects relying heavily on digital and
+            broker channels, the 3D walkthrough takes priority. For landmark
+            projects, invest in both.
           </p>
         </section>
 
         {/* FAQ */}
         <section id="faq" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-8">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-black mb-8">
+            Frequently Asked Questions
+          </h2>
 
           <div className="space-y-6">
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">How long does scale model making take?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                How long does scale model making take?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Timeline depends on model size and complexity. A single residential block typically takes 15–25 working days from drawing sign-off to delivery. A large township master plan model can take 40–60 days. We recommend building in at least 4 weeks of buffer before your project launch date.
+                Timeline depends on model size and complexity. A single
+                residential block typically takes 15–25 working days from
+                drawing sign-off to delivery. A large township master plan model
+                can take 40–60 days. We recommend building in at least 4 weeks
+                of buffer before your project launch date.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">What files do you need to start production?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                What files do you need to start production?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                We work from AutoCAD DWG site plans and building floor plans, elevation drawings, and 3D model files (Revit or SketchUp preferred). The more complete your digital files, the faster and more accurate the production. If your drawings are still at schematic stage, we can work from that but will require multiple review rounds.
+                We work from AutoCAD DWG site plans and building floor plans,
+                elevation drawings, and 3D model files (Revit or SketchUp
+                preferred). The more complete your digital files, the faster and
+                more accurate the production. If your drawings are still at
+                schematic stage, we can work from that but will require multiple
+                review rounds.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">Can the scale model be updated if the design changes during construction?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Can the scale model be updated if the design changes during
+                construction?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Yes. We retain the digital model files for all projects, which allows targeted updates without rebuilding the entire model. Facade colour changes, block additions, or landscaping revisions can typically be incorporated within 7–15 days depending on scope.
+                Yes. We retain the digital model files for all projects, which
+                allows targeted updates without rebuilding the entire model.
+                Facade colour changes, block additions, or landscaping revisions
+                can typically be incorporated within 7–15 days depending on
+                scope.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">Do you deliver and install the model at our site office?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Do you deliver and install the model at our site office?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Yes. Our team handles crating, transportation, and on-site installation. We supervise the placement, test all lighting, and brief your sales staff on maintenance and operation. We cover Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and other major Indian cities.
+                Yes. Our team handles crating, transportation, and on-site
+                installation. We supervise the placement, test all lighting, and
+                brief your sales staff on maintenance and operation. We cover
+                Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and
+                other major Indian cities.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">What makes Alliance Media Labs different from other scale model making companies?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                What makes Alliance Media Labs different from other scale model
+                making companies?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                We combine CNC precision with master hand-craft finishing — a combination that most Indian vendors don't offer. Our miniature model making team has worked on over 200 real estate and infrastructure projects across India. We control the full production chain in-house: digital modelling, CNC fabrication, painting, electrical integration, and delivery. We also offer a post-delivery warranty and site visit for repairs.
+                We combine CNC precision with master hand-craft finishing — a
+                combination that most Indian vendors don't offer. Our miniature
+                model making team has worked on over 200 real estate and
+                infrastructure projects across India. We control the full
+                production chain in-house: digital modelling, CNC fabrication,
+                painting, electrical integration, and delivery. We also offer a
+                post-delivery warranty and site visit for repairs.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">Can you make models for RERA registration or government approval purposes?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Can you make models for RERA registration or government approval
+                purposes?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Yes. Our models are built to architectural accuracy standards required for regulatory presentations. We provide dimensional verification documentation on request. For government tenders and municipal approvals, we also produce scaled terrain models that accurately represent topography and infrastructure alignment.
+                Yes. Our models are built to architectural accuracy standards
+                required for regulatory presentations. We provide dimensional
+                verification documentation on request. For government tenders
+                and municipal approvals, we also produce scaled terrain models
+                that accurately represent topography and infrastructure
+                alignment.
               </p>
             </div>
           </div>
@@ -2447,29 +3582,65 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
 
         {/* Conclusion */}
         <section className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">Conclusion — Why Professional Scale Model Making Still Matters in 2026</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Conclusion — Why Professional Scale Model Making Still Matters in
+            2026
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            In an era where every developer has access to the same 3D renders and CGI walkthroughs, a premium handcrafted architectural scale model is the one thing your sales office will have that no competitor can instantly replicate. It signals commitment. It signals quality. And it gives buyers the tangible spatial experience that closes high-ticket deals.
+            In an era where every developer has access to the same 3D renders
+            and CGI walkthroughs, a premium handcrafted architectural scale
+            model is the one thing your sales office will have that no
+            competitor can instantly replicate. It signals commitment. It
+            signals quality. And it gives buyers the tangible spatial experience
+            that closes high-ticket deals.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The key is choosing the right <strong>scale model making company</strong> — one that operates with CNC precision, genuine craft skill, and the project management discipline to deliver on time. Cutting corners on model quality is a false economy when the model will be the centrepiece of your sales office for the next 18–24 months.
+            The key is choosing the right{" "}
+            <strong>scale model making company</strong> — one that operates with
+            CNC precision, genuine craft skill, and the project management
+            discipline to deliver on time. Cutting corners on model quality is a
+            false economy when the model will be the centrepiece of your sales
+            office for the next 18–24 months.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Alliance Media Labs has built its reputation as India's trusted <strong>3D scale model maker</strong> by delivering models that routinely stop visitors in their tracks and give your sales team a powerful conversation starter. If you're planning a project launch and want to know what's possible, reach out to our team today for a no-obligation consultation.
+            Alliance Media Labs has built its reputation as India's trusted{" "}
+            <strong>3D scale model maker</strong> by delivering models that
+            routinely stop visitors in their tracks and give your sales team a
+            powerful conversation starter. If you're planning a project launch
+            and want to know what's possible, reach out to our team today for a
+            no-obligation consultation.
           </p>
         </section>
 
         {/* Related Posts */}
         <div className="border-t border-gray-100 pt-12 mb-12">
-          <h3 className="text-xl font-bold text-black mb-6">Related Articles</h3>
+          <h3 className="text-xl font-bold text-black mb-6">
+            Related Articles
+          </h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/architectural-scale-models-india-real-estate" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Scale Models</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can&apos;t</h4>
+            <Link
+              href="/blog/architectural-scale-models-india-real-estate"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Scale Models
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">
+                The Silent Salesperson: How Architectural Scale Models Close
+                Deals That Digital Can&apos;t
+              </h4>
             </Link>
-            <Link href="/blog/real-estate-drone-photography-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Drone Photography</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">Real Estate Drone Photography in India: The Complete Guide (2026)</h4>
+            <Link
+              href="/blog/real-estate-drone-photography-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Drone Photography
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">
+                Real Estate Drone Photography in India: The Complete Guide
+                (2026)
+              </h4>
             </Link>
           </div>
         </div>
@@ -2490,7 +3661,8 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
             Commission Your Architectural Scale Model
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Talk to our team today for a detailed consultation and quote tailored to your project.
+            Talk to our team today for a detailed consultation and quote
+            tailored to your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -2517,7 +3689,11 @@ function ScaleModelMakingGuideArticle({ post }: { post: ReturnType<typeof getPos
 /* ─────────────────────────────────────────────────────────────
    REAL ESTATE MARKETING VIDEOS — 7 TYPES HUB POST
    ───────────────────────────────────────────────────────────── */
-function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function RealEstateMarketingVideosArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -2556,11 +3732,13 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
 
       {/* Article Body */}
       <div className="container mx-auto px-6 max-w-4xl py-16">
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium"
+            >
               {tag}
             </span>
           ))}
@@ -2570,51 +3748,166 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-12">
           <h2 className="text-lg font-bold text-black mb-4">In This Guide</h2>
           <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
-            <li><a href="#why-video" className="hover:text-yellow-500 transition-colors">Why Real Estate Video Marketing Wins in 2026</a></li>
-            <li><a href="#type-1" className="hover:text-yellow-500 transition-colors">Type 1 — 3D Walkthrough Videos</a></li>
-            <li><a href="#type-2" className="hover:text-yellow-500 transition-colors">Type 2 — Aerial Drone Videos</a></li>
-            <li><a href="#type-3" className="hover:text-yellow-500 transition-colors">Type 3 — Construction Update Videos</a></li>
-            <li><a href="#type-4" className="hover:text-yellow-500 transition-colors">Type 4 — Virtual Reality (VR) Tours</a></li>
-            <li><a href="#type-5" className="hover:text-yellow-500 transition-colors">Type 5 — Interior Cinematic Walkthroughs</a></li>
-            <li><a href="#type-6" className="hover:text-yellow-500 transition-colors">Type 6 — Location &amp; Route Videos</a></li>
-            <li><a href="#type-7" className="hover:text-yellow-500 transition-colors">Type 7 — 3D Renders &amp; Isometric Visuals</a></li>
-            <li><a href="#mix" className="hover:text-yellow-500 transition-colors">Building the Right Video Marketing Mix</a></li>
-            <li><a href="#comparison" className="hover:text-yellow-500 transition-colors">Comparison Table</a></li>
-            <li><a href="#faq" className="hover:text-yellow-500 transition-colors">Frequently Asked Questions</a></li>
+            <li>
+              <a
+                href="#why-video"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Why Real Estate Video Marketing Wins in 2026
+              </a>
+            </li>
+            <li>
+              <a
+                href="#type-1"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Type 1 — 3D Walkthrough Videos
+              </a>
+            </li>
+            <li>
+              <a
+                href="#type-2"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Type 2 — Aerial Drone Videos
+              </a>
+            </li>
+            <li>
+              <a
+                href="#type-3"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Type 3 — Construction Update Videos
+              </a>
+            </li>
+            <li>
+              <a
+                href="#type-4"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Type 4 — Virtual Reality (VR) Tours
+              </a>
+            </li>
+            <li>
+              <a
+                href="#type-5"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Type 5 — Interior Cinematic Walkthroughs
+              </a>
+            </li>
+            <li>
+              <a
+                href="#type-6"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Type 6 — Location &amp; Route Videos
+              </a>
+            </li>
+            <li>
+              <a
+                href="#type-7"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Type 7 — 3D Renders &amp; Isometric Visuals
+              </a>
+            </li>
+            <li>
+              <a
+                href="#mix"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Building the Right Video Marketing Mix
+              </a>
+            </li>
+            <li>
+              <a
+                href="#comparison"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Comparison Table
+              </a>
+            </li>
+            <li>
+              <a
+                href="#faq"
+                className="hover:text-yellow-500 transition-colors"
+              >
+                Frequently Asked Questions
+              </a>
+            </li>
           </ol>
         </div>
 
         {/* Intro */}
         <section id="why-video" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">Why Real Estate Video Marketing Wins in 2026</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Why Real Estate Video Marketing Wins in 2026
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Indian real estate buyers have never been more visually literate — or more demanding. A static brochure and a site plan no longer move units the way they once did. Today&apos;s buyer expects to experience the project before they visit, understand it before they invest, and trust it before they sign. That trust is built through <strong>real estate marketing videos</strong>.
+            Indian real estate buyers have never been more visually literate —
+            or more demanding. A static brochure and a site plan no longer move
+            units the way they once did. Today&apos;s buyer expects to
+            experience the project before they visit, understand it before they
+            invest, and trust it before they sign. That trust is built through{" "}
+            <strong>real estate marketing videos</strong>.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The numbers back this up. Listings with video content receive over 400% more enquiries than those without. Project launches supported by <strong>real estate video production</strong> content — walkthroughs, drone aerials, VR tours — consistently see faster sales velocity, higher booking-to-site-visit conversion rates, and stronger NRI buyer engagement.
+            The numbers back this up. Listings with video content receive over
+            400% more enquiries than those without. Project launches supported
+            by <strong>real estate video production</strong> content —
+            walkthroughs, drone aerials, VR tours — consistently see faster
+            sales velocity, higher booking-to-site-visit conversion rates, and
+            stronger NRI buyer engagement.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            But &quot;video&quot; is not a monolith. There are seven distinct types of <strong>real estate marketing videos</strong>, each serving a different buyer mindset, a different moment in the sales funnel, and a different distribution channel. The developers who achieve the best results don&apos;t just commission one video — they build a deliberate content stack that covers every stage of the buyer journey.
+            But &quot;video&quot; is not a monolith. There are seven distinct
+            types of <strong>real estate marketing videos</strong>, each serving
+            a different buyer mindset, a different moment in the sales funnel,
+            and a different distribution channel. The developers who achieve the
+            best results don&apos;t just commission one video — they build a
+            deliberate content stack that covers every stage of the buyer
+            journey.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This guide breaks down all seven types — what each one does, who it&apos;s for, when to use it, and how Alliance Media Labs produces it. By the end, you&apos;ll know exactly which combination of <strong>property video production</strong> formats is right for your next project launch.
+            This guide breaks down all seven types — what each one does, who
+            it&apos;s for, when to use it, and how Alliance Media Labs produces
+            it. By the end, you&apos;ll know exactly which combination of{" "}
+            <strong>property video production</strong> formats is right for your
+            next project launch.
           </p>
         </section>
 
         {/* Type 1 */}
         <section id="type-1" className="mb-14">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">1</div>
-            <h2 className="text-3xl font-bold text-black">3D Walkthrough Videos</h2>
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">
+              1
+            </div>
+            <h2 className="text-3xl font-bold text-black">
+              3D Walkthrough Videos
+            </h2>
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
-            <img src="/images/services/3d-walkthrough-videos/1.jpg" alt="3D walkthrough video for real estate" className="w-full h-full object-cover" />
+            <img
+              src="/images/services/3d-walkthrough-videos/1.jpg"
+              alt="3D walkthrough video for real estate"
+              className="w-full h-full object-cover"
+            />
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The 3D architectural walkthrough video is the single most powerful real estate marketing tool in India. It takes a buyer on a fully rendered, first-person journey through your project — towers, lobbies, apartments, amenities, and landscape — before a single brick has been laid.
+            The 3D architectural walkthrough video is the single most powerful
+            real estate marketing tool in India. It takes a buyer on a fully
+            rendered, first-person journey through your project — towers,
+            lobbies, apartments, amenities, and landscape — before a single
+            brick has been laid.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A professional 3D walkthrough video captures every material finish, lighting mood, view angle, and spatial proportion in cinematic quality. For pre-launch projects — where buyers must make decisions without seeing a physical product — it transforms uncertainty into confidence.
+            A professional 3D walkthrough video captures every material finish,
+            lighting mood, view angle, and spatial proportion in cinematic
+            quality. For pre-launch projects — where buyers must make decisions
+            without seeing a physical product — it transforms uncertainty into
+            confidence.
           </p>
           <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
@@ -2624,44 +3917,72 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
             <li>Sales office screens and presentation decks</li>
             <li>Channel partner and broker briefings</li>
           </ul>
-          <h3 className="text-xl font-bold text-black mb-3">What sets a great 3D walkthrough apart:</h3>
+          <h3 className="text-xl font-bold text-black mb-3">
+            What sets a great 3D walkthrough apart:
+          </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Cinematic camera movement, photo-real material rendering, accurate natural and artificial lighting, populated environments (people, cars, foliage), and a professional music soundtrack. Low-cost walkthroughs use template camera paths and generic textures — buyers notice the difference immediately.
+            Cinematic camera movement, photo-real material rendering, accurate
+            natural and artificial lighting, populated environments (people,
+            cars, foliage), and a professional music soundtrack. Low-cost
+            walkthroughs use template camera paths and generic textures — buyers
+            notice the difference immediately.
           </p>
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
             <p className="text-gray-800 text-sm">
-              <strong>Alliance Media Labs</strong> produces 3D walkthrough videos using Lumion, Unreal Engine, and 3ds Max V-Ray depending on project size and quality requirements. Our walkthroughs are optimised for both 4K screen display and compressed social delivery.
+              <strong>Alliance Media Labs</strong> produces 3D walkthrough
+              videos using Lumion, Unreal Engine, and 3ds Max V-Ray depending on
+              project size and quality requirements. Our walkthroughs are
+              optimised for both 4K screen display and compressed social
+              delivery.
             </p>
           </div>
           <Link
             href="/services/3d-walkthrough-video-company-india"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
-            Explore our 3D Walkthrough Video Service <i className="ri-arrow-right-line"></i>
+            Explore our 3D Walkthrough Video Service{" "}
+            <i className="ri-arrow-right-line"></i>
           </Link>
           <br />
           <Link
             href="/services/3d-walkthrough-video-company-india"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors mt-2"
           >
-            Why choose us as your 3D Walkthrough Video Company <i className="ri-arrow-right-line"></i>
+            Why choose us as your 3D Walkthrough Video Company{" "}
+            <i className="ri-arrow-right-line"></i>
           </Link>
         </section>
 
         {/* Type 2 */}
         <section id="type-2" className="mb-14">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">2</div>
-            <h2 className="text-3xl font-bold text-black">Aerial Drone Videos</h2>
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">
+              2
+            </div>
+            <h2 className="text-3xl font-bold text-black">
+              Aerial Drone Videos
+            </h2>
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
-            <img src="/images/services/drone-shoots/1.jpg" alt="Aerial drone video for real estate" className="w-full h-full object-cover" />
+            <img
+              src="/images/services/drone-shoots/1.jpg"
+              alt="Aerial drone video for real estate"
+              className="w-full h-full object-cover"
+            />
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Aerial drone videography gives buyers the one view that no other format can provide: the bird&apos;s-eye perspective of your project in its real geographic context. Location is one of the top three purchase drivers in Indian real estate — and drone video is the most convincing way to demonstrate it.
+            Aerial drone videography gives buyers the one view that no other
+            format can provide: the bird&apos;s-eye perspective of your project
+            in its real geographic context. Location is one of the top three
+            purchase drivers in Indian real estate — and drone video is the most
+            convincing way to demonstrate it.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A well-executed drone video shows proximity to highways, metro stations, schools, business parks, and city landmarks. It reveals the scale of the project, the quality of surrounding development, the depth of landscaping, and the view lines from upper floors. This is context that no 3D render or floor plan can convey.
+            A well-executed drone video shows proximity to highways, metro
+            stations, schools, business parks, and city landmarks. It reveals
+            the scale of the project, the quality of surrounding development,
+            the depth of landscaping, and the view lines from upper floors. This
+            is context that no 3D render or floor plan can convey.
           </p>
           <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
@@ -2671,37 +3992,64 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
             <li>High-impact social media and YouTube content</li>
             <li>Investor and channel partner presentations</li>
           </ul>
-          <h3 className="text-xl font-bold text-black mb-3">Regulatory note:</h3>
+          <h3 className="text-xl font-bold text-black mb-3">
+            Regulatory note:
+          </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Commercial drone operations in India require DGCA Remote Pilot Licence (RPL) certification and site-specific permissions for many urban locations. Always verify that your drone vendor is DGCA-compliant — using an unlicensed operator exposes you to legal risk and flight cancellations.
+            Commercial drone operations in India require DGCA Remote Pilot
+            Licence (RPL) certification and site-specific permissions for many
+            urban locations. Always verify that your drone vendor is
+            DGCA-compliant — using an unlicensed operator exposes you to legal
+            risk and flight cancellations.
           </p>
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
             <p className="text-gray-800 text-sm">
-              Alliance Media Labs operates DGCA-licensed pilots with 4K and 6K cinema drones across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, and Gurugram. We handle all airspace permissions and provide colour-graded, music-tracked deliverables.
+              Alliance Media Labs operates DGCA-licensed pilots with 4K and 6K
+              cinema drones across Mumbai, Delhi NCR, Bangalore, Pune,
+              Hyderabad, and Gurugram. We handle all airspace permissions and
+              provide colour-graded, music-tracked deliverables.
             </p>
           </div>
           <Link
             href="/services/drone-shoots"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
-            Explore our Drone Shoot Service <i className="ri-arrow-right-line"></i>
+            Explore our Drone Shoot Service{" "}
+            <i className="ri-arrow-right-line"></i>
           </Link>
         </section>
 
         {/* Type 3 */}
         <section id="type-3" className="mb-14">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">3</div>
-            <h2 className="text-3xl font-bold text-black">Construction Update Videos</h2>
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">
+              3
+            </div>
+            <h2 className="text-3xl font-bold text-black">
+              Construction Update Videos
+            </h2>
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
-            <img src="/images/services/construction-update-videos/1.jpg" alt="Construction update video RERA real estate" className="w-full h-full object-cover" />
+            <img
+              src="/images/services/construction-update-videos/1.jpg"
+              alt="Construction update video RERA real estate"
+              className="w-full h-full object-cover"
+            />
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Construction update videos are one of the most underutilised assets in Indian real estate marketing — and one of the most powerful for post-booking buyer retention and RERA compliance. These are regular video dispatches — typically monthly or quarterly — showing actual on-site construction progress, delivered directly to buyers who have already booked.
+            Construction update videos are one of the most underutilised assets
+            in Indian real estate marketing — and one of the most powerful for
+            post-booking buyer retention and RERA compliance. These are regular
+            video dispatches — typically monthly or quarterly — showing actual
+            on-site construction progress, delivered directly to buyers who have
+            already booked.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            In an environment where project delays and delivery uncertainty are among the biggest buyer anxieties, a professionally produced construction update video does something no email or PDF can: it shows buyers that their project is physically advancing, their money is being deployed, and the developer is accountable.
+            In an environment where project delays and delivery uncertainty are
+            among the biggest buyer anxieties, a professionally produced
+            construction update video does something no email or PDF can: it
+            shows buyers that their project is physically advancing, their money
+            is being deployed, and the developer is accountable.
           </p>
           <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
@@ -2713,35 +4061,59 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
           </ul>
           <h3 className="text-xl font-bold text-black mb-3">Format options:</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Ground-level walkaround footage with voiceover narration; drone aerials showing slab progress; timelapse sequences; project manager interviews; combination of live site footage with progress-against-plan graphics overlay.
+            Ground-level walkaround footage with voiceover narration; drone
+            aerials showing slab progress; timelapse sequences; project manager
+            interviews; combination of live site footage with
+            progress-against-plan graphics overlay.
           </p>
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
             <p className="text-gray-800 text-sm">
-              Alliance Media Labs offers retainer-based construction video packages — monthly site visits, filming, editing, and delivery within 5 business days — making it the most hassle-free way to maintain buyer communication at scale.
+              Alliance Media Labs offers retainer-based construction video
+              packages — monthly site visits, filming, editing, and delivery
+              within 5 business days — making it the most hassle-free way to
+              maintain buyer communication at scale.
             </p>
           </div>
           <Link
             href="/construction-update-videos"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
-            Explore our Construction Update Video Service <i className="ri-arrow-right-line"></i>
+            Explore our Construction Update Video Service{" "}
+            <i className="ri-arrow-right-line"></i>
           </Link>
         </section>
 
         {/* Type 4 */}
         <section id="type-4" className="mb-14">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">4</div>
-            <h2 className="text-3xl font-bold text-black">Virtual Reality (VR) Tours</h2>
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">
+              4
+            </div>
+            <h2 className="text-3xl font-bold text-black">
+              Virtual Reality (VR) Tours
+            </h2>
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
-            <img src="/images/services/virtual-reality-tours/1.jpg" alt="Virtual reality tour for real estate India" className="w-full h-full object-cover" />
+            <img
+              src="/images/services/virtual-reality-tours/1.jpg"
+              alt="Virtual reality tour for real estate India"
+              className="w-full h-full object-cover"
+            />
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A virtual reality tour allows buyers to physically step inside your project — using a VR headset or a 360° browser experience — and explore it in full spatial immersion. Unlike a linear walkthrough video, a VR tour is interactive: the buyer controls where they go, what they look at, and how long they stay in each space.
+            A virtual reality tour allows buyers to physically step inside your
+            project — using a VR headset or a 360° browser experience — and
+            explore it in full spatial immersion. Unlike a linear walkthrough
+            video, a VR tour is interactive: the buyer controls where they go,
+            what they look at, and how long they stay in each space.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            This interactivity is what makes VR tours uniquely powerful for high-ticket real estate. When a buyer can stand in the master bedroom of a ₹4 Cr apartment, look out of the window at a rendered view, and turn around to examine the wardrobes and ceiling height — the purchase decision accelerates dramatically. They are not watching someone else&apos;s experience; they are having their own.
+            This interactivity is what makes VR tours uniquely powerful for
+            high-ticket real estate. When a buyer can stand in the master
+            bedroom of a ₹4 Cr apartment, look out of the window at a rendered
+            view, and turn around to examine the wardrobes and ceiling height —
+            the purchase decision accelerates dramatically. They are not
+            watching someone else&apos;s experience; they are having their own.
           </p>
           <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
@@ -2751,37 +4123,63 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
             <li>Virtual property expos and online home fairs</li>
             <li>Luxury hospitality and resort properties</li>
           </ul>
-          <h3 className="text-xl font-bold text-black mb-3">Deployment options:</h3>
+          <h3 className="text-xl font-bold text-black mb-3">
+            Deployment options:
+          </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Standalone VR headset (Oculus Quest 2/3) for sales office use; web-based 360° tour embeddable on your website and shared via link for remote buyers; custom-branded kiosk installations for property expos.
+            Standalone VR headset (Oculus Quest 2/3) for sales office use;
+            web-based 360° tour embeddable on your website and shared via link
+            for remote buyers; custom-branded kiosk installations for property
+            expos.
           </p>
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
             <p className="text-gray-800 text-sm">
-              Alliance Media Labs builds VR tours in Unreal Engine and custom WebGL environments, optimised for headset, browser, and kiosk deployment. All experiences are fully branded and include hotspot navigation, unit selector overlays, and lead capture integration.
+              Alliance Media Labs builds VR tours in Unreal Engine and custom
+              WebGL environments, optimised for headset, browser, and kiosk
+              deployment. All experiences are fully branded and include hotspot
+              navigation, unit selector overlays, and lead capture integration.
             </p>
           </div>
           <Link
             href="/services/virtual-reality-tours"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
-            Explore our Virtual Reality Tour Service <i className="ri-arrow-right-line"></i>
+            Explore our Virtual Reality Tour Service{" "}
+            <i className="ri-arrow-right-line"></i>
           </Link>
         </section>
 
         {/* Type 5 */}
         <section id="type-5" className="mb-14">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">5</div>
-            <h2 className="text-3xl font-bold text-black">Interior Cinematic Walkthroughs</h2>
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">
+              5
+            </div>
+            <h2 className="text-3xl font-bold text-black">
+              Interior Cinematic Walkthroughs
+            </h2>
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
-            <img src="/images/services/interior-cinematic-walkthrough/1.jpg" alt="Interior cinematic walkthrough real estate" className="w-full h-full object-cover" />
+            <img
+              src="/images/portfolio/19.jpg"
+              alt="Interior cinematic walkthrough real estate"
+              className="w-full h-full object-cover"
+            />
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Where a 3D architectural walkthrough covers the entire project — towers, landscape, amenities — an interior cinematic walkthrough goes deep inside a single unit. It&apos;s a room-by-room, surface-by-surface showcase of your design intent: materials, finishes, furniture, lighting, and atmosphere, rendered in film-quality visual fidelity.
+            Where a 3D architectural walkthrough covers the entire project —
+            towers, landscape, amenities — an interior cinematic walkthrough
+            goes deep inside a single unit. It&apos;s a room-by-room,
+            surface-by-surface showcase of your design intent: materials,
+            finishes, furniture, lighting, and atmosphere, rendered in
+            film-quality visual fidelity.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Think of it as a virtual show flat. When physical show flats are too expensive to build at launch — or when you want to showcase multiple configuration types (2BHK, 3BHK, duplex, penthouse) simultaneously — an interior cinematic walkthrough delivers every finish option in a single, shareable video asset.
+            Think of it as a virtual show flat. When physical show flats are too
+            expensive to build at launch — or when you want to showcase multiple
+            configuration types (2BHK, 3BHK, duplex, penthouse) simultaneously —
+            an interior cinematic walkthrough delivers every finish option in a
+            single, shareable video asset.
           </p>
           <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
@@ -2791,79 +4189,142 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
             <li>Premium Instagram content and YouTube long-form</li>
             <li>Interior design specification presentations to buyers</li>
           </ul>
-          <h3 className="text-xl font-bold text-black mb-3">Distinguishing features:</h3>
+          <h3 className="text-xl font-bold text-black mb-3">
+            Distinguishing features:
+          </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Slow, deliberate camera movement. Extreme close-up of material details — stone veining, wood grain, fabric texture. Transitional lighting from day to evening. Stylised composition and colour grade consistent with your brand identity. Background ambience sound design. Duration typically 90 seconds to 3 minutes.
+            Slow, deliberate camera movement. Extreme close-up of material
+            details — stone veining, wood grain, fabric texture. Transitional
+            lighting from day to evening. Stylised composition and colour grade
+            consistent with your brand identity. Background ambience sound
+            design. Duration typically 90 seconds to 3 minutes.
           </p>
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
             <p className="text-gray-800 text-sm">
-              Alliance Media Labs&apos; interior cinematic walkthroughs are produced using 3ds Max with V-Ray or Corona render engines, post-processed in DaVinci Resolve for professional colour grading. Each project is storyboarded before rendering to ensure every frame serves the sales narrative.
+              Alliance Media Labs&apos; interior cinematic walkthroughs are
+              produced using 3ds Max with V-Ray or Corona render engines,
+              post-processed in DaVinci Resolve for professional colour grading.
+              Each project is storyboarded before rendering to ensure every
+              frame serves the sales narrative.
             </p>
           </div>
           <Link
             href="/services/interior-cinematic-walkthrough"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
-            Explore our Interior Cinematic Walkthrough Service <i className="ri-arrow-right-line"></i>
+            Explore our Interior Cinematic Walkthrough Service{" "}
+            <i className="ri-arrow-right-line"></i>
           </Link>
         </section>
 
         {/* Type 6 */}
         <section id="type-6" className="mb-14">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">6</div>
-            <h2 className="text-3xl font-bold text-black">Location &amp; Route Videos</h2>
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">
+              6
+            </div>
+            <h2 className="text-3xl font-bold text-black">
+              Location &amp; Route Videos
+            </h2>
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
-            <img src="/images/services/route-videos/1.jpg" alt="Location route video real estate marketing" className="w-full h-full object-cover" />
+            <img
+              src="/images/services/route-videos/1.jpg"
+              alt="Location route video real estate marketing"
+              className="w-full h-full object-cover"
+            />
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Location videos and route videos bridge the gap between your project and the world around it. A location video cinematically captures the neighbourhood — nearby landmarks, parks, markets, schools, hospitals, and lifestyle amenities — making the case for why your project&apos;s address is a genuine lifestyle upgrade.
+            Location videos and route videos bridge the gap between your project
+            and the world around it. A location video cinematically captures the
+            neighbourhood — nearby landmarks, parks, markets, schools,
+            hospitals, and lifestyle amenities — making the case for why your
+            project&apos;s address is a genuine lifestyle upgrade.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A route video specifically demonstrates the daily commute from your project to key destinations — office parks, metro stations, city centres, airports. For connectivity-driven buyers (particularly in NCR, Pune, and Bangalore tech corridors), proving a commute takes 20 minutes rather than 45 can be the deciding factor.
+            A route video specifically demonstrates the daily commute from your
+            project to key destinations — office parks, metro stations, city
+            centres, airports. For connectivity-driven buyers (particularly in
+            NCR, Pune, and Bangalore tech corridors), proving a commute takes 20
+            minutes rather than 45 can be the deciding factor.
           </p>
           <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
-            <li>Peripheral and emerging location projects where connectivity is a key objection</li>
-            <li>Lifestyle-led premium projects (hill stations, resort communities)</li>
+            <li>
+              Peripheral and emerging location projects where connectivity is a
+              key objection
+            </li>
+            <li>
+              Lifestyle-led premium projects (hill stations, resort communities)
+            </li>
             <li>City fringe developments targeting metro commuters</li>
             <li>Social media storytelling content alongside product visuals</li>
-            <li>Micro-market awareness for channel partners unfamiliar with the location</li>
+            <li>
+              Micro-market awareness for channel partners unfamiliar with the
+              location
+            </li>
           </ul>
-          <h3 className="text-xl font-bold text-black mb-3">Production approach:</h3>
+          <h3 className="text-xl font-bold text-black mb-3">
+            Production approach:
+          </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Combination of ground-level live cinematography, drone aerials, and motion graphics overlays showing distances and travel times. Voice narration or upbeat music depending on tone. Duration: 60–120 seconds for social; 2–4 minutes for full sales presentation.
+            Combination of ground-level live cinematography, drone aerials, and
+            motion graphics overlays showing distances and travel times. Voice
+            narration or upbeat music depending on tone. Duration: 60–120
+            seconds for social; 2–4 minutes for full sales presentation.
           </p>
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
             <p className="text-gray-800 text-sm">
-              Alliance Media Labs produces route and location AV shoots across India. Our location videos are storyboarded around your project&apos;s specific sales narrative — not generic real estate b-roll templates.
+              Alliance Media Labs produces route and location AV shoots across
+              India. Our location videos are storyboarded around your
+              project&apos;s specific sales narrative — not generic real estate
+              b-roll templates.
             </p>
           </div>
           <Link
             href="/route-videos"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
-            Explore our Route &amp; Location Video Service <i className="ri-arrow-right-line"></i>
+            Explore our Route &amp; Location Video Service{" "}
+            <i className="ri-arrow-right-line"></i>
           </Link>
         </section>
 
         {/* Type 7 */}
         <section id="type-7" className="mb-14">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">7</div>
-            <h2 className="text-3xl font-bold text-black">3D Renders &amp; Isometric Visuals</h2>
+            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black text-xl flex-shrink-0">
+              7
+            </div>
+            <h2 className="text-3xl font-bold text-black">
+              3D Renders &amp; Isometric Visuals
+            </h2>
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
-            <img src="/images/services/3d-renders-isometrics/1.jpg" alt="3D renders and isometric visuals real estate" className="w-full h-full object-cover" />
+            <img
+              src="/images/services/3d-renders-isometrics/1.jpg"
+              alt="3D renders and isometric visuals real estate"
+              className="w-full h-full object-cover"
+            />
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            While not video in the traditional sense, 3D architectural renders and isometric visuals are essential components of any real estate marketing content stack. They are the still images — the hero visuals — that appear across every digital and print touchpoint: brochures, hoardings, newspaper ads, social carousels, website landing pages, and investor decks.
+            While not video in the traditional sense, 3D architectural renders
+            and isometric visuals are essential components of any real estate
+            marketing content stack. They are the still images — the hero
+            visuals — that appear across every digital and print touchpoint:
+            brochures, hoardings, newspaper ads, social carousels, website
+            landing pages, and investor decks.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Isometric 3D views — the &quot;elevated&quot; perspective that shows the entire master plan or complex from a 45° angle — are particularly powerful for township and large mixed-use projects. They allow buyers to instantly comprehend the full scale, layout, and density of a development in a single visual.
+            Isometric 3D views — the &quot;elevated&quot; perspective that shows
+            the entire master plan or complex from a 45° angle — are
+            particularly powerful for township and large mixed-use projects.
+            They allow buyers to instantly comprehend the full scale, layout,
+            and density of a development in a single visual.
           </p>
-          <h3 className="text-xl font-bold text-black mb-3">Types of 3D render deliverables:</h3>
+          <h3 className="text-xl font-bold text-black mb-3">
+            Types of 3D render deliverables:
+          </h3>
           <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
             <li>Exterior elevation renders (building facade, landscaping)</li>
             <li>Aerial perspective / master plan views</li>
@@ -2874,127 +4335,220 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
             <li>Night view and golden-hour renders</li>
           </ul>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Every video-based <strong>real estate promotional video</strong> campaign needs a bank of 3D renders as supporting visual assets. The renders feed your digital ads, website hero sections, and brochure design — making the overall marketing package cohesive and visually compelling across every channel.
+            Every video-based <strong>real estate promotional video</strong>{" "}
+            campaign needs a bank of 3D renders as supporting visual assets. The
+            renders feed your digital ads, website hero sections, and brochure
+            design — making the overall marketing package cohesive and visually
+            compelling across every channel.
           </p>
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
             <p className="text-gray-800 text-sm">
-              Alliance Media Labs produces architectural renders in 3ds Max with V-Ray and Corona, delivering images at up to 8K resolution suitable for large-format hoarding printing. All renders include multiple camera angles and a day/evening variant.
+              Alliance Media Labs produces architectural renders in 3ds Max with
+              V-Ray and Corona, delivering images at up to 8K resolution
+              suitable for large-format hoarding printing. All renders include
+              multiple camera angles and a day/evening variant.
             </p>
           </div>
           <Link
             href="/services/3d-renders-isometrics"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
-            Explore our 3D Renders &amp; Isometrics Service <i className="ri-arrow-right-line"></i>
+            Explore our 3D Renders &amp; Isometrics Service{" "}
+            <i className="ri-arrow-right-line"></i>
           </Link>
         </section>
 
         {/* Bonus: Interactive 3D */}
         <section className="mb-14 bg-gray-50 rounded-2xl p-8">
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center font-bold text-yellow-400 text-sm flex-shrink-0">+1</div>
-            <h2 className="text-2xl font-bold text-black">Bonus: Interactive 3D Tools — The Next Frontier</h2>
+            <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center font-bold text-yellow-400 text-sm flex-shrink-0">
+              +1
+            </div>
+            <h2 className="text-2xl font-bold text-black">
+              Bonus: Interactive 3D Tools — The Next Frontier
+            </h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Beyond the seven core video formats lies a growing category of interactive 3D digital tools — unit configurators, master plan selectors, and embedded 3D viewers hosted directly on your project website. These allow buyers to select their preferred unit from the master plan, configure their interior finish packages, and explore floor plates interactively — all from a browser or tablet in your sales office.
+            Beyond the seven core video formats lies a growing category of
+            interactive 3D digital tools — unit configurators, master plan
+            selectors, and embedded 3D viewers hosted directly on your project
+            website. These allow buyers to select their preferred unit from the
+            master plan, configure their interior finish packages, and explore
+            floor plates interactively — all from a browser or tablet in your
+            sales office.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Interactive tools extend the life of your visual content well beyond launch. They live on your website permanently, collecting lead data from every buyer who interacts with them. They reduce the burden on your sales team for routine product navigation, freeing them for higher-value closing conversations.
+            Interactive tools extend the life of your visual content well beyond
+            launch. They live on your website permanently, collecting lead data
+            from every buyer who interacts with them. They reduce the burden on
+            your sales team for routine product navigation, freeing them for
+            higher-value closing conversations.
           </p>
           <Link
             href="/services/interactive-3d-tools"
             className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors"
           >
-            Explore our Interactive 3D Tools <i className="ri-arrow-right-line"></i>
+            Explore our Interactive 3D Tools{" "}
+            <i className="ri-arrow-right-line"></i>
           </Link>
         </section>
 
         {/* Mix Section */}
         <section id="mix" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">Building the Right Real Estate Video Marketing Mix</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Building the Right Real Estate Video Marketing Mix
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Not every project needs all seven types. Budget, project scale, target buyer, and timeline all influence which formats to prioritise. Here&apos;s how to think about it:
+            Not every project needs all seven types. Budget, project scale,
+            target buyer, and timeline all influence which formats to
+            prioritise. Here&apos;s how to think about it:
           </p>
 
           <div className="space-y-6">
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-3">Pre-Launch (0–3 months before RERA registration)</h3>
-              <p className="text-gray-700 leading-relaxed mb-2"><strong>Priority formats:</strong> 3D walkthrough + 3D renders + drone video</p>
-              <p className="text-gray-700 leading-relaxed text-sm">Create desire and anticipation before the project is publicly announced. 3D content lets you generate interest and collect pre-registrations without relying on physical assets.</p>
+              <h3 className="text-xl font-bold text-black mb-3">
+                Pre-Launch (0–3 months before RERA registration)
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-2">
+                <strong>Priority formats:</strong> 3D walkthrough + 3D renders +
+                drone video
+              </p>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                Create desire and anticipation before the project is publicly
+                announced. 3D content lets you generate interest and collect
+                pre-registrations without relying on physical assets.
+              </p>
             </div>
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-3">Launch Phase (Month 1–6)</h3>
-              <p className="text-gray-700 leading-relaxed mb-2"><strong>Priority formats:</strong> 3D walkthrough + VR tour + interior cinematic + location video</p>
-              <p className="text-gray-700 leading-relaxed text-sm">Maximum immersive impact for sales office visits and digital campaigns. VR in the sales office dramatically increases booking-to-visit conversion. Location video handles the connectivity objection proactively.</p>
+              <h3 className="text-xl font-bold text-black mb-3">
+                Launch Phase (Month 1–6)
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-2">
+                <strong>Priority formats:</strong> 3D walkthrough + VR tour +
+                interior cinematic + location video
+              </p>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                Maximum immersive impact for sales office visits and digital
+                campaigns. VR in the sales office dramatically increases
+                booking-to-visit conversion. Location video handles the
+                connectivity objection proactively.
+              </p>
             </div>
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-3">Active Sales Phase (Month 6–24)</h3>
-              <p className="text-gray-700 leading-relaxed mb-2"><strong>Priority formats:</strong> Construction update videos + 3D renders (seasonal refreshes) + interactive 3D tools</p>
-              <p className="text-gray-700 leading-relaxed text-sm">Keep booked buyers engaged, manage referral marketing, and maintain digital presence as the project progresses physically.</p>
+              <h3 className="text-xl font-bold text-black mb-3">
+                Active Sales Phase (Month 6–24)
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-2">
+                <strong>Priority formats:</strong> Construction update videos +
+                3D renders (seasonal refreshes) + interactive 3D tools
+              </p>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                Keep booked buyers engaged, manage referral marketing, and
+                maintain digital presence as the project progresses physically.
+              </p>
             </div>
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-black mb-3">Luxury / High-Ticket Projects (₹2 Cr+)</h3>
-              <p className="text-gray-700 leading-relaxed mb-2"><strong>All seven formats + interactive tools</strong></p>
-              <p className="text-gray-700 leading-relaxed text-sm">Premium buyers expect premium content. Every touchpoint — from the first digital ad to the sales office experience — must reinforce quality. Budget for the full stack and treat the visual content as a core cost of sale, not a marketing overhead.</p>
+              <h3 className="text-xl font-bold text-black mb-3">
+                Luxury / High-Ticket Projects (₹2 Cr+)
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-2">
+                <strong>All seven formats + interactive tools</strong>
+              </p>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                Premium buyers expect premium content. Every touchpoint — from
+                the first digital ad to the sales office experience — must
+                reinforce quality. Budget for the full stack and treat the
+                visual content as a core cost of sale, not a marketing overhead.
+              </p>
             </div>
           </div>
         </section>
 
         {/* Comparison Table */}
         <section id="comparison" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-6">Comparison Table — Which Video Type Does What?</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Comparison Table — Which Video Type Does What?
+          </h2>
           <div className="overflow-x-auto rounded-xl border border-gray-200">
             <table className="w-full text-sm">
               <thead className="bg-black text-white">
                 <tr>
-                  <th className="px-4 py-3 text-left font-semibold">Video Type</th>
-                  <th className="px-4 py-3 text-left font-semibold">Sales Stage</th>
-                  <th className="px-4 py-3 text-left font-semibold">Primary Use</th>
-                  <th className="px-4 py-3 text-left font-semibold">Best Channel</th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Video Type
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Sales Stage
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Primary Use
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Best Channel
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">3D Walkthrough</td>
-                  <td className="px-4 py-3 text-gray-700">Pre-launch + Launch</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Pre-launch + Launch
+                  </td>
                   <td className="px-4 py-3 text-gray-700">Create desire</td>
-                  <td className="px-4 py-3 text-gray-700">YouTube, Social, Sales Office</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    YouTube, Social, Sales Office
+                  </td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-4 py-3 font-medium">Drone Aerial</td>
                   <td className="px-4 py-3 text-gray-700">Launch + Active</td>
                   <td className="px-4 py-3 text-gray-700">Prove location</td>
-                  <td className="px-4 py-3 text-gray-700">Social, Digital Ads, Site</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Social, Digital Ads, Site
+                  </td>
                 </tr>
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">Construction Update</td>
                   <td className="px-4 py-3 text-gray-700">Active Sales</td>
                   <td className="px-4 py-3 text-gray-700">Build trust</td>
-                  <td className="px-4 py-3 text-gray-700">Email, WhatsApp, Buyer Portal</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Email, WhatsApp, Buyer Portal
+                  </td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-4 py-3 font-medium">VR Tour</td>
                   <td className="px-4 py-3 text-gray-700">Launch</td>
-                  <td className="px-4 py-3 text-gray-700">Immersive decision</td>
-                  <td className="px-4 py-3 text-gray-700">Sales Office, NRI Roadshows</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Immersive decision
+                  </td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Sales Office, NRI Roadshows
+                  </td>
                 </tr>
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">Interior Cinematic</td>
                   <td className="px-4 py-3 text-gray-700">Launch</td>
                   <td className="px-4 py-3 text-gray-700">Showcase finishes</td>
-                  <td className="px-4 py-3 text-gray-700">Instagram, Sales Office, Brochure</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Instagram, Sales Office, Brochure
+                  </td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-4 py-3 font-medium">Location / Route</td>
-                  <td className="px-4 py-3 text-gray-700">Pre-launch + Launch</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Pre-launch + Launch
+                  </td>
                   <td className="px-4 py-3 text-gray-700">Handle objections</td>
-                  <td className="px-4 py-3 text-gray-700">Digital Ads, Broker Decks</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Digital Ads, Broker Decks
+                  </td>
                 </tr>
                 <tr className="bg-white">
                   <td className="px-4 py-3 font-medium">3D Renders</td>
                   <td className="px-4 py-3 text-gray-700">All stages</td>
                   <td className="px-4 py-3 text-gray-700">Visual identity</td>
-                  <td className="px-4 py-3 text-gray-700">Print, Hoardings, Website, Ads</td>
+                  <td className="px-4 py-3 text-gray-700">
+                    Print, Hoardings, Website, Ads
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -3003,41 +4557,82 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
 
         {/* FAQ */}
         <section id="faq" className="mb-14">
-          <h2 className="text-3xl font-bold text-black mb-8">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-black mb-8">
+            Frequently Asked Questions
+          </h2>
 
           <div className="space-y-6">
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">How much does real estate video production cost in India?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                How much does real estate video production cost in India?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Costs vary widely by format and quality tier. A professional 3D walkthrough video typically ranges from ₹80,000 to ₹3,00,000+ depending on project size and render quality. Drone videos start from ₹25,000 for a basic half-day shoot. Construction update video retainer packages start from ₹15,000 per month. VR tours range from ₹1,50,000 to ₹5,00,000+ depending on scope and deployment. Contact Alliance Media Labs for a detailed quote tailored to your project.
+                Costs vary widely by format and quality tier. A professional 3D
+                walkthrough video typically ranges from ₹80,000 to ₹3,00,000+
+                depending on project size and render quality. Drone videos start
+                from ₹25,000 for a basic half-day shoot. Construction update
+                video retainer packages start from ₹15,000 per month. VR tours
+                range from ₹1,50,000 to ₹5,00,000+ depending on scope and
+                deployment. Contact Alliance Media Labs for a detailed quote
+                tailored to your project.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">How long does it take to produce a 3D walkthrough video?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                How long does it take to produce a 3D walkthrough video?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Standard production timeline is 15–25 working days from approved drawings to final delivery, depending on project complexity and number of revision rounds. Fast-track production (7–12 days) is available at a premium for urgent launch requirements. VR tours typically take 25–40 days. Construction videos can be delivered within 5 business days of the site shoot.
+                Standard production timeline is 15–25 working days from approved
+                drawings to final delivery, depending on project complexity and
+                number of revision rounds. Fast-track production (7–12 days) is
+                available at a premium for urgent launch requirements. VR tours
+                typically take 25–40 days. Construction videos can be delivered
+                within 5 business days of the site shoot.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">Which type of real estate marketing video gives the best ROI?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Which type of real estate marketing video gives the best ROI?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                For most Indian developers, a professional 3D walkthrough video delivers the highest ROI because it is used across the longest span of the sales cycle and the widest range of channels. It feeds your digital ads, your website, your broker presentations, and your sales office screen simultaneously. For NRI-focused launches, combining a 3D walkthrough with a VR tour delivers the strongest conversion results.
+                For most Indian developers, a professional 3D walkthrough video
+                delivers the highest ROI because it is used across the longest
+                span of the sales cycle and the widest range of channels. It
+                feeds your digital ads, your website, your broker presentations,
+                and your sales office screen simultaneously. For NRI-focused
+                launches, combining a 3D walkthrough with a VR tour delivers the
+                strongest conversion results.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">Can you handle the full real estate promotional video package — all types?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Can you handle the full real estate promotional video package —
+                all types?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Yes. Alliance Media Labs is a full-service real estate video production company — we produce all seven video types in-house, alongside 3D renders, interactive tools, and scale models. Working with a single vendor means consistent visual identity across all content, streamlined project management, and better cost efficiency through package bundling.
+                Yes. Alliance Media Labs is a full-service real estate video
+                production company — we produce all seven video types in-house,
+                alongside 3D renders, interactive tools, and scale models.
+                Working with a single vendor means consistent visual identity
+                across all content, streamlined project management, and better
+                cost efficiency through package bundling.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">Do you work with developers outside Mumbai and Delhi?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Do you work with developers outside Mumbai and Delhi?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Yes. We serve real estate developers across India — Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, Chennai, Kolkata, Ahmedabad, and Tier 1 and 2 cities. 3D and interactive content is produced remotely from your drawings; drone and live cinematography requires physical site visits which we coordinate and travel for.
+                Yes. We serve real estate developers across India — Mumbai,
+                Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, Chennai,
+                Kolkata, Ahmedabad, and Tier 1 and 2 cities. 3D and interactive
+                content is produced remotely from your drawings; drone and live
+                cinematography requires physical site visits which we coordinate
+                and travel for.
               </p>
             </div>
           </div>
@@ -3045,15 +4640,33 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
 
         {/* Related Posts */}
         <div className="border-t border-gray-100 pt-12 mb-12">
-          <h3 className="text-xl font-bold text-black mb-6">Related Articles</h3>
+          <h3 className="text-xl font-bold text-black mb-6">
+            Related Articles
+          </h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/3d-walkthrough-video-service" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">3D Walkthrough</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">The Ultimate Guide to 3D Walkthrough Video Services for Real Estate</h4>
+            <Link
+              href="/blog/3d-walkthrough-video-service"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                3D Walkthrough
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">
+                The Ultimate Guide to 3D Walkthrough Video Services for Real
+                Estate
+              </h4>
             </Link>
-            <Link href="/blog/real-estate-drone-photography-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Drone Photography</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">Real Estate Drone Photography in India: The Complete Guide (2026)</h4>
+            <Link
+              href="/blog/real-estate-drone-photography-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Drone Photography
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">
+                Real Estate Drone Photography in India: The Complete Guide
+                (2026)
+              </h4>
             </Link>
           </div>
         </div>
@@ -3074,7 +4687,8 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
             Ready to Build Your Real Estate Video Marketing Stack?
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Get a custom quote for the video formats that match your project, timeline, and buyer profile.
+            Get a custom quote for the video formats that match your project,
+            timeline, and buyer profile.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -3101,7 +4715,11 @@ function RealEstateMarketingVideosArticle({ post }: { post: ReturnType<typeof ge
 /* ─────────────────────────────────────────────────────────────
    BEST ARCHITECTURAL SCALE MODEL COMPANY — B2B GUIDE
    ───────────────────────────────────────────────────────────── */
-function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function BestScaleModelCompanyArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -3127,7 +4745,9 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
           <div className="flex items-center gap-4 text-sm text-gray-400">
             <span>{post.author}</span>
             <span>•</span>
@@ -3138,11 +4758,13 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
 
       {/* Body */}
       <div className="container mx-auto px-6 max-w-4xl py-16">
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium"
+            >
               {tag}
             </span>
           ))}
@@ -3151,103 +4773,224 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
         {/* Intro */}
         <section className="mb-12">
           <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-            When a real estate developer, infrastructure firm, or government agency begins shortlisting vendors for an architectural scale model, the search almost always starts the same way: a Google query for the <strong>best architectural scale model company in India</strong>, a round of referrals from peers, and a series of portfolio reviews. The problem is that most vendors look similar at first glance — similar websites, similar quoted prices, similar promises about quality and timelines.
+            When a real estate developer, infrastructure firm, or government
+            agency begins shortlisting vendors for an architectural scale model,
+            the search almost always starts the same way: a Google query for the{" "}
+            <strong>best architectural scale model company in India</strong>, a
+            round of referrals from peers, and a series of portfolio reviews.
+            The problem is that most vendors look similar at first glance —
+            similar websites, similar quoted prices, similar promises about
+            quality and timelines.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The difference only becomes visible after you&apos;ve commissioned the model. By then, a poor choice means a delayed project launch, a model that underwhelms in the sales office, or a vendor who disappears after delivery when you need a repair or an update.
+            The difference only becomes visible after you&apos;ve commissioned
+            the model. By then, a poor choice means a delayed project launch, a
+            model that underwhelms in the sales office, or a vendor who
+            disappears after delivery when you need a repair or an update.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This guide gives project heads, marketing directors, and procurement teams a structured framework for evaluating <strong>architectural scale model companies in India</strong> — so you choose right the first time. We&apos;ll cover the seven non-negotiable criteria, the red flags that predict problems, and what a professional engagement actually looks like from brief to delivery.
+            This guide gives project heads, marketing directors, and procurement
+            teams a structured framework for evaluating{" "}
+            <strong>architectural scale model companies in India</strong> — so
+            you choose right the first time. We&apos;ll cover the seven
+            non-negotiable criteria, the red flags that predict problems, and
+            what a professional engagement actually looks like from brief to
+            delivery.
           </p>
         </section>
 
         {/* Section 1 — Why it matters */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">Why Choosing the Right Scale Model Company Directly Affects Your Sales</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            Why Choosing the Right Scale Model Company Directly Affects Your
+            Sales
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            An architectural scale model is not a commodity purchase. It will sit at the centre of your sales office — the first thing every prospective buyer sees, the visual anchor of every sales presentation, and the physical manifestation of your brand quality before a single apartment is handed over.
+            An architectural scale model is not a commodity purchase. It will
+            sit at the centre of your sales office — the first thing every
+            prospective buyer sees, the visual anchor of every sales
+            presentation, and the physical manifestation of your brand quality
+            before a single apartment is handed over.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A premium model from the <strong>best architectural model maker</strong> creates immediate credibility: it signals to buyers that the developer is serious, solvent, and committed to quality. A poorly executed model does the opposite — it raises doubts about the project itself, regardless of how strong the underlying design or location actually is.
+            A premium model from the{" "}
+            <strong>best architectural model maker</strong> creates immediate
+            credibility: it signals to buyers that the developer is serious,
+            solvent, and committed to quality. A poorly executed model does the
+            opposite — it raises doubts about the project itself, regardless of
+            how strong the underlying design or location actually is.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            For high-ticket launches (₹2 Cr+ per unit), the model is often the single most cost-effective marketing investment in the entire budget. The right scale model company turns it into a 24-month sales asset. The wrong one turns it into a liability you have to explain away.
+            For high-ticket launches (₹2 Cr+ per unit), the model is often the
+            single most cost-effective marketing investment in the entire
+            budget. The right scale model company turns it into a 24-month sales
+            asset. The wrong one turns it into a liability you have to explain
+            away.
           </p>
         </section>
 
         {/* Section 2 — 7 Criteria */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">7 Criteria to Evaluate Every Architectural Scale Model Company</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            7 Criteria to Evaluate Every Architectural Scale Model Company
+          </h2>
 
           <div className="space-y-6">
-
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">1. End-to-End In-House Production</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                1. End-to-End In-House Production
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                The best <strong>architectural scale model companies</strong> control the entire production chain internally — digital modelling, CNC cutting, laser etching, hand-finishing, painting, electrical integration, and quality control. Vendors who outsource even one stage introduce quality gaps and timeline dependencies they cannot control. Always ask directly: what is outsourced, and to whom?
+                The best <strong>architectural scale model companies</strong>{" "}
+                control the entire production chain internally — digital
+                modelling, CNC cutting, laser etching, hand-finishing, painting,
+                electrical integration, and quality control. Vendors who
+                outsource even one stage introduce quality gaps and timeline
+                dependencies they cannot control. Always ask directly: what is
+                outsourced, and to whom?
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">2. CAD-to-CNC Digital Workflow</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                2. CAD-to-CNC Digital Workflow
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                A professional architectural model maker works directly from your AutoCAD, Revit, or SketchUp files — not from printed drawings measured by hand. CNC and laser-cut components driven from digital files eliminate measurement error and produce the dimensional precision that passes an architect&apos;s scrutiny. If a vendor cannot take your DWG files and produce a 3D model from them, they are not operating at a professional standard.
+                A professional architectural model maker works directly from
+                your AutoCAD, Revit, or SketchUp files — not from printed
+                drawings measured by hand. CNC and laser-cut components driven
+                from digital files eliminate measurement error and produce the
+                dimensional precision that passes an architect&apos;s scrutiny.
+                If a vendor cannot take your DWG files and produce a 3D model
+                from them, they are not operating at a professional standard.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">3. Verifiable Portfolio of Comparable Projects</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                3. Verifiable Portfolio of Comparable Projects
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Ask to see completed models of similar type (township, residential high-rise, commercial, infrastructure) and similar scale ratio to yours. Look specifically at: edge finish quality on acrylic components, window alignment consistency across multiple floors, landscape realism (not uniform green plastic), and LED integration quality. Photographs on a website are a starting point — a video walkthrough of completed models is more reliable evidence.
+                Ask to see completed models of similar type (township,
+                residential high-rise, commercial, infrastructure) and similar
+                scale ratio to yours. Look specifically at: edge finish quality
+                on acrylic components, window alignment consistency across
+                multiple floors, landscape realism (not uniform green plastic),
+                and LED integration quality. Photographs on a website are a
+                starting point — a video walkthrough of completed models is more
+                reliable evidence.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">4. Written Production Schedule with Milestones</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                4. Written Production Schedule with Milestones
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Any reputable <strong>scale model company</strong> should provide a written production timeline before you sign the order — drawing review sign-off date, prototype component review, assembly completion, electrical testing, quality check, dispatch, and installation. If a vendor quotes a delivery date without a milestone schedule, your risk of a late delivery is high. Always align the delivery to your launch date minus 10 working days of buffer.
+                Any reputable <strong>scale model company</strong> should
+                provide a written production timeline before you sign the order
+                — drawing review sign-off date, prototype component review,
+                assembly completion, electrical testing, quality check,
+                dispatch, and installation. If a vendor quotes a delivery date
+                without a milestone schedule, your risk of a late delivery is
+                high. Always align the delivery to your launch date minus 10
+                working days of buffer.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">5. Mid-Project Review Process</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                5. Mid-Project Review Process
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                The best architectural model makers build formal client review points into the production workflow. At minimum: a digital 3D model review before any physical fabrication begins, and a component review before final assembly. These checkpoints prevent costly rework caused by design misinterpretation. A vendor who builds and delivers without showing you anything in between is a vendor who is not confident in their accuracy.
+                The best architectural model makers build formal client review
+                points into the production workflow. At minimum: a digital 3D
+                model review before any physical fabrication begins, and a
+                component review before final assembly. These checkpoints
+                prevent costly rework caused by design misinterpretation. A
+                vendor who builds and delivers without showing you anything in
+                between is a vendor who is not confident in their accuracy.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">6. Post-Delivery Support and Repair Terms</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                6. Post-Delivery Support and Repair Terms
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Scale models operate in sales offices for 18–36 months. LED systems need maintenance. Acrylic panels scratch. Landscape elements dislodge. Ask every prospective vendor: what is covered under warranty, for how long, and will they travel to site for repairs? A <strong>scale model company</strong> that cannot commit to post-delivery support is one that treats your commission as a transaction rather than a relationship.
+                Scale models operate in sales offices for 18–36 months. LED
+                systems need maintenance. Acrylic panels scratch. Landscape
+                elements dislodge. Ask every prospective vendor: what is covered
+                under warranty, for how long, and will they travel to site for
+                repairs? A <strong>scale model company</strong> that cannot
+                commit to post-delivery support is one that treats your
+                commission as a transaction rather than a relationship.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">7. Developer-Side References in Your City</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                7. Developer-Side References in Your City
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Ask for two or three references from real estate developers in your target city. Call them. Ask about timeline adherence, how issues were handled, whether the model held up over months in a sales office environment, and whether they would use the vendor again. A vendor with no referable clients in your city either lacks the experience or lacks the confidence to offer references — both are warning signals.
+                Ask for two or three references from real estate developers in
+                your target city. Call them. Ask about timeline adherence, how
+                issues were handled, whether the model held up over months in a
+                sales office environment, and whether they would use the vendor
+                again. A vendor with no referable clients in your city either
+                lacks the experience or lacks the confidence to offer references
+                — both are warning signals.
               </p>
             </div>
-
           </div>
         </section>
 
         {/* Section 3 — Red Flags */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">Red Flags That Predict a Poor Outcome</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            Red Flags That Predict a Poor Outcome
+          </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { flag: "Unusually low quote", detail: "Scale model quality is a direct function of time and material. A quote 40–50% below market rates means corners are being cut — on materials, finish quality, or production time." },
-              { flag: "No digital file requirement", detail: "A vendor who says they can work from a photo or a printed plan is working by hand measurement — errors are inevitable at any scale ratio below 1:200." },
-              { flag: "No milestone schedule", detail: "No timeline structure = no accountability. You will chase for updates and likely miss your launch date." },
-              { flag: "Generic portfolio", detail: "A portfolio full of generic residential blocks with no visible client names, project details, or delivery dates is difficult to verify and may not represent their actual standard." },
-              { flag: "No site installation offer", detail: "A professional scale model company delivers and installs. A vendor who dispatches via courier and asks your team to assemble it has not accounted for the complexity of final installation." },
-              { flag: "No post-delivery contact", detail: "If the sales team stops responding after payment is received and before delivery is complete, escalation becomes impossible. Verify before signing." },
+              {
+                flag: "Unusually low quote",
+                detail:
+                  "Scale model quality is a direct function of time and material. A quote 40–50% below market rates means corners are being cut — on materials, finish quality, or production time.",
+              },
+              {
+                flag: "No digital file requirement",
+                detail:
+                  "A vendor who says they can work from a photo or a printed plan is working by hand measurement — errors are inevitable at any scale ratio below 1:200.",
+              },
+              {
+                flag: "No milestone schedule",
+                detail:
+                  "No timeline structure = no accountability. You will chase for updates and likely miss your launch date.",
+              },
+              {
+                flag: "Generic portfolio",
+                detail:
+                  "A portfolio full of generic residential blocks with no visible client names, project details, or delivery dates is difficult to verify and may not represent their actual standard.",
+              },
+              {
+                flag: "No site installation offer",
+                detail:
+                  "A professional scale model company delivers and installs. A vendor who dispatches via courier and asks your team to assemble it has not accounted for the complexity of final installation.",
+              },
+              {
+                flag: "No post-delivery contact",
+                detail:
+                  "If the sales team stops responding after payment is received and before delivery is complete, escalation becomes impossible. Verify before signing.",
+              },
             ].map(({ flag, detail }) => (
-              <div key={flag} className="bg-red-50 border border-red-100 rounded-xl p-4">
+              <div
+                key={flag}
+                className="bg-red-50 border border-red-100 rounded-xl p-4"
+              >
                 <p className="font-bold text-red-800 text-sm mb-1">⚠ {flag}</p>
-                <p className="text-gray-700 text-sm leading-relaxed">{detail}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {detail}
+                </p>
               </div>
             ))}
           </div>
@@ -3255,33 +4998,71 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
 
         {/* Section 4 — Why AML */}
         <section className="mb-12 bg-black rounded-2xl p-8 text-white">
-          <h2 className="text-2xl font-bold text-white mb-4">Why Alliance Media Labs is India&apos;s Best Architectural Scale Model Company</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Why Alliance Media Labs is India&apos;s Best Architectural Scale
+            Model Company
+          </h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            Alliance Media Labs was founded on a single belief: that real estate developers deserve a <strong>scale model company</strong> that operates with the rigour of an engineering firm and the craft of a design studio. We are not a model shop that scales up volume at the cost of quality. We are a precision fabrication team that treats every model as a flagship project.
+            Alliance Media Labs was founded on a single belief: that real estate
+            developers deserve a <strong>scale model company</strong> that
+            operates with the rigour of an engineering firm and the craft of a
+            design studio. We are not a model shop that scales up volume at the
+            cost of quality. We are a precision fabrication team that treats
+            every model as a flagship project.
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             {[
-              { title: "200+ Projects Delivered", body: "Across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and Tier 1 cities — residential, commercial, township, and infrastructure." },
-              { title: "Full In-House Production", body: "Digital modelling → CNC fabrication → hand-finishing → LED integration → delivery and installation. Every stage controlled by our team." },
-              { title: "CAD-to-Model Precision", body: "We work directly from AutoCAD DWG, Revit, and SketchUp files. No hand measurements. No guesswork. Dimensional accuracy verified at every stage." },
-              { title: "Named Client References", body: "We work with India's leading real estate developers and are happy to provide direct references for projects in your city and segment." },
+              {
+                title: "200+ Projects Delivered",
+                body: "Across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and Tier 1 cities — residential, commercial, township, and infrastructure.",
+              },
+              {
+                title: "Full In-House Production",
+                body: "Digital modelling → CNC fabrication → hand-finishing → LED integration → delivery and installation. Every stage controlled by our team.",
+              },
+              {
+                title: "CAD-to-Model Precision",
+                body: "We work directly from AutoCAD DWG, Revit, and SketchUp files. No hand measurements. No guesswork. Dimensional accuracy verified at every stage.",
+              },
+              {
+                title: "Named Client References",
+                body: "We work with India's leading real estate developers and are happy to provide direct references for projects in your city and segment.",
+              },
             ].map(({ title, body }) => (
               <div key={title} className="bg-white/10 rounded-xl p-4">
-                <p className="font-bold text-yellow-400 text-sm mb-1">{title}</p>
+                <p className="font-bold text-yellow-400 text-sm mb-1">
+                  {title}
+                </p>
                 <p className="text-gray-300 text-sm leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
           <p className="text-gray-300 leading-relaxed mb-2">
-            As an <strong>architectural model maker</strong> with a track record across India&apos;s most competitive real estate markets, we know that the model is not a cost — it is a sales asset with a measurable return. Our clients consistently report faster buyer decisions, higher sales office engagement, and stronger NRI buyer conversion when our models are present.
+            As an <strong>architectural model maker</strong> with a track record
+            across India&apos;s most competitive real estate markets, we know
+            that the model is not a cost — it is a sales asset with a measurable
+            return. Our clients consistently report faster buyer decisions,
+            higher sales office engagement, and stronger NRI buyer conversion
+            when our models are present.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            If you are evaluating vendors for your next project launch, we welcome the comparison. Our portfolio, references, and production process are fully transparent. Many of our clients also pair their scale model with a{" "}
-            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-400 font-semibold hover:underline">
+            If you are evaluating vendors for your next project launch, we
+            welcome the comparison. Our portfolio, references, and production
+            process are fully transparent. Many of our clients also pair their
+            scale model with a{" "}
+            <Link
+              href="/services/3d-walkthrough-video-company-india"
+              className="text-yellow-400 font-semibold hover:underline"
+            >
               3D walkthrough video
             </Link>{" "}
-            — creating a complete sales office experience that covers every buyer touchpoint. If you&apos;re an architecture firm rather than a developer, we also build{" "}
-            <Link href="/services/scale-model-maker-india" className="text-yellow-400 font-semibold hover:underline">
+            — creating a complete sales office experience that covers every
+            buyer touchpoint. If you&apos;re an architecture firm rather than a
+            developer, we also build{" "}
+            <Link
+              href="/services/scale-model-maker-india"
+              className="text-yellow-400 font-semibold hover:underline"
+            >
               concept and presentation models for design practices
             </Link>
             .
@@ -3290,22 +5071,57 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
 
         {/* Section 5 — What to expect */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">What a Professional Scale Model Engagement Looks Like</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            What a Professional Scale Model Engagement Looks Like
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            For developers who have not previously worked with a professional <strong>architectural scale model company</strong>, here is what a well-managed engagement should look like — from first contact to sales office installation:
+            For developers who have not previously worked with a professional{" "}
+            <strong>architectural scale model company</strong>, here is what a
+            well-managed engagement should look like — from first contact to
+            sales office installation:
           </p>
           <ol className="space-y-3">
             {[
-              { step: "Initial Brief Call (Day 1)", detail: "Scope discussion — project type, scale ratio, model dimensions, special features (LEDs, water, rotating base), delivery date, and budget range." },
-              { step: "Drawing Review & Quotation (Days 2–3)", detail: "Review of your CAD/BIM files. Written quotation with itemised scope, production timeline, milestone dates, and payment terms." },
-              { step: "Drawing Sign-Off (Day 4–5)", detail: "Formal confirmation that drawings are complete and production can begin. Any incomplete drawing packages extend the timeline." },
-              { step: "Digital 3D Model Review (Days 8–12)", detail: "A rendered preview of the digital model built from your drawings — your chance to flag any interpretation issues before physical fabrication begins." },
-              { step: "Component Review (Day 15–20)", detail: "Sample components — building facades, landscape sections — for finish and colour approval before full assembly." },
-              { step: "Assembly, Electrical & Quality Check (Days 20–30+)", detail: "Full assembly, LED wiring, landscaping, painting, cover fitting. Comprehensive quality check before dispatch." },
-              { step: "Delivery & Installation (Final Day)", detail: "Our team delivers, installs, tests all electrics, and briefs your sales team on operation and care." },
+              {
+                step: "Initial Brief Call (Day 1)",
+                detail:
+                  "Scope discussion — project type, scale ratio, model dimensions, special features (LEDs, water, rotating base), delivery date, and budget range.",
+              },
+              {
+                step: "Drawing Review & Quotation (Days 2–3)",
+                detail:
+                  "Review of your CAD/BIM files. Written quotation with itemised scope, production timeline, milestone dates, and payment terms.",
+              },
+              {
+                step: "Drawing Sign-Off (Day 4–5)",
+                detail:
+                  "Formal confirmation that drawings are complete and production can begin. Any incomplete drawing packages extend the timeline.",
+              },
+              {
+                step: "Digital 3D Model Review (Days 8–12)",
+                detail:
+                  "A rendered preview of the digital model built from your drawings — your chance to flag any interpretation issues before physical fabrication begins.",
+              },
+              {
+                step: "Component Review (Day 15–20)",
+                detail:
+                  "Sample components — building facades, landscape sections — for finish and colour approval before full assembly.",
+              },
+              {
+                step: "Assembly, Electrical & Quality Check (Days 20–30+)",
+                detail:
+                  "Full assembly, LED wiring, landscaping, painting, cover fitting. Comprehensive quality check before dispatch.",
+              },
+              {
+                step: "Delivery & Installation (Final Day)",
+                detail:
+                  "Our team delivers, installs, tests all electrics, and briefs your sales team on operation and care.",
+              },
             ].map(({ step, detail }, i) => (
               <li key={step} className="flex gap-4">
-                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">{i + 1}</div>
+                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">
+                  {i + 1}
+                </div>
                 <div>
                   <span className="font-bold text-black">{step} — </span>
                   <span className="text-gray-700">{detail}</span>
@@ -3317,7 +5133,9 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
 
         {/* FAQ */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-5">
             {[
               {
@@ -3351,21 +5169,42 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
 
         {/* Related Posts */}
         <div className="border-t border-gray-100 pt-10 mb-12">
-          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <h3 className="text-lg font-bold text-black mb-5">
+            Related Articles
+          </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <Link href="/blog/scale-model-making-india-complete-guide" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Complete Guide</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Scale Model Making in India: The Complete Guide for Real Estate Developers (2026)</h4>
+            <Link
+              href="/blog/scale-model-making-india-complete-guide"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Complete Guide
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                Scale Model Making in India: The Complete Guide for Real Estate
+                Developers (2026)
+              </h4>
             </Link>
-            <Link href="/blog/architectural-scale-models-india-real-estate" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Sales Strategy</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can&apos;t</h4>
+            <Link
+              href="/blog/architectural-scale-models-india-real-estate"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Sales Strategy
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                The Silent Salesperson: How Architectural Scale Models Close
+                Deals That Digital Can&apos;t
+              </h4>
             </Link>
           </div>
         </div>
 
         {/* Back */}
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
           <i className="ri-arrow-left-line"></i> Back to Blog
         </Link>
       </div>
@@ -3377,13 +5216,20 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
             Get a Quote from India&apos;s Best Architectural Scale Model Company
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Share your drawings and launch date. We&apos;ll respond with a detailed quote and production timeline within 48 hours.
+            Share your drawings and launch date. We&apos;ll respond with a
+            detailed quote and production timeline within 48 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
               Request a Quote
             </Link>
-            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/services/scale-model-maker-india"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               View Scale Model Service
             </Link>
           </div>
@@ -3398,7 +5244,11 @@ function BestScaleModelCompanyArticle({ post }: { post: ReturnType<typeof getPos
 /* ─────────────────────────────────────────────────────────────
    ARCHITECTURAL SCALE MODEL PRICE INDIA — B2B PRICING GUIDE
    ───────────────────────────────────────────────────────────── */
-function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function ScaleModelPriceArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -3424,7 +5274,9 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
           <div className="flex items-center gap-4 text-sm text-gray-400">
             <span>{post.author}</span>
             <span>•</span>
@@ -3435,11 +5287,13 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
       {/* Body */}
       <div className="container mx-auto px-6 max-w-4xl py-16">
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium"
+            >
               {tag}
             </span>
           ))}
@@ -3448,70 +5302,147 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
         {/* Intro */}
         <section className="mb-12">
           <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-            &quot;How much does an architectural scale model cost in India?&quot; — it is one of the most common questions project heads and marketing managers ask when planning a real estate launch, and one of the hardest to answer without context. <strong>Architectural scale model price in India</strong> ranges from under ₹1 lakh for a simple residential block to over ₹30 lakhs for a large township master plan — a 30x variance that makes budgeting feel like guesswork.
+            &quot;How much does an architectural scale model cost in
+            India?&quot; — it is one of the most common questions project heads
+            and marketing managers ask when planning a real estate launch, and
+            one of the hardest to answer without context.{" "}
+            <strong>Architectural scale model price in India</strong> ranges
+            from under ₹1 lakh for a simple residential block to over ₹30 lakhs
+            for a large township master plan — a 30x variance that makes
+            budgeting feel like guesswork.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            It doesn&apos;t have to be. Once you understand the five variables that drive <strong>scale model cost</strong>, you can estimate a realistic budget for any project type, evaluate vendor quotes intelligently, and avoid the two most common mistakes developers make: under-budgeting for a model they later have to compromise on, and over-paying for features they don&apos;t actually need.
+            It doesn&apos;t have to be. Once you understand the five variables
+            that drive <strong>scale model cost</strong>, you can estimate a
+            realistic budget for any project type, evaluate vendor quotes
+            intelligently, and avoid the two most common mistakes developers
+            make: under-budgeting for a model they later have to compromise on,
+            and over-paying for features they don&apos;t actually need.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This guide gives you the complete 2026 pricing picture — including the full <strong>architectural model making charges</strong> breakdown by project type, a pricing table you can use for internal budget approval, and a clear explanation of what separates a ₹2 lakh quote from a ₹6 lakh quote for what looks like the same scope.
+            This guide gives you the complete 2026 pricing picture — including
+            the full <strong>architectural model making charges</strong>{" "}
+            breakdown by project type, a pricing table you can use for internal
+            budget approval, and a clear explanation of what separates a ₹2 lakh
+            quote from a ₹6 lakh quote for what looks like the same scope.
           </p>
         </section>
 
         {/* Section 1 — 5 factors */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">The 5 Variables That Determine Architectural Scale Model Price</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            The 5 Variables That Determine Architectural Scale Model Price
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Every quote you receive from an architectural model company is a function of these five variables. Understanding them puts you in control of the budget conversation.
+            Every quote you receive from an architectural model company is a
+            function of these five variables. Understanding them puts you in
+            control of the budget conversation.
           </p>
 
           <div className="space-y-5">
             <div className="flex gap-5 items-start">
-              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">1</div>
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">
+                1
+              </div>
               <div>
-                <h3 className="font-bold text-black mb-1">Model Size and Base Footprint</h3>
+                <h3 className="font-bold text-black mb-1">
+                  Model Size and Base Footprint
+                </h3>
                 <p className="text-gray-700 leading-relaxed text-sm">
-                  The single biggest cost driver. A 4×3 ft model of a residential block and a 16×12 ft township master plan involve fundamentally different quantities of material, fabrication time, and assembly labour. Every additional square foot of base footprint adds proportional cost — not just for the base itself, but for all the buildings, roads, and landscape elements on top of it. Discuss base dimensions before anything else.
+                  The single biggest cost driver. A 4×3 ft model of a
+                  residential block and a 16×12 ft township master plan involve
+                  fundamentally different quantities of material, fabrication
+                  time, and assembly labour. Every additional square foot of
+                  base footprint adds proportional cost — not just for the base
+                  itself, but for all the buildings, roads, and landscape
+                  elements on top of it. Discuss base dimensions before anything
+                  else.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-5 items-start">
-              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">2</div>
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">
+                2
+              </div>
               <div>
-                <h3 className="font-bold text-black mb-1">Scale Ratio and Level of Detail</h3>
+                <h3 className="font-bold text-black mb-1">
+                  Scale Ratio and Level of Detail
+                </h3>
                 <p className="text-gray-700 leading-relaxed text-sm">
-                  A 1:50 scale model of a villa shows window frames, balcony railings, door reveals, and surface cladding detail. A 1:500 model of the same villa shows massing and roofline only. The finer the scale ratio, the more components, the more hand-finishing hours, and the higher the <strong>scale model price</strong>. For large master plan models, 1:500 or 1:1000 is standard and cost-efficient. For sales-office feature models of a signature tower, 1:100 with maximum detail delivers maximum impact.
+                  A 1:50 scale model of a villa shows window frames, balcony
+                  railings, door reveals, and surface cladding detail. A 1:500
+                  model of the same villa shows massing and roofline only. The
+                  finer the scale ratio, the more components, the more
+                  hand-finishing hours, and the higher the{" "}
+                  <strong>scale model price</strong>. For large master plan
+                  models, 1:500 or 1:1000 is standard and cost-efficient. For
+                  sales-office feature models of a signature tower, 1:100 with
+                  maximum detail delivers maximum impact.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-5 items-start">
-              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">3</div>
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">
+                3
+              </div>
               <div>
-                <h3 className="font-bold text-black mb-1">LED Lighting and Electrical Features</h3>
+                <h3 className="font-bold text-black mb-1">
+                  LED Lighting and Electrical Features
+                </h3>
                 <p className="text-gray-700 leading-relaxed text-sm">
-                  A model without LED lighting costs significantly less than one with phase-wise building illumination, fibre-optic landscape lighting, animated water simulation, and a zoned control panel. For a sales-office model intended to create buyer impact, LED integration is typically non-negotiable. For an approval-committee or internal planning model, it may not be required. Be explicit about which electrical features you want — they can add ₹50,000 to ₹3,00,000+ depending on scope.
+                  A model without LED lighting costs significantly less than one
+                  with phase-wise building illumination, fibre-optic landscape
+                  lighting, animated water simulation, and a zoned control
+                  panel. For a sales-office model intended to create buyer
+                  impact, LED integration is typically non-negotiable. For an
+                  approval-committee or internal planning model, it may not be
+                  required. Be explicit about which electrical features you want
+                  — they can add ₹50,000 to ₹3,00,000+ depending on scope.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-5 items-start">
-              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">4</div>
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">
+                4
+              </div>
               <div>
-                <h3 className="font-bold text-black mb-1">Material and Finish Specification</h3>
+                <h3 className="font-bold text-black mb-1">
+                  Material and Finish Specification
+                </h3>
                 <p className="text-gray-700 leading-relaxed text-sm">
-                  Premium-grade acrylic, professional architectural model foliage, custom-mixed paints, and hand-etched road surfaces cost more than standard MDF, generic plastic trees, and off-the-shelf paint. The difference is immediately visible in the finished model. For flagship launches by top developers, the premium finish is essential — it directly reflects on the brand. For mid-segment projects or internal presentations, a mid-grade specification can be cost-efficient without being embarrassing.
+                  Premium-grade acrylic, professional architectural model
+                  foliage, custom-mixed paints, and hand-etched road surfaces
+                  cost more than standard MDF, generic plastic trees, and
+                  off-the-shelf paint. The difference is immediately visible in
+                  the finished model. For flagship launches by top developers,
+                  the premium finish is essential — it directly reflects on the
+                  brand. For mid-segment projects or internal presentations, a
+                  mid-grade specification can be cost-efficient without being
+                  embarrassing.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-5 items-start">
-              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">5</div>
+              <div className="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-black">
+                5
+              </div>
               <div>
-                <h3 className="font-bold text-black mb-1">Timeline and Rush Premium</h3>
+                <h3 className="font-bold text-black mb-1">
+                  Timeline and Rush Premium
+                </h3>
                 <p className="text-gray-700 leading-relaxed text-sm">
-                  Standard production timelines for professional models are 15–45 working days depending on size. Compressing a 30-day timeline to 15 days requires parallel production teams and extended working hours — that premium is real and typically adds 20–35% to the base <strong>architectural model making charges</strong>. The single most cost-effective thing a developer can do is engage their model vendor at least 6–8 weeks before the launch date.
+                  Standard production timelines for professional models are
+                  15–45 working days depending on size. Compressing a 30-day
+                  timeline to 15 days requires parallel production teams and
+                  extended working hours — that premium is real and typically
+                  adds 20–35% to the base{" "}
+                  <strong>architectural model making charges</strong>. The
+                  single most cost-effective thing a developer can do is engage
+                  their model vendor at least 6–8 weeks before the launch date.
                 </p>
               </div>
             </div>
@@ -3520,35 +5451,94 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
         {/* Pricing Table */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">Architectural Scale Model Price in India — 2026 Reference Table</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            Architectural Scale Model Price in India — 2026 Reference Table
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            The ranges below reflect professionally produced models with quality materials, CNC fabrication, and LED integration at the standard level. Budget-tier vendors may quote lower — the difference is always visible in the finished product.
+            The ranges below reflect professionally produced models with quality
+            materials, CNC fabrication, and LED integration at the standard
+            level. Budget-tier vendors may quote lower — the difference is
+            always visible in the finished product.
           </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200 mb-4">
             <table className="w-full text-sm">
               <thead className="bg-black text-white">
                 <tr>
-                  <th className="px-4 py-3 text-left font-semibold">Project Type</th>
-                  <th className="px-4 py-3 text-left font-semibold">Typical Scale</th>
-                  <th className="px-4 py-3 text-left font-semibold">Price Range (INR)</th>
-                  <th className="px-4 py-3 text-left font-semibold">Timeline</th>
-                  <th className="px-4 py-3 text-left font-semibold">LED Included?</th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Project Type
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Typical Scale
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Price Range (INR)
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Timeline
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    LED Included?
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  ["Individual Villa / Bungalow", "1:50 – 1:100", "₹75,000 – ₹1,80,000", "10–18 days", "Optional"],
-                  ["Boutique Apartment Block (G+8)", "1:100 – 1:200", "₹1,50,000 – ₹3,50,000", "15–22 days", "Standard"],
-                  ["Mid-Rise Residential Complex", "1:200 – 1:300", "₹2,50,000 – ₹6,00,000", "18–28 days", "Standard"],
-                  ["Large Residential Project w/ Amenities", "1:200 – 1:500", "₹4,00,000 – ₹10,00,000", "22–35 days", "Standard + Zones"],
-                  ["Township / Master Plan Model", "1:500 – 1:1000", "₹7,00,000 – ₹22,00,000", "30–50 days", "Phase-wise Zones"],
-                  ["Commercial Tower / Office Park", "1:100 – 1:300", "₹3,00,000 – ₹8,00,000", "20–32 days", "Standard"],
-                  ["Infrastructure / Government Project", "1:1000 – 1:2000", "₹10,00,000 – ₹35,00,000", "40–65 days", "Optional"],
+                  [
+                    "Individual Villa / Bungalow",
+                    "1:50 – 1:100",
+                    "₹75,000 – ₹1,80,000",
+                    "10–18 days",
+                    "Optional",
+                  ],
+                  [
+                    "Boutique Apartment Block (G+8)",
+                    "1:100 – 1:200",
+                    "₹1,50,000 – ₹3,50,000",
+                    "15–22 days",
+                    "Standard",
+                  ],
+                  [
+                    "Mid-Rise Residential Complex",
+                    "1:200 – 1:300",
+                    "₹2,50,000 – ₹6,00,000",
+                    "18–28 days",
+                    "Standard",
+                  ],
+                  [
+                    "Large Residential Project w/ Amenities",
+                    "1:200 – 1:500",
+                    "₹4,00,000 – ₹10,00,000",
+                    "22–35 days",
+                    "Standard + Zones",
+                  ],
+                  [
+                    "Township / Master Plan Model",
+                    "1:500 – 1:1000",
+                    "₹7,00,000 – ₹22,00,000",
+                    "30–50 days",
+                    "Phase-wise Zones",
+                  ],
+                  [
+                    "Commercial Tower / Office Park",
+                    "1:100 – 1:300",
+                    "₹3,00,000 – ₹8,00,000",
+                    "20–32 days",
+                    "Standard",
+                  ],
+                  [
+                    "Infrastructure / Government Project",
+                    "1:1000 – 1:2000",
+                    "₹10,00,000 – ₹35,00,000",
+                    "40–65 days",
+                    "Optional",
+                  ],
                 ].map(([type, scale, price, timeline, led]) => (
                   <tr key={type} className="even:bg-gray-50">
                     <td className="px-4 py-3 font-medium text-black">{type}</td>
                     <td className="px-4 py-3 text-gray-700">{scale}</td>
-                    <td className="px-4 py-3 text-gray-900 font-semibold">{price}</td>
+                    <td className="px-4 py-3 text-gray-900 font-semibold">
+                      {price}
+                    </td>
                     <td className="px-4 py-3 text-gray-700">{timeline}</td>
                     <td className="px-4 py-3 text-gray-700">{led}</td>
                   </tr>
@@ -3557,29 +5547,62 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
             </table>
           </div>
           <p className="text-gray-500 text-xs italic">
-            Prices are indicative for 2026. Final quotes depend on exact scope, drawings completeness, finish specification, and delivery location. GST additional. Rush delivery adds 20–35%.
+            Prices are indicative for 2026. Final quotes depend on exact scope,
+            drawings completeness, finish specification, and delivery location.
+            GST additional. Rush delivery adds 20–35%.
           </p>
         </section>
 
         {/* Section — What's included */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">What Should Be Included in a Professional Quote</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            What Should Be Included in a Professional Quote
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-5">
-            When you receive a <strong>scale model price</strong> quote from a vendor, it should clearly itemise the following. If any of these are missing or vague, ask explicitly — hidden costs and scope gaps are where budget overruns happen.
+            When you receive a <strong>scale model price</strong> quote from a
+            vendor, it should clearly itemise the following. If any of these are
+            missing or vague, ask explicitly — hidden costs and scope gaps are
+            where budget overruns happen.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { item: "Drawing review and 3D digital modelling", note: "The digital setup work before any physical production — some vendors charge this separately." },
-              { item: "All building fabrication and finishing", note: "Number of buildings, towers, blocks included. Phase exclusions should be clearly stated." },
-              { item: "Base board, roads, and site boundary", note: "The base platform with road network and plot boundary. Sometimes quoted separately for large bases." },
-              { item: "Landscaping and amenity areas", note: "Grass, trees, water bodies, pool, clubhouse detailing. Specify quality level expected." },
-              { item: "LED lighting system", note: "Which zones, what colour temperatures, control panel type. Fibre optics if specified." },
-              { item: "Protective acrylic cover", note: "Included as standard by most professional vendors. Confirm dimensions and locking mechanism." },
-              { item: "Packaging, transport, and installation", note: "Custom crating, delivery to site, installation supervision. Some vendors charge this separately." },
-              { item: "Post-delivery warranty", note: "Duration, what is covered, and response time for on-site repairs. Get this in writing." },
+              {
+                item: "Drawing review and 3D digital modelling",
+                note: "The digital setup work before any physical production — some vendors charge this separately.",
+              },
+              {
+                item: "All building fabrication and finishing",
+                note: "Number of buildings, towers, blocks included. Phase exclusions should be clearly stated.",
+              },
+              {
+                item: "Base board, roads, and site boundary",
+                note: "The base platform with road network and plot boundary. Sometimes quoted separately for large bases.",
+              },
+              {
+                item: "Landscaping and amenity areas",
+                note: "Grass, trees, water bodies, pool, clubhouse detailing. Specify quality level expected.",
+              },
+              {
+                item: "LED lighting system",
+                note: "Which zones, what colour temperatures, control panel type. Fibre optics if specified.",
+              },
+              {
+                item: "Protective acrylic cover",
+                note: "Included as standard by most professional vendors. Confirm dimensions and locking mechanism.",
+              },
+              {
+                item: "Packaging, transport, and installation",
+                note: "Custom crating, delivery to site, installation supervision. Some vendors charge this separately.",
+              },
+              {
+                item: "Post-delivery warranty",
+                note: "Duration, what is covered, and response time for on-site repairs. Get this in writing.",
+              },
             ].map(({ item, note }) => (
               <div key={item} className="bg-gray-50 rounded-xl p-4">
-                <p className="font-semibold text-black text-sm mb-1">✓ {item}</p>
+                <p className="font-semibold text-black text-sm mb-1">
+                  ✓ {item}
+                </p>
                 <p className="text-gray-500 text-xs leading-relaxed">{note}</p>
               </div>
             ))}
@@ -3588,51 +5611,108 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
         {/* Section — comparing quotes */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">How to Compare Quotes — It&apos;s Not Just About the Number</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            How to Compare Quotes — It&apos;s Not Just About the Number
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            When you have three quotes in front of you for what looks like the same scope, the lowest number is rarely the best choice. Here is how to compare them properly:
+            When you have three quotes in front of you for what looks like the
+            same scope, the lowest number is rarely the best choice. Here is how
+            to compare them properly:
           </p>
           <div className="space-y-4">
             <div className="flex gap-3">
-              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">→</span>
-              <p className="text-gray-700 leading-relaxed"><strong>Check what is excluded.</strong> The lowest quote almost always excludes something — transport and installation, the acrylic cover, one phase of the project, or the LED wiring. Bring all quotes to the same scope before comparing price.</p>
+              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">
+                →
+              </span>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>Check what is excluded.</strong> The lowest quote almost
+                always excludes something — transport and installation, the
+                acrylic cover, one phase of the project, or the LED wiring.
+                Bring all quotes to the same scope before comparing price.
+              </p>
             </div>
             <div className="flex gap-3">
-              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">→</span>
-              <p className="text-gray-700 leading-relaxed"><strong>Ask for the production timeline in writing.</strong> A ₹3 lakh quote with a 45-day timeline and a ₹3.5 lakh quote with a 22-day milestone schedule are not the same product — one will make your launch and one probably won&apos;t.</p>
+              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">
+                →
+              </span>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>Ask for the production timeline in writing.</strong> A
+                ₹3 lakh quote with a 45-day timeline and a ₹3.5 lakh quote with
+                a 22-day milestone schedule are not the same product — one will
+                make your launch and one probably won&apos;t.
+              </p>
             </div>
             <div className="flex gap-3">
-              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">→</span>
-              <p className="text-gray-700 leading-relaxed"><strong>Request portfolio evidence at the quoted finish level.</strong> Ask the vendor to show you a completed model produced at the specification and price point they have quoted. This immediately separates vendors who can deliver from those who quote low and upgrade to extract more later.</p>
+              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">
+                →
+              </span>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>
+                  Request portfolio evidence at the quoted finish level.
+                </strong>{" "}
+                Ask the vendor to show you a completed model produced at the
+                specification and price point they have quoted. This immediately
+                separates vendors who can deliver from those who quote low and
+                upgrade to extract more later.
+              </p>
             </div>
             <div className="flex gap-3">
-              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">→</span>
-              <p className="text-gray-700 leading-relaxed"><strong>Verify post-delivery terms.</strong> A lower <strong>architectural scale model price</strong> means nothing if the vendor becomes unreachable when your LED system fails three months into the sales campaign. Confirm the warranty scope and response time in writing before placing the order.</p>
+              <span className="text-yellow-500 font-bold text-lg flex-shrink-0">
+                →
+              </span>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>Verify post-delivery terms.</strong> A lower{" "}
+                <strong>architectural scale model price</strong> means nothing
+                if the vendor becomes unreachable when your LED system fails
+                three months into the sales campaign. Confirm the warranty scope
+                and response time in writing before placing the order.
+              </p>
             </div>
           </div>
         </section>
 
         {/* ROI Section */}
         <section className="mb-12 bg-black rounded-2xl p-8 text-white">
-          <h2 className="text-2xl font-bold text-white mb-4">The Real ROI of Architectural Scale Model Investment</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            The Real ROI of Architectural Scale Model Investment
+          </h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            A common objection from finance teams is that ₹5–8 lakhs on a scale model is a significant marketing expense. Here is the counter-argument: a single unit sold at ₹2 Cr generates a sales brokerage and marketing cost that makes the scale model a rounding error. The question is not whether the model is expensive — it is whether it accelerates your sales velocity enough to justify the cost within the first two to four bookings.
+            A common objection from finance teams is that ₹5–8 lakhs on a scale
+            model is a significant marketing expense. Here is the
+            counter-argument: a single unit sold at ₹2 Cr generates a sales
+            brokerage and marketing cost that makes the scale model a rounding
+            error. The question is not whether the model is expensive — it is
+            whether it accelerates your sales velocity enough to justify the
+            cost within the first two to four bookings.
           </p>
           <p className="text-gray-300 leading-relaxed mb-4">
-            Developers who use Alliance Media Labs&apos; architectural scale models in their sales offices consistently report that buyer dwell time in the office increases, the number of follow-up visits per buyer drops (buyers decide faster), and NRI buyer conversion on{" "}
-            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-400 font-semibold hover:underline">
+            Developers who use Alliance Media Labs&apos; architectural scale
+            models in their sales offices consistently report that buyer dwell
+            time in the office increases, the number of follow-up visits per
+            buyer drops (buyers decide faster), and NRI buyer conversion on{" "}
+            <Link
+              href="/services/3d-walkthrough-video-company-india"
+              className="text-yellow-400 font-semibold hover:underline"
+            >
               video walkthroughs
             </Link>{" "}
-            of the model is measurably higher than walkthroughs without a physical model reference.
+            of the model is measurably higher than walkthroughs without a
+            physical model reference.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            The model is not a cost of marketing. It is a cost of sale — and at a ₹2 Cr+ ticket size, the ROI calculation is straightforward. The real risk is not spending ₹5–8 lakhs on a great model. It is spending ₹2–3 lakhs on a poor one that undermines buyer confidence every day it sits in your sales office.
+            The model is not a cost of marketing. It is a cost of sale — and at
+            a ₹2 Cr+ ticket size, the ROI calculation is straightforward. The
+            real risk is not spending ₹5–8 lakhs on a great model. It is
+            spending ₹2–3 lakhs on a poor one that undermines buyer confidence
+            every day it sits in your sales office.
           </p>
         </section>
 
         {/* FAQ */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions — Scale Model Pricing</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            Frequently Asked Questions — Scale Model Pricing
+          </h2>
           <div className="space-y-5">
             {[
               {
@@ -3666,21 +5746,42 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
         {/* Related Posts */}
         <div className="border-t border-gray-100 pt-10 mb-12">
-          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <h3 className="text-lg font-bold text-black mb-5">
+            Related Articles
+          </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <Link href="/blog/best-architectural-scale-model-company-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Vendor Selection</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Best Architectural Scale Model Company in India: How to Choose the Right Partner</h4>
+            <Link
+              href="/blog/best-architectural-scale-model-company-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Vendor Selection
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                Best Architectural Scale Model Company in India: How to Choose
+                the Right Partner
+              </h4>
             </Link>
-            <Link href="/blog/scale-model-making-india-complete-guide" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Complete Guide</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Scale Model Making in India: The Complete Guide for Real Estate Developers (2026)</h4>
+            <Link
+              href="/blog/scale-model-making-india-complete-guide"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Complete Guide
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                Scale Model Making in India: The Complete Guide for Real Estate
+                Developers (2026)
+              </h4>
             </Link>
           </div>
         </div>
 
         {/* Back */}
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
           <i className="ri-arrow-left-line"></i> Back to Blog
         </Link>
       </div>
@@ -3692,13 +5793,20 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
             Get an Accurate Scale Model Price for Your Project
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Share your drawings and we&apos;ll send a detailed, itemised quote within 48 hours — no generic pricing, no hidden charges.
+            Share your drawings and we&apos;ll send a detailed, itemised quote
+            within 48 hours — no generic pricing, no hidden charges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
               Request a Detailed Quote
             </Link>
-            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/services/scale-model-maker-india"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               View Scale Model Service
             </Link>
           </div>
@@ -3713,7 +5821,11 @@ function ScaleModelPriceArticle({ post }: { post: ReturnType<typeof getPostBySlu
 /* ─────────────────────────────────────────────────────────────
    SELLING TO NRI BUYERS WHO CAN'T VISIT — REMOTE BUYER PLAYBOOK
    ───────────────────────────────────────────────────────────── */
-function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function NRIRemoteBuyersArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -3739,7 +5851,9 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
           <div className="flex items-center gap-4 text-sm text-gray-400">
             <span>{post.author}</span>
             <span>•</span>
@@ -3750,11 +5864,13 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
       {/* Body */}
       <div className="container mx-auto px-6 max-w-4xl py-16">
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium"
+            >
               {tag}
             </span>
           ))}
@@ -3763,48 +5879,87 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
         {/* Intro */}
         <section className="mb-12">
           <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-            Non-Resident Indians invest tens of billions of dollars into Indian real estate every year — drawn by rupee depreciation, retirement planning, and family ties. Yet almost every developer marketing to this segment runs into the same wall: the buyer with the money cannot get on a flight to inspect the property before committing ₹1–5 Cr to a booking.
+            Non-Resident Indians invest tens of billions of dollars into Indian
+            real estate every year — drawn by rupee depreciation, retirement
+            planning, and family ties. Yet almost every developer marketing to
+            this segment runs into the same wall: the buyer with the money
+            cannot get on a flight to inspect the property before committing
+            ₹1–5 Cr to a booking.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The result is a predictable, expensive pattern — a hot NRI lead goes silent after the first call, an enquiry drags for six months without a decision, or a buyer books a smaller, cheaper unit they&apos;ve actually seen elsewhere over your unseen project because uncertainty beats ambition when ₹2 Cr is on the line.
+            The result is a predictable, expensive pattern — a hot NRI lead goes
+            silent after the first call, an enquiry drags for six months without
+            a decision, or a buyer books a smaller, cheaper unit they&apos;ve
+            actually seen elsewhere over your unseen project because uncertainty
+            beats ambition when ₹2 Cr is on the line.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This isn&apos;t a marketing problem you fix with a better brochure. It&apos;s a trust and visualization problem, and it has a specific, repeatable solution. Here is the exact remote-buyer visualization stack that converts NRI enquiries into bookings without a single site visit.
+            This isn&apos;t a marketing problem you fix with a better brochure.
+            It&apos;s a trust and visualization problem, and it has a specific,
+            repeatable solution. Here is the exact remote-buyer visualization
+            stack that converts NRI enquiries into bookings without a single
+            site visit.
           </p>
         </section>
 
         {/* Section 1 — Why NRI buyers hesitate */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">Why NRI Buyers Hesitate Without a Site Visit</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            Why NRI Buyers Hesitate Without a Site Visit
+          </h2>
           <div className="space-y-5">
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">1. They Can&apos;t Verify Scale and Quality</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                1. They Can&apos;t Verify Scale and Quality
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Photos and floor plans don&apos;t convey real proportions. A buyer in Dubai or Toronto has no reliable way to judge whether a "spacious 3BHK" actually feels spacious, or whether finish quality matches what the renders promised.
+                Photos and floor plans don&apos;t convey real proportions. A
+                buyer in Dubai or Toronto has no reliable way to judge whether a
+                "spacious 3BHK" actually feels spacious, or whether finish
+                quality matches what the renders promised.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">2. Fraud and Misrepresentation Fears</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                2. Fraud and Misrepresentation Fears
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                NRI buyers are disproportionately targeted by fraudulent or misrepresented listings. Without a way to independently verify the construction stage and surrounding context, hesitation is a rational response, not an objection to overcome with pressure.
+                NRI buyers are disproportionately targeted by fraudulent or
+                misrepresented listings. Without a way to independently verify
+                the construction stage and surrounding context, hesitation is a
+                rational response, not an objection to overcome with pressure.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">3. No Way to Judge the Neighbourhood</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                3. No Way to Judge the Neighbourhood
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Location quality — road access, nearby development, noise, views — is impossible to judge from a sales brochure. This is exactly the gap aerial and ground-level video close.
+                Location quality — road access, nearby development, noise, views
+                — is impossible to judge from a sales brochure. This is exactly
+                the gap aerial and ground-level video close.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">4. Construction-Stage Anxiety</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                4. Construction-Stage Anxiety
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                For under-construction projects, NRI buyers worry most about delays and stalled projects — a well-founded fear after several high-profile project failures in the last decade. Without regular visual proof of progress, anxiety compounds with every missed self-imposed deadline.
+                For under-construction projects, NRI buyers worry most about
+                delays and stalled projects — a well-founded fear after several
+                high-profile project failures in the last decade. Without
+                regular visual proof of progress, anxiety compounds with every
+                missed self-imposed deadline.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">5. No Substitute for the In-Person "Feel"</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                5. No Substitute for the In-Person "Feel"
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Local buyers get a felt sense of a project from walking through the sales office and model. NRI buyers need that same emotional confidence built remotely — through video, not text.
+                Local buyers get a felt sense of a project from walking through
+                the sales office and model. NRI buyers need that same emotional
+                confidence built remotely — through video, not text.
               </p>
             </div>
           </div>
@@ -3812,66 +5967,122 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
         {/* Section 2 — The visualization stack */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">The Remote Buyer Visualization Stack</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            The Remote Buyer Visualization Stack
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Each of the five hesitations above maps to a specific visual tool. Developers who close NRI sales consistently don&apos;t rely on one asset — they deploy this stack in sequence across the buyer&apos;s journey.
+            Each of the five hesitations above maps to a specific visual tool.
+            Developers who close NRI sales consistently don&apos;t rely on one
+            asset — they deploy this stack in sequence across the buyer&apos;s
+            journey.
           </p>
 
           <div className="space-y-6">
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-2">3D Walkthrough Videos — Solving "I Can&apos;t Verify Scale"</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                3D Walkthrough Videos — Solving "I Can&apos;t Verify Scale"
+              </h3>
               <p className="text-gray-700 leading-relaxed mb-3">
-                A photorealistic walkthrough lets a buyer move through the actual floor plan at human scale — corridors, room proportions, ceiling heights, and natural light all become tangible on a video call or WhatsApp share.
+                A photorealistic walkthrough lets a buyer move through the
+                actual floor plan at human scale — corridors, room proportions,
+                ceiling heights, and natural light all become tangible on a
+                video call or WhatsApp share.
               </p>
-              <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline text-sm">
+              <Link
+                href="/services/3d-walkthrough-video-company-india"
+                className="text-yellow-600 font-semibold hover:underline text-sm"
+              >
                 Explore our 3D walkthrough video company →
               </Link>
               <br />
-              <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline text-sm mt-2 inline-block">
+              <Link
+                href="/services/3d-walkthrough-video-company-india"
+                className="text-yellow-600 font-semibold hover:underline text-sm mt-2 inline-block"
+              >
                 See our virtual property tour video for NRI buyers →
               </Link>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-2">Virtual Reality Tours — Solving "No Substitute for the Feel"</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                Virtual Reality Tours — Solving "No Substitute for the Feel"
+              </h3>
               <p className="text-gray-700 leading-relaxed mb-3">
-                For high-value NRI prospects, a VR headset experience at an overseas roadshow or a 360° tour link sent to their phone gets closer to an in-person visit than any video can. It is the single highest-impact tool for closing six-figure-dollar bookings remotely.
+                For high-value NRI prospects, a VR headset experience at an
+                overseas roadshow or a 360° tour link sent to their phone gets
+                closer to an in-person visit than any video can. It is the
+                single highest-impact tool for closing six-figure-dollar
+                bookings remotely.
               </p>
-              <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline text-sm">
+              <Link
+                href="/services/virtual-reality-tours"
+                className="text-yellow-600 font-semibold hover:underline text-sm"
+              >
                 Explore our virtual reality tour service →
               </Link>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-2">Aerial Drone Footage — Solving "I Can&apos;t Judge the Neighbourhood"</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                Aerial Drone Footage — Solving "I Can&apos;t Judge the
+                Neighbourhood"
+              </h3>
               <p className="text-gray-700 leading-relaxed mb-3">
-                Drone footage showing the project in its real geographic context — proximity to highways, metro, schools, and the broader skyline — answers the location question that no brochure can, and is one of the most-replayed assets in NRI sales calls.
+                Drone footage showing the project in its real geographic context
+                — proximity to highways, metro, schools, and the broader skyline
+                — answers the location question that no brochure can, and is one
+                of the most-replayed assets in NRI sales calls.
               </p>
-              <Link href="/services/drone-shoots" className="text-yellow-600 font-semibold hover:underline text-sm">
+              <Link
+                href="/services/drone-shoots"
+                className="text-yellow-600 font-semibold hover:underline text-sm"
+              >
                 Explore our drone shoot service →
               </Link>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-2">Construction Update Videos — Solving Delay Anxiety</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                Construction Update Videos — Solving Delay Anxiety
+              </h3>
               <p className="text-gray-700 leading-relaxed mb-3">
-                Monthly or quarterly construction progress videos, shared directly with booked and prospective NRI buyers, are the single most effective trust-maintenance tool for under-construction projects. They turn an anxious, silent buyer relationship into an active, confident one.
+                Monthly or quarterly construction progress videos, shared
+                directly with booked and prospective NRI buyers, are the single
+                most effective trust-maintenance tool for under-construction
+                projects. They turn an anxious, silent buyer relationship into
+                an active, confident one.
               </p>
-              <Link href="/construction-update-videos" className="text-yellow-600 font-semibold hover:underline text-sm">
+              <Link
+                href="/construction-update-videos"
+                className="text-yellow-600 font-semibold hover:underline text-sm"
+              >
                 Explore our construction update video service →
               </Link>
               <br />
-              <Link href="/blog/construction-delay-buyer-trust-india" className="text-yellow-600 font-semibold hover:underline text-sm mt-2 inline-block">
+              <Link
+                href="/blog/construction-delay-buyer-trust-india"
+                className="text-yellow-600 font-semibold hover:underline text-sm mt-2 inline-block"
+              >
                 Read: how construction delays affect buyer trust →
               </Link>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-2">Digital Marketing & WhatsApp Nurturing — Solving the Long Decision Cycle</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                Digital Marketing & WhatsApp Nurturing — Solving the Long
+                Decision Cycle
+              </h3>
               <p className="text-gray-700 leading-relaxed mb-3">
-                NRI buyers typically take 3–6 months to decide due to time zones, family consultations, and currency planning. A structured digital nurture sequence — retargeted ads, WhatsApp video drops, and scheduled video calls — keeps your project top of mind for the entire cycle instead of losing the lead to silence.
+                NRI buyers typically take 3–6 months to decide due to time
+                zones, family consultations, and currency planning. A structured
+                digital nurture sequence — retargeted ads, WhatsApp video drops,
+                and scheduled video calls — keeps your project top of mind for
+                the entire cycle instead of losing the lead to silence.
               </p>
-              <Link href="/services/digital-marketing" className="text-yellow-600 font-semibold hover:underline text-sm">
+              <Link
+                href="/services/digital-marketing"
+                className="text-yellow-600 font-semibold hover:underline text-sm"
+              >
                 Explore our digital marketing service →
               </Link>
             </div>
@@ -3880,17 +6091,41 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
         {/* Section 3 — Sample funnel */}
         <section className="mb-12 bg-black rounded-2xl p-8 text-white">
-          <h2 className="text-2xl font-bold text-white mb-4">A Sample Remote-Buyer Sales Funnel</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            A Sample Remote-Buyer Sales Funnel
+          </h2>
           <ol className="space-y-3">
             {[
-              { step: "First Contact", detail: "NRI lead comes in via a property portal or Instagram ad. Send the 3D walkthrough video immediately — within minutes, not days." },
-              { step: "Qualification Call", detail: "A video call where your sales team screen-shares the walkthrough and answers questions live, building a personal connection." },
-              { step: "Deepen Interest", detail: "Share drone footage of the location and surrounding development to address the neighbourhood question." },
-              { step: "Remove the Last Doubt", detail: "Offer a VR tour session — either scheduled on a video call with a headset shipped to a local distributor, or via an overseas roadshow if you run one." },
-              { step: "Booking & Beyond", detail: "Post-booking, enroll the buyer in your construction update video list — this single step is the strongest driver of referral business from existing NRI buyers." },
+              {
+                step: "First Contact",
+                detail:
+                  "NRI lead comes in via a property portal or Instagram ad. Send the 3D walkthrough video immediately — within minutes, not days.",
+              },
+              {
+                step: "Qualification Call",
+                detail:
+                  "A video call where your sales team screen-shares the walkthrough and answers questions live, building a personal connection.",
+              },
+              {
+                step: "Deepen Interest",
+                detail:
+                  "Share drone footage of the location and surrounding development to address the neighbourhood question.",
+              },
+              {
+                step: "Remove the Last Doubt",
+                detail:
+                  "Offer a VR tour session — either scheduled on a video call with a headset shipped to a local distributor, or via an overseas roadshow if you run one.",
+              },
+              {
+                step: "Booking & Beyond",
+                detail:
+                  "Post-booking, enroll the buyer in your construction update video list — this single step is the strongest driver of referral business from existing NRI buyers.",
+              },
             ].map(({ step, detail }, i) => (
               <li key={step} className="flex gap-4">
-                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">{i + 1}</div>
+                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">
+                  {i + 1}
+                </div>
                 <div>
                   <span className="font-bold text-white">{step} — </span>
                   <span className="text-gray-300">{detail}</span>
@@ -3902,20 +6137,43 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
         {/* Section 4 — Common mistakes */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">Common Mistakes Developers Make Selling to NRI Buyers</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            Common Mistakes Developers Make Selling to NRI Buyers
+          </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { flag: "Sending PDFs instead of video", detail: "A static brochure cannot answer the scale and quality questions that drive NRI hesitation. Video should be the first asset sent, not the last." },
-              { flag: "No regular construction updates", detail: "Silence between booking and possession is the #1 cause of NRI buyer anxiety and cancellation requests." },
-              { flag: "Sales team unprepared for video calls", detail: "Your team needs walkthrough files and drone footage ready to screen-share on demand — not promised 'I'll send it later'." },
-              { flag: "Ignoring time zone scheduling", detail: "Losing a hot lead because no one was available for a call at a workable hour in their time zone is a process failure, not a buyer problem." },
+              {
+                flag: "Sending PDFs instead of video",
+                detail:
+                  "A static brochure cannot answer the scale and quality questions that drive NRI hesitation. Video should be the first asset sent, not the last.",
+              },
+              {
+                flag: "No regular construction updates",
+                detail:
+                  "Silence between booking and possession is the #1 cause of NRI buyer anxiety and cancellation requests.",
+              },
+              {
+                flag: "Sales team unprepared for video calls",
+                detail:
+                  "Your team needs walkthrough files and drone footage ready to screen-share on demand — not promised 'I'll send it later'.",
+              },
+              {
+                flag: "Ignoring time zone scheduling",
+                detail:
+                  "Losing a hot lead because no one was available for a call at a workable hour in their time zone is a process failure, not a buyer problem.",
+              },
             ].map((item) => (
-              <div key={item.flag} className="border border-red-200 bg-red-50 rounded-xl p-5">
+              <div
+                key={item.flag}
+                className="border border-red-200 bg-red-50 rounded-xl p-5"
+              >
                 <div className="flex items-start gap-2 mb-2">
                   <i className="ri-close-circle-fill text-red-500 text-lg flex-shrink-0 mt-0.5"></i>
                   <h3 className="font-bold text-black text-sm">{item.flag}</h3>
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed">{item.detail}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {item.detail}
+                </p>
               </div>
             ))}
           </div>
@@ -3923,7 +6181,9 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
         {/* FAQ */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-5">
             {[
               {
@@ -3957,21 +6217,42 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
         {/* Related Posts */}
         <div className="border-t border-gray-100 pt-10 mb-12">
-          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <h3 className="text-lg font-bold text-black mb-5">
+            Related Articles
+          </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <Link href="/blog/3d-walkthrough-video-service" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Visualization</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">The Ultimate Guide to 3D Walkthrough Video Services for Real Estate</h4>
+            <Link
+              href="/blog/3d-walkthrough-video-service"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Visualization
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                The Ultimate Guide to 3D Walkthrough Video Services for Real
+                Estate
+              </h4>
             </Link>
-            <Link href="/blog/real-estate-marketing-video-types-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Marketing</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">7 Types of Real Estate Marketing Videos Every Indian Developer Should Use in 2026</h4>
+            <Link
+              href="/blog/real-estate-marketing-video-types-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Marketing
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                7 Types of Real Estate Marketing Videos Every Indian Developer
+                Should Use in 2026
+              </h4>
             </Link>
           </div>
         </div>
 
         {/* Back */}
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
           <i className="ri-arrow-left-line"></i> Back to Blog
         </Link>
       </div>
@@ -3983,16 +6264,27 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
             Build Your Remote Buyer Visualization Stack
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Share your project details and NRI target markets — we&apos;ll recommend the right mix of walkthrough, VR, drone, and update video assets, with a detailed quote within 24 hours.
+            Share your project details and NRI target markets — we&apos;ll
+            recommend the right mix of walkthrough, VR, drone, and update video
+            assets, with a detailed quote within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
               Get a Free Recommendation
             </Link>
-            <Link href="/services/3d-walkthrough-video-company-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/services/3d-walkthrough-video-company-india"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               View Walkthrough Service
             </Link>
-            <Link href="/services/virtual-reality-tours" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/services/virtual-reality-tours"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               View VR Tour Service
             </Link>
           </div>
@@ -4007,7 +6299,11 @@ function NRIRemoteBuyersArticle({ post }: { post: ReturnType<typeof getPostBySlu
 /* ─────────────────────────────────────────────────────────────
    CONSTRUCTION DELAYS & BUYER TRUST — VIDEO UPDATE FRAMEWORK
    ───────────────────────────────────────────────────────────── */
-function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function ConstructionDelayTrustArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -4033,7 +6329,9 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
           <div className="flex items-center gap-4 text-sm text-gray-400">
             <span>{post.author}</span>
             <span>•</span>
@@ -4044,11 +6342,13 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
 
       {/* Body */}
       <div className="container mx-auto px-6 max-w-4xl py-16">
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium"
+            >
               {tag}
             </span>
           ))}
@@ -4057,64 +6357,138 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
         {/* Intro */}
         <section className="mb-12">
           <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-            Every real estate developer in India eventually faces the same uncomfortable conversation: a construction milestone slips, the possession date moves, and a booked buyer wants to know why. After a decade of high-profile stalled projects — Amrapali, Jaypee, and dozens of smaller failures — Indian homebuyers carry a deep, well-founded fear of <strong>construction delay</strong>. That fear doesn&apos;t go away when they book with you. It just goes quiet.
+            Every real estate developer in India eventually faces the same
+            uncomfortable conversation: a construction milestone slips, the
+            possession date moves, and a booked buyer wants to know why. After a
+            decade of high-profile stalled projects — Amrapali, Jaypee, and
+            dozens of smaller failures — Indian homebuyers carry a deep,
+            well-founded fear of <strong>construction delay</strong>. That fear
+            doesn&apos;t go away when they book with you. It just goes quiet.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Here is the part most developers miss: the delay itself is rarely what costs you the buyer. It&apos;s the silence afterward. A buyer who hears nothing for three months assumes the worst, starts asking on broker WhatsApp groups whether your project is "in trouble," and either demands a refund or quietly tells five other prospective buyers not to book with you.
+            Here is the part most developers miss: the delay itself is rarely
+            what costs you the buyer. It&apos;s the silence afterward. A buyer
+            who hears nothing for three months assumes the worst, starts asking
+            on broker WhatsApp groups whether your project is "in trouble," and
+            either demands a refund or quietly tells five other prospective
+            buyers not to book with you.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This guide covers why delays erode <strong>buyer trust</strong> faster than the delay itself justifies, the warning signs that you&apos;re losing a booked buyer, and the exact{" "}
-            <Link href="/construction-update-videos" className="text-yellow-600 font-semibold hover:underline">
+            This guide covers why delays erode <strong>buyer trust</strong>{" "}
+            faster than the delay itself justifies, the warning signs that
+            you&apos;re losing a booked buyer, and the exact{" "}
+            <Link
+              href="/construction-update-videos"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               construction update video
             </Link>{" "}
-            framework developers use to keep buyers confident and engaged through a long construction cycle — delayed or not.
+            framework developers use to keep buyers confident and engaged
+            through a long construction cycle — delayed or not.
           </p>
         </section>
 
         {/* Section 1 — Why delays happen */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">Why Construction Delays Happen — And Why That Doesn&apos;t Matter to Your Buyer</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            Why Construction Delays Happen — And Why That Doesn&apos;t Matter to
+            Your Buyer
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Labour shortages, material cost spikes, monsoon disruption, approval bottlenecks, and funding gaps are all common, often legitimate reasons a project slips behind schedule. Most developers can explain a delay with a perfectly reasonable operational story.
+            Labour shortages, material cost spikes, monsoon disruption, approval
+            bottlenecks, and funding gaps are all common, often legitimate
+            reasons a project slips behind schedule. Most developers can explain
+            a delay with a perfectly reasonable operational story.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            But a buyer who has put down ₹20–40 lakhs as a booking amount doesn&apos;t experience your operational reality — they experience an unanswered question. The reason for the delay matters far less to buyer psychology than whether you communicated it proactively, and how often you keep communicating after.
+            But a buyer who has put down ₹20–40 lakhs as a booking amount
+            doesn&apos;t experience your operational reality — they experience
+            an unanswered question. The reason for the delay matters far less to
+            buyer psychology than whether you communicated it proactively, and
+            how often you keep communicating after.
           </p>
         </section>
 
         {/* Section 2 — The real cost is silence */}
         <section className="mb-12 bg-black rounded-2xl p-8 text-white">
-          <h2 className="text-2xl font-bold text-white mb-4">The Real Cost of a Delay Isn&apos;t the Delay — It&apos;s the Silence</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            The Real Cost of a Delay Isn&apos;t the Delay — It&apos;s the
+            Silence
+          </h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            <strong className="text-white">Construction delay buyer trust</strong> collapses in a predictable pattern: a milestone is missed, the developer doesn&apos;t proactively communicate, the buyer starts calling the sales office for updates, gets vague answers, and starts assuming the worst. By the time a developer finally sends an update, the buyer relationship has already shifted from "patient" to "suspicious."
+            <strong className="text-white">
+              Construction delay buyer trust
+            </strong>{" "}
+            collapses in a predictable pattern: a milestone is missed, the
+            developer doesn&apos;t proactively communicate, the buyer starts
+            calling the sales office for updates, gets vague answers, and starts
+            assuming the worst. By the time a developer finally sends an update,
+            the buyer relationship has already shifted from "patient" to
+            "suspicious."
           </p>
           <p className="text-gray-300 leading-relaxed">
-            The fix isn&apos;t avoiding delays — on long construction cycles, some slippage is close to unavoidable. The fix is making{" "}
-            <Link href="/construction-update-videos" className="text-yellow-400 font-semibold hover:underline">
+            The fix isn&apos;t avoiding delays — on long construction cycles,
+            some slippage is close to unavoidable. The fix is making{" "}
+            <Link
+              href="/construction-update-videos"
+              className="text-yellow-400 font-semibold hover:underline"
+            >
               proactive, visual communication
             </Link>{" "}
-            a default part of your sales process from the day a unit is booked, not something you reach for only after a buyer complains.
+            a default part of your sales process from the day a unit is booked,
+            not something you reach for only after a buyer complains.
           </p>
         </section>
 
         {/* Section 3 — Warning signs */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">5 Warning Signs You&apos;re Losing a Booked Buyer&apos;s Trust</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            5 Warning Signs You&apos;re Losing a Booked Buyer&apos;s Trust
+          </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { flag: "Site visit requests increase sharply", detail: "A buyer who suddenly wants to visit the site in person, after months of being satisfied with updates, is checking whether the project is real and on track." },
-              { flag: "Calls shift from sales to accounts/legal", detail: "When buyer queries start going to your accounts or legal team instead of sales, they're exploring refund or cancellation options." },
-              { flag: "Broker complaints about 'no updates'", detail: "Brokers hear buyer frustration before you do. If brokers start mentioning 'no updates' as an objection, buyer trust has already eroded with multiple bookings." },
-              { flag: "Negative mentions on property portals or social media", detail: "Anxious buyers vent publicly before they escalate privately. Monitor portal reviews and social comments for delay-related complaints." },
-              { flag: "Possession-date no-shows", detail: "A buyer who doesn't show up to inspect a unit near possession, after being highly engaged earlier, may already be planning to exit or renegotiate." },
-              { flag: "Rising refund or resale enquiries", detail: "An uptick in buyers asking about exiting via resale or refund is a lagging indicator that trust has been eroding for months." },
+              {
+                flag: "Site visit requests increase sharply",
+                detail:
+                  "A buyer who suddenly wants to visit the site in person, after months of being satisfied with updates, is checking whether the project is real and on track.",
+              },
+              {
+                flag: "Calls shift from sales to accounts/legal",
+                detail:
+                  "When buyer queries start going to your accounts or legal team instead of sales, they're exploring refund or cancellation options.",
+              },
+              {
+                flag: "Broker complaints about 'no updates'",
+                detail:
+                  "Brokers hear buyer frustration before you do. If brokers start mentioning 'no updates' as an objection, buyer trust has already eroded with multiple bookings.",
+              },
+              {
+                flag: "Negative mentions on property portals or social media",
+                detail:
+                  "Anxious buyers vent publicly before they escalate privately. Monitor portal reviews and social comments for delay-related complaints.",
+              },
+              {
+                flag: "Possession-date no-shows",
+                detail:
+                  "A buyer who doesn't show up to inspect a unit near possession, after being highly engaged earlier, may already be planning to exit or renegotiate.",
+              },
+              {
+                flag: "Rising refund or resale enquiries",
+                detail:
+                  "An uptick in buyers asking about exiting via resale or refund is a lagging indicator that trust has been eroding for months.",
+              },
             ].map((item) => (
-              <div key={item.flag} className="border border-red-200 bg-red-50 rounded-xl p-5">
+              <div
+                key={item.flag}
+                className="border border-red-200 bg-red-50 rounded-xl p-5"
+              >
                 <div className="flex items-start gap-2 mb-2">
                   <i className="ri-alarm-warning-fill text-red-500 text-lg flex-shrink-0 mt-0.5"></i>
                   <h3 className="font-bold text-black text-sm">{item.flag}</h3>
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed">{item.detail}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {item.detail}
+                </p>
               </div>
             ))}
           </div>
@@ -4122,43 +6496,83 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Section 4 — The framework */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">The Construction Update Video Framework</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            The Construction Update Video Framework
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            A scheduled <strong>construction update video</strong> is the single most effective tool for maintaining buyer confidence through a long build cycle — delayed or on schedule. Here is the framework we recommend to every developer client:
+            A scheduled <strong>construction update video</strong> is the single
+            most effective tool for maintaining buyer confidence through a long
+            build cycle — delayed or on schedule. Here is the framework we
+            recommend to every developer client:
           </p>
           <div className="space-y-6">
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">1. Fixed Monthly or Quarterly Cadence</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                1. Fixed Monthly or Quarterly Cadence
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Commit to a cadence — monthly for active construction phases, quarterly at minimum — and stick to it regardless of whether progress that month was dramatic. Consistency, not drama, is what rebuilds <strong>construction delay buyer trust</strong>. An irregular schedule undermines the purpose more than a less frequent but reliable one.
+                Commit to a cadence — monthly for active construction phases,
+                quarterly at minimum — and stick to it regardless of whether
+                progress that month was dramatic. Consistency, not drama, is
+                what rebuilds <strong>construction delay buyer trust</strong>.
+                An irregular schedule undermines the purpose more than a less
+                frequent but reliable one.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">2. Aerial + Ground-Level Footage Together</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                2. Aerial + Ground-Level Footage Together
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Drone footage shows overall site progress and scale; ground-level footage shows construction detail and quality. A <strong>construction progress video for buyers</strong> that includes both is far more convincing than either alone — it signals nothing is being hidden.
+                Drone footage shows overall site progress and scale;
+                ground-level footage shows construction detail and quality. A{" "}
+                <strong>construction progress video for buyers</strong> that
+                includes both is far more convincing than either alone — it
+                signals nothing is being hidden.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">3. Plan-vs-Actual Timeline Overlay</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                3. Plan-vs-Actual Timeline Overlay
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Show the original construction timeline alongside actual progress on screen. If you&apos;re behind schedule, naming it directly — with a revised date — builds more trust than vague optimism. Buyers forgive a clearly communicated delay far more easily than a discovered one.
+                Show the original construction timeline alongside actual
+                progress on screen. If you&apos;re behind schedule, naming it
+                directly — with a revised date — builds more trust than vague
+                optimism. Buyers forgive a clearly communicated delay far more
+                easily than a discovered one.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">4. Brief Narration From a Real Project Lead</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                4. Brief Narration From a Real Project Lead
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                A 30-second voiceover or on-camera update from your site or project head — not just a generic marketing voice — makes the update feel accountable rather than promotional. Buyers respond to a named person taking ownership of the timeline.
+                A 30-second voiceover or on-camera update from your site or
+                project head — not just a generic marketing voice — makes the
+                update feel accountable rather than promotional. Buyers respond
+                to a named person taking ownership of the timeline.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">5. Direct Distribution, Not Just a Website Upload</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                5. Direct Distribution, Not Just a Website Upload
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Push the video directly to booked buyers via WhatsApp groups and email — don&apos;t make them go looking for it. A <strong>RERA construction progress video</strong> uploaded only to your website rarely gets watched; one sent directly to a buyer&apos;s phone almost always does. Near possession, pairing it with a{" "}
-                <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
+                Push the video directly to booked buyers via WhatsApp groups and
+                email — don&apos;t make them go looking for it. A{" "}
+                <strong>RERA construction progress video</strong> uploaded only
+                to your website rarely gets watched; one sent directly to a
+                buyer&apos;s phone almost always does. Near possession, pairing
+                it with a{" "}
+                <Link
+                  href="/services/3d-walkthrough-video-company-india"
+                  className="text-yellow-600 font-semibold hover:underline"
+                >
                   3D walkthrough video
                 </Link>{" "}
-                of a near-final unit keeps buyers visually engaged right up to handover.
+                of a near-final unit keeps buyers visually engaged right up to
+                handover.
               </p>
             </div>
           </div>
@@ -4166,28 +6580,64 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Section 5 — Already delayed */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">What to Do When You&apos;re Already Delayed</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            What to Do When You&apos;re Already Delayed
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            If you&apos;re reading this because you&apos;re already behind schedule and buyers are getting anxious, the instinct to go quiet until you have better news is exactly backwards. Increase your update frequency during a crisis, not decrease it — switch to monthly or even bi-weekly updates until the project is visibly back on track.
+            If you&apos;re reading this because you&apos;re already behind
+            schedule and buyers are getting anxious, the instinct to go quiet
+            until you have better news is exactly backwards. Increase your
+            update frequency during a crisis, not decrease it — switch to
+            monthly or even bi-weekly updates until the project is visibly back
+            on track.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Be explicit about the revised timeline, acknowledge the delay directly in the video rather than glossing over it, and where possible, offer a concrete gesture — a minor compensation, an upgraded fitting, or priority on a preferred unit — alongside the update. Buyers who feel informed and acknowledged rarely escalate to cancellation; buyers who feel ignored almost always do.
+            Be explicit about the revised timeline, acknowledge the delay
+            directly in the video rather than glossing over it, and where
+            possible, offer a concrete gesture — a minor compensation, an
+            upgraded fitting, or priority on a preferred unit — alongside the
+            update. Buyers who feel informed and acknowledged rarely escalate to
+            cancellation; buyers who feel ignored almost always do.
           </p>
         </section>
 
         {/* Section 6 — Sample calendar */}
         <section className="mb-12 bg-gray-50 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-black mb-4">A Sample Buyer Communication Calendar</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            A Sample Buyer Communication Calendar
+          </h2>
           <ol className="space-y-3">
             {[
-              { step: "Booking + 30 Days", detail: "Welcome video introducing the project team, current site status, and the update schedule the buyer can expect going forward." },
-              { step: "Monthly During Active Construction", detail: "Standard construction update video — aerial + ground footage, timeline overlay, brief narration." },
-              { step: "Any Missed Milestone", detail: "Immediate proactive update explaining the delay, the revised date, and the reason — sent within days, not at the next scheduled cycle." },
-              { step: "90 Days Before Possession", detail: "Increased cadence to fortnightly, plus a dedicated walkthrough video of a near-final unit if available." },
-              { step: "Possession", detail: "Final handover video and a direct invitation to schedule an inspection — closing the communication loop that began at booking." },
+              {
+                step: "Booking + 30 Days",
+                detail:
+                  "Welcome video introducing the project team, current site status, and the update schedule the buyer can expect going forward.",
+              },
+              {
+                step: "Monthly During Active Construction",
+                detail:
+                  "Standard construction update video — aerial + ground footage, timeline overlay, brief narration.",
+              },
+              {
+                step: "Any Missed Milestone",
+                detail:
+                  "Immediate proactive update explaining the delay, the revised date, and the reason — sent within days, not at the next scheduled cycle.",
+              },
+              {
+                step: "90 Days Before Possession",
+                detail:
+                  "Increased cadence to fortnightly, plus a dedicated walkthrough video of a near-final unit if available.",
+              },
+              {
+                step: "Possession",
+                detail:
+                  "Final handover video and a direct invitation to schedule an inspection — closing the communication loop that began at booking.",
+              },
             ].map(({ step, detail }, i) => (
               <li key={step} className="flex gap-4">
-                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">{i + 1}</div>
+                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">
+                  {i + 1}
+                </div>
                 <div>
                   <span className="font-bold text-black">{step} — </span>
                   <span className="text-gray-700">{detail}</span>
@@ -4199,7 +6649,9 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* FAQ */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-5">
             {[
               {
@@ -4237,21 +6689,40 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Related Posts */}
         <div className="border-t border-gray-100 pt-10 mb-12">
-          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <h3 className="text-lg font-bold text-black mb-5">
+            Related Articles
+          </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <Link href="/blog/sell-property-to-nri-buyers-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">NRI Guide</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">How to Sell Property to NRI Buyers Who Can&apos;t Visit India</h4>
+            <Link
+              href="/blog/sell-property-to-nri-buyers-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                NRI Guide
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                How to Sell Property to NRI Buyers Who Can&apos;t Visit India
+              </h4>
             </Link>
-            <Link href="/blog/real-estate-drone-photography-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Drone</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Real Estate Drone Photography in India: The Complete Guide</h4>
+            <Link
+              href="/blog/real-estate-drone-photography-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Drone
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                Real Estate Drone Photography in India: The Complete Guide
+              </h4>
             </Link>
           </div>
         </div>
 
         {/* Back */}
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
           <i className="ri-arrow-left-line"></i> Back to Blog
         </Link>
       </div>
@@ -4263,13 +6734,21 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
             Start Building Buyer Trust With Scheduled Updates
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Share your project timeline and buyer base — we&apos;ll set up a recurring construction update video schedule with a quote within 24 hours.
+            Share your project timeline and buyer base — we&apos;ll set up a
+            recurring construction update video schedule with a quote within 24
+            hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
               Request a Quote
             </Link>
-            <Link href="/construction-update-videos" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/construction-update-videos"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               View Construction Update Video Service
             </Link>
           </div>
@@ -4284,7 +6763,11 @@ function ConstructionDelayTrustArticle({ post }: { post: ReturnType<typeof getPo
 /* ─────────────────────────────────────────────────────────────
    PREMIUM PROJECT DIFFERENTIATION — INTERIOR WALKTHROUGH + BRANDING
    ───────────────────────────────────────────────────────────── */
-function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function PremiumDifferentiationArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -4310,7 +6793,9 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
           <div className="flex items-center gap-4 text-sm text-gray-400">
             <span>{post.author}</span>
             <span>•</span>
@@ -4321,11 +6806,13 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
 
       {/* Body */}
       <div className="container mx-auto px-6 max-w-4xl py-16">
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium"
+            >
               {tag}
             </span>
           ))}
@@ -4334,59 +6821,117 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
         {/* Intro */}
         <section className="mb-12">
           <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-            You spent extra on larger floor plates, better fittings, and premium amenities. Your pricing reflects that. But scroll through your Instagram feed or your listing on a property portal, and it looks indistinguishable from a budget project three localities away — the same flat 3D renders, the same empty-room photography, the same generic logo treatment.
+            You spent extra on larger floor plates, better fittings, and premium
+            amenities. Your pricing reflects that. But scroll through your
+            Instagram feed or your listing on a property portal, and it looks
+            indistinguishable from a budget project three localities away — the
+            same flat 3D renders, the same empty-room photography, the same
+            generic logo treatment.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            This is the most expensive, least talked-about problem in <strong>premium real estate marketing</strong> in India: developers pay a premium to build a better product, then present it with the same visual language as everyone else. The buyer never gets far enough to learn about your superior specs, because nothing in the first three seconds of a scroll signalled that this project was different.
+            This is the most expensive, least talked-about problem in{" "}
+            <strong>premium real estate marketing</strong> in India: developers
+            pay a premium to build a better product, then present it with the
+            same visual language as everyone else. The buyer never gets far
+            enough to learn about your superior specs, because nothing in the
+            first three seconds of a scroll signalled that this project was
+            different.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This guide breaks down exactly where <strong>premium project differentiation</strong> is lost, the five visual signals that actually separate premium from generic in a buyer&apos;s mind, and how interior cinematic walkthroughs and proper branding work together to fix it.
+            This guide breaks down exactly where{" "}
+            <strong>premium project differentiation</strong> is lost, the five
+            visual signals that actually separate premium from generic in a
+            buyer&apos;s mind, and how interior cinematic walkthroughs and
+            proper branding work together to fix it.
           </p>
         </section>
 
         {/* Section 1 — The 3-second scroll test */}
         <section className="mb-12 bg-black rounded-2xl p-8 text-white">
-          <h2 className="text-2xl font-bold text-white mb-4">The 3-Second Scroll Test</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            The 3-Second Scroll Test
+          </h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            A buyer scrolling Instagram, a property portal, or a WhatsApp forward spends roughly three seconds deciding whether a project is worth a second look. In that window, they are not reading your specifications, your RERA carpet area, or your amenity list — they are reacting purely to the visual quality and feel of what is on screen.
+            A buyer scrolling Instagram, a property portal, or a WhatsApp
+            forward spends roughly three seconds deciding whether a project is
+            worth a second look. In that window, they are not reading your
+            specifications, your RERA carpet area, or your amenity list — they
+            are reacting purely to the visual quality and feel of what is on
+            screen.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            If your visuals look like every other listing — generic renders, flat lighting, no lifestyle context — your project fails the 3-second scroll test regardless of how good the actual product is. The buyer scrolls past before your premium positioning has a chance to register.
+            If your visuals look like every other listing — generic renders,
+            flat lighting, no lifestyle context — your project fails the
+            3-second scroll test regardless of how good the actual product is.
+            The buyer scrolls past before your premium positioning has a chance
+            to register.
           </p>
         </section>
 
         {/* Section 2 — 5 visual signals */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">5 Visual Signals That Separate Premium From Generic</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            5 Visual Signals That Separate Premium From Generic
+          </h2>
           <div className="space-y-6">
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">1. Cinematic Lighting and Mood, Not Flat Renders</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                1. Cinematic Lighting and Mood, Not Flat Renders
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Generic 3D renders use flat, even lighting that shows the layout but nothing about how the space actually feels at golden hour or in the evening. Premium presentation uses deliberate lighting design — warm interior glow, natural light raking across a living room — the same way a luxury hotel photographs its suites.
+                Generic 3D renders use flat, even lighting that shows the layout
+                but nothing about how the space actually feels at golden hour or
+                in the evening. Premium presentation uses deliberate lighting
+                design — warm interior glow, natural light raking across a
+                living room — the same way a luxury hotel photographs its
+                suites.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">2. Lifestyle Staging, Not Empty Rooms</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                2. Lifestyle Staging, Not Empty Rooms
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                An empty room, however well-built, reads as generic inventory. Staged furniture, styled decor, and a sense of how someone would actually live in the space is what makes a buyer picture themselves there — and is consistently missing from budget-style real estate visuals.
+                An empty room, however well-built, reads as generic inventory.
+                Staged furniture, styled decor, and a sense of how someone would
+                actually live in the space is what makes a buyer picture
+                themselves there — and is consistently missing from budget-style
+                real estate visuals.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">3. Cinematic Camera Movement, Not Static Shots</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                3. Cinematic Camera Movement, Not Static Shots
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                A static render or photo asks the buyer to imagine the space. A cinematic walkthrough with deliberate camera movement — a slow push through a doorway, a reveal of a view — does the imagining for them. Movement and pacing are themselves a signal of production quality and, by extension, project quality.
+                A static render or photo asks the buyer to imagine the space. A
+                cinematic walkthrough with deliberate camera movement — a slow
+                push through a doorway, a reveal of a view — does the imagining
+                for them. Movement and pacing are themselves a signal of
+                production quality and, by extension, project quality.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">4. Material and Detail Storytelling</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                4. Material and Detail Storytelling
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Premium finishes only register as premium when the camera lingers on them — a macro shot of a marble vein, a close-up of a brushed-brass handle, the texture of a wood panel. Wide shots alone hide the very details buyers are paying extra for.
+                Premium finishes only register as premium when the camera
+                lingers on them — a macro shot of a marble vein, a close-up of a
+                brushed-brass handle, the texture of a wood panel. Wide shots
+                alone hide the very details buyers are paying extra for.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">5. Consistent Brand Identity Across Every Touchpoint</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                5. Consistent Brand Identity Across Every Touchpoint
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                A premium logo and typography system used inconsistently — a polished hoarding next to a poorly designed brochure next to a generic Instagram template — undercuts the very positioning the visuals are trying to build. Premium perception requires consistency, not just one great asset.
+                A premium logo and typography system used inconsistently — a
+                polished hoarding next to a poorly designed brochure next to a
+                generic Instagram template — undercuts the very positioning the
+                visuals are trying to build. Premium perception requires
+                consistency, not just one great asset.
               </p>
             </div>
           </div>
@@ -4394,13 +6939,27 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Section 3 — Interior cinematic walkthrough */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">How Interior Cinematic Walkthroughs Solve the Differentiation Problem</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            How Interior Cinematic Walkthroughs Solve the Differentiation
+            Problem
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            An <strong>interior cinematic walkthrough</strong> is built specifically to deliver the first four signals above in one asset — lighting design, lifestyle staging, camera choreography, and material detail — sequenced as a single cinematic experience rather than a set of disconnected renders.
+            An <strong>interior cinematic walkthrough</strong> is built
+            specifically to deliver the first four signals above in one asset —
+            lighting design, lifestyle staging, camera choreography, and
+            material detail — sequenced as a single cinematic experience rather
+            than a set of disconnected renders.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Unlike a standard walkthrough that simply moves a camera through a floor plan, an interior cinematic walkthrough is directed: it chooses what to reveal, in what order, and lingers exactly where the premium detail is. This is the single highest-leverage fix for a premium project that currently presents like a budget one online.{" "}
-            <Link href="/services/interior-cinematic-walkthrough" className="text-yellow-600 font-semibold hover:underline">
+            Unlike a standard walkthrough that simply moves a camera through a
+            floor plan, an interior cinematic walkthrough is directed: it
+            chooses what to reveal, in what order, and lingers exactly where the
+            premium detail is. This is the single highest-leverage fix for a
+            premium project that currently presents like a budget one online.{" "}
+            <Link
+              href="/services/interior-cinematic-walkthrough"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               Explore our interior cinematic walkthrough service
             </Link>
             .
@@ -4409,13 +6968,28 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Section 4 — Branding */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">Branding Is the Other Half of Premium Perception</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            Branding Is the Other Half of Premium Perception
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Even a perfect walkthrough underperforms if it sits next to a generic logo, an inconsistent typography system, or a brochure that looks like a template. A <strong>real estate branding agency</strong> brings the same discipline to your visual identity that a cinematic walkthrough brings to your interiors — consistent typography, a defined colour system, and presentation-grade collateral across hoardings, brochures, digital ads, and investor decks.
+            Even a perfect walkthrough underperforms if it sits next to a
+            generic logo, an inconsistent typography system, or a brochure that
+            looks like a template. A{" "}
+            <strong>real estate branding agency</strong> brings the same
+            discipline to your visual identity that a cinematic walkthrough
+            brings to your interiors — consistent typography, a defined colour
+            system, and presentation-grade collateral across hoardings,
+            brochures, digital ads, and investor decks.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Developers who pair a strong interior walkthrough with disciplined branding see the two reinforce each other — the walkthrough creates desire, the branding makes that desire feel premium and trustworthy at every subsequent touchpoint.{" "}
-            <Link href="/graphics-branding" className="text-yellow-600 font-semibold hover:underline">
+            Developers who pair a strong interior walkthrough with disciplined
+            branding see the two reinforce each other — the walkthrough creates
+            desire, the branding makes that desire feel premium and trustworthy
+            at every subsequent touchpoint.{" "}
+            <Link
+              href="/graphics-branding"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               Explore our graphics and branding service
             </Link>
             .
@@ -4424,18 +6998,46 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Section 5 — Audit checklist */}
         <section className="mb-12 bg-gray-50 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-black mb-4">A Quick Audit: 6 Questions for Your Current Premium Marketing</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            A Quick Audit: 6 Questions for Your Current Premium Marketing
+          </h2>
           <ol className="space-y-3">
             {[
-              { step: "Lighting Check", detail: "Do your renders and walkthroughs use deliberate, warm lighting — or flat, even daylight that shows layout but no mood?" },
-              { step: "Staging Check", detail: "Are your interior spaces shown furnished and styled, or empty and generic?" },
-              { step: "Movement Check", detail: "Does your walkthrough use directed camera movement, or does it feel like a static render in motion?" },
-              { step: "Detail Check", detail: "Does anything in your visuals show the actual material quality you're charging a premium for?" },
-              { step: "Brand Consistency Check", detail: "Would a buyer recognise your hoarding, brochure, and Instagram post as coming from the same project?" },
-              { step: "3-Second Check", detail: "Show your current visuals to someone unfamiliar with the project for 3 seconds — do they describe it as 'premium,' or just 'a flat'?" },
+              {
+                step: "Lighting Check",
+                detail:
+                  "Do your renders and walkthroughs use deliberate, warm lighting — or flat, even daylight that shows layout but no mood?",
+              },
+              {
+                step: "Staging Check",
+                detail:
+                  "Are your interior spaces shown furnished and styled, or empty and generic?",
+              },
+              {
+                step: "Movement Check",
+                detail:
+                  "Does your walkthrough use directed camera movement, or does it feel like a static render in motion?",
+              },
+              {
+                step: "Detail Check",
+                detail:
+                  "Does anything in your visuals show the actual material quality you're charging a premium for?",
+              },
+              {
+                step: "Brand Consistency Check",
+                detail:
+                  "Would a buyer recognise your hoarding, brochure, and Instagram post as coming from the same project?",
+              },
+              {
+                step: "3-Second Check",
+                detail:
+                  "Show your current visuals to someone unfamiliar with the project for 3 seconds — do they describe it as 'premium,' or just 'a flat'?",
+              },
             ].map(({ step, detail }, i) => (
               <li key={step} className="flex gap-4">
-                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">{i + 1}</div>
+                <div className="flex-shrink-0 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mt-0.5">
+                  {i + 1}
+                </div>
                 <div>
                   <span className="font-bold text-black">{step} — </span>
                   <span className="text-gray-700">{detail}</span>
@@ -4447,7 +7049,9 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* FAQ */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-5">
             {[
               {
@@ -4481,21 +7085,42 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Related Posts */}
         <div className="border-t border-gray-100 pt-10 mb-12">
-          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <h3 className="text-lg font-bold text-black mb-5">
+            Related Articles
+          </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <Link href="/blog/3d-house-rendering-guide-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Rendering</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">3D House Rendering in India: The Complete Guide for Real Estate Developers (2026)</h4>
+            <Link
+              href="/blog/3d-house-rendering-guide-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Rendering
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                3D House Rendering in India: The Complete Guide for Real Estate
+                Developers (2026)
+              </h4>
             </Link>
-            <Link href="/blog/real-estate-marketing-video-types-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Marketing</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">7 Types of Real Estate Marketing Videos Every Indian Developer Should Use in 2026</h4>
+            <Link
+              href="/blog/real-estate-marketing-video-types-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Marketing
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                7 Types of Real Estate Marketing Videos Every Indian Developer
+                Should Use in 2026
+              </h4>
             </Link>
           </div>
         </div>
 
         {/* Back */}
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
           <i className="ri-arrow-left-line"></i> Back to Blog
         </Link>
       </div>
@@ -4507,16 +7132,27 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
             Make Your Premium Project Look Premium
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Share your project details — we&apos;ll recommend the right mix of interior cinematic walkthrough and branding work, with a quote within 24 hours.
+            Share your project details — we&apos;ll recommend the right mix of
+            interior cinematic walkthrough and branding work, with a quote
+            within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
               Request a Quote
             </Link>
-            <Link href="/services/interior-cinematic-walkthrough" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/services/interior-cinematic-walkthrough"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               View Interior Walkthrough Service
             </Link>
-            <Link href="/graphics-branding" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/graphics-branding"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               View Branding Service
             </Link>
           </div>
@@ -4531,7 +7167,11 @@ function PremiumDifferentiationArticle({ post }: { post: ReturnType<typeof getPo
 /* ─────────────────────────────────────────────────────────────
    SCALE MODEL IN THE SALES GALLERY — EXPERIENCE CENTRE ROI
    ───────────────────────────────────────────────────────────── */
-function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function ScaleModelSalesGalleryArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -4557,7 +7197,9 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
           <div className="flex items-center gap-4 text-sm text-gray-400">
             <span>{post.author}</span>
             <span>•</span>
@@ -4568,11 +7210,13 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
 
       {/* Body */}
       <div className="container mx-auto px-6 max-w-4xl py-16">
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium"
+            >
               {tag}
             </span>
           ))}
@@ -4581,42 +7225,86 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
         {/* Intro */}
         <section className="mb-12">
           <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-            A real estate sales gallery exists to do one job: turn a walk-in into a booking. You spend on the location, the interiors, the sample flat, the sales team — and then, increasingly, on a wall of screens playing a 3D walkthrough on loop. Yet a room full of screens rarely holds a buyer the way a physical <strong>scale model for sales gallery</strong> use does. Buyers glance at the video, nod, and drift toward the exit.
+            A real estate sales gallery exists to do one job: turn a walk-in
+            into a booking. You spend on the location, the interiors, the sample
+            flat, the sales team — and then, increasingly, on a wall of screens
+            playing a 3D walkthrough on loop. Yet a room full of screens rarely
+            holds a buyer the way a physical{" "}
+            <strong>scale model for sales gallery</strong> use does. Buyers
+            glance at the video, nod, and drift toward the exit.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The reason isn&apos;t the quality of the video. It&apos;s that a screen asks a buyer to <em>watch</em>, while a scale model invites them to <em>lean in</em>. In an <strong>experience centre design</strong> built to close high-value bookings, that difference in body language is the difference between a lead and a booking.
+            The reason isn&apos;t the quality of the video. It&apos;s that a
+            screen asks a buyer to <em>watch</em>, while a scale model invites
+            them to <em>lean in</em>. In an{" "}
+            <strong>experience centre design</strong> built to close high-value
+            bookings, that difference in body language is the difference between
+            a lead and a booking.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This guide breaks down what a scale model actually does inside a sales gallery, why an experience centre without one feels strangely empty, and how to think about a <strong>property sales office model</strong> as a conversion tool rather than a decorative centrepiece.
+            This guide breaks down what a scale model actually does inside a
+            sales gallery, why an experience centre without one feels strangely
+            empty, and how to think about a{" "}
+            <strong>property sales office model</strong> as a conversion tool
+            rather than a decorative centrepiece.
           </p>
         </section>
 
         {/* Section 1 — What the model does */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">What a Scale Model Actually Does in the Room</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            What a Scale Model Actually Does in the Room
+          </h2>
           <div className="space-y-6">
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">It Gives the Buyer a Reason to Stop Walking</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                It Gives the Buyer a Reason to Stop Walking
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                A physical model is the one object in the sales gallery a buyer physically walks around. That circling motion buys your sales team the single most valuable thing in a pitch: time. A buyer standing still at a <strong>property sales office model</strong> for four minutes is a buyer being sold to; a buyer drifting past a screen is already leaving.
+                A physical model is the one object in the sales gallery a buyer
+                physically walks around. That circling motion buys your sales
+                team the single most valuable thing in a pitch: time. A buyer
+                standing still at a <strong>property sales office model</strong>{" "}
+                for four minutes is a buyer being sold to; a buyer drifting past
+                a screen is already leaving.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">It Answers &quot;Where Is My Flat?&quot; Instantly</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                It Answers &quot;Where Is My Flat?&quot; Instantly
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                The most common buyer question in any sales gallery is spatial — which tower, which side, what does my unit look out onto. A scale model answers it with a pointing finger in two seconds, where a brochure or screen needs a paragraph. This is why <strong>experience centre design</strong> that centres on a model consistently shortens the explanation phase of a pitch.
+                The most common buyer question in any sales gallery is spatial —
+                which tower, which side, what does my unit look out onto. A
+                scale model answers it with a pointing finger in two seconds,
+                where a brochure or screen needs a paragraph. This is why{" "}
+                <strong>experience centre design</strong> that centres on a
+                model consistently shortens the explanation phase of a pitch.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">It Makes Scale and Density Feel Honest</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                It Makes Scale and Density Feel Honest
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Renders can flatter; a physical model reads as truthful. When a buyer can see the real spacing between towers, the actual size of the podium garden, and how the project sits in its plot, trust goes up. That perceived honesty is a large part of the <strong>scale model ROI real estate</strong> developers report — it removes a silent objection before it&apos;s spoken.
+                Renders can flatter; a physical model reads as truthful. When a
+                buyer can see the real spacing between towers, the actual size
+                of the podium garden, and how the project sits in its plot,
+                trust goes up. That perceived honesty is a large part of the{" "}
+                <strong>scale model ROI real estate</strong> developers report —
+                it removes a silent objection before it&apos;s spoken.
               </p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-2">It Creates the Photo Buyers Take Home</h3>
+              <h3 className="text-lg font-bold text-black mb-2">
+                It Creates the Photo Buyers Take Home
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Buyers photograph a lit scale model far more than they photograph a screen. That photo travels home to the co-decision-maker who didn&apos;t visit — the spouse, the parent, the investing partner — carrying your project into the conversation where the real booking decision often gets made.
+                Buyers photograph a lit scale model far more than they
+                photograph a screen. That photo travels home to the
+                co-decision-maker who didn&apos;t visit — the spouse, the
+                parent, the investing partner — carrying your project into the
+                conversation where the real booking decision often gets made.
               </p>
             </div>
           </div>
@@ -4624,36 +7312,76 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Section 2 — Why empty galleries lose bookings */}
         <section className="mb-12 bg-black rounded-2xl p-8 text-white">
-          <h2 className="text-2xl font-bold text-white mb-4">Why a Screen-Only Gallery Feels Empty</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Why a Screen-Only Gallery Feels Empty
+          </h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            An <strong className="text-white">experience centre design</strong> built only around screens and sample flats has no natural gathering point. Buyers don&apos;t know where to stand, the sales conversation has no anchor, and the room reads as a lobby rather than a showroom. The screen plays whether anyone watches or not, so it commands no attention.
+            An <strong className="text-white">experience centre design</strong>{" "}
+            built only around screens and sample flats has no natural gathering
+            point. Buyers don&apos;t know where to stand, the sales conversation
+            has no anchor, and the room reads as a lobby rather than a showroom.
+            The screen plays whether anyone watches or not, so it commands no
+            attention.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            A scale model fixes the room&apos;s geography. It tells everyone — buyer, spouse, and salesperson — where to stand and what to look at. Remove it and the most expensive room in your marketing budget loses its focal point, which is exactly why galleries without a <strong className="text-white">property sales office model</strong> quietly underperform on walk-in-to-booking conversion.
+            A scale model fixes the room&apos;s geography. It tells everyone —
+            buyer, spouse, and salesperson — where to stand and what to look at.
+            Remove it and the most expensive room in your marketing budget loses
+            its focal point, which is exactly why galleries without a{" "}
+            <strong className="text-white">property sales office model</strong>{" "}
+            quietly underperform on walk-in-to-booking conversion.
           </p>
         </section>
 
         {/* Section 3 — Making the model earn its cost */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">Making the Model Earn Its Place (Not Just Fill Space)</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            Making the Model Earn Its Place (Not Just Fill Space)
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            A scale model only delivers <strong>scale model ROI real estate</strong> when it&apos;s built and placed as a sales tool. Five things separate a model that converts from one that just occupies a table:
+            A scale model only delivers{" "}
+            <strong>scale model ROI real estate</strong> when it&apos;s built
+            and placed as a sales tool. Five things separate a model that
+            converts from one that just occupies a table:
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { t: "Working LED lighting", d: "Lit units, amenity zones, and landscape make the model a live object buyers interact with, not a static block. Switchable lighting also lets a salesperson highlight exactly the tower or floor a buyer is considering." },
-              { t: "Central, walk-around placement", d: "The model belongs in the middle of the gallery with clear space on all sides — not against a wall. Buyers need to circle it. If they can only see one face, half its value is lost." },
-              { t: "Accurate context, not just towers", d: "Roads, neighbouring plots, and real surroundings make the model trustworthy. A tower floating on an empty base raises the very doubts the model is meant to remove." },
-              { t: "Unit-level legibility", d: "A buyer should be able to find a specific unit type on the model. This turns the model into a closing aid the sales team uses on every pitch, not just a first-impression prop." },
-              { t: "A protective, well-finished case", d: "A dusty or damaged model signals a careless developer. A clean acrylic case with good finishing protects both the model and the premium perception of the project." },
-              { t: "Paired with the digital walkthrough", d: "The model answers 'where and how big'; a 3D walkthrough answers 'what does it feel like inside'. Used together at the gallery, they cover the full buyer question set." },
+              {
+                t: "Working LED lighting",
+                d: "Lit units, amenity zones, and landscape make the model a live object buyers interact with, not a static block. Switchable lighting also lets a salesperson highlight exactly the tower or floor a buyer is considering.",
+              },
+              {
+                t: "Central, walk-around placement",
+                d: "The model belongs in the middle of the gallery with clear space on all sides — not against a wall. Buyers need to circle it. If they can only see one face, half its value is lost.",
+              },
+              {
+                t: "Accurate context, not just towers",
+                d: "Roads, neighbouring plots, and real surroundings make the model trustworthy. A tower floating on an empty base raises the very doubts the model is meant to remove.",
+              },
+              {
+                t: "Unit-level legibility",
+                d: "A buyer should be able to find a specific unit type on the model. This turns the model into a closing aid the sales team uses on every pitch, not just a first-impression prop.",
+              },
+              {
+                t: "A protective, well-finished case",
+                d: "A dusty or damaged model signals a careless developer. A clean acrylic case with good finishing protects both the model and the premium perception of the project.",
+              },
+              {
+                t: "Paired with the digital walkthrough",
+                d: "The model answers 'where and how big'; a 3D walkthrough answers 'what does it feel like inside'. Used together at the gallery, they cover the full buyer question set.",
+              },
             ].map((item) => (
-              <div key={item.t} className="border border-gray-200 rounded-xl p-5">
+              <div
+                key={item.t}
+                className="border border-gray-200 rounded-xl p-5"
+              >
                 <div className="flex items-start gap-2 mb-2">
                   <i className="ri-checkbox-circle-fill text-yellow-500 text-lg flex-shrink-0 mt-0.5"></i>
                   <h3 className="font-bold text-black text-sm">{item.t}</h3>
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed">{item.d}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {item.d}
+                </p>
               </div>
             ))}
           </div>
@@ -4661,26 +7389,44 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Section 4 — Model + walkthrough together */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-4">The Model and the Screen Are Partners, Not Rivals</h2>
+          <h2 className="text-2xl font-bold text-black mb-4">
+            The Model and the Screen Are Partners, Not Rivals
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The mistake isn&apos;t having screens in the gallery — it&apos;s letting a screen replace the model. The two do different jobs. The physical model owns the room&apos;s attention and answers spatial questions; the{" "}
-            <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
+            The mistake isn&apos;t having screens in the gallery — it&apos;s
+            letting a screen replace the model. The two do different jobs. The
+            physical model owns the room&apos;s attention and answers spatial
+            questions; the{" "}
+            <Link
+              href="/services/3d-walkthrough-video-company-india"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               3D walkthrough video
             </Link>{" "}
-            takes a buyer inside a unit once the model has earned their interest.
+            takes a buyer inside a unit once the model has earned their
+            interest.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            The highest-converting sales galleries sequence the two deliberately: the salesperson opens at the model to establish the whole project, then walks the buyer to the screen or sample flat for the interior experience. Commissioning both from{" "}
-            <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
+            The highest-converting sales galleries sequence the two
+            deliberately: the salesperson opens at the model to establish the
+            whole project, then walks the buyer to the screen or sample flat for
+            the interior experience. Commissioning both from{" "}
+            <Link
+              href="/services/scale-model-maker-india"
+              className="text-yellow-600 font-semibold hover:underline"
+            >
               one architectural scale model partner
             </Link>{" "}
-            keeps the massing, materials, and colour story consistent between the physical model and the video.
+            keeps the massing, materials, and colour story consistent between
+            the physical model and the video.
           </p>
         </section>
 
         {/* FAQ */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold text-black mb-6">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-5">
             {[
               {
@@ -4714,21 +7460,42 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
 
         {/* Related Posts */}
         <div className="border-t border-gray-100 pt-10 mb-12">
-          <h3 className="text-lg font-bold text-black mb-5">Related Articles</h3>
+          <h3 className="text-lg font-bold text-black mb-5">
+            Related Articles
+          </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <Link href="/blog/architectural-scale-models-india-real-estate" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Scale Models</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">The Silent Salesperson: How Architectural Scale Models Close Deals That Digital Can&apos;t</h4>
+            <Link
+              href="/blog/architectural-scale-models-india-real-estate"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Scale Models
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                The Silent Salesperson: How Architectural Scale Models Close
+                Deals That Digital Can&apos;t
+              </h4>
             </Link>
-            <Link href="/blog/architectural-scale-model-price-india-2026" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Pricing</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">Architectural Scale Model Price in India 2026: Complete Cost Guide</h4>
+            <Link
+              href="/blog/architectural-scale-model-price-india-2026"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Pricing
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight text-sm">
+                Architectural Scale Model Price in India 2026: Complete Cost
+                Guide
+              </h4>
             </Link>
           </div>
         </div>
 
         {/* Back */}
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
           <i className="ri-arrow-left-line"></i> Back to Blog
         </Link>
       </div>
@@ -4740,13 +7507,21 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
             Give Your Sales Gallery a Centrepiece That Converts
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Share your project and gallery plans — we&apos;ll recommend the right scale model and walkthrough setup for your experience centre, with a quote within 24 hours.
+            Share your project and gallery plans — we&apos;ll recommend the
+            right scale model and walkthrough setup for your experience centre,
+            with a quote within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
               Request a Quote
             </Link>
-            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/services/scale-model-maker-india"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               View Scale Model Service
             </Link>
           </div>
@@ -4761,7 +7536,11 @@ function ScaleModelSalesGalleryArticle({ post }: { post: ReturnType<typeof getPo
 /* ─────────────────────────────────────────────────────────────
    REAL ESTATE BUYER PSYCHOLOGY — FIRST 3 SECONDS
    ───────────────────────────────────────────────────────────── */
-function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlug> }) {
+function BuyerPsychologyArticle({
+  post,
+}: {
+  post: ReturnType<typeof getPostBySlug>;
+}) {
   if (!post) return null;
 
   return (
@@ -4787,7 +7566,9 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          <p className="text-lg text-gray-300 mb-8 leading-relaxed">{post.excerpt}</p>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
           <div className="flex items-center gap-4 text-sm text-gray-400">
             <span>{post.author}</span>
             <span>•</span>
@@ -4798,11 +7579,13 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
       {/* Body */}
       <div className="container mx-auto px-6 max-w-4xl py-16">
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-12">
           {post.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium">
+            <span
+              key={tag}
+              className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium"
+            >
               {tag}
             </span>
           ))}
@@ -4811,158 +7594,259 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
         {/* Article Content */}
         <article className="space-y-8 text-gray-700">
           <p className="text-lg leading-relaxed">
-            You built a stunning project. The location is perfect. The amenities are premium. The pricing is competitive. Then a buyer walks into your sales gallery, glances around for 3 seconds, and never comes back.
+            You built a stunning project. The location is perfect. The amenities
+            are premium. The pricing is competitive. Then a buyer walks into
+            your sales gallery, glances around for 3 seconds, and never comes
+            back.
           </p>
 
           <p className="text-lg leading-relaxed">
-            This isn't because your project is bad. It's because you didn't understand <strong>real estate buyer psychology</strong> — and most Indian developers don't.
+            This isn't because your project is bad. It's because you didn't
+            understand <strong>real estate buyer psychology</strong> — and most
+            Indian developers don't.
           </p>
 
           <p className="text-lg leading-relaxed">
-            Real estate purchase decisions happen in layers. The first layer — the one that determines whether a buyer stays or leaves — takes approximately 3 seconds. Not 3 minutes. Not the site visit. Not the brochure. Three seconds.
+            Real estate purchase decisions happen in layers. The first layer —
+            the one that determines whether a buyer stays or leaves — takes
+            approximately 3 seconds. Not 3 minutes. Not the site visit. Not the
+            brochure. Three seconds.
           </p>
 
           <div className="my-8 p-6 bg-yellow-50 border-l-4 border-yellow-400 rounded">
             <p className="text-base font-semibold text-black">Key Insight:</p>
-            <p className="text-gray-700">After those first 3 seconds, the buyer's brain has already made an emotional decision. Everything after that is just confirmation bias.</p>
+            <p className="text-gray-700">
+              After those first 3 seconds, the buyer's brain has already made an
+              emotional decision. Everything after that is just confirmation
+              bias.
+            </p>
           </div>
 
-          <h2 className="text-2xl font-bold text-black mt-10 mb-6">The Science: How Buyers Actually Make Real Estate Decisions</h2>
+          <h2 className="text-2xl font-bold text-black mt-10 mb-6">
+            The Science: How Buyers Actually Make Real Estate Decisions
+          </h2>
 
           <p className="leading-relaxed">
-            Real estate buyer psychology isn't random. It's predictable. And it's rooted in how the human brain processes information under uncertainty.
+            Real estate buyer psychology isn't random. It's predictable. And
+            it's rooted in how the human brain processes information under
+            uncertainty.
           </p>
 
           <p className="leading-relaxed">
-            When a buyer enters your sales gallery, their brain immediately scans for trust assessment, scale comprehension, emotional resonance, and confidence level. All before conscious thought kicks in.
+            When a buyer enters your sales gallery, their brain immediately
+            scans for trust assessment, scale comprehension, emotional
+            resonance, and confidence level. All before conscious thought kicks
+            in.
           </p>
 
           <p className="leading-relaxed italic text-gray-600">
-            The buyer hasn't read marketing copy. They've made an emotional judgment. This is real estate buyer psychology in action.
+            The buyer hasn't read marketing copy. They've made an emotional
+            judgment. This is real estate buyer psychology in action.
           </p>
 
-          <h2 className="text-2xl font-bold text-black mt-10 mb-6">Why Developers Lose Deals: The Five Critical Mistakes</h2>
+          <h2 className="text-2xl font-bold text-black mt-10 mb-6">
+            Why Developers Lose Deals: The Five Critical Mistakes
+          </h2>
 
           <div className="space-y-8">
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-3">Mistake 1: Treating Your Sales Gallery Like a Desk</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Mistake 1: Treating Your Sales Gallery Like a Desk
+              </h3>
               <p className="leading-relaxed">
                 Top developers use{" "}
-                <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">
+                <Link
+                  href="/services/scale-model-maker-india"
+                  className="text-yellow-600 font-semibold hover:underline"
+                >
                   architectural scale models
                 </Link>
-                . Buyers physically engage. They understand project relationships instantly. Trust builds faster than any spreadsheet.
+                . Buyers physically engage. They understand project
+                relationships instantly. Trust builds faster than any
+                spreadsheet.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-3">Mistake 2: Showing, Not Demonstrating</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Mistake 2: Showing, Not Demonstrating
+              </h3>
               <p className="leading-relaxed">
                 A render is static. A{" "}
-                <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">
+                <Link
+                  href="/services/3d-walkthrough-video-company-india"
+                  className="text-yellow-600 font-semibold hover:underline"
+                >
                   3D architectural walkthrough
                 </Link>{" "}
-                is dynamic. Decision confidence jumps. Developers report 40% faster buyer decisions with professional walkthroughs.
+                is dynamic. Decision confidence jumps. Developers report 40%
+                faster buyer decisions with professional walkthroughs.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-3">Mistake 3: Showing Projects in Isolation</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Mistake 3: Showing Projects in Isolation
+              </h3>
               <p className="leading-relaxed">
-                <strong>Location videos</strong> and <strong>route videos</strong> answer the trust question first. Buyers who see context make faster decisions. Location is a core trust-builder.
+                <strong>Location videos</strong> and{" "}
+                <strong>route videos</strong> answer the trust question first.
+                Buyers who see context make faster decisions. Location is a core
+                trust-builder.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-3">Mistake 4: Generic Graphics</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Mistake 4: Generic Graphics
+              </h3>
               <p className="leading-relaxed">
-                Professional <strong>real estate graphics</strong> and <strong>branding</strong> signal credibility. Differentiated branding makes your project stand out immediately.
+                Professional <strong>real estate graphics</strong> and{" "}
+                <strong>branding</strong> signal credibility. Differentiated
+                branding makes your project stand out immediately.
               </p>
             </div>
 
             <div className="border-l-4 border-yellow-400 pl-6">
-              <h3 className="text-lg font-bold text-black mb-3">Mistake 5: Many Mediocre Tools vs. Few Excellent Ones</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                Mistake 5: Many Mediocre Tools vs. Few Excellent Ones
+              </h3>
               <p className="leading-relaxed">
-                Depth beats breadth. One excellent 3D walkthrough serves better than five mediocre visualizations. Choose your one core tool and execute it exceptionally.
+                Depth beats breadth. One excellent 3D walkthrough serves better
+                than five mediocre visualizations. Choose your one core tool and
+                execute it exceptionally.
               </p>
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-black mt-10 mb-6">The 4-Layer Real Estate Buyer Psychology Framework</h2>
+          <h2 className="text-2xl font-bold text-black mt-10 mb-6">
+            The 4-Layer Real Estate Buyer Psychology Framework
+          </h2>
 
           <div className="space-y-4 my-8">
             <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
-              <p className="font-bold text-black mb-2">Layer 1 — Trust (0-3 seconds)</p>
-              <p className="text-gray-700 text-sm">Professional execution, clarity, credibility. One weak signal loses everything.</p>
+              <p className="font-bold text-black mb-2">
+                Layer 1 — Trust (0-3 seconds)
+              </p>
+              <p className="text-gray-700 text-sm">
+                Professional execution, clarity, credibility. One weak signal
+                loses everything.
+              </p>
             </div>
             <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
-              <p className="font-bold text-black mb-2">Layer 2 — Comprehension (3-30 seconds)</p>
-              <p className="text-gray-700 text-sm">Scale models, 3D floor plans, renders. Buyers mentally move through the space.</p>
+              <p className="font-bold text-black mb-2">
+                Layer 2 — Comprehension (3-30 seconds)
+              </p>
+              <p className="text-gray-700 text-sm">
+                Scale models, 3D floor plans, renders. Buyers mentally move
+                through the space.
+              </p>
             </div>
             <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
-              <p className="font-bold text-black mb-2">Layer 3 — Emotional Connection (30 sec - 5 min)</p>
+              <p className="font-bold text-black mb-2">
+                Layer 3 — Emotional Connection (30 sec - 5 min)
+              </p>
               <p className="text-gray-700 text-sm">
                 Construction videos, location videos,{" "}
-                <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">
+                <Link
+                  href="/services/virtual-reality-tours"
+                  className="text-yellow-600 font-semibold hover:underline"
+                >
                   VR tours
                 </Link>
                 , walkthroughs. Buyers imagine themselves living there.
               </p>
             </div>
             <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-yellow-400">
-              <p className="font-bold text-black mb-2">Layer 4 — Confidence (5+ minutes)</p>
-              <p className="text-gray-700 text-sm">Transparency, branding consistency, professional communication. Trust reinforces or erodes.</p>
+              <p className="font-bold text-black mb-2">
+                Layer 4 — Confidence (5+ minutes)
+              </p>
+              <p className="text-gray-700 text-sm">
+                Transparency, branding consistency, professional communication.
+                Trust reinforces or erodes.
+              </p>
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-black mt-10 mb-6">The Bottom Line</h2>
+          <h2 className="text-2xl font-bold text-black mt-10 mb-6">
+            The Bottom Line
+          </h2>
 
           <p className="leading-relaxed font-semibold text-black mb-4">
-            Your strategy must answer: <em>How do I build buyer confidence in the first 3 seconds, and deepen it after?</em>
+            Your strategy must answer:{" "}
+            <em>
+              How do I build buyer confidence in the first 3 seconds, and deepen
+              it after?
+            </em>
           </p>
 
           <p className="leading-relaxed">
-            The emotional brain decides first. The rational brain confirms second. Win the emotional layer first. Everything after is reinforcement.
+            The emotional brain decides first. The rational brain confirms
+            second. Win the emotional layer first. Everything after is
+            reinforcement.
           </p>
         </article>
 
         {/* FAQ */}
         <section id="faq" className="mt-16 mb-14">
-          <h2 className="text-3xl font-bold text-black mb-8">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-black mb-8">
+            Frequently Asked Questions
+          </h2>
 
           <div className="space-y-6">
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">What is real estate buyer psychology?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                What is real estate buyer psychology?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                How buyers make property decisions — their emotional triggers, trust patterns, and decision timelines. Research shows gut-level decisions happen in the first 3 seconds; everything after is confirmation bias.
+                How buyers make property decisions — their emotional triggers,
+                trust patterns, and decision timelines. Research shows gut-level
+                decisions happen in the first 3 seconds; everything after is
+                confirmation bias.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">How does a scale model improve real estate buyer psychology?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                How does a scale model improve real estate buyer psychology?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Instant tactile comprehension of scale and density. Builds trust faster than digital. Physical presence extends buyer engagement time — the single most valuable metric in closing.
+                Instant tactile comprehension of scale and density. Builds trust
+                faster than digital. Physical presence extends buyer engagement
+                time — the single most valuable metric in closing.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">How important is professional branding?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                How important is professional branding?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Professional graphics communicate expertise before the floor plan. Generic design signals mediocrity; premium design signals confidence. Directly affects buyer trust and decision speed.
+                Professional graphics communicate expertise before the floor
+                plan. Generic design signals mediocrity; premium design signals
+                confidence. Directly affects buyer trust and decision speed.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">What's the ROI of construction update videos?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                What's the ROI of construction update videos?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Addresses mid-phase anxiety. Developers report 50% higher buyer confidence, faster recovery after delays, fewer cancellations. ROI measured in retained bookings and referrals.
+                Addresses mid-phase anxiety. Developers report 50% higher buyer
+                confidence, faster recovery after delays, fewer cancellations.
+                ROI measured in retained bookings and referrals.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">3D walkthroughs or location videos first?</h3>
+              <h3 className="text-lg font-bold text-black mb-3">
+                3D walkthroughs or location videos first?
+              </h3>
               <p className="text-gray-700 leading-relaxed">
-                Lead with location for trust-building. Follow with 3D walkthroughs for comprehension and emotion. Together they address the psychology of property buying in sequence.
+                Lead with location for trust-building. Follow with 3D
+                walkthroughs for comprehension and emotion. Together they
+                address the psychology of property buying in sequence.
               </p>
             </div>
           </div>
@@ -4970,29 +7854,65 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
 
         {/* Related Posts */}
         <div className="border-t border-gray-100 pt-12 mb-12">
-          <h3 className="text-xl font-bold text-black mb-6">Related Articles</h3>
+          <h3 className="text-xl font-bold text-black mb-6">
+            Related Articles
+          </h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/scale-model-sales-gallery-real-estate-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Sales Gallery</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">What a Scale Model Actually Does Inside a Real Estate Sales Gallery</h4>
+            <Link
+              href="/blog/scale-model-sales-gallery-real-estate-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Sales Gallery
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">
+                What a Scale Model Actually Does Inside a Real Estate Sales
+                Gallery
+              </h4>
             </Link>
-            <Link href="/blog/premium-real-estate-marketing-differentiation-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Premium Marketing</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">Why Your Premium Project Looks Like Every Other Listing Online</h4>
+            <Link
+              href="/blog/premium-real-estate-marketing-differentiation-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Premium Marketing
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">
+                Why Your Premium Project Looks Like Every Other Listing Online
+              </h4>
             </Link>
-            <Link href="/blog/real-estate-marketing-video-types-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Video Strategy</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">7 Types of Real Estate Marketing Videos Every Indian Developer Should Use in 2026</h4>
+            <Link
+              href="/blog/real-estate-marketing-video-types-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Video Strategy
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">
+                7 Types of Real Estate Marketing Videos Every Indian Developer
+                Should Use in 2026
+              </h4>
             </Link>
-            <Link href="/blog/construction-delay-buyer-trust-india" className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">Buyer Confidence</p>
-              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">Construction Delays Are Killing Buyer Trust: How Indian Developers Rebuild Confidence With Video Updates</h4>
+            <Link
+              href="/blog/construction-delay-buyer-trust-india"
+              className="group border border-gray-200 rounded-xl p-5 hover:border-yellow-400 transition-colors"
+            >
+              <p className="text-xs text-yellow-500 font-semibold uppercase mb-2">
+                Buyer Confidence
+              </p>
+              <h4 className="font-bold text-black group-hover:text-yellow-500 transition-colors leading-tight">
+                Construction Delays Are Killing Buyer Trust: How Indian
+                Developers Rebuild Confidence With Video Updates
+              </h4>
             </Link>
           </div>
         </div>
 
         {/* Back */}
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-yellow-500 transition-colors mb-16"
+        >
           <i className="ri-arrow-left-line"></i> Back to Blog
         </Link>
       </div>
@@ -5004,16 +7924,27 @@ function BuyerPsychologyArticle({ post }: { post: ReturnType<typeof getPostBySlu
             Ready to Win Buyers in the First 3 Seconds?
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            The visualization tools you choose — scale models, 3D walkthroughs, location videos, graphics — are your core framework for winning buyer confidence. Let's discuss your strategy.
+            The visualization tools you choose — scale models, 3D walkthroughs,
+            location videos, graphics — are your core framework for winning
+            buyer confidence. Let's discuss your strategy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+            <Link
+              href="/contact"
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+            >
               Get a Free Consultation
             </Link>
-            <Link href="/services/scale-model-maker-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/services/scale-model-maker-india"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               Scale Model Service
             </Link>
-            <Link href="/services/3d-walkthrough-video-company-india" className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors">
+            <Link
+              href="/services/3d-walkthrough-video-company-india"
+              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors"
+            >
               3D Walkthroughs
             </Link>
           </div>

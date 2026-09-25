@@ -160,7 +160,13 @@ const testimonials = [
   },
 ];
 
-type FieldName = "name" | "email" | "countryCode" | "phone" | "project_type" | "message";
+type FieldName =
+  | "name"
+  | "email"
+  | "countryCode"
+  | "phone"
+  | "project_type"
+  | "message";
 type FormErrors = Partial<Record<FieldName, string>>;
 
 function validateField(name: FieldName, value: string): string | undefined {
@@ -201,7 +207,9 @@ export default function RendersIsometricsClient() {
     "idle" | "success" | "error"
   >("idle");
   const [errors, setErrors] = useState<FormErrors>({});
-  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
+  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>(
+    {},
+  );
 
   const handleItemClick = (item: PortfolioItem) => {
     setSelectedItem(item);
@@ -250,10 +258,14 @@ export default function RendersIsometricsClient() {
   ) => {
     const { name, value } = e.target;
     const field = name as FieldName;
-    const sanitized = field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    const sanitized =
+      field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
     setFormData((prev) => ({ ...prev, [field]: sanitized }));
     if (touched[field]) {
-      setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
+      setErrors((prev) => ({
+        ...prev,
+        [field]: validateField(field, sanitized),
+      }));
     }
   };
 
@@ -339,34 +351,34 @@ ${formData.message || "No additional details provided"}
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="">
       <Header />
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/70"></div>
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url('/images/services/3d-renders-isometrics/1.jpg')`,
             }}
           ></div>
+          <div className="absolute inset-0 bg-black/60"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
                   <i className="ri-box-3-line text-3xl text-black"></i>
                 </div>
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+                <h1 className="text-3xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
                   3D House Rendering, Architectural Rendering & 3D Floor Plan
                   Design Services in India
                 </h1>
-                <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
+                <p className="text-base md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
                   Premium 3D rendering services for real estate developers,
-                  architects, and interior designers including 3D house rendering,
-                  3D floor plan design, architectural visualisation, 3D
-                  architectural visualization, AI 3D rendering, and photorealistic
-                  3D rendering interior design solutions.
+                  architects, and interior designers including 3D house
+                  rendering, 3D floor plan design, architectural visualisation,
+                  3D architectural visualization, AI 3D rendering, and
+                  photorealistic 3D rendering interior design solutions.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -384,14 +396,19 @@ ${formData.message || "No additional details provided"}
                 </div>
               </div>
               <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
-                <h3 className="text-xl font-bold text-black mb-1">Get Your 3D Rendering Quote</h3>
+                <h3 className="text-xl font-bold text-black mb-1">
+                  Get Your 3D Rendering Quote
+                </h3>
                 <p className="text-gray-500 text-sm mb-5">
-                  Ready to visualize your project? Contact us for a custom quote.
+                  Ready to visualize your project? Contact us for a custom
+                  quote.
                 </p>
                 <form className="space-y-4" onSubmit={handleSubmit} noValidate>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Name *
+                      </label>
                       <input
                         type="text"
                         name="name"
@@ -402,11 +419,15 @@ ${formData.message || "No additional details provided"}
                         placeholder="Your full name"
                       />
                       {touched.name && errors.name && (
-                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.name}
+                        </p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Email *
+                      </label>
                       <input
                         type="email"
                         name="email"
@@ -417,13 +438,17 @@ ${formData.message || "No additional details provided"}
                         placeholder="your@email.com"
                       />
                       {touched.email && errors.email && (
-                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.email}
+                        </p>
                       )}
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Phone
+                      </label>
                       <div className="flex gap-2">
                         <select
                           name="countryCode"
@@ -432,7 +457,9 @@ ${formData.message || "No additional details provided"}
                           className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
                         >
                           {COUNTRY_CODES.map((c) => (
-                            <option key={c.code} value={c.code}>{c.code}</option>
+                            <option key={c.code} value={c.code}>
+                              {c.code}
+                            </option>
                           ))}
                         </select>
                         <input
@@ -448,11 +475,15 @@ ${formData.message || "No additional details provided"}
                         />
                       </div>
                       {touched.phone && errors.phone && (
-                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.phone}
+                        </p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Render Type</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Render Type
+                      </label>
                       <select
                         name="project_type"
                         value={formData.project_type}
@@ -462,17 +493,23 @@ ${formData.message || "No additional details provided"}
                         <option value="">Select render type</option>
                         <option value="exterior">Exterior Renders</option>
                         <option value="interior">Interior Renders</option>
-                        <option value="isometric">Isometric Illustrations</option>
+                        <option value="isometric">
+                          Isometric Illustrations
+                        </option>
                         <option value="aerial">Aerial Views</option>
                         <option value="360-panorama">360° Panoramas</option>
                         <option value="animation">3D Animation</option>
-                        <option value="comprehensive">Comprehensive Package</option>
+                        <option value="comprehensive">
+                          Comprehensive Package
+                        </option>
                         <option value="other">Other</option>
                       </select>
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                      Project Details
+                    </label>
                     <textarea
                       name="message"
                       value={formData.message}
@@ -502,7 +539,8 @@ ${formData.message || "No additional details provided"}
                   </button>
                   {submitStatus === "success" && (
                     <div className="text-green-600 text-center font-medium text-sm">
-                      Thank you! We&apos;ll get back to you with a custom quote within 24 hours.
+                      Thank you! We&apos;ll get back to you with a custom quote
+                      within 24 hours.
                     </div>
                   )}
                   {submitStatus === "error" && (
@@ -1051,7 +1089,8 @@ ${formData.message || "No additional details provided"}
                 renders let you market before the first brick is laid.
               </p>
             </div>
-            <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
+            <div className="max-w-4xl mx-auto overflow-x-auto rounded-2xl shadow-lg">
+             <div className="min-w-[600px]">
               <div className="grid grid-cols-3 bg-black text-white">
                 <div className="p-6 font-bold text-lg">Feature</div>
                 <div className="p-6 font-bold text-lg text-center border-l border-gray-700">
@@ -1104,6 +1143,7 @@ ${formData.message || "No additional details provided"}
                   </div>
                 </div>
               ))}
+             </div>
             </div>
           </div>
         </section>
@@ -1266,7 +1306,9 @@ ${formData.message || "No additional details provided"}
                         placeholder="Your full name"
                       />
                       {touched.name && errors.name && (
-                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.name}
+                        </p>
                       )}
                     </div>
 
@@ -1284,7 +1326,9 @@ ${formData.message || "No additional details provided"}
                         placeholder="your@email.com"
                       />
                       {touched.email && errors.email && (
-                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.email}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -1302,7 +1346,9 @@ ${formData.message || "No additional details provided"}
                           className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
                         >
                           {COUNTRY_CODES.map((c) => (
-                            <option key={c.code} value={c.code}>{c.code}</option>
+                            <option key={c.code} value={c.code}>
+                              {c.code}
+                            </option>
                           ))}
                         </select>
                         <input
@@ -1318,7 +1364,9 @@ ${formData.message || "No additional details provided"}
                         />
                       </div>
                       {touched.phone && errors.phone && (
-                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.phone}
+                        </p>
                       )}
                     </div>
 

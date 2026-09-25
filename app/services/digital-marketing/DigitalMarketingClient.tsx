@@ -144,13 +144,13 @@ ${formData.message || "No additional details provided"}
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/70"></div>
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url('https://readdy.ai/api/search-image?query=Digital%20marketing%20dashboard%20with%20real%20estate%20analytics%2C%20social%20media%20campaigns%2C%20modern%20computer%20setup%2C%20professional%20marketing%20workspace%2C%20clean%20technology%20background%2C%20data%20visualization%20charts&width=1920&height=1080&seq=marketing-hero&orientation=landscape')`,
             }}
           ></div>
+          <div className="absolute inset-0 bg-black/70"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl">
               <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">

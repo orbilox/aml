@@ -393,16 +393,16 @@ export default function RouteVideosFlatClient() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
                 >
-                  Request a Quote
+                  Get Quote
                 </a>
                 <a
-                  href="#portfolio"
+                  href="/portfolio"
                   className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap"
                 >
-                  Watch Sample Videos
+                  View Portfolio
                 </a>
               </div>
             </div>

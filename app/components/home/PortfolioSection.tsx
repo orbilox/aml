@@ -768,6 +768,8 @@ const categories = [
   "Architectural Scale Models",
 ];
 
+const INITIAL_VISIBLE_COUNT = 9;
+
 export default function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedItem, setSelectedItem] = useState<
@@ -775,11 +777,19 @@ export default function PortfolioSection() {
   >(null);
   const [showVideo, setShowVideo] = useState(false);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
 
   const filteredItems =
     activeCategory === "All"
       ? portfolioItems
       : portfolioItems.filter((item) => item.category === activeCategory);
+
+  const visibleItems = filteredItems.slice(0, visibleCount);
+
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category);
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
+  };
 
   const handleItemClick = (item: (typeof portfolioItems)[0]) => {
     // Specific handling for known external or video items
@@ -894,7 +904,7 @@ export default function PortfolioSection() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => handleCategoryChange(category)}
               className={`px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer ${
                 activeCategory === category
                   ? "bg-yellow-400 text-black"
@@ -908,7 +918,7 @@ export default function PortfolioSection() {
 
         {/* Portfolio Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
+          {visibleItems.map((item) => (
             <div
               key={item.id}
               className="group cursor-pointer"
@@ -960,6 +970,17 @@ export default function PortfolioSection() {
             </div>
           ))}
         </div>
+
+        {visibleCount < filteredItems.length && (
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setVisibleCount(filteredItems.length)}
+              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors cursor-pointer"
+            >
+              See More
+            </button>
+          </div>
+        )}
 
         {/* Modal */}
         {selectedItem && (

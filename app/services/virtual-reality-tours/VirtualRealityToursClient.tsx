@@ -6,7 +6,13 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
-type FieldName = "name" | "email" | "countryCode" | "phone" | "project_type" | "message";
+type FieldName =
+  | "name"
+  | "email"
+  | "countryCode"
+  | "phone"
+  | "project_type"
+  | "message";
 type FormErrors = Partial<Record<FieldName, string>>;
 
 function validateField(name: FieldName, value: string): string | undefined {
@@ -45,7 +51,9 @@ export default function VirtualRealityToursClient() {
     "idle" | "success" | "error"
   >("idle");
   const [errors, setErrors] = useState<FormErrors>({});
-  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
+  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>(
+    {},
+  );
 
   const portfolioProjects = [
     {
@@ -131,10 +139,14 @@ export default function VirtualRealityToursClient() {
   ) => {
     const { name, value } = e.target;
     const field = name as FieldName;
-    const sanitized = field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    const sanitized =
+      field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
     setFormData((prev) => ({ ...prev, [field]: sanitized }));
     if (touched[field]) {
-      setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
+      setErrors((prev) => ({
+        ...prev,
+        [field]: validateField(field, sanitized),
+      }));
     }
   };
 
@@ -206,16 +218,16 @@ export default function VirtualRealityToursClient() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/70"></div>
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url('/images/services/virtual-reality-tours/1.jpg')`,
             }}
           ></div>
+          <div className="absolute inset-0 bg-black/60"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -230,8 +242,8 @@ export default function VirtualRealityToursClient() {
                   Virtual Reality Tours & VR Real Estate Tours in India
                 </h1>
                 <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
-                  We create immersive VR tours, 3D virtual reality tours, and real
-                  estate virtual tours service in India for developers,
+                  We create immersive VR tours, 3D virtual reality tours, and
+                  real estate virtual tours service in India for developers,
                   architects, and real estate brands. Explore properties through
                   interactive 3D virtual home tour experiences, 360 virtual
                   photography, and VR real estate tours designed for modern
@@ -253,14 +265,19 @@ export default function VirtualRealityToursClient() {
                 </div>
               </div>
               <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
-                <h3 className="text-xl font-bold text-black mb-1">Get Your VR Tour Quote</h3>
+                <h3 className="text-xl font-bold text-black mb-1">
+                  Get Your VR Tour Quote
+                </h3>
                 <p className="text-gray-500 text-sm mb-5">
-                  Ready to create immersive VR tours for your next project? Contact our experts today.
+                  Ready to create immersive VR tours for your next project?
+                  Contact our experts today.
                 </p>
                 <form onSubmit={handleSubmit} noValidate className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Name *
+                      </label>
                       <input
                         type="text"
                         name="name"
@@ -271,11 +288,15 @@ export default function VirtualRealityToursClient() {
                         placeholder="Your full name"
                       />
                       {touched.name && errors.name && (
-                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.name}
+                        </p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Email *
+                      </label>
                       <input
                         type="email"
                         name="email"
@@ -286,13 +307,17 @@ export default function VirtualRealityToursClient() {
                         placeholder="your@email.com"
                       />
                       {touched.email && errors.email && (
-                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.email}
+                        </p>
                       )}
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Phone
+                      </label>
                       <div className="flex gap-2">
                         <select
                           name="countryCode"
@@ -301,7 +326,9 @@ export default function VirtualRealityToursClient() {
                           className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
                         >
                           {COUNTRY_CODES.map((c) => (
-                            <option key={c.code} value={c.code}>{c.code}</option>
+                            <option key={c.code} value={c.code}>
+                              {c.code}
+                            </option>
                           ))}
                         </select>
                         <input
@@ -317,11 +344,15 @@ export default function VirtualRealityToursClient() {
                         />
                       </div>
                       {touched.phone && errors.phone && (
-                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.phone}
+                        </p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Type</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Project Type
+                      </label>
                       <select
                         name="project_type"
                         value={formData.project_type}
@@ -338,7 +369,9 @@ export default function VirtualRealityToursClient() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                      Project Details
+                    </label>
                     <textarea
                       name="message"
                       value={formData.message}
@@ -957,7 +990,9 @@ export default function VirtualRealityToursClient() {
                         placeholder="Your full name"
                       />
                       {touched.name && errors.name && (
-                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.name}
+                        </p>
                       )}
                     </div>
                     <div>
@@ -974,7 +1009,9 @@ export default function VirtualRealityToursClient() {
                         placeholder="your@email.com"
                       />
                       {touched.email && errors.email && (
-                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.email}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -991,7 +1028,9 @@ export default function VirtualRealityToursClient() {
                           className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
                         >
                           {COUNTRY_CODES.map((c) => (
-                            <option key={c.code} value={c.code}>{c.code}</option>
+                            <option key={c.code} value={c.code}>
+                              {c.code}
+                            </option>
                           ))}
                         </select>
                         <input
@@ -1007,7 +1046,9 @@ export default function VirtualRealityToursClient() {
                         />
                       </div>
                       {touched.phone && errors.phone && (
-                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.phone}
+                        </p>
                       )}
                     </div>
                     <div>

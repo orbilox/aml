@@ -27,7 +27,10 @@ type FormData = {
 
 type FormErrors = Partial<Record<keyof FormData, string>>;
 
-function validateField(name: keyof FormData, value: string): string | undefined {
+function validateField(
+  name: keyof FormData,
+  value: string,
+): string | undefined {
   switch (name) {
     case "name":
       if (!value.trim()) return "Name is required.";
@@ -64,7 +67,9 @@ export default function DroneShootsClient() {
     "idle" | "success" | "error"
   >("idle");
   const [errors, setErrors] = useState<FormErrors>({});
-  const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
+  const [touched, setTouched] = useState<
+    Partial<Record<keyof FormData, boolean>>
+  >({});
 
   const portfolioProjects: Project[] = [
     {
@@ -159,15 +164,21 @@ export default function DroneShootsClient() {
   ) => {
     const { name, value } = e.target;
     const field = name as keyof FormData;
-    const sanitized = field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
+    const sanitized =
+      field === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value;
     setFormData((prev) => ({ ...prev, [field]: sanitized }));
     if (touched[field]) {
-      setErrors((prev) => ({ ...prev, [field]: validateField(field, sanitized) }));
+      setErrors((prev) => ({
+        ...prev,
+        [field]: validateField(field, sanitized),
+      }));
     }
   };
 
   const handleBlur = (
-    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+    e: React.FocusEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     const field = name as keyof FormData;
@@ -234,7 +245,7 @@ export default function DroneShootsClient() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main>
         {/* Hero */}
         <section className="py-24 min-h-[85vh] flex items-center bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
           <div
@@ -256,10 +267,10 @@ export default function DroneShootsClient() {
                 <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
                   We create cinematic real estate location video content, real
                   estate drone video campaigns, and professional real estate
-                  videography services for developers across India. From property
-                  videography to real estate connectivity videos and location AV
-                  production, we help showcase your project's location advantage
-                  through immersive storytelling.
+                  videography services for developers across India. From
+                  property videography to real estate connectivity videos and
+                  location AV production, we help showcase your project's
+                  location advantage through immersive storytelling.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -277,14 +288,19 @@ export default function DroneShootsClient() {
                 </div>
               </div>
               <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
-                <h3 className="text-xl font-bold text-black mb-1">Get Your Drone Shoot Quote</h3>
+                <h3 className="text-xl font-bold text-black mb-1">
+                  Get Your Drone Shoot Quote
+                </h3>
                 <p className="text-gray-500 text-sm mb-5">
-                  Ready to create cinematic real estate videos and professional property videography for your next project?
+                  Ready to create cinematic real estate videos and professional
+                  property videography for your next project?
                 </p>
                 <form onSubmit={handleSubmit} noValidate className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Name *
+                      </label>
                       <input
                         type="text"
                         name="name"
@@ -296,11 +312,15 @@ export default function DroneShootsClient() {
                         placeholder="Your full name"
                       />
                       {touched.name && errors.name && (
-                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.name}
+                        </p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Email *
+                      </label>
                       <input
                         type="email"
                         name="email"
@@ -312,13 +332,17 @@ export default function DroneShootsClient() {
                         placeholder="your@email.com"
                       />
                       {touched.email && errors.email && (
-                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.email}
+                        </p>
                       )}
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Phone
+                      </label>
                       <div className="flex gap-2">
                         <select
                           name="countryCode"
@@ -327,7 +351,9 @@ export default function DroneShootsClient() {
                           className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
                         >
                           {COUNTRY_CODES.map((c) => (
-                            <option key={c.code} value={c.code}>{c.code}</option>
+                            <option key={c.code} value={c.code}>
+                              {c.code}
+                            </option>
                           ))}
                         </select>
                         <input
@@ -343,11 +369,15 @@ export default function DroneShootsClient() {
                         />
                       </div>
                       {touched.phone && errors.phone && (
-                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.phone}
+                        </p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Shoot Type</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Shoot Type
+                      </label>
                       <select
                         name="project_type"
                         value={formData.project_type}
@@ -355,19 +385,33 @@ export default function DroneShootsClient() {
                         className="w-full px-4 py-3 pr-8 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
                       >
                         <option value="">Select shoot type</option>
-                        <option value="aerial-photography">Aerial Photography</option>
-                        <option value="aerial-videography">Aerial Videography</option>
-                        <option value="construction-progress">Construction Progress</option>
-                        <option value="property-showcase">Property Showcase</option>
+                        <option value="aerial-photography">
+                          Aerial Photography
+                        </option>
+                        <option value="aerial-videography">
+                          Aerial Videography
+                        </option>
+                        <option value="construction-progress">
+                          Construction Progress
+                        </option>
+                        <option value="property-showcase">
+                          Property Showcase
+                        </option>
                         <option value="site-survey">Site Survey</option>
-                        <option value="marketing-content">Marketing Content</option>
-                        <option value="comprehensive">Comprehensive Package</option>
+                        <option value="marketing-content">
+                          Marketing Content
+                        </option>
+                        <option value="comprehensive">
+                          Comprehensive Package
+                        </option>
                         <option value="other">Other</option>
                       </select>
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                      Project Details
+                    </label>
                     <textarea
                       name="message"
                       value={formData.message}
@@ -886,7 +930,9 @@ export default function DroneShootsClient() {
                         placeholder="Your full name"
                       />
                       {touched.name && errors.name && (
-                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.name}
+                        </p>
                       )}
                     </div>
                     <div>
@@ -904,7 +950,9 @@ export default function DroneShootsClient() {
                         placeholder="your@email.com"
                       />
                       {touched.email && errors.email && (
-                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.email}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -921,7 +969,9 @@ export default function DroneShootsClient() {
                           className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
                         >
                           {COUNTRY_CODES.map((c) => (
-                            <option key={c.code} value={c.code}>{c.code}</option>
+                            <option key={c.code} value={c.code}>
+                              {c.code}
+                            </option>
                           ))}
                         </select>
                         <input
@@ -937,7 +987,9 @@ export default function DroneShootsClient() {
                         />
                       </div>
                       {touched.phone && errors.phone && (
-                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.phone}
+                        </p>
                       )}
                     </div>
                     <div>

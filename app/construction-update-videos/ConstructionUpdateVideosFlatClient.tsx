@@ -416,8 +416,8 @@ export default function ConstructionUpdateVideosFlatClient() {
             alt="Construction update videos and construction time lapse India — Alliance Media Labs"
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
         </div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container mx-auto px-6 py-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
@@ -432,10 +432,10 @@ export default function ConstructionUpdateVideosFlatClient() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-full transition-colors"
                 >
-                  Request a Quote
+                  Get Quote
                 </a>
                 <Link
                   href="/portfolio"

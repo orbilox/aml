@@ -484,30 +484,23 @@ export default function ScaleModelMakerIndiaClient() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main>
         {/* ── HERO ── */}
         <section className="py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/65"></div>
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url('/images/services/architectural-scale-models/shapoorji/01.png')`,
             }}
           ></div>
+          <div className="absolute inset-0 bg-black/60"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="w-20 h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-8">
                   <i className="ri-building-2-line text-3xl text-black"></i>
                 </div>
-                {/* Breadcrumb
-                <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-                  <Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link>
-                  <span>/</span>
-                  <span className="text-gray-300">Services</span>
-                  <span>/</span>
-                  <span className="text-yellow-400">Scale Model Maker India</span>
-                </nav> */}
+
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl leading-tight">
                   India&apos;s Expert
                   <br />
@@ -525,10 +518,10 @@ export default function ScaleModelMakerIndiaClient() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    href="#quote-form"
+                    href="/contact"
                     className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
                   >
-                    Get Quote in 24 Hours
+                    Get Quote
                   </Link>
                   <Link
                     href="/portfolio"
