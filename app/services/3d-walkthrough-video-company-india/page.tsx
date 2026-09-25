@@ -152,7 +152,7 @@ const videoObjectSchema = {
   name: "3D Walkthrough Video — Etereo 1, Goa | Alliance Media Labs",
   description:
     "Cinematic 3D property walkthrough for Etereo 1, Goa — a luxury residential project by Etereo Realty. Showcasing photorealistic renders, fluid camera movement, and premium interior detailing produced by Alliance Media Labs.",
-  thumbnailUrl: `${BASE}/images/portfolio/1.png`,
+  thumbnailUrl: `${BASE}/images/portfolio/3d-walkthrough/etereo-1-goa.png`,
   uploadDate: "2025-03-01",
   duration: "PT2M45S",
   contentUrl: "https://www.youtube.com/watch?v=BiCCdx0fDik",

@@ -3965,7 +3965,7 @@ function RealEstateMarketingVideosArticle({
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
             <img
-              src="/images/services/drone-shoots/1.jpg"
+              src="/images/portfolio/location-av/province-d-olympia-noida.png"
               alt="Aerial drone video for real estate"
               className="w-full h-full object-cover"
             />
@@ -4031,7 +4031,7 @@ function RealEstateMarketingVideosArticle({
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
             <img
-              src="/images/services/construction-update-videos/1.jpg"
+              src="/images/portfolio/construction-updates/smart-world-the-edition-gurugram.png"
               alt="Construction update video RERA real estate"
               className="w-full h-full object-cover"
             />
@@ -4161,7 +4161,7 @@ function RealEstateMarketingVideosArticle({
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
             <img
-              src="/images/portfolio/19.jpg"
+              src="/images/portfolio/interior-cinematic-walkthrough/hero-homes-ludhiana.jpg"
               alt="Interior cinematic walkthrough real estate"
               className="w-full h-full object-cover"
             />
@@ -4229,7 +4229,7 @@ function RealEstateMarketingVideosArticle({
           </div>
           <div className="relative rounded-2xl overflow-hidden mb-6 h-64">
             <img
-              src="/images/services/route-videos/1.jpg"
+              src="/images/portfolio/route-videos/hero-homes-the-palatial-gurugram.png"
               alt="Location route video real estate marketing"
               className="w-full h-full object-cover"
             />
@@ -6314,7 +6314,7 @@ function ConstructionDelayTrustArticle({
       <section className="relative bg-black pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img
-            src="/images/portfolio/10.png"
+            src="/images/portfolio/construction-updates/pyramid-alban-gurugram.png"
             alt="Construction delay buyer trust India — Alliance Media Labs"
             className="w-full h-full object-cover"
           />

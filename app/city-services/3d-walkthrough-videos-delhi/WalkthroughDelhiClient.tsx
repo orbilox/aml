@@ -12,7 +12,7 @@ const localProjects = [
     title: "DLF Cyber City",
     location: "Gurgaon, Delhi NCR",
     type: "Commercial 3D Walkthrough",
-    image: "https://readdy.ai/api/search-image?query=Modern%20commercial%20complex%20in%20Gurgaon%20Delhi%20NCR%2C%20corporate%20office%20buildings%2C%20business%20district%2C%20contemporary%20architecture%20with%20glass%20towers%20and%20urban%20development%20landscape&width=600&height=400&seq=dlf-cyber&orientation=landscape",
+    image: "/images/city-services/3d-walkthrough-videos-delhi/dlf-cyber.jpg",
     description: "India's largest private sector developed IT park with world-class infrastructure",
   },
   {
@@ -20,7 +20,7 @@ const localProjects = [
     title: "Lodha Altamount",
     location: "New Delhi",
     type: "Luxury Residential 3D Tour",
-    image: "https://readdy.ai/api/search-image?query=Luxury%20residential%20towers%20in%20New%20Delhi%2C%20premium%20high-rise%20apartments%2C%20exclusive%20real%20estate%20development%2C%20Delhi%20skyline%20background%2C%20sophisticated%20modern%20architecture&width=600&height=400&seq=lodha-altamount&orientation=landscape",
+    image: "/images/city-services/3d-walkthrough-videos-delhi/lodha-altamount.jpg",
     description: "Ultra-luxury residential project in the heart of New Delhi",
   },
   {
@@ -28,7 +28,7 @@ const localProjects = [
     title: "Jaypee Greens Sports City",
     location: "Greater Noida",
     type: "Mixed-Use 3D Visualization",
-    image: "https://readdy.ai/api/search-image?query=Sports%20city%20complex%20in%20Greater%20Noida%2C%20mixed-use%20development%2C%20residential%20and%20commercial%20buildings%2C%20modern%20urban%20planning%20with%20green%20spaces%20and%20recreational%20facilities&width=600&height=400&seq=jaypee-sports&orientation=landscape",
+    image: "/images/city-services/3d-walkthrough-videos-delhi/jaypee-sports.jpg",
     description: "Integrated township with residential, commercial and sports facilities",
   },
 ];
@@ -147,7 +147,7 @@ export default function WalkthroughDelhiClient() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://readdy.ai/api/search-image?query=Delhi%20NCR%20skyline%20with%20India%20Gate%20and%20modern%20skyscrapers%2C%20professional%203D%20visualization%20equipment%2C%20capital%20city%20architecture%2C%20urban%20development%20with%20historical%20and%20contemporary%20buildings&width=1920&height=1080&seq=delhi-hero&orientation=landscape')`,
+            backgroundImage: `url('/images/city-services/3d-walkthrough-videos-delhi/hero.jpg')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>

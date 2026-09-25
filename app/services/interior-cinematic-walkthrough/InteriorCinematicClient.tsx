@@ -59,7 +59,7 @@ const portfolioItems = [
     id: 1,
     title: "Hero Homes, Ludhiana",
     category: "Interior Cinematic Walkthrough",
-    image: "/images/portfolio/19.jpg",
+    image: "/images/portfolio/interior-cinematic-walkthrough/hero-homes-ludhiana.jpg",
     description:
       "Immersive interior walkthrough highlighting the sophisticated apartment interiors with premium finishes, modern amenities, and elegant design elements.",
     videoUrl:
@@ -69,7 +69,7 @@ const portfolioItems = [
     id: 2,
     title: "Rising Homes, Gurugram",
     category: "Interior Cinematic Walkthrough",
-    image: "/images/portfolio/20.png",
+    image: "/images/portfolio/interior-cinematic-walkthrough/rising-homes-gurugram.png",
     description:
       "Immersive interior walkthrough highlighting the sophisticated apartment interiors with premium finishes, modern amenities, and elegant design elements.",
     videoUrl:

@@ -37,7 +37,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 1,
     title: "Multiple Projects",
     category: "3D Rendering",
-    image: "/images/portfolio/4.png",
+    image: "/images/portfolio/3d-rendering/multiple-projects.png",
     description:
       "Comprehensive collection of 3D still renders showcasing various residential developments with detailed architectural visualization",
     videoUrl:
@@ -45,27 +45,27 @@ const portfolioItems: PortfolioItem[] = [
     hasSlider: true,
     sliderImages: [
       {
-        url: "/images/portfolio/5.png",
+        url: "/images/portfolio/3d-rendering/luxury-residential-complex.png",
         title: "Luxury Residential Complex",
         description: "Modern residential development with premium amenities",
       },
       {
-        url: "/images/portfolio/6.png",
+        url: "/images/portfolio/3d-rendering/premium-interior-design.png",
         title: "Premium Interior Design",
         description: "Sophisticated interior spaces with modern finishes",
       },
       {
-        url: "/images/portfolio/7.png",
+        url: "/images/portfolio/3d-rendering/high-rise-development.png",
         title: "High-Rise Development",
         description: "Urban residential tower with panoramic city views",
       },
       {
-        url: "/images/portfolio/8.png",
+        url: "/images/portfolio/3d-rendering/premium-villa-project.png",
         title: "Premium Villa Project",
         description: "Exclusive villa development with luxury amenities",
       },
       {
-        url: "/images/portfolio/9.png",
+        url: "/images/portfolio/3d-rendering/master-plan-visualization.png",
         title: "Master Plan Visualization",
         description: "Complete residential development master planning",
       },
@@ -75,7 +75,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 2,
     title: "Etereo 1, Goa",
     category: "3D Isometrics",
-    image: "/images/portfolio/15.jpg",
+    image: "/images/portfolio/3d-isometrics/etereo-1-goa.jpg",
     description:
       "Premium residential project featuring contemporary design and luxury amenities in the heart of Goa with comprehensive isometric visualization.",
     videoUrl:

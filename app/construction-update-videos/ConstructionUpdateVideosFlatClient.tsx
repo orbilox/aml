@@ -215,7 +215,7 @@ export default function ConstructionUpdateVideosFlatClient() {
       id: 1,
       title: "Pyramid Alban",
       category: "Construction Update",
-      image: "/images/portfolio/10.png",
+      image: "/images/portfolio/construction-updates/pyramid-alban-gurugram.png",
       description:
         "Monthly construction progress documentation with aerial and ground-level footage.",
       videoUrl: "https://www.youtube.com/embed/QDJxopvP4Ro?autoplay=1",
@@ -225,7 +225,7 @@ export default function ConstructionUpdateVideosFlatClient() {
       id: 2,
       title: "Smart World The Edition",
       category: "Construction Update",
-      image: "/images/portfolio/11.png",
+      image: "/images/portfolio/construction-updates/smart-world-the-edition-gurugram.png",
       description:
         "Comprehensive construction timeline documentation for a premium residential project.",
       videoUrl: "https://www.youtube.com/embed/4RebMEfQr3Y?autoplay=1",
@@ -235,7 +235,7 @@ export default function ConstructionUpdateVideosFlatClient() {
       id: 3,
       title: "Central Ikon",
       category: "Construction Update",
-      image: "/images/portfolio/Central-Ikon-Thumbnail.png",
+      image: "/images/portfolio/construction-updates/central-ikon-noida.png",
       description:
         "Regular construction progress updates showcasing structural milestones.",
       videoUrl: "https://www.youtube.com/embed/k2jFPH49J0U?autoplay=1",
@@ -245,7 +245,7 @@ export default function ConstructionUpdateVideosFlatClient() {
       id: 4,
       title: "The Kutumb",
       category: "Construction Update",
-      image: "/images/portfolio/Kutumb-Thumbnail.png",
+      image: "/images/portfolio/construction-updates/the-kutumb-ghaziabad.png",
       description:
         "Detailed construction documentation with drone and time-lapse footage.",
       videoUrl: "https://www.youtube.com/embed/ZLblD-AEilk?autoplay=1",
@@ -255,7 +255,7 @@ export default function ConstructionUpdateVideosFlatClient() {
       id: 5,
       title: "HCBS Auroville, Gurugram",
       category: "Construction Updates",
-      image: "/images/portfolio/Auroville-Thumbnail.jpg",
+      image: "/images/portfolio/construction-updates/hcbs-auroville-gurugram.jpg",
       description:
         "High-quality construction progress video featuring drone videography and real estate construction updates.",
       videoUrl: "https://www.youtube.com/embed/ommJFDhiz-M?autoplay=1",
@@ -265,7 +265,7 @@ export default function ConstructionUpdateVideosFlatClient() {
       id: 6,
       title: "Smart World, Sky Arc, Gurugram",
       category: "Construction Updates",
-      image: "/images/portfolio/Sky-Arc-Thumbnail.png",
+      image: "/images/portfolio/construction-updates/smart-world-sky-arc-gurugram.png",
       description:
         "Cinematic construction update video with drone shoot and real estate project progress tracking.",
       videoUrl: "https://www.youtube.com/embed/lJ9b5xaa04Q?autoplay=1",
@@ -275,7 +275,7 @@ export default function ConstructionUpdateVideosFlatClient() {
       id: 7,
       title: "HCBS Glenwood, Jhajjar",
       category: "Construction Updates",
-      image: "/images/portfolio/Glenwood-Thumbnail.png",
+      image: "/images/portfolio/construction-updates/hcbs-glenwood-jhajjar.png",
       description:
         "Professional construction update film with drone coverage and infrastructure progress video.",
       videoUrl: "https://www.youtube.com/embed/19KFjpoBYBA?autoplay=1",
@@ -285,7 +285,7 @@ export default function ConstructionUpdateVideosFlatClient() {
       id: 8,
       title: "HCBS Twin Horizon, Gurugram",
       category: "Construction Updates",
-      image: "/images/portfolio/Twin-Horizon-Thumbnail.png",
+      image: "/images/portfolio/construction-updates/hcbs-twin-horizon-gurugram.png",
       description:
         "Real estate construction update video with aerial drone shoot and monthly project progress coverage.",
       videoUrl: "https://www.youtube.com/embed/5fxjaqWpgYE?autoplay=1",
@@ -412,7 +412,7 @@ export default function ConstructionUpdateVideosFlatClient() {
       <section className="relative bg-[#0a0a0a] text-white overflow-hidden min-h-[80vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="/images/portfolio/10.png"
+            src="/images/portfolio/construction-updates/pyramid-alban-gurugram.png"
             alt="Construction update videos and construction time lapse India — Alliance Media Labs"
             className="w-full h-full object-cover opacity-30"
           />

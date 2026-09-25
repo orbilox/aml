@@ -147,7 +147,7 @@ ${formData.message || "No additional details provided"}
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://readdy.ai/api/search-image?query=Digital%20marketing%20dashboard%20with%20real%20estate%20analytics%2C%20social%20media%20campaigns%2C%20modern%20computer%20setup%2C%20professional%20marketing%20workspace%2C%20clean%20technology%20background%2C%20data%20visualization%20charts&width=1920&height=1080&seq=marketing-hero&orientation=landscape')`,
+              backgroundImage: `url('/images/services/digital-marketing/hero.jpg')`,
             }}
           ></div>
           <div className="absolute inset-0 bg-black/70"></div>
@@ -294,7 +294,7 @@ ${formData.message || "No additional details provided"}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Social%20media%20marketing%20campaign%20for%20luxury%20real%20estate%2C%20Instagram%20and%20Facebook%20ads%2C%20professional%20property%20marketing%20content%2C%20digital%20advertising%20showcase&width=400&height=300&seq=marketing-portfolio-1&orientation=landscape"
+                  src="/images/services/digital-marketing/portfolio-1.jpg"
                   alt="Social Media Campaign"
                   className="w-full h-48 object-cover object-top"
                 />
@@ -315,7 +315,7 @@ ${formData.message || "No additional details provided"}
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Google%20Ads%20dashboard%20for%20real%20estate%20marketing%2C%20PPC%20campaign%20performance%2C%20search%20engine%20marketing%20analytics%2C%20digital%20advertising%20results&width=400&height=300&seq=marketing-portfolio-2&orientation=landscape"
+                  src="/images/services/digital-marketing/portfolio-2.jpg"
                   alt="PPC Campaign"
                   className="w-full h-48 object-cover object-top"
                 />
@@ -336,7 +336,7 @@ ${formData.message || "No additional details provided"}
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Email%20marketing%20campaign%20for%20real%20estate%2C%20newsletter%20design%2C%20automated%20email%20sequences%2C%20digital%20marketing%20automation&width=400&height=300&seq=marketing-portfolio-3&orientation=landscape"
+                  src="/images/services/digital-marketing/portfolio-3.jpg"
                   alt="Email Marketing"
                   className="w-full h-48 object-cover object-top"
                 />
@@ -357,7 +357,7 @@ ${formData.message || "No additional details provided"}
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Content%20marketing%20for%20real%20estate%20blog%2C%20SEO%20optimized%20articles%2C%20real%20estate%20content%20strategy%2C%20digital%20marketing%20content&width=400&height=300&seq=marketing-portfolio-4&orientation=landscape"
+                  src="/images/services/digital-marketing/portfolio-4.jpg"
                   alt="Content Marketing"
                   className="w-full h-48 object-cover object-top"
                 />
@@ -378,7 +378,7 @@ ${formData.message || "No additional details provided"}
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Video%20marketing%20campaign%20for%20real%20estate%2C%20YouTube%20advertising%2C%20video%20content%20strategy%2C%20property%20marketing%20videos&width=400&height=300&seq=marketing-portfolio-5&orientation=landscape"
+                  src="/images/services/digital-marketing/portfolio-5.jpg"
                   alt="Video Marketing"
                   className="w-full h-48 object-cover object-top"
                 />
@@ -399,7 +399,7 @@ ${formData.message || "No additional details provided"}
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Marketing%20analytics%20dashboard%2C%20real%20estate%20campaign%20performance%2C%20ROI%20tracking%2C%20digital%20marketing%20metrics%20and%20KPIs&width=400&height=300&seq=marketing-portfolio-6&orientation=landscape"
+                  src="/images/services/digital-marketing/portfolio-6.jpg"
                   alt="Analytics Dashboard"
                   className="w-full h-48 object-cover object-top"
                 />
@@ -506,7 +506,7 @@ ${formData.message || "No additional details provided"}
               </div>
               <div className="relative">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Marketing%20analytics%20dashboard%20showing%20real%20estate%20campaign%20performance%2C%20charts%20and%20graphs%2C%20modern%20office%20setup%2C%20professional%20marketing%20tools%2C%20clean%20business%20environment&width=600&height=400&seq=marketing-strategy&orientation=landscape"
+                  src="/images/services/digital-marketing/strategy.jpg"
                   alt="Marketing Strategy"
                   className="rounded-2xl shadow-2xl w-full h-96 object-cover object-top"
                 />

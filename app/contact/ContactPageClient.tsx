@@ -221,7 +221,7 @@ ${formData.message || "No additional details provided"}
       <section
         className="relative pt-24 pb-20 overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://readdy.ai/api/search-image?query=Modern%20creative%20office%20space%20with%20glass%20walls%2C%20contemporary%20architecture%2C%20professional%20meeting%20rooms%2C%20sleek%20design%20elements%2C%20warm%20lighting%2C%20minimalist%20interior%20design%2C%20business%20environment%2C%20high-tech%20workspace%2C%20clean%20lines%2C%20sophisticated%20atmosphere&width=1920&height=800&seq=contact-hero&orientation=landscape')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('/images/contact/hero.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

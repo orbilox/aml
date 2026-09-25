@@ -12,7 +12,7 @@ const localProjects = [
     title: "Manyata Tech Park",
     location: "Nagavara, Bangalore",
     type: "IT Campus 3D Walkthrough",
-    image: "https://readdy.ai/api/search-image?query=Modern%20IT%20tech%20park%20in%20Bangalore%2C%20corporate%20campus%20buildings%2C%20technology%20hub%2C%20contemporary%20office%20architecture%20with%20glass%20facades%20and%20landscaped%20environment&width=600&height=400&seq=manyata-tech&orientation=landscape",
+    image: "/images/city-services/3d-walkthrough-videos-bangalore/manyata-tech.jpg",
     description: "India's largest IT SEZ with world-class infrastructure and amenities",
   },
   {
@@ -20,7 +20,7 @@ const localProjects = [
     title: "Prestige Lakeside Habitat",
     location: "Varthur, Bangalore",
     type: "Luxury Residential 3D Tour",
-    image: "https://readdy.ai/api/search-image?query=Luxury%20residential%20towers%20in%20Varthur%20Bangalore%2C%20premium%20apartment%20complex%2C%20lakeside%20development%2C%20modern%20residential%20architecture%20with%20green%20spaces%20and%20water%20features&width=600&height=400&seq=prestige-lakeside&orientation=landscape",
+    image: "/images/city-services/3d-walkthrough-videos-bangalore/prestige-lakeside.jpg",
     description: "Premium lakeside residential project with luxury amenities",
   },
   {
@@ -28,7 +28,7 @@ const localProjects = [
     title: "Forum Mall Koramangala",
     location: "Koramangala, Bangalore",
     type: "Retail 3D Visualization",
-    image: "https://readdy.ai/api/search-image?query=Modern%20shopping%20mall%20in%20Koramangala%20Bangalore%2C%20retail%20complex%2C%20contemporary%20commercial%20architecture%2C%20urban%20shopping%20destination%20with%20glass%20and%20steel%20design&width=600&height=400&seq=forum-mall&orientation=landscape",
+    image: "/images/city-services/3d-walkthrough-videos-bangalore/forum-mall.jpg",
     description: "Premier shopping and entertainment destination in South Bangalore",
   },
 ];
@@ -147,7 +147,7 @@ export default function WalkthroughBangaloreClient() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://readdy.ai/api/search-image?query=Bangalore%20cityscape%20with%20IT%20parks%20and%20modern%20skyscrapers%2C%20Silicon%20Valley%20of%20India%2C%20professional%203D%20visualization%20equipment%2C%20tech%20city%20architecture%20with%20lush%20greenery%20and%20urban%20development&width=1920&height=1080&seq=bangalore-hero&orientation=landscape')`,
+            backgroundImage: `url('/images/city-services/3d-walkthrough-videos-bangalore/hero.jpg')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>

@@ -6,7 +6,7 @@ const portfolioItems = [
     id: 1,
     title: "Etereo 1, Goa",
     category: "3D Walkthrough",
-    image: "/images/portfolio/1.png",
+    image: "/images/portfolio/3d-walkthrough/etereo-1-goa.png",
     description:
       "Cinematic 3D walkthrough showcasing luxury residential units with panoramic city views.",
     videoUrl: "https://www.youtube.com/embed/BiCCdx0fDik?autoplay=1&t",
@@ -16,7 +16,7 @@ const portfolioItems = [
     id: 2,
     title: "Shree Radha Gopal Residency, Kosi",
     category: "VR Experience",
-    image: "/images/portfolio/2.png",
+    image: "/images/portfolio/vr-experience/shree-radha-gopal-residency-kosi.png",
     description:
       "Interactive VR tour of a residential plotted development with modern amenities and green spaces.",
     videoUrl: "https://amlabs.cloud/SRMG_V06/",
@@ -26,7 +26,7 @@ const portfolioItems = [
     id: 3,
     title: "Province D Olympia, Noida",
     category: "Location AV",
-    image: "/images/portfolio/3.png",
+    image: "/images/portfolio/location-av/province-d-olympia-noida.png",
     description:
       "Professional location showcase highlighting the prime Noida location and premium real estate development with excellent connectivity and modern infrastructure.",
     videoUrl:
@@ -36,7 +36,7 @@ const portfolioItems = [
     id: 4,
     title: "Multiple Projects",
     category: "3D Rendering",
-    image: "/images/portfolio/4.png",
+    image: "/images/portfolio/3d-rendering/multiple-projects.png",
     description:
       "Comprehensive collection of 3D still renders showcasing various residential developments with detailed architectural visualization",
     videoUrl:
@@ -44,27 +44,27 @@ const portfolioItems = [
     hasSlider: true,
     sliderImages: [
       {
-        url: "/images/portfolio/5.png",
+        url: "/images/portfolio/3d-rendering/luxury-residential-complex.png",
         title: "Luxury Residential Complex",
         description: "Modern residential development with premium amenities",
       },
       {
-        url: "/images/portfolio/6.png",
+        url: "/images/portfolio/3d-rendering/premium-interior-design.png",
         title: "Premium Interior Design",
         description: "Sophisticated interior spaces with modern finishes",
       },
       {
-        url: "/images/portfolio/7.png",
+        url: "/images/portfolio/3d-rendering/high-rise-development.png",
         title: "High-Rise Development",
         description: "Urban residential tower with panoramic city views",
       },
       {
-        url: "/images/portfolio/8.png",
+        url: "/images/portfolio/3d-rendering/premium-villa-project.png",
         title: "Premium Villa Project",
         description: "Exclusive villa development with luxury amenities",
       },
       {
-        url: "/images/portfolio/9.png",
+        url: "/images/portfolio/3d-rendering/master-plan-visualization.png",
         title: "Master Plan Visualization",
         description: "Complete residential development master planning",
       },
@@ -74,7 +74,7 @@ const portfolioItems = [
     id: 5,
     title: "Pyramid Alban, Gurugram",
     category: "Construction Updates",
-    image: "/images/portfolio/10.png",
+    image: "/images/portfolio/construction-updates/pyramid-alban-gurugram.png",
     description:
       "Comprehensive construction progress documentation of premium residential project with detailed milestone markers and progress tracking.",
     videoUrl:
@@ -84,7 +84,7 @@ const portfolioItems = [
     id: 6,
     title: "Yuu by Nahar, Mumbai",
     category: "Interactive 3D",
-    image: "/images/portfolio/13.png",
+    image: "/images/portfolio/interactive-3d/yuu-by-nahar-mumbai.png",
     description:
       "Interactive residential apartment configurator allowing buyers to customize layouts, finishes, and amenities in real-time for premium Mumbai living.",
     videoUrl: "https://amlabs.cloud/Nahar_VR/",
@@ -94,7 +94,7 @@ const portfolioItems = [
     id: 7,
     title: "Hero Homes-The Palatial, Gurugram",
     category: "Route Videos",
-    image: "/images/portfolio/14.png",
+    image: "/images/portfolio/route-videos/hero-homes-the-palatial-gurugram.png",
     description:
       "Dynamic route visualization showcasing different approach routes to reach the project site highlighting nearby landmarks and markers for easy navigation.",
     videoUrl:
@@ -104,7 +104,7 @@ const portfolioItems = [
     id: 8,
     title: "Etereo 1, Goa",
     category: "3D Isometrics",
-    image: "/images/portfolio/15.jpg",
+    image: "/images/portfolio/3d-isometrics/etereo-1-goa.jpg",
     description:
       "Premium residential project featuring contemporary design and luxury amenities in the heart of Goa with comprehensive isometric visualization.",
     // videoUrl:
@@ -112,18 +112,18 @@ const portfolioItems = [
     hasGallery: true,
     galleryImages: [
       {
-        url: "/images/portfolio/16.jpeg",
+        url: "/images/portfolio/3d-isometrics/master-plan-isometric.jpeg",
         title: "Master Plan Isometric",
         description:
           "Complete site layout with residential blocks and amenities",
       },
       {
-        url: "/images/portfolio/17.jpg",
+        url: "/images/portfolio/3d-isometrics/building-isometric-view.jpg",
         title: "Building Isometric View",
         description: "Detailed residential building with floor plan layouts",
       },
       {
-        url: "/images/portfolio/18.jpg",
+        url: "/images/portfolio/3d-isometrics/complex-layout-isometric.jpg",
         title: "Complex Layout Isometric",
         description: "Multi-tower residential development with amenities",
       },
@@ -133,7 +133,7 @@ const portfolioItems = [
     id: 9,
     title: "Hero Homes, Ludhiana",
     category: "Interior Cinematic Walkthrough",
-    image: "/images/portfolio/19.jpg",
+    image: "/images/portfolio/interior-cinematic-walkthrough/hero-homes-ludhiana.jpg",
     description:
       "Immersive interior walkthrough highlighting the sophisticated apartment interiors with premium finishes, modern amenities, and elegant design elements.",
     videoUrl:
@@ -143,7 +143,7 @@ const portfolioItems = [
     id: 11,
     title: "House of Hiranandani, Mumbai",
     category: "VR Experience",
-    image: "/images/portfolio/23.png",
+    image: "/images/portfolio/vr-experience/house-of-hiranandani-mumbai.png",
     description:
       "Immersive VR tour of premium shopping mall featuring interactive retail spaces and modern commercial architecture.",
     videoUrl: "https://amlabs.cloud/HOH-V2/",
@@ -153,7 +153,7 @@ const portfolioItems = [
     id: 12,
     title: "Province D Olympia, Noida",
     category: "VR Experience",
-    image: "/images/portfolio/24.png",
+    image: "/images/portfolio/vr-experience/province-d-olympia-noida.png",
     description: "Residential plotted development",
     videoUrl: "https://amlabs.cloud/ATS_PDO/",
     isExternal: true,
@@ -162,7 +162,7 @@ const portfolioItems = [
     id: 14,
     title: "Altura DXP 92, Gurugram",
     category: "Location AV",
-    image: "/images/portfolio/26.png",
+    image: "/images/portfolio/location-av/altura-dxp-92-gurugram.png",
     description:
       "Infographical location AV showcasing Altura DXP 92 development in Gurugram with comprehensive visual presentation and detailed project information.",
     videoUrl:
@@ -172,7 +172,7 @@ const portfolioItems = [
     id: 15,
     title: "Shree Radha Gopal Residency, Kosi",
     category: "Location AV",
-    image: "/images/portfolio/27.png",
+    image: "/images/portfolio/location-av/shree-radha-gopal-residency-kosi.png",
     description:
       "Highlighting spiritual location of Kosi along with project highlights showcasing the serene environment and premium residential development features.",
     videoUrl:
@@ -182,7 +182,7 @@ const portfolioItems = [
     id: 16,
     title: "Smart World- The Edition, Gurugram",
     category: "Construction Updates",
-    image: "/images/portfolio/11.png",
+    image: "/images/portfolio/construction-updates/smart-world-the-edition-gurugram.png",
     description:
       "Comprehensive construction progress documentation highlighting the development of multi-tower residential project with premium amenities and modern architectural design.",
     videoUrl:
@@ -192,7 +192,7 @@ const portfolioItems = [
     id: 18,
     title: "Rising Homes, Gurugram",
     category: "Interior Cinematic Walkthrough",
-    image: "/images/portfolio/20.png",
+    image: "/images/portfolio/interior-cinematic-walkthrough/rising-homes-gurugram.png",
     description:
       "Immersive interior walkthrough highlighting the sophisticated apartment interiors with premium finishes, modern amenities, and elegant design elements.",
     videoUrl:
@@ -202,7 +202,7 @@ const portfolioItems = [
     id: 20,
     title: "Aura, Sector 79, Gurugram",
     category: "Location AV",
-    image: "/images/portfolio/34.png",
+    image: "/images/portfolio/location-av/aura-sector-79-gurugram.png",
     description:
       "A high-impact location walkthrough for Aura – Sector 79, Gurugram, designed to showcase premium connectivity and attract qualified property leads.",
     videoUrl:
@@ -212,7 +212,7 @@ const portfolioItems = [
     id: 21,
     title: "GMI Elite Homes, Mohali",
     category: "Construction Updates",
-    image: "/images/portfolio/GMI.png",
+    image: "/images/portfolio/construction-updates/gmi-elite-homes-mohali.png",
     description:
       "Visual documentation of GMI Elite Homes, capturing the construction journey of a modern multi-tower residential project designed for refined, upscale living.",
     videoUrl:
@@ -222,7 +222,7 @@ const portfolioItems = [
     id: 22,
     title: "Prime Residences, Gurugram ",
     category: "Construction Updates",
-    image: "/images/portfolio/Prime-Residences.png",
+    image: "/images/portfolio/construction-updates/prime-residences-gurugram.png",
     description:
       "Construction progress documentation capturing the development of Prime Residences — a contemporary residential project defined by modern architecture and thoughtfully curated amenities.",
     videoUrl:
@@ -232,7 +232,7 @@ const portfolioItems = [
     id: 23,
     title: "SAP Experience Center, Bengaluru",
     category: "VR Experience",
-    image: "/images/portfolio/SAP-Experience-Center.png",
+    image: "/images/portfolio/vr-experience/sap-experience-center-bengaluru.png",
     description:
       "Matterport-powered virtual tour created for the SAP Experience Center, delivering an immersive and interactive walkthrough.",
     videoUrl: "https://my.matterport.com/show/?m=ceeiCLowE6C",
@@ -242,7 +242,7 @@ const portfolioItems = [
     id: 24,
     title: "SAP S Market, Bengaluru",
     category: "VR Experience",
-    image: "/images/portfolio/SAP-S-Market.png",
+    image: "/images/portfolio/vr-experience/sap-s-market-bengaluru.png",
     description:
       "High-fidelity Matterport virtual walkthrough developed for the SAP S Market.",
     videoUrl: "https://my.matterport.com/show/?m=R5jPFcjQaeh",
@@ -252,7 +252,7 @@ const portfolioItems = [
     id: 25,
     title: "Sanfran Sarovar Heights, Jhansi",
     category: "VR Experience",
-    image: "/images/portfolio/Sanfran-VR-Thumbnail.png",
+    image: "/images/portfolio/vr-experience/sanfran-sarovar-heights-jhansi.png",
     description:
       "Immersive virtual tour showcasing high-rise towers of Sanfran Sarovar Heights, highlighting advanced functionalities and modern residential design.",
     videoUrl: "https://amlabs.cloud/SSH_V3/",
@@ -262,7 +262,7 @@ const portfolioItems = [
     id: 26,
     title: "Central Ikon, Noida",
     category: "Construction Updates",
-    image: "/images/portfolio/Central-Ikon-Thumbnail.png",
+    image: "/images/portfolio/construction-updates/central-ikon-noida.png",
     description:
       "Visual documentation of Central Ikon, showcasing the progressive development of a contemporary commercial and retail project crafted to reflect sophistication, scale, and premium positioning.",
     videoUrl: "https://www.youtube.com/embed/k2jFPH49J0U?autoplay=1",
@@ -271,7 +271,7 @@ const portfolioItems = [
     id: 27,
     title: "The Kutumb, Ghaziabad",
     category: "Construction Updates",
-    image: "/images/portfolio/Kutumb-Thumbnail.png",
+    image: "/images/portfolio/construction-updates/the-kutumb-ghaziabad.png",
     description:
       "Construction update video capturing the evolution of The Kutumb — a contemporary residential development distinguished by modern architectural design and carefully planned lifestyle amenities.",
     videoUrl: "https://www.youtube.com/embed/ZLblD-AEilk?autoplay=1",
@@ -280,7 +280,7 @@ const portfolioItems = [
     id: 28,
     title: "Mauli Housing, Mumbai",
     category: "VR Experience",
-    image: "/images/portfolio/Mauli-VR-Thumbnail.png",
+    image: "/images/portfolio/vr-experience/mauli-housing-mumbai.png",
     description:
       "An immersive 360° Virtual Reality tour for Mauli Housing, showcasing landmark views and multi-height outside perspectives for a complete spatial experience.",
     videoUrl: "https://amlabs.cloud/Mauli_V06/",
@@ -290,7 +290,7 @@ const portfolioItems = [
     id: 29,
     title: "Dosti Greater Thane, Thane",
     category: "VR Experience",
-    image: "/images/portfolio/Dosti-VR-Thumbnail.png",
+    image: "/images/portfolio/vr-experience/dosti-greater-thane.png",
     description:
       "A 360° VR real estate tour for Dosti Group, featuring a superimposed 3D building for a realistic virtual property walkthrough experience.",
     videoUrl: "https://amlabs.cloud/Dosti_Mumbai_V01/",
@@ -539,7 +539,7 @@ const portfolioItems = [
     id: 37,
     title: "Tata La Vida, Gurugram",
     category: "Interactive 3D",
-    image: "/images/portfolio/Tata-La-vida-Thumbnail.png",
+    image: "/images/portfolio/interactive-3d/tata-la-vida-gurugram.png",
     description:
       "An immersive 3D interactive virtual tour designed for a 3BHK residential project, allowing users to explore the space with ease and clarity.",
     videoUrl: "https://amlabs.cloud/Interior_VR/",
@@ -549,7 +549,7 @@ const portfolioItems = [
     id: 38,
     title: "TVS Emerald Luxor, Chennai",
     category: "Interactive 3D",
-    image: "/images/portfolio/TVS-thumbnail.png",
+    image: "/images/portfolio/interactive-3d/tvs-emerald-luxor-chennai.png",
     description:
       "Crafted a high-end 3D interactive virtual tour for a luxury villa, highlighting spacious layouts, design details, and overall flow of the home. The experience delivers a refined real estate villa virtual walkthrough, with smooth transitions and a true-to-space feel.",
     videoUrl: "https://amlabs.cloud/Villa_VR_Tour/",
@@ -559,7 +559,7 @@ const portfolioItems = [
     id: 39,
     title: "Aura Vantaje, Gurugram",
     category: "3D Walkthrough",
-    image: "/images/portfolio/Aura-Vantaje-Thumbnail.png",
+    image: "/images/portfolio/3d-walkthrough/aura-vantaje-gurugram.png",
     description:
       "Developed an AI-powered 3D walkthrough for a commercial project, bringing out the scale, layout, and usability of the spaces in a smart way. Delivered at record speed of 7 days.",
     videoUrl: "https://www.youtube.com/embed/YGaAU9B37nc?autoplay=1",
@@ -568,7 +568,7 @@ const portfolioItems = [
     id: 40,
     title: "HCBS Auroville, Gurugram",
     category: "Construction Updates",
-    image: "/images/portfolio/Auroville-Thumbnail.jpg",
+    image: "/images/portfolio/construction-updates/hcbs-auroville-gurugram.jpg",
     description:
       "High-Quality Construction Progress Video featuring Drone Videography, Real Estate Construction Updates, Site Progress Monitoring & Cinematic Project Documentation. ",
     videoUrl: "https://www.youtube.com/embed/ommJFDhiz-M?autoplay=1",
@@ -577,7 +577,7 @@ const portfolioItems = [
     id: 41,
     title: "Smart World, Sky Arc, Gurugram",
     category: "Construction Updates",
-    image: "/images/portfolio/Sky-Arc-Thumbnail.png",
+    image: "/images/portfolio/construction-updates/smart-world-sky-arc-gurugram.png",
     description:
       "Cinematic Construction Update Video with Drone Shoot, Real Estate Project Progress Tracking, Aerial Videography & Premium Construction Site Coverage for Real Estate Marketing.",
     videoUrl: "https://www.youtube.com/embed/lJ9b5xaa04Q?autoplay=1",
@@ -586,7 +586,7 @@ const portfolioItems = [
     id: 42,
     title: "HCBS Glenwood, Jhajjar",
     category: "Construction Updates",
-    image: "/images/portfolio/Glenwood-Thumbnail.png",
+    image: "/images/portfolio/construction-updates/hcbs-glenwood-jhajjar.png",
     description:
       "Professional Construction Update Film with Real Estate Drone Coverage, Construction Site Tracking, Infrastructure Progress Video & Premium Real Estate Marketing Visuals.",
     videoUrl: "https://www.youtube.com/embed/19KFjpoBYBA?autoplay=1",
@@ -595,7 +595,7 @@ const portfolioItems = [
     id: 43,
     title: "HCBS Twin Horizon, Gurugram",
     category: "Construction Updates",
-    image: "/images/portfolio/Twin-Horizon-Thumbnail.png",
+    image: "/images/portfolio/construction-updates/hcbs-twin-horizon-gurugram.png",
     description:
       "Real Estate Construction Update Video with Aerial Drone Shoot, Monthly Project Progress Coverage, Cinematic Site Documentation & Builder Marketing Content.",
     videoUrl: "https://www.youtube.com/embed/5fxjaqWpgYE?autoplay=1",
@@ -604,7 +604,7 @@ const portfolioItems = [
     id: 44,
     title: "Naman 58, Mumbai",
     category: "Route Videos",
-    image: "/images/portfolio/Naman-58-Thumbnail.jpg",
+    image: "/images/portfolio/route-videos/naman-58-mumbai.jpg",
     description:
       "Cinematic Route Location Video featuring Real Estate Connectivity Showcase, Google Map Animation, Drone Coverage, Highway Access, Landmark Highlighting & Location Advantage Visualization for Premium Real Estate Marketing. ",
     videoUrl: "https://www.youtube.com/embed/Yqsj9E8-QHI?autoplay=1",
@@ -648,7 +648,7 @@ const portfolioItems = [
     id: 46,
     title: "Featherlite Signature, Bengaluru",
     category: "VR Experience",
-    image: "/images/portfolio/Featherlite-Thumbnail.png",
+    image: "/images/portfolio/vr-experience/featherlite-signature-bengaluru.png",
     description:
       "Interactive VR Tour of Commercial Office Spaces with 3D Visualization & Nearby Landmark Highlights.",
     videoUrl: "https://amlabs.cloud/Featherlite_Signature-V02/",
@@ -658,7 +658,7 @@ const portfolioItems = [
     id: 47,
     title: "GMC Confluence, Bengaluru",
     category: "VR Experience",
-    image: "/images/portfolio/GMC-Thumbnail.png",
+    image: "/images/portfolio/vr-experience/gmc-confluence-bengaluru.png",
     description:
       "Immersive VR Tour for Residential Real Estate, featuring modern amenities, landscaped green spaces, premium day & night views, 3D visualization, and interactive nearby landmark highlights. ",
     videoUrl: "https://amlabs.cloud/GMC_Bengaluru/",
@@ -711,7 +711,7 @@ const portfolioItems = [
     id: 49,
     title: "Briston, Neemrana",
     category: "3D Walkthrough",
-    image: "/images/portfolio/Briston-Thumbnail.png",
+    image: "/images/portfolio/3d-walkthrough/briston-neemrana.png",
     description:
       "AI-powered teaser video showcasing Japanese-inspired apartments, architecture, and lifestyle.",
     videoUrl: "https://www.youtube.com/embed/5aCZOQxUZg4?autoplay=1",
@@ -720,7 +720,7 @@ const portfolioItems = [
     id: 50,
     title: "ATS Bonheur Hub,Gurugram",
     category: "Route Videos",
-    image: "/images/portfolio/ATS-bonheur-Hub-Thumbnail.png",
+    image: "/images/portfolio/route-videos/ats-bonheur-hub-gurugram.png",
     description:
       "Real Estate Route & Connectivity Video for ATS Bonheur Hub, Gurugram, featuring location mapping, drone videography, route visualization and location markers by Alliance Media Labs.",
     videoUrl: "https://www.youtube.com/embed/rQLJRDb9dwM?autoplay=1",
@@ -729,7 +729,7 @@ const portfolioItems = [
     id: 51,
     title: "ATS Grove, Gurugram",
     category: "Route Videos",
-    image: "/images/portfolio/ATS-Grove-Thumbnail.png",
+    image: "/images/portfolio/route-videos/ats-grove-gurugram.png",
     description:
       "Real Estate Route & Connectivity Video for ATS Grove,Gurugram, featuring location mapping, drone videography, route visualization and location markers. ",
     videoUrl: "https://www.youtube.com/embed/HAPjlVna-FE?autoplay=1",
@@ -738,7 +738,7 @@ const portfolioItems = [
     id: 52,
     title: "Hero Homes, Sector 99, Mohali",
     category: "Location AV",
-    image: "/images/portfolio/Hero-Mohali-Thumbnail.png",
+    image: "/images/portfolio/location-av/hero-homes-sector-99-mohali.png",
     description:
       "A nature led, Real Estate Location AV for Hero Homes, Sector 99 Mohali, featuring cinematic storytelling, professional voiceover, location visuals and connectivity mapping",
     videoUrl: "https://www.youtube.com/embed/yWt6TLb0a2k?autoplay=1",
@@ -747,7 +747,7 @@ const portfolioItems = [
     id: 53,
     title: "Hero Homes, Sector MU, Greater Noida ",
     category: "Location AV",
-    image: "/images/portfolio/Hero-Homes-Noida-Thumbnail.png",
+    image: "/images/portfolio/location-av/hero-homes-sector-mu-greater-noida.png",
     description:
       "Location AV showcasing real estate connectivity, cinematic storytelling, route visualization and professional real estate video production. ",
     videoUrl: "https://www.youtube.com/embed/d22cdmKn2WE?autoplay=1",

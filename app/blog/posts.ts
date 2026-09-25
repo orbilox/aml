@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     dateISO: "2026-09-26",
     readTime: "9 min read",
     author: "Alliance Media Labs Team",
-    thumbnail: "/images/portfolio/19.jpg",
+    thumbnail: "/images/portfolio/interior-cinematic-walkthrough/hero-homes-ludhiana.jpg",
     tags: ["Interior Cinematic Walkthrough", "Luxury Interior Video", "3D Interior Walkthrough", "Real Estate Video Marketing", "Cinematic Real Estate Video"],
   },
   {
@@ -74,7 +74,7 @@ export const blogPosts: BlogPost[] = [
     dateISO: "2026-08-20",
     readTime: "9 min read",
     author: "Alliance Media Labs Team",
-    thumbnail: "/images/portfolio/13.png",
+    thumbnail: "/images/portfolio/interactive-3d/yuu-by-nahar-mumbai.png",
     tags: ["Interactive 3D Tools", "Apartment Configurator", "Real Estate Sales Technology", "3D Configurator India", "Digital Sales Office"],
   },
   {
@@ -165,7 +165,7 @@ export const blogPosts: BlogPost[] = [
     dateISO: "2026-06-13",
     readTime: "9 min read",
     author: "Alliance Media Labs Team",
-    thumbnail: "/images/portfolio/10.png",
+    thumbnail: "/images/portfolio/construction-updates/pyramid-alban-gurugram.png",
     tags: ["Construction Delay", "Buyer Trust", "Construction Update Video", "RERA Compliance", "Real Estate Developer"],
   },
   {

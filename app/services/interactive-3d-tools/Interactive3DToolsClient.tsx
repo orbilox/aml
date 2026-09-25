@@ -22,7 +22,7 @@ const portfolioProjects: Project[] = [
     id: 1,
     title: "Yuu by Nahar, Mumbai",
     category: "Interactive 3D",
-    image: "/images/portfolio/13.png",
+    image: "/images/portfolio/interactive-3d/yuu-by-nahar-mumbai.png",
     description:
       "Interactive residential apartment configurator allowing buyers to customize layouts, finishes, and amenities in real-time for premium Mumbai living.",
     videoUrl: "https://amlabs.cloud/Nahar_VR/",
@@ -32,7 +32,7 @@ const portfolioProjects: Project[] = [
     id: 2,
     title: "Tata La Vida, Gurugram",
     category: "Interactive 3D",
-    image: "/images/portfolio/Tata-La-vida-Thumbnail.png",
+    image: "/images/portfolio/interactive-3d/tata-la-vida-gurugram.png",
     description:
       "An immersive 3D interactive virtual tour designed for a 3BHK residential project, allowing users to explore the space with ease and clarity.",
     videoUrl: "https://amlabs.cloud/Interior_VR/",
@@ -42,7 +42,7 @@ const portfolioProjects: Project[] = [
     id: 3,
     title: "TVS Emerald Luxor, Chennai",
     category: "Interactive 3D",
-    image: "/images/portfolio/TVS-thumbnail.png",
+    image: "/images/portfolio/interactive-3d/tvs-emerald-luxor-chennai.png",
     description:
       "Crafted a high-end 3D interactive virtual tour for a luxury villa, highlighting spacious layouts, design details, and overall flow of the home. The experience delivers a refined real estate villa virtual walkthrough, with smooth transitions and a true-to-space feel.",
     videoUrl: "https://amlabs.cloud/Villa_VR_Tour/",
@@ -227,7 +227,7 @@ ${formData.message || "No additional details provided"}
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://readdy.ai/api/search-image?query=Interactive%203D%20visualization%20on%20modern%20computer%20screen%20showing%20architectural%20building%20configurator%2C%20user%20interface%20elements%2C%20clean%20technology%20background%2C%20professional%20web%20application%20showcase&width=1920&height=1080&seq=interactive-hero&orientation=landscape')`,
+              backgroundImage: `url('/images/services/interactive-3d-tools/hero.jpg')`,
             }}
           ></div>
           <div className="absolute inset-0 bg-black/60"></div>

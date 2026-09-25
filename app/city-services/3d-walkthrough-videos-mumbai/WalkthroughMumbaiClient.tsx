@@ -19,7 +19,7 @@ const localProjects = [
     title: "Lodha World Towers",
     location: "Lower Parel, Mumbai",
     type: "Luxury Residential 3D Tour",
-    image: "https://readdy.ai/api/search-image?query=Luxury%20residential%20towers%20in%20Lower%20Parel%20Mumbai%2C%20modern%20high-rise%20apartments%2C%20premium%20real%20estate%20development%2C%20Mumbai%20skyline%20background%2C%20contemporary%20architecture%20with%20glass%20facades%20and%20urban%20landscape&width=600&height=400&seq=lodha-world&orientation=landscape",
+    image: "/images/city-services/3d-walkthrough-videos-mumbai/lodha-world.jpg",
     description: "Premium residential towers with world-class amenities and Mumbai harbor views",
   },
   {
@@ -27,7 +27,7 @@ const localProjects = [
     title: "Palais Royale Worli",
     location: "Worli, Mumbai",
     type: "Ultra-Luxury 3D Walkthrough",
-    image: "https://readdy.ai/api/search-image?query=Ultra%20luxury%20residential%20building%20in%20Worli%20Mumbai%2C%20premium%20high-rise%20tower%2C%20exclusive%20real%20estate%2C%20Mumbai%20coastline%20view%2C%20sophisticated%20architecture%20with%20modern%20design%20elements&width=600&height=400&seq=palais-royale&orientation=landscape",
+    image: "/images/city-services/3d-walkthrough-videos-mumbai/palais-royale.jpg",
     description: "India's most expensive residential project with unparalleled luxury features",
   },
   {
@@ -35,7 +35,7 @@ const localProjects = [
     title: "Phoenix Mills Commercial",
     location: "Kurla, Mumbai",
     type: "Commercial 3D Visualization",
-    image: "https://readdy.ai/api/search-image?query=Modern%20commercial%20complex%20in%20Kurla%20Mumbai%2C%20office%20buildings%2C%20business%20district%2C%20contemporary%20corporate%20architecture%2C%20urban%20development%20with%20glass%20towers%20and%20professional%20environment&width=600&height=400&seq=phoenix-mills&orientation=landscape",
+    image: "/images/city-services/3d-walkthrough-videos-mumbai/phoenix-mills.jpg",
     description: "State-of-the-art commercial complex with premium office spaces",
   },
 ];
@@ -171,7 +171,7 @@ export default function WalkthroughMumbaiClient() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://readdy.ai/api/search-image?query=Mumbai%20skyline%20with%20iconic%20skyscrapers%20and%20Marine%20Drive%2C%20professional%203D%20visualization%20equipment%20in%20foreground%2C%20cinematic%20lighting%2C%20financial%20capital%20of%20India%20cityscape%20with%20modern%20architecture&width=1920&height=1080&seq=mumbai-hero&orientation=landscape')`,
+            backgroundImage: `url('/images/city-services/3d-walkthrough-videos-mumbai/hero.jpg')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>

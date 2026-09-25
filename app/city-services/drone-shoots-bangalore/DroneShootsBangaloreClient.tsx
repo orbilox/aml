@@ -127,7 +127,7 @@ export default function DroneShootsBangaloreClient() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://readdy.ai/api/search-image?query=Professional%20drone%20flying%20over%20Bangalore%20cityscape%2C%20aerial%20view%20of%20IT%20parks%20and%20modern%20buildings%2C%20drone%20photography%20equipment%2C%20Silicon%20Valley%20of%20India%20from%20above%20with%20lush%20greenery%20and%20urban%20development&width=1920&height=1080&seq=bangalore-drone-hero&orientation=landscape')`,
+            backgroundImage: `url('/images/city-services/drone-shoots-bangalore/hero.jpg')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>

@@ -143,7 +143,7 @@ export default function RendersMumbaiClient() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://readdy.ai/api/search-image?query=Mumbai%20luxury%20real%20estate%203D%20architectural%20renders%2C%20photorealistic%20building%20visualization%2C%20modern%20skyscrapers%20with%20Mumbai%20skyline%2C%20professional%203D%20modeling%20workspace%20with%20high-end%20computers%20and%20design%20software&width=1920&height=1080&seq=mumbai-renders-hero&orientation=landscape')`,
+            backgroundImage: `url('/images/city-services/3d-renders-mumbai/hero.jpg')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>

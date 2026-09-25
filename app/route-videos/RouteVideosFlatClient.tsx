@@ -226,7 +226,7 @@ export default function RouteVideosFlatClient() {
       id: 1,
       title: "Hero Homes-The Palatial, Gurugram",
       category: "Location Video",
-      image: "/images/portfolio/14.png",
+      image: "/images/portfolio/route-videos/hero-homes-the-palatial-gurugram.png",
       description:
         "Dynamic location video showcasing different approach routes to reach the project site, highlighting nearby landmarks and markers for easy navigation.",
       videoUrl: "https://www.youtube.com/embed/ENlsfe7wQRs?autoplay=1",
@@ -236,7 +236,7 @@ export default function RouteVideosFlatClient() {
       id: 2,
       title: "Naman 58, Mumbai",
       category: "Location Video",
-      image: "/images/portfolio/Naman-58-Thumbnail.jpg",
+      image: "/images/portfolio/route-videos/naman-58-mumbai.jpg",
       description:
         "Cinematic location video featuring real estate connectivity showcase, animated map, drone coverage, and highway access highlighting.",
       videoUrl: "https://www.youtube.com/embed/Yqsj9E8-QHI?autoplay=1",
@@ -246,7 +246,7 @@ export default function RouteVideosFlatClient() {
       id: 3,
       title: "ATS Bonheur Hub,Gurugram",
       category: "Route Videos",
-      image: "/images/portfolio/ATS-bonheur-Hub-Thumbnail.png",
+      image: "/images/portfolio/route-videos/ats-bonheur-hub-gurugram.png",
       description:
         "Real Estate Route & Connectivity Video for ATS Bonheur Hub, Gurugram, featuring location mapping, drone videography, route visualization and location markers by Alliance Media Labs.",
       videoUrl: "https://www.youtube.com/embed/rQLJRDb9dwM?autoplay=1",
@@ -256,7 +256,7 @@ export default function RouteVideosFlatClient() {
       id: 4,
       title: "ATS Grove, Gurugram",
       category: "Route Videos",
-      image: "/images/portfolio/ATS-Grove-Thumbnail.png",
+      image: "/images/portfolio/route-videos/ats-grove-gurugram.png",
       description:
         "Real Estate Route & Connectivity Video for ATS Grove,Gurugram, featuring location mapping, drone videography, route visualization and location markers. ",
       videoUrl: " https://www.youtube.com/embed/HAPjlVna-FE?autoplay=1",

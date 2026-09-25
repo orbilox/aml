@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Alliance Media Labs",
     images: [
       {
-        url: `${BASE}/images/portfolio/10.png`,
+        url: `${BASE}/images/portfolio/construction-updates/pyramid-alban-gurugram.png`,
         width: 1200,
         height: 630,
         alt: "Construction Videos India — Alliance Media Labs",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Construction Videos India | Alliance Media Labs",
     description: "Construction update videos and construction time lapse for real estate developers across India.",
-    images: [`${BASE}/images/portfolio/10.png`],
+    images: [`${BASE}/images/portfolio/construction-updates/pyramid-alban-gurugram.png`],
   },
   robots: { index: true, follow: true },
 };
@@ -69,7 +69,7 @@ const serviceSchema = {
       description: "Construction update videos from ₹15,000 per update; recurring monthly/quarterly packages available",
     },
   },
-  image: `${BASE}/images/portfolio/10.png`,
+  image: `${BASE}/images/portfolio/construction-updates/pyramid-alban-gurugram.png`,
   url: `${BASE}/construction-update-videos`,
 };
 

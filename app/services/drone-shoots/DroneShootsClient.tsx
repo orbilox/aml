@@ -76,7 +76,7 @@ export default function DroneShootsClient() {
       id: 1,
       title: "Province D Olympia, Noida",
       category: "Location AV",
-      image: "/images/portfolio/3.png",
+      image: "/images/portfolio/location-av/province-d-olympia-noida.png",
       description:
         "Aerial showcase highlighting Province D Olympia's prime connectivity and surroundings.",
       videoUrl: "VPTirPc5a1I?si=y4M05nZkVgJPmB9U&autoplay=1",
@@ -86,7 +86,7 @@ export default function DroneShootsClient() {
       id: 2,
       title: "Altura DXP 92, Gurugram",
       category: "Location AV",
-      image: "/images/portfolio/26.png",
+      image: "/images/portfolio/location-av/altura-dxp-92-gurugram.png",
       description:
         "Stunning aerial footage showcasing Altura DXP 92's strategic location in Gurugram.",
       videoUrl: "z6RclcDFWAA?si=y4M05nZkVgJPmB9U&autoplay=1",
@@ -96,7 +96,7 @@ export default function DroneShootsClient() {
       id: 3,
       title: "Shree Radha Gopal Residency, Kosi",
       category: "Location AV",
-      image: "/images/portfolio/27.png",
+      image: "/images/portfolio/location-av/shree-radha-gopal-residency-kosi.png",
       description:
         "Comprehensive aerial tour showcasing the residency's peaceful location and surroundings.",
       videoUrl: "nl1xegGywlc?si=y4M05nZkVgJPmB9U&autoplay=1",
@@ -106,7 +106,7 @@ export default function DroneShootsClient() {
       id: 4,
       title: "Aura, Sector 79, Gurugram",
       category: "Location AV",
-      image: "/images/portfolio/34.png",
+      image: "/images/portfolio/location-av/aura-sector-79-gurugram.png",
       description:
         "Dynamic aerial footage highlighting Aura's premium location in Sector 79, Gurugram.",
       videoUrl: "-6icu6ALbr4?si=0H-4fGbiNLi3y0fG&autoplay=1",
@@ -116,7 +116,7 @@ export default function DroneShootsClient() {
       id: 5,
       title: "Hero Homes, Sector 99, Mohali",
       category: "Location AV",
-      image: "/images/portfolio/Hero-Mohali-Thumbnail.png",
+      image: "/images/portfolio/location-av/hero-homes-sector-99-mohali.png",
       description:
         "A nature led, Real Estate Location AV for Hero Homes, Sector 99 Mohali, featuring cinematic storytelling, professional voiceover, location visuals and connectivity mapping",
       videoUrl: "yWt6TLb0a2k?si=y4M05nZkVgJPmB9U&autoplay=1",
@@ -126,7 +126,7 @@ export default function DroneShootsClient() {
       id: 6,
       title: "Hero Homes, Sector MU, Greater Noida ",
       category: "Location AV",
-      image: "/images/portfolio/Hero-Homes-Noida-Thumbnail.png",
+      image: "/images/portfolio/location-av/hero-homes-sector-mu-greater-noida.png",
       description:
         "Location AV showcasing real estate connectivity, cinematic storytelling, route visualization and professional real estate video production. ",
       videoUrl: "d22cdmKn2WE?si=y4M05nZkVgJPmB9U&autoplay=1",
@@ -251,7 +251,7 @@ export default function DroneShootsClient() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('/images/portfolio/3.png')`,
+              backgroundImage: `url('/images/portfolio/location-av/province-d-olympia-noida.png')`,
             }}
           ></div>
           <div className="absolute inset-0 bg-black/60"></div>

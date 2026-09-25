@@ -187,7 +187,7 @@ export default function WalkthroughVideoCompanyClient() {
       id: 1,
       title: "Etereo 1, Goa",
       category: "3D Walkthrough",
-      image: "/images/portfolio/1.png",
+      image: "/images/portfolio/3d-walkthrough/etereo-1-goa.png",
       description:
         "Cinematic 3D property walkthrough and 3D virtual house tour showcasing luxury residential units with panoramic city views.",
       videoUrl: "https://www.youtube.com/embed/BiCCdx0fDik?autoplay=1&t",
@@ -197,7 +197,7 @@ export default function WalkthroughVideoCompanyClient() {
       id: 2,
       title: "Aura Vantaje, Gurugram",
       category: "3D Walkthrough",
-      image: "/images/portfolio/Aura-Vantaje-Thumbnail.png",
+      image: "/images/portfolio/3d-walkthrough/aura-vantaje-gurugram.png",
       description:
         "Developed an AI-powered 3D walkthrough real estate presentation and architectural walkthrough for a commercial project, highlighting scale, usability, and immersive buyer experience.",
       videoUrl: "https://www.youtube.com/embed/YGaAU9B37nc?autoplay=1",
@@ -207,7 +207,7 @@ export default function WalkthroughVideoCompanyClient() {
       id: 49,
       title: "Briston, Neemrana",
       category: "3D Walkthrough",
-      image: "/images/portfolio/Briston-Thumbnail.png",
+      image: "/images/portfolio/3d-walkthrough/briston-neemrana.png",
       description:
         "AI-powered teaser video showcasing Japanese-inspired apartments, architecture, and lifestyle.",
       videoUrl: "https://www.youtube.com/embed/5aCZOQxUZg4?autoplay=1",

@@ -76,7 +76,7 @@ export default function BlogDetailPage({
       url: BASE,
       logo: {
         "@type": "ImageObject",
-        url: "https://static.readdy.ai/image/8d54cefc56aae77b02ec7dea9869daf3/7240d6459fd7bd08670b4a90c4788daa.png",
+        url: "https://alliancemedialabs.com/aml-logo.png",
         width: 320,
         height: 88,
       },

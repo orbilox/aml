@@ -60,7 +60,7 @@ export default function VirtualRealityToursClient() {
       id: 1,
       title: "Shree Radha Gopal Residency, Kosi",
       category: "VR Experience",
-      image: "/images/portfolio/2.png",
+      image: "/images/portfolio/vr-experience/shree-radha-gopal-residency-kosi.png",
       description:
         "Interactive VR tour of a residential plotted development with modern amenities and green spaces.",
       videoUrl: "https://amlabs.cloud/SRMG_V06/",
@@ -69,7 +69,7 @@ export default function VirtualRealityToursClient() {
       id: 2,
       title: "House of Hiranandani, Mumbai",
       category: "VR Experience",
-      image: "/images/portfolio/23.png",
+      image: "/images/portfolio/vr-experience/house-of-hiranandani-mumbai.png",
       description:
         "Immersive VR tour of premium shopping mall featuring interactive retail spaces and modern commercial architecture.",
       videoUrl: "https://amlabs.cloud/HOH-V2/",
@@ -78,7 +78,7 @@ export default function VirtualRealityToursClient() {
       id: 3,
       title: "Province D Olympia, Noida",
       category: "VR Experience",
-      image: "/images/portfolio/24.png",
+      image: "/images/portfolio/vr-experience/province-d-olympia-noida.png",
       description: "Residential plotted development",
       videoUrl: "https://amlabs.cloud/ATS_PDO/",
     },
@@ -86,7 +86,7 @@ export default function VirtualRealityToursClient() {
       id: 4,
       title: "Mauli Housing, Mumbai",
       category: "VR Experience",
-      image: "/images/portfolio/Mauli-VR-Thumbnail.png",
+      image: "/images/portfolio/vr-experience/mauli-housing-mumbai.png",
       description:
         "An immersive 360° Virtual Reality tour for Mauli Housing, showcasing landmark views and multi-height outside perspectives for a complete spatial experience.",
       videoUrl: "https://amlabs.cloud/Mauli_V06/",
@@ -95,7 +95,7 @@ export default function VirtualRealityToursClient() {
       id: 5,
       title: "Dosti Greater Thane, Thane",
       category: "VR Experience",
-      image: "/images/portfolio/Dosti-VR-Thumbnail.png",
+      image: "/images/portfolio/vr-experience/dosti-greater-thane.png",
       description:
         "A 360° VR real estate tour for Dosti Group, featuring a superimposed 3D building for a realistic virtual property walkthrough experience.",
       videoUrl: "https://amlabs.cloud/Dosti_Mumbai_V01/",

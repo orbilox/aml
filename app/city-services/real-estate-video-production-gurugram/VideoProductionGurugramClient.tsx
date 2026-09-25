@@ -19,7 +19,7 @@ const localProjects = [
     title: "DLF Cyber City Corporate Tower",
     location: "Cyber City, Gurugram",
     type: "3D Walkthrough Video",
-    image: "https://readdy.ai/api/search-image?query=Modern%20corporate%20office%20tower%20in%20Cyber%20City%20Gurugram%2C%20glass%20facade%20building%2C%20professional%20business%20district%2C%20contemporary%20commercial%20architecture%2C%20urban%20skyline%20background&width=600&height=400&seq=dlf-cyber-city&orientation=landscape",
+    image: "/images/city-services/real-estate-video-production-gurugram/dlf-cyber-city.jpg",
     description: "Premium corporate office space with state-of-the-art facilities",
   },
   {
@@ -27,7 +27,7 @@ const localProjects = [
     title: "M3M Golf Estate Residences",
     location: "Golf Course Extension Road, Gurugram",
     type: "Aerial Drone Video",
-    image: "https://readdy.ai/api/search-image?query=Luxury%20residential%20complex%20near%20golf%20course%20in%20Gurugram%2C%20modern%20apartment%20buildings%2C%20green%20landscaping%2C%20premium%20real%20estate%20development%2C%20aerial%20view&width=600&height=400&seq=m3m-golf-estate&orientation=landscape",
+    image: "/images/city-services/real-estate-video-production-gurugram/m3m-golf-estate.jpg",
     description: "Luxury residential project with golf course views and premium amenities",
   },
   {
@@ -35,7 +35,7 @@ const localProjects = [
     title: "Ambience Mall Expansion",
     location: "NH-8, Gurugram",
     type: "Construction Progress Video",
-    image: "https://readdy.ai/api/search-image?query=Large%20shopping%20mall%20complex%20construction%20in%20Gurugram%2C%20modern%20retail%20architecture%2C%20commercial%20development%2C%20construction%20progress%20documentation&width=600&height=400&seq=ambience-mall&orientation=landscape",
+    image: "/images/city-services/real-estate-video-production-gurugram/ambience-mall.jpg",
     description: "Major retail expansion project showcasing construction milestones",
   },
 ];
@@ -174,7 +174,7 @@ export default function VideoProductionGurugramClient() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://readdy.ai/api/search-image?query=Gurugram%20skyline%20with%20modern%20skyscrapers%20and%20real%20estate%20developments%2C%20professional%20video%20production%20equipment%20in%20foreground%2C%20cinematic%20lighting%2C%20urban%20landscape%20of%20Millennium%20City&width=1920&height=1080&seq=gurugram-hero&orientation=landscape')`,
+            backgroundImage: `url('/images/city-services/real-estate-video-production-gurugram/hero.jpg')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -320,7 +320,7 @@ export default function VideoProductionGurugramClient() {
             </div>
             <div className="relative">
               <img
-                src="https://readdy.ai/api/search-image?query=Gurugram%20cityscape%20with%20modern%20skyscrapers%2C%20DLF%20Cyber%20City%2C%20financial%20district%2C%20urban%20development%2C%20Millennium%20City%20infrastructure%2C%20professional%20photography&width=600&height=500&seq=gurugram-city&orientation=landscape"
+                src="/images/city-services/real-estate-video-production-gurugram/cityscape.jpg"
                 alt="Gurugram Cityscape"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover object-top"
               />

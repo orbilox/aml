@@ -72,7 +72,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 1,
     title: "Etereo 1, Goa",
     category: "3D Isometrics",
-    image: "/images/portfolio/15.jpg",
+    image: "/images/portfolio/3d-isometrics/etereo-1-goa.jpg",
     description:
       "Premium residential project featuring contemporary design and luxury amenities in the heart of Goa with comprehensive isometric visualization.",
     // videoUrl:
