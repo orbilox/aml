@@ -2,36 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
-
-const localProjects = [
-  {
-    id: 1,
-    title: "DLF Cyber City",
-    location: "Gurgaon, Delhi NCR",
-    type: "Commercial 3D Walkthrough",
-    image: "/images/city-services/3d-walkthrough-videos-delhi/dlf-cyber.jpg",
-    description: "India's largest private sector developed IT park with world-class infrastructure",
-  },
-  {
-    id: 2,
-    title: "Lodha Altamount",
-    location: "New Delhi",
-    type: "Luxury Residential 3D Tour",
-    image: "/images/city-services/3d-walkthrough-videos-delhi/lodha-altamount.jpg",
-    description: "Ultra-luxury residential project in the heart of New Delhi",
-  },
-  {
-    id: 3,
-    title: "Jaypee Greens Sports City",
-    location: "Greater Noida",
-    type: "Mixed-Use 3D Visualization",
-    image: "/images/city-services/3d-walkthrough-videos-delhi/jaypee-sports.jpg",
-    description: "Integrated township with residential, commercial and sports facilities",
-  },
-];
+import {
+  getCityPageData,
+  getServiceConfig,
+  getSiblingCityPages,
+} from "@/data/city-pages/registry";
 
 type ValidatedField = "name" | "email" | "phone";
 type FormErrors = Partial<Record<ValidatedField, string>>;
@@ -58,7 +37,20 @@ function validateField(name: ValidatedField, value: string): string | undefined 
   }
 }
 
-export default function WalkthroughDelhiClient() {
+export default function CityServiceTemplate({ fullSlug }: { fullSlug: string }) {
+  const data = getCityPageData(fullSlug);
+  const config = data ? getServiceConfig(data.serviceSlug) : undefined;
+
+  if (!data || !config) {
+    notFound();
+  }
+
+  const { cityName } = data;
+  const services = config.services(cityName);
+  const whyUsItems = config.whyUsItems(cityName);
+  const faqItems = [...config.baseFaqs(cityName), ...data.extraFaqs];
+  const siblingCities = getSiblingCityPages(data.serviceSlug, data.citySlug);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -118,14 +110,14 @@ export default function WalkthroughDelhiClient() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           access_key: "a557c293-5de3-4d54-8636-50b7d3c406c7",
-          subject: `Delhi NCR 3D Walkthrough Inquiry - ${formData.name}`,
+          subject: `${cityName} ${config.serviceLabel} Inquiry - ${formData.name}`,
           from_name: formData.name,
           from_email: formData.email,
           message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided"}\nService Type: ${formData.service_type || "Not selected"}\nProject Location: ${formData.project_location || "Not provided"}\n\nProject Details:\n${formData.message || "No details provided"}`,
         }),
       });
-      const data = await response.json();
-      if (data.success) {
+      const result = await response.json();
+      if (result.success) {
         setSubmitStatus("success");
         setFormData({ name: "", email: "", countryCode: DEFAULT_COUNTRY_CODE, phone: "", service_type: "", project_location: "", message: "" });
       } else {
@@ -146,17 +138,15 @@ export default function WalkthroughDelhiClient() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('/images/city-services/3d-walkthrough-videos-delhi/hero.jpg')`,
-          }}
+          style={{ backgroundImage: `url('${data.heroImage}')` }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-6">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
-            3D Walkthrough Videos in Delhi NCR
+            {data.heroTitle}
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-lg">
-            Professional 3D Architectural Walkthroughs for Delhi, Gurgaon, Noida & Greater Noida Real Estate Projects
+            {data.heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -169,7 +159,7 @@ export default function WalkthroughDelhiClient() {
               href="/portfolio"
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors whitespace-nowrap"
             >
-              View Delhi Portfolio
+              View {cityName} Portfolio
             </a>
           </div>
         </div>
@@ -180,64 +170,67 @@ export default function WalkthroughDelhiClient() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              3D Walkthrough Services in Delhi NCR
+              {config.serviceLabel} in {cityName}
             </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
-            <p className="text-lg text-black/80 leading-relaxed">
-              Serving Delhi, Gurgaon, Noida, and Greater Noida with premium 3D architectural visualization services.
-              From luxury residences to commercial complexes, we create immersive experiences for the NCR market.
-            </p>
+            <p className="text-lg text-black/80 leading-relaxed">{data.introParagraph}</p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-8 bg-white border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className="ri-building-line text-2xl text-black"></i>
+            {services.map((service, index) => (
+              <div key={index} className="text-center p-8 bg-white border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300">
+                <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className={`${service.icon} text-2xl text-black`}></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">{service.title}</h3>
+                <p className="text-black/70">{service.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-black mb-4">Residential Projects</h3>
-              <p className="text-black/70">Premium 3D tours for Delhi NCR&apos;s luxury residential developments</p>
-            </div>
-            <div className="text-center p-8 bg-white border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className="ri-community-line text-2xl text-black"></i>
-              </div>
-              <h3 className="text-xl font-bold text-black mb-4">Commercial Spaces</h3>
-              <p className="text-black/70">Professional walkthroughs for office complexes and business parks</p>
-            </div>
-            <div className="text-center p-8 bg-white border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className="ri-shopping-bag-line text-2xl text-black"></i>
-              </div>
-              <h3 className="text-xl font-bold text-black mb-4">Retail & Malls</h3>
-              <p className="text-black/70">Engaging 3D experiences for shopping centers and retail spaces</p>
-            </div>
-            <div className="text-center p-8 bg-white border border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className="ri-government-line text-2xl text-black"></i>
-              </div>
-              <h3 className="text-xl font-bold text-black mb-4">Infrastructure</h3>
-              <p className="text-black/70">Large-scale infrastructure and township visualization projects</p>
-            </div>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-black/60 text-sm">
+              Serving {cityName} and surrounding areas including{" "}
+              {data.areasServed.join(", ")}.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Local Portfolio */}
+      {/* Process Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Our {config.serviceLabel} Production Process
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {config.processSteps.map((step) => (
+              <div key={step.n} className="text-center">
+                <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-black">{step.n}</span>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">{step.t}</h3>
+                <p className="text-gray-600">{step.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              Our Delhi NCR 3D Portfolio
+              Our {config.serviceLabel} Portfolio
             </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
-            <p className="text-lg text-black/80 max-w-3xl mx-auto">
-              Showcasing our premium 3D walkthrough work across Delhi, Gurgaon, Noida, and Greater Noida
-            </p>
+            <p className="text-lg text-black/80 max-w-3xl mx-auto">{data.portfolioIntro}</p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {localProjects.map((project) => (
-              <div key={project.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            {data.portfolio.map((project) => (
+              <div key={project.title} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
@@ -262,20 +255,46 @@ export default function WalkthroughDelhiClient() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Why Choose Our {config.serviceLabel} Services
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We create immersive, photorealistic visuals that help real estate developers, architects,
+              and marketers showcase projects with clarity, impact, and cinematic storytelling.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {whyUsItems.map((item, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <span className="text-yellow-400 text-3xl font-bold">•</span>
+                <div>
+                  <h3 className="text-lg font-semibold text-black mb-2">{item.title}</h3>
+                  <p className="text-gray-700 text-base">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
       <section id="quote" className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-                Get Your Delhi NCR Project Quote
+                Get Your {cityName} Project Quote
               </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
               <p className="text-lg text-black/80">
-                Ready to showcase your Delhi NCR property with stunning 3D walkthroughs? Contact us today!
+                Ready to showcase your {cityName} property? Contact us today!
               </p>
             </div>
-
             <form onSubmit={handleSubmit} noValidate className="bg-gray-50 p-8 rounded-xl">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -315,7 +334,6 @@ export default function WalkthroughDelhiClient() {
                   )}
                 </div>
               </div>
-
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-black font-semibold mb-2">Phone *</label>
@@ -352,60 +370,36 @@ export default function WalkthroughDelhiClient() {
                 </div>
                 <div>
                   <label className="block text-black font-semibold mb-2">Service Type</label>
-                  <select
-                    name="service_type"
-                    value={formData.service_type}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent pr-8"
-                  >
+                  <select name="service_type" value={formData.service_type} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent pr-8">
                     <option value="">Select Service</option>
-                    <option value="residential-3d-tour">Residential 3D Tour</option>
-                    <option value="commercial-walkthrough">Commercial Walkthrough</option>
-                    <option value="retail-mall-tour">Retail & Mall Tour</option>
-                    <option value="infrastructure-visualization">Infrastructure Visualization</option>
+                    {config.formServiceOptions.map((opt) => (
+                      <option key={opt.value} value={opt.value}>{opt.label}</option>
+                    ))}
                   </select>
                 </div>
               </div>
-
               <div className="mb-6">
-                <label className="block text-black font-semibold mb-2">Project Location in Delhi NCR</label>
+                <label className="block text-black font-semibold mb-2">Project Location in {cityName}</label>
                 <input
                   type="text"
                   name="project_location"
                   value={formData.project_location}
                   onChange={handleInputChange}
-                  placeholder="e.g., Gurgaon, Noida, Greater Noida, Central Delhi"
+                  placeholder={`e.g., ${data.areasServed.slice(0, 2).join(", ")}`}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                 />
               </div>
-
               <div className="mb-6">
                 <label className="block text-black font-semibold mb-2">Project Details</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={4}
-                  maxLength={500}
-                  placeholder="Tell us about your project requirements..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent resize-none"
-                ></textarea>
-                <div className="text-right text-sm text-gray-500 mt-1">
-                  {formData.message.length}/500 characters
-                </div>
+                <textarea name="message" value={formData.message} onChange={handleInputChange} rows={4} maxLength={500} placeholder="Tell us about your project requirements..." className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent resize-none"></textarea>
+                <div className="text-right text-sm text-gray-500 mt-1">{formData.message.length}/500 characters</div>
               </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors disabled:opacity-60 whitespace-nowrap"
-              >
+              <button type="submit" disabled={isSubmitting} className="w-full bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors disabled:opacity-60 whitespace-nowrap">
                 {isSubmitting ? "Sending..." : "Get Free Quote"}
               </button>
-
               {submitStatus === "success" && (
                 <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                  Thank you! We&apos;ll contact you soon with your Delhi NCR 3D walkthrough quote.
+                  Thank you! We&apos;ll contact you soon with your {cityName} quote.
                 </div>
               )}
               {submitStatus === "error" && (
@@ -418,27 +412,43 @@ export default function WalkthroughDelhiClient() {
         </div>
       </section>
 
-      {/* Related Services & Cities */}
+      {/* FAQ Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Frequently Asked Questions
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Common questions about our {config.serviceLabel.toLowerCase()} production services in {cityName}.
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-6">
+            {faqItems.map((item, i) => (
+              <details key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <summary className="cursor-pointer text-xl font-semibold text-black">{item.q}</summary>
+                <p className="text-gray-600 mt-3">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Cities */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-10">
-            <div>
-              <h3 className="text-xl font-bold text-black mb-4">Related Services</h3>
-              <ul className="space-y-2">
-                <li><Link href="/services/3d-walkthrough-video-company-india" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Video Service — Full Details</Link></li>
-                <li><Link href="/services/interior-cinematic-walkthrough" className="text-gray-600 hover:text-yellow-500 transition-colors">Interior Cinematic Walkthroughs</Link></li>
-                <li><Link href="/services/virtual-reality-tours" className="text-gray-600 hover:text-yellow-500 transition-colors">Virtual Reality Tours — 360° Property Experience</Link></li>
-                <li><Link href="/services/3d-renders-isometrics" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Renders &amp; Isometrics</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-black mb-4">3D Walkthrough Videos — Other Cities</h3>
-              <ul className="space-y-2">
-                <li><Link href="/city-services/3d-walkthrough-videos-mumbai" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Mumbai</Link></li>
-                <li><Link href="/city-services/3d-walkthrough-videos-bangalore" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Bangalore</Link></li>
-                <li><Link href="/city-services/real-estate-video-production-gurugram" className="text-gray-600 hover:text-yellow-500 transition-colors">Real Estate Video Production Gurugram</Link></li>
-              </ul>
-            </div>
+          <div>
+            <h3 className="text-xl font-bold text-black mb-4">{config.serviceLabel} — Other Cities</h3>
+            <ul className="space-y-2">
+              {siblingCities.map((c) => (
+                <li key={c.href}>
+                  <Link href={c.href} className="text-gray-600 hover:text-yellow-500 transition-colors">
+                    {config.serviceLabel} {c.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

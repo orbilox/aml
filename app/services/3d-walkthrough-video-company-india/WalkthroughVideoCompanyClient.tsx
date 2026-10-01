@@ -116,20 +116,6 @@ const productionProcess = [
   },
 ];
 
-const cityLinks = [
-  { city: "Mumbai", href: "/city-services/3d-walkthrough-videos-mumbai" },
-  { city: "Delhi NCR", href: "/city-services/3d-walkthrough-videos-delhi" },
-  { city: "Bangalore", href: "/city-services/3d-walkthrough-videos-bangalore" },
-  {
-    city: "Gurugram",
-    href: "/city-services/real-estate-video-production-gurugram",
-  },
-  { city: "Pune", href: "/contact" },
-  { city: "Hyderabad", href: "/contact" },
-  { city: "Chennai", href: "/contact" },
-  { city: "Ahmedabad", href: "/contact" },
-];
-
 type FieldName =
   | "name"
   | "email"
@@ -789,31 +775,6 @@ export default function WalkthroughVideoCompanyClient() {
         </div>
       </section>
 
-      {/* ── CITY COVERAGE ── */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              3D Walkthrough Company Serving All Major Indian Cities
-            </h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {cityLinks.map((c) => (
-              <Link
-                key={c.city}
-                href={c.href}
-                className="inline-flex items-center gap-2 border border-gray-200 hover:border-yellow-400 hover:bg-yellow-400/5 text-gray-700 hover:text-black px-5 py-2.5 rounded-full text-sm font-medium transition-all"
-              >
-                <i className="ri-map-pin-line text-yellow-400 text-xs" />
-                {c.city}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── FAQ ── */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
@@ -867,119 +828,38 @@ export default function WalkthroughVideoCompanyClient() {
         </div>
       </section>
 
-      {/* ── RELATED SERVICES & BLOGS ── */}
+      {/* ── OTHER CITIES ── */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Related Services */}
-            <div>
-              <h3 className="text-xl font-bold text-black mb-6 flex items-center gap-2">
-                <i className="ri-stack-line text-yellow-400" />
-                Related Services
-              </h3>
-              <div className="grid gap-4">
-                {[
-                  {
-                    href: "/services/3d-walkthrough-video-company-india",
-                    title: "3D Walkthrough Video Service",
-                    desc: "Architectural walkthrough videos for property launches and investor presentations.",
-                    icon: "ri-video-line",
-                  },
-                  {
-                    href: "/services/virtual-reality-tours",
-                    title: "Virtual Reality Tours",
-                    desc: "Immersive VR property experiences for sales offices and remote buyers.",
-                    icon: "ri-eye-line",
-                  },
-                  {
-                    href: "/services/3d-renders-isometrics",
-                    title: "3D Renders & Isometrics",
-                    desc: "Photorealistic 3D renders and aerial isometric views for marketing collateral.",
-                    icon: "ri-image-line",
-                  },
-                  {
-                    href: "/services/interior-cinematic-walkthrough",
-                    title: "Interior Cinematic Walkthrough",
-                    desc: "Premium interior walkthroughs with luxury finishes and designer furniture staging.",
-                    icon: "ri-home-smile-line",
-                  },
-                ].map((s) => (
-                  <Link
-                    key={s.href}
-                    href={s.href}
-                    className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group"
-                  >
-                    <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
-                      <i className={`${s.icon} text-yellow-400 text-lg`} />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-black text-sm group-hover:text-yellow-400 transition-colors">
-                        {s.title}
-                      </div>
-                      <div className="text-gray-500 text-xs mt-0.5">
-                        {s.desc}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Related Blog Posts */}
-            <div>
-              <h3 className="text-xl font-bold text-black mb-6 flex items-center gap-2">
-                <i className="ri-article-line text-yellow-400" />
-                Related Articles
-              </h3>
-              <div className="grid gap-4">
-                {[
-                  {
-                    href: "/blog/3d-walkthrough-video-service",
-                    title: "What Is a 3D Walkthrough Video Service?",
-                    desc: "Complete guide to 3D walkthrough videos for Indian real estate developers — types, costs, and ROI.",
-                    tag: "Guide",
-                  },
-                  {
-                    href: "/blog/real-estate-marketing-video-types-india",
-                    title: "Real Estate Marketing Video Types India",
-                    desc: "The 7 types of real estate marketing videos every Indian developer needs to know in 2026.",
-                    tag: "Marketing",
-                  },
-                  {
-                    href: "/blog/3d-house-rendering-guide-india",
-                    title: "3D House Rendering Guide India",
-                    desc: "How photorealistic 3D renders and walkthroughs shorten sales cycles and increase booking rates.",
-                    tag: "Rendering",
-                  },
-                  {
-                    href: "/blog/real-estate-drone-photography-india",
-                    title: "Real Estate Drone Photography India",
-                    desc: "How aerial drone shoots complement 3D walkthroughs for a complete property marketing package.",
-                    tag: "Drone",
-                  },
-                ].map((b) => (
-                  <Link
-                    key={b.href}
-                    href={b.href}
-                    className="flex items-start gap-4 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group"
-                  >
-                    <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
-                      <i className="ri-article-line text-yellow-400 text-lg" />
-                    </div>
-                    <div>
-                      <span className="text-xs text-yellow-400 font-semibold">
-                        {b.tag}
-                      </span>
-                      <div className="font-semibold text-black text-sm group-hover:text-yellow-400 transition-colors mt-0.5">
-                        {b.title}
-                      </div>
-                      <div className="text-gray-500 text-xs mt-0.5">
-                        {b.desc}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+          <div>
+            <h3 className="text-xl font-bold text-black mb-6 flex items-center gap-2">
+              <i className="ri-map-pin-line text-yellow-400" />
+              3D Walkthrough Videos — Other Cities
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { href: "/city-services/3d-walkthrough-videos-mumbai", title: "Mumbai" },
+                { href: "/city-services/3d-walkthrough-videos-delhi", title: "Delhi NCR" },
+                { href: "/city-services/3d-walkthrough-videos-bangalore", title: "Bangalore" },
+                { href: "/city-services/3d-walkthrough-videos-navi-mumbai", title: "Navi Mumbai" },
+                { href: "/city-services/3d-walkthrough-videos-pune", title: "Pune" },
+                { href: "/city-services/3d-walkthrough-videos-jaipur", title: "Jaipur" },
+                { href: "/city-services/3d-walkthrough-videos-patna", title: "Patna" },
+                { href: "/city-services/3d-walkthrough-videos-kundli", title: "Kundli" },
+              ].map((c) => (
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className="flex items-center gap-3 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group"
+                >
+                  <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
+                    <i className="ri-building-4-line text-yellow-400 text-lg" />
+                  </div>
+                  <div className="font-semibold text-black text-sm group-hover:text-yellow-400 transition-colors">
+                    {c.title}
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

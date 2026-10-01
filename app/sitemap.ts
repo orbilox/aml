@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "./blog/posts";
+import { getAllCityPageSlugs } from "@/data/city-pages/registry";
 
 // Real last-content-change dates per route. Google ignores lastmod entirely
 // when every URL reports the same build timestamp — keep these honest and
@@ -21,11 +22,16 @@ const LASTMOD: Record<string, string> = {
   "/services/3d-isometrics": "2026-02-10",
   "/services/interior-cinematic-walkthrough": "2026-02-10",
   "/city-services/3d-renders-mumbai": "2026-02-10",
-  "/city-services/3d-walkthrough-videos-bangalore": "2026-02-10",
-  "/city-services/3d-walkthrough-videos-delhi": "2026-02-10",
-  "/city-services/3d-walkthrough-videos-mumbai": "2026-02-10",
   "/city-services/drone-shoots-bangalore": "2026-02-10",
   "/city-services/real-estate-video-production-gurugram": "2026-02-10",
+  "/city-services/3d-walkthrough-videos-bangalore": "2026-10-01",
+  "/city-services/3d-walkthrough-videos-delhi": "2026-10-01",
+  "/city-services/3d-walkthrough-videos-mumbai": "2026-10-01",
+  "/city-services/3d-walkthrough-videos-navi-mumbai": "2026-09-30",
+  "/city-services/3d-walkthrough-videos-pune": "2026-09-30",
+  "/city-services/3d-walkthrough-videos-jaipur": "2026-09-30",
+  "/city-services/3d-walkthrough-videos-patna": "2026-09-30",
+  "/city-services/3d-walkthrough-videos-kundli": "2026-09-30",
 };
 
 const FALLBACK_DATE = new Date("2026-02-10");
@@ -60,11 +66,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const cityRoutes = [
     "/city-services/3d-renders-mumbai",
-    "/city-services/3d-walkthrough-videos-bangalore",
-    "/city-services/3d-walkthrough-videos-delhi",
-    "/city-services/3d-walkthrough-videos-mumbai",
     "/city-services/drone-shoots-bangalore",
     "/city-services/real-estate-video-production-gurugram",
+    ...getAllCityPageSlugs().map((slug) => `/city-services/${slug}`),
   ];
 
   // Newest post date doubles as the blog index's lastmod.
