@@ -13,6 +13,45 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "diwali-festive-season-real-estate-marketing-india",
+    title: "Festive Season Real Estate Marketing in India: A Diwali Campaign Guide for Developers (2026)",
+    excerpt:
+      "The weeks around Navratri, Dussehra, and Diwali are when Indian families are most ready to commit to a home — and when every developer is shouting \"festive offer\" at the same time. Here's how to build a festive campaign that sells the feeling of a new home, not just a discount.",
+    category: "Festive Season Marketing",
+    date: "October 20, 2026",
+    dateISO: "2026-10-20",
+    readTime: "8 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/graphics-branding/prestige-towers.png",
+    tags: ["Diwali Real Estate Marketing", "Festive Season Campaign", "Real Estate Marketing India", "Real Estate Digital Marketing", "Property Sales Strategy"],
+  },
+  {
+    slug: "3d-isometric-views-real-estate-master-plan-guide-india",
+    title: "3D Isometric Views for Real Estate: The Complete Guide to Master Plan Visuals (2026)",
+    excerpt:
+      "A flat master plan shows lines; a 3D isometric view shows a neighbourhood. Here's what isometric views are, how they differ from perspective renders, how they're produced, and where they work hardest — from township launches to highway hoardings.",
+    category: "3D Isometric Views",
+    date: "October 12, 2026",
+    dateISO: "2026-10-12",
+    readTime: "8 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/portfolio/3d-isometrics/master-plan-isometric.jpeg",
+    tags: ["3D Isometric Views", "Master Plan Isometric", "Real Estate Visualization", "Township Marketing", "3D Architectural Rendering"],
+  },
+  {
+    slug: "construction-update-videos-real-estate-guide-india",
+    title: "Construction Update Videos for Real Estate: The Complete Guide for Developers (2026)",
+    excerpt:
+      "A buyer who has paid a booking amount has one recurring question: is my building actually getting built? Here's what construction update videos cover, how often to shoot, how they're produced, and how to turn a compliance chore into your strongest trust asset.",
+    category: "Construction Update Videos",
+    date: "October 5, 2026",
+    dateISO: "2026-10-05",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/portfolio/construction-updates/smart-world-sky-arc-gurugram.png",
+    tags: ["Construction Update Videos", "Drone Construction Videos", "RERA Progress Updates", "Buyer Trust", "Real Estate Video Marketing"],
+  },
+  {
     slug: "interior-cinematic-walkthrough-guide-india",
     title: "Interior Cinematic Walkthrough for Real Estate: The Complete Guide (2026)",
     excerpt:

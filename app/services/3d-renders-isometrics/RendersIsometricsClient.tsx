@@ -554,107 +554,6 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                Professional 3D Rendering & Architectural Visualization Services
-              </h2>
-              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Transform architectural plans into photorealistic 3D renders,
-                architectural rendering presentations, 3D floor plans, and
-                high-end architectural visualization services for real estate
-                and interior design projects.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                  <i className="ri-image-line text-2xl text-black"></i>
-                </div>
-                <h3 className="text-xl font-bold text-black mb-4">
-                  Photorealistic Renders
-                </h3>
-                <p className="text-gray-600">
-                  Industry-leading 3D rendering services with photorealistic
-                  lighting, textures, materials, and environmental detailing for
-                  residential and commercial projects.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                  <i className="ri-layout-grid-line text-2xl text-black"></i>
-                </div>
-                <h3 className="text-xl font-bold text-black mb-4">
-                  Isometric Illustrations
-                </h3>
-                <p className="text-gray-600">
-                  Detailed 3D floor plan design and isometric architectural
-                  visualisation perfect for brochures, presentations, sales
-                  decks, and township marketing.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                  <i className="ri-sun-line text-2xl text-black"></i>
-                </div>
-                <h3 className="text-xl font-bold text-black mb-4">
-                  Dynamic Lighting
-                </h3>
-                <p className="text-gray-600">
-                  Advanced lighting scenarios including day/night variations and
-                  seasonal changes.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                  <i className="ri-palette-line text-2xl text-black"></i>
-                </div>
-                <h3 className="text-xl font-bold text-black mb-4">
-                  Material Accuracy
-                </h3>
-                <p className="text-gray-600">
-                  Advanced 3D rendering interior design workflows with accurate
-                  textures, reflections, finishes, and architectural materials.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                  <i className="ri-landscape-line text-2xl text-black"></i>
-                </div>
-                <h3 className="text-xl font-bold text-black mb-4">
-                  Environmental Context
-                </h3>
-                <p className="text-gray-600">
-                  Architectural rendering services with realistic landscaping,
-                  streetscapes, environmental context, and urban planning
-                  visualization.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                  <i className="ri-camera-line text-2xl text-black"></i>
-                </div>
-                <h3 className="text-xl font-bold text-black mb-4">
-                  Multiple Angles
-                </h3>
-                <p className="text-gray-600">
-                  Comprehensive view sets including exterior, interior, aerial,
-                  and street-level perspectives.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Portfolio Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-6">
@@ -895,6 +794,108 @@ ${formData.message || "No additional details provided"}
             </div>
           </div>
         </section>
+
+        {/* Features Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Professional 3D Rendering & Architectural Visualization Services
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Transform architectural plans into photorealistic 3D renders,
+                architectural rendering presentations, 3D floor plans, and
+                high-end architectural visualization services for real estate
+                and interior design projects.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className="ri-image-line text-2xl text-black"></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Photorealistic Renders
+                </h3>
+                <p className="text-gray-600">
+                  Industry-leading 3D rendering services with photorealistic
+                  lighting, textures, materials, and environmental detailing for
+                  residential and commercial projects.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className="ri-layout-grid-line text-2xl text-black"></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Isometric Illustrations
+                </h3>
+                <p className="text-gray-600">
+                  Detailed 3D floor plan design and isometric architectural
+                  visualisation perfect for brochures, presentations, sales
+                  decks, and township marketing.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className="ri-sun-line text-2xl text-black"></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Dynamic Lighting
+                </h3>
+                <p className="text-gray-600">
+                  Advanced lighting scenarios including day/night variations and
+                  seasonal changes.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className="ri-palette-line text-2xl text-black"></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Material Accuracy
+                </h3>
+                <p className="text-gray-600">
+                  Advanced 3D rendering interior design workflows with accurate
+                  textures, reflections, finishes, and architectural materials.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className="ri-landscape-line text-2xl text-black"></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Environmental Context
+                </h3>
+                <p className="text-gray-600">
+                  Architectural rendering services with realistic landscaping,
+                  streetscapes, environmental context, and urban planning
+                  visualization.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className="ri-camera-line text-2xl text-black"></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Multiple Angles
+                </h3>
+                <p className="text-gray-600">
+                  Comprehensive view sets including exterior, interior, aerial,
+                  and street-level perspectives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Rendering Services Section */}
         <section className="py-24 bg-white">

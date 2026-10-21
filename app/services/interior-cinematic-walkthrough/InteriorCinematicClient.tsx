@@ -122,7 +122,7 @@ export default function InteriorCinematicClient() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://readdy.ai/api/search-image?query=Cinematic%20interior%20of%20luxury%20modern%20living%20room%20with%20elegant%20furniture%2C%20warm%20ambient%20lighting%2C%20large%20windows%20with%20city%20views%2C%20professional%20interior%20photography%2C%20sophisticated%20design%20elements%2C%20premium%20materials%20and%20finishes&width=1920&height=1080&seq=interior-hero-bg&orientation=landscape')`,
+            backgroundImage: `url('/images/services/interior-cinematic-walkthrough/hero.jpg')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-black/60"></div>
@@ -151,6 +151,50 @@ export default function InteriorCinematicClient() {
                 View Portfolio
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-black mb-6">
+              Interior Walkthrough Portfolio
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our cinematic interior walkthroughs showcasing luxury
+              properties and premium lifestyle experiences
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioItems.map((item, index) => (
+              <div
+                key={index}
+                className="group cursor-pointer"
+                onClick={() => setSelectedProject(item)}
+              >
+                <div className="relative overflow-hidden rounded-2xl bg-gray-900 mb-6">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <i className="ri-play-circle-line text-4xl mb-2"></i>
+                      <p className="text-sm">View Walkthrough</p>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -215,7 +259,7 @@ export default function InteriorCinematicClient() {
             </div>
             <div className="relative">
               <img
-                src="https://readdy.ai/api/search-image?query=Professional%20interior%20cinematography%20setup%20with%20camera%20equipment%2C%20lighting%20gear%2C%20and%20crew%20filming%20luxury%20apartment%20interior%2C%20modern%20production%20equipment%2C%20sophisticated%20interior%20design%20background&width=600&height=500&seq=interior-benefits&orientation=landscape"
+                src="/images/services/interior-cinematic-walkthrough/benefits.jpg"
                 alt="Interior Cinematic Production"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
@@ -224,49 +268,6 @@ export default function InteriorCinematicClient() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-black mb-6">
-              Interior Walkthrough Portfolio
-            </h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our cinematic interior walkthroughs showcasing luxury
-              properties and premium lifestyle experiences
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioItems.map((item, index) => (
-              <div
-                key={index}
-                className="group cursor-pointer"
-                onClick={() => setSelectedProject(item)}
-              >
-                <div className="relative overflow-hidden rounded-2xl bg-gray-900 mb-6">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <i className="ri-play-circle-line text-4xl mb-2"></i>
-                      <p className="text-sm">View Walkthrough</p>
-                    </div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-black mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Process Section */}
       <section className="py-24 bg-gray-50">

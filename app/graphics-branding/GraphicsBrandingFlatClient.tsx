@@ -86,7 +86,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 1,
     title: "Prestige Towers",
     desc: "Complete brand identity for luxury high-rise development with premium positioning.",
-    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-1&orientation=landscape",
+    image: "/images/graphics-branding/prestige-towers.png",
     tag: "ri-palette-line",
     label: "Brand Identity • Marketing",
   },
@@ -94,7 +94,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 2,
     title: "Urban Living Brochure",
     desc: "Comprehensive sales brochure showcasing modern residential development features.",
-    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-2&orientation=landscape",
+    image: "/images/graphics-branding/urban-living-brochure.png",
     tag: "ri-book-open-line",
     label: "Print Design • Sales Materials",
   },
@@ -102,7 +102,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 3,
     title: "Property Portal Website",
     desc: "User-friendly website design with advanced property search and virtual tours.",
-    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-3&orientation=landscape",
+    image: "/images/graphics-branding/property-portal-website.png",
     tag: "ri-global-line",
     label: "Web Design • UX/UI",
   },
@@ -110,7 +110,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 4,
     title: "Social Media Campaign",
     desc: "Engaging social media templates and content strategy for property marketing.",
-    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-4&orientation=landscape",
+    image: "/images/graphics-branding/social-media-campaign.png",
     tag: "ri-smartphone-line",
     label: "Social Media • Digital Marketing",
   },
@@ -118,7 +118,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 5,
     title: "Development Signage",
     desc: "Comprehensive signage system for large-scale mixed-use development project.",
-    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-5&orientation=landscape",
+    image: "/images/graphics-branding/development-signage.png",
     tag: "ri-signpost-line",
     label: "Signage • Wayfinding",
   },
@@ -126,7 +126,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 6,
     title: "Investor Presentation",
     desc: "Professional pitch deck design for major real estate investment opportunity.",
-    image: "https://readdy.ai/api/search-image?query=Real%20estate%20branding%20design%20professional&width=400&height=300&seq=branding-portfolio-6&orientation=landscape",
+    image: "/images/graphics-branding/investor-presentation.png",
     tag: "ri-presentation-line",
     label: "Presentation • Corporate Design",
   },
@@ -526,6 +526,42 @@ export default function GraphicsBrandingFlatClient() {
         </div>
       </section>
 
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Branding &amp; Design Portfolio</h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Explore premium real estate graphics, brochure design services, and commercial real estate graphics created for leading property brands.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioItems.map((item) => (
+              <div key={item.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src={item.image} alt={item.title} className="w-full aspect-[3/2] object-cover object-center" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
+                  <p className="text-gray-600 mb-4">{item.desc}</p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <i className={`${item.tag} mr-2`}></i>
+                    <span>{item.label}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-full transition-colors"
+            >
+              View Our Portfolio
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* What We Deliver */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
@@ -574,41 +610,6 @@ export default function GraphicsBrandingFlatClient() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Branding &amp; Design Portfolio</h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Explore premium real estate graphics, brochure design services, and commercial real estate graphics created for leading property brands.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioItems.map((item) => (
-              <div key={item.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src={item.image} alt={item.title} className="w-full h-48 object-cover object-top" />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
-                  <p className="text-gray-600 mb-4">{item.desc}</p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <i className={`${item.tag} mr-2`}></i>
-                    <span>{item.label}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-4 rounded-full transition-colors"
-            >
-              View Our Portfolio
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Design Process Section */}
       <section className="py-24 bg-gray-50">

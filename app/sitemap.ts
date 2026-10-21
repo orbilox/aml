@@ -32,6 +32,11 @@ const LASTMOD: Record<string, string> = {
   "/city-services/3d-walkthrough-videos-jaipur": "2026-09-30",
   "/city-services/3d-walkthrough-videos-patna": "2026-09-30",
   "/city-services/3d-walkthrough-videos-kundli": "2026-09-30",
+  "/city-services/virtual-reality-tours-mumbai": "2026-10-21",
+  "/city-services/virtual-reality-tours-delhi-ncr": "2026-10-21",
+  "/city-services/virtual-reality-tours-bengaluru": "2026-10-21",
+  "/city-services/virtual-reality-tours-navi-mumbai": "2026-10-21",
+  "/city-services/virtual-reality-tours-pune": "2026-10-21",
 };
 
 const FALLBACK_DATE = new Date("2026-02-10");

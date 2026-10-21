@@ -421,6 +421,62 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
+        {/* Portfolio Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Interactive 3D Portfolio
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Innovative interactive 3D tools that transform how clients
+                experience and customize properties
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {portfolioProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                  onClick={() => window.open(project.videoUrl, "_blank")}
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+                        <i className="ri-play-fill text-2xl text-black"></i>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                      {project.category}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-black mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-black/70">{project.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/portfolio"
+                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
+              >
+                View Our Portfolio
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
@@ -517,61 +573,6 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
-        {/* Portfolio Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                Interactive 3D Portfolio
-              </h2>
-              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Innovative interactive 3D tools that transform how clients
-                experience and customize properties
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {portfolioProjects.map((project) => (
-                <div
-                  key={project.id}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-                  onClick={() => window.open(project.videoUrl, "_blank")}
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                        <i className="ri-play-fill text-2xl text-black"></i>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                      {project.category}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-black mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-black/70">{project.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link
-                href="/portfolio"
-                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
-              >
-                View Our Portfolio
-              </Link>
-            </div>
-          </div>
-        </section>
 
         {/* Tools Section */}
         <section className="py-24 bg-gray-50">

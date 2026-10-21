@@ -11,11 +11,26 @@ import Interactive3DToolsGuideArticle from "@/app/blog/articles/Interactive3DToo
 import DigitalMarketingGuideArticle from "@/app/blog/articles/DigitalMarketingGuideArticle";
 import GraphicsBrandingGuideArticle from "@/app/blog/articles/GraphicsBrandingGuideArticle";
 import RouteVideosGuideArticle from "@/app/blog/articles/RouteVideosGuideArticle";
+import ConstructionUpdateVideosGuideArticle from "@/app/blog/articles/ConstructionUpdateVideosGuideArticle";
+import IsometricViewsGuideArticle from "@/app/blog/articles/IsometricViewsGuideArticle";
+import FestiveSeasonMarketingGuideArticle from "@/app/blog/articles/FestiveSeasonMarketingGuideArticle";
 import InteriorCinematicWalkthroughGuideArticle from "@/app/blog/articles/InteriorCinematicWalkthroughGuideArticle";
 
 export default function BlogDetailClient({ slug }: { slug: string }) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
+
+  if (slug === "diwali-festive-season-real-estate-marketing-india") {
+    return <FestiveSeasonMarketingGuideArticle post={post} />;
+  }
+
+  if (slug === "3d-isometric-views-real-estate-master-plan-guide-india") {
+    return <IsometricViewsGuideArticle post={post} />;
+  }
+
+  if (slug === "construction-update-videos-real-estate-guide-india") {
+    return <ConstructionUpdateVideosGuideArticle post={post} />;
+  }
 
   if (slug === "interior-cinematic-walkthrough-guide-india") {
     return <InteriorCinematicWalkthroughGuideArticle post={post} />;

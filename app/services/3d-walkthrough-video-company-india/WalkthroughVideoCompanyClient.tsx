@@ -829,38 +829,33 @@ export default function WalkthroughVideoCompanyClient() {
       </section>
 
       {/* ── OTHER CITIES ── */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6">
           <div>
-            <h3 className="text-xl font-bold text-black mb-6 flex items-center gap-2">
-              <i className="ri-map-pin-line text-yellow-400" />
+            <h3 className="text-xl font-bold text-black mb-4">
               3D Walkthrough Videos — Other Cities
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <ul className="space-y-2">
               {[
                 { href: "/city-services/3d-walkthrough-videos-mumbai", title: "Mumbai" },
                 { href: "/city-services/3d-walkthrough-videos-delhi", title: "Delhi NCR" },
-                { href: "/city-services/3d-walkthrough-videos-bangalore", title: "Bangalore" },
+                { href: "/city-services/3d-walkthrough-videos-bangalore", title: "Bengaluru" },
                 { href: "/city-services/3d-walkthrough-videos-navi-mumbai", title: "Navi Mumbai" },
                 { href: "/city-services/3d-walkthrough-videos-pune", title: "Pune" },
                 { href: "/city-services/3d-walkthrough-videos-jaipur", title: "Jaipur" },
                 { href: "/city-services/3d-walkthrough-videos-patna", title: "Patna" },
                 { href: "/city-services/3d-walkthrough-videos-kundli", title: "Kundli" },
               ].map((c) => (
-                <Link
-                  key={c.href}
-                  href={c.href}
-                  className="flex items-center gap-3 p-4 border border-gray-100 rounded-xl hover:border-yellow-400/50 hover:bg-yellow-400/5 transition-all group"
-                >
-                  <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-400/20 transition-colors">
-                    <i className="ri-building-4-line text-yellow-400 text-lg" />
-                  </div>
-                  <div className="font-semibold text-black text-sm group-hover:text-yellow-400 transition-colors">
-                    {c.title}
-                  </div>
-                </Link>
+                <li key={c.href}>
+                  <Link
+                    href={c.href}
+                    className="text-gray-600 hover:text-yellow-500 transition-colors"
+                  >
+                    3D Walkthrough Videos {c.title}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </section>

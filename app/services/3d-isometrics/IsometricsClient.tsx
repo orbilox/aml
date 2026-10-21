@@ -152,7 +152,7 @@ export default function IsometricsClient() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://readdy.ai/api/search-image?query=Professional%20isometric%20architectural%20illustration%20workspace%2C%20technical%20drawings%2C%20detailed%203D%20isometric%20projections%2C%20architectural%20design%20studio%2C%20professional%20visualization&width=1920&height=1080&seq=isometrics-hero-bg&orientation=landscape')`,
+            backgroundImage: `url('/images/services/3d-isometrics/hero.png')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-black/60"></div>
@@ -185,77 +185,8 @@ export default function IsometricsClient() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-black mb-6">
-              3D Isometric Features
-            </h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Technical precision combined with artistic excellence for
-              comprehensive architectural visualizations
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-yellow-400 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                  <i className={`${feature.icon} text-2xl text-black`}></i>
-                </div>
-                <h3 className="text-xl font-bold text-black mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-black mb-6">
-                Why Choose 3D Isometrics?
-              </h2>
-              <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
-              <p className="text-xl text-gray-600 mb-8">
-                Isometric illustrations provide a unique perspective that
-                communicates complex architectural information clearly and
-                effectively to all audiences.
-              </p>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <i className="ri-check-line text-yellow-400 text-xl mr-3 mt-1"></i>
-                    <span className="text-gray-700">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative">
-              <img
-                src="https://readdy.ai/api/search-image?query=Professional%20architect%20working%20on%20detailed%20isometric%20illustration%2C%20technical%20drawing%20workspace%2C%20computer%20screens%20showing%203D%20isometric%20views%2C%20professional%20design%20studio%20environment&width=600&height=500&seq=isometrics-benefits&orientation=landscape"
-                alt="3D Isometric Design Process"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-white">
+      <section id="portfolio" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-black mb-6">
@@ -445,6 +376,76 @@ export default function IsometricsClient() {
           )}
         </div>
       </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-black mb-6">
+              3D Isometric Features
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Technical precision combined with artistic excellence for
+              comprehensive architectural visualizations
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-yellow-400 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                  <i className={`${feature.icon} text-2xl text-black`}></i>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-black mb-6">
+                Why Choose 3D Isometrics?
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
+              <p className="text-xl text-gray-600 mb-8">
+                Isometric illustrations provide a unique perspective that
+                communicates complex architectural information clearly and
+                effectively to all audiences.
+              </p>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <i className="ri-check-line text-yellow-400 text-xl mr-3 mt-1"></i>
+                    <span className="text-gray-700">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="relative">
+              <img
+                src="/images/services/3d-isometrics/benefits.png"
+                alt="3D Isometric Design Process"
+                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Use Cases */}
       <section className="py-24 bg-black">

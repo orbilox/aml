@@ -181,6 +181,159 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
+        {/* Portfolio Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Digital Marketing Portfolio
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Successful digital marketing campaigns that drove results for
+                real estate clients
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img
+                  src="/images/services/digital-marketing/portfolio-1.jpg"
+                  alt="Social Media Campaign"
+                  className="w-full aspect-[4/3] object-cover object-center"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    Luxury Towers Campaign
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Social media campaign generating 2,500 qualified leads and
+                    85% unit sales.
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
+                    <span>300% ROI increase</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img
+                  src="/images/services/digital-marketing/portfolio-2.jpg"
+                  alt="PPC Campaign"
+                  className="w-full aspect-[4/3] object-cover object-center"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    Search Marketing Success
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Google Ads campaign achieving 40% lower cost-per-lead and
+                    180% conversion boost.
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
+                    <span>180% conversion boost</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img
+                  src="/images/services/digital-marketing/portfolio-3.jpg"
+                  alt="Email Marketing"
+                  className="w-full aspect-[4/3] object-cover object-center"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    Email Automation
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Automated nurture sequences converting 25% of leads into
+                    qualified prospects.
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
+                    <span>25% lead conversion</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img
+                  src="/images/services/digital-marketing/portfolio-4.jpg"
+                  alt="Content Marketing"
+                  className="w-full aspect-[4/3] object-cover object-center"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    Content Strategy
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    SEO-optimized content driving 400% organic traffic growth
+                    and brand authority.
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
+                    <span>400% traffic growth</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img
+                  src="/images/services/digital-marketing/portfolio-5.jpg"
+                  alt="Video Marketing"
+                  className="w-full aspect-[4/3] object-cover object-center"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    Video Campaign
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    YouTube and social video campaign reaching 2M+ views and 15%
+                    engagement rate.
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
+                    <span>2M+ video views</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img
+                  src="/images/services/digital-marketing/portfolio-6.jpg"
+                  alt="Analytics Dashboard"
+                  className="w-full aspect-[4/3] object-cover object-center"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    Performance Analytics
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Comprehensive tracking system delivering actionable insights
+                    and 250% ROI.
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
+                    <span>250% ROI achieved</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/portfolio"
+                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
+              >
+                View Our Portfolio
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
@@ -277,158 +430,6 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
-        {/* Portfolio Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                Digital Marketing Portfolio
-              </h2>
-              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Successful digital marketing campaigns that drove results for
-                real estate clients
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img
-                  src="/images/services/digital-marketing/portfolio-1.jpg"
-                  alt="Social Media Campaign"
-                  className="w-full h-48 object-cover object-top"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    Luxury Towers Campaign
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Social media campaign generating 2,500 qualified leads and
-                    85% unit sales.
-                  </p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
-                    <span>300% ROI increase</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img
-                  src="/images/services/digital-marketing/portfolio-2.jpg"
-                  alt="PPC Campaign"
-                  className="w-full h-48 object-cover object-top"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    Search Marketing Success
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Google Ads campaign achieving 40% lower cost-per-lead and
-                    180% conversion boost.
-                  </p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
-                    <span>180% conversion boost</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img
-                  src="/images/services/digital-marketing/portfolio-3.jpg"
-                  alt="Email Marketing"
-                  className="w-full h-48 object-cover object-top"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    Email Automation
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Automated nurture sequences converting 25% of leads into
-                    qualified prospects.
-                  </p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
-                    <span>25% lead conversion</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img
-                  src="/images/services/digital-marketing/portfolio-4.jpg"
-                  alt="Content Marketing"
-                  className="w-full h-48 object-cover object-top"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    Content Strategy
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    SEO-optimized content driving 400% organic traffic growth
-                    and brand authority.
-                  </p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
-                    <span>400% traffic growth</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img
-                  src="/images/services/digital-marketing/portfolio-5.jpg"
-                  alt="Video Marketing"
-                  className="w-full h-48 object-cover object-top"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    Video Campaign
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    YouTube and social video campaign reaching 2M+ views and 15%
-                    engagement rate.
-                  </p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
-                    <span>2M+ video views</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img
-                  src="/images/services/digital-marketing/portfolio-6.jpg"
-                  alt="Analytics Dashboard"
-                  className="w-full h-48 object-cover object-top"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    Performance Analytics
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Comprehensive tracking system delivering actionable insights
-                    and 250% ROI.
-                  </p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <i className="ri-arrow-up-line mr-2 text-green-500"></i>
-                    <span>250% ROI achieved</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-12">
-              <Link
-                href="/portfolio"
-                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
-              >
-                View Our Portfolio
-              </Link>
-            </div>
-          </div>
-        </section>
 
         {/* Strategy Section */}
         <section className="py-24 bg-gray-50">

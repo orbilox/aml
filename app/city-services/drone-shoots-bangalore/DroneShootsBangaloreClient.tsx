@@ -78,6 +78,13 @@ export default function DroneShootsBangaloreClient() {
     }
   };
 
+  const heroInputClass = (field: ValidatedField) =>
+    `w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+      touched[field] && errors[field]
+        ? "border-red-400 focus:ring-red-400"
+        : "border-gray-300 focus:ring-yellow-400"
+    }`;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -101,7 +108,7 @@ export default function DroneShootsBangaloreClient() {
           subject: `Bangalore Drone Shoot Inquiry - ${formData.name}`,
           from_name: formData.name,
           from_email: formData.email,
-          message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided"}\nService Type: ${formData.service_type || "Not selected"}\nProject Location: ${formData.project_location || "Not provided"}\n\nProject Details:\n${formData.message || "No details provided"}`,
+          message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided"}\nService Type: ${formData.service_type || "Not selected"}\nProject Location: ${formData.project_location || "Bangalore"}\n\nProject Details:\n${formData.message || "No details provided"}`,
         }),
       });
       const data = await response.json();
@@ -123,34 +130,157 @@ export default function DroneShootsBangaloreClient() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden py-24">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('/images/city-services/drone-shoots-bangalore/hero.jpg')`,
-          }}
+          style={{ backgroundImage: `url('/images/city-services/drone-shoots-bangalore/hero.jpg')` }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-6">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
-            Drone Shoots in Bangalore
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-lg">
-            Professional Aerial Photography & Videography Services for Bangalore&apos;s IT Parks & Real Estate Projects
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#quote"
-              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
-            >
-              Get Free Quote
-            </a>
-            <a
-              href="/portfolio"
-              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors whitespace-nowrap"
-            >
-              View Drone Portfolio
-            </a>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
+                Drone Shoots in Bangalore
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-lg">
+                Professional Aerial Photography & Videography Services for Bangalore&apos;s IT Parks & Real Estate Projects
+              </p>
+              <div className="flex flex-wrap gap-4">
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+              {submitStatus === "success" ? (
+                <div className="text-center py-10">
+                  <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-2xl text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <p className="text-gray-600 text-sm">
+                    We&apos;ve received your enquiry. Our team will get back to you within 24 hours with a detailed quote.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                  <p className="text-gray-500 text-sm mb-5">
+                    Share your project details and we&apos;ll respond within 24 hours.
+                  </p>
+                  <form onSubmit={handleSubmit} noValidate className="space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          onBlur={handleBlur}
+                          placeholder="Your full name"
+                          className={heroInputClass("name")}
+                        />
+                        {touched.name && errors.name && (
+                          <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone *</label>
+                        <div className="flex gap-2">
+                          <select
+                            name="countryCode"
+                            value={formData.countryCode}
+                            onChange={handleInputChange}
+                            className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
+                          >
+                            {COUNTRY_CODES.map((c) => (
+                              <option key={c.code} value={c.code}>
+                                {c.code}
+                              </option>
+                            ))}
+                          </select>
+                          <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            onBlur={handleBlur}
+                            maxLength={10}
+                            inputMode="numeric"
+                            placeholder="10-digit mobile number"
+                            className={heroInputClass("phone")}
+                          />
+                        </div>
+                        {touched.phone && errors.phone && (
+                          <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        onBlur={handleBlur}
+                        placeholder="you@company.com"
+                        className={heroInputClass("email")}
+                      />
+                      {touched.email && errors.email && (
+                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Service Type</label>
+                      <select
+                        name="service_type"
+                        value={formData.service_type}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      >
+                        <option value="">Select type</option>
+                                                <option value="aerial-photography">Aerial Photography</option>
+                        <option value="drone-videography">Drone Videography</option>
+                        <option value="construction-progress">Construction Progress</option>
+                        <option value="site-mapping">Site Mapping</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                      <textarea
+                        name="message"
+                        rows={3}
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="Project name, location in Bangalore, scale, timeline..."
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                      />
+                    </div>
+                    {submitStatus === "error" && (
+                      <p className="text-red-600 text-sm">
+                        Something went wrong. Please try again or WhatsApp us directly.
+                      </p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-yellow-400 hover:bg-yellow-300 disabled:opacity-60 text-black font-bold py-3.5 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <i className="ri-loader-4-line animate-spin"></i>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <i className="ri-send-plane-line" />
+                          Get My Free Quote
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </section>

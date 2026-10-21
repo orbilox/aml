@@ -90,6 +90,13 @@ export default function CityServiceTemplate({ fullSlug }: { fullSlug: string }) 
     }
   };
 
+  const heroInputClass = (field: ValidatedField) =>
+    `w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-sm ${
+      touched[field] && errors[field]
+        ? "border-red-400 focus:ring-red-400"
+        : "border-gray-300 focus:ring-yellow-400"
+    }`;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -113,7 +120,7 @@ export default function CityServiceTemplate({ fullSlug }: { fullSlug: string }) 
           subject: `${cityName} ${config.serviceLabel} Inquiry - ${formData.name}`,
           from_name: formData.name,
           from_email: formData.email,
-          message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided"}\nService Type: ${formData.service_type || "Not selected"}\nProject Location: ${formData.project_location || "Not provided"}\n\nProject Details:\n${formData.message || "No details provided"}`,
+          message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided"}\nService Type: ${formData.service_type || "Not selected"}\nProject Location: ${formData.project_location || cityName}\n\nProject Details:\n${formData.message || "No details provided"}`,
         }),
       });
       const result = await response.json();
@@ -135,32 +142,207 @@ export default function CityServiceTemplate({ fullSlug }: { fullSlug: string }) 
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden py-24">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${data.heroImage}')` }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-6">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
-            {data.heroTitle}
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-lg">
-            {data.heroSubtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#quote"
-              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
-            >
-              Get Free Quote
-            </a>
-            <a
-              href="/portfolio"
-              className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-colors whitespace-nowrap"
-            >
-              View {cityName} Portfolio
-            </a>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
+                {data.heroTitle}
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-lg">
+                {data.heroSubtitle}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#portfolio"
+                  className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors whitespace-nowrap"
+                >
+                  View {cityName} Portfolio
+                </a>
+                <a
+                  href="/portfolio"
+                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-colors whitespace-nowrap"
+                >
+                  Full Portfolio
+                </a>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl w-full">
+              {submitStatus === "success" ? (
+                <div className="text-center py-10">
+                  <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-check-line text-2xl text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-black mb-1">Thank You!</h3>
+                  <p className="text-gray-600 text-sm">
+                    We&apos;ve received your enquiry. Our team will get back to you within 24 hours with a detailed quote.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <h3 className="text-xl font-bold text-black mb-1">Get a Free Quote</h3>
+                  <p className="text-gray-500 text-sm mb-5">
+                    Share your project details and we&apos;ll respond within 24 hours.
+                  </p>
+                  <form onSubmit={handleSubmit} noValidate className="space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          onBlur={handleBlur}
+                          placeholder="Your full name"
+                          className={heroInputClass("name")}
+                        />
+                        {touched.name && errors.name && (
+                          <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone *</label>
+                        <div className="flex gap-2">
+                          <select
+                            name="countryCode"
+                            value={formData.countryCode}
+                            onChange={handleInputChange}
+                            className="px-2 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm bg-white w-[92px] flex-shrink-0"
+                          >
+                            {COUNTRY_CODES.map((c) => (
+                              <option key={c.code} value={c.code}>
+                                {c.code}
+                              </option>
+                            ))}
+                          </select>
+                          <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            onBlur={handleBlur}
+                            maxLength={10}
+                            inputMode="numeric"
+                            placeholder="10-digit mobile number"
+                            className={heroInputClass("phone")}
+                          />
+                        </div>
+                        {touched.phone && errors.phone && (
+                          <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        onBlur={handleBlur}
+                        placeholder="you@company.com"
+                        className={heroInputClass("email")}
+                      />
+                      {touched.email && errors.email && (
+                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Service Type</label>
+                      <select
+                        name="service_type"
+                        value={formData.service_type}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm"
+                      >
+                        <option value="">Select type</option>
+                        {config.formServiceOptions.map((o) => (
+                          <option key={o.value} value={o.value}>
+                            {o.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Project Details</label>
+                      <textarea
+                        name="message"
+                        rows={3}
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder={`Project name, location in ${cityName}, scale, timeline...`}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
+                      />
+                    </div>
+                    {submitStatus === "error" && (
+                      <p className="text-red-600 text-sm">
+                        Something went wrong. Please try again or WhatsApp us directly.
+                      </p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-yellow-400 hover:bg-yellow-300 disabled:opacity-60 text-black font-bold py-3.5 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <i className="ri-loader-4-line animate-spin"></i>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <i className="ri-send-plane-line" />
+                          Get My Free Quote
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio */}
+      <section id="portfolio" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+              Our {config.serviceLabel} Portfolio
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
+            <p className="text-lg text-black/80 max-w-3xl mx-auto">{data.portfolioIntro}</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {data.portfolio.map((project) => (
+              <div key={project.title} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                    {project.type}
+                  </div>
+                  <div className="absolute bottom-4 left-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
+                    <i className="ri-map-pin-line mr-1"></i>
+                    {project.location}
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black mb-2">{project.title}</h3>
+                  <p className="text-black/70">{project.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -212,43 +394,6 @@ export default function CityServiceTemplate({ fullSlug }: { fullSlug: string }) 
                 </div>
                 <h3 className="text-xl font-bold text-black mb-4">{step.t}</h3>
                 <p className="text-gray-600">{step.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              Our {config.serviceLabel} Portfolio
-            </h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
-            <p className="text-lg text-black/80 max-w-3xl mx-auto">{data.portfolioIntro}</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data.portfolio.map((project) => (
-              <div key={project.title} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                    {project.type}
-                  </div>
-                  <div className="absolute bottom-4 left-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
-                    <i className="ri-map-pin-line mr-1"></i>
-                    {project.location}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">{project.title}</h3>
-                  <p className="text-black/70">{project.description}</p>
-                </div>
               </div>
             ))}
           </div>
