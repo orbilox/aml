@@ -6,11 +6,11 @@ import ScaleModelMakerIndiaClient from "./ScaleModelMakerIndiaClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Scale Model Maker India | Architectural Model Maker | Alliance Media Labs",
+  title: "Architectural Scale Model Maker India | Alliance Media Labs",
   description:
-    "Alliance Media Labs — India's expert scale model maker for real estate developers & infrastructure projects. Premium architectural model maker with LED lighting, CNC precision, and pan-India delivery. Trusted by Shapoorji, Hiranandani & 200+ developers. Get a quote in 24 hours.",
+    "India's scale model maker for real estate developers. Architectural scale models with LED lighting for sales galleries and launches. Get a free quote today.",
   keywords:
-    "scale model maker India, architectural model maker, miniature model maker India, property scale model maker, scale model maker for real estate, 3D model maker India, scale model manufacturer India, architectural model maker India, real estate model maker, scale model company India, best scale model maker, professional model maker India, scale model for property launch, LED architectural model India, township scale model maker",
+    "scale model maker India, architectural model maker, miniature model maker India, property scale model maker, scale model maker for real estate, 3D model maker India, scale model manufacturer India, architectural model maker India, real estate model maker, scale model company India, best scale model maker, professional model maker India, scale model for property launch, LED architectural model India, township scale model maker, scale models, architectural scale models, scale model builders, real estate scale model, scale model makers, miniature model making, scale model making, scale model making company, 3d scale model maker, 3d model making service, architectural scale models service in india",
   alternates: {
     canonical: `${BASE}/services/scale-model-maker-india`,
   },

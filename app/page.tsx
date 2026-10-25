@@ -14,7 +14,7 @@ import ContactSection from "@/app/components/home/ContactSection";
 export const metadata: Metadata = {
   title: "Alliance Media Labs | #1 Real Estate Visualization Company in India",
   description:
-    "Alliance Media Labs — India's leading real estate visualization company. 3D walkthrough videos, VR tours, architectural renders, drone shoots & digital marketing for real estate developers in Mumbai, Delhi NCR, Bangalore & Gurugram. 500+ projects delivered.",
+    "Real estate visualization company in India: 3D walkthrough videos, VR tours, 3D renders, drone shoots and scale models for developers. Get a free quote.",
   keywords:
     "real estate visualization company India, 3D walkthrough video service India, architectural visualization India, VR tours real estate, drone shoots real estate, 3D renders India, real estate marketing company Mumbai Delhi Bangalore, photorealistic architectural rendering, real estate 3D animation India, property visualization agency",
   alternates: {

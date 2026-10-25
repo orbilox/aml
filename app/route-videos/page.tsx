@@ -6,9 +6,9 @@ import RouteVideosFlatClient from "./RouteVideosFlatClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Location Video & Real Estate Videography Services India | Route Videos | Alliance Media Labs",
+  title: "Location Videos & Real Estate Videography | Alliance Media Labs",
   description:
-    "Alliance Media Labs produces location videos, real estate videography, and property videography services for developers across India — showcasing location advantage with drone footage, animated maps, and real estate video packages. A trusted real estate video company. Get a quote in 24 hours.",
+    "Location videos, real estate videography and connectivity videos for developers across India. Show your location advantage on screen. Get a free quote today.",
   keywords:
     "location video, real estate videos, real estate videography, property videography, real estate drone video, real estate video company, real estate video packages, real estate videography services, location advantage, real estate connectivity videos, real estate location av in india, real estate location video",
   alternates: {

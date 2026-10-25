@@ -6,9 +6,9 @@ import ContactPageClient from "./ContactPageClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Contact Alliance Media Labs | Get a Free Quote for 3D Walkthrough & Real Estate Visualization",
+  title: "Contact Us | Free Quote for Real Estate Visualization | Alliance Media Labs",
   description:
-    "Contact Alliance Media Labs for professional real estate visualization services. Get a free quote for 3D walkthrough videos, VR tours, architectural renders, drone shoots, and digital marketing. Serving Mumbai, Delhi NCR, Bangalore, Gurugram.",
+    "Get a free quote for 3D walkthrough videos, VR tours, 3D renders, drone shoots and digital marketing for your real estate project. We reply within 24 hours.",
   keywords:
     "contact Alliance Media Labs, real estate visualization quote India, 3D walkthrough video quote, VR tour pricing India, architectural rendering contact, drone shoot quote real estate, real estate visualization company contact, get quote 3D walkthrough Mumbai Delhi Bangalore",
   alternates: {

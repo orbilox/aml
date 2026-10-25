@@ -6,11 +6,11 @@ import VirtualRealityToursClient from "./VirtualRealityToursClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Virtual Reality Tours for Real Estate | 360° VR Property Tours India | Alliance Media Labs",
+  title: "Virtual Reality Tours for Real Estate India | Alliance Media Labs",
   description:
-    "Immersive 360° Virtual Reality tours for real estate developers in India. Interactive VR property walkthroughs with hotspots, multi-device support, browser-based — no headset required. Mumbai, Delhi NCR, Bangalore. Get a free demo.",
+    "360° VR property tours for real estate developers in India. Interactive, browser-based, no headset needed. Mumbai, Delhi NCR, Bengaluru. Get a free demo.",
   keywords:
-    "virtual reality tours real estate India, 3d virtual home tour, 360 virtual photography, best virtual reality tours, 360 degree VR tour property, VR property tour India, immersive real estate tour, interactive 360 property walkthrough, 3d virtual reality tours, VR tour for apartment buyers, browser-based VR tour real estate, 360 virtual tour real estate Mumbai Delhi Bangalore, VR showroom real estate India, real estate virtual tours service in india",
+    "virtual reality tours real estate India, 3d virtual home tour, 360 virtual photography, best virtual reality tours, 360 degree VR tour property, VR property tour India, immersive real estate tour, interactive 360 property walkthrough, 3d virtual reality tours, VR tour for apartment buyers, browser-based VR tour real estate, 360 virtual tour real estate Mumbai Delhi Bangalore, VR showroom real estate India, real estate virtual tours service in india, vr real estate tours, 3d virtual real estate tours, pano 2vr",
   alternates: { canonical: `${BASE}/services/virtual-reality-tours` },
   openGraph: {
     title: "Virtual Reality Tours for Real Estate | 360° VR Property Tours India",

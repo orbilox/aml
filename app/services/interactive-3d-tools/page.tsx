@@ -6,9 +6,9 @@ import Interactive3DToolsClient from "./Interactive3DToolsClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Interactive 3D Tools for Real Estate | Property Configurator & Virtual Showroom India | Alliance Media Labs",
+  title: "Interactive 3D Tools for Real Estate India | Alliance Media Labs",
   description:
-    "Engage property buyers with interactive 3D tools — property configurators, virtual showrooms, interactive floor plans, and unit selectors. Web-based, cross-platform, real-time customization. Mumbai, Delhi NCR, Bangalore. Get a demo.",
+    "Property configurators, virtual showrooms, interactive floor plans and 3D unit selectors for Indian real estate developers. Web-based. Get a free demo.",
   keywords:
     "interactive 3D tools real estate India, property configurator India, virtual showroom real estate, interactive floor plan India, 3D unit selector real estate, real estate interactive experience India, web-based 3D property tool, real estate configurator Mumbai Delhi Bangalore, interactive property visualization India, 3D viewer real estate website India",
   alternates: { canonical: `${BASE}/services/interactive-3d-tools` },

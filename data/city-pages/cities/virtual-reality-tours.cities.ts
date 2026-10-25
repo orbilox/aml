@@ -87,9 +87,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "In Mumbai, buyers are often choosing between towers that look similar on paper, in a market where site visits mean long commutes across the city. A VR tour lets a buyer in Andheri or Dubai walk through a Worli or Thane project in minutes, before deciding whether the trip is worth making. We have built VR tours for projects in Mumbai and Thane, from residential towers to a retail mall, with 3D visualisation and nearby landmark highlights that answer the connectivity question buyers raise first.",
     areasServed: ["Bandra", "Worli", "Andheri", "Lower Parel", "Thane", "Powai", "Borivali"],
-    metaTitle: "Virtual Reality Tours Mumbai | 360° VR Property Tours for Real Estate | Alliance Media Labs",
+    metaTitle: "Virtual Reality Tours Mumbai | Alliance Media Labs",
     metaDescription:
-      "Interactive 360° VR property tours in Mumbai for real estate developers. Browser-based, no headset needed, with hotspots and offline sales-office versions. Get a free quote today.",
+      "Interactive 360° VR property tours in Mumbai, no headset needed. Serving Bandra, Worli and Andheri. Get a free quote today.",
     keywords:
       "virtual reality tours Mumbai, VR tours Mumbai real estate, 360 virtual tour Mumbai, VR property tour Mumbai, virtual reality real estate Mumbai, interactive property tour Mumbai, VR walkthrough Mumbai, real estate VR company Mumbai, 3D virtual home tour Mumbai, pre-launch VR tour Mumbai",
     portfolioIntro: "Showcasing our VR tour work for real estate projects in Mumbai and Thane.",
@@ -119,9 +119,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Delhi NCR is really several markets in one: Gurugram, Noida, Greater Noida, Ghaziabad, and Delhi each have their own buyers, price bands, and regulator. Projects here often launch in competition with several others on the same corridor, and brokers carry a lot of the sales effort. A VR tour gives channel partners a ready, interactive demo they can run on an iPad in every client meeting, and gives buyers across the region a link they can explore before a site visit. Our NCR work includes a plotted development in Noida.",
     areasServed: ["Gurugram", "Noida", "Greater Noida", "Ghaziabad", "Dwarka Expressway", "Golf Course Road"],
-    metaTitle: "Virtual Reality Tours Delhi NCR | 360° VR Property Tours for Real Estate | Alliance Media Labs",
+    metaTitle: "Virtual Reality Tours Delhi NCR | Alliance Media Labs",
     metaDescription:
-      "Interactive 360° VR property tours in Delhi NCR for real estate developers in Gurugram, Noida, Greater Noida and Delhi. Browser-based, no headset needed. Get a free quote today.",
+      "Interactive 360° VR property tours in Delhi NCR, no headset needed. Serving Gurugram, Noida and Greater Noida. Get a free quote today.",
     keywords:
       "virtual reality tours Delhi NCR, VR tours Delhi real estate, 360 virtual tour Gurugram, VR property tour Noida, virtual reality real estate Delhi, interactive property tour Delhi NCR, VR walkthrough Gurugram, real estate VR company Delhi NCR, 3D virtual home tour Delhi, pre-launch VR tour Noida",
     portfolioIntro: "Showcasing our VR tour work for real estate projects in Delhi NCR, alongside samples from across India.",
@@ -151,9 +151,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Bengaluru's buyers are largely tech professionals and NRIs who are comfortable evaluating a purchase digitally, and its commercial market runs on office space that has to be understood before it is leased. That makes VR a natural fit here. We have built VR and virtual tours in Bengaluru for a residential project, a commercial office development, and corporate spaces, with landmark highlights that show how a project connects to tech parks, schools, and main roads.",
     areasServed: ["Whitefield", "Sarjapur Road", "Electronic City", "Hebbal", "Koramangala", "Yelahanka", "North Bengaluru"],
-    metaTitle: "Virtual Reality Tours Bengaluru | 360° VR Property Tours for Real Estate | Alliance Media Labs",
+    metaTitle: "Virtual Reality Tours Bengaluru | Alliance Media Labs",
     metaDescription:
-      "Interactive 360° VR property tours in Bengaluru for residential and commercial real estate. Browser-based, no headset needed, with landmark highlights. Get a free quote today.",
+      "Interactive 360° VR property tours in Bengaluru, no headset needed. Serving Whitefield, Sarjapur Road and Electronic City. Get a free quote today.",
     keywords:
       "virtual reality tours Bengaluru, VR tours Bangalore real estate, 360 virtual tour Bengaluru, VR property tour Bangalore, virtual reality real estate Bengaluru, interactive property tour Bangalore, VR walkthrough Bengaluru, real estate VR company Bangalore, commercial VR tour Bengaluru, pre-launch VR tour Bangalore",
     portfolioIntro: "Showcasing our VR and virtual tour work for projects in Bengaluru.",
@@ -183,9 +183,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Navi Mumbai's growth is tied to the upcoming airport and the business hubs along Vashi, Nerul, and Kharghar, and many buyers here are weighing a move out of Mumbai city for more space. Those buyers need to understand both the home and its surroundings before they cross the harbour for a site visit. A VR tour lets them explore the layout and amenities remotely, with landmark highlights that put connectivity in context, so the visit is a confirmation instead of a first impression.",
     areasServed: ["Vashi", "Nerul", "Kharghar", "Panvel", "Airoli", "Seawoods", "Ulwe"],
-    metaTitle: "Virtual Reality Tours Navi Mumbai | 360° VR Property Tours for Real Estate | Alliance Media Labs",
+    metaTitle: "Virtual Reality Tours Navi Mumbai | Alliance Media Labs",
     metaDescription:
-      "Interactive 360° VR property tours in Navi Mumbai for real estate developers in Vashi, Nerul, Kharghar and Panvel. Browser-based, no headset needed. Get a free quote today.",
+      "Interactive 360° VR property tours in Navi Mumbai, no headset needed. Serving Vashi, Nerul and Kharghar. Get a free quote today.",
     keywords:
       "virtual reality tours Navi Mumbai, VR tours Navi Mumbai real estate, 360 virtual tour Navi Mumbai, VR property tour Kharghar, virtual reality real estate Navi Mumbai, interactive property tour Vashi, VR walkthrough Panvel, real estate VR company Navi Mumbai",
     portfolioIntro: PORTFOLIO_INTRO,
@@ -211,9 +211,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Pune's housing demand is led by its IT corridors, including Hinjewadi, Kharadi, and Baner, where many buyers are corporate professionals relocating from other cities or NRIs buying without a site visit. For these buyers, an interactive VR tour is a practical decision tool: they can walk through the home, check the amenities, and see the surroundings from wherever they are. We build tours that also run offline on an iPad, so your sales team can present them at the site office without depending on internet access.",
     areasServed: ["Hinjewadi", "Kharadi", "Baner", "Wakad", "Koregaon Park", "Viman Nagar", "Hadapsar"],
-    metaTitle: "Virtual Reality Tours Pune | 360° VR Property Tours for Real Estate | Alliance Media Labs",
+    metaTitle: "Virtual Reality Tours Pune | Alliance Media Labs",
     metaDescription:
-      "Interactive 360° VR property tours in Pune for real estate developers in Hinjewadi, Kharadi, Baner and Wakad. Browser-based, no headset needed. Get a free quote today.",
+      "Interactive 360° VR property tours in Pune, no headset needed. Serving Hinjewadi, Kharadi and Baner. Get a free quote today.",
     keywords:
       "virtual reality tours Pune, VR tours Pune real estate, 360 virtual tour Pune, VR property tour Hinjewadi, virtual reality real estate Pune, interactive property tour Kharadi, VR walkthrough Baner, real estate VR company Pune",
     portfolioIntro: PORTFOLIO_INTRO,

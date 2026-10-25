@@ -371,6 +371,22 @@ export default function InteriorCinematicClient() {
         </div>
       </section>
 
+      {/* Guide Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">What Makes a Good Interior Cinematic Walkthrough</h2>
+          <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">An interior cinematic walkthrough is a short, high-detail video of a single home or space: furniture, finishes, lighting and views, shot with deliberate camera movement. It is built for the moments when a buyer is deciding whether a specific unit feels right, which a full project video cannot cover in a few seconds per room.</p>
+          <h3 className="text-xl font-bold text-black mt-8 mb-3">Interior cinematic vs a full project walkthrough</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">A <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">3D walkthrough video</Link> covers the exterior, amenities and several unit types in a few minutes. An interior cinematic goes deeper on one flat, villa or penthouse, so it is usually produced for the units you most want to sell: the show flat, the premium penthouse or the signature villa.</p>
+          <h3 className="text-xl font-bold text-black mt-8 mb-3">Where developers use it</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">Sales galleries and show flats that are not finished yet, social and paid ads aimed at luxury buyers, WhatsApp follow-ups to outstation and NRI buyers, and launch events. It also pairs well with a <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">VR tour</Link> when buyers want to explore the same home interactively.</p>
+          <h3 className="text-xl font-bold text-black mt-8 mb-3">What drives the cost</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">Number of spaces covered, the level of furniture and styling detail, video length, and how many versions you need for social media. Sharing finalised interior drawings and material choices up front keeps revisions down.</p>
+          <p className="text-gray-700 leading-relaxed mb-4">Want the full picture? Read our guide to <Link href="/blog/interior-cinematic-walkthrough-guide-india" className="text-yellow-600 font-semibold hover:underline">interior cinematic walkthroughs for real estate</Link>.</p>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">

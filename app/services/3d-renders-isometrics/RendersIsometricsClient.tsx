@@ -1183,6 +1183,17 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
+        {/* Guide Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">3D Architectural Rendering Services and Architectural Visualization Services in India</h2>
+            <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
+            <p className="text-gray-700 leading-relaxed mb-4">Our 3D architectural rendering services cover exterior renders, interior renders, 3D floor plans, aerial views and isometric illustrations for residential, commercial and township projects. As a provider of architectural visualization services in India, we work from your approved drawings, so every image matches the project you will build.</p>
+            <h3 className="text-xl font-bold text-black mt-8 mb-3">Renders for every stage of the sales cycle</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">Exterior and aerial renders lead launch hoardings and brochures. Interior renders and 3D floor plans help buyers choose a unit, and isometric views explain the whole master plan at a glance. Read our guide to <Link href="/blog/3d-house-rendering-guide-india" className="text-yellow-600 font-semibold hover:underline">3D house rendering</Link>, and see how renders fit with <Link href="/services/3d-isometrics" className="text-yellow-600 font-semibold hover:underline">isometric views</Link> and <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">3D walkthrough videos</Link>.</p>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">

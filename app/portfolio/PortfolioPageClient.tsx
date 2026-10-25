@@ -918,9 +918,9 @@ export default function PortfolioPageClient() {
       <section id="portfolio" className="py-24 bg-black">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 py-10">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Our Portfolio
-            </h2>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+              Real Estate Visualization Portfolio
+            </h1>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our comprehensive collection of projects showcasing

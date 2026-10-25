@@ -6,11 +6,11 @@ import WalkthroughVideoCompanyClient from "./WalkthroughVideoCompanyClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "3D Walkthrough Video Company India | Best Architectural Walkthrough Company | Alliance Media Labs",
+  title: "3D Walkthrough Video Company India | Alliance Media Labs",
   description:
-    "Alliance Media Labs — India's leading 3D walkthrough video company for real estate developers. Photorealistic architectural walkthrough videos, cinematic property tours, and AI-powered virtual presentations. Trusted by top developers across Mumbai, Delhi, Bangalore & pan-India. Get a quote in 24 hours.",
+    "India's 3D walkthrough video company for real estate developers. Photorealistic architectural walkthroughs for launches. Get a free quote in 24 hours.",
   keywords:
-    "3D walkthrough video company India, best 3D walkthrough company India, architectural walkthrough company, real estate 3D walkthrough company, walkthrough video company India, 3D architectural walkthrough company, property walkthrough video company, best walkthrough video company India, real estate walkthrough company, 3D animation company India real estate, architectural visualization company India, photorealistic walkthrough company, virtual tour company India, real estate animation company India",
+    "3D walkthrough video company India, best 3D walkthrough company India, architectural walkthrough company, real estate 3D walkthrough company, walkthrough video company India, 3D architectural walkthrough company, property walkthrough video company, best walkthrough video company India, real estate walkthrough company, 3D animation company India real estate, architectural visualization company India, photorealistic walkthrough company, virtual tour company India, real estate animation company India, 3d virtual house tours, 3d property walkthrough, 3d architectural walkthrough services, 3d walkthrough real estate, 3d virtual tours real estate, 3d walkthrrough, Real Estate 3D walkthrough service in India, 3d virtual real estate tours, 3d property walkthrough in india",
   alternates: {
     canonical: `${BASE}/services/3d-walkthrough-video-company-india`,
   },

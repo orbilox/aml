@@ -6,9 +6,9 @@ import BlogIndexClient from "./BlogIndexClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Blog | 3D Walkthrough, VR Tours & Real Estate Visualization Insights — Alliance Media Labs",
+  title: "Real Estate Marketing & Visualization Blog | Alliance Media Labs",
   description:
-    "Expert articles on 3D walkthrough video production, virtual reality tours, architectural rendering, drone photography, and real estate visualization marketing. Learn from India's leading real estate visualization company.",
+    "Guides on 3D walkthrough videos, VR tours, 3D rendering, scale models, drone shoots and real estate marketing for Indian developers.",
   keywords:
     "real estate visualization blog India, 3D walkthrough video guide, VR tour real estate blog, architectural rendering tips, drone photography real estate, how to make 3D walkthrough video, real estate marketing tips India, 3D animation blog real estate, property visualization insights, Alliance Media Labs blog",
   alternates: {

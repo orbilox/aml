@@ -6,9 +6,9 @@ import DigitalMarketingClient from "./DigitalMarketingClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Real Estate Digital Marketing Agency India | Google Ads, Social Media & SEO | Alliance Media Labs",
+  title: "Real Estate Digital Marketing Agency India | Alliance Media Labs",
   description:
-    "Full-service digital marketing for real estate developers in India. Google Ads, Meta Ads, SEO, social media marketing, content strategy, and lead generation. Performance-driven campaigns for property launches. Mumbai, Delhi NCR, Bangalore.",
+    "Digital marketing for real estate developers in India: Google Ads, Meta Ads, SEO and lead generation built for site visits and bookings. Get a free audit.",
   keywords:
     "real estate digital marketing agency India, Google Ads for real estate India, social media marketing real estate India, property launch digital marketing, real estate lead generation India, real estate SEO India, Meta Ads property marketing, performance marketing real estate developer India, real estate content marketing, digital marketing for builders India",
   alternates: { canonical: `${BASE}/services/digital-marketing` },

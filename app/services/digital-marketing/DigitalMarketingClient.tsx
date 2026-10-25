@@ -686,6 +686,22 @@ ${formData.message || "No additional details provided"}
           </div>
         </section>
 
+        {/* Guide Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">How Real Estate Digital Marketing Works for Builders in India</h2>
+            <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
+            <p className="text-gray-700 leading-relaxed mb-4">Real estate digital marketing is not just running ads. For developers, the goal is a steady flow of qualified enquiries that turn into site visits and bookings, at a cost per booking that makes sense. That needs the right channels, the right creatives and tight follow-up.</p>
+            <h3 className="text-xl font-bold text-black mt-8 mb-3">From first click to site visit</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">Buyers usually see a project several times before enquiring: a search result, a social ad, a video, a portal listing. We build campaigns around that journey, using Google Ads for buyers already searching, Meta Ads for reach and retargeting, and SEO and content to build visibility that does not stop when the budget does.</p>
+            <h3 className="text-xl font-bold text-black mt-8 mb-3">Why creatives decide results</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">Ads built on strong visuals consistently outperform generic ones. Our teams produce the assets in house: <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">3D walkthrough videos</Link>, <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">VR tours</Link>, <Link href="/services/drone-shoots" className="text-yellow-600 font-semibold hover:underline">drone footage</Link> and <Link href="/graphics-branding" className="text-yellow-600 font-semibold hover:underline">brochure and hoarding graphics</Link>, so the campaign looks like one project instead of a patchwork.</p>
+            <h3 className="text-xl font-bold text-black mt-8 mb-3">Tracking and reporting</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">We track cost per lead, lead quality and site-visit conversion, not just clicks, and report on what is actually moving bookings so budget shifts to the channels that work.</p>
+            <p className="text-gray-700 leading-relaxed mb-4">Read our complete playbook: <Link href="/blog/real-estate-digital-marketing-guide-india" className="text-yellow-600 font-semibold hover:underline">real estate digital marketing in India</Link>, and plan your next campaign with our <Link href="/blog/diwali-festive-season-real-estate-marketing-india" className="text-yellow-600 font-semibold hover:underline">festive season marketing guide</Link>.</p>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">

@@ -6,9 +6,9 @@ import IsometricsClient from "./IsometricsClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "3D Isometric Views for Real Estate | Master Plan Isometrics India | Alliance Media Labs",
+  title: "3D Isometric Views & Master Plan Renders | Alliance Media Labs",
   description:
-    "Professional 3D isometric views and master plan isometrics for real estate developers. Bird's-eye perspective renders that showcase entire townships, amenity zones, and project layouts. Mumbai, Delhi NCR, Bangalore.",
+    "3D isometric views and master plan isometrics for township and real estate launches in India. Hoarding and brochure ready. Get a free quote in 24 hours.",
   keywords:
     "3D isometric view real estate India, master plan isometric India, township isometric view India, isometric render property, bird's eye view township India, township master plan 3D render, isometric architectural visualization India, 3D project layout render, isometric amenity zone view, animated isometric flyover India, real estate isometric view Mumbai Delhi Bangalore",
   alternates: {

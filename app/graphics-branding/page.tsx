@@ -6,9 +6,9 @@ import GraphicsBrandingFlatClient from "./GraphicsBrandingFlatClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Real Estate Graphics & Brochure Design Company India | Hoarding Design Service | Alliance Media Labs",
+  title: "Real Estate Brochure & Hoarding Design | Alliance Media Labs",
   description:
-    "Alliance Media Labs delivers real estate graphics, real estate brochure design, and hoarding design service for developers across India. From property brochure design and construction hoarding design to full brochure design agency engagements, our real estate graphic design services cover every touchpoint. Get a quote in 24 hours.",
+    "Real estate brochure design, hoarding design and graphics for developers across India. Launch-ready branding from one team. Get a free quote today.",
   keywords:
     "real estate graphics, commercial real estate graphics, graphics for real estate, real estate graphics design, real estate brochure design, property brochure design, brochure design service, brochure design online, brochure design company, brochure design agency, hoarding design service, construction hoarding design, real estate graphic design services",
   alternates: {

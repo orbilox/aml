@@ -44,9 +44,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Creating stunning 3D architectural walkthroughs for Mumbai's leading real estate developers. From Bandra to Worli, we bring your projects to life with photorealistic 3D visualizations.",
     areasServed: ["Bandra", "Worli", "Andheri", "Lower Parel", "Thane", "Navi Mumbai"],
-    metaTitle: "3D Walkthrough Videos Mumbai | Real Estate Animation & Property Tours | Alliance Media Labs",
+    metaTitle: "3D Walkthrough Videos Mumbai | Alliance Media Labs",
     metaDescription:
-      "Professional 3D walkthrough video service in Mumbai for real estate developers. Photorealistic 3D property tours for Bandra, Worli, Andheri, Lower Parel, Thane, and Navi Mumbai projects. Get a free quote today.",
+      "Photorealistic 3D walkthrough videos for real estate projects in Mumbai. Serving Bandra, Worli and Andheri. Get a free quote today.",
     keywords:
       "3D walkthrough videos Mumbai, 3D property tour Mumbai, architectural visualization Mumbai, real estate 3D animation Mumbai, walkthrough video Bandra, walkthrough video Worli, 3D walkthrough Lower Parel, property tour video Mumbai, real estate visualization Mumbai, photorealistic walkthrough Mumbai, 3D animation Mumbai real estate, pre-launch property video Mumbai",
     portfolioIntro: "Showcasing our premium 3D walkthrough work for leading real estate projects across Mumbai.",
@@ -102,9 +102,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Serving Delhi, Gurgaon, Noida, and Greater Noida with premium 3D architectural visualization services. From luxury residences to commercial complexes, we create immersive experiences for the NCR market.",
     areasServed: ["Gurugram", "Noida", "Greater Noida", "Ghaziabad", "Dwarka Expressway", "Golf Course Road"],
-    metaTitle: "3D Walkthrough Videos Delhi NCR | Real Estate Animation & Property Tours | Alliance Media Labs",
+    metaTitle: "3D Walkthrough Videos Delhi NCR | Alliance Media Labs",
     metaDescription:
-      "Professional 3D walkthrough video service in Delhi NCR for real estate developers. Photorealistic 3D property tours for Gurugram, Noida, Ghaziabad, Dwarka Expressway, and Golf Course Road projects.",
+      "Photorealistic 3D walkthrough videos for real estate projects in Delhi NCR. Serving Gurugram, Noida and Greater Noida. Get a free quote today.",
     keywords:
       "3D walkthrough videos Delhi NCR, 3D property tour Delhi, architectural visualization Delhi, real estate 3D animation Delhi NCR, walkthrough video Gurugram, walkthrough video Noida, 3D walkthrough Dwarka Expressway, property tour video Delhi NCR, real estate visualization Delhi, photorealistic walkthrough Delhi NCR, 3D animation Delhi real estate, Gurgaon 3D walkthrough",
     portfolioIntro: "Showcasing our premium 3D walkthrough work for leading real estate projects across Delhi NCR.",
@@ -164,9 +164,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Serving India's Silicon Valley with cutting-edge 3D architectural visualization services. From IT campuses to luxury residences, we create immersive experiences for Bengaluru's dynamic market.",
     areasServed: ["Whitefield", "Sarjapur", "Hebbal", "Electronic City", "North Bengaluru"],
-    metaTitle: "3D Walkthrough Videos Bengaluru | Real Estate Animation & Property Tours | Alliance Media Labs",
+    metaTitle: "3D Walkthrough Videos Bengaluru | Alliance Media Labs",
     metaDescription:
-      "Professional 3D walkthrough video service in Bengaluru for real estate developers. Photorealistic 3D property tours for Whitefield, Sarjapur, Electronic City, Hebbal, and North Bengaluru. Get a free quote today.",
+      "Photorealistic 3D walkthrough videos for real estate projects in Bengaluru. Serving Whitefield, Sarjapur and Hebbal. Get a free quote today.",
     keywords:
       "3D walkthrough videos Bengaluru, 3D property tour Bengaluru, architectural visualization Bengaluru, real estate 3D animation Bengaluru, walkthrough video Whitefield, walkthrough video Sarjapur, 3D walkthrough Hebbal, property tour video Bengaluru, real estate visualization Bengaluru, photorealistic walkthrough Bengaluru, 3D animation Bengaluru real estate",
     portfolioIntro: "Showcasing our premium 3D walkthrough work for leading real estate projects across Bengaluru.",
@@ -226,9 +226,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Navi Mumbai's real estate story is being rewritten by the upcoming Navi Mumbai International Airport and the rapid growth of business hubs along Vashi, Nerul, and Kharghar. Developers here are increasingly selling to buyers who want more space for their budget than Mumbai city offers — which means the walkthrough video has to work harder to justify a move across the harbour. We build 3D walkthroughs that highlight connectivity, layout efficiency, and lifestyle amenities side by side, so buyers can see exactly what they're trading up to.",
     areasServed: ["Vashi", "Nerul", "Kharghar", "Panvel", "Airoli", "Seawoods", "Kopar Khairane"],
-    metaTitle: "3D Walkthrough Videos Navi Mumbai | Real Estate Animation & Property Tours | Alliance Media Labs",
+    metaTitle: "3D Walkthrough Videos Navi Mumbai | Alliance Media Labs",
     metaDescription:
-      "Professional 3D walkthrough video service in Navi Mumbai for real estate developers. Photorealistic 3D property tours for Vashi, Nerul, Kharghar, Panvel, and Airoli projects. Get a free quote today.",
+      "Photorealistic 3D walkthrough videos for real estate projects in Navi Mumbai. Serving Vashi, Nerul and Kharghar. Get a free quote today.",
     keywords:
       "3D walkthrough videos Navi Mumbai, 3D property tour Navi Mumbai, architectural visualization Navi Mumbai, real estate 3D animation Navi Mumbai, walkthrough video Vashi, walkthrough video Kharghar, 3D walkthrough Panvel, property tour video Navi Mumbai, real estate visualization Navi Mumbai, photorealistic walkthrough Navi Mumbai",
     portfolioIntro: PORTFOLIO_INTRO,
@@ -254,9 +254,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Pune's residential demand is driven heavily by its IT corridors — Hinjewadi, Kharadi, and Baner — where a large share of buyers are corporate professionals relocating from other cities, or NRIs buying without a site visit. That makes a strong 3D walkthrough video less of a marketing add-on and more of a decision-making tool. We build walkthroughs that clearly communicate commute distance to tech parks, clubhouse and amenity quality, and unit layouts, so out-of-town buyers can commit with confidence.",
     areasServed: ["Hinjewadi", "Kharadi", "Baner", "Wakad", "Koregaon Park", "Viman Nagar", "Hadapsar"],
-    metaTitle: "3D Walkthrough Videos Pune | Real Estate Animation & Property Tours | Alliance Media Labs",
+    metaTitle: "3D Walkthrough Videos Pune | Alliance Media Labs",
     metaDescription:
-      "Professional 3D walkthrough video service in Pune for real estate developers. Photorealistic 3D property tours for Hinjewadi, Kharadi, Baner, Wakad, and Koregaon Park projects. Get a free quote today.",
+      "Photorealistic 3D walkthrough videos for real estate projects in Pune. Serving Hinjewadi, Kharadi and Baner. Get a free quote today.",
     keywords:
       "3D walkthrough videos Pune, 3D property tour Pune, architectural visualization Pune, real estate 3D animation Pune, walkthrough video Hinjewadi, walkthrough video Kharadi, 3D walkthrough Baner, property tour video Pune, real estate visualization Pune, photorealistic walkthrough Pune",
     portfolioIntro: PORTFOLIO_INTRO,
@@ -282,9 +282,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Jaipur's residential growth has pushed well beyond the walled city into Vaishali Nagar, Mansarovar, and the Ajmer Road and Tonk Road corridors, with Jaipur Metro's expansion opening up new peripheral markets. Many buyers here are Rajasthani families settled outside the state, or NRIs, who rely entirely on video content before booking a unit. Our 3D walkthroughs are built to carry that weight — accurate layouts, honest material representation, and a narrative that helps a buyer who may never visit the site until possession trust what they're paying for.",
     areasServed: ["Vaishali Nagar", "Mansarovar", "C-Scheme", "Jagatpura", "Ajmer Road", "Tonk Road"],
-    metaTitle: "3D Walkthrough Videos Jaipur | Real Estate Animation & Property Tours | Alliance Media Labs",
+    metaTitle: "3D Walkthrough Videos Jaipur | Alliance Media Labs",
     metaDescription:
-      "Professional 3D walkthrough video service in Jaipur for real estate developers. Photorealistic 3D property tours for Vaishali Nagar, Mansarovar, Jagatpura, and Tonk Road projects. Get a free quote today.",
+      "Photorealistic 3D walkthrough videos for real estate projects in Jaipur. Serving Vaishali Nagar, Mansarovar and C-Scheme. Get a free quote today.",
     keywords:
       "3D walkthrough videos Jaipur, 3D property tour Jaipur, architectural visualization Jaipur, real estate 3D animation Jaipur, walkthrough video Vaishali Nagar, walkthrough video Mansarovar, 3D walkthrough Jagatpura, property tour video Jaipur, real estate visualization Jaipur, photorealistic walkthrough Jaipur",
     portfolioIntro: PORTFOLIO_INTRO,
@@ -310,9 +310,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Patna's organised residential market is still young compared to metro cities, which means a well-produced 3D walkthrough video does more to set a project apart here than almost anywhere else — buyers evaluating a branded apartment project for the first time have few comparable visuals to judge it against. A large share of Patna's serious buyers are also based outside Bihar — in Delhi NCR, Bengaluru, or the Gulf — and decide largely on video. We build walkthroughs that establish trust in construction quality and amenities as clearly as a site visit would.",
     areasServed: ["Boring Road", "Kankarbagh", "Patliputra Colony", "Rajendra Nagar", "Bailey Road", "Danapur"],
-    metaTitle: "3D Walkthrough Videos Patna | Real Estate Animation & Property Tours | Alliance Media Labs",
+    metaTitle: "3D Walkthrough Videos Patna | Alliance Media Labs",
     metaDescription:
-      "Professional 3D walkthrough video service in Patna for real estate developers. Photorealistic 3D property tours for Boring Road, Kankarbagh, Bailey Road, and Danapur projects. Get a free quote today.",
+      "Photorealistic 3D walkthrough videos for real estate projects in Patna. Serving Boring Road, Kankarbagh and Patliputra Colony. Get a free quote today.",
     keywords:
       "3D walkthrough videos Patna, 3D property tour Patna, architectural visualization Patna, real estate 3D animation Patna, walkthrough video Boring Road, walkthrough video Kankarbagh, 3D walkthrough Bailey Road, property tour video Patna, real estate visualization Patna, photorealistic walkthrough Patna",
     portfolioIntro: PORTFOLIO_INTRO,
@@ -338,9 +338,9 @@ export const cities: CityServicePageData[] = [
     introParagraph:
       "Kundli sits right on the Delhi-Haryana border along the KMP Expressway, and its residential growth is driven almost entirely by Delhi buyers priced out of the capital looking for affordable and mid-segment housing with an easy commute. That buyer is comparing your project directly against options across the border in Delhi and Narela, so the walkthrough video needs to make connectivity and value-for-money obvious in the first 30 seconds. We build 3D walkthroughs for Kundli projects with that comparison front of mind.",
     areasServed: ["KMP Expressway corridor", "Sonipat border", "Rai", "Barhi", "Kundli Industrial Area"],
-    metaTitle: "3D Walkthrough Videos Kundli | Real Estate Animation & Property Tours | Alliance Media Labs",
+    metaTitle: "3D Walkthrough Videos Kundli | Alliance Media Labs",
     metaDescription:
-      "Professional 3D walkthrough video service in Kundli for real estate developers. Photorealistic 3D property tours for the KMP Expressway, Sonipat border, and Rai-Barhi corridor projects. Get a free quote today.",
+      "Photorealistic 3D walkthrough videos for real estate projects in Kundli. Serving KMP Expressway corridor, Sonipat border and Rai. Get a free quote today.",
     keywords:
       "3D walkthrough videos Kundli, 3D property tour Kundli, architectural visualization Kundli, real estate 3D animation Kundli, walkthrough video Sonipat, walkthrough video KMP Expressway, 3D walkthrough Rai Haryana, property tour video Kundli, real estate visualization Sonipat",
     portfolioIntro: PORTFOLIO_INTRO,

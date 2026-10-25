@@ -775,6 +775,20 @@ export default function WalkthroughVideoCompanyClient() {
         </div>
       </section>
 
+      {/* Guide Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">3D Architectural Walkthrough Services for Real Estate in India</h2>
+          <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">Our 3D architectural walkthrough services turn approved drawings into a cinematic 3D walkthrough for real estate. It is a 3D property walkthrough that lets buyers see layouts, amenities and finishes before construction is complete. Whether you call it a 3D virtual house tour, a 3D virtual real estate tour or an architectural walkthrough, the result is the same: buyers understand the project faster and enquire with more confidence.</p>
+          <h3 className="text-xl font-bold text-black mt-8 mb-3">3D walkthrough video vs 3D virtual tours for real estate</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">A 3D walkthrough video follows a planned camera path, like a film of the project. 3D virtual real estate tours are interactive, so the buyer chooses where to go. Many developers use both: the walkthrough for launches, ads and WhatsApp, and a <Link href="/services/virtual-reality-tours" className="text-yellow-600 font-semibold hover:underline">VR tour</Link> for the sales gallery and remote buyers.</p>
+          <h3 className="text-xl font-bold text-black mt-8 mb-3">Real estate 3D walkthrough service in India</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">We deliver a 3D property walkthrough in India for residential towers, townships, plotted developments and commercial projects, for developers in Mumbai, Delhi NCR, Bengaluru, Pune and beyond. Each walkthrough is built from your approved plans, so what buyers see matches what you will deliver. See how it fits with <Link href="/services/3d-renders-isometrics" className="text-yellow-600 font-semibold hover:underline">3D renders</Link> and <Link href="/services/interior-cinematic-walkthrough" className="text-yellow-600 font-semibold hover:underline">interior cinematic walkthroughs</Link> in a full launch plan.</p>
+          <p className="text-gray-700 leading-relaxed mb-4">New to the format? Read our guide to <Link href="/blog/3d-walkthrough-video-service" className="text-yellow-600 font-semibold hover:underline">3D walkthrough video services</Link>.</p>
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">

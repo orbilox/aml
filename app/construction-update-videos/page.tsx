@@ -6,9 +6,9 @@ import ConstructionUpdateVideosFlatClient from "./ConstructionUpdateVideosFlatCl
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Construction Videos & Construction Time Lapse India | Construction Update Videos | Alliance Media Labs",
+  title: "Construction Update & Time Lapse Videos | Alliance Media Labs",
   description:
-    "Alliance Media Labs produces construction videos, construction time lapse, and drone timelapse construction coverage for real estate developers across India. A trusted construction time lapse company delivering real estate construction video updates on a scheduled cadence. Get a quote in 24 hours.",
+    "Construction update videos, time lapse and drone timelapse for real estate projects in India. Keep buyers informed and RERA ready. Get a free quote today.",
   keywords:
     "construction videos, Construction update videos, construction time lapse, time lapse for construction sites, construction time lapse video, drone timelapse construction, construction time lapse company, real estate construction video",
   alternates: {

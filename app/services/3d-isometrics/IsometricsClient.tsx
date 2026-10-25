@@ -571,6 +571,22 @@ export default function IsometricsClient() {
         </div>
       </section>
 
+      {/* Guide Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Why Real Estate Developers Use 3D Isometric Views</h2>
+          <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
+          <p className="text-gray-700 leading-relaxed mb-4">A 3D isometric view shows an entire project from a fixed bird's-eye angle with true proportions, so a buyer can see where every tower, road, amenity and open space sits in a single image. That is why isometric views and master plan isometrics have become standard for township launches, plotted developments and large residential projects in India.</p>
+          <h3 className="text-xl font-bold text-black mt-8 mb-3">Isometric view vs 2D master plan vs perspective render</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">A 2D master plan is accurate but hard for most buyers to read. A perspective render shows how a single view will look and feel. An isometric view sits between them: it explains the layout clearly and still looks good enough for a hoarding or brochure. Most launches use an isometric for layout and <Link href="/services/3d-renders-isometrics" className="text-yellow-600 font-semibold hover:underline">3D renders</Link> for atmosphere.</p>
+          <h3 className="text-xl font-bold text-black mt-8 mb-3">Where isometric views are used</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">The master plan isometric is usually the centrepiece of the brochure spread and the launch hoarding, so it works hand in hand with <Link href="/graphics-branding" className="text-yellow-600 font-semibold hover:underline">brochure and hoarding design</Link>. Sales teams use it beside an <Link href="/services/scale-model-maker-india" className="text-yellow-600 font-semibold hover:underline">architectural scale model</Link> in the sales gallery, and it is often animated into a flyover for the <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">3D walkthrough video</Link>.</p>
+          <h3 className="text-xl font-bold text-black mt-8 mb-3">What we need to start</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">Approved master plan and tower drawings, elevations, a list of amenities, and any brand colours. We confirm the camera angle and labelling with you before rendering, then run one structured revision round before final delivery in print and digital resolutions.</p>
+          <p className="text-gray-700 leading-relaxed mb-4">Planning your launch assets? Read our full guide to <Link href="/blog/3d-isometric-views-real-estate-master-plan-guide-india" className="text-yellow-600 font-semibold hover:underline">3D isometric views for real estate</Link>.</p>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">

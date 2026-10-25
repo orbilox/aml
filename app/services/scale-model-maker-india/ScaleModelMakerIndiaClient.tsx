@@ -1330,6 +1330,20 @@ export default function ScaleModelMakerIndiaClient() {
           </div>
         </section>
 
+        {/* Guide Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Scale Model Making Company in India for Real Estate</h2>
+            <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
+            <p className="text-gray-700 leading-relaxed mb-4">As a scale model making company in India, we work as scale model builders for developers, architects and infrastructure teams. A real estate scale model gives buyers a physical, walk-around view of the master plan, towers and amenities, which is why it remains a fixture of sales galleries and launch events.</p>
+            <h3 className="text-xl font-bold text-black mt-8 mb-3">Architectural scale models service in India</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">Our architectural scale models service in India covers the whole job: reading your drawings, choosing materials, building the towers, landscape and roads in detail, and finishing the model with LED lighting for your sales gallery or exhibition. The same miniature model making process works for townships, high-rise towers, villas, commercial complexes and infrastructure projects.</p>
+            <h3 className="text-xl font-bold text-black mt-8 mb-3">3D scale model maker and 3D model making service</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">As a 3D scale model maker, we work from your CAD files and approved drawings, so the physical model matches the plan buyers will actually receive. Our 3D model making service is designed for sales presentation, so the model is easy to explain in front of buyers.</p>
+            <p className="text-gray-700 leading-relaxed mb-4">Planning a budget? Read our guides to <Link href="/blog/architectural-scale-model-price-india-2026" className="text-yellow-600 font-semibold hover:underline">scale model prices in India</Link> and the <Link href="/blog/best-architectural-scale-model-company-india" className="text-yellow-600 font-semibold hover:underline">best architectural scale model companies in India</Link>.</p>
+          </div>
+        </section>
+
         {/* ── FAQ ── */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">

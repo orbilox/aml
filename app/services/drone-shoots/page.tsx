@@ -6,9 +6,9 @@ import DroneShootsClient from "./DroneShootsClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Drone Shoots & Location AV for Real Estate | Aerial Cinematography India | Alliance Media Labs",
+  title: "Drone Shoots & Location AV for Real Estate | Alliance Media Labs",
   description:
-    "Professional drone shoots and location AV production for real estate marketing in India. 4K aerial cinematography, licensed drone operators, scenic route planning. Mumbai, Delhi NCR, Bangalore, Gurugram. Get a quote.",
+    "Real estate drone shoots and location AV across India. 4K aerial videography by DGCA-licensed pilots for launches and sales. Get a free quote in 24 hours.",
   keywords:
     "drone shoots real estate India, aerial photography real estate, location AV production India, real estate drone footage, aerial cinematography property India, 4K drone video real estate, DGCA certified drone operator India, licensed drone operator real estate, real estate aerial videography Mumbai Delhi Bangalore, drone photography property marketing India",
   alternates: { canonical: `${BASE}/services/drone-shoots` },

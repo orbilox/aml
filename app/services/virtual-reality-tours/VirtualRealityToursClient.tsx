@@ -837,6 +837,17 @@ export default function VirtualRealityToursClient() {
           </div>
         </section>
 
+        {/* Guide Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">VR Tours vs 360 Virtual Photography and Tour Software</h2>
+            <div className="w-20 h-1 bg-yellow-400 mb-8"></div>
+            <p className="text-gray-700 leading-relaxed mb-4">360 virtual photography captures a finished space with a camera, which works for built and furnished properties. For projects that are not built yet, a rendered VR tour does the same job from your drawings, so buyers can explore the apartment, the amenities and the surroundings before construction ends.</p>
+            <p className="text-gray-700 leading-relaxed mb-4">If you are comparing 360 tour software such as Pano2VR, the difference is who does the work. Tour software gives you a tool to learn. We build the finished virtual reality tour for you, including hotspots, navigation, landmarks and the delivery format you need: a web link, an iPad version for the sales office, or a headset package.</p>
+            <p className="text-gray-700 leading-relaxed mb-4">For a non-interactive alternative, see our <Link href="/services/3d-walkthrough-video-company-india" className="text-yellow-600 font-semibold hover:underline">3D walkthrough videos</Link>.</p>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">

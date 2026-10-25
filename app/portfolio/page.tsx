@@ -6,9 +6,9 @@ import PortfolioPageClient from "./PortfolioPageClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Portfolio | 3D Walkthrough Videos, VR Tours & Renders — Alliance Media Labs",
+  title: "Real Estate Visualization Portfolio | Alliance Media Labs",
   description:
-    "Explore 500+ real estate visualization projects by Alliance Media Labs. 3D walkthrough videos, VR tours, architectural renders, drone shoots, and scale models for leading developers across Mumbai, Delhi NCR, Bangalore, and Gurugram.",
+    "Our real estate visualization work: 3D walkthrough videos, VR tours, 3D renders, drone shoots and scale models for developers across India.",
   keywords:
     "real estate visualization portfolio India, 3D walkthrough video examples, VR tour portfolio real estate, architectural render portfolio, drone shoot portfolio real estate, Alliance Media Labs work, real estate animation examples India, 3D render samples property, walkthrough video samples Mumbai Delhi Bangalore",
   alternates: {

@@ -6,9 +6,9 @@ import InteriorCinematicClient from "./InteriorCinematicClient";
 const BASE = "https://alliancemedialabs.com";
 
 export const metadata: Metadata = {
-  title: "Interior Cinematic Walkthrough Videos | Luxury Interior 3D Animation India | Alliance Media Labs",
+  title: "Interior Cinematic Walkthrough Videos India | Alliance Media Labs",
   description:
-    "Premium interior cinematic walkthrough videos for luxury real estate. Photorealistic interior 3D animation with studio-quality lighting and cinematic camera work. Showcase apartments, villas, and penthouses in Mumbai, Delhi NCR, Bangalore.",
+    "Cinematic interior walkthrough videos for luxury apartments, villas and penthouses in India. Photorealistic interior 3D animation. Get a free quote today.",
   keywords:
     "interior cinematic walkthrough India, luxury interior 3D animation, interior walkthrough video real estate, apartment interior 3D video, villa interior walkthrough India, penthouse interior animation, interior visualization real estate India, cinematic interior tour India, photorealistic interior render video, interior design 3D video Mumbai Delhi Bangalore",
   alternates: {
