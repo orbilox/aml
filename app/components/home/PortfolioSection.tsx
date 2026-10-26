@@ -752,6 +752,51 @@ const portfolioItems = [
       "Location AV showcasing real estate connectivity, cinematic storytelling, route visualization and professional real estate video production. ",
     videoUrl: "https://www.youtube.com/embed/d22cdmKn2WE?autoplay=1",
   },
+  {
+    id: 54,
+    title: "Paras Group, Meerut",
+    category: "Location AV",
+    image: "/images/portfolio/location-av/paras-group-meerut.png",
+    description:
+      "Cinematic Location AV showcasing Paras Group, Meerut's strategic location, surrounding infrastructure, and seamless connectivity through stunning aerial visuals.",
+    videoUrl: "https://www.youtube.com/embed/__3etq0E8lk?autoplay=1",
+  },
+  {
+    id: 55,
+    title: "Briston World Group, Neemrana",
+    category: "Location AV",
+    image: "/images/portfolio/location-av/briston-world-group-neemrana.png",
+    description:
+      "An immersive visual journey through Neemrana, capturing prominent landmarks, key routes, and the evolving surroundings of Briston World Group's development.",
+    videoUrl: "https://www.youtube.com/embed/l5aFJq-Z1sQ?autoplay=1",
+  },
+  {
+    id: 56,
+    title: "Briston World Group, Neemrana",
+    category: "Route Videos",
+    image: "/images/portfolio/route-videos/briston-world-group-neemrana-1.png",
+    description:
+      "A cinematic route video showcasing the journey, highlighting key landmarks, road networks, and seamless accessibility through engaging aerial visuals.",
+    videoUrl: "https://www.youtube.com/embed/PDjxFB_MB38?autoplay=1",
+  },
+  {
+    id: 57,
+    title: "Briston World Group, Neemrana",
+    category: "Route Videos",
+    image: "/images/portfolio/route-videos/briston-world-group-neemrana-2.png",
+    description:
+      "A visually engaging route video capturing the journey to the project through major roads, surrounding developments, and prominent landmarks, offering a clear perspective of its accessibility.",
+    videoUrl: "https://www.youtube.com/embed/BRhvnDE8cHs?autoplay=1",
+  },
+  {
+    id: 58,
+    title: "Briston World Group, Neemrana",
+    category: "Route Videos",
+    image: "/images/portfolio/route-videos/briston-world-group-neemrana-3.png",
+    description:
+      "A route video showing the roads, nearby landmarks, and surrounding areas, giving a clear view of the journey to the project.",
+    videoUrl: "https://www.youtube.com/embed/haN2WK18h_c?autoplay=1",
+  },
 ];
 
 const categories = [

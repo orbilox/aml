@@ -13,7 +13,7 @@ interface Project {
   image: string;
   description: string;
   videoUrl: string;
-  duration: string;
+  duration?: string;
 }
 
 type FormData = {
@@ -131,6 +131,24 @@ export default function DroneShootsClient() {
         "Location AV showcasing real estate connectivity, cinematic storytelling, route visualization and professional real estate video production. ",
       videoUrl: "d22cdmKn2WE?si=y4M05nZkVgJPmB9U&autoplay=1",
       duration: "5:04",
+    },
+    {
+      id: 7,
+      title: "Paras Group, Meerut",
+      category: "Location AV",
+      image: "/images/portfolio/location-av/paras-group-meerut.png",
+      description:
+        "Cinematic Location AV showcasing Paras Group, Meerut's strategic location, surrounding infrastructure, and seamless connectivity through stunning aerial visuals.",
+      videoUrl: "__3etq0E8lk?autoplay=1",
+    },
+    {
+      id: 8,
+      title: "Briston World Group, Neemrana",
+      category: "Location AV",
+      image: "/images/portfolio/location-av/briston-world-group-neemrana.png",
+      description:
+        "An immersive visual journey through Neemrana, capturing prominent landmarks, key routes, and the evolving surroundings of Briston World Group's development.",
+      videoUrl: "l5aFJq-Z1sQ?autoplay=1",
     },
   ];
   const testimonials = [
@@ -477,9 +495,11 @@ export default function DroneShootsClient() {
                         <i className="ri-play-fill text-2xl text-black"></i>
                       </div>
                     </div>
-                    <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
-                      {project.duration}
-                    </div>
+                    {project.duration && (
+                      <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
+                        {project.duration}
+                      </div>
+                    )}
                     <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
                       {project.category}
                     </div>

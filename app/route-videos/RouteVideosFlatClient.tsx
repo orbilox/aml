@@ -13,7 +13,7 @@ interface Project {
   image: string;
   description: string;
   videoUrl: string;
-  duration: string;
+  duration?: string;
 }
 
 const videoTypes = [
@@ -259,8 +259,35 @@ export default function RouteVideosFlatClient() {
       image: "/images/portfolio/route-videos/ats-grove-gurugram.png",
       description:
         "Real Estate Route & Connectivity Video for ATS Grove,Gurugram, featuring location mapping, drone videography, route visualization and location markers. ",
-      videoUrl: " https://www.youtube.com/embed/HAPjlVna-FE?autoplay=1",
+      videoUrl: "https://www.youtube.com/embed/HAPjlVna-FE?autoplay=1",
       duration: "3.37",
+    },
+    {
+      id: 5,
+      title: "Briston World Group, Neemrana",
+      category: "Route Videos",
+      image: "/images/portfolio/route-videos/briston-world-group-neemrana-1.png",
+      description:
+        "A cinematic route video showcasing the journey, highlighting key landmarks, road networks, and seamless accessibility through engaging aerial visuals.",
+      videoUrl: "https://www.youtube.com/embed/PDjxFB_MB38?autoplay=1",
+    },
+    {
+      id: 6,
+      title: "Briston World Group, Neemrana",
+      category: "Route Videos",
+      image: "/images/portfolio/route-videos/briston-world-group-neemrana-2.png",
+      description:
+        "A visually engaging route video capturing the journey to the project through major roads, surrounding developments, and prominent landmarks, offering a clear perspective of its accessibility.",
+      videoUrl: "https://www.youtube.com/embed/BRhvnDE8cHs?autoplay=1",
+    },
+    {
+      id: 7,
+      title: "Briston World Group, Neemrana",
+      category: "Route Videos",
+      image: "/images/portfolio/route-videos/briston-world-group-neemrana-3.png",
+      description:
+        "A route video showing the roads, nearby landmarks, and surrounding areas, giving a clear view of the journey to the project.",
+      videoUrl: "https://www.youtube.com/embed/haN2WK18h_c?autoplay=1",
     },
   ];
 
@@ -613,9 +640,11 @@ export default function RouteVideosFlatClient() {
                       <i className="ri-play-fill text-2xl text-black"></i>
                     </div>
                   </div>
-                  <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
-                    {project.duration}
-                  </div>
+                  {project.duration && (
+                    <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
+                      {project.duration}
+                    </div>
+                  )}
                   <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
                     {project.category}
                   </div>
@@ -1290,12 +1319,14 @@ export default function RouteVideosFlatClient() {
                 {selectedProject.description}
               </p>
               <div className="flex items-center space-x-6 mb-2">
-                <div className="flex items-center space-x-2">
-                  <i className="ri-time-line text-yellow-500"></i>
-                  <span className="text-black">
-                    Duration: {selectedProject.duration}
-                  </span>
-                </div>
+                {selectedProject.duration && (
+                  <div className="flex items-center space-x-2">
+                    <i className="ri-time-line text-yellow-500"></i>
+                    <span className="text-black">
+                      Duration: {selectedProject.duration}
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center space-x-2">
                   <i className="ri-play-circle-line text-yellow-500"></i>
                   <span className="text-black">HD Quality</span>

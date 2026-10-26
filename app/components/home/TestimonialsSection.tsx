@@ -115,6 +115,10 @@ const clientLogos = [
   { name: "XPO", logo: "/images/testimonial/Property-XPO-Logo.png" },
   { name: "GMC", logo: "/images/testimonial/GMC-logo.png" },
   { name: "Divyansh", logo: "/images/testimonial/divyansh-logo.png" },
+  { name: "Bhoomi International", logo: "/images/testimonial/Bhoomi-International-Logo.png" },
+  { name: "Craft Group", logo: "/images/testimonial/Craft-Group-Logo.png" },
+  { name: "Jindal Parklands", logo: "/images/testimonial/Jindal-Parklands-logo.png" },
+  { name: "Paras Group", logo: "/images/testimonial/Paras-Group-Logo.png" },
 ];
 
 export default function TestimonialsSection() {
