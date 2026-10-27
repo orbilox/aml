@@ -136,7 +136,7 @@ export default function DroneShootsClient() {
       id: 7,
       title: "Paras Group, Meerut",
       category: "Location AV",
-      image: "/images/portfolio/location-av/paras-group-meerut.png",
+      image: "/images/portfolio/location-av/Meerut Real Estate Connectivity Panorama.png",
       description:
         "Cinematic Location AV showcasing Paras Group, Meerut's strategic location, surrounding infrastructure, and seamless connectivity through stunning aerial visuals.",
       videoUrl: "__3etq0E8lk?autoplay=1",
@@ -145,7 +145,7 @@ export default function DroneShootsClient() {
       id: 8,
       title: "Briston World Group, Neemrana",
       category: "Location AV",
-      image: "/images/portfolio/location-av/briston-world-group-neemrana.png",
+      image: "/images/portfolio/location-av/Neemrana Real Estate Location Video.png",
       description:
         "An immersive visual journey through Neemrana, capturing prominent landmarks, key routes, and the evolving surroundings of Briston World Group's development.",
       videoUrl: "l5aFJq-Z1sQ?autoplay=1",

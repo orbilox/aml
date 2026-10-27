@@ -266,7 +266,7 @@ export default function RouteVideosFlatClient() {
       id: 5,
       title: "Briston World Group, Neemrana",
       category: "Route Videos",
-      image: "/images/portfolio/route-videos/briston-world-group-neemrana-1.png",
+      image: "/images/portfolio/route-videos/Neemrana-Route-Video-Aerial-Thumbnail.png",
       description:
         "A cinematic route video showcasing the journey, highlighting key landmarks, road networks, and seamless accessibility through engaging aerial visuals.",
       videoUrl: "https://www.youtube.com/embed/PDjxFB_MB38?autoplay=1",
@@ -275,7 +275,7 @@ export default function RouteVideosFlatClient() {
       id: 6,
       title: "Briston World Group, Neemrana",
       category: "Route Videos",
-      image: "/images/portfolio/route-videos/briston-world-group-neemrana-2.png",
+      image: "/images/portfolio/route-videos/Neemrana Highway Real Estate Vista.png",
       description:
         "A visually engaging route video capturing the journey to the project through major roads, surrounding developments, and prominent landmarks, offering a clear perspective of its accessibility.",
       videoUrl: "https://www.youtube.com/embed/BRhvnDE8cHs?autoplay=1",
@@ -284,7 +284,7 @@ export default function RouteVideosFlatClient() {
       id: 7,
       title: "Briston World Group, Neemrana",
       category: "Route Videos",
-      image: "/images/portfolio/route-videos/briston-world-group-neemrana-3.png",
+      image: "/images/portfolio/route-videos/Neemrana-Real-Estate-Route-Showcase.png",
       description:
         "A route video showing the roads, nearby landmarks, and surrounding areas, giving a clear view of the journey to the project.",
       videoUrl: "https://www.youtube.com/embed/haN2WK18h_c?autoplay=1",

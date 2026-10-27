@@ -16,7 +16,8 @@ const portfolioItems = [
     id: 2,
     title: "Shree Radha Gopal Residency, Kosi",
     category: "VR Experience",
-    image: "/images/portfolio/vr-experience/shree-radha-gopal-residency-kosi.png",
+    image:
+      "/images/portfolio/vr-experience/shree-radha-gopal-residency-kosi.png",
     description:
       "Interactive VR tour of a residential plotted development with modern amenities and green spaces.",
     videoUrl: "https://amlabs.cloud/SRMG_V06/",
@@ -94,7 +95,8 @@ const portfolioItems = [
     id: 7,
     title: "Hero Homes-The Palatial, Gurugram",
     category: "Route Videos",
-    image: "/images/portfolio/route-videos/hero-homes-the-palatial-gurugram.png",
+    image:
+      "/images/portfolio/route-videos/hero-homes-the-palatial-gurugram.png",
     description:
       "Dynamic route visualization showcasing different approach routes to reach the project site highlighting nearby landmarks and markers for easy navigation.",
     videoUrl:
@@ -133,7 +135,8 @@ const portfolioItems = [
     id: 9,
     title: "Hero Homes, Ludhiana",
     category: "Interior Cinematic Walkthrough",
-    image: "/images/portfolio/interior-cinematic-walkthrough/hero-homes-ludhiana.jpg",
+    image:
+      "/images/portfolio/interior-cinematic-walkthrough/hero-homes-ludhiana.jpg",
     description:
       "Immersive interior walkthrough highlighting the sophisticated apartment interiors with premium finishes, modern amenities, and elegant design elements.",
     videoUrl:
@@ -182,7 +185,8 @@ const portfolioItems = [
     id: 16,
     title: "Smart World- The Edition, Gurugram",
     category: "Construction Updates",
-    image: "/images/portfolio/construction-updates/smart-world-the-edition-gurugram.png",
+    image:
+      "/images/portfolio/construction-updates/smart-world-the-edition-gurugram.png",
     description:
       "Comprehensive construction progress documentation highlighting the development of multi-tower residential project with premium amenities and modern architectural design.",
     videoUrl:
@@ -192,7 +196,8 @@ const portfolioItems = [
     id: 18,
     title: "Rising Homes, Gurugram",
     category: "Interior Cinematic Walkthrough",
-    image: "/images/portfolio/interior-cinematic-walkthrough/rising-homes-gurugram.png",
+    image:
+      "/images/portfolio/interior-cinematic-walkthrough/rising-homes-gurugram.png",
     description:
       "Immersive interior walkthrough highlighting the sophisticated apartment interiors with premium finishes, modern amenities, and elegant design elements.",
     videoUrl:
@@ -222,7 +227,8 @@ const portfolioItems = [
     id: 22,
     title: "Prime Residences, Gurugram ",
     category: "Construction Updates",
-    image: "/images/portfolio/construction-updates/prime-residences-gurugram.png",
+    image:
+      "/images/portfolio/construction-updates/prime-residences-gurugram.png",
     description:
       "Construction progress documentation capturing the development of Prime Residences — a contemporary residential project defined by modern architecture and thoughtfully curated amenities.",
     videoUrl:
@@ -232,7 +238,8 @@ const portfolioItems = [
     id: 23,
     title: "SAP Experience Center, Bengaluru",
     category: "VR Experience",
-    image: "/images/portfolio/vr-experience/sap-experience-center-bengaluru.png",
+    image:
+      "/images/portfolio/vr-experience/sap-experience-center-bengaluru.png",
     description:
       "Matterport-powered virtual tour created for the SAP Experience Center, delivering an immersive and interactive walkthrough.",
     videoUrl: "https://my.matterport.com/show/?m=ceeiCLowE6C",
@@ -577,7 +584,8 @@ const portfolioItems = [
     id: 41,
     title: "Smart World, Sky Arc, Gurugram",
     category: "Construction Updates",
-    image: "/images/portfolio/construction-updates/smart-world-sky-arc-gurugram.png",
+    image:
+      "/images/portfolio/construction-updates/smart-world-sky-arc-gurugram.png",
     description:
       "Cinematic Construction Update Video with Drone Shoot, Real Estate Project Progress Tracking, Aerial Videography & Premium Construction Site Coverage for Real Estate Marketing.",
     videoUrl: "https://www.youtube.com/embed/lJ9b5xaa04Q?autoplay=1",
@@ -595,7 +603,8 @@ const portfolioItems = [
     id: 43,
     title: "HCBS Twin Horizon, Gurugram",
     category: "Construction Updates",
-    image: "/images/portfolio/construction-updates/hcbs-twin-horizon-gurugram.png",
+    image:
+      "/images/portfolio/construction-updates/hcbs-twin-horizon-gurugram.png",
     description:
       "Real Estate Construction Update Video with Aerial Drone Shoot, Monthly Project Progress Coverage, Cinematic Site Documentation & Builder Marketing Content.",
     videoUrl: "https://www.youtube.com/embed/5fxjaqWpgYE?autoplay=1",
@@ -648,7 +657,8 @@ const portfolioItems = [
     id: 46,
     title: "Featherlite Signature, Bengaluru",
     category: "VR Experience",
-    image: "/images/portfolio/vr-experience/featherlite-signature-bengaluru.png",
+    image:
+      "/images/portfolio/vr-experience/featherlite-signature-bengaluru.png",
     description:
       "Interactive VR Tour of Commercial Office Spaces with 3D Visualization & Nearby Landmark Highlights.",
     videoUrl: "https://amlabs.cloud/Featherlite_Signature-V02/",
@@ -747,7 +757,8 @@ const portfolioItems = [
     id: 53,
     title: "Hero Homes, Sector MU, Greater Noida ",
     category: "Location AV",
-    image: "/images/portfolio/location-av/hero-homes-sector-mu-greater-noida.png",
+    image:
+      "/images/portfolio/location-av/hero-homes-sector-mu-greater-noida.png",
     description:
       "Location AV showcasing real estate connectivity, cinematic storytelling, route visualization and professional real estate video production. ",
     videoUrl: "https://www.youtube.com/embed/d22cdmKn2WE?autoplay=1",
@@ -756,7 +767,8 @@ const portfolioItems = [
     id: 54,
     title: "Paras Group, Meerut",
     category: "Location AV",
-    image: "/images/portfolio/location-av/paras-group-meerut.png",
+    image:
+      "/images/portfolio/location-av/Meerut Real Estate Connectivity Panorama.png",
     description:
       "Cinematic Location AV showcasing Paras Group, Meerut's strategic location, surrounding infrastructure, and seamless connectivity through stunning aerial visuals.",
     videoUrl: "https://www.youtube.com/embed/__3etq0E8lk?autoplay=1",
@@ -765,7 +777,8 @@ const portfolioItems = [
     id: 55,
     title: "Briston World Group, Neemrana",
     category: "Location AV",
-    image: "/images/portfolio/location-av/briston-world-group-neemrana.png",
+    image:
+      "/images/portfolio/location-av/Neemrana Real Estate Location Video.png",
     description:
       "An immersive visual journey through Neemrana, capturing prominent landmarks, key routes, and the evolving surroundings of Briston World Group's development.",
     videoUrl: "https://www.youtube.com/embed/l5aFJq-Z1sQ?autoplay=1",
@@ -774,7 +787,8 @@ const portfolioItems = [
     id: 56,
     title: "Briston World Group, Neemrana",
     category: "Route Videos",
-    image: "/images/portfolio/route-videos/briston-world-group-neemrana-1.png",
+    image:
+      "/images/portfolio/route-videos/Neemrana-Route-Video-Aerial-Thumbnail.png",
     description:
       "A cinematic route video showcasing the journey, highlighting key landmarks, road networks, and seamless accessibility through engaging aerial visuals.",
     videoUrl: "https://www.youtube.com/embed/PDjxFB_MB38?autoplay=1",
@@ -783,7 +797,8 @@ const portfolioItems = [
     id: 57,
     title: "Briston World Group, Neemrana",
     category: "Route Videos",
-    image: "/images/portfolio/route-videos/briston-world-group-neemrana-2.png",
+    image:
+      "/images/portfolio/route-videos/Neemrana Highway Real Estate Vista.png",
     description:
       "A visually engaging route video capturing the journey to the project through major roads, surrounding developments, and prominent landmarks, offering a clear perspective of its accessibility.",
     videoUrl: "https://www.youtube.com/embed/BRhvnDE8cHs?autoplay=1",
@@ -792,7 +807,8 @@ const portfolioItems = [
     id: 58,
     title: "Briston World Group, Neemrana",
     category: "Route Videos",
-    image: "/images/portfolio/route-videos/briston-world-group-neemrana-3.png",
+    image:
+      "/images/portfolio/route-videos/Neemrana-Real-Estate-Route-Showcase.png",
     description:
       "A route video showing the roads, nearby landmarks, and surrounding areas, giving a clear view of the journey to the project.",
     videoUrl: "https://www.youtube.com/embed/haN2WK18h_c?autoplay=1",
