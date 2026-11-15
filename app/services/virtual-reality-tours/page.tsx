@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   description:
     "360° VR property tours for real estate developers in India. Interactive, browser-based, no headset needed. Mumbai, Delhi NCR, Bengaluru. Get a free demo.",
   keywords:
-    "virtual reality tours real estate India, 3d virtual home tour, 360 virtual photography, best virtual reality tours, 360 degree VR tour property, VR property tour India, immersive real estate tour, interactive 360 property walkthrough, 3d virtual reality tours, VR tour for apartment buyers, browser-based VR tour real estate, 360 virtual tour real estate Mumbai Delhi Bangalore, VR showroom real estate India, real estate virtual tours service in india, vr real estate tours, 3d virtual real estate tours, pano 2vr",
+    "virtual reality tours real estate India, 3d virtual home tour, 360 virtual photography, best virtual reality tours, 360 degree VR tour property, VR property tour India, immersive real estate tour, interactive 360 property walkthrough, 3d virtual reality tours, VR tour for apartment buyers, browser-based VR tour real estate, 360 virtual tour real estate Mumbai Delhi Bengaluru, VR showroom real estate India, real estate virtual tours service in india, vr real estate tours, 3d virtual real estate tours, pano 2vr",
   alternates: { canonical: `${BASE}/services/virtual-reality-tours` },
   openGraph: {
     title: "Virtual Reality Tours for Real Estate | 360° VR Property Tours India",
-    description: "Immersive 360° VR property tours for real estate developers. Interactive walkthroughs with hotspots, multi-device access. Mumbai, Delhi, Bangalore.",
+    description: "Immersive 360° VR property tours for real estate developers. Interactive walkthroughs with hotspots, multi-device access. Mumbai, Delhi, Bengaluru.",
     url: `${BASE}/services/virtual-reality-tours`,
     siteName: "Alliance Media Labs",
     images: [{ url: `${BASE}/images/services/virtual-reality-tours/1.jpg`, width: 1200, height: 630, alt: "Virtual Reality Tours — Alliance Media Labs" }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "360° VR Property Tours India | Alliance Media Labs",
-    description: "Immersive VR property tours with hotspots. Browser-based, no headset needed. Mumbai, Delhi, Bangalore.",
+    description: "Immersive VR property tours with hotspots. Browser-based, no headset needed. Mumbai, Delhi, Bengaluru.",
     images: [`${BASE}/images/services/virtual-reality-tours/1.jpg`],
   },
   robots: { index: true, follow: true },
@@ -38,7 +38,7 @@ const serviceSchema = {
   description: "360° interactive VR property tours allowing buyers to navigate through real estate projects from any device with hotspots and material customization.",
   provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "Alliance Media Labs" },
   serviceType: "Virtual Reality Property Tour",
-  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bangalore" }, { "@type": "Country", name: "India" }],
+  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bengaluru" }, { "@type": "Country", name: "India" }],
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",

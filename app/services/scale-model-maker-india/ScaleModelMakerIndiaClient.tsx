@@ -630,7 +630,7 @@ export default function ScaleModelMakerIndiaClient() {
                         {[
                           "Mumbai",
                           "Delhi NCR",
-                          "Bangalore",
+                          "Bengaluru",
                           "Pune",
                           "Hyderabad",
                           "Gurugram",
@@ -1016,111 +1016,6 @@ export default function ScaleModelMakerIndiaClient() {
           </div>
         </section>
 
-        {/* ── SCALE RATIO SPECS TABLE ── */}
-        <section className="py-24 bg-black">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Scale Ratios & Project Specifications
-              </h2>
-              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Every scale model maker in India uses different ratios.
-                Here&apos;s how we match the scale to your project type, display
-                space, and required level of detail.
-              </p>
-            </div>
-            <div className="overflow-x-auto rounded-2xl border border-gray-800">
-              <table className="w-full text-sm">
-                <thead className="bg-yellow-400 text-black">
-                  <tr>
-                    <th className="px-5 py-4 text-left font-bold">
-                      Scale Ratio
-                    </th>
-                    <th className="px-5 py-4 text-left font-bold">Best For</th>
-                    <th className="px-5 py-4 text-left font-bold">
-                      Typical Model Size
-                    </th>
-                    <th className="px-5 py-4 text-left font-bold">
-                      Detail Level
-                    </th>
-                    <th className="px-5 py-4 text-left font-bold">
-                      Indicative Price
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-800">
-                  {[
-                    [
-                      "1:50",
-                      "Individual villa / show flat",
-                      "2–4 ft",
-                      "Very High — furniture visible",
-                      "₹75K – ₹2L",
-                    ],
-                    [
-                      "1:100",
-                      "Apartment block, boutique project",
-                      "3–6 ft",
-                      "High — floor detail",
-                      "₹1.5L – ₹4L",
-                    ],
-                    [
-                      "1:200",
-                      "Mid-size residential complex",
-                      "4–8 ft",
-                      "Medium-High — facade detail",
-                      "₹2.5L – ₹7L",
-                    ],
-                    [
-                      "1:500",
-                      "Large residential / commercial project",
-                      "6–12 ft",
-                      "Medium — massing + landscape",
-                      "₹4L – ₹12L",
-                    ],
-                    [
-                      "1:1000",
-                      "Township master plan",
-                      "8–16 ft",
-                      "Medium — sector layout",
-                      "₹7L – ₹22L",
-                    ],
-                    [
-                      "1:2000+",
-                      "Smart city / infrastructure",
-                      "10–20 ft",
-                      "Low — spatial overview",
-                      "₹10L – ₹35L+",
-                    ],
-                  ].map(([ratio, best, size, detail, price]) => (
-                    <tr
-                      key={ratio}
-                      className="bg-gray-900 hover:bg-gray-800 transition-colors"
-                    >
-                      <td className="px-5 py-4 font-bold text-yellow-400">
-                        {ratio}
-                      </td>
-                      <td className="px-5 py-4 text-gray-300">{best}</td>
-                      <td className="px-5 py-4 text-gray-300">{size}</td>
-                      <td className="px-5 py-4 text-gray-400 text-xs">
-                        {detail}
-                      </td>
-                      <td className="px-5 py-4 text-white font-semibold">
-                        {price}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-gray-500 text-xs mt-4 text-center italic">
-              Indicative 2026 pricing. GST additional. Final quote based on
-              drawings, finish spec, LED scope, and delivery location.
-            </p>
-          </div>
-        </section>
-
         {/* ── PROCESS ── */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
@@ -1245,7 +1140,7 @@ export default function ScaleModelMakerIndiaClient() {
               {[
                 "Mumbai",
                 "Delhi NCR",
-                "Bangalore",
+                "Bengaluru",
                 "Pune",
                 "Hyderabad",
                 "Gurugram",
@@ -1373,7 +1268,7 @@ export default function ScaleModelMakerIndiaClient() {
                 },
                 {
                   q: "Do you handle delivery and installation across India?",
-                  a: "Yes. We custom-crate every model in foam-lined wooden cases, supervise transport, and send our team to site for installation, electrical testing, and sales staff briefing. We cover Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, Chennai, and all major Indian cities.",
+                  a: "Yes. We custom-crate every model in foam-lined wooden cases, supervise transport, and send our team to site for installation, electrical testing, and sales staff briefing. We cover Mumbai, Delhi NCR, Bengaluru, Pune, Hyderabad, Gurugram, Chennai, and all major Indian cities.",
                 },
                 {
                   q: "Can the model be updated if the building design changes?",
@@ -1472,6 +1367,33 @@ export default function ScaleModelMakerIndiaClient() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── CITIES ── */}
+        <section className="py-16 bg-white border-t border-gray-100">
+          <div className="container mx-auto px-6">
+            <h3 className="text-xl font-bold text-black mb-4">
+              Architectural Scale Models — By City
+            </h3>
+            <ul className="space-y-2">
+              {[
+                { href: "/city-services/architectural-scale-models-mumbai", title: "Mumbai" },
+                { href: "/city-services/architectural-scale-models-delhi-ncr", title: "Delhi NCR" },
+                { href: "/city-services/architectural-scale-models-bengaluru", title: "Bengaluru" },
+                { href: "/city-services/architectural-scale-models-navi-mumbai", title: "Navi Mumbai" },
+                { href: "/city-services/architectural-scale-models-pune", title: "Pune" },
+              ].map((c) => (
+                <li key={c.href}>
+                  <Link
+                    href={c.href}
+                    className="text-gray-600 hover:text-yellow-500 transition-colors"
+                  >
+                    Architectural Scale Models {c.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -1582,7 +1504,7 @@ export default function ScaleModelMakerIndiaClient() {
                         {[
                           "Mumbai",
                           "Delhi NCR",
-                          "Bangalore",
+                          "Bengaluru",
                           "Pune",
                           "Hyderabad",
                           "Gurugram",

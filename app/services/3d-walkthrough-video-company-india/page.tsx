@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "3D Walkthrough Video Company India | Alliance Media Labs",
     description:
-      "India's best 3D walkthrough video company — photorealistic architectural walkthroughs for real estate launches, investor pitches & RERA. Mumbai, Delhi, Bangalore & pan-India.",
+      "India's best 3D walkthrough video company — photorealistic architectural walkthroughs for real estate launches, investor pitches & RERA. Mumbai, Delhi, Bengaluru & pan-India.",
     images: [`${BASE}/images/services/3d-walkthrough-videos/1.jpg`],
   },
   robots: { index: true, follow: true },
@@ -47,7 +47,7 @@ const serviceSchema = {
   "@id": `${BASE}/services/3d-walkthrough-video-company-india#service`,
   name: "3D Walkthrough Video Company India",
   description:
-    "Alliance Media Labs is India's premier 3D walkthrough video company — delivering photorealistic architectural walkthrough videos, AI-powered virtual property tours, and cinematic real estate presentations for developers, builders, and infrastructure companies across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and all major Indian cities.",
+    "Alliance Media Labs is India's premier 3D walkthrough video company — delivering photorealistic architectural walkthrough videos, AI-powered virtual property tours, and cinematic real estate presentations for developers, builders, and infrastructure companies across Mumbai, Delhi NCR, Bengaluru, Pune, Hyderabad, Gurugram, and all major Indian cities.",
   provider: {
     "@type": "Organization",
     "@id": `${BASE}/#organization`,
@@ -57,7 +57,7 @@ const serviceSchema = {
   areaServed: [
     { "@type": "City", name: "Mumbai" },
     { "@type": "City", name: "Delhi" },
-    { "@type": "City", name: "Bangalore" },
+    { "@type": "City", name: "Bengaluru" },
     { "@type": "City", name: "Gurugram" },
     { "@type": "City", name: "Pune" },
     { "@type": "City", name: "Hyderabad" },
@@ -124,7 +124,7 @@ const faqSchema = {
       name: "Do you produce 3D walkthroughs across all Indian cities?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We produce and deliver 3D walkthrough videos for real estate projects across India — Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, Chennai, Ahmedabad, Kolkata, and all other cities. Our cloud-based delivery means you receive final files within hours of approval, regardless of your city.",
+        text: "Yes. We produce and deliver 3D walkthrough videos for real estate projects across India — Mumbai, Delhi NCR, Bengaluru, Pune, Hyderabad, Gurugram, Chennai, Ahmedabad, Kolkata, and all other cities. Our cloud-based delivery means you receive final files within hours of approval, regardless of your city.",
       },
     },
     {

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Our real estate visualization work: 3D walkthrough videos, VR tours, 3D renders, drone shoots and scale models for developers across India.",
   keywords:
-    "real estate visualization portfolio India, 3D walkthrough video examples, VR tour portfolio real estate, architectural render portfolio, drone shoot portfolio real estate, Alliance Media Labs work, real estate animation examples India, 3D render samples property, walkthrough video samples Mumbai Delhi Bangalore",
+    "real estate visualization portfolio India, 3D walkthrough video examples, VR tour portfolio real estate, architectural render portfolio, drone shoot portfolio real estate, Alliance Media Labs work, real estate animation examples India, 3D render samples property, walkthrough video samples Mumbai Delhi Bengaluru",
   alternates: {
     canonical: `${BASE}/portfolio`,
   },

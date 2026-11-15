@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "3D isometric views and master plan isometrics for township and real estate launches in India. Hoarding and brochure ready. Get a free quote in 24 hours.",
   keywords:
-    "3D isometric view real estate India, master plan isometric India, township isometric view India, isometric render property, bird's eye view township India, township master plan 3D render, isometric architectural visualization India, 3D project layout render, isometric amenity zone view, animated isometric flyover India, real estate isometric view Mumbai Delhi Bangalore",
+    "3D isometric view real estate India, master plan isometric India, township isometric view India, isometric render property, bird's eye view township India, township master plan 3D render, isometric architectural visualization India, 3D project layout render, isometric amenity zone view, animated isometric flyover India, real estate isometric view Mumbai Delhi Bengaluru",
   alternates: {
     canonical: `${BASE}/services/3d-isometrics`,
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "3D Isometric Views India | Alliance Media Labs",
-    description: "Photorealistic 3D isometric renders for real estate master plans and project layouts. Mumbai, Delhi NCR, Bangalore.",
+    description: "Photorealistic 3D isometric renders for real estate master plans and project layouts. Mumbai, Delhi NCR, Bengaluru.",
     images: [`${BASE}/images/services/3d-renders-isometrics/1.jpg`],
   },
   robots: { index: true, follow: true },
@@ -49,7 +49,7 @@ const serviceSchema = {
   areaServed: [
     { "@type": "City", name: "Mumbai" },
     { "@type": "City", name: "Delhi" },
-    { "@type": "City", name: "Bangalore" },
+    { "@type": "City", name: "Bengaluru" },
     { "@type": "City", name: "Gurugram" },
     { "@type": "Country", name: "India" },
   ],

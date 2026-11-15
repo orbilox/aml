@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   description:
     "Photorealistic 3D exterior, interior and floor plan renders for Indian real estate developers. Serving Mumbai, Delhi, Bengaluru. Get a quote.",
   keywords:
-    "3D renders real estate India, 3d house rendering, 3d floor plan, 3d floor plan design, 3d floor plan designer, 3d rendering companies, 3d rendering services, rendering services, 3d render, 3d rendering of house plans, 3d rendering services near me, 3d visualisation, ai 3d rendering, photorealistic architectural rendering India, CGI rendering real estate India, architectural CGI India, 3D exterior render property, interior 3D render real estate, architectural visualization company India, architectural rendering companies, isometric illustration real estate, aerial view 3D render India, CGI renders property marketing, 3D architectural visualization Mumbai Delhi Bangalore, photorealistic property renders India, architectural visualization services in india, architectural rendering services, 3d rendering interior design, 3d architectural rendering services, architectural visualisation",
+    "3D renders real estate India, 3d house rendering, 3d floor plan, 3d floor plan design, 3d floor plan designer, 3d rendering companies, 3d rendering services, rendering services, 3d render, 3d rendering of house plans, 3d rendering services near me, 3d visualisation, ai 3d rendering, photorealistic architectural rendering India, CGI rendering real estate India, architectural CGI India, 3D exterior render property, interior 3D render real estate, architectural visualization company India, architectural rendering companies, isometric illustration real estate, aerial view 3D render India, CGI renders property marketing, 3D architectural visualization Mumbai Delhi Bengaluru, photorealistic property renders India, architectural visualization services in india, architectural rendering services, 3d rendering interior design, 3d architectural rendering services, architectural visualisation",
   alternates: { canonical: `${BASE}/services/3d-renders-isometrics` },
   openGraph: {
     title: "3D Renders & Isometrics | Photorealistic Architectural Visualization India",
-    description: "Photorealistic 3D exterior & interior renders, isometrics, and aerial views for real estate developers. Mumbai, Delhi, Bangalore.",
+    description: "Photorealistic 3D exterior & interior renders, isometrics, and aerial views for real estate developers. Mumbai, Delhi, Bengaluru.",
     url: `${BASE}/services/3d-renders-isometrics`,
     siteName: "Alliance Media Labs",
     images: [{ url: `${BASE}/images/services/3d-renders-isometrics/1.jpg`, width: 1200, height: 630, alt: "3D Renders & Isometrics — Alliance Media Labs" }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Photorealistic 3D Renders India | Alliance Media Labs",
-    description: "3D exterior & interior renders, isometrics, and aerial views for real estate. Mumbai, Delhi, Bangalore.",
+    description: "3D exterior & interior renders, isometrics, and aerial views for real estate. Mumbai, Delhi, Bengaluru.",
     images: [`${BASE}/images/services/3d-renders-isometrics/1.jpg`],
   },
   robots: { index: true, follow: true },
@@ -38,7 +38,7 @@ const serviceSchema = {
   description: "Photorealistic 3D exterior renders, interior renders, isometric illustrations, and aerial views for real estate marketing and architectural presentations.",
   provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "Alliance Media Labs" },
   serviceType: "Architectural Visualization",
-  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bangalore" }, { "@type": "Country", name: "India" }],
+  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bengaluru" }, { "@type": "Country", name: "India" }],
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Scale Model Maker India | Architectural Model Maker | Alliance Media Labs",
     description:
-      "Expert scale model maker India — LED-lit architectural models for real estate launches, investor presentations & exhibitions. Mumbai, Delhi, Bangalore & pan-India.",
+      "Expert scale model maker India — LED-lit architectural models for real estate launches, investor presentations & exhibitions. Mumbai, Delhi, Bengaluru & pan-India.",
     images: [`${BASE}/images/services/architectural-scale-models/1.jpg`],
   },
   robots: { index: true, follow: true },
@@ -47,7 +47,7 @@ const serviceSchema = {
   "@id": `${BASE}/services/scale-model-maker-india#service`,
   name: "Scale Model Maker India",
   description:
-    "Alliance Media Labs is India's expert scale model maker — a professional architectural model maker serving real estate developers, infrastructure companies, and government agencies. We deliver precision miniature models with LED lighting, CNC fabrication, and premium handcrafted finishing across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, and all major Indian cities.",
+    "Alliance Media Labs is India's expert scale model maker — a professional architectural model maker serving real estate developers, infrastructure companies, and government agencies. We deliver precision miniature models with LED lighting, CNC fabrication, and premium handcrafted finishing across Mumbai, Delhi NCR, Bengaluru, Pune, Hyderabad, and all major Indian cities.",
   provider: {
     "@type": "Organization",
     "@id": `${BASE}/#organization`,
@@ -57,7 +57,7 @@ const serviceSchema = {
   areaServed: [
     { "@type": "City", name: "Mumbai" },
     { "@type": "City", name: "Delhi" },
-    { "@type": "City", name: "Bangalore" },
+    { "@type": "City", name: "Bengaluru" },
     { "@type": "City", name: "Gurugram" },
     { "@type": "City", name: "Pune" },
     { "@type": "City", name: "Hyderabad" },
@@ -124,7 +124,7 @@ const faqSchema = {
       name: "Do you deliver architectural models across India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We deliver and install architectural scale models across India — Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, Chennai, Ahmedabad, and other cities. Our team handles custom crating, transportation, and on-site installation at your sales office.",
+        text: "Yes. We deliver and install architectural scale models across India — Mumbai, Delhi NCR, Bengaluru, Pune, Hyderabad, Gurugram, Chennai, Ahmedabad, and other cities. Our team handles custom crating, transportation, and on-site installation at your sales office.",
       },
     },
     {

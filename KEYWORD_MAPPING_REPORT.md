@@ -21,7 +21,7 @@ This report maps primary, secondary, and long-tail keywords to every page on the
 | Short-tail | real estate visualization company India |
 | Short-tail | 3D walkthrough video service India |
 | Short-tail | architectural visualization India |
-| Long-tail | real estate visualization company Mumbai Delhi Bangalore |
+| Long-tail | real estate visualization company Mumbai Delhi Bengaluru |
 | Long-tail | photorealistic architectural rendering India |
 | Long-tail | VR tours real estate India |
 | Long-tail | real estate 3D animation company India |
@@ -44,7 +44,7 @@ This report maps primary, secondary, and long-tail keywords to every page on the
 | Short-tail | best 3D walkthrough company India |
 | Long-tail | photorealistic walkthrough video real estate |
 | Long-tail | virtual house tour 3D India |
-| Long-tail | 3D walkthrough video Mumbai Delhi Bangalore |
+| Long-tail | 3D walkthrough video Mumbai Delhi Bengaluru |
 | Long-tail | real estate 3D animation India |
 | Long-tail | 3D walkthrough video price India |
 | Long-tail | pre-launch property walkthrough video |
@@ -271,7 +271,7 @@ This report maps primary, secondary, and long-tail keywords to every page on the
 | Long-tail | LED scale model real estate India |
 | Long-tail | township scale model India |
 | Long-tail | real estate property launch model India |
-| Long-tail | scale model making Mumbai Delhi Bangalore |
+| Long-tail | scale model making Mumbai Delhi Bengaluru |
 | Long-tail | professional scale model builders India |
 
 **Schema:** Service, BreadcrumbList, FAQPage  
@@ -297,16 +297,16 @@ This report maps primary, secondary, and long-tail keywords to every page on the
 
 ---
 
-### 15. 3D Walkthrough Videos Bangalore (`/city-services/3d-walkthrough-videos-bangalore`)
+### 15. 3D Walkthrough Videos Bengaluru (`/city-services/3d-walkthrough-videos-bengaluru`)
 
 | Type | Keyword |
 |---|---|
-| Short-tail | 3D walkthrough videos Bangalore |
-| Short-tail | architectural visualization Bangalore |
+| Short-tail | 3D walkthrough videos Bengaluru |
+| Short-tail | architectural visualization Bengaluru |
 | Long-tail | 3D property tour Whitefield Sarjapur |
-| Long-tail | real estate 3D animation Bangalore |
+| Long-tail | real estate 3D animation Bengaluru |
 | Long-tail | walkthrough video Hebbal Electronic City |
-| Long-tail | property tour video North Bangalore |
+| Long-tail | property tour video North Bengaluru |
 
 **Schema:** LocalBusiness, BreadcrumbList, FAQPage
 
@@ -342,14 +342,14 @@ This report maps primary, secondary, and long-tail keywords to every page on the
 
 ---
 
-### 18. Drone Shoots Bangalore (`/city-services/drone-shoots-bangalore`)
+### 18. Drone Shoots Bengaluru (`/city-services/drone-shoots-bengaluru`)
 
 | Type | Keyword |
 |---|---|
-| Short-tail | drone shoots Bangalore |
-| Short-tail | aerial photography Bangalore |
-| Long-tail | DGCA licensed drone Bangalore |
-| Long-tail | 4K drone video real estate Bangalore |
+| Short-tail | drone shoots Bengaluru |
+| Short-tail | aerial photography Bengaluru |
+| Long-tail | DGCA licensed drone Bengaluru |
+| Long-tail | 4K drone video real estate Bengaluru |
 | Long-tail | aerial photography Whitefield Sarjapur |
 | Long-tail | drone video Hebbal Devanahalli |
 

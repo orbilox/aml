@@ -6,25 +6,25 @@ import { getAllCityPageSlugs } from "@/data/city-pages/registry";
 // when every URL reports the same build timestamp — keep these honest and
 // only bump a date when the page's content actually changes.
 const LASTMOD: Record<string, string> = {
-  "/": "2026-10-25",
-  "/contact": "2026-10-25",
-  "/portfolio": "2026-10-25",
-  "/construction-update-videos": "2026-10-25",
-  "/route-videos": "2026-10-25",
-  "/graphics-branding": "2026-10-25",
-  "/services/scale-model-maker-india": "2026-10-25",
-  "/services/3d-walkthrough-video-company-india": "2026-10-25",
-  "/services/virtual-reality-tours": "2026-10-25",
-  "/services/drone-shoots": "2026-10-25",
-  "/services/3d-renders-isometrics": "2026-10-25",
-  "/services/interactive-3d-tools": "2026-10-25",
-  "/services/digital-marketing": "2026-10-25",
-  "/services/3d-isometrics": "2026-10-25",
-  "/services/interior-cinematic-walkthrough": "2026-10-25",
-  "/city-services/3d-renders-mumbai": "2026-10-25",
-  "/city-services/drone-shoots-bangalore": "2026-10-25",
-  "/city-services/real-estate-video-production-gurugram": "2026-10-25",
-  "/city-services/3d-walkthrough-videos-bangalore": "2026-10-25",
+  "/": "2026-11-10",
+  "/contact": "2026-11-10",
+  "/portfolio": "2026-11-10",
+  "/construction-update-videos": "2026-11-10",
+  "/route-videos": "2026-11-10",
+  "/graphics-branding": "2026-11-10",
+  "/services/scale-model-maker-india": "2026-11-10",
+  "/services/3d-walkthrough-video-company-india": "2026-11-10",
+  "/services/virtual-reality-tours": "2026-11-10",
+  "/services/drone-shoots": "2026-11-10",
+  "/services/3d-renders-isometrics": "2026-11-10",
+  "/services/interactive-3d-tools": "2026-11-10",
+  "/services/digital-marketing": "2026-11-10",
+  "/services/3d-isometrics": "2026-11-10",
+  "/services/interior-cinematic-walkthrough": "2026-11-10",
+  "/city-services/3d-renders-mumbai": "2026-11-10",
+  "/city-services/drone-shoots-bengaluru": "2026-11-10",
+  "/city-services/real-estate-video-production-gurugram": "2026-11-10",
+  "/city-services/3d-walkthrough-videos-bengaluru": "2026-11-10",
   "/city-services/3d-walkthrough-videos-delhi": "2026-10-25",
   "/city-services/3d-walkthrough-videos-mumbai": "2026-10-25",
   "/city-services/3d-walkthrough-videos-navi-mumbai": "2026-10-25",
@@ -34,12 +34,23 @@ const LASTMOD: Record<string, string> = {
   "/city-services/3d-walkthrough-videos-kundli": "2026-10-25",
   "/city-services/virtual-reality-tours-mumbai": "2026-10-25",
   "/city-services/virtual-reality-tours-delhi-ncr": "2026-10-25",
-  "/city-services/virtual-reality-tours-bengaluru": "2026-10-25",
+  "/city-services/virtual-reality-tours-bengaluru": "2026-11-10",
   "/city-services/virtual-reality-tours-navi-mumbai": "2026-10-25",
   "/city-services/virtual-reality-tours-pune": "2026-10-25",
+  "/city-services/architectural-scale-models-mumbai": "2026-11-10",
+  "/city-services/architectural-scale-models-delhi-ncr": "2026-11-10",
+  "/city-services/architectural-scale-models-bengaluru": "2026-11-10",
+  "/city-services/architectural-scale-models-navi-mumbai": "2026-11-10",
+  "/city-services/architectural-scale-models-pune": "2026-11-10",
 };
 
 const FALLBACK_DATE = new Date("2026-02-10");
+
+// Posts can be dated ahead of publish; never advertise a future lastmod.
+function notAfterNow(d: Date): Date {
+  const now = new Date();
+  return d > now ? now : d;
+}
 
 function lastmod(path: string): Date {
   return LASTMOD[path] ? new Date(LASTMOD[path]) : FALLBACK_DATE;
@@ -71,7 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const cityRoutes = [
     "/city-services/3d-renders-mumbai",
-    "/city-services/drone-shoots-bangalore",
+    "/city-services/drone-shoots-bengaluru",
     "/city-services/real-estate-video-production-gurugram",
     ...getAllCityPageSlugs().map((slug) => `/city-services/${slug}`),
   ];
@@ -97,13 +108,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(newestPost),
+      lastModified: notAfterNow(new Date(newestPost)),
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     ...blogPosts.map((post) => ({
       url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: new Date(post.dateISO),
+      lastModified: notAfterNow(new Date(post.dateISO)),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),

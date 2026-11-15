@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "Real estate visualization company in India: 3D walkthrough videos, VR tours, 3D renders, drone shoots and scale models for developers. Get a free quote.",
   keywords:
-    "real estate visualization company India, 3D walkthrough video service India, architectural visualization India, VR tours real estate, drone shoots real estate, 3D renders India, real estate marketing company Mumbai Delhi Bangalore, photorealistic architectural rendering, real estate 3D animation India, property visualization agency",
+    "real estate visualization company India, 3D walkthrough video service India, architectural visualization India, VR tours real estate, drone shoots real estate, 3D renders India, real estate marketing company Mumbai Delhi Bengaluru, photorealistic architectural rendering, real estate 3D animation India, property visualization agency",
   alternates: {
     canonical: "https://alliancemedialabs.com",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title:
       "Alliance Media Labs | #1 Real Estate Visualization Company in India",
     description:
-      "India's leading real estate visualization company. 3D walkthrough videos, VR tours, architectural renders, drone shoots & digital marketing. 500+ projects delivered across Mumbai, Delhi NCR, Bangalore & Gurugram.",
+      "India's leading real estate visualization company. 3D walkthrough videos, VR tours, architectural renders, drone shoots & digital marketing. 500+ projects delivered across Mumbai, Delhi NCR, Bengaluru & Gurugram.",
     url: "https://alliancemedialabs.com",
     siteName: "Alliance Media Labs",
     images: [
@@ -98,7 +98,7 @@ const structuredData = [
     areaServed: [
       { "@type": "City", name: "Mumbai" },
       { "@type": "City", name: "Delhi" },
-      { "@type": "City", name: "Bangalore" },
+      { "@type": "City", name: "Bengaluru" },
       { "@type": "City", name: "Gurugram" },
       { "@type": "City", name: "Pune" },
       { "@type": "City", name: "Hyderabad" },

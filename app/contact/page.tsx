@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Get a free quote for 3D walkthrough videos, VR tours, 3D renders, drone shoots and digital marketing for your real estate project. We reply within 24 hours.",
   keywords:
-    "contact Alliance Media Labs, real estate visualization quote India, 3D walkthrough video quote, VR tour pricing India, architectural rendering contact, drone shoot quote real estate, real estate visualization company contact, get quote 3D walkthrough Mumbai Delhi Bangalore",
+    "contact Alliance Media Labs, real estate visualization quote India, 3D walkthrough video quote, VR tour pricing India, architectural rendering contact, drone shoot quote real estate, real estate visualization company contact, get quote 3D walkthrough Mumbai Delhi Bengaluru",
   alternates: {
     canonical: `${BASE}/contact`,
   },
@@ -78,7 +78,7 @@ const contactPageSchema = {
     areaServed: [
       { "@type": "City", name: "Mumbai" },
       { "@type": "City", name: "Delhi" },
-      { "@type": "City", name: "Bangalore" },
+      { "@type": "City", name: "Bengaluru" },
       { "@type": "City", name: "Gurugram" },
       { "@type": "Country", name: "India" },
     ],
@@ -91,7 +91,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How do I get a quote from Alliance Media Labs?", acceptedAnswer: { "@type": "Answer", text: "Fill out the contact form on this page or call +91-9999916744. Our team responds within 24 hours with a detailed project quote based on your requirements." } },
     { "@type": "Question", name: "What is the minimum budget for a project?", acceptedAnswer: { "@type": "Answer", text: "3D walkthrough videos start from ₹50,000, drone shoots from ₹15,000, and 3D renders from ₹8,000 per view. Contact us for a customised package quote for your project." } },
-    { "@type": "Question", name: "Does Alliance Media Labs work with developers outside Mumbai, Delhi, and Bangalore?", acceptedAnswer: { "@type": "Answer", text: "Yes. Alliance Media Labs works with real estate developers pan-India including Pune, Hyderabad, Chennai, Kolkata, and tier-2 cities. All 3D production work is done remotely and delivered digitally." } },
+    { "@type": "Question", name: "Does Alliance Media Labs work with developers outside Mumbai, Delhi, and Bengaluru?", acceptedAnswer: { "@type": "Answer", text: "Yes. Alliance Media Labs works with real estate developers pan-India including Pune, Hyderabad, Chennai, Kolkata, and tier-2 cities. All 3D production work is done remotely and delivered digitally." } },
     { "@type": "Question", name: "How long does a typical project take?", acceptedAnswer: { "@type": "Answer", text: "3D renders are delivered in 5–10 working days. 3D walkthrough videos take 2–4 weeks for standard projects. VR tours take 3–6 weeks. Timelines vary based on project scope and revision rounds." } },
   ],
 };

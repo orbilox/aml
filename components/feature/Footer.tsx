@@ -177,8 +177,8 @@ export default function Footer() {
                   href: "/city-services/3d-walkthrough-videos-mumbai",
                 },
                 {
-                  name: "3D Walkthroughs Bangalore",
-                  href: "/city-services/3d-walkthrough-videos-bangalore",
+                  name: "3D Walkthroughs Bengaluru",
+                  href: "/city-services/3d-walkthrough-videos-bengaluru",
                 },
                 {
                   name: "3D Walkthroughs Delhi",
@@ -189,8 +189,8 @@ export default function Footer() {
                   href: "/city-services/3d-renders-mumbai",
                 },
                 {
-                  name: "Drone Shoots Bangalore",
-                  href: "/city-services/drone-shoots-bangalore",
+                  name: "Drone Shoots Bengaluru",
+                  href: "/city-services/drone-shoots-bengaluru",
                 },
                 {
                   name: "Video Production Gurugram",

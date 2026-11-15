@@ -29,6 +29,18 @@ const nextConfig = {
         permanent: true,
       },
 
+      // Bangalore -> Bengaluru rename (Nov 2026) — keep old indexed URLs alive.
+      {
+        source: "/city-services/drone-shoots-bangalore",
+        destination: "/city-services/drone-shoots-bengaluru",
+        permanent: true,
+      },
+      {
+        source: "/city-services/3d-walkthrough-videos-bangalore",
+        destination: "/city-services/3d-walkthrough-videos-bengaluru",
+        permanent: true,
+      },
+
       // Duplicate-page consolidation (Aug 2026 ranking audit) — each pair
       // below was competing with itself for the same keywords. Redirecting
       // into whichever page was actually ranking.

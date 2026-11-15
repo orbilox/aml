@@ -13,6 +13,45 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "3d-walkthrough-video-cost-india-pricing-guide",
+    title: "How Much Does a 3D Walkthrough Video Cost in India? A 2026 Pricing Guide for Developers",
+    excerpt:
+      "Quotes for what looks like the same 3D walkthrough brief can differ several times over. Here's what drives the price, what typical ranges look like in India, what a quote should include, and how to compare offers without overpaying or under-scoping.",
+    category: "3D Walkthrough Videos",
+    date: "November 27, 2026",
+    dateISO: "2026-11-27",
+    readTime: "8 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/3d-walkthrough-videos/2.jpg",
+    tags: ["3D Walkthrough Video Cost", "3D Walkthrough Pricing India", "Real Estate Video Marketing", "3D Architectural Walkthrough", "Real Estate Visualization"],
+  },
+  {
+    slug: "vr-tour-vs-3d-walkthrough-video-real-estate-india",
+    title: "VR Tour vs 3D Walkthrough Video: Which Should a Real Estate Developer Choose? (2026)",
+    excerpt:
+      "Both let buyers see a project before it is built, but they work very differently in the sales process. Here's how a VR tour and a 3D walkthrough video compare, when each one wins, and why many developers end up using both.",
+    category: "Virtual Reality Tours",
+    date: "November 16, 2026",
+    dateISO: "2026-11-16",
+    readTime: "8 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/virtual-reality-tours/2.png",
+    tags: ["VR Tour vs 3D Walkthrough", "Virtual Reality Tours", "3D Walkthrough Video", "Real Estate Virtual Tours", "Real Estate Marketing India"],
+  },
+  {
+    slug: "3d-rendering-services-india-real-estate-guide",
+    title: "3D Rendering Services for Real Estate in India: Types, Pricing and How to Choose a Studio (2026)",
+    excerpt:
+      "Renders are the first visual asset a developer commissions and the one reused most. Here's what 3D rendering services cover, how they're priced in India, what to give the studio, and how to pick one that delivers images buyers believe.",
+    category: "3D Renders & Isometrics",
+    date: "November 8, 2026",
+    dateISO: "2026-11-08",
+    readTime: "9 min read",
+    author: "Alliance Media Labs Team",
+    thumbnail: "/images/services/3d-renders-isometrics/2.jpg",
+    tags: ["3D Rendering Services India", "Architectural Rendering", "Real Estate 3D Renders", "3D Floor Plans", "Real Estate Visualization"],
+  },
+  {
     slug: "diwali-festive-season-real-estate-marketing-india",
     title: "Festive Season Real Estate Marketing in India: A Diwali Campaign Guide for Developers (2026)",
     excerpt:

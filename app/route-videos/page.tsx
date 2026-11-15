@@ -57,7 +57,7 @@ const serviceSchema = {
     { "@type": "City", name: "Mumbai" },
     { "@type": "City", name: "Delhi" },
     { "@type": "City", name: "Gurugram" },
-    { "@type": "City", name: "Bangalore" },
+    { "@type": "City", name: "Bengaluru" },
     { "@type": "Country", name: "India" },
   ],
   offers: {

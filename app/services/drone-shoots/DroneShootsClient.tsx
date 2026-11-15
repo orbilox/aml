@@ -875,7 +875,7 @@ export default function DroneShootsClient() {
               {[
                 "Mumbai",
                 "Delhi NCR",
-                "Bangalore",
+                "Bengaluru",
                 "Gurugram",
                 "Pune",
                 "Hyderabad",

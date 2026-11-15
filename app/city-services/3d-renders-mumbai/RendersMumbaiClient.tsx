@@ -509,7 +509,7 @@ export default function RendersMumbaiClient() {
               <h3 className="text-xl font-bold text-black mb-4">More Mumbai &amp; City Services</h3>
               <ul className="space-y-2">
                 <li><Link href="/city-services/3d-walkthrough-videos-mumbai" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Mumbai</Link></li>
-                <li><Link href="/city-services/3d-walkthrough-videos-bangalore" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Renders &amp; Walkthrough Bangalore</Link></li>
+                <li><Link href="/city-services/3d-walkthrough-videos-bengaluru" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Renders &amp; Walkthrough Bengaluru</Link></li>
                 <li><Link href="/city-services/3d-walkthrough-videos-delhi" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Delhi NCR</Link></li>
               </ul>
             </div>

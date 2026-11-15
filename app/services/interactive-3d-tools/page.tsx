@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   description:
     "Property configurators, virtual showrooms, interactive floor plans and 3D unit selectors for Indian real estate developers. Web-based. Get a free demo.",
   keywords:
-    "interactive 3D tools real estate India, property configurator India, virtual showroom real estate, interactive floor plan India, 3D unit selector real estate, real estate interactive experience India, web-based 3D property tool, real estate configurator Mumbai Delhi Bangalore, interactive property visualization India, 3D viewer real estate website India",
+    "interactive 3D tools real estate India, property configurator India, virtual showroom real estate, interactive floor plan India, 3D unit selector real estate, real estate interactive experience India, web-based 3D property tool, real estate configurator Mumbai Delhi Bengaluru, interactive property visualization India, 3D viewer real estate website India",
   alternates: { canonical: `${BASE}/services/interactive-3d-tools` },
   openGraph: {
     title: "Interactive 3D Tools for Real Estate | Property Configurator & Virtual Showroom India",
-    description: "Property configurators, virtual showrooms & interactive floor plans for real estate. Web-based, cross-platform. Mumbai, Delhi, Bangalore.",
+    description: "Property configurators, virtual showrooms & interactive floor plans for real estate. Web-based, cross-platform. Mumbai, Delhi, Bengaluru.",
     url: `${BASE}/services/interactive-3d-tools`,
     siteName: "Alliance Media Labs",
     images: [{ url: `${BASE}/images/home/3.jpg`, width: 1200, height: 630, alt: "Interactive 3D Tools — Alliance Media Labs" }],
@@ -39,7 +39,7 @@ const serviceSchema = {
   provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "Alliance Media Labs" },
   serviceType: "3D Property Configurator",
   image: `${BASE}/images/home/3.jpg`,
-  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bangalore" }, { "@type": "Country", name: "India" }],
+  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bengaluru" }, { "@type": "Country", name: "India" }],
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",

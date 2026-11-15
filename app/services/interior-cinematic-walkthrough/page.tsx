@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Cinematic interior walkthrough videos for luxury apartments, villas and penthouses in India. Photorealistic interior 3D animation. Get a free quote today.",
   keywords:
-    "interior cinematic walkthrough India, luxury interior 3D animation, interior walkthrough video real estate, apartment interior 3D video, villa interior walkthrough India, penthouse interior animation, interior visualization real estate India, cinematic interior tour India, photorealistic interior render video, interior design 3D video Mumbai Delhi Bangalore",
+    "interior cinematic walkthrough India, luxury interior 3D animation, interior walkthrough video real estate, apartment interior 3D video, villa interior walkthrough India, penthouse interior animation, interior visualization real estate India, cinematic interior tour India, photorealistic interior render video, interior design 3D video Mumbai Delhi Bengaluru",
   alternates: {
     canonical: `${BASE}/services/interior-cinematic-walkthrough`,
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Interior Cinematic Walkthrough Videos India | Alliance Media Labs",
-    description: "Photorealistic interior 3D animation for luxury apartments, villas, and penthouses. Mumbai, Delhi NCR, Bangalore.",
+    description: "Photorealistic interior 3D animation for luxury apartments, villas, and penthouses. Mumbai, Delhi NCR, Bengaluru.",
     images: [`${BASE}/images/services/3d-walkthrough-videos/2.jpg`],
   },
   robots: { index: true, follow: true },
@@ -58,7 +58,7 @@ const serviceSchema = {
   areaServed: [
     { "@type": "City", name: "Mumbai" },
     { "@type": "City", name: "Delhi" },
-    { "@type": "City", name: "Bangalore" },
+    { "@type": "City", name: "Bengaluru" },
     { "@type": "City", name: "Gurugram" },
     { "@type": "Country", name: "India" },
   ],

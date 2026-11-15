@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
 const droneServices = [
-  { icon: "ri-camera-line", title: "Aerial Photography", description: "High-resolution aerial photos of Bangalore's IT parks and developments" },
-  { icon: "ri-video-line", title: "Drone Videography", description: "Cinematic aerial videos showcasing Bangalore's urban landscape" },
+  { icon: "ri-camera-line", title: "Aerial Photography", description: "High-resolution aerial photos of Bengaluru's IT parks and developments" },
+  { icon: "ri-video-line", title: "Drone Videography", description: "Cinematic aerial videos showcasing Bengaluru's urban landscape" },
   { icon: "ri-building-2-line", title: "Construction Progress", description: "Regular drone monitoring of construction sites and project progress" },
   { icon: "ri-map-2-line", title: "Site Mapping", description: "Detailed aerial mapping and surveying for development projects" },
 ];
@@ -38,7 +38,7 @@ function validateField(name: ValidatedField, value: string): string | undefined 
   }
 }
 
-export default function DroneShootsBangaloreClient() {
+export default function DroneShootsBengaluruClient() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -105,10 +105,10 @@ export default function DroneShootsBangaloreClient() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           access_key: "a557c293-5de3-4d54-8636-50b7d3c406c7",
-          subject: `Bangalore Drone Shoot Inquiry - ${formData.name}`,
+          subject: `Bengaluru Drone Shoot Inquiry - ${formData.name}`,
           from_name: formData.name,
           from_email: formData.email,
-          message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided"}\nService Type: ${formData.service_type || "Not selected"}\nProject Location: ${formData.project_location || "Bangalore"}\n\nProject Details:\n${formData.message || "No details provided"}`,
+          message: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone ? `${formData.countryCode} ${formData.phone}` : "Not provided"}\nService Type: ${formData.service_type || "Not selected"}\nProject Location: ${formData.project_location || "Bengaluru"}\n\nProject Details:\n${formData.message || "No details provided"}`,
         }),
       });
       const data = await response.json();
@@ -133,17 +133,17 @@ export default function DroneShootsBangaloreClient() {
       <section className="relative min-h-screen flex items-center overflow-hidden py-24">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/city-services/drone-shoots-bangalore/hero.jpg')` }}
+          style={{ backgroundImage: `url('/images/city-services/drone-shoots-bengaluru/hero.jpg')` }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
-                Drone Shoots in Bangalore
+                Drone Shoots in Bengaluru
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-lg">
-                Professional Aerial Photography & Videography Services for Bangalore&apos;s IT Parks & Real Estate Projects
+                Professional Aerial Photography & Videography Services for Bengaluru&apos;s IT Parks & Real Estate Projects
               </p>
               <div className="flex flex-wrap gap-4">
               </div>
@@ -251,7 +251,7 @@ export default function DroneShootsBangaloreClient() {
                         rows={3}
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="Project name, location in Bangalore, scale, timeline..."
+                        placeholder="Project name, location in Bengaluru, scale, timeline..."
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-sm resize-none"
                       />
                     </div>
@@ -290,11 +290,11 @@ export default function DroneShootsBangaloreClient() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              Drone Services in Bangalore
+              Drone Services in Bengaluru
             </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
             <p className="text-lg text-black/80 leading-relaxed">
-              Capturing Bangalore&apos;s tech landscape from above with professional drone photography and videography.
+              Capturing Bengaluru&apos;s tech landscape from above with professional drone photography and videography.
               Licensed operators ensuring safe and legal aerial filming across the city.
             </p>
           </div>
@@ -319,11 +319,11 @@ export default function DroneShootsBangaloreClient() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-                Book Your Bangalore Drone Shoot
+                Book Your Bengaluru Drone Shoot
               </h2>
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8"></div>
               <p className="text-lg text-black/80">
-                Ready to capture stunning aerial footage of your Bangalore project? Contact us today!
+                Ready to capture stunning aerial footage of your Bengaluru project? Contact us today!
               </p>
             </div>
 
@@ -419,7 +419,7 @@ export default function DroneShootsBangaloreClient() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-black font-semibold mb-2">Project Location in Bangalore</label>
+                <label className="block text-black font-semibold mb-2">Project Location in Bengaluru</label>
                 <input
                   type="text"
                   name="project_location"
@@ -456,7 +456,7 @@ export default function DroneShootsBangaloreClient() {
 
               {submitStatus === "success" && (
                 <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                  Thank you! We&apos;ll contact you soon to schedule your Bangalore drone shoot.
+                  Thank you! We&apos;ll contact you soon to schedule your Bengaluru drone shoot.
                 </div>
               )}
               {submitStatus === "error" && (
@@ -483,9 +483,9 @@ export default function DroneShootsBangaloreClient() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-black mb-4">More Bangalore &amp; City Services</h3>
+              <h3 className="text-xl font-bold text-black mb-4">More Bengaluru &amp; City Services</h3>
               <ul className="space-y-2">
-                <li><Link href="/city-services/3d-walkthrough-videos-bangalore" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Bangalore</Link></li>
+                <li><Link href="/city-services/3d-walkthrough-videos-bengaluru" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Bengaluru</Link></li>
                 <li><Link href="/city-services/3d-walkthrough-videos-mumbai" className="text-gray-600 hover:text-yellow-500 transition-colors">Drone Shoots Mumbai</Link></li>
                 <li><Link href="/city-services/real-estate-video-production-gurugram" className="text-gray-600 hover:text-yellow-500 transition-colors">Real Estate Video Production Gurugram</Link></li>
               </ul>

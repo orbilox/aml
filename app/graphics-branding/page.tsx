@@ -56,7 +56,7 @@ const serviceSchema = {
   areaServed: [
     { "@type": "City", name: "Mumbai" },
     { "@type": "City", name: "Delhi" },
-    { "@type": "City", name: "Bangalore" },
+    { "@type": "City", name: "Bengaluru" },
     { "@type": "City", name: "Pune" },
     { "@type": "Country", name: "India" },
   ],

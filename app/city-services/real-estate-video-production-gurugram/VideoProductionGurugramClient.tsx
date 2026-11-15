@@ -704,7 +704,7 @@ export default function VideoProductionGurugramClient() {
               <ul className="space-y-2">
                 <li><Link href="/city-services/3d-walkthrough-videos-delhi" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Delhi NCR</Link></li>
                 <li><Link href="/city-services/3d-walkthrough-videos-mumbai" className="text-gray-600 hover:text-yellow-500 transition-colors">3D Walkthrough Videos Mumbai</Link></li>
-                <li><Link href="/city-services/drone-shoots-bangalore" className="text-gray-600 hover:text-yellow-500 transition-colors">Drone Shoots Bangalore</Link></li>
+                <li><Link href="/city-services/drone-shoots-bengaluru" className="text-gray-600 hover:text-yellow-500 transition-colors">Drone Shoots Bengaluru</Link></li>
               </ul>
             </div>
           </div>

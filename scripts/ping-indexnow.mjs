@@ -71,10 +71,10 @@ const ALL_URLS = [
 
   // City pages
   "/city-services/3d-renders-mumbai",
-  "/city-services/3d-walkthrough-videos-bangalore",
+  "/city-services/3d-walkthrough-videos-bengaluru",
   "/city-services/3d-walkthrough-videos-delhi",
   "/city-services/3d-walkthrough-videos-mumbai",
-  "/city-services/drone-shoots-bangalore",
+  "/city-services/drone-shoots-bengaluru",
   "/city-services/real-estate-video-production-gurugram",
 ].map((path) => `${BASE}${path}`);
 

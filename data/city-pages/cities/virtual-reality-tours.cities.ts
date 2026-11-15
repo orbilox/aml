@@ -155,7 +155,7 @@ export const cities: CityServicePageData[] = [
     metaDescription:
       "Interactive 360° VR property tours in Bengaluru, no headset needed. Serving Whitefield, Sarjapur Road and Electronic City. Get a free quote today.",
     keywords:
-      "virtual reality tours Bengaluru, VR tours Bangalore real estate, 360 virtual tour Bengaluru, VR property tour Bangalore, virtual reality real estate Bengaluru, interactive property tour Bangalore, VR walkthrough Bengaluru, real estate VR company Bangalore, commercial VR tour Bengaluru, pre-launch VR tour Bangalore",
+      "virtual reality tours Bengaluru, VR tours Bengaluru real estate, 360 virtual tour Bengaluru, VR property tour Bengaluru, virtual reality real estate Bengaluru, interactive property tour Bengaluru, VR walkthrough Bengaluru, real estate VR company Bengaluru, commercial VR tour Bengaluru, pre-launch VR tour Bengaluru",
     portfolioIntro: "Showcasing our VR and virtual tour work for projects in Bengaluru.",
     portfolio: [VR_PROJECTS.gmcConfluence, VR_PROJECTS.featherliteSignature, VR_PROJECTS.sapExperienceCenter],
     extraFaqs: [

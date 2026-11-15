@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${BASE}/services/digital-marketing` },
   openGraph: {
     title: "Real Estate Digital Marketing Agency India | Alliance Media Labs",
-    description: "Full-service digital marketing for real estate developers. Google Ads, Meta Ads, SEO, social media. Mumbai, Delhi NCR, Bangalore.",
+    description: "Full-service digital marketing for real estate developers. Google Ads, Meta Ads, SEO, social media. Mumbai, Delhi NCR, Bengaluru.",
     url: `${BASE}/services/digital-marketing`,
     siteName: "Alliance Media Labs",
     images: [{ url: `${BASE}/images/home/2.jpg`, width: 1200, height: 630, alt: "Real Estate Digital Marketing — Alliance Media Labs" }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Real Estate Digital Marketing India | Alliance Media Labs",
-    description: "Google Ads, Meta Ads, SEO & social media for property launches. Performance-driven. Mumbai, Delhi, Bangalore.",
+    description: "Google Ads, Meta Ads, SEO & social media for property launches. Performance-driven. Mumbai, Delhi, Bengaluru.",
     images: [`${BASE}/images/home/2.jpg`],
   },
   robots: { index: true, follow: true },
@@ -39,7 +39,7 @@ const serviceSchema = {
   provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "Alliance Media Labs" },
   serviceType: "Digital Marketing",
   image: `${BASE}/images/home/2.jpg`,
-  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bangalore" }, { "@type": "Country", name: "India" }],
+  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bengaluru" }, { "@type": "Country", name: "India" }],
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",

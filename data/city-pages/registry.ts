@@ -3,14 +3,17 @@ import { config as walkthroughConfig } from "./service-configs/3d-walkthrough-vi
 import { cities as walkthroughCities } from "./cities/3d-walkthrough-videos.cities";
 import { config as vrConfig } from "./service-configs/virtual-reality-tours";
 import { cities as vrCities } from "./cities/virtual-reality-tours.cities";
+import { config as scaleModelConfig } from "./service-configs/architectural-scale-models";
+import { cities as scaleModelCities } from "./cities/architectural-scale-models.cities";
 
 // Add one line here per service as it's rolled out.
 const SERVICE_CONFIGS: Record<string, CityServiceTemplateConfig> = {
   [walkthroughConfig.serviceSlug]: walkthroughConfig,
   [vrConfig.serviceSlug]: vrConfig,
+  [scaleModelConfig.serviceSlug]: scaleModelConfig,
 };
 
-const ALL_CITIES: CityServicePageData[] = [...walkthroughCities, ...vrCities];
+const ALL_CITIES: CityServicePageData[] = [...walkthroughCities, ...vrCities, ...scaleModelCities];
 
 export function getCityPageData(fullSlug: string): CityServicePageData | undefined {
   return ALL_CITIES.find((c) => c.fullSlug === fullSlug);

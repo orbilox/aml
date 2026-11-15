@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   description:
     "Real estate drone shoots and location AV across India. 4K aerial videography by DGCA-licensed pilots for launches and sales. Get a free quote in 24 hours.",
   keywords:
-    "drone shoots real estate India, aerial photography real estate, location AV production India, real estate drone footage, aerial cinematography property India, 4K drone video real estate, DGCA certified drone operator India, licensed drone operator real estate, real estate aerial videography Mumbai Delhi Bangalore, drone photography property marketing India",
+    "drone shoots real estate India, aerial photography real estate, location AV production India, real estate drone footage, aerial cinematography property India, 4K drone video real estate, DGCA certified drone operator India, licensed drone operator real estate, real estate aerial videography Mumbai Delhi Bengaluru, drone photography property marketing India",
   alternates: { canonical: `${BASE}/services/drone-shoots` },
   openGraph: {
     title: "Drone Shoots & Location AV for Real Estate | Aerial Cinematography India",
-    description: "4K aerial drone cinematography and location AV for real estate marketing. Licensed operators. Mumbai, Delhi NCR, Bangalore, Gurugram.",
+    description: "4K aerial drone cinematography and location AV for real estate marketing. Licensed operators. Mumbai, Delhi NCR, Bengaluru, Gurugram.",
     url: `${BASE}/services/drone-shoots`,
     siteName: "Alliance Media Labs",
     images: [{ url: `${BASE}/images/home/2.jpg`, width: 1200, height: 630, alt: "Drone Shoots Real Estate — Alliance Media Labs" }],
@@ -38,7 +38,7 @@ const serviceSchema = {
   description: "Professional aerial drone cinematography and location AV production for real estate marketing. 4K footage, licensed operators, scenic route planning, cinematic post-production.",
   provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "Alliance Media Labs" },
   serviceType: "Aerial Cinematography",
-  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bangalore" }, { "@type": "City", name: "Gurugram" }, { "@type": "Country", name: "India" }],
+  areaServed: [{ "@type": "City", name: "Mumbai" }, { "@type": "City", name: "Delhi" }, { "@type": "City", name: "Bengaluru" }, { "@type": "City", name: "Gurugram" }, { "@type": "Country", name: "India" }],
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",
@@ -77,7 +77,7 @@ const videoObjectSchema = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
   name: "4K Drone Shoots & Location AV for Real Estate — Alliance Media Labs",
-  description: "Professional 4K aerial drone cinematography and location AV production for real estate marketing in India. DGCA-licensed pilots. Mumbai, Delhi NCR, Bangalore, Gurugram.",
+  description: "Professional 4K aerial drone cinematography and location AV production for real estate marketing in India. DGCA-licensed pilots. Mumbai, Delhi NCR, Bengaluru, Gurugram.",
   thumbnailUrl: `${BASE}/images/home/2.jpg`,
   uploadDate: "2026-03-01",
   duration: "PT1M45S",

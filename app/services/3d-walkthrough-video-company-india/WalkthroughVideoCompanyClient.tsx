@@ -475,7 +475,7 @@ export default function WalkthroughVideoCompanyClient() {
                           <option value="">Select city</option>
                           <option value="Mumbai">Mumbai</option>
                           <option value="Delhi NCR">Delhi NCR</option>
-                          <option value="Bangalore">Bangalore</option>
+                          <option value="Bengaluru">Bengaluru</option>
                           <option value="Gurugram">Gurugram</option>
                           <option value="Pune">Pune</option>
                           <option value="Hyderabad">Hyderabad</option>
@@ -819,7 +819,7 @@ export default function WalkthroughVideoCompanyClient() {
               },
               {
                 q: "Do you provide 3D walkthrough services across India?",
-                a: "Yes — we serve developers pan-India. Our cloud-based production means your city doesn't limit our ability to deliver. We have dedicated city pages for Mumbai, Delhi, Bangalore, and Gurugram, with ongoing projects in Pune, Hyderabad, Chennai, Ahmedabad, and Kolkata.",
+                a: "Yes — we serve developers pan-India. Our cloud-based production means your city doesn't limit our ability to deliver. We have dedicated city pages for Mumbai, Delhi, Bengaluru, and Gurugram, with ongoing projects in Pune, Hyderabad, Chennai, Ahmedabad, and Kolkata.",
               },
               {
                 q: "Can your walkthrough company integrate our brand identity?",
@@ -853,7 +853,7 @@ export default function WalkthroughVideoCompanyClient() {
               {[
                 { href: "/city-services/3d-walkthrough-videos-mumbai", title: "Mumbai" },
                 { href: "/city-services/3d-walkthrough-videos-delhi", title: "Delhi NCR" },
-                { href: "/city-services/3d-walkthrough-videos-bangalore", title: "Bengaluru" },
+                { href: "/city-services/3d-walkthrough-videos-bengaluru", title: "Bengaluru" },
                 { href: "/city-services/3d-walkthrough-videos-navi-mumbai", title: "Navi Mumbai" },
                 { href: "/city-services/3d-walkthrough-videos-pune", title: "Pune" },
                 { href: "/city-services/3d-walkthrough-videos-jaipur", title: "Jaipur" },
@@ -1060,7 +1060,7 @@ export default function WalkthroughVideoCompanyClient() {
                         <option value="">Select city</option>
                         <option value="Mumbai">Mumbai</option>
                         <option value="Delhi NCR">Delhi NCR</option>
-                        <option value="Bangalore">Bangalore</option>
+                        <option value="Bengaluru">Bengaluru</option>
                         <option value="Gurugram">Gurugram</option>
                         <option value="Pune">Pune</option>
                         <option value="Hyderabad">Hyderabad</option>

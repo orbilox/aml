@@ -16,9 +16,25 @@ import IsometricViewsGuideArticle from "@/app/blog/articles/IsometricViewsGuideA
 import FestiveSeasonMarketingGuideArticle from "@/app/blog/articles/FestiveSeasonMarketingGuideArticle";
 import InteriorCinematicWalkthroughGuideArticle from "@/app/blog/articles/InteriorCinematicWalkthroughGuideArticle";
 
+import RenderingServicesGuideArticle from "@/app/blog/articles/RenderingServicesGuideArticle";
+import VrVsWalkthroughArticle from "@/app/blog/articles/VrVsWalkthroughArticle";
+import WalkthroughCostGuideArticle from "@/app/blog/articles/WalkthroughCostGuideArticle";
+
 export default function BlogDetailClient({ slug }: { slug: string }) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
+
+  if (slug === "3d-walkthrough-video-cost-india-pricing-guide") {
+    return <WalkthroughCostGuideArticle post={post} />;
+  }
+
+  if (slug === "vr-tour-vs-3d-walkthrough-video-real-estate-india") {
+    return <VrVsWalkthroughArticle post={post} />;
+  }
+
+  if (slug === "3d-rendering-services-india-real-estate-guide") {
+    return <RenderingServicesGuideArticle post={post} />;
+  }
 
   if (slug === "diwali-festive-season-real-estate-marketing-india") {
     return <FestiveSeasonMarketingGuideArticle post={post} />;
@@ -567,7 +583,7 @@ function WalkthroughArticle({
               {
                 icon: "ri-map-pin-line",
                 title: "Pan-India Service",
-                desc: "Mumbai, Delhi NCR, Bangalore, Gurugram, Pune, Hyderabad, and beyond.",
+                desc: "Mumbai, Delhi NCR, Bengaluru, Gurugram, Pune, Hyderabad, and beyond.",
               },
               {
                 icon: "ri-user-star-line",
@@ -620,7 +636,7 @@ function WalkthroughArticle({
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
             Whether you are launching a luxury residential tower in Mumbai, a
-            commercial complex in Gurugram, or a township in Bangalore, a
+            commercial complex in Gurugram, or a township in Bengaluru, a
             professionally produced 3D walkthrough video from Alliance Media
             Labs will give your project the competitive edge it deserves.
             Looking for India&apos;s best 3D walkthrough video company?{" "}
@@ -1181,7 +1197,7 @@ function HouseRenderingArticle({
           <p className="text-gray-700 leading-relaxed mb-8">
             Alliance Media Labs provides{" "}
             <strong>3D architectural rendering services</strong> for developers
-            across Mumbai, Delhi NCR, Pune, Bangalore, Hyderabad, Chennai,
+            across Mumbai, Delhi NCR, Pune, Bengaluru, Hyderabad, Chennai,
             Kolkata, and tier-2 cities — all managed remotely with the same
             quality standards. Your project&apos;s location determines the
             architectural context of the render; your proximity to our studio
@@ -3341,7 +3357,7 @@ function ScaleModelMakingGuideArticle({
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   A vendor who has worked with developers in Mumbai, Delhi,
-                  Bangalore, Pune, and Hyderabad understands regional project
+                  Bengaluru, Pune, and Hyderabad understands regional project
                   typologies, builder preferences, and site office space
                   constraints. Local experience shortens the briefing cycle and
                   reduces the risk of design misalignment.
@@ -3484,7 +3500,7 @@ function ScaleModelMakingGuideArticle({
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             India's top developers — those running flagship launches in Mumbai's
-            Western suburbs, Gurugram's Golf Course Extension, Bangalore's North
+            Western suburbs, Gurugram's Golf Course Extension, Bengaluru's North
             and East corridors, and Pune's Hinjewadi belt — routinely invest in
             both. The scale model anchors the sales office physically. The 3D
             walkthrough extends the reach digitally to NRI buyers and investors
@@ -3557,7 +3573,7 @@ function ScaleModelMakingGuideArticle({
                 Yes. Our team handles crating, transportation, and on-site
                 installation. We supervise the placement, test all lighting, and
                 brief your sales staff on maintenance and operation. We cover
-                Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and
+                Mumbai, Delhi NCR, Bengaluru, Pune, Hyderabad, Gurugram, and
                 other major Indian cities.
               </p>
             </div>
@@ -4020,7 +4036,7 @@ function RealEstateMarketingVideosArticle({
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl mb-4">
             <p className="text-gray-800 text-sm">
               Alliance Media Labs operates DGCA-licensed pilots with 4K and 6K
-              cinema drones across Mumbai, Delhi NCR, Bangalore, Pune,
+              cinema drones across Mumbai, Delhi NCR, Bengaluru, Pune,
               Hyderabad, and Gurugram. We handle all airspace permissions and
               provide colour-graded, music-tracked deliverables.
             </p>
@@ -4260,7 +4276,7 @@ function RealEstateMarketingVideosArticle({
             A route video specifically demonstrates the daily commute from your
             project to key destinations — office parks, metro stations, city
             centres, airports. For connectivity-driven buyers (particularly in
-            NCR, Pune, and Bangalore tech corridors), proving a commute takes 20
+            NCR, Pune, and Bengaluru tech corridors), proving a commute takes 20
             minutes rather than 45 can be the deciding factor.
           </p>
           <h3 className="text-xl font-bold text-black mb-3">Best for:</h3>
@@ -4643,7 +4659,7 @@ function RealEstateMarketingVideosArticle({
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Yes. We serve real estate developers across India — Mumbai,
-                Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, Chennai,
+                Delhi NCR, Bengaluru, Pune, Hyderabad, Gurugram, Chennai,
                 Kolkata, Ahmedabad, and Tier 1 and 2 cities. 3D and interactive
                 content is produced remotely from your drawings; drone and live
                 cinematography requires physical site visits which we coordinate
@@ -5029,7 +5045,7 @@ function BestScaleModelCompanyArticle({
             {[
               {
                 title: "200+ Projects Delivered",
-                body: "Across Mumbai, Delhi NCR, Bangalore, Pune, Hyderabad, Gurugram, and Tier 1 cities — residential, commercial, township, and infrastructure.",
+                body: "Across Mumbai, Delhi NCR, Bengaluru, Pune, Hyderabad, Gurugram, and Tier 1 cities — residential, commercial, township, and infrastructure.",
               },
               {
                 title: "Full In-House Production",
@@ -5171,7 +5187,7 @@ function BestScaleModelCompanyArticle({
               },
               {
                 q: "Is Alliance Media Labs able to deliver models outside Mumbai and Delhi?",
-                a: "Yes. We deliver and install across India — Bangalore, Pune, Hyderabad, Gurugram, Chennai, Ahmedabad, and other cities. Our team supervises transportation and handles on-site installation at every location. Pan-India delivery is standard for us, not an exception.",
+                a: "Yes. We deliver and install across India — Bengaluru, Pune, Hyderabad, Gurugram, Chennai, Ahmedabad, and other cities. Our team supervises transportation and handles on-site installation at every location. Pan-India delivery is standard for us, not an exception.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="border border-gray-200 rounded-xl p-5">
