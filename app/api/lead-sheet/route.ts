@@ -54,7 +54,7 @@ export async function POST(req: Request) {
   const secret = process.env.LEAD_SHEET_SECRET;
   if (!webhook || !secret) {
     console.warn("[lead-sheet] LEAD_SHEET_WEBHOOK_URL / LEAD_SHEET_SECRET not set — lead not logged");
-    return NextResponse.json({ ok: false, skipped: true });
+    return NextResponse.json({ ok: false, skipped: true, reason: "env_not_set" });
   }
 
   // Only accept submissions that come from our own pages.
@@ -62,7 +62,7 @@ export async function POST(req: Request) {
   if (origin) {
     let host = "";
     try { host = new URL(origin).hostname; } catch { /* invalid */ }
-    if (!ALLOWED_HOSTS.includes(host)) return NextResponse.json({ ok: false }, { status: 403 });
+    if (!ALLOWED_HOSTS.includes(host)) return NextResponse.json({ ok: false, reason: `origin_not_allowed (${host})` }, { status: 403 });
   }
 
   let body: any;
@@ -127,11 +127,21 @@ export async function POST(req: Request) {
       body: JSON.stringify(row),
       redirect: "follow",
     });
-    const ok = res.ok;
-    if (!ok) console.error("[lead-sheet] webhook responded", res.status);
-    return NextResponse.json({ ok });
+    // Apps Script answers HTTP 200 even when it rejects the request, so read its JSON reply.
+    const text = await res.text();
+    let reply: any = null;
+    try { reply = JSON.parse(text); } catch { /* not JSON */ }
+    if (reply?.ok === true) return NextResponse.json({ ok: true });
+
+    const reason = !res.ok
+      ? `webhook_http_${res.status}`
+      : reply
+        ? `webhook_${reply.error || "rejected"}`
+        : "webhook_not_json (deployment access must be 'Anyone')";
+    console.error("[lead-sheet] not logged:", reason, text.slice(0, 200));
+    return NextResponse.json({ ok: false, reason });
   } catch (err) {
     console.error("[lead-sheet] webhook failed", err);
-    return NextResponse.json({ ok: false }, { status: 502 });
+    return NextResponse.json({ ok: false, reason: "webhook_unreachable" }, { status: 502 });
   }
 }
