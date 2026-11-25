@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitLead } from "@/lib/leads";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
@@ -112,7 +113,7 @@ export default function CityServiceTemplate({ fullSlug }: { fullSlug: string }) 
     setIsSubmitting(true);
     setSubmitStatus("idle");
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await submitLead(`${config.serviceLabel} ${cityName} – City Page`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

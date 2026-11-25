@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitLead } from "@/lib/leads";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -170,7 +171,7 @@ export default function Interactive3DToolsClient() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await submitLead("Interactive 3D Tools – Service Page", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { submitLead } from "@/lib/leads";
 import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
 type FormData = {
@@ -101,7 +102,7 @@ export default function LeadRegistrationModal() {
     setSubmitStatus("idle");
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await submitLead("Lead Popup (All Pages)", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

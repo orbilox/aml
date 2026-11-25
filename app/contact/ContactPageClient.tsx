@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitLead } from "@/lib/leads";
 import Header from "@/components/feature/Header";
 import Footer from "@/components/feature/Footer";
 import Button from "@/components/base/Button";
@@ -159,7 +160,7 @@ export default function ContactPageClient() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await submitLead("Contact Page", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

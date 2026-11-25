@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { submitLead } from "@/lib/leads";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -225,7 +226,7 @@ export default function DroneShootsClient() {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await submitLead("Drone Shoots & Location AV – Service Page", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

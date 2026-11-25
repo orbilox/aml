@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { submitLead } from "@/lib/leads";
 import Button from "@/components/base/Button";
 import { COUNTRY_CODES, DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 
@@ -121,7 +122,7 @@ export default function ContactSection() {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await submitLead("Home Page – Contact Section", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

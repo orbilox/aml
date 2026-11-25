@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitLead } from "@/lib/leads";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -147,7 +148,7 @@ export default function VideoProductionGurugramClient() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await submitLead("Video Production Gurugram – City Page", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
